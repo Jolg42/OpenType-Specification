@@ -1,0 +1,219 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+  <head>
+    <title>CPAL - Color Palette Table</title>
+    <link rel="STYLESHEET" href="otspec.css" type="text/css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <div class="toprule">
+    </div>
+    <p class="menu">
+      <a href="http://www.microsoft.com/typography/default.mspx">Microsoft Typography</a> | <a href="http://www.microsoft.com/typography/creators.htm">Developer...</a> | <a href="default.htm">OpenType specification</a> | <a href="otff.htm#otttables">OpenType tables</a> | The BASE table</p>
+    <div class="middlerule">
+    </div>
+    <div class="contents">
+      <h1>CPAL - Color Palette Table</h1>
+      <p>The palette table is a set of one or more palettes, each containing a predefined number of RGBA values arranged consecutively by palette index value. It may also contain name table IDs describing the palettes and their entries.</p>
+      <p>The first palette, number 0, is the default palette. The palettes are referenced by colorRecordIndices, this is the index into the array of color records where the palette starts. Multiple colorRecordIndices may refer to the same palette, therefore the number of actual palettes in the table may be less than the numPalettes entry. A minimum of one palette, the default, must be provided in the table if the table is present. Each palette must have the same number of entries as defined by numPaletteEntries, which must be at least one entry. Any empty CPAL table, with no palettes and no color records is not permissible. It is permissible for palettes to overlap and share data; therefore, the total number of color records in the CPAL table may be less than the number of palette entries multiplied by the number of palettes.</p>
+      <p>For each of the palettes, the first color record is index zero. There can be no more than numPaletteEntries of RGBA values.</p>   
+    <h2>Palette Table Header</h2>
+        <p>The CPAL table begins with a header that starts with a version number. Currently, only versions 0 and 1 are defined.</p>
+        <p>The CPAL header version 0 is organized as follows:</p>
+        <table class="gray">
+        <tr>
+          <th style="width: 20%;">Type</th>
+          <th style="width: 20%;">Name</th>
+          <th style="width: 60%;">Description</th>
+        </tr>
+        <tr>
+          <td>USHORT</td>
+          <td>version</td>
+          <td>Table version number (=0).</td>
+        </tr>
+        <tr>
+          <td>USHORT</td>
+          <td>numPalettesEntries</td>
+          <td>Number of palette entries in each palette.</td>
+        </tr>
+        <tr>
+          <td>USHORT</td>
+          <td>numPalette</td>
+          <td>Number of palettes in the table.</td>
+        </tr>
+        <tr>
+          <td>USHORT</td>
+          <td>numColorRecords</td>
+          <td>Total number of color records, combined for all palettes.</td>
+        </tr>
+        <tr>
+          <td>ULONG</td>
+          <td>offsetFirstColorRecord</td>
+          <td>Offset from the beginning of CPAL table to the first ColorRecord.</td>
+        </tr>
+        <tr>
+          <td>USHORT</td>
+          <td>colorRecordIndices[numPalettes]</td>
+          <td>Index of each palette’s first color record in the combined color record array.</td>
+        </tr>
+      </table>   
+        <p>The CPAL header version 1 adds three additional fields to the end of the table header and is organized as follows:</p>
+        <table class="gray">
+        <tr>
+          <th style="width: 20%;">Type</th>
+          <th style="width: 20%;">Name</th>
+          <th style="width: 60%;">Description</th>
+        </tr>
+        <tr>
+          <td>USHORT</td>
+          <td>version</td>
+          <td>Table version number (=1).</td>
+        </tr>
+        <tr>
+          <td>USHORT</td>
+          <td>numPalettesEntries</td>
+          <td>Number of palette entries in each palette.</td>
+        </tr>
+        <tr>
+          <td>USHORT</td>
+          <td>numPalette</td>
+          <td>Number of palettes in the table.</td>
+        </tr>
+        <tr>
+          <td>USHORT</td>
+          <td>numColorRecords</td>
+          <td>Total number of color records, combined for all palettes.</td>
+        </tr>
+        <tr>
+          <td>ULONG</td>
+          <td>offsetFirstColorRecord</td>
+          <td>Offset from the beginning of CPAL table to the first ColorRecord.</td>
+        </tr>
+        <tr>
+          <td>USHORT</td>
+          <td>colorRecordIndices[numPalettes]</td>
+          <td>Index of each palette’s first color record in the combined color record array.</td>
+        </tr>
+        <tr>
+          <td>ULONG</td>
+          <td>offsetPaletteTypeArray</td>
+          <td>Offset from the beginning of CPAL table to the Palette Type Array. Set to 0 if no array is provided.</td>
+        </tr>
+        <tr>
+          <td>ULONG</td>
+          <td>offsetPaletteLabelArray</td>
+          <td>Offset from the beginning of CPAL table to the Palette Labels Array. Set to 0 if no array is provided.</td>
+        </tr>
+        <tr>
+          <td>ULONG</td>
+          <td>offsetPaletteEntryLabelArray</td>
+          <td>Offset from the beginning of CPAL table to the Palette Entry Label Array. Set to 0 if no array is provided.</td>
+        </tr>
+      </table>
+      <h2>Palette Table</h2>  
+        <p>The choice of individual color record in the selected palette for a given glyph layer is determined as the sum of the palette entry index (defined by COLR table Layer Record) and the offset to the first color record of the selected palette.</p>
+      <table class="gray">
+        <tr>
+          <th style="width: 20%;">Type</th>
+          <th style="width: 20%;">Name</th>
+          <th style="width: 60%;">Description</th>
+        </tr>
+        <tr>
+          <td>ColorRecord</td>
+          <td>colorRecords[numColorRecords]</td>
+          <td>Color records for all palettes</td>
+        </tr>
+          </table>  
+        <h2>Color Record</h2>
+        <p>The colors in the Color Record should not be pre-multiplied and the alpha value should be explicitly set for each palette entry. The color space for these values is sRGB.</p>
+        <table class="gray">
+        <tr>
+          <th style="width: 20%;">Type</th>
+          <th style="width: 20%;">Name</th>
+          <th style="width: 60%;">Description</th>
+        </tr>
+        <tr>
+          <td>BYTE</td>
+          <td>blue</td>
+          <td>Blue value (B0).</td>
+        </tr>
+        <tr>
+          <td>BYTE</td>
+          <td>green</td>
+          <td>Green value (B1).</td>
+        </tr>
+        <tr>
+          <td>BYTE</td>
+          <td>red</td>
+          <td>Red value (B2).</td>
+        </tr>
+        <tr>
+          <td>BYTE</td>
+          <td>alpha</td>
+          <td>Alpha value (B3).</td>
+        </tr>
+      </table>
+<br />
+        <p>When placing and registering glyphs for a layered color approach there is the possible issue of “seaming” where the edge rendering of one glyph interferes with another glyph. This may be more or less visible based on the contrast of the colors used.</p>
+     <h2>Palette Type Array</h2>
+<table class="gray">
+        <tr>
+          <th style="width: 20%;">Type</th>
+          <th style="width: 20%;">Name</th>
+          <th style="width: 60%;">Description</th>
+        </tr>
+        <tr>
+          <td>ULONG</td>
+          <td>paletteType [numPalettes]</td>
+          <td>Array of 32-bit flag fields that describe properties of each palette. Set a particular ULONG to 0 if no properties are specified for that palette. Property flags:<br />Bit 0: Palette is appropriate to use when displaying the font on a light background such as white.<br />Bit 1: Palette is appropriate to use when displaying the font on a dark background such as black. Bits 0 and 1 are not mutually exclusive: they may both be set.</td>
+        </tr>
+    </table>
+    <h2>Palette Labels Array</h2>
+<table class="gray">
+        <tr>
+          <th style="width: 20%;">Type</th>
+          <th style="width: 20%;">Name</th>
+          <th style="width: 60%;">Description</th>
+        </tr>
+        <tr>
+          <td>USHORT</td>
+          <td>paletteLabel [numPalettes]</td>
+          <td>Array of name table IDs (typically in the font-specific name ID range) that specify user interface strings associated with each palette. Use 0xFFFF if no name ID is provided for a particular palette.</td>
+        </tr>
+    </table>
+   <h2>Palette Entry Label Array</h2>
+<table class="gray">
+        <tr>
+          <th style="width: 20%;">Type</th>
+          <th style="width: 20%;">Name</th>
+          <th style="width: 60%;">Description</th>
+        </tr>
+        <tr>
+          <td>USHORT</td>
+          <td>paletteEntryLabel [numPaletteEntries]</td>
+          <td>Array of name table IDs (typically in the font-specific name ID range) that specify user interface strings associated with each palette entry, e.g. “Outline”, “Fill”. This set of palette entry labels applies to all palettes in the font. Use 0xFFFF if no name ID is provided for a particular palette entry. </td>
+        </tr>
+    </table>
+        <br />
+        <p>Both the <a href="colr.htm">COLR</a> and <a href="svg.htm">SVG</a> tables can use CPAL to define their palettes.</p>
+
+        <h2>COLR and CPAL</h2>
+        <p>With <a href="colr.htm">COLR</a>, the CPAL table is required, and contains all the font-specified colors used by multicolored glyphs</p>
+        <p>As noted in the <a href="colr.htm">COLR</a> table description, the palette entry index of 0xFFFF if specified in the <a href="colr.htm">COLR</a> table represents the foreground color used in the system. This special value does not change across multiple palettes. The maximum palette entry index is 65535 – 1, as the 65536th position is used in the COLR table to indicate the foreground font color.</p>
+        <h2>SVG and CPAL</h2>
+        <p>With <a href="svg.htm">SVG</a>, the CPAL table is optional, and contains the values of any color variables used by the SVG glyph descriptions in the SVG table.</p>
+        <p>Foreground color and foreground color opacity are expressed by the context-fill and context-fill-opacity attributes in the SVG glyph descriptions.</p>
+        <p>When used with an <a href="svg.htm">SVG</a> table, the default palette’s colors must be set to the same values as the default values for the color variables in the SVG glyph descriptions; this is for text engines that support the SVG table but not color palettes. The SVG glyph descriptions are able to express their own explicit or “hard-coded” colors as well. These are not related to color variables and thus do not vary by palette selection. See the SVG table’s specification for more details.</p>
+      <hr class="separator">
+      <p class="fineprint">This page was last updated 4 March 2015.</p>
+      <p class="fineprint">&copy; 2015 Microsoft Corporation. All rights reserved. <a href="http://www.microsoft.com/Misc/cpyright.htm">Terms of use</a>.</p>
+      <p class="fineprint">Comments to the MST group: <a href="https://www.microsoft.com/typography/AboutMST.mspx">how to contact us</a>.</p>
+    </div>
+    <div class="middlerule">
+    </div>
+    <p class="menu">
+      <a href="http://www.microsoft.com/typography/default.mspx">Microsoft Typography</a> | <a href="http://www.microsoft.com/typography/creators.htm">Developer...</a> | <a href="default.htm">OpenType specification</a> | <a href="otff.htm#otttables">OpenType tables</a> | The BASE table</p>
+    <div class="bottomrule">
+    </div>
+  </body>
+</html>

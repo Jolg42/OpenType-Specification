@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="Author" content="Apple Inc." />
+<meta name="viewport" content="width=1024" />
+<link rel="shortcut icon" href="../../../favicon.ico" />
+<link rel="icon" href="../../../favicon.ico" />
+<link rel="stylesheet" href="https://www.apple.com/wss/fonts?family=Myriad+Set+Pro&amp;v=2" type="text/css" />
+<link rel="stylesheet" href="../../../assets/styles/transition-global.css" type="text/css" />
+<link rel="stylesheet" href="../../../assets/styles/transition-header.css" type="text/css" />
+<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/core/styles/adc.css" type="text/css" />
+<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/styles/topbar.css" type="text/css" />
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/lib/prototype.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/lib/scriptaculous.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/browserdetect.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/apple_core.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/search_decorator.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/adc_core.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/scripts/ac_retina.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/topbarDropdown.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	document.write('<link rel="stylesheet" type="text/css" href="https://devimages.apple.com.edgekey.net/assets/styles/script.css" media="screen">');
+</script>
+<!-- Augmented Search -->
+<!--<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/styles/augmented_search.css" type="text/css">-->
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/lib/jquery/jquery-1.11.0.min.js"></script>
+<script>jQuery.noConflict();</script>
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/lib/jquery/jquery.retinate.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/scripts/augmented_search.js"></script>-->
+<script src="../../../assets/scripts/augmented_search.js"></script>
+<script src="../../../assets/scripts/global-header.js"></script>
+
+  <meta name="Author" content="Apple Inc.">
+  <meta name="viewport" content="width=1024">
+  <link rel="stylesheet" href="../AAT.css" type="text/css">
+  <link rel="shortcut icon" href="https://devimages.apple.com.edgekey.net/favicon.ico">
+  <link rel="icon" href="https://devimages.apple.com.edgekey.net/favicon.ico">
+  <title>Kerx Table</title>
+</head>
+<body class="white sidenav-page">
+  <nav id="globalheader" role="navigation" aria-label="Global Navigation">
+  <div id="gh-content" class="gh-content">
+    <ul class="gh-menu">
+      <li id="gh-menu-icon-toggle" class="gh-menu-icon gh-menu-icon-toggle enhance">
+        <button id="gh-svg-icons" class="gh-svg-wrapper">
+          <span class="text-replace">Menu</span>
+          <svg x="0px" y="0px" width="100%" viewBox="0 0 96 96" class="gh-svg gh-svg-top" enable-background="new 0 0 96 96"><rect width="32" height="4" x="32" y="46" class="gh-svg-rect gh-svg-rect-top"></rect></svg>
+          <svg x="0px" y="0px" width="100%" viewBox="0 0 96 96" class="gh-svg gh-svg-bottom" enable-background="new 0 0 96 96"><rect width="32" height="4" x="32" y="46" class="gh-svg-rect gh-svg-rect-bottom"></rect></svg>
+        </button>
+      </li>
+      <li id="gh-menu-icon-home" class="gh-menu-icon gh-menu-icon-home">
+        <a href="../../../index.html">
+          <span class="text-replace">Apple Developer</span>
+        </a>
+      </li>
+    </ul>
+    <div class="gh-nav">
+      <div class="gh-nav-view">
+        <ul class="gh-nav-list">
+
+          <li class="gh-tab gh-nav-developer" data-hires="true"><a class="gh-tab-link" href="../../../index.html"><span class="text-replace">Apple Developer</span></a></li>
+          <li class="gh-tab gh-nav-technologies"><a class="gh-tab-link" href="../../../platforms/index.html">Platforms</a></li>
+          <li class="gh-tab gh-nav-resources"><a class="gh-tab-link" href="../../../resources/index.html">Resources</a></li>
+          <li class="gh-tab gh-nav-programs"><a class="gh-tab-link" href="../../../programs/index.html">Program</a></li>
+          <li class="gh-tab gh-nav-support"><a class="gh-tab-link" href="../../../support/index.html">Support</a></li>
+          <li class="gh-tab gh-nav-account">
+            <a class="gh-tab-link gh-account-profile" href="https://developer.apple.com/account/">Account</a>
+          </li>
+          <li class="gh-tab gh-nav-search">
+
+            <div id="gh-search" class="gh-search" role="search">
+              <form action="/search/index.php" method="get" class="gh-search-form" id="gh-search-form" role="search">
+
+                <div class="gh-search-input-wrapper">
+                  <label for="gh-search-input" class="text-replace">Search Apple Developer</label>
+                  <input type="text" name="q" id="gh-search-input" class="augmented gh-search-input" placeholder="Search Apple Developer" autocomplete="off" autocorrect="off" autocapitalize="off">
+                </div>
+
+                <button disabled type="submit" id="gh-search-submit" class="gh-search-submit gh-search-magnify"><span class="text-replace">Search Apple Developer</span></button>
+                <button disabled type="reset" id="gh-search-reset" class="gh-search-reset"><span class="text-replace">Reset</span></button>
+
+              </form>
+            </div>
+
+            <a class="gh-search-magnify" href="../../../search/index.html"><span class="text-replace">Search Apple Developer</span></a>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+  <div id="top">
+<!-- SiteCatalyst code version: H.8. Copyright 1997-2006 Omniture, Inc. -->
+<script type="text/javascript">
+/* RSID: */
+var s_account="appleglobal,appleusdeveloper"
+</script>
+
+<script type="text/javascript" src="https://www.apple.com/metrics/scripts/s_code_h.js"></script>
+<script type="text/javascript">
+s.pageName= AC && AC.Tracking && AC.Tracking.pageName();
+s.channel="www.us.developer"
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)</script>
+<!-- End SiteCatalyst code version: H.8. -->
+</div>
+
+  <div id="content" class="content" data-hires="false">
+    <section>
+  <div id="navBar">
+    <!-- NAVBARSTART -->
+    <p class="bold"><a href="../index.html">TrueType Reference Manual</a></p>
+    <ul class="outer">
+      <li><a href="../RM01/Chap1.html">Digitizing Letterforms</a></li>
+      <li><a href="../RM02/Chap2.html">The Font Engine</a></li>
+      <li><a href="../RM03/Chap3.html">Instructing Fonts</a></li>
+      <li><a href="../RM04/Chap4.html">The Graphics State</a></li>
+      <li><a href="../RM05/Chap5.html">The Instruction Set</a></li>
+      <li><a href="Chap6.html">Font Tables</a></li>
+      <li class="c1">
+        <ul class="inner">
+          <li><a href="Chap6.html#Intro">Introduction</a></li>
+          <li><a href="Chap6.html#Types">Data Types</a></li>
+          <li><a href="Chap6.html#Overview">Overview of TrueType</a></li>
+          <li><a href="Chap6AATIntro.html">Overview of AAT</a></li>
+          <li><a href="Chap6Tables.html">Special Tables</a></li>
+          <li><a href="Chap6.html#Directory">The Font Directory</a></li>
+          <li><a href="Chap6acnt.html">The <code>'acnt'</code> table</a></li>
+          <li><a href="Chap6ankr.html">The <code>'ankr'</code> table</a></li>
+          <li><a href="Chap6avar.html">The <code>'avar'</code> table</a></li>
+          <li><a href="Chap6bdat.html">The <code>'bdat'</code> table</a></li>
+          <li><a href="Chap6bhed.html">The <code>'bhed'</code> table</a></li>
+          <li><a href="Chap6bloc.html">The <code>'bloc'</code> table</a></li>
+          <li><a href="Chap6bsln.html">The <code>'bsln'</code> table</a></li>
+          <li><a href="Chap6cmap.html">The <code>'cmap'</code> table</a></li>
+          <li><a href="Chap6cvar.html">The <code>'cvar'</code> table</a></li>
+          <li><a href="Chap6cvt.html">The <code>'cvt '</code> table</a></li>
+          <li><a href="Chap6EBSC.html">The <code>'EBSC'</code> table</a></li>
+          <li><a href="Chap6fdsc.html">The <code>'fdsc'</code> table</a></li>
+          <li><a href="Chap6feat.html">The <code>'feat'</code> table</a></li>
+          <li><a href="Chap6fmtx.html">The <code>'fmtx'</code> table</a></li>
+          <li><a href="Chap6fond.html">The <code>'fond'</code> table</a></li>
+          <li><a href="Chap6fpgm.html">The <code>'fpgm'</code> table</a></li>
+          <li><a href="Chap6fvar.html">The <code>'fvar'</code> table</a></li>
+          <li><a href="Chap6gasp.html">The <code>'gasp'</code> table</a></li>
+          <li><a href="Chap6gcid.html">The <code>'gcid'</code> table</a></li>
+          <li><a href="Chap6glyf.html">The <code>'glyf'</code> table</a></li>
+          <li><a href="Chap6gvar.html">The <code>'gvar'</code> table</a></li>
+          <li><a href="Chap6hdmx.html">The <code>'hdmx'</code> table</a></li>
+          <li><a href="Chap6head.html">The <code>'head'</code> table</a></li>
+          <li><a href="Chap6hhea.html">The <code>'hhea'</code> table</a></li>
+          <li><a href="Chap6hmtx.html">The <code>'hmtx'</code> table</a></li>
+          <li><a href="Chap6just.html">The <code>'just'</code> table</a></li>
+          <li><a href="Chap6kern.html">The <code>'kern'</code> table</a></li>
+          <li>The <code>'kerx'</code> table</li>
+          <li><a href="Chap6lcar.html">The <code>'lcar'</code> table</a></li>
+          <li><a href="Chap6loca.html">The <code>'loca'</code> table</a></li>
+          <li><a href="Chap6ltag.html">The <code>'ltag'</code> table</a></li>
+          <li><a href="Chap6maxp.html">The <code>'maxp'</code> table</a></li>
+          <li><a href="Chap6meta.html">The <code>'meta'</code> table</a></li>
+          <li><a href="Chap6mort.html">The <code>'mort'</code> table</a></li>
+          <li><a href="Chap6morx.html">The <code>'morx'</code> table</a></li>
+          <li><a href="Chap6name.html">The <code>'name'</code> table</a></li>
+          <li><a href="Chap6opbd.html">The <code>'opbd'</code> table</a></li>
+          <li><a href="Chap6OS2.html">The <code>'OS/2'</code> table</a></li>
+          <li><a href="Chap6post.html">The <code>'post'</code> table</a></li>
+          <li><a href="Chap6prep.html">The <code>'prep'</code> table</a></li>
+          <li><a href="Chap6prop.html">The <code>'prop'</code> table</a></li>
+          <li><a href="Chap6sbix.html">The <code>'sbix'</code> table</a></li>
+          <li><a href="Chap6trak.html">The <code>'trak'</code> table</a></li>
+          <li><a href="Chap6vhea.html">The <code>'vhea'</code> table</a></li>
+          <li><a href="Chap6vmtx.html">The <code>'vmtx'</code> table</a></li>
+          <li><a href="Chap6xref.html">The <code>'xref'</code> table</a></li>
+          <li><a href="Chap6Zapf.html">The <code>'Zapf'</code> table</a></li>
+        </ul>
+      </li>
+      <li><a href="../RM07/appendixA.html">Instruction Set Summary</a></li>
+      <li><a href="../RM07/appendixB.html">Glyph Mappings</a></li>
+      <li><a href="../RM08/appendixE.html">Converting Outlines</a></li>
+	<li><a href="../RM09/AppendixF.html">Font Feature Registry</a></li>
+    </ul><!-- NAVBAREND -->
+  </div>
+  <div id="chapterContent">
+    <header><h1><a name="kerx" id="kerx"></a>The <code>'kerx'</code> table</h1></header>
+    <h2>General table information</h2>
+    <p>The format for the kerning (<code>'kern'</code>) table was first designed in 1988. At that time, 680x0 processors were the design center, and memory was comparatively expensive. Because of these constraints, the table format was designed to take as little space as possible, and to use “tricks”which sped up processing.</p>
+    <p>In a world of multi-gigabyte machines running gigahertz processors, however, this design is anachronistic—and worse, an impediment. Developers wished to create fonts which required more than the original <code>'kern'</code> table could supply. To this end, an extended kerning table, the <code>'kerx'</code> table, has been introduced.</p>
+    <p>The <code>'kerx'</code> table contains the values that adjust the positioning of glyphs in a font. It can have multiple subtables in varied formats that can contain information for vertical or horizontal text.</p>
+    <p>Adjustments can be parallel to the flow of text or perpendicular to the flow of text, or both. For example, if perpendicular adjustments are specified and if text is normally written horizontally, adjustments will be up or down.</p>
+    <p>Four positioning formats are currently defined, formats 0, 1, 2, and 4. The file format specification allows for additional formats to be defined for further use. Formats 3 and 5 and up are reserved for future use.</p>
+    <p>Each subtable can be in one of the four formats specified below, and can contain information for vertical or horizontal text. A font can have multiple <code>'kerx'</code> subtables but since the adjustments made by these tables are additive, the order of the subtables containing adjustments is not important.</p>
+    <p>The positioning table has a header, which contains the format number, the number of subtables present, and the subtables themselves.</p>
+    <table>
+      <caption>
+        The <code>'kerx'</code> Table
+      </caption>
+      <tbody>
+        <tr>
+          <th>Type</th>
+          <th>Name</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>uint16</td>
+          <td>version</td>
+          <td class="description">The version number of the extended kerning table (currently 2 or 3).</td>
+        </tr>
+        <tr>
+          <td>uint16</td>
+          <td>padding</td>
+          <td class="description">Unused; set to zero.</td>
+        </tr>
+        <tr>
+          <td>uint32</td>
+          <td>nTables</td>
+          <td class="description">The number of subtables included in the extended kerning table.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>If the <code>'kerx'</code> table version is 3 or greater, then the last subtable is followed by a <code>subtableGlyphCoverageArray</code>, as described below.</p>
+    <p>Positioning subtables also have a header that is used to identify the format of the subtable and the kind of information it contains.</p>
+    <table>
+      <caption>
+        The <code>'kerx'</code> Table Header
+      </caption>
+      <tbody>
+        <tr>
+          <th>Type</th>
+          <th>Name</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>uint32</td>
+          <td>length</td>
+          <td class="description">The length of this subtable in bytes, including this header.</td>
+        </tr>
+        <tr>
+          <td>uint32</td>
+          <td>coverage</td>
+          <td class="description">Circumstances under which this table is used. See below for description.</td>
+        </tr>
+        <tr>
+          <td>uint32</td>
+          <td>tupleIndex</td>
+          <td class="description">The tuple index (used for variations fonts). This value specifies which tuple this subtable covers.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>The subtable <code>coverage</code> field is divided into the subfields given in below. The sizes are in bits.</p>
+    <table>
+      <caption>
+        The <code>coverage</code> Field
+      </caption>
+      <tbody>
+        <tr>
+          <th>Mask value</th>
+          <th>Name</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>0x80000000</td>
+          <td>vertical</td>
+          <td class="description">Set if table has vertical kerning values.</td>
+        </tr>
+        <tr>
+          <td>0x40000000</td>
+          <td>crossStream</td>
+          <td class="description">Set if table has cross-stream kerning values.</td>
+        </tr>
+        <tr>
+          <td>0x20000000</td>
+          <td>variation</td>
+          <td class="description">Set if table has variation kerning values.</td>
+        </tr>
+        <tr>
+          <td>0x10000000</td>
+          <td>processDirection</td>
+          <td>Process direction flag. If clear, process the glyphs forwards, that is, from first to last in the glyph stream. If we, process them from last to first. This flag only applies to state-table based <code>'kerx'</code> subtables (types 1 and 4).</td>
+        </tr>
+        <tr>
+          <td>0x0FFFFF00</td>
+          <td>unusedBits</td>
+          <td class="description">Set to 0.</td>
+        </tr>
+        <tr>
+          <td>0x000000FF</td>
+          <td>formatMask</td>
+          <td class="description">Set the format of this subtable (0, 1, 2, and 4 currently defined).</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>A mask value of 0x40000000 indicates that cross-stream position adjustments are to be invoked. If text is normally written horizontally, adjustments will be vertical. If adjustment values are positive, the text will be moved up. If they are negative, the text will be moved down. If text is normally written vertically, adjustments will be horizontal. If adjustment values are positive, the text will be moved to the right. If they are negative, the text will be moved to the left.</p>
+    <h2>Positioning subtable formats</h2>
+    <p>The format-specific kerning subtables follow the kerning subtable header. The following sections give the details of Kerning Table Formats 0, 1, 2, and 4. Formats 5 through 255 are reserved for future use. The following kerning formats are currently defined:</p>
+    <ul>
+      <li>Format 0 is an ordered list of kerning pairs</li>
+      <li>Format 1 is a state table for contextual kerning of up to eight glyphs</li>
+      <li>Format 2 is a simple two-dimensional array of kerning values and a class subtable</li>
+      <li>Format 4 is a state table for control point/anchor point positioning</li>
+    </ul>
+    <h3>Format 0 Kerning Subtable (Ordered List of Kerning Pairs)</h3>
+    <p>Format 0 positioning subtables store positioning information as sorted lists of kerning pairs and values. Using information stored in the positioning subtable header, you can execute an efficient binary search of these lists.</p>
+    <p>A binary search is most efficiently coded if the search range is a power of two, so that the search range can be reduced by half by shifting instead of dividing. In general, the number of kerning pairs, nPairs, will not be a power of two. The value searchRange should be the largest power of two less than or equal to nPairs. The number of pairs not covered by searchRange (that is, nPairs - searchRange) is the value rangeShift.</p>
+    <p>Before the binary search loop is made, you need to determine whether the desired kerning pair is in the searchRange portion of the list. If it is, the binary search starts at the beginning of the list of kerning pairs. If it isn't, the search starts rangeShift bytes from the beginning of the list. This will be an entry boundary. The number of iterations made through the list of kerning pairs is determined by the value of entrySelector, which is calculated as the base 2 log of the largest power of two less than or equal to the value of nPairs.</p>
+    <p>Although this ordered list format is compact and easy to generate, the binary search loop requires entrySelector iterations in order to search.</p>
+    <p>This table gives the format of the Format 0 kerning subtable:</p>
+    <table>
+      <caption>
+        The Type 0 <code>'kerx'</code> Subtable
+      </caption>
+      <tbody>
+        <tr>
+          <th>Type</th>
+          <th>Name</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>uint32</td>
+          <td>nPairs</td>
+          <td class="description">The number of kerning pairs in this subtable.</td>
+        </tr>
+        <tr>
+          <td>uint32</td>
+          <td>searchRange</td>
+          <td class="description">The largest power of two less than or equal to the value of nPairs, multiplied by the size in bytes of an entry in the subtable.</td>
+        </tr>
+        <tr>
+          <td>uint32</td>
+          <td>entrySelector</td>
+          <td class="description">This is calculated as log2 of the largest power of two less than or equal to the value of nPairs. This value indicates how many iterations of the search loop have to be made. For example, in a list of eight items, there would be three iterations of the loop.</td>
+        </tr>
+        <tr>
+          <td>uint32</td>
+          <td>rangeShift</td>
+          <td class="description">The value of nPairs minus the largest power of two less than or equal to nPairs. This is multiplied by the size in bytes of an entry in the table.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>The format for the Format 0 kerning pairs and values is as follows:</p>
+    <table>
+      <caption>
+        The Type 0 <code>'kerx'</code> Subtable Kerning Records
+      </caption>
+      <tbody>
+        <tr>
+          <th>Type</th>
+          <th>Name</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>uint16</td>
+          <td>left</td>
+          <td class="description">The glyph index for the lefthand glyph in the kerning pair.</td>
+        </tr>
+        <tr>
+          <td>uint16</td>
+          <td>right</td>
+          <td class="description">The glyph index for the righthand glyph in the kerning pair.</td>
+        </tr>
+        <tr>
+          <td>sint16</td>
+          <td>value</td>
+          <td class="description">The kerning value in FUnits for the left and right pair in FUnits. If this value is greater than zero, the glyphs are moved apart. If this value is less than zero, the glyphs are moved together.</td>
+        </tr>
+        <tr>
+          <td>uint16</td>
+          <td>pad</td>
+          <td>Reserved, must be zero.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>The left (high order word) and right (low order word) halves of the kerning pair make an unsigned 32-bit number, which is then used to order the kerning pairs numerically.</p>
+    <p>The table needs to end with an entry for a left-hand glyph of 0xFFFF, a right-hand glyph of 0xFFFF, and a kerning value of 0.</p>
+    <h3>Format 1 Kerning Subtable (State Table for Contextual Kerning)</h3>
+    <p>Format 1 positioning tables contain a format specific header and a state table to allow kerning of up to eight glyphs at once. The format specific header for a Format 1 positioning table is as follows:</p>
+    <table>
+      <caption>
+        The Type 1 <code>'kerx'</code> Header
+      </caption>
+      <tbody>
+        <tr>
+          <th>Type</th>
+          <th>Name</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>STXHeader</td>
+          <td>stHeader</td>
+          <td class="description">The contextual kerning state table header.</td>
+        </tr>
+        <tr>
+          <td>uint32</td>
+          <td>valueTable</td>
+          <td class="description">Offset in bytes from the beginning of the subtable to the beginning of the kerning value array.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>The actions in a contextual kerning subtable are three words in length. The first word is the index of the new state in the state table. The second word is a table-specific flag field. The flags and their descriptions follow:</p>
+    <table>
+      <caption>
+        The Type 1 <code>'kerx'</code> Subtable Actions
+      </caption>
+      <tbody>
+        <tr>
+          <th>Mask value</th>
+          <th>Interpretation</th>
+        </tr>
+        <tr>
+          <td>0x8000</td>
+          <td class="description">Push: if set, push this glyph on the kerning stack.</td>
+        </tr>
+        <tr>
+          <td>0x4000</td>
+          <td class="description">If set, don't advance to the next glyph before going to the new state.</td>
+        </tr>
+        <tr>
+          <td>0x2000</td>
+          <td class="description">If set, reset the kerning data (clear the stack)</td>
+        </tr>
+        <tr>
+          <td>0x1FFF</td>
+          <td class="description">Not used; set to 0.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>If the push flag is set, the position of the current glyph in the glyph array will be pushed onto a stack of up to eight glyphs, called the kerning stack.</p>
+    <p>The final word in the action is an index into the kerning value array. If this index is 0xFFFF, then no kerning is to be performed. The kerning value table is a list of FUnit kerning values. Each pops one glyph from the kerning stack and applies the kerning value to it. The end of the list is marked by the value 0xFFFF.</p>
+    <h3>Format 2 Kerning Table (Simple n x m Array of Kerning Values)</h3>
+    <p>Format 2 positioning subtables store kerning information in a two-dimensional array of kerning values. The glyphs are mapped to classes, using a different mapping for left-hand and right-hand glyphs. This allows glyphs that have similar left-hand or right-hand shapes to be handled together (e.g., accented forms of a letter).</p>
+    <p>Each row in the array represents one left-hand glyph class, each column represents one right-hand glyph class, and each cell contains a kerning value. Row and column 0 should indicate glyphs that do not kern and contain all zeros.</p>
+    <p>The right-hand class values are stored pre-multiplied by the number of bytes in a single kerning value (i.e., two). The left-hand class values are stored pre-multiplied by the number of bytes in one row and offset by the offset of the array from the start of the subtable. This eliminates the need to multiply the row and column values together to determine the location of the kerning value. The array can be indexed by completing the left-hand and right-hand class mappings, adding the class values to the address of the subtable, and fetching the kerning value to which the new address points.</p>
+    <p>The header of the format 2 simple array header subtable is as follows:</p>
+    <table>
+      <caption>
+        Simple Array Header
+      </caption>
+      <tbody>
+        <tr>
+          <th>Type</th>
+          <th>Name</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>uint32</td>
+          <td>rowWidth</td>
+          <td class="description">The number of columns in the kerning value array</td>
+        </tr>
+        <tr>
+          <td>uint32</td>
+          <td>leftOffsetTable</td>
+          <td class="description">Offset from beginning of this subtable to the left-hand offset table.</td>
+        </tr>
+        <tr>
+          <td>uint32</td>
+          <td>rightOffsetTable</td>
+          <td class="description">Offset from beginning of this subtable to right-hand offset table.</td>
+        </tr>
+        <tr>
+          <td>uint32</td>
+          <td>array</td>
+          <td class="description">Offset from beginning of this subtable to the start of the kerning array.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>The left- and right-hand offset tables are lookup tables. Values are 16-bit unsigned row or column indices and default to zero for glyphs not covered by the lookup table.</p>
+    <p>To find a kerning value, first calculate the row of the left-hand (or top) glyph and column of the right-hand (or bottom) glyph. Use them to calculate the index of the kerning value for the pair.</p>
+    <p>Note that all the values in the kerning array for row and column zero should be 0.</p>
+    <h3>Format 4 Positioning Subtable (State Table for Control Point/Anchor Point Positioning)</h3>
+    <p>Format 4 positioning tables contain a format specific header and a state table to allow positioning a glyph by aligning a control/anchor point on the glyph with a control/anchor point on another glyph. The format specific header for a Format 4 positioning table is as follows:</p>
+    <table>
+      <caption>
+        The Type 4 <code>'kerx'</code> Subtable Header
+      </caption>
+      <tbody>
+        <tr>
+          <th>Type</th>
+          <th>Name</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>STXHeader</td>
+          <td>stHeader</td>
+          <td>The control point positioning state table header.</td>
+        </tr>
+        <tr>
+          <td>uint32</td>
+          <td>flags</td>
+          <td>Flags</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>The flags field has the following format:</p>
+    <table>
+      <caption>
+        Format 4 Flags
+      </caption>
+      <tbody>
+        <tr>
+          <th>Value</th>
+          <th>Interpretation</th>
+        </tr>
+        <tr>
+          <td>0xC0000000</td>
+          <td>Action type mask. A two-bit field containing the action type.</td>
+        </tr>
+        <tr>
+          <td>0x3F000000</td>
+          <td>Unused - must be zero.</td>
+        </tr>
+        <tr>
+          <td>0x00FFFFFF</td>
+          <td>Masks the offset in bytes from the beginning of the subtable to the beginning of the control point table.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>The values in the entry table within a control point positioning subtable are very like the actions for a state table subtable (type 1). The first word is the index of the next state, the second word contains flags, and the third word is either 0xFFFF (for no action) or the index of the action to perform.</p>
+    <p>The flags and their descriptions follow:</p>
+    <table>
+      <caption>
+        Format 4 Actions
+      </caption>
+      <tbody>
+        <tr>
+          <th>Mask value</th>
+          <th>Interpretation</th>
+        </tr>
+        <tr>
+          <td>0x8000</td>
+          <td>Mark: if set, remember this glyph as the marked glyph.</td>
+        </tr>
+        <tr>
+          <td>0x4000</td>
+          <td>If set, don't advance to the next glyph before going to the new state</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>If the mark flag is set, the position of the current glyph in the glyph array will be saved. This glyph is called the marked glyph.&nbsp;</p>
+    <p>If the action type field is 0 the action contains control point numbers:</p>
+    <table>
+      <caption>
+        Control Point Actions
+      </caption>
+      <tbody>
+        <tr>
+          <th>Type</th>
+          <th>Name</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>uint16</td>
+          <td>markControlPoint</td>
+          <td>Control point in marked glyph.</td>
+        </tr>
+        <tr>
+          <td>uint16</td>
+          <td>currControlPoint</td>
+          <td>Control point in current glyph.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>If the action type field is 1 the action contains anchor point numbers:</p>
+    <table>
+      <caption>
+        Anchor Point Actions
+      </caption>
+      <tbody>
+        <tr>
+          <th>Type</th>
+          <th>Name</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>uint16</td>
+          <td>markAnchorPoint</td>
+          <td>Anchor point in marked glyph.</td>
+        </tr>
+        <tr>
+          <td>uint16</td>
+          <td>currAnchorPoint</td>
+          <td>Anchor point in current glyph.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>If the action type field is 2 the action contains coordinates:</p>
+    <table>
+      <caption>
+        Control Point Coordinate Actions
+      </caption>
+      <tbody>
+        <tr>
+          <th>Type</th>
+          <th>Name</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>FWord</td>
+          <td>markX</td>
+          <td>X-coordinate of mark control point</td>
+        </tr>
+        <tr>
+          <td>FWord</td>
+          <td>markY</td>
+          <td>Y-coordinate of mark control point</td>
+        </tr>
+        <tr>
+          <td>FWord</td>
+          <td>currX</td>
+          <td>X-coordinate of current control point</td>
+        </tr>
+        <tr>
+          <td>FWord</td>
+          <td>currY</td>
+          <td>Y-coordinate of current control point</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>The current glyph is positioned so that the two control/anchor points overlap.</p>
+    <h3>Subtable Glyph Coverage Tables</h3>
+    <p>A subtable glyph coverage table is used to determine whether or not a particular glyph in the font is relevant to a given subtable. Its format is as follows:</p>
+    <table border="1" cellpadding="0" cellspacing="2">
+      <tbody>
+        <tr align="left" valign="middle">
+          <th>
+            <div align="left">
+              Type
+            </div>
+          </th>
+          <th>
+            <div align="left">
+              Name
+            </div>
+          </th>
+          <th align="left">
+            <div align="left">
+              Description
+            </div>
+          </th>
+        </tr>
+        <tr align="left" valign="middle">
+          <td>uint32</td>
+          <td>subtableOffsets[]</td>
+          <td class="description">Array of offsets from the beginning of the subtable glyph coverage table to the glyph coverage bitfield for a given subtable; there is one offset for each subtable in the <code>'kerx'</code> table. Use <code>0xFFFFFFFF</code> to indicate that there is no coverage bitfield for the given subtable. Coverage bitfields are only used for type 1 and 4 <code>'kerx'</code> subtables.</td>
+        </tr>
+        <tr align="left" valign="middle">
+          <td>uint8</td>
+          <td>coverageBitfields[]</td>
+          <td class="description">The individual coverage bitfields</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Each coverage bitfield is <code>(numGlyphs + CHAR_BIT - 1) / CHAR_BIT</code> bytes in size (rounded up to a four-byte boundary).</p>
+    <p>To determine if a particular glyph is covered by the subtable, calculate <code>coverageBitfield[glyph/CHAR_BIT] & (1 << (glyph & (CHAR_BIT-1)))</code>. If this is non-zero, the glyph is covered.</p>
+    <p>In practice, for a given run of text, a coverage bitfield is generated for the glyphs in that run. That bitfield is then ANDed with the coverage bitfield for each subtable. If the result is zero, then none of the glyphs in the run is used by the subtable and the subtable may be skipped.</p>
+    <p>As a rule, the most benefit accrues when the coverage bitfield only includes the glyphs that trigger a kerning action. This will maximize the number of subtables which can be skipped.</p>
+    <h2>Platform-specific Information</h2>
+    <p>The <code>'kerx'</code> table is supported on OS X 10.7 and iOS 7 onward. Type 2 <code>'kerx'</code> subtables do not work prior to iOS 7 and OS X 10.9.</p>
+    <p>Support for the <code>processDirection</code> flag and version 3 <code>'kerx'</code> tables is planned for future releases of iOS and OS X.</p>
+    <h2>Dependencies</h2>
+    <p>The <code>'kerx</code><code>'</code> table refers to glyphs by their glyph index. These values should not exceed the number of glyphs for the font as contained in <a href="Chap6maxp.html">the maximum profile (<code>'maxp'</code>) table.</a></p>
+    <p>If the font has an <a href="Chap6ankr.html"><code>'ankr'</code> (anchor point)</a> table, it is used to define the anchor points. Otherwise, the "anchor points" are the points defined by the <a href="Chap6glyf.html"><code>'glyf'</code> (glyph data)</a> table.</p>
+    <h2>Tools</h2>
+    <p>Dumping and fusing of <code>'kerx'</code> tables is supported in <span class="toolName">ftxdumperfuser</span>. <code>'kerx'</code> tables can also be generated using <span class="toolName">ftxenhancer</span>.</p>
+  </div>
+
+      </section>
+  </div><!-- /content -->
+
+  <div id="globalfooter">
+    <div id="breadory">
+      <ol id="breadcrumbs">
+        <li class="home"><a href="../../../index.html">Developer</a></li>
+        <li><a href="../../index.html">Fonts</a></li>
+        <li><a href="../index.html">TrueType™ Reference Manual</a></li>
+        <li>The TrueType Font File</li>
+      </ol>
+      <div id="directorynav" class="directorynav">
+	<div id="dn-cola" class="column">
+		<h3><a href="../../../platforms/index.html">Platforms</a></h3>
+		<ul>
+			<li><a href="../../../ios/index.html">iOS</a></li>
+			<li><a href="../../../osx/index.html">OS X</a></li>
+			<li><a href="../../../watchos/index.html">watchOS</a></li>
+			<li><a href="../../../tvos/index.html">tvOS</a></li>
+		</ul>
+		<h3><a href="../../../resources/index.html">Tools</a></h3>
+		<ul>
+			<li><a href="../../../xcode/index.html">Xcode</a></li>
+			<li><a href="../../../swift/index.html">Swift</a></li>
+		</ul>
+	</div>
+	<div id="dn-colb" class="column">
+		<h3><a href="../../../resources/index.html">Resources</a></h3>
+		<ul>
+			<li><a href="../../../library/index.html">Documentation</a></li>
+			<li><a href="../../../videos/index.html">Videos</a></li>
+			<li><a href="https://forums.developer.apple.com/">Forums</a></li>
+			<li><a href="../../../app-store/index.html">App Store</a></li>
+			<li><a href="../../../safari/index.html">Safari and Web</a></li>
+			<li><a href="../../../education/index.html">Education</a></li>
+			<li><a href="../../../enterprise/index.html">Enterprise</a></li>
+		</ul>
+	</div>
+	<div id="dn-colc" class="column">
+		<h3><a href="../../../programs/index.html">Programs</a></h3>
+		<ul>
+			<li><a href="../../../programs/index.html">Developer Program</a></li>
+			<li><a href="../../../programs/enterprise/index.html">Enterprise Program</a></li>
+			<li><a href="../../../programs/ios/university/index.html">iOS University Program</a></li>
+			<li><a href="../../../programs/mfi/index.html">MFi Program</a></li>
+		</ul>
+	</div>
+	<div id="dn-cold" class="column">
+		<h3><a href="../../../support/index.html">Support</a></h3>
+		<ul>
+			<li><a href="../../../support/development/index.html">Development</a></li>
+			<li><a href="../../../support/distribution/index.html">Distribution</a></li>
+			<li><a href="../../../support/membership/index.html">Membership</a></li>
+			<li><a href="../../../system-status/index.html">System Status</a></li>
+		</ul>
+	</div>
+	<div id="dn-cole" class="column">
+		<h3><a href="https://developer.apple.com/account/">Account</a></h3>
+		<ul>
+			<li><a href="https://developer.apple.com/account/">Developer Account</a></li>
+			<li><a href="../../../go/index-id=certificates-ids-profiles.html">Certificates, IDs &amp; Profiles</a></li>
+			<li><a href="https://itunesconnect.apple.com">iTunes Connect</a></li>			
+			<li><a href="../../../terms/index.html">License Agreements</a></li>
+		</ul>
+	</div>
+</div>
+
+    </div><!--/breadory-->
+    <ul class="gf-links piped footer-links">
+  <li><a href="../../../news/index.html" class="first">News &amp; Updates</a></li>
+  <li><a href="../../../bug-reporting/index.html">Report Bugs</a></li>
+  <li><a href="../../../contact/index.html">Contact Us</a></li>
+</ul>
+
+<div class="gf-sosumi footer-sosumi">
+  <p>Copyright © 2016 Apple Inc. All rights reserved.</p>
+    <ul class="piped">
+        <li><a href="http://www.apple.com/legal/internet-services/terms/site.html" class="first">Terms of Use</a></li>
+        <li><a href="http://www.apple.com/privacy/privacy-policy/">Privacy Policy</a></li>
+    </ul>
+</div>
+
+<!--<div id="gf-links piped footer-links">
+	<ul>
+		<li><a href="/cn/" title="Simplified Chinese">简体中文</a></li>
+		<li><a href="/jp/" title="Japanese">日本語</a></li>
+		<li><a href="/kr/" title="Korean">한국어</a></li>
+	</ul>
+</div>-->
+
+  </div><!--/globalfooter-->
+</body>
+</html>

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="Author" content="Apple Inc." />
+<meta name="viewport" content="width=1024" />
+<link rel="shortcut icon" href="../../../favicon.ico" />
+<link rel="icon" href="../../../favicon.ico" />
+<link rel="stylesheet" href="https://www.apple.com/wss/fonts?family=Myriad+Set+Pro&amp;v=2" type="text/css" />
+<link rel="stylesheet" href="../../../assets/styles/transition-global.css" type="text/css" />
+<link rel="stylesheet" href="../../../assets/styles/transition-header.css" type="text/css" />
+<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/core/styles/adc.css" type="text/css" />
+<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/styles/topbar.css" type="text/css" />
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/lib/prototype.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/lib/scriptaculous.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/browserdetect.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/apple_core.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/search_decorator.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/adc_core.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/scripts/ac_retina.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/topbarDropdown.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	document.write('<link rel="stylesheet" type="text/css" href="https://devimages.apple.com.edgekey.net/assets/styles/script.css" media="screen">');
+</script>
+<!-- Augmented Search -->
+<!--<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/styles/augmented_search.css" type="text/css">-->
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/lib/jquery/jquery-1.11.0.min.js"></script>
+<script>jQuery.noConflict();</script>
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/lib/jquery/jquery.retinate.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/scripts/augmented_search.js"></script>-->
+<script src="../../../assets/scripts/augmented_search.js"></script>
+<script src="../../../assets/scripts/global-header.js"></script>
+
+  <meta name="Author" content="Apple Inc.">
+  <meta name="viewport" content="width=1024">
+  <link rel="stylesheet" href="../AAT.css" type="text/css">
+  <link rel="shortcut icon" href="https://devimages.apple.com.edgekey.net/favicon.ico">
+  <link rel="icon" href="https://devimages.apple.com.edgekey.net/favicon.ico">
+  <title>Metadata Table</title>
+</head>
+<body class="white sidenav-page">
+  <nav id="globalheader" role="navigation" aria-label="Global Navigation">
+  <div id="gh-content" class="gh-content">
+    <ul class="gh-menu">
+      <li id="gh-menu-icon-toggle" class="gh-menu-icon gh-menu-icon-toggle enhance">
+        <button id="gh-svg-icons" class="gh-svg-wrapper">
+          <span class="text-replace">Menu</span>
+          <svg x="0px" y="0px" width="100%" viewBox="0 0 96 96" class="gh-svg gh-svg-top" enable-background="new 0 0 96 96"><rect width="32" height="4" x="32" y="46" class="gh-svg-rect gh-svg-rect-top"></rect></svg>
+          <svg x="0px" y="0px" width="100%" viewBox="0 0 96 96" class="gh-svg gh-svg-bottom" enable-background="new 0 0 96 96"><rect width="32" height="4" x="32" y="46" class="gh-svg-rect gh-svg-rect-bottom"></rect></svg>
+        </button>
+      </li>
+      <li id="gh-menu-icon-home" class="gh-menu-icon gh-menu-icon-home">
+        <a href="../../../index.html">
+          <span class="text-replace">Apple Developer</span>
+        </a>
+      </li>
+    </ul>
+    <div class="gh-nav">
+      <div class="gh-nav-view">
+        <ul class="gh-nav-list">
+
+          <li class="gh-tab gh-nav-developer" data-hires="true"><a class="gh-tab-link" href="../../../index.html"><span class="text-replace">Apple Developer</span></a></li>
+          <li class="gh-tab gh-nav-technologies"><a class="gh-tab-link" href="../../../platforms/index.html">Platforms</a></li>
+          <li class="gh-tab gh-nav-resources"><a class="gh-tab-link" href="../../../resources/index.html">Resources</a></li>
+          <li class="gh-tab gh-nav-programs"><a class="gh-tab-link" href="../../../programs/index.html">Program</a></li>
+          <li class="gh-tab gh-nav-support"><a class="gh-tab-link" href="../../../support/index.html">Support</a></li>
+          <li class="gh-tab gh-nav-account">
+            <a class="gh-tab-link gh-account-profile" href="https://developer.apple.com/account/">Account</a>
+          </li>
+          <li class="gh-tab gh-nav-search">
+
+            <div id="gh-search" class="gh-search" role="search">
+              <form action="/search/index.php" method="get" class="gh-search-form" id="gh-search-form" role="search">
+
+                <div class="gh-search-input-wrapper">
+                  <label for="gh-search-input" class="text-replace">Search Apple Developer</label>
+                  <input type="text" name="q" id="gh-search-input" class="augmented gh-search-input" placeholder="Search Apple Developer" autocomplete="off" autocorrect="off" autocapitalize="off">
+                </div>
+
+                <button disabled type="submit" id="gh-search-submit" class="gh-search-submit gh-search-magnify"><span class="text-replace">Search Apple Developer</span></button>
+                <button disabled type="reset" id="gh-search-reset" class="gh-search-reset"><span class="text-replace">Reset</span></button>
+
+              </form>
+            </div>
+
+            <a class="gh-search-magnify" href="../../../search/index.html"><span class="text-replace">Search Apple Developer</span></a>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+  <div id="top">
+<!-- SiteCatalyst code version: H.8. Copyright 1997-2006 Omniture, Inc. -->
+<script type="text/javascript">
+/* RSID: */
+var s_account="appleglobal,appleusdeveloper"
+</script>
+
+<script type="text/javascript" src="https://www.apple.com/metrics/scripts/s_code_h.js"></script>
+<script type="text/javascript">
+s.pageName= AC && AC.Tracking && AC.Tracking.pageName();
+s.channel="www.us.developer"
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)</script>
+<!-- End SiteCatalyst code version: H.8. -->
+</div>
+
+  <div id="content" class="content" data-hires="false">
+    <section>
+  <div id="navBar">
+    <!-- NAVBARSTART -->
+    <p class="bold"><a href="../index.html">TrueType Reference Manual</a></p>
+    <ul class="outer">
+      <li><a href="../RM01/Chap1.html">Digitizing Letterforms</a></li>
+      <li><a href="../RM02/Chap2.html">The Font Engine</a></li>
+      <li><a href="../RM03/Chap3.html">Instructing Fonts</a></li>
+      <li><a href="../RM04/Chap4.html">The Graphics State</a></li>
+      <li><a href="../RM05/Chap5.html">The Instruction Set</a></li>
+      <li><a href="Chap6.html">Font Tables</a></li>
+      <li class="c1">
+        <ul class="inner">
+          <li><a href="Chap6.html#Intro">Introduction</a></li>
+          <li><a href="Chap6.html#Types">Data Types</a></li>
+          <li><a href="Chap6.html#Overview">Overview of TrueType</a></li>
+          <li><a href="Chap6AATIntro.html">Overview of AAT</a></li>
+          <li><a href="Chap6Tables.html">Special Tables</a></li>
+          <li><a href="Chap6.html#Directory">The Font Directory</a></li>
+          <li><a href="Chap6acnt.html">The <code>'acnt'</code> table</a></li>
+          <li><a href="Chap6ankr.html">The <code>'ankr'</code> table</a></li>
+          <li><a href="Chap6avar.html">The <code>'avar'</code> table</a></li>
+          <li><a href="Chap6bdat.html">The <code>'bdat'</code> table</a></li>
+          <li><a href="Chap6bhed.html">The <code>'bhed'</code> table</a></li>
+          <li><a href="Chap6bloc.html">The <code>'bloc'</code> table</a></li>
+          <li><a href="Chap6bsln.html">The <code>'bsln'</code> table</a></li>
+          <li><a href="Chap6cmap.html">The <code>'cmap'</code> table</a></li>
+          <li><a href="Chap6cvar.html">The <code>'cvar'</code> table</a></li>
+          <li><a href="Chap6cvt.html">The <code>'cvt '</code> table</a></li>
+          <li><a href="Chap6EBSC.html">The <code>'EBSC'</code> table</a></li>
+          <li><a href="Chap6fdsc.html">The <code>'fdsc'</code> table</a></li>
+          <li><a href="Chap6feat.html">The <code>'feat'</code> table</a></li>
+          <li><a href="Chap6fmtx.html">The <code>'fmtx'</code> table</a></li>
+          <li><a href="Chap6fond.html">The <code>'fond'</code> table</a></li>
+          <li><a href="Chap6fpgm.html">The <code>'fpgm'</code> table</a></li>
+          <li><a href="Chap6fvar.html">The <code>'fvar'</code> table</a></li>
+          <li><a href="Chap6gasp.html">The <code>'gasp'</code> table</a></li>
+          <li><a href="Chap6gcid.html">The <code>'gcid'</code> table</a></li>
+          <li><a href="Chap6glyf.html">The <code>'glyf'</code> table</a></li>
+          <li><a href="Chap6gvar.html">The <code>'gvar'</code> table</a></li>
+          <li><a href="Chap6hdmx.html">The <code>'hdmx'</code> table</a></li>
+          <li><a href="Chap6head.html">The <code>'head'</code> table</a></li>
+          <li><a href="Chap6hhea.html">The <code>'hhea'</code> table</a></li>
+          <li><a href="Chap6hmtx.html">The <code>'hmtx'</code> table</a></li>
+          <li><a href="Chap6just.html">The <code>'just'</code> table</a></li>
+          <li><a href="Chap6kern.html">The <code>'kern'</code> table</a></li>
+          <li><a href="Chap6kerx.html">The <code>'kerx'</code> table</a></li>
+          <li><a href="Chap6lcar.html">The <code>'lcar'</code> table</a></li>
+          <li><a href="Chap6loca.html">The <code>'loca'</code> table</a></li>
+          <li><a href="Chap6ltag.html">The <code>'ltag'</code> table</a></li>
+          <li><a href="Chap6maxp.html">The <code>'maxp'</code> table</a></li>
+          <li>The <code>'meta'</code> table</li>
+          <li><a href="Chap6mort.html">The <code>'mort'</code> table</a></li>
+          <li><a href="Chap6morx.html">The <code>'morx'</code> table</a></li>
+          <li><a href="Chap6name.html">The <code>'name'</code> table</a></li>
+          <li><a href="Chap6opbd.html">The <code>'opbd'</code> table</a></li>
+          <li><a href="Chap6OS2.html">The <code>'OS/2'</code> table</a></li>
+          <li><a href="Chap6post.html">The <code>'post'</code> table</a></li>
+          <li><a href="Chap6prep.html">The <code>'prep'</code> table</a></li>
+          <li><a href="Chap6prop.html">The <code>'prop'</code> table</a></li>
+          <li><a href="Chap6sbix.html">The <code>'sbix'</code> table</a></li>
+          <li><a href="Chap6trak.html">The <code>'trak'</code> table</a></li>
+          <li><a href="Chap6vhea.html">The <code>'vhea'</code> table</a></li>
+          <li><a href="Chap6vmtx.html">The <code>'vmtx'</code> table</a></li>
+          <li><a href="Chap6xref.html">The <code>'xref'</code> table</a></li>
+          <li><a href="Chap6Zapf.html">The <code>'Zapf'</code> table</a></li>
+        </ul>
+      </li>
+      <li><a href="../RM07/appendixA.html">Instruction Set Summary</a></li>
+      <li><a href="../RM07/appendixB.html">Glyph Mappings</a></li>
+      <li><a href="../RM08/appendixE.html">Converting Outlines</a></li>
+	<li><a href="../RM09/AppendixF.html">Font Feature Registry</a></li>
+    </ul><!-- NAVBAREND -->
+  </div>
+  <div id="chapterContent">
+    <header><h1><a name="maxp" id="maxp"></a>The <code>'meta'</code> table</h1></header>
+    <h2>General table information</h2>
+    <p>The <code>'meta'</code> table contains metadata for the font. This metadata can be either binary or text. It begins with a header which is structured as follows:</p>
+    <table border="1" cellspacing="2" cellpadding="0" summary="Structure of the standard 'maxp' table">
+      <caption>
+        The <code>'meta'</code> Table
+      </caption>
+      <tr align="left" valign="middle">
+        <th align="left">
+          <div align="left">
+            Type
+          </div>
+        </th>
+        <th align="left">
+          <div align="left">
+            Name
+          </div>
+        </th>
+        <th align="left">
+          <div align="left">
+            Description
+          </div>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint32_t</td>
+        <td>version</td>
+        <td class="description">The version of the table format, currently 1</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint32_t</td>
+        <td>flags</td>
+        <td class="description">Flags, currently unused and set to 0</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint32_t</td>
+        <td>dataOffset</td>
+        <td class="description">Offset from the beginning of the table to the data</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint32_t</td>
+        <td>numDataMaps</td>
+        <td class="description">The number of data maps in the table</td>
+      </tr>
+    </table>
+    <p>Following the header is a series of data maps. Each maps a four-character tag to a range of data within the table:</p>
+    <table border="1" cellspacing="2" cellpadding="0" summary="Structure of the standard 'maxp' table">
+      <caption>
+        Data Maps
+      </caption>
+      <tr align="left" valign="middle">
+        <th align="left">
+          <div align="left">
+            Type
+          </div>
+        </th>
+        <th align="left">
+          <div align="left">
+            Name
+          </div>
+        </th>
+        <th align="left">
+          <div align="left">
+            Description
+          </div>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>FourCharCode</td>
+        <td>tag</td>
+        <td class="description">A tag indicating the type of metadata</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint32_t</td>
+        <td>dataOffset</td>
+        <td class="description">Offset from the beginning of the table to the data for this tag</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint32_t</td>
+        <td>dataLength</td>
+        <td class="description">Length of the data.  The data is not required to be padded to any byte boundary.</td>
+      </tr>
+    </table>
+
+    <p>Tag data may be either textual or binary. If textual, it should be in UTF-8.</p>
+    <h2>Metadata tags</h2>
+    <p>The following metadata tags are currently defined:</p>
+    <h3>The <code>'dlng'</code> (design languages) tag</h3>
+    <p>The <code>'dlng'</code> lists the languages and/or scripts which the font is specifically intended to cover. The list is a series of comma-separated ScriptLangTags based on the IETF BCP 47 specification. Detailed discussion is below. Spaces may be used between tags but are not required. "cy, mi" and "cy,mi" are both valid.</p>
+    <h3>The <code>'slng'</code> (supported languages) tag</h3>
+    <p>The <code>'slng'</code> lists the languages and/or scripts which the font is known to be capable of supporting. Again, this list is a series of comma-separated ScriptLangTags.</p>
+    <p>To understand the distinction between design and supported languages, consider the case of accented Latin letters. Although the accents are used in common by a number of languages, the precise shape of the accents can depend on the typographic traditions of a specific language. Polish, for example, prefers steeper accents than French. A font which was designed with accents specifically for Polish would then have <code>po-Latn</code> among its <code>'dlng'</code> tags but <code>Latn</code> among its <code>'slng'</code> tags.</p>
+    <p>As another example, fonts designed for East Asian markets will generally include glyphs for Latin, Greek, and Cyrillic because these characters are included in the relevant East Asian characer set standards, but using them for actual Latin, Greek, or Cyrillic text is generally unsatisfactory. Such fonts would therefore include <code>Latn</code>, <code>Grek</code>, and <code>Cyril</code> among their <code>'slng'</code> tags but not their <code>'dlng'</code> tags.</p>
+    <p>Finally, there are some systematic differences in glyph design for the characters shared by simplified and traditional Chinese. (The most notable is the way the “bone” radical is drawn in all characters using it.) A font specifically designed for use with simplified Chinese can usually be used with traditional Chinese, but any character with the “bone” radical will look wrong to readers of traditional Chinese. Such a font would include <code>Hans</code> in its <code>'dlng'</code> tags but both <code>Hans</code> and <code>Hant</code> in its <code>'slng'</code> tags.</p>
+    <h3>The <code>'appl'</code> and <code>'bild'</code> tag</h3>
+    <p>These tags are used internally by Apple. They use binary, and not text, data.</p>
+    <p>Font designers are not limited to the use of these metadata tags. Any metadata tag beginning with a capital letter (e.g., <code>'Foob'</code>) is to be considered private use. Other cross-platform tags will be added as needed.</p>
+    <p>(Note that the <code>'appl'</code> and <code>'bild'</code> tags are strictly-speaking private use, as they are Apple-internal tags. Their use is retained for historical reasons.)</p>
+    <h2>ScriptLangTag Values</h2>
+    <p>The <code>'dlng'</code> and <code>'slng'</code> metadata use <em>ScriptLangTag</em> values, defined here.</p>
+    <p>A ScriptLangTag denotes a particular script or language associated with a font. They are based on the IETF BCP 47 specification, “Tags for Identifying Languages”. (See <a href="http://tools.ietf.org/html/bcp47">http://tools.ietf.org/html/bcp47</a>). BCP 47 tags can include various subtags that provide different types of qualifiers, such as language, script or region. In the BCP 47 specification, a language subtag is mandatory and other subtags are optional. ScriptLangTags used for <code>'dlng'</code> and <code>'slng'</code> metadata declarations use a modification of the BCP 47 syntax: a script subtag is mandatory, while other subtags are optional. The following augmented BNF syntax, adapted from BCP 47, is used:</p>
+<pre>
+ScriptLangTag = [language "-"]
+                script
+                ["-" region]
+                *("-" variant)
+                *("-" extension)
+                ["-" privateuse]
+</pre>
+    <p>The expansion of the language, script, region, variant, extension and private-use rules, and the intended semantics associated with each are as defined in BCP 47. At present, no extensions are defined for use in name <code>'dlng'</code> and <code>'slng'</code> metadata declarations, and any extensions encountered will be ignored. Any privateuse subtag sequences may be ignored by applications interpreting name <code>'dlng'</code> and <code>'slng'</code> metadata strings.</p>
+    <p>Subtags must be valid for use in BCP 47 and contained in the Language Subtag Registry maintained by IANA. See <a href="http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry">http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry</a> and section 3 of BCP 47 for details. Implementations may use a dated snapshot of the IANA subtag registry and are not required to interpret every subtag defined in the registry. Any subtag that is interpreted, however, must be interpreted in conformance with the description in the registry.</p>
+    <p><b>Note: OpenType Layout script and language system tags are not the same as those used in BCP 47 and should not be referenced when creating or processing ScriptLangTags.</b></p>
+    <p>Any ScriptLangTag that does not conform to these specifications is ignored.</p>
+    <p>It should be noted that the various elements in a BCP 47 tag have different length requirements that, together with ordering requirements, allow for unambiguous interpretation. A script subtag is always exactly four characters long and is derived from the ISO 15924 standard. (See <a href="http://www.unicode.org/iso15924/">http://www.unicode.org/iso15924/</a>.) Also, language subtags cannot be four characters long.</p>
+    <p>A ScriptLangTag can denote fairly specific information; for example, “en-Latn-IN” would represent ‘Latin script as used for the English language in India’. In most cases, however, generic tags should be used, and it is anticipated that most tags used in <code>'dlng'</code> and <code>'slng'</code> metadata declarations will consist only of a script subtag. Language or other subtags can be included, however, and may be appropriate in some cases. Implementations must allow for ScriptLangTags that include additional subtags, but they may also choose to interpret only the script subtag and ignore other subtags.</p>
+    <p>Examples:</p>
+    <ul>
+        <li>“Latn” denotes Latin script (and any language or writing system using Latin script)</li>
+        <li>“Cyrl” denotes Cyrillic script</li>
+        <li>“sr-Cyrl” denotes Cyrillic script as used for the Serbian language</li>
+        <li>“en-Dsrt” denotes English written with the Deseret script</li>
+        <li>“Hant” denotes Traditional Chinese</li>
+        <li>“Hant-HK” denotes Traditional Chinese as used in Hong Kong</li>
+        <li>“Jpan” denotes Japanese writing — ISO 15924 defines “Jpan” as an alias for Han + Hiragana + Katakana</li>
+        <li>“Kana” denotes Katakana script (exclusively — no Han or Hiragana characters)</li>
+        <li>“Kore” denotes Korean writing — ISO 15924 defines “Kore” as an alias for Hangul + Han</li>
+        <li>“Hang” denotes Hangul script (exclusively —Hanja are not implied by “Hang”)</li>
+    </ul>
+    <p>The Unicode Standard uses the ISO 15924 script identifiers “Zinh” (‘inherited’) and “Zyyy” (‘undetermined’). These should not be used in ScriptLangTags for <code>'dlng'</code> and <code>'slng'</code> metadata. Similarly, “Zxxx” (‘unwritten document’) and “Zzzz” (‘unencoded script’) should never be used.</p>
+    <p>On the other hand, “Zmth” (‘Mathematical notation’) and “Zsym” (‘Symbols”) are not used in the Unicode Standard, yet they may be very useful as declarations in font files. (They were, in fact, added to ISO 15924 for use in relation to fonts.)</p>
+    <p>In relation to East Asian scripts, a declaration of “Jpan” can be used to cover hiragana, katakana and kanji. Similarly, “Kore” can be used to cover Hangul and hanja, though a Korean font with only Hangul support should use “Hang”. For Chinese fonts, “Hans” and “Hant” should normally be used to distinguish between Simplified and Traditional orthographies rather than the more generic declaration “Hani”. Region-specific variations such as “Hant-HK” can also be declared. In some cases, it may be appropriate to describe a font capability (but probably not design target) using the generic declaration “Hani” (‘Han (Hanzi, Kanji, Hanja)’).</p>
+    <p>The BCP 47 specification for region subtags allows for continental and sub-continental regions. For example, “039” can be used to denote Southern Europe. Use of such extended-region subtags in ScriptLangTag values is not recommended as software implementations may not have the logic to make appropriate correlations to more specific regions or languages associated with those regions.</p>
+  </div>
+
+      </section>
+  </div><!-- /content -->
+
+  <div id="globalfooter">
+    <div id="breadory">
+      <ol id="breadcrumbs">
+        <li class="home"><a href="../../../index.html">Developer</a></li>
+        <li><a href="../../index.html">Fonts</a></li>
+        <li><a href="../index.html">TrueType™ Reference Manual</a></li>
+        <li>The TrueType Font File</li>
+      </ol>
+      <div id="directorynav" class="directorynav">
+	<div id="dn-cola" class="column">
+		<h3><a href="../../../platforms/index.html">Platforms</a></h3>
+		<ul>
+			<li><a href="../../../ios/index.html">iOS</a></li>
+			<li><a href="../../../osx/index.html">OS X</a></li>
+			<li><a href="../../../watchos/index.html">watchOS</a></li>
+			<li><a href="../../../tvos/index.html">tvOS</a></li>
+		</ul>
+		<h3><a href="../../../resources/index.html">Tools</a></h3>
+		<ul>
+			<li><a href="../../../xcode/index.html">Xcode</a></li>
+			<li><a href="../../../swift/index.html">Swift</a></li>
+		</ul>
+	</div>
+	<div id="dn-colb" class="column">
+		<h3><a href="../../../resources/index.html">Resources</a></h3>
+		<ul>
+			<li><a href="../../../library/index.html">Documentation</a></li>
+			<li><a href="../../../videos/index.html">Videos</a></li>
+			<li><a href="https://forums.developer.apple.com/">Forums</a></li>
+			<li><a href="../../../app-store/index.html">App Store</a></li>
+			<li><a href="../../../safari/index.html">Safari and Web</a></li>
+			<li><a href="../../../education/index.html">Education</a></li>
+			<li><a href="../../../enterprise/index.html">Enterprise</a></li>
+		</ul>
+	</div>
+	<div id="dn-colc" class="column">
+		<h3><a href="../../../programs/index.html">Programs</a></h3>
+		<ul>
+			<li><a href="../../../programs/index.html">Developer Program</a></li>
+			<li><a href="../../../programs/enterprise/index.html">Enterprise Program</a></li>
+			<li><a href="../../../programs/ios/university/index.html">iOS University Program</a></li>
+			<li><a href="../../../programs/mfi/index.html">MFi Program</a></li>
+		</ul>
+	</div>
+	<div id="dn-cold" class="column">
+		<h3><a href="../../../support/index.html">Support</a></h3>
+		<ul>
+			<li><a href="../../../support/development/index.html">Development</a></li>
+			<li><a href="../../../support/distribution/index.html">Distribution</a></li>
+			<li><a href="../../../support/membership/index.html">Membership</a></li>
+			<li><a href="../../../system-status/index.html">System Status</a></li>
+		</ul>
+	</div>
+	<div id="dn-cole" class="column">
+		<h3><a href="https://developer.apple.com/account/">Account</a></h3>
+		<ul>
+			<li><a href="https://developer.apple.com/account/">Developer Account</a></li>
+			<li><a href="../../../go/index-id=certificates-ids-profiles.html">Certificates, IDs &amp; Profiles</a></li>
+			<li><a href="https://itunesconnect.apple.com">iTunes Connect</a></li>			
+			<li><a href="../../../terms/index.html">License Agreements</a></li>
+		</ul>
+	</div>
+</div>
+
+    </div><!--/breadory-->
+    <ul class="gf-links piped footer-links">
+  <li><a href="../../../news/index.html" class="first">News &amp; Updates</a></li>
+  <li><a href="../../../bug-reporting/index.html">Report Bugs</a></li>
+  <li><a href="../../../contact/index.html">Contact Us</a></li>
+</ul>
+
+<div class="gf-sosumi footer-sosumi">
+  <p>Copyright © 2016 Apple Inc. All rights reserved.</p>
+    <ul class="piped">
+        <li><a href="http://www.apple.com/legal/internet-services/terms/site.html" class="first">Terms of Use</a></li>
+        <li><a href="http://www.apple.com/privacy/privacy-policy/">Privacy Policy</a></li>
+    </ul>
+</div>
+
+<!--<div id="gf-links piped footer-links">
+	<ul>
+		<li><a href="/cn/" title="Simplified Chinese">简体中文</a></li>
+		<li><a href="/jp/" title="Japanese">日本語</a></li>
+		<li><a href="/kr/" title="Korean">한국어</a></li>
+	</ul>
+</div>-->
+
+  </div><!--/globalfooter-->
+</body>
+</html>

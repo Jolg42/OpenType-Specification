@@ -1,0 +1,184 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+  <head>
+    <title>The SVG Glyph Outlines Table</title>
+    <link rel="STYLESHEET" href="otspec.css" type="text/css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <div class="toprule">
+    </div>
+    <p class="menu">
+      <a href="http://www.microsoft.com/typography/default.mspx">Microsoft Typography</a> | <a href="http://www.microsoft.com/typography/creators.htm">Developer...</a> | <a href="default.htm">OpenType specification</a> | <a href="otff.htm#otttables">OpenType tables</a> | The SVG table</p>
+    <div class="middlerule">
+    </div>
+    <div class="contents">
+      <p>OpenType fonts with either TrueType or CFF outlines may also contain an optional ‘SVG ’ table, which allows some or all glyphs in the font to be defined with color, gradients, or animation.</p>
+      <h1>SVG - The SVG (Scalable Vector Graphics) table</h1>
+      <p>This table contains SVG descriptions for some or all of the glyphs in the font. For every SVG glyph description, there must also exist a corresponding CFF or TT glyph description in the font.</p>
+   <h2>SVG Main Header</h2>
+      <table class="gray">
+        <tr>
+          <th style="width: 20%;">Type</th>
+          <th style="width: 30%;">Name</th>
+          <th style="width: 50%;">Description</th>
+        </tr>
+        <tr>
+          <td>USHORT</td>
+          <td>version</td>
+          <td>Table version (starting at 0). Set to 0.</td>
+        </tr>
+        <tr>
+          <td>ULONG</td>
+          <td>offsetToSVGDocIndex</td>
+          <td>Offset (relative to the start of the SVG table) to the SVG Documents Index. Must be non-zero.</td>
+        </tr>
+        <tr>
+          <td>ULONG</td>
+          <td>reserved</td>
+          <td>Set to 0.</td>
+        </tr>
+      </table>
+<h2>SVG Document Index</h2>
+      <p>The SVG Document Index is a set of SVG documents, each of which defines one or more glyph descriptions.</p>
+      <table class="gray">
+        <tr>
+          <th style="width: 20%;">Type</th>
+          <th style="width: 30%;">Name</th>
+          <th style="width: 50%;">Description</th>
+        </tr>
+        <tr>
+          <td>USHORT</td>
+          <td>numEntries</td>
+          <td>Number of SVG Document Index Entries. Must be non-zero.</td>
+        </tr>
+        <tr>
+          <td>SVG Document Index Entry</td>
+          <td>entries[numEntries]</td>
+          <td>Array of SVG Document Index Entries.</td>
+        </tr>
+      </table>
+        <h2>SVG Document Index Entry</h2>
+      <p>Each SVG Document Index Entry specifies a range [startGlyphID, endGlyphID], inclusive, of glyph IDs and the location of its associated SVG document in the SVG table.</p>
+      <table class="gray">
+        <tr>
+          <th style="width: 20%;">Type</th>
+          <th style="width: 30%;">Name</th>
+          <th style="width: 50%;">Description</th>
+        </tr>
+        <tr>
+          <td>USHORT</td>
+          <td>startGlyphID</td>
+          <td>The first glyph ID in the range described by this index entry.</td>
+        </tr>
+        <tr>
+          <td>USHORT</td>
+          <td>endGlyphID</td>
+          <td>The last glyph ID in the range described by this index entry. Must be >= startGlyphID.</td>
+        </tr>
+        <tr>
+          <td>ULONG</td>
+          <td>svgDocOffset</td>
+          <td>Offset from the beginning of the SVG Document Index to an SVG document. Must be non-zero.</td>
+        </tr>
+       <tr>
+          <td>ULONG</td>
+          <td>svgDocLength</td>
+          <td>Length of the SVG document. Must be non-zero.</td>
+        </tr>
+      </table>
+      <p>Index entries must be arranged in order of increasing startGlyphID. The startGlyphID of an index entry must be greater than the endGlyphID of the previous index entry, if any.</p>
+      <p>While <a href="http://www.w3.org/TR/SVG11/conform.html#ConformingSVGViewers">SVG 1.1</a> requires in addition to plain text encoding that conforming SVG implementations must correctly support gzip-encoded [RFC1952] and deflate-encoded [RFC1951] data streams, this specification requires that conforming SVG implementations must correctly support plain-text and gzip-encoded [RFC1952] data streams only.  In both cases, svgDocLength encodes the length of the encoded data, not the decoded document.</p>
+      <p>For further details about the content of the SVG documents, see “Glyph Identifiers” and the following sections below. </p>
+    <h2>Color Palettes</h2>
+      <p>The SVG glyph descriptions may contain color variables whose values are obtained either from one of the various color palettes in the Color Palette (<a href="cpal.htm">CPAL</a>) table or by other means, for example values specified by the user. The first color palette shall be the default one. It is strongly recommended that the default values for the color variables in the SVG documents be set to the same values as in the first color palette table, for implementations that may not support color palettes.</p>
+      <p>Color variables are made available for use in the SVG glyph descriptions by the font engine setting CSS custom properties in a User Agent style sheet.  The custom property names are of the form "--color&lt;num&gt;", where &lt;num&gt; is a parameter index in the range [0, numPaletteEntries-1], inclusive, expressed as a non-zero- padded decimal number.  numPaletteEntries is defined in the <a href="cpal.htm">CPAL</a> table.  See the “Glyph rendering” section below for exactly how the values are to be passed in to the SVG document.</p>
+      <p>Font engines that support the SVG table and color palettes are strongly suggested to implement the <a href="http://www.w3.org/TR/css-variables-1/">CSS Custom Properties for Cascading Variables specification</a>, as this is required for the palette entries to be passed into the SVG document.</p>
+      <p>Note that the SVG glyph descriptions are able to express their own explicit or “hard-coded” colors as well. These are not related to color variables and thus do not vary by palette selection. For example, a font designer may want the teardrop on a crying emoji always to be blue (this is “hard-coded”) but the rest of the emoji regulated by color variables, with the skin of the face having a default value of the classic “smiley face” yellow (default both in the SVG glyph description itself – see the var(--color0, yellow) example below – and in the default color palette).</p>
+    <h2>Glyph Identifiers</h2>
+      <p>For each glyph ID in an SVG Document Index Entry’s [startGlyphID, endGlyphID] range, inclusive, the associated SVG document must contain an element with id “glyph&lt;glyphID&gt;”, where &lt;glyphID&gt; is the glyph ID expressed as a non–zero-padded decimal value. This element functions as the SVG glyph description for the glyph ID.</p>
+      <p>For example, say a font with maxp.numGlyphs=100 has SVG glyph definitions only for its last 5 glyphs. The last SVG glyph definition has its own SVG document, but the rest share an SVG document (say, to take advantage of shared graphical elements). There will be two index entries, the first with glyph ID range [95, 98] and the second with glyph ID range [99, 99]. The SVG document referenced by the first index entry will contain elements with id “glyph95”, “glyph96”, “glyph97”, and “glyph98”. The SVG document referenced by the second index entry will contain an element with id “glyph99”.</p>
+    <h2>Glyph Semantics and Metrics</h2>
+      <p>The glyph descriptions in the SVG documents are considered to be the SVG versions of the glyphs with the corresponding IDs in the CFF or glyf table. They are designed on an em specified in the head table’s unitsPerEm field, as with CFF and TrueType glyphs. SVG glyph definitions will be in SVG’s y-down coordinate system, with the default baseline at y=0. For example, the top of a capital letter may be at y=-800, and the bottom at y=0. This coordinate system will need to be translated appropriately to the coordinate system of the rest of the OT tables and the coordinate system of the graphics environment.</p>
+      <p>Glyph semantics are expressed in the usual way (cmap table followed by GSUB). Glyph metrics such as horizontal and vertical advances are specified in the OpenType metrics tables (hmtx and vmtx), and glyph positioning adjustments by the GPOS or kern table.</p>
+      <p>As with CFF glyphs, no explicit glyph bounding boxes are recorded. The “ink” bounding box of the rendered SVG glyph should be used if a bounding box is desired; this box may be different for animated vs static renderings of the glyph.</p>
+      <p>Note that the glyph advances are static and not able to be made variable or animated.</p>
+     <h2>Glyph Rendering</h2>
+      <p>The SVG glyph descriptions may be rendered statically or with animation enabled. Note that static rendering is done by not running any animations in the SVG document; this is different from running the document with animations running but at a snapshot time of zero seconds. Some clients may choose not to support – or may not be able to support – animation. Clients that support animation may still request, in certain cases, that the glyph be rendered statically, e.g. for printing to paper.</p>
+      <p>The following user agent style sheet must be applied to SVG documents processed from the SVG table:</p>
+
+<pre>
+@namespace svg url(http://www.w3.org/2000/svg);
+svg|text, svg|foreignObject {
+    display: none !important;</p>
+}
+</pre>
+
+<pre>
+:root {
+    fill: context-fill;
+    fill-opacity: context-fill-opacity;
+    stroke: context-stroke;
+    stroke-opacity: context-stroke-opacity;
+    stroke-width: context-value;
+    stroke-dasharray: context-value;
+    stroke-dashoffset: context-value;
+}
+</pre>
+
+    <p>In addition, if the font engine supports color palettes, and color palette values are provided, the user agent style sheet must include CSS Custom Property declarations for the color variables. This is done by including ‘numPaletteEntries’ (defined in the <a href="cpal.htm">CPAL</a> table) declarations in the :root rule of the form:</p>
+
+<pre>
+--color&#60num&#62: &#60color&#62;
+</pre>
+
+    <p>where &#60num&#62 is each of the values from zero to numPaletteEntries–1, inclusive, expressed as a non-zero-padded decimal number; and <color> is the <num> index within the desired Color Palette, expressed in SVG’s <color> format. An example entry in the style sheet is:</p>
+
+<pre>
+--color0: rgba(255,0,0, 0.5);
+</pre>
+
+    <p>and the corresponding usage in an SVG glyph description could be something like:</p>
+<pre>
+&#60path fill="var(--color0, yellow)" d="..."/&#62
+</pre>  <p>where 'yellow' defines a default color to be used when the <code>color0</code> variable is not defined.</p><br />
+      <p>Note that SVG’s context-fill value may be used in the glyph descriptions to denote the current text color.</p>
+      <p>It is strongly suggested that OpenType engines that support the SVG table follow the requirements for processing the SVG documents as "font documents" as described in the latest version of the <a href="http://www.w3.org/TR/svg-integration">SVG Integration specification</a>. The requirements in that specification might be updated as the SVG language evolves.</p>
+      <p>SVG documents MUST be interpreted according to at least version 1.1 of the SVG specification.  Font engines are not prohibited from interpreting SVG documents according to newer versions of SVG, such as <a href="http://www.w3.org/TR/SVG2">SVG 2</a>, and indeed are encouraged to.</p>
+      <p>The following new values for any CSS property that takes an SVG paint value MUST be supported:</p>  
+     <ul>
+         <li>context-fill</li>  
+         <li>context-stroke</li>
+      </ul>
+      <p>These values mean the same paint as the computed value of the 'fill' or 'stroke' property, respectively, of the context element, which is the element in the outer document that is using the SVG glyphs.  If the referenced paint is a gradient or a pattern, then the coordinate space to use and the object used for any 'objectBoundingBox'-relative values are the same as those of the context element.</p>
+      <p>The following new values for the 'fill-opacity', 'stroke-opacity' and 'opacity' CSS properties MUST be supported:</p>
+     <ul>
+         <li>context-fill-opacity</li>
+         <li>context-stroke-opacity</li>
+      </ul>
+      <p>These values mean the same as the computed value of the 'fill-opacity' or 'stroke-opacity' property, respectively, of the context element.</p>
+      <p>The following new value for the 'stroke-width', 'stroke-dasharray' and 'stroke-dashoffset' CSS properties MUST be supported:</p>
+      <ul>
+        <li>context-value</li>
+      </ul>
+      <p>This value means the same as the computed value of the corresponding property of the context element, but scaled so that it has the same size when used in the coordinate system of the root &lt;svg&gt; element of the SVG glyph document.  For example, if the context element has 'stroke-width' set to 2px and the SVG glyph document is rendered with a coordinate system such that 2048 user units corresponds to 16px in the context element's coordinate space, then using context-value for 'stroke-width' in the glyph definition will have the same visual effect as using 256 user units.</p>
+      <p>Font engines that support SVG glyphs are strongly suggested to implement the context-fill, context-fill-opacity, context-stroke, context-stroke-opacity and context-value property values according to the definitions found in <a href="http://www.w3.org/TR/SVG2">SVG 2</a>, as these definitions may be  more precise than those described in this document above.</p>
+         <h2>Security considerations and other glyph rendering restrictions</h2>
+      <p>Processing of SVG glyph documents MUST be done with script execution, external references and interactivity disabled.  If the font engine is rendering SVG glyphs with animation, then declarative animations MUST be enabled; if it is rendering glyphs statically, then declarative animations MUST be disabled.</p>
+      <p>These requirements correspond to the "secure animated" and "secure static" processing modes that the SVG Integration document requires font documents to be run in.  It is again strongly suggested that the requirements in the latest version of the <a href="http://www.w3.org/TR/svg-integration/">SVG Integration specification</a> for "font documents" be followed.</p>
+      <p>The use of SVG &lt;text&gt; and &lt;foreignObject&gt; elements within the SVG glyph descriptions is prohibited.  Any SVG &lt;text&gt; and &lt;foreignObject&gt; elements within a glyph description are ignored and not rendered, due to the corresponding rules in the User Agent style sheet.</p>
+    <h2>Text Layout Process</h2>
+      <p>An implementation that supports the SVG table first does layout in the usual manner, using the cmap, GSUB, hmtx, and other OpenType layout tables. This results in a list of glyph IDs arranged at particular x,y positions on the surface (along with the appropriate scale/rotation matrices). At this point, for each such glyph ID, if an SVG glyph description is available for it, it is rendered (in static or animated mode, as appropriate and if supported by the engine); otherwise, the CFF or TT glyph description must be rendered. Since the glyph advances are the same in either case, and not allowed to be animated, switching between SVG and CFF/TT rendering, or between animated and static SVG, should not require re-layout of lines (unless line layout depends on ink bounding boxes).</p>
+      <hr class="separator">
+      <p class="fineprint">This page was last updated 29 March 2015.</p>
+      <p class="fineprint">&copy; 2015 Microsoft Corporation. All rights reserved. <a href="http://www.microsoft.com/Misc/cpyright.htm">Terms of use</a>.</p>
+      <p class="fineprint">Comments to the MST group: <a href="https://www.microsoft.com/typography/AboutMST.mspx">how to contact us</a>.</p>
+    </div>
+    <div class="middlerule">
+    </div>
+    <p class="menu">
+      <a href="http://www.microsoft.com/typography/default.mspx">Microsoft Typography</a> | <a href="http://www.microsoft.com/typography/creators.htm">Developer...</a> | <a href="default.htm">OpenType specification</a> | <a href="otff.htm#otttables">OpenType tables</a> | The VORG table</p>
+    <div class="bottomrule">
+    </div>
+  </body>
+</html>

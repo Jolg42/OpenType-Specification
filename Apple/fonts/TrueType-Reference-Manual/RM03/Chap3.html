@@ -1,0 +1,3816 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="Author" content="Apple Inc." />
+<meta name="viewport" content="width=1024" />
+<link rel="shortcut icon" href="../../../favicon.ico" />
+<link rel="icon" href="../../../favicon.ico" />
+<link rel="stylesheet" href="https://www.apple.com/wss/fonts?family=Myriad+Set+Pro&amp;v=2" type="text/css" />
+<link rel="stylesheet" href="../../../assets/styles/transition-global.css" type="text/css" />
+<link rel="stylesheet" href="../../../assets/styles/transition-header.css" type="text/css" />
+<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/core/styles/adc.css" type="text/css" />
+<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/styles/topbar.css" type="text/css" />
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/lib/prototype.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/lib/scriptaculous.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/browserdetect.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/apple_core.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/search_decorator.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/adc_core.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/scripts/ac_retina.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/topbarDropdown.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	document.write('<link rel="stylesheet" type="text/css" href="https://devimages.apple.com.edgekey.net/assets/styles/script.css" media="screen">');
+</script>
+<!-- Augmented Search -->
+<!--<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/styles/augmented_search.css" type="text/css">-->
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/lib/jquery/jquery-1.11.0.min.js"></script>
+<script>jQuery.noConflict();</script>
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/lib/jquery/jquery.retinate.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/scripts/augmented_search.js"></script>-->
+<script src="../../../assets/scripts/augmented_search.js"></script>
+<script src="../../../assets/scripts/global-header.js"></script>
+
+  <meta name="Author" content="Apple Inc.">
+  <meta name="viewport" content="width=1024">
+  <link rel="shortcut icon" href="https://devimages.apple.com.edgekey.net/favicon.ico">
+  <link rel="icon" href="https://devimages.apple.com.edgekey.net/favicon.ico">
+  <link rel="stylesheet" href="../AAT.css" type="text/css">
+  <title>Instructing Fonts</title>
+</head>
+<body class="white sidenav-page">
+  <nav id="globalheader" role="navigation" aria-label="Global Navigation">
+  <div id="gh-content" class="gh-content">
+    <ul class="gh-menu">
+      <li id="gh-menu-icon-toggle" class="gh-menu-icon gh-menu-icon-toggle enhance">
+        <button id="gh-svg-icons" class="gh-svg-wrapper">
+          <span class="text-replace">Menu</span>
+          <svg x="0px" y="0px" width="100%" viewBox="0 0 96 96" class="gh-svg gh-svg-top" enable-background="new 0 0 96 96"><rect width="32" height="4" x="32" y="46" class="gh-svg-rect gh-svg-rect-top"></rect></svg>
+          <svg x="0px" y="0px" width="100%" viewBox="0 0 96 96" class="gh-svg gh-svg-bottom" enable-background="new 0 0 96 96"><rect width="32" height="4" x="32" y="46" class="gh-svg-rect gh-svg-rect-bottom"></rect></svg>
+        </button>
+      </li>
+      <li id="gh-menu-icon-home" class="gh-menu-icon gh-menu-icon-home">
+        <a href="../../../index.html">
+          <span class="text-replace">Apple Developer</span>
+        </a>
+      </li>
+    </ul>
+    <div class="gh-nav">
+      <div class="gh-nav-view">
+        <ul class="gh-nav-list">
+
+          <li class="gh-tab gh-nav-developer" data-hires="true"><a class="gh-tab-link" href="../../../index.html"><span class="text-replace">Apple Developer</span></a></li>
+          <li class="gh-tab gh-nav-technologies"><a class="gh-tab-link" href="../../../platforms/index.html">Platforms</a></li>
+          <li class="gh-tab gh-nav-resources"><a class="gh-tab-link" href="../../../resources/index.html">Resources</a></li>
+          <li class="gh-tab gh-nav-programs"><a class="gh-tab-link" href="../../../programs/index.html">Program</a></li>
+          <li class="gh-tab gh-nav-support"><a class="gh-tab-link" href="../../../support/index.html">Support</a></li>
+          <li class="gh-tab gh-nav-account">
+            <a class="gh-tab-link gh-account-profile" href="https://developer.apple.com/account/">Account</a>
+          </li>
+          <li class="gh-tab gh-nav-search">
+
+            <div id="gh-search" class="gh-search" role="search">
+              <form action="/search/index.php" method="get" class="gh-search-form" id="gh-search-form" role="search">
+
+                <div class="gh-search-input-wrapper">
+                  <label for="gh-search-input" class="text-replace">Search Apple Developer</label>
+                  <input type="text" name="q" id="gh-search-input" class="augmented gh-search-input" placeholder="Search Apple Developer" autocomplete="off" autocorrect="off" autocapitalize="off">
+                </div>
+
+                <button disabled type="submit" id="gh-search-submit" class="gh-search-submit gh-search-magnify"><span class="text-replace">Search Apple Developer</span></button>
+                <button disabled type="reset" id="gh-search-reset" class="gh-search-reset"><span class="text-replace">Reset</span></button>
+
+              </form>
+            </div>
+
+            <a class="gh-search-magnify" href="../../../search/index.html"><span class="text-replace">Search Apple Developer</span></a>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+  <div id="top">
+<!-- SiteCatalyst code version: H.8. Copyright 1997-2006 Omniture, Inc. -->
+<script type="text/javascript">
+/* RSID: */
+var s_account="appleglobal,appleusdeveloper"
+</script>
+
+<script type="text/javascript" src="https://www.apple.com/metrics/scripts/s_code_h.js"></script>
+<script type="text/javascript">
+s.pageName= AC && AC.Tracking && AC.Tracking.pageName();
+s.channel="www.us.developer"
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)</script>
+<!-- End SiteCatalyst code version: H.8. -->
+</div>
+
+  <div id="content" class="content" data-hires="false">
+    <section>
+
+  <div id="navBar">
+    <!-- NAVBARSTART -->
+    <p class="bold"><a href="../index.html">TrueType Reference Manual</a></p>
+    <ul class="outer">
+      <li><a href="../RM01/Chap1.html">Digitizing Letterforms</a></li>
+      <li><a href="../RM02/Chap2.html">The Font Engine</a></li>
+      <li>Instructing Fonts</li>
+      <li><a href="../RM04/Chap4.html">The Graphics State</a></li>
+      <li><a href="../RM05/Chap5.html">The Instruction Set</a></li>
+      <li><a href="../RM06/Chap6.html">Font Tables</a></li>
+      <li class="c1">
+        <ul class="inner">
+          <li><a href="../RM06/Chap6.html#Intro">Introduction</a></li>
+          <li><a href="../RM06/Chap6.html#Types">Data Types</a></li>
+          <li><a href="../RM06/Chap6.html#Overview">Overview of TrueType</a></li>
+          <li><a href="../RM06/Chap6AATIntro.html">Overview of AAT</a></li>
+          <li><a href="../RM06/Chap6Tables.html">Special Tables</a></li>
+          <li><a href="../RM06/Chap6.html#Directory">The Font Directory</a></li>
+          <li><a href="../RM06/Chap6acnt.html">The <code>'acnt'</code> table</a></li>
+          <li><a href="../RM06/Chap6ankr.html">The <code>'ankr'</code> table</a></li>
+          <li><a href="../RM06/Chap6avar.html">The <code>'avar'</code> table</a></li>
+          <li><a href="../RM06/Chap6bdat.html">The <code>'bdat'</code> table</a></li>
+          <li><a href="../RM06/Chap6bhed.html">The <code>'bhed'</code> table</a></li>
+          <li><a href="../RM06/Chap6bloc.html">The <code>'bloc'</code> table</a></li>
+          <li><a href="../RM06/Chap6bsln.html">The <code>'bsln'</code> table</a></li>
+          <li><a href="../RM06/Chap6cmap.html">The <code>'cmap'</code> table</a></li>
+          <li><a href="../RM06/Chap6cvar.html">The <code>'cvar'</code> table</a></li>
+          <li><a href="../RM06/Chap6cvt.html">The <code>'cvt '</code> table</a></li>
+          <li><a href="../RM06/Chap6EBSC.html">The <code>'EBSC'</code> table</a></li>
+          <li><a href="../RM06/Chap6fdsc.html">The <code>'fdsc'</code> table</a></li>
+          <li><a href="../RM06/Chap6feat.html">The <code>'feat'</code> table</a></li>
+          <li><a href="../RM06/Chap6fmtx.html">The <code>'fmtx'</code> table</a></li>
+          <li><a href="../RM06/Chap6fond.html">The <code>'fond'</code> table</a></li>
+          <li><a href="../RM06/Chap6fpgm.html">The <code>'fpgm'</code> table</a></li>
+          <li><a href="../RM06/Chap6fvar.html">The <code>'fvar'</code> table</a></li>
+          <li><a href="../RM06/Chap6gasp.html">The <code>'gasp'</code> table</a></li>
+          <li><a href="../RM06/Chap6gcid.html">The <code>'gcid'</code> table</a></li>
+          <li><a href="../RM06/Chap6glyf.html">The <code>'glyf'</code> table</a></li>
+          <li><a href="../RM06/Chap6gvar.html">The <code>'gvar'</code> table</a></li>
+          <li><a href="../RM06/Chap6hdmx.html">The <code>'hdmx'</code> table</a></li>
+          <li><a href="../RM06/Chap6head.html">The <code>'head'</code> table</a></li>
+          <li><a href="../RM06/Chap6hhea.html">The <code>'hhea'</code> table</a></li>
+          <li><a href="../RM06/Chap6hmtx.html">The <code>'hmtx'</code> table</a></li>
+          <li><a href="../RM06/Chap6just.html">The <code>'just'</code> table</a></li>
+          <li><a href="../RM06/Chap6kern.html">The <code>'kern'</code> table</a></li>
+          <li><a href="../RM06/Chap6kerx.html">The <code>'kerx'</code> table</a></li>
+          <li><a href="../RM06/Chap6lcar.html">The <code>'lcar'</code> table</a></li>
+          <li><a href="../RM06/Chap6loca.html">The <code>'loca'</code> table</a></li>
+          <li><a href="../RM06/Chap6maxp.html">The <code>'maxp'</code> table</a></li>
+          <li><a href="../RM06/Chap6meta.html">The <code>'meta'</code> table</a></li>
+          <li><a href="../RM06/Chap6mort.html">The <code>'mort'</code> table</a></li>
+          <li><a href="../RM06/Chap6morx.html">The <code>'morx'</code> table</a></li>
+          <li><a href="../RM06/Chap6name.html">The <code>'name'</code> table</a></li>
+          <li><a href="../RM06/Chap6opbd.html">The <code>'opbd'</code> table</a></li>
+          <li><a href="../RM06/Chap6OS2.html">The <code>'OS/2'</code> table</a></li>
+          <li><a href="../RM06/Chap6post.html">The <code>'post'</code> table</a></li>
+          <li><a href="../RM06/Chap6prep.html">The <code>'prep'</code> table</a></li>
+          <li><a href="../RM06/Chap6prop.html">The <code>'prop'</code> table</a></li>
+          <li><a href="../RM06/Chap6sbix.html">The <code>'sbix'</code> table</a></li>
+          <li><a href="../RM06/Chap6trak.html">The <code>'trak'</code> table</a></li>
+          <li><a href="../RM06/Chap6vhea.html">The <code>'vhea'</code> table</a></li>
+          <li><a href="../RM06/Chap6vmtx.html">The <code>'vmtx'</code> table</a></li>
+          <li><a href="../RM06/Chap6xref.html">The <code>'xref'</code> table</a></li>
+          <li><a href="../RM06/Chap6Zapf.html">The <code>'Zapf'</code> table</a></li>
+        </ul>
+      </li>
+      <li><a href="../RM07/appendixA.html">Instruction Set Summary</a></li>
+      <li><a href="../RM07/appendixB.html">Glyph Mappings</a></li>
+      <li><a href="../RM08/appendixE.html">Converting Outlines</a></li>
+	<li><a href="../RM09/AppendixF.html">Font Feature Registry</a></li>
+    </ul><!-- NAVBAREND -->
+  </div>
+  <div id="chapterContent">
+    <center>
+      <header><h1>Instructing Fonts</h1></header>
+    </center>
+    <h2><a name="CONTENTS"></a>Contents</h2>
+    <ul class="circle">
+      <li><a href="Chap3.html#intro">Introduction</a></li>
+      <li><a href="Chap3.html#rasterization">Rasterization and the grid</a></li>
+      <li>
+        <a href="Chap3.html#instructing_fonts">Instructing fonts</a>
+        <ul class="dot">
+          <li><a href="Chap3.html#intended_use">Determine the intended use</a></li>
+          <li><a href="Chap3.html#a_whole">Consider the font has a whole</a></li>
+          <li><a href="Chap3.html#indi_glyphs">Consider the individual glyphs</a></li>
+          <li><a href="Chap3.html#white_space">Control the white space</a></li>
+          <li><a href="Chap3.html#advance_width">Control the advance width</a></li>
+          <li><a href="Chap3.html#features">Avoid regularizing features</a></li>
+          <li><a href="Chap3.html#exceptions">Handle exceptions last</a></li>
+        </ul>
+      </li>
+      <li><a href="Chap3.html#example">The example fonts</a></li>
+      <li>
+        <a href="Chap3.html#H">New York: The upper case H</a>
+        <ul class="dot">
+          <li><a href="Chap3.html#H_key_feature">Determining the key features</a></li>
+          <li><a href="Chap3.html#H_value_table">Creating the control value table</a></li>
+          <li><a href="Chap3.html#H_instr">The instructions</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="Chap3.html#O">New York: The upper case O</a>
+        <ul class="dot">
+          <li><a href="Chap3.html#O_key_feature">Determining the key features</a></li>
+          <li><a href="Chap3.html#O_value_table">Creating the control value table</a></li>
+          <li><a href="Chap3.html#O_instr">The instructions</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="Chap3.html#B">Geneva: The upper case B</a>
+        <ul class="dot">
+          <li><a href="Chap3.html#B_key_feature">Determining the key features</a></li>
+          <li><a href="Chap3.html#B_value_table">Creating the control value table</a></li>
+          <li><a href="Chap3.html#B_instr">The instructions</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="Chap3.html#K">Geneva: Lower case k</a>
+        <ul class="dot">
+          <li><a href="Chap3.html#K_key_feature">Determining the key features</a></li>
+          <li><a href="Chap3.html#K_value_table">Creating the control value table</a></li>
+          <li><a href="Chap3.html#K_instr">The instructions</a></li>
+        </ul>
+      </li>
+      <li><a href="Chap3.html#font_program">A sample font program</a></li>
+      <li><a href="Chap3.html#value_program">A sample control value program</a></li>
+      <li><a href="Chap3.html#results">Checking the results</a></li>
+    </ul>
+    <hr>
+    <h2><a name="intro"></a>Introduction</h2>A quality outline font is one that provides legibility at small sizes on low resolution devices and fidelity to the original design at large sizes and on high resolution devices. Chance effects due to interactions between the outline shape and the placement of the grid should be minimized. This section will describe how to instruct a TrueType font to ensure that it has the properties just described.<br>
+    <p><br></p>
+    <h2><a name="rasterization"></a>Rasterization and the grid</h2>One simple technique for converting a glyph outline to a bitmap is to superimpose the outline onto the raster grid. All pixels whose centers fall inside or on the grid would be part of the bitmap image to be generated. All others are not.<br>
+    <p>The result of employing this rule in rasterizating a circle is shown in Figure 1. The figure reveals some of the shortcomings in this simple rasterization technique. Specifically, the results vary with the exact placement of the outline in the raster grid and the shape generated is not symmetric either from left to right nor from top to bottom, as would be desirable in a circle.<br></p>
+    <p><font size="2"><strong>Figure 1</strong> Bitmap varies with placement in the raster grid</font></p>
+    <p><img src="fig3-1.gif" alt="figure3-1" align="absmiddle"></p>
+    <p>It would be preferable for a given outline to always produce the same result when rasterized at a given size on a given grid. Important properties (like symmetries) should be preserved when a shape is rasterized.<br></p>
+    <p>Problems of this sort are not simply of theoretical importance but can affect the legibility of digital typefaces. Common problems produced by uncontrolled rasterization include the uneven stem weights, dropouts,the loss of character features, and serif asymmetries. Some instrances of such problems are shown in Figure 2.<br></p>
+    <p><font size="2"><strong>Figure 2</strong> Rasterization problems</font></p>
+    <p><img src="fig3-2-1.gif" align="absmiddle" width="130" height="123"><img src="fig3-2-2.gif" align="absmiddle"></p>
+    <p>The net result is letters that are illegible at small sizes and inelegant at larger sizes. The difficulties inherent in reading such text are illustrated in Figure 3.<br></p>
+    <p><font size="2"><strong>Figure 3</strong> Chance effects produce illegible text</font></p>
+    <p><img src="IF2.gif"></p>
+    <p>Rasterization problems will eventually disappear as resolution or point size increases. Such improvements, however, do not come quickly enough for users of screen fonts nor, in many cases, for those printing on 300 dpi devices.<br></p>
+    <p>As size and resolution increase, legibility will improve but elegance and fidelity to the original design remain at issue even at relatively high numbers of pixels per em. This problem is illustrated in Figure 4. Here, the bitmap produced by dumb rasterization (left) is legible but inelegant. Among the more glaring problems are the widowed pixel at the top of the e, the jagged shape of the lower curve, and the poor appearance of the counter.<br></p>
+    <p><font size="2"><strong>Figure 4</strong> 10 point uninstructed New York e at 300 dpi</font></p>
+    <p><img src="IF3.gif"></p>
+    <p>The TrueType language seeks to remedy the problems caused by the accidents of rasterization by deforming a glyph outline before rasterization so that the "right" pixels are turned on. This technique, illustrated in Figure 5, is called "grid-fitting" the outline. Here the darker outline imposed on the lighter master outline is represents the outline that will be rasterized to produce the final output bits used to represent the glyph.<br></p>
+    <p><font size="2"><strong>Figure 5</strong> 10 point New York e outline after grid-fitting</font></p>
+    <p><img src="IF4.gif"></p>
+    <p>When the grid-fitted outline is set to the rasterizer, the result has a more pleasing appearance that more closely resembles the design captured in the master outline.<br></p>
+    <p><font size="2"><strong>Figure 6</strong> 10 point instructed New York e at 300 dpi</font></p>
+    <p><img src="IF5.gif"></p>
+    <p>As the previous discussion suggests, some of the goals for grid-fitting are as follows:<br></p>
+    <ul>
+      <li>Eliminate the effect of chance relationships to the grid.</li>
+      <li>Control the key dimensions in and across glyphs.</li>
+      <li>Preserve symmetries and other important glyph features.</li>
+    </ul>
+    <p>It is, however, possible to further refine these general ideas into a set of goals that can be expressed in the TrueType language. These ideas are described, in more concrete terms, in the next several sections.<br></p>
+    <p><br>
+    <a href="Chap3.html#CONTENTS">Return to Contents</a><br></p>
+    <h2><a name="instructing_fonts"></a>Instructing fonts</h2>This section provides an overview of the tasks involved in instructing a TrueType font. The techniques presented can be used in the "hand" instructing of fonts. An understanding of these techniques should be useful to those contemplating writing an auto-instructing tool or to anyone needing a low level understanding of instructing process.<br>
+    <h3><a name="intended_use"></a>Determine the intended use</h3>In instructing a font it is important to decide the minimum number of pixels per em at which the font is expected to be used. If it is intended for use only on printers or typesetters, the task of instructing is vastly simplified. Typically the goal is a font that is readable at screen sizes on a 72 dpi device. That might mean instructing a font down to 9 pixels per em.<br>
+    <h3><a name="a_whole"></a>Consider the font has a whole</h3>In instructing glyphs, it is important to preserve the overall look of the font and the relationships between glyphs. To accomplish this it is important to identify key dimensions, such as the cap height, x-height and baseline that apply to the font as a whole. At small pixel per em sizes, subtle variations in these dimensions are not possible and drastic differences will be disasterous.<br>
+    <p>In a Roman font, the upper case 'H' and 'O' and the lower case 'n' and 'o' are typically used as control characters for the purposes of determining the cap height and the x-height for straight and round characters. These characters can be useful in building the control value table.<br></p>
+    <p><font size="2"><strong>Figure 7</strong> Key vertical dimensions in Roman fonts.</font></p>
+    <p><img src="fig3-7.gif"></p>
+    <h3><a name="indi_glyphs"></a>Consider the individual glyphs</h3>Determine which character features need to be preserved. At small pixel per em sizes, some aspects of the design might need to be sacrificed. Therefore it will be necessary to set priorities.<br>
+    <p>Key features to preserve include the stem weights which should be even within a given character and which should break at the same time across similar glyphs in a font. Other features which typically merit attention are serifs, stem widths and diagonals.<br></p>
+    <h3><a name="white_space"></a>Control the white space</h3>In grid-fitting a glyph the goal is to control not simply what pixels make up that character upon rasterization but also the space between strokes and between glyphs. At screen sizes, in particular, controlling white space is a critical task. Unless instructions keep tight control over side bearings there is the likelihood that characters will collide on the screen impairing the appearance of text and destroying readability. Failure to control the space between strokes can result in glyphs that look like black blobs.<br>
+    <h3><a name="advance_width"></a>Control the advance width</h3>Preserving the advance width is important to ensure consistent spacing. Often there is a conflict between obtaining the best spacing possible on the screen and obtaining the best possible spacing on the printer. For example, if a decision is made to round the right side bearing to the grid, the original advance width of the glyph will be changed slightly. Depending upon the size at which the glyph is being rendered, the effect can be to round the value up or down. These errors can be exaggerated at printer sizes producing highly undesirable effects.<br>
+    <p>It is important determine what the most important use of a font when instructing advance widths. Typically, a high priority is placed on preserving the advance widths of the most frequently used glyphs.<br></p>
+    <h3><a name="features"></a>Avoid regularizing features</h3>For optimal results, a font instructor should follow these guidelines:<br>
+    <ul>
+      <li>At small sizes, chance effects should not be allowed to magnify small differences in the original outline design of a glyph.</li>
+      <li>At large sizes, the subtlety of the original design should emerge.</li>
+    </ul>
+    <p>Using the control value table to coordinate features across glyphs will achieve a desirable uniformity in, for example, x-heights, at small sizes. It can also lead to regularization at larger sizes. For example, the cap height of the upper case round glyphs may differ by a few units. At small sizes, it is correct to ignore these subtle differences because there are too few pixels to properly represent them. At large sizes, the designers intention must be allowed to reemerge.<br></p>
+    <p>TrueType solves this problem by use of the control value table cut-in value.<br></p>
+    <ul>
+      <li>Values that vary by less than a "small amount" from a control value table entry should assume the table value.<br></li>
+      <li>Values that vary by more than a "small amount" from a control value table entry should retain their original outline value.</li>
+    </ul>
+    <p>The acceptable "small amount" is the control value table cut-in, the difference at which the table value is preferred. When instructing a font, it is important to be conscious of the effect of the cut-in. The cut-in can be changed from its original default value or turned-off entirely in cases where the table value in always preferred.<br></p>
+    <h3><a name="exceptions"></a>Handle exceptions last</h3>Robust instructions should handle most of the grid-fitting needs in a font. If the result obtained for a particular glyph at a particular size are disappointing, use a DELTA instruction to obtain the desired bitmap. DELTAs should be used sparingly and only after the non-size specific instructions have been applied.<br>
+    <p><br>
+    <a href="Chap3.html#CONTENTS">Return to Contents</a><br></p>
+    <h2><a name="example"></a>The example fonts</h2>In the next several sections, these general ideas will be applied to the problem of instructing four characters using the TrueType language. The characters are from two different fonts: New York and Geneva. These are the TrueType renditions of the original Macintosh bitmap faces of the same name. They provide examples of instructing serif and sans serif faces.<br>
+    <p>The four examples that follow will approach the task of instructing a glyph as a three step process:<br></p>
+    <ol>
+      <li>Determine the key features to be preserved.</li>
+      <li>Determine the geometric constraints needed to preserve these features.</li>
+      <li>Write instructions designed to preserve those features.</li>
+    </ol>
+    <p>For each glyph, an analysis will be made to determine what features are most important to preserve. Dimensions that must be coordinated across glyphs in the font will be entered into the control value table. Finally an illustrated and annotated look at the instructions for each glyph will be provided. A formal specification of each of the instructions used can be found in the <a href="../RM04/Chap4.html">Instructions</a> section.<br></p>
+    <p><br></p>
+    <h2><a name="H"></a>New York: The upper case H</h2>The New York H is used to illustrate the instruction of an upper case serifed straight glyph in a Roman font. Some upper case straights are shown in Figure 8.<br>
+    <p><font size="2"><strong>Figure 8</strong> Upper case straights</font></p>
+    <p><img src="fig3-8.gif" alt="figure3-8" align="absmiddle"></p>
+    <p><br></p>
+    <h3><a name="H_key_feature"></a>Determining the key features</h3>
+    <p>The problem in instructing the upper case H can be divided into two sub-problems, controlling distances in the x-direction and controlling distances in the y-direction.<br></p>
+    <p>The key distances in to be controlled in the x-direction are shown in Figure 9. They are:<br></p>
+    <ol>
+      <li>the space to the left of the glyph</li>
+      <li>the body width</li>
+      <li>the advance width</li>
+      <li>the stem widths</li>
+      <li>the serifs</li>
+    </ol>
+    <p><font size="2"><strong>Figure 9</strong> New York H: Controlled distances in the x-direction</font></p>
+    <center>
+      <img src="fig3-9.gif">
+    </center>
+    <p>The key distances to be controlled in the y-direction are shown in Figure 10. They are:<br></p>
+    <ol>
+      <li>the crossbar thickness</li>
+      <li>the serif thickness</li>
+      <li>the body height</li>
+      <li>the crossbar height</li>
+    </ol>
+    <p><font size="2"><strong>Figure 10</strong> New York H: Controlled distances in the y-direction</font></p>
+    <center>
+      <img src="fig3-10.gif">
+    </center><br>
+    <h3><a name="H_value_table"></a>Creating the control value table</h3>The upper case H has features in common with other upper case straight glyphs in this font. The need to coordinate key dimensions in this glyph with key dimensions in other related glyphs suggests the need for a number of control value table entries.<br>
+    <p>The control value table entry for the cap height of the H is derived from an analysis of the heights of related letters in the font. As shown in Table 1 below, entry 2 has the value 1552. Examining the font data shows that this is indeed the height of the H. It is also the height of related glyphs such as the I, K and the L.<br></p>
+    <p>To create control value table entry 4, the upper case stem width, it is necessary to look at the widths of the stems in key glyphs across the font and find a value that is acceptable for all. One possible approach is to average the related values.<br></p>
+    <p>Once the value is determined, the necessary control value table entry should be entered in the control value table.<br></p>
+    <p>As the geometric analysis suggests and the instructions that follow will reveal, the instruction of the H will require several control value table entries. They are shown in Table 1.</p>
+    <p><br>
+    <font size="2"><strong>Table 1</strong> Control value table for New York</font></p>
+    <table border="1" width="80%">
+      <tr valign="middle">
+        <th valign="middle">Entry</th>
+        <th valign="middle">Value</th>
+        <th valign="middle">Description</th>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">0</td>
+        <td valign="middle">1552</td>
+        <td valign="middle">cap height</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">1</td>
+        <td valign="middle">0</td>
+        <td valign="middle">baseline</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">2</td>
+        <td valign="middle">62</td>
+        <td valign="middle">height of serif</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">3</td>
+        <td valign="middle">186</td>
+        <td valign="middle">width of serif</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">4</td>
+        <td valign="middle">202</td>
+        <td valign="middle">upper case stem width</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">5</td>
+        <td valign="middle">264</td>
+        <td valign="middle">left side bearing</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">6</td>
+        <td valign="middle">77</td>
+        <td valign="middle">upper case stroke</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">7</td>
+        <td valign="middle">1110</td>
+        <td valign="middle">black body width of upper case H</td>
+      </tr>
+    </table><br>
+    <h3><a name="H_instr"></a>The instructions</h3>The grid-fitting instructions for the H necessarily refer to the outline points that make up the glyph description. Figure 11 shows the upper case H outline along with the on-curve and off-curve points that define that outline. The instructions for this glyph follow. Each instruction is accompanied by an explanation of the work it does and, if relevant, an illustration of the points it affects or uses.<br>
+    <p>The instructions begin with the x-direction, the default direction for the freedom and projection vectors.The work of instructing the glyph proceeds from left to right. Instructions80% in the y-direction follow.<br></p>
+    <p>Not all of the outline points that define the glyph shape need to be instructed. Key points are moved to the desired location. An interpolation is used to "bring along" the remaining points in the glyph outline.<br></p>
+    <p><font size="2"><strong>Figure 11</strong> Uppercase upper case York H</font></p>
+    <p><img src="IF9.gif"></p>
+    <p>The first set of instructions applied to the New York H controls the placement of the glyph within its advance width. A slightly more sophisticated method of controlling placement of the glyph would be to cluster common left side bearings, and to MIRP[] them from the origin point with a designated control value table entry.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="bottom" colspan="1" rowspan="3"><img src="H1.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">52</td>
+        <td valign="middle">The origin point.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">SRP0[]</td>
+        <td valign="middle">Set rp0 to point 52, the left phantom point.</td>
+      </tr>
+    </table><br>
+    <p>The next set of instructions is used to control the space to the left of the glyph. This is accomplished by the MIRP[] instruction controls the distance from a key point on the left stem to the origin point. The reference point, rp0, is changed in preparation for the next instruction.<br></p>
+    <p>By choosing not to set the minimum distance Boolean, the instructor has decided that at small pixel per em sizes, when the number of available pixels for rendering the glyph are few, this distance will be allowed to disappear.<br></p>
+    <p>Setting the third Boolean in the MIRP[] instruction causes the value to be rounded (using the default round state which is round to grid). Additionally, the cut-in is used.<br>
+    80%</p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="10"><img src="H2.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[001]</td>
+        <td valign="middle">Push two bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">12</td>
+        <td valign="middle">The point to be moved.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">5</td>
+        <td valign="middle">The control value table entry to be used.</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="7" valign="top">MIRP[10100]</td>
+        <td valign="middle">Move point 12 until its distance from rp0 (the left phantom point) is equal to the rounded value in control value table entry 5 (left side bearing).</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp1 to rp0 (point 52)</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp0 to be point 12.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Do not use the minimum distance.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Round and use the cut-in.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">This is a grey distance.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp2 to point 12.</td>
+      </tr>
+    </table><br>
+    <p>The next several instructions are used to control the outer serifs on the left stem. The first MIRP[] controls the length of the lower outside serif. Setting the minimum distance Boolean ensures that the serif will not disappear.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="10"><img src="H3.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[001]</td>
+        <td valign="middle">Push two bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">7</td>
+        <td valign="middle">The point to be moved.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">34</td>
+        <td valign="middle">The control value table entry to be used.</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="7" valign="top">MIRP[01100]</td>
+        <td valign="middle">Move point 7 until its distance from rp0 (point 12) is the value in control value table entry 34 (width of serif).</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp1 to rp0.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Do not change rp0.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Use the minimum distance.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Round and use the cut-in.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">This is a grey distance.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp2 to point 7.</td>
+      </tr>
+    </table>
+    <p>The SHP[] instruction makes it possible to coordinate the length of the upper left outside serif with the lower left outside serif. Point 17 is moved to a new location that derives from the grid-fitted location of point 7.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="bottom" colspan="1" rowspan="3"><img src="H4.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">17</td>
+        <td valign="middle">The number of the point to be shifted.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="top">SHP[0]</td>
+        <td valign="middle">Shift point 17 by the amount rp2 (point 7) has already been moved.</td>
+      </tr>
+    </table>
+    <p>Continuing the "outside in" approach, the next feature to be controlled in the left stem. Its weight is linked to control value table entry 4 which contains the upper case stem weight value to be used when the cut-in test is made. Tieing this value to the control value table entry means that all similar values will jump to the next largest pixel value at the same time. The minimum distance Boolean is set to ensure that the stem will not disappear.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="10"><img src="H5.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[001]</td>
+        <td valign="middle">Push two bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">1</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">4</td>
+        <td valign="middle">Control value table location.</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="7" valign="top">MIRP[11101]</td>
+        <td valign="middle">Move point 1 until its distance from rp0 (point 12) is the value in control value table entry 4 (upper case stem width).</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp1 to rp0 (point 12).</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp0 to be point 1.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Use the minimum distance.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Round and use the cut-in.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">This is a black distance.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp2 to point 1.</td>
+      </tr>
+    </table>
+    <p>Since the previous instruction may have moved point 1, it is necessary to control the intersection of the crossbar and the left stem. This is accomplished by aligning points 25 and point 1. Point 25 is too far away from point 1 to be "brought along" by the subsequent interpolation in the x-direction, whereas point 0 (which is between point 1 and another touched point) will be moved appropriately. The ALIGNRP[] instruction insures that they will be kept along the same vertical axis.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="3"><img src="H6.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">25</td>
+        <td valign="middle">The number of the point to be aligned.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">ALIGNRP[]</td>
+        <td valign="middle">Align point 25 with rp0 (point 1)</td>
+      </tr>
+    </table>
+    <p>The next instruction controls the length of the serifs on inside left stem. The Boolean settings are the same as in the previous instruction for the outer serif. This is accomplished with a shift instruction.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="10"><img src="H7.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[001]</td>
+        <td valign="middle">push two bytes onto the stack</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">6</td>
+        <td valign="middle">point number</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">34</td>
+        <td valign="middle">control value table location</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="7" valign="top">MIRP[01100]</td>
+        <td valign="middle">Move point 6 until its distance, in the x-direction, from rp0 (point 1 is the value in control value table entry 34 (serif width).</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp1 to rp0.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Do not change rp0.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Use the minimum distance.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Round and use the cut-in.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">This is a grey distance.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp2 to point 6.</td>
+      </tr>
+    </table>
+    <p>As with the outer serifs, it is necessary to coordinate the length of the upper right inside serif with the lower left inside serif.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="3"><img src="H8.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">push one byte onto the stack</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">19</td>
+        <td valign="middle">the number of the point to be shifted*/</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="top">SHP[0]</td>
+        <td valign="middle">Shift point 19 by the amount rp2 (point 6) has already been moved.</td>
+      </tr>
+    </table>
+    <p>Continuing left to right across the glyph, the next set of instructions control the black body width. This is a black distance.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="3"><img src="H9.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">12</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">SRP0[]</td>
+        <td valign="middle">Set rp0 to 12, the left side of the black body.</td>
+      </tr>
+    </table><br>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="10"><img src="H10.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push two bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">39</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">7</td>
+        <td valign="middle">Control value table location.</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="7" valign="top">MIRP[10101]</td>
+        <td valign="middle">Move point 39 until its distance from rp0 (point 12) is the value in control value table 7.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp1 to rp0 (point 12).</td>
+      </tr>
+      <tr>
+        <td valign="middle">Change rp0 to be point 39.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Do not use the minimum distance. why?</td>
+      </tr>
+      <tr>
+        <td valign="middle">Round and use the cut-in.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">This is a black distance.</td>
+      </tr>
+      <tr>
+        <td valign="middle">Set rp2 to point 39.</td>
+      </tr>
+    </table>
+    <p>At this point, the instructing proceeds from the right outside portion of the glyph towards the left.<br></p>
+    <p>The right outside serif length is controlled in a manner similar to the left outside serif.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="10"><img src="H11.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[001]</td>
+        <td valign="middle">Push two bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">43</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">34</td>
+        <td valign="middle">Control value table location.</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="7" valign="top">MIRP[01100]</td>
+        <td valign="middle">Move point 43 until its distance from rp0 (point 39) is the value in control value table entry 34.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp1 to rp0 (point 39)</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Do not change rp0.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Respect the minimum distance.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Round and use the cut-in.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">This is a grey distance.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp2 to point 43.</td>
+      </tr>
+    </table>
+    <p>The upper outside serif is aligned with the lower using a SHP[] instruction.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="3"><img src="H12.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">34</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="top">SHP[0]</td>
+        <td valign="middle">Shift point 34 by the amount rp2 (point 43) has already been moved.</td>
+      </tr>
+    </table>
+    <p>The right main stem weight is controlled in much the same manner as the left stem.<br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="10"><img src="H13.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[001]</td>
+        <td valign="middle">Push two bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">50</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">4</td>
+        <td valign="middle">Control value table location.</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="7" valign="top">MIRP[11101]</td>
+        <td valign="middle">Move point 50 until its distance from rp0 (point 39) is the value in control value table entry 4, the upper case stem width.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp1 to rp0.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Change rp0 to be point 50</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Respect the minimum distance.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Round and use the cut-in.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">This is a black distance.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp2 to point 50.</td>
+      </tr>
+    </table>
+    <p>A key point on the upper stem is aligned with a key point on the lower stem. That point may have been moved in controlling the stem width.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="3"><img src="H14.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">27</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">ALIGNRP[]</td>
+        <td valign="middle">Align point 27 with rp0 (point 50).</td>
+      </tr>
+    </table>
+    <p>The right inside serifs are controlled in the same manner as the left. In some cases, it might be preferable to turn off the minimum distance Boolean in the MIRP[] instruction that follows. The effect would be to make the inner serifs diappear rather than colliding at small sizes.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="10"><img src="H15.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[001]</td>
+        <td valign="middle">Push two bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">45</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">34</td>
+        <td valign="middle">Control value table location.</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="7" valign="top">MIRP[01100]</td>
+        <td valign="middle">Move point 45 until its distance from rp0 (point 50) is the value in control value table entry 34</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp1 to rp0.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Do not change rp0</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Respect the minimum distance.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Round and use the cut-in.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">This is a grey distance.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp2 to point 45.</td>
+      </tr>
+    </table>
+    <p>The shift instruction is used to align the upper and lower serifs.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="3"><img src="H16.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">32</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="top">SHP[0]</td>
+        <td valign="middle">Shift point 32 but by the amount rp2 (point 45) has been shifted</td>
+      </tr>
+    </table>
+    <p>Instructing in the x-direction is now complete. The remaining instructions work in the y-direction. The first step is to reset the freedom and projection vectors to the y-axis.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td valign="middle">SVTCA[0]</td>
+        <td valign="middle">Set freedom vector and projection vector to the y-axis</td>
+      </tr>
+    </table>
+    <p>The MIAP[] instruction is used to control the relationship of a key point to the baseline. The Boolean is set, indicating that both the control value cut-in and round state are used in determining the action taken.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="5"><img src="H17.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[001]</td>
+        <td valign="middle">Push two bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">6</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">8</td>
+        <td valign="middle">Control value table location.</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="2" valign="top">MIAP[1]</td>
+        <td valign="middle">Move point 6 to the location in control value table entry 8 subject to the cut-in.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp0 and rp1 to point 6.</td>
+      </tr>
+    </table>
+    <p>The ALIGNRP[] instruction aligns the previously moved point with the corresponding point on the right serif.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="3"><img src="H18.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">44</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">ALIGNRP[]</td>
+        <td valign="middle">Align point 44 with rp0 (point 6).</td>
+      </tr>
+    </table>
+    <p>Working from bottom to top, the next set of instructions control the height of the bottom serifs. The lower left serif is tackled first.<br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="10"><img src="H19.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[001]</td>
+        <td valign="middle">Push two bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">8</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">32</td>
+        <td valign="middle">Control value table location.</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="7" valign="top">MIRP[11101]</td>
+        <td valign="middle">Move point 8 until its distance from rp0 (point 6) is the value in control value table entry 32 (height of serif).</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp1 to rp0</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp0 to 8.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Respect the minimum distance.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Round and use the cut-in.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">This is a black distance.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp2 to point 8.</td>
+      </tr>
+    </table>
+    <p>Once a single serif height is established, it can be applied to all of the lower serifs with an align instructions.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="8"><img src="H20.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">3</td>
+        <td valign="middle">Value for loop variable.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">SLOOP[]</td>
+        <td valign="middle">Set the loop count to 3.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">PUSHB[002]</td>
+        <td valign="middle">Push three bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">5</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">46</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">43</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">ALIGNRP[]</td>
+        <td valign="middle">Align the points 5, 46 and 43 with rp0 (point 8). This will align the height of the two lower serifs.</td>
+      </tr>
+    </table>
+    <p>The next set of instructions control the relationship of the top of the H to the cap height using an indirect instruction and a control value table entry.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="5"><img src="H21.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[001]</td>
+        <td valign="middle">Push two bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">18</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">2</td>
+        <td valign="middle">Control value table location.</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="2" valign="top">MIAP[1]</td>
+        <td valign="middle">Move point 18 to the location specified in control value table entry 2 (cap height) if the cut-in test succeeds.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp0 and rp1 to point 18.</td>
+      </tr>
+    </table>
+    <p>The changes made to the top left serif are now applied to the right.<br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="3"><img src="H22.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">33</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="top">ALIGNRP[]</td>
+        <td valign="middle">Align point 33 with rp0 (point 18). This aligns the right side with the cap height.</td>
+      </tr>
+    </table>
+    <p>Working down from the top of the glyph, instructions are used to control the height of the upper serifs.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="10"><img src="H23.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[001]</td>
+        <td valign="middle">Push two bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">17</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">32</td>
+        <td valign="middle">Control value table location.</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="7" valign="top">MIRP[11101]</td>
+        <td valign="middle">Move point 17 until its distance from rp0 (point 18)is the value in control value table entry 32 (height of serif).</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp1 to rp0 (point 18)</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Change rp0 to point 17.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Respect the minimum distance.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Round and use the cut-in.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">This is a black distance.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp2 to point 17.</td>
+      </tr>
+    </table>
+    <p>Now all of the bottoms of the upper serifs can be aligned to conform with the changes made by the previous MIRP[] instruction.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="8"><img src="H24.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">3</td>
+        <td valign="middle">Value for loop variable.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">SLOOP[]</td>
+        <td valign="middle">Set the loop variable to three.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">PUSHB[002]</td>
+        <td valign="middle">Push three bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">20</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">31</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">34</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">ALIGNRP[]</td>
+        <td valign="middle">Align point 20, 31, and 34 with rp0 (point 17)to control the height of the top serifs</td>
+      </tr>
+    </table>
+    <p>Since the top and bottom of the glyph may have changed positions, it is necessary to control the relationship of the crossbar to the glyph as a whole. A reference point is set for use in controlling the crossbar height.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td valign="middle" colspan="1" rowspan="3"><img src="H25.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">8</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">SRP2[]</td>
+        <td valign="middle">Set rp2 to point 8.</td>
+      </tr>
+    </table>
+    <p>The height of the crossbar is interpolated between the baseline and cap height to preserve its relative position between the top and the bottom of the glyph.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="3"><img src="H26.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">25</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="top">IP[]</td>
+        <td valign="middle">Interpolate point 25 between rp1(point 17)and rp2 (point 8).</td>
+      </tr>
+    </table>
+    <p>Now that it has been interpolated, the point connecting the crossbar with the left stem is rounded to the grid and touched to prevent its being moved by future interpolations.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="4"><img src="H27.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">25</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="2" valign="top">MDAP[1]</td>
+        <td valign="middle">Round and touch point 25.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp0 and rp1 to point 25</td>
+      </tr>
+    </table>
+    <p>The height of the crossbar is controlled using a control value table entry.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="10"><img src="H28.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[001]</td>
+        <td valign="middle">Push two bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">0</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">6</td>
+        <td valign="middle">Control value table location.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="top" colspan="1" rowspan="7">MIRP11101]</td>
+        <td>MOve point 0 until its distance from rp0 is the value in control value table entry 6.</td>
+      </tr>
+      <tr valign="middle">
+        <td>set rp1 to rp0 (point25)</td>
+      </tr>
+      <tr valign="middle">
+        <td>Change rp0 to point 0.</td>
+      </tr>
+      <tr valign="middle">
+        <td>Respect the minimum distance.</td>
+      </tr>
+      <tr valign="middle">
+        <td>Round and use the cut-in.</td>
+      </tr>
+      <tr valign="middle">
+        <td>This is a black distance.</td>
+      </tr>
+      <tr valign="middle">
+        <td>Set rp2 to point 0</td>
+      </tr>
+    </table>
+    <p>Finally, all the changes made will be distributed among the points that were unaffected by the previous instructions. The IUP[] works by interpolating the position of each untouched points relative to the nearest pair of touched points, with each touched point being on either side of the untouched point along the contour. See the <a href="../RM04/Chap4.html">Instructions</a> section for more information on the IUP[] instruction.<br></p>
+    <p>Note that the interpolation is performed first in the x-direction and then in the y-direction so that the position of untouched points can be adjusted in both directions.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td valign="middle">IUP[1]</td>
+        <td valign="middle">Interpolate in x.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">IUP[0]</td>
+        <td valign="middle">Interpolate in y.</td>
+      </tr>
+    </table><br>
+    <p><br>
+    <a href="Chap3.html#CONTENTS">Return to Contents</a><br></p>
+    <h2><a name="O"></a>New York: The upper case O</h2>The New York O is an example of an upper case round glyph. The O, alongwith some other upper case rounds in the New York face, is shown in Figure 12.<br>
+    <p><font size="2"><strong>Figure 12</strong> Upper case rounds</font></p>
+    <p><img src="fig3-12.gif" alt="figure3-12" align="absmiddle"></p>
+    <p>Among the special problems faced in instructing these glyphs is the fact that, rather than sitting on the baseline, they overlap it. At small pixel per em sizes, there will not be enough bits to allow for such an overhang. At larger sizes, the original design must be preserved.<br></p>
+    <h3><a name="O_key_feature"></a>Determining the key features</h3>
+    <p>In instructing the upper case O, the features shown in Figure 13 need to be controlled. In the x-direction, they are:<br></p>
+    <ol>
+      <li>the space to the left of the glyph</li>
+      <li>the round stems</li>
+      <li>the advance width</li>
+      <li>the body width
+        <p><font size="2"><strong>Figure 13</strong> The New York O: controlled distances in the x-direction</font></p>
+        <p><img src="fig3-13.gif"></p>
+        <p>The following features need to be controlled in the y-direction:<br></p>
+      </li>
+      <li>the cap height overlap</li>
+      <li>the baseline overlap</li>
+      <li>the horizontal stems</li>
+    </ol>
+    <p><font size="2"><strong>Figure 14</strong> New York O: Controlled distances in the y-direction</font></p>
+    <p><img src="fig3-14.gif"><br></p>
+    <p><br></p>
+    <h3><a name="O_value_table"></a>Creating the control value table</h3>
+    <p>To instruct the capital 0, it is necessary to extend the control value table for New York to include new entries.<br></p>
+    <p><br></p>
+    <p><font size="2"><strong>Table 3-2</strong> : Control value table for New York</font></p>
+    <table border="1" width="80%">
+      <tr valign="middle">
+        <th valign="middle">Entry</th>
+        <th valign="middle">Value</th>
+        <th valign="middle">Description</th>
+        <th valign="middle">Used by</th>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">0</td>
+        <td valign="middle">1552</td>
+        <td valign="middle">straight cap height</td>
+        <td valign="middle">H</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">1</td>
+        <td valign="middle">0</td>
+        <td valign="middle">baseline</td>
+        <td valign="middle">H</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">2</td>
+        <td valign="middle">62</td>
+        <td valign="middle">height of serif</td>
+        <td valign="middle">H</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">3</td>
+        <td valign="middle">186</td>
+        <td valign="middle">width of serif</td>
+        <td valign="middle">H</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">4</td>
+        <td valign="middle">202</td>
+        <td valign="middle">upper case stem width</td>
+        <td valign="middle">H</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">5</td>
+        <td valign="middle">264</td>
+        <td valign="middle">left side bearing-H</td>
+        <td valign="middle">H</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">6</td>
+        <td valign="middle">77</td>
+        <td valign="middle">upper case stroke</td>
+        <td valign="middle">H</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">7</td>
+        <td valign="middle">1110</td>
+        <td valign="middle">black body width of upper case H</td>
+        <td valign="middle">H</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">8</td>
+        <td valign="middle">1598</td>
+        <td valign="middle">round cap height</td>
+        <td valign="middle">O</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">9</td>
+        <td valign="middle">-47</td>
+        <td valign="middle">upper case round overlap with baseline</td>
+        <td valign="middle">O</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">10</td>
+        <td valign="middle">85</td>
+        <td valign="middle">left side bearing-O</td>
+        <td valign="middle">O</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">11</td>
+        <td valign="middle">62</td>
+        <td valign="middle">upper round horizontal stem width</td>
+        <td valign="middle">O</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">12</td>
+        <td valign="middle">233</td>
+        <td valign="middle">upper case round stem</td>
+        <td valign="middle">O</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">13</td>
+        <td valign="middle">86</td>
+        <td valign="middle">right side bearing</td>
+        <td valign="middle">O</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <h3><a name="O_instr"></a>The instructions</h3>The instructions for the New York O follow. They refer to outline points shown in Figure 15.<br>
+    <p><font size="2"><strong>Figure 15</strong> The New York upper case O</font></p>
+    <p><img src="IF12.gif"></p>
+    <p>Two distinct approaches to instructing this glyph in the x-direction are presented here. Controlling both the left and right side bearings will produce better looking integer spacing on the screen at low resolutions, but it requires careful attention that the advance width is not drastically affected. This approach is shown first. An alternative approach is briefly described just before instruction in the y-direction is discussed.<br></p>
+    <p>Begin by setting rp<sub>0</sub> to the left phantom point.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="3"><img src="O-1.gif" align="absmiddle"></td>
+        <td>PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">26</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">SRP0[]</td>
+        <td valign="middle">Set rp0 to 26.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>Control the left side bearing by tieing the distance between points 26 and 3 to control value table entry 10.<br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="10"><img src="O-2.gif" align="absmiddle"></td>
+        <td align="center" valign="middle" colspan="1" rowspan="10"></td>
+        <td valign="middle">PUSHB[001]</td>
+        <td valign="middle">Push two bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">3</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">10</td>
+        <td valign="middle">Control value table location.</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="7" valign="top">MIRP[10100]</td>
+        <td valign="middle">Move point 3 until its distance from rp0 (point 26) is the value in control value table entry 10.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp1 to rp0 (point 26).</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Change rp0 to point 3.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Do not use the minimum distance.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Round and use the cut-in.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">This is a grey distance.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp2 to point 3.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>The width of the left round stem is tied to the value in control value table entry 12. The stem will change in coordination with other similar stems in the font. Setting the minimum distance Boolean prevents the stem from disappearing at small sizes. The distance is rounded. Use the control value table is subject to the cut-in.<br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="10"><img src="O-3.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[001]</td>
+        <td valign="middle">Push two bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">23</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">12</td>
+        <td valign="middle">Control value table location</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="7" valign="top">MIRP[01101]</td>
+        <td valign="middle">Move point 23 until its distance from rp0 (point 3) is the value in control value table entry 12 (upper case round stem).</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp1 to rp0.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Do not change rp0.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Respect the minimum distance.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Round and use the cut-in.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">This is a black distance.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp2 to point 3.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>The next instructions control the black body width of the glyph.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="9"><img src="O-4.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[001]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">11</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="7" valign="top">MDRP[10101]</td>
+        <td valign="middle">Move point 11 so that its distance from rp0 (point 3) is the original outline distance between those two points.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp1 to rp0</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp0 to point 11.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Do not use the minimum distance</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Round</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">This is a black distance.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp2 to point 11.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>The right round stem is controlled in a manner similar to that of the left stem.<br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="10"><img src="O-5.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[001]</td>
+        <td valign="middle">Push two bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">17</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">12</td>
+        <td valign="middle">Control value table location.</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="7" valign="top">MIRP[01101]</td>
+        <td valign="middle">Move point 17 until its distance from rp0 (point 11) is the value in control value table entry 12.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp1 to rp0</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">rp0 is unchanged.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Use the minimum distance</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Rounding and cut-in apply.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">This is a black distance.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Sets rp2 to point 17.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>The right side bearing of the glyph is controlled with a control value table entry, much as the left side bearing was controlled earlier. The minimum distance is not respected and, as a result, this distance can disappear at small pixel per em values.<br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="9"><img src="O-6.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[001]</td>
+        <td valign="middle">Push two bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">27</td>
+        <td valign="middle">Point number of advance width location.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">13</td>
+        <td valign="middle">Control value table location.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="top" rowspan="6">MIRP[10110]</td>
+        <td valign="middle">Move point 27 until its distance from rp0 (point 11) is the value in control value table entry 13.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp1 to rp0.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">rp0 is changed to point 27.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Rounding and cut-in apply.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Distance is white.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Sets rp2 to point 27.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>If you choose not to instruct the position of the glyph within its advance width, begin by rounding point 3 to the grid and locking it in place. Then proceed to instruct the left stem, the body width and, finally, the right stem.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="4"><img src="O-7.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">3</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="2" valign="top">MDAP[1]</td>
+        <td valign="middle">Round and touch point 3.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp0 and rp1 to point 3</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>Before instructing the vertical distances, the freedom and projection vector are set to the y-axis.<br></p>
+    <p><br></p>
+    <table>
+      <tr valign="middle">
+        <td valign="middle">SVTCA[0]</td>
+        <td valign="middle">Set freedom vector and projection vector to y-axis.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>The next set of instructions are used to control the baseline overlap. An indirect instruction (MIAP[]) is used to tie the glyph to the baseline at small sizes while allowing the overlap to return once there are a sufficient number of pixels available.<br></p>
+    <p>Two things are happening here. Common round stems are being set to some overlap. Overlap is set to zero by the control value program for some set of point sizes.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="6"><img src="O-8.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push two bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">0</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">9</td>
+        <td valign="middle">Control value table entry number.</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="3" valign="top">MIAP[1]</td>
+        <td valign="middle">Move point 0 to the location specified in control value table entry 9 subject to the cut-in.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">The value is rounded.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp<sub>0</sub> and rp<sub>1</sub> to point 0.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>A MIRP[] is used to control the height of the lower horizontal round stem. Setting the <em>minimum distance</em> Boolean prevents this horizontal stem from disappearing.<br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="10"><img src="O-9.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push two bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">14</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">11</td>
+        <td valign="middle">Control value table entry number.</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="7" valign="top">MIRP[01101]</td>
+        <td valign="middle">Move point 14 until its distance from rp0 (point 0) is the value in control value table entry 11 (upper case horizontal round stem width).</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp1 to rp0.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">rp0 is unchanged.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">The minimum distance is respected.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Rounding and cut-in apply.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Distance is black</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Sets rp2 to point 14.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>The cap height of the glyph is controlled using a the control value table entry for upper case round.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="5"><img src="O-10.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push two bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">6</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">8</td>
+        <td valign="middle">Control value table entry number.</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="2" valign="top">MIAP[1]</td>
+        <td valign="middle">Move point 6 to the location in control value table 8 subject to the cut-in.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp0 and rp1 to point 6.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>The horizontal stem width is controlled by the MIRP[] instruction.<br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="10"><img src="O-11.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push two bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">20</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">11</td>
+        <td valign="middle">Control value table entry number.</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="7" valign="top">MIRP[01101]</td>
+        <td valign="middle">Move point 20 until its distance from rp0 (point 6) is the value in control value table entry 11 (upper case horizontal round stem width).</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">rp0 is unchanged.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Rounding and cut-in apply.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Distance is black</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp0 to rp1.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Sets rp2 to point 20.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>The positions of all untouched points are adjusted with an interpolation in the x-direction and an interpolation in the y-direction.<br></p>
+    <p><br></p>
+    <table>
+      <tr valign="middle">
+        <td valign="middle">IUP[1]</td>
+        <td valign="middle">Interpolate in x</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">IUP[0]</td>
+        <td valign="middle">Interpolate in y.</td>
+      </tr>
+    </table>
+    <p><br>
+    <a href="Chap3.html#CONTENTS">Return to Contents</a><br></p>
+    <p><br></p>
+    <h2><a name="B"></a>Geneva: The upper case B</h2>The upper case B has both straight and round stems, a cross bar and a difficult to control "indentation" where the two round stems meet the crossbar.<br>
+    <p><font size="2"><strong>Figure 16</strong> Glyphs with straight and round stems</font></p>
+    <p><img src="fig3-16.gif" alt="figure3%2D16.gif" align="absmiddle"></p>
+    <h3><a name="B_key_feature"></a>Determining the key features</h3>First the features to be controlled in the x-direction are set.<br>
+    <ol>
+      <li>the stem widths</li>
+      <li>the black body width</li>
+      <li>the crotch between bowls</li>
+      <li>the recess of the upper bowl
+        <p><font size="2"><strong>Figure 17</strong> Geneva B: controlled distances in the x-direction</font></p>
+        <p><img src="IF13.gif"></p>
+        <p>Next the he features to be controlled in the y-direction are established.<br></p>
+      </li>
+      <li>the cap height</li>
+      <li>the relationship to the baseline</li>
+      <li>the height of the crossbar</li>
+      <li>the width of the horizontal stems</li>
+      <li>the crotch</li>
+    </ol>
+    <p><font size="2"><strong>Figure 18</strong> Geneva B: controlled distances in the y-direction</font></p>
+    <p><img src="IF14.gif"></p>
+    <h3><a name="B_value_table"></a>Creating the control value table</h3>The control value table entries needed to instruct the Geneva B are shown below.<br>
+    <br>
+    <p><font size="2"><strong>Table 3</strong> : Control value table for Geneva</font></p>
+    <table border="1" width="80%">
+      <tr valign="middle">
+        <th valign="middle">Entry</th>
+        <th valign="middle">Value</th>
+        <th valign="middle">Description</th>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">0</td>
+        <td valign="middle">1552</td>
+        <td valign="middle">cap height</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">1</td>
+        <td valign="middle">0</td>
+        <td valign="middle">baseline</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">2</td>
+        <td valign="middle">202</td>
+        <td valign="middle">vertical stem width</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">3</td>
+        <td valign="middle">155</td>
+        <td valign="middle">horizontal stem height</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <h3><a name="B_instr"></a>The instructions</h3>The instructions for the Geneva B are presented below. The point numbers referred to in the instructions are shown in Figure 19.<br>
+    <p><font size="2"><strong>Figure 19</strong> Geneva upper case B</font></p>
+    <p><img src="IF15.gif"></p>
+    <p>The instructions begin with a simple method of handling a glyph's black body width and placement within the advance width.<br></p>
+    <p>The origin point and advance point are not touched, making the integer advance width always equal to the rounded fractional width. This provides the most accurate placement and width for printer sizes<br></p>
+    <p>First, distances in the x-direction are controlled. By default the freedom vector and projection vector point in this direction.<br></p>
+    <p>The instructions begin by locking point 8 to the nearest grid line. The effect will be to align the black body width to the grid.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="4"><img src="B1.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">8</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="2" valign="top">MDAP[1]</td>
+        <td valign="middle">Round point 8 and touch it so that it will be unaffected by future interpolations.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp0 and rp1 to point 8.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>A MIRP[] instruction is used to control the main stem width. This value is coordinated with other similar values using a control value table entry. This technique ensures that stem weights will break at the same pixel per em value when the cut-in test fails.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="9"><img src="B2.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push two bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">27</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">2</td>
+        <td valign="middle">Control value table entry number.</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="6" valign="top">MIRP[01101]</td>
+        <td valign="middle">Move point 27 until its horizontal distance from rp0 (point 8) is the value in control value table entry 2 (upper case stem).</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp1 to rp0.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">rp0 is unchanged.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Rounding and cut-in apply.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Distance is black.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp2 to point 27.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>The next instruction ensures that the left sides of both counters will be aligned. A shift instruction is used in preference to the ALIGNRP[] instruction because SHP[0] keeps rp0 at point 8 for the next move instruction. ALIGNRP[] would have required moving rp0 to point 27. SHP[0] does not. This saves one SRP0[] instruction.<br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="3"><img src="B3.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">17</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">SHP[0]</td>
+        <td valign="middle">Shift point 17 by the amount point 27 (rp2) was moved. This works because 27 and 17 share the same x-coordinate in the original outline.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>The next instruction preserves the original outline black body width for the glyph subject to rounding.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="9"><img src="B4.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">3</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="7" valign="top">MDRP[10101]</td>
+        <td valign="middle">Move point 3 until its distance from point rp0 (point 8) is the original outline distance, subject to rounding and engine compensation.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp1 to rp0.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp0 to point 3</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Do not use minimum distance</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Round</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">This is a black distance.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp2 to point 3.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>The lower round vertical stem is "mirped" to the same control value table entry as the left straight stem.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="9"><img src="B5.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push two bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">31</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">4</td>
+        <td valign="middle">Control value table entry number.</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="6" valign="top">MIRP[01101]</td>
+        <td valign="middle">Move point 31 until its distance from rp0 (point 3) is the value in control value table entry 2.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp1 to rp0</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Do not change rp0.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Rounding and cut-in apply.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Distance is black.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Sets rp2 to point 31.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>The original outline distance between points 14 and 13 is restored, subject to the round state, using MDRP[].<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="9"><img src="B6.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">push one byte onto the stack</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">14</td>
+        <td valign="middle">point number</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="7" valign="top">MDRP[10100]</td>
+        <td valign="middle">Move point 14 until its distance from point rp0 (point 3) is the original outline distance, subject to rounding and engine compensation.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp1 to rp0.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Move rp0 to point 14</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Do not use the minimum distance.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Round</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">This is a grey distance.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp2 to point 14.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>The upper round vertical stem is controlled using control value table entry 2, the entry used for the other stems.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="9"><img src="B7.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push two bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">22</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">4</td>
+        <td valign="middle">Control value table entry number</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="6" valign="top">MIRP[01101]</td>
+        <td valign="middle">Move point 22 until its distance from rp0 (point 14) is the value in control value table entry 2.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Sets rp1 to rp0.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">rp0 is unchanged.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Rounding and cut-in apply.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Distance is black</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Sets rp2 to point 22.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>Reference point 1 is reset in preparation for the interpolation to come.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="3"><img src="B8.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">27</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">SRP1[]</td>
+        <td valign="middle">The previous MIRP[] instruction set rp2 to point 22. Now set rp1 to 27 to prepare for an IP[] instruction.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>Interpolating point 0 between points 14 and 27 ensures that its relative position between those points is restored to what it was in the original outline.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="3"><img src="B9.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">0</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">IP[]</td>
+        <td valign="middle">Interpolate point 0 between rp1 (14)and rp2(27)</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>With instructions in the x-direction complete, the freedom vector and projection vector are set to the y-direction.<br></p>
+    <p><br></p>
+    <table>
+      <tr valign="middle">
+        <td valign="middle">SVTCA[0]</td>
+        <td valign="middle">Set the freedom and projection vectors to the y-axis.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>Point 7 is held to the baseline by linking it to the value in control value table entry 1.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="6"><img src="B10.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[]</td>
+        <td valign="middle">Push two bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">7</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">1</td>
+        <td valign="middle">Control value table entry number.</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="3" valign="top">MIAP[1]</td>
+        <td valign="middle">Move point 7 to the position specified in control value table entry 1.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Round the value.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp0 and rp1 to point 7.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>The height of the horizontal stem is controlled by linking it to the value in control value table entry 3, the horizontal stem height.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="10"><img src="B11.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[001]</td>
+        <td valign="middle">Push two bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">27</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">3</td>
+        <td valign="middle">Control value table entry number</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="7" valign="top">MIRP[01101]</td>
+        <td valign="middle">Move point 27 so that its distance from rp0 (point 7) is the value in control value table entry 3</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp1 to rp0.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Do not change rp0</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Use the minimum distance</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Round the value and use the cut-in</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">This is a black distance.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Sets rp2 to point 27.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>The height of the B is controlled using an indirect instruction tied to control value table location 2, the cap height.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="6"><img src="B12.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[001]</td>
+        <td valign="middle">Push two bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">10</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">0</td>
+        <td valign="middle">Control value table entry number.</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="3" valign="top">MIAP[1]</td>
+        <td valign="middle">Move point 10 so that it is at control value table location 0, subject to the cut-in test.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Round the control value table value before moving the point.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp0 and rp1 to point 10.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>The upper horizontal stem is controlled using the same control value table entry as was used for the lower.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="10"><img src="B13.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[001]</td>
+        <td valign="middle">Push two bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">26</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">3</td>
+        <td valign="middle">Control value table entry number.</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="7" valign="top">MIRP[01101]</td>
+        <td valign="middle">Move point 26 so that its distance from rp0 (point 10) is the value in control value table entry 3.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp1 equal to rp0.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Do not change rp0.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Use the minimum distance.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Round and use the cut-in.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">This is a black distance.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp2 equal to point 26</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>The reference point rp1 is set to point 27 in preparation for an interpolation used to reestablish the position of point 17 relative to points 26 and 27.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="3"><img src="B14.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">27</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">SRP1</td>
+        <td valign="middle">Set rp1 to point 27.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="3"><img src="B15.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">17</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">IP</td>
+        <td valign="middle">Interpolate point 17 between rp1(point 27) and rp2 (26)</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>Once the position of point 17 is adjusted, it is rounded to the grid and touched so that it will not be moved by future interpolations.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="4"><img src="B16.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">17</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="2" valign="top">MDAP[1]</td>
+        <td valign="middle">Round the location of point 17 and touch it so that it will be unaffected by future interpolations</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">rp0 and rp1 are set to point 17</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>The width of the cross bar stem is controlled using the control value table entry for horizontal stems.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="9"><img src="B17.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push two bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">36</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">3</td>
+        <td valign="middle">Control value table entry number</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="6" valign="top">MIRP[01101]</td>
+        <td valign="middle">Move point 36 until its distance from rp0 (point 17) is the value in control value table entry 3.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp1 to rp0.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">rp0 is unchanged.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Rounding and cut-in apply.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Distance is black</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Sets rp2 to point 36.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>Point 0 is interpolated between points 17 and 36. This adjusts the vertical position of this point much as a previous interpolation adjusted its horizontal location.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="3"><img src="B18.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">0</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">IP[]</td>
+        <td valign="middle">Interpolate point 0 between rp1 (point 17) and rp2 (point 36).</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>Adjust the position of all untouched points relative to those points that have been affected by the instructions. Adjustment is made first in the x-direction and then in the y-direction.<br></p>
+    <p><br></p>
+    <table>
+      <tr valign="middle">
+        <td valign="middle">IUP[1]</td>
+        <td valign="middle">Interpolate in x</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">IUP[0]</td>
+        <td valign="middle">Interpolate in y</td>
+      </tr>
+    </table>
+    <p><br>
+    <a href="Chap3.html#CONTENTS">Return to Contents</a><br></p>
+    <h2><a name="K"></a>Geneva: Lower case k</h2>The Geneva lower case k was chosen because of the instructing challenge presented by its two diagonal strokes. This is the only glyph, among the examples shown, which requires setting the projection vector to a non-orthogonal position relative to the pixel grid.<br>
+    <p>The join between the diagonals and the vertical stem also presents an interesting instructing problem.<br></p>
+    <p>A number of other glyphs in Geneva have diagonals that can benefit from similar instructing techniques. Some of these are shown in Figure 12.<br></p>
+    <p><font size="2"><strong>Figure 2</strong>0 Lowercase diagonals</font></p>
+    <p><img src="fig3-20.gif" alt="figure3-20" align="absmiddle"></p>
+    <h3><a name="K_key_feature"></a>Determining the key features</h3>
+    <p>The goals for this glyph are to control:<br></p>
+    <ol>
+      <li>the main stem.</li>
+      <li>the relationship of the diagonals to the main stem.</li>
+      <li>the diagonals.</li>
+    </ol>
+    <p><font size="2"><strong>Figure 21</strong> Geneva k: controlled distances</font></p>
+    <p><img src="IF16.gif"></p>
+    <h3><a name="K_value_table"></a>Creating the control value table</h3>An expanded control value table for Geneva, with the entries needed to instruct the Geneva k, is shown in Table 4.<br>
+    <p><br>
+    <font size="2"><strong>Table 4</strong> :Control value table for Geneva</font></p>
+    <table border="1" width="80%">
+      <tr valign="middle">
+        <th valign="middle">Entry</th>
+        <th valign="middle">value</th>
+        <th valign="middle">Description</th>
+        <th valign="middle">Used by</th>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">0</td>
+        <td valign="middle">1552</td>
+        <td valign="middle">cap height B</td>
+        <td valign="middle">B</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">1</td>
+        <td valign="middle">0</td>
+        <td valign="middle">baseline</td>
+        <td valign="middle">k</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">2</td>
+        <td valign="middle">202</td>
+        <td valign="middle">upper case vertical stem width</td>
+        <td valign="middle">B</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">3</td>
+        <td valign="middle">155</td>
+        <td valign="middle">horizontal stem height</td>
+        <td valign="middle">B</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">4</td>
+        <td valign="middle">1614</td>
+        <td valign="middle">cap height k</td>
+        <td valign="middle">k</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">5</td>
+        <td valign="middle">1117</td>
+        <td valign="middle">x-height</td>
+        <td valign="middle">k</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">6</td>
+        <td valign="middle">0</td>
+        <td valign="middle">baseline</td>
+        <td valign="middle">k</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">7</td>
+        <td valign="middle">diagonal stem weight</td>
+        <td valign="middle">k</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">8</td>
+        <td valign="middle">194</td>
+        <td valign="middle">lower case straight stem</td>
+        <td valign="middle">k</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p><br></p>
+    <h3><a name="K_instr"></a>The instructions</h3>The instructions for the letter k are shown below. The outline points referred to in the instructions are shown in Figure 22.<br>
+    <p><font size="2"><strong>Figure 22</strong> Lower case Geneva k</font></p>
+    <p><img src="IF17.gif"></p>
+    <p>The instructions control the key points in the x-direction and the y-direction before beginning to tackle diagonals. Once the grid-fitting problems in those directions are taken care of, the diagonals are instructed.<br></p>
+    <p>The instructions begin by aligning the left edge of the glyph to the grid and locking it in place.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="4"><img src="K1.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">1</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="2" valign="top">MDAP[1]</td>
+        <td valign="middle">Round the location of point 1 and touch it so that it will be unaffected by future interpolations.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp0 and rp1 to point 1.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>Control the width of the main stem.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="8"><img src="K2.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push two bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">10</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">7</td>
+        <td valign="middle">Control value table entry number.</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="5" valign="top">MIRP[01101]</td>
+        <td valign="middle">Move point 10 until its distance from rp0 (point 1) is the value in control value table entry 7.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">rp0 is unchanged.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Rounding and cut-in apply.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Distance is black</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Sets rp2 to point 10.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>The points connecting the main stem to the diagonals are aligned in the x-direction.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="3"><img src="K3.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">4</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">SHP[0]</td>
+        <td valign="middle">Shift point 4 by the amount that rp2 (point 10) has been shifted.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>The inside of the diagonals in the x-direction (and subsequently the black body width) are controlled rather than the outside because, in this k, the way the two diagonal strokes come to a point is an important feature. It is important to grid align the points in that crotch in the x-direction, and control both points in the y-direction as well to maintain their existing relationship. Subsequently the diagonal stem weight will be controlled from that side of the stroke. Points 4 and 10 will not be moved again.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="4"><img src="K4.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">9</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="2" valign="top">MDRP[10101]</td>
+        <td valign="middle">Move point 9 until its distance from rp0 (point 1) is the original outline distance, subject to rounding and the engine compensation.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp2 to point 9</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>The relative relationship of points 9 and 8 is preserved with the shift instruction.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="3"><img src="K5.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">8</td>
+        <td valign="middle">Point number</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">SHP[0]</td>
+        <td valign="middle">Shift point 8 by the amount that rp2 (point 9) has been moved.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>The top diagonal is aligned with the bottom diagonal.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="5"><img src="K6.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">5</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="3" valign="top">MDRP[10100]</td>
+        <td valign="middle">Move point 5 until its distance from rp2 (point 9) is the original outline distance, subject to rounding and the engine compensation.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp2 to point 5.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">The effect of this instruction is to preserve the original relationship of point 5 to point 9 (which was moved by the previous MDRP[] instruction).</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>Points 6 is shifted much as point 8 was earlier.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="3"><img src="K7.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">6</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">SHP[0]</td>
+        <td valign="middle">Shift point 6 by the amount that rp2 (point 5) has been moved.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>The crotch of the k is adjusted to reflect the movement that has taken place in the diagonals.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="3"><img src="K8.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">6</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">SHP[0]</td>
+        <td valign="middle">Shift point 6 by the amount that rp2 (point 5) has been moved.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>The freedom and projection vectors are set to the y-axis so that instruction in the vertical direction can begin.<br></p>
+    <p><br></p>
+    <table>
+      <tr valign="middle">
+        <td valign="middle">SVTCA[0]</td>
+        <td valign="middle">Set the freedom and projection vector to the y-axis</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>The glyph is tied to the baselines with a control value table entry.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="5"><img src="K9.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[001]</td>
+        <td valign="middle">Push two bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">1</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">6</td>
+        <td valign="middle">Control value table entry number.</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="2" valign="top">MIAP[1]</td>
+        <td valign="middle">Move point 1 to the location in control value table entry 6 subject to the cut-in.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp0 and rp1 to point 1</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>Points 8 and 9 are aligned so that they will be in their final location in the x-direction and the y-direction before the diagonals are instructed.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="3"><img src="K10.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">9</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">ALIGNRP[]</td>
+        <td valign="middle">Align point 9 with rp0 (point 1)</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="3"><img src="K11.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">8</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">ALIGNRP[]</td>
+        <td valign="middle">Align point 8 with rp0 (point 1).</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>The top of the glyph is held to the cap height using control value table entry 0.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="5"><img src="K5.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[001]</td>
+        <td valign="middle">Push two bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">3</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">4</td>
+        <td valign="middle">Control value table entry number.</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="2" valign="top">MIAP[1]</td>
+        <td valign="middle">Move point 3 to the location in control value table entry 4 subject to the cut-in.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp0 and rp1 to point 3</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>Point 5 is aligned to the x-height using a control value table entry. Point 6 is then aligned with point 5.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="5"><img src="K13.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[001]</td>
+        <td valign="middle">Push two bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">5</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">5</td>
+        <td valign="middle">Control value table entry number.</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="2" valign="top">MIAP[1]</td>
+        <td valign="middle">Move point 5 to the location in control value table entry 5 subject to the cut-in.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp0 and rp1 to point 5</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="3"><img src="K14.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">6</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">ALIGNRP[]</td>
+        <td valign="middle">Align point 6 with rp0 (point 5).</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>The positions of points 4, 7 and 10 are adjusted relative to the baseline (point1) and the x-height (point 5) using an interpolation in the y-direction.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="3"><img src="K15.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">1</td>
+        <td valign="middle">point number</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">SRP2[]</td>
+        <td valign="middle">Set rp2 to point 1.</td>
+      </tr>
+    </table>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="8"><img src="K16.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">3</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">SLOOP[]</td>
+        <td valign="middle">Set the loop variable to 3.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push three bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">4</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">7</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">10</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">IP[]</td>
+        <td valign="middle">Interpolate points 4, 7 and 10 between rp1 (point 5) and rp2 (point 1)</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>Once all instructions in the x-direction and y-direction are complete, the instruction of the diagonals can proceed. The projection vector is changed to make movement perpendicular to the lower diagonal. Movement will be in the x-direction.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td valign="middle">PUSHB[001]</td>
+        <td valign="middle">Push two bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">9</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">10</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">SPVTL[1]</td>
+        <td valign="middle">Set the projection vector to be perpendicular to the line from point 9 to point 10</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">SFVTCA[1]</td>
+        <td valign="middle">Set the freedom vector to the x-axis.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>The lower diagonal is instructed first. Point 8 is moved until the width of the lower diagonal is that of a lower case straight stem.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="3"><img src="K17.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">9</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">SRP0[]</td>
+        <td valign="middle">Set rp0 to point 9.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="8"><img src="K18.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[001]</td>
+        <td valign="middle">Push two bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">8</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">8</td>
+        <td valign="middle">Control value table location</td>
+        <td valign="middle"></td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="5" valign="top">MIRP[01101]</td>
+        <td valign="middle">Move point 8 until its distance from rp0 (point 9) is the value in control value table entry 8.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Respect the minimum distance.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Round and use the cut-in.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">This is a black distance.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp2 to point 8.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>The width of the upper portion of the lower diagonal is adjusted in a similar manner.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="3"><img src="K19.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">10</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">SRP0[]</td>
+        <td valign="middle">Set rp0 to point 10.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="8"><img src="K20.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[001]</td>
+        <td valign="middle">Push two bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">7</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">8</td>
+        <td valign="middle">Control value table location.</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="5" valign="top">MIRP[01101]</td>
+        <td valign="middle">Move point 7 until its distance from rp0 (point 10) is the value in control value table location 8.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Respect the minimum distance.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Round and use the cut-in.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">This is a black distance.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp2 to point 7.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>The upper diagonal is now instructed. The projection vector is reset to be perpendicular to the upper diagonal. The remaining instructions mimic those used on the lower diagonal.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="7"><img src="K21.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[001]</td>
+        <td valign="middle">Push two bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">4</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">5</td>
+        <td valign="middle">Control value table location</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">SPVTL[1]</td>
+        <td valign="middle">Set the projection vector perpendicular to the line defined by points 4 and 5.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">5</td>
+        <td valign="middle">point number</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">SRP0[]</td>
+        <td valign="middle">Set rp0 to point 5.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="8"><img src="K22.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[001]</td>
+        <td valign="middle">Push two bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">6</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">7</td>
+        <td valign="middle">Control value table location.</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="5" valign="top">MIRP[01101]</td>
+        <td valign="middle">Move point 6 until its distance from rp0 (point 5) is the value in control value table location 7.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Respect the minimum distance.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Round and use the cut-in.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">This is a black distance.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp2 to point 6.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="3"><img src="K23.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">4</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">SRP0[]</td>
+        <td valign="middle">Set rp0 to point 4.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>A final tricky problem involves the need to move point 7 to control the upper diagonal stroke weight. This point is already in the right place for the lower diagonal. If the freedom vector is set parallel to the line which is already controlled, we can fix the upper diagonal without disturbing the lower.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="12"><img src="K24.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[001]</td>
+        <td valign="middle">Push two bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">7</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">8</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">SFVTL[0]</td>
+        <td valign="middle">The freedom vector is set parallel to the line from point 7 to point 8.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">PUSHB[001]</td>
+        <td valign="middle">Push two bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">7</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">7</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="5" valign="top">MIRP[01101]</td>
+        <td valign="middle">Move point 7 until its distance from rp0 is the value in control value table location 7.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Respect the minimum distance.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Round and use the cut-in.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">This is a black distance.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp2 to point 7.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>Lastly, the changes made are interpolated over the untouched points in the outline.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td valign="middle">IUP[1]</td>
+        <td valign="middle">Interpolate in x.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">IUP[0]</td>
+        <td valign="middle">Interpolate in y.</td>
+      </tr>
+    </table>
+    <p><br>
+    <a href="Chap3.html#CONTENTS">Return to Contents</a><br></p>
+    <p><br></p>
+    <h2><a name="font_program"></a>A sample font program</h2>The font program is used to define function definitions and, in rare cases, instruction definitions.<br>
+    <p>Function 0 reads a value from the control value table, rounds that value, and writes the rounded value back to the control value table. It takes two parameters. At the time the function is called, the item at the top of the stack should be the control value table address from which the value is read. The second item on the stack should be the control value table location to which the value will be written.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">0</td>
+        <td valign="middle">This is FDEF zero.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">FDEF</td>
+        <td valign="middle">Begin a function definition.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">RCVT[]</td>
+        <td valign="middle">Read a value from the control value table</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">ROUND[01]</td>
+        <td valign="middle">Round the black distance.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">WCVTP[]</td>
+        <td valign="middle">Write the rounded value back to the control value table.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">ENDF[]</td>
+        <td valign="middle">End the current function definition.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>A call to function 0 might look like this:<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td valign="middle">PUSHB[001]</td>
+        <td valign="middle">Push two bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">4</td>
+        <td valign="middle">Control value location to be written.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">21</td>
+        <td valign="middle">Control value location to be read.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">0</td>
+        <td valign="middle">Number of function to call.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">CALL[]</td>
+        <td valign="middle">Call function zero.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>Function 1, shown below, can be used to control serif width. Control value table entry 3 holds the appropriate value for the New York serif width. It takes two parameters, the reference point number and the point to be MIRPed.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">1</td>
+        <td valign="middle">This is FDEF one.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">FDEF</td>
+        <td valign="middle">Begin a function definition.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">SRP0</td>
+        <td valign="middle">Set reference point zero.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">3</td>
+        <td valign="middle">Control value table entry number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">MIRP[00100]</td>
+        <td valign="middle">Move point 34 until its distance from rp0 is the value in control value table entry 3 (serif width).</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">ENDF[]</td>
+        <td valign="middle">End the current function definition.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>Function 1 can be used in instructing the upper case I as shown below.An extended control value table for New York is given below.<br></p>
+    <p><br>
+    <font size="2"><strong>Table 5</strong> Control value table for New York</font></p>
+    <table border="1" width="80%">
+      <tr valign="middle">
+        <th valign="middle">Entry</th>
+        <th valign="middle">Value</th>
+        <th valign="middle">Description</th>
+        <th valign="middle">Used by</th>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">0</td>
+        <td valign="middle">1552</td>
+        <td valign="middle">straight cap height</td>
+        <td valign="middle">H, I</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">1</td>
+        <td valign="middle">0</td>
+        <td valign="middle">baseline</td>
+        <td valign="middle">H, I</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">2</td>
+        <td valign="middle">62</td>
+        <td valign="middle">height of serif</td>
+        <td valign="middle">H, I</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">3</td>
+        <td valign="middle">186</td>
+        <td valign="middle">width of serif</td>
+        <td valign="middle">H, I</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">4</td>
+        <td valign="middle">202</td>
+        <td valign="middle">upper case stem width</td>
+        <td valign="middle">H</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">5</td>
+        <td valign="middle">264</td>
+        <td valign="middle">left side bearing-H</td>
+        <td valign="middle">H</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">6</td>
+        <td valign="middle">77</td>
+        <td valign="middle">upper case stroke</td>
+        <td valign="middle">H</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">7</td>
+        <td valign="middle">1110</td>
+        <td valign="middle">black body width of upper case H</td>
+        <td valign="middle">H</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">8</td>
+        <td valign="middle">1598</td>
+        <td valign="middle">round cap height</td>
+        <td valign="middle">O</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">9</td>
+        <td valign="middle">-47</td>
+        <td valign="middle">upper case round overlap with baseline</td>
+        <td valign="middle">O</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">10</td>
+        <td valign="middle">85</td>
+        <td valign="middle">left side bearing-O</td>
+        <td valign="middle">O</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">11</td>
+        <td valign="middle">62</td>
+        <td valign="middle">upper round horizontal stem width</td>
+        <td valign="middle">O</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">12</td>
+        <td valign="middle">233</td>
+        <td valign="middle">upper case round stem</td>
+        <td valign="middle">O</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">13</td>
+        <td valign="middle">86</td>
+        <td valign="middle">right side bearing</td>
+        <td valign="middle">O</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">14</td>
+        <td valign="middle"></td>
+        <td valign="middle">ascent</td>
+        <td valign="middle">I</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p><font size="2"><strong>Figure 23</strong> The uppercase New York I</font></p>
+    <p><img src="IF18.gif"></p>
+    <p>Point 6 is "dapped" so that it can serve as a reference point for future instructions.<br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="4"><img src="I-1.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">6</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="2" valign="top">MDAP[1]</td>
+        <td valign="middle">Round point 6 and touch it so that it will be unaffected by future interpolations.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp0 and rp1 to point 6.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>The stem width is controlled by "MIRPing" from point 6 to point 19.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="6"><img src="I-2.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[001]</td>
+        <td valign="middle">Push two bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">19</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">4</td>
+        <td valign="middle">Control value table location.</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="3" valign="top">MIRP[11101]</td>
+        <td valign="middle">Move point 19 until its horizontal distance from point 6 is the value in control value table location 4 (upper case stem width).</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp1 to rp0.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Change rp0 to point 19.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>Successive function calls, made with the LOOPCALL[] command, are used to control the four serifs.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td valign="middle">NPUSHB[]</td>
+        <td valign="middle">Push bytes onto the stack</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">11</td>
+        <td valign="middle">Number of bytes to push.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">1</td>
+        <td valign="middle">Point number for MIRP[].</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">6</td>
+        <td valign="middle">Set rp0 to this number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">12</td>
+        <td valign="middle">Point number for MIRP[].</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">6</td>
+        <td valign="middle">Set rp0 to this number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">13</td>
+        <td valign="middle">Point number for MIRP[].</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">19</td>
+        <td valign="middle">Set rp0 to this number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">23</td>
+        <td valign="middle">Point number for MIRP[].</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">19</td>
+        <td valign="middle">Set rp0 to this number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">4</td>
+        <td valign="middle">Number of times to execute that function.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">1</td>
+        <td valign="middle">Number of function to call.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">LOOPCALL[]</td>
+        <td valign="middle">Call function 1.</td>
+      </tr>
+    </table>
+    <p><br>
+    The vectors are reset to the y-axis so that the vertical dimensions can be instructed.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td valign="middle">SVTCA[0]</td>
+        <td valign="middle">Set freedom vector and projection vector to the y-axis.</td>
+        <td valign="middle">A MIAP[]</td>
+        <td valign="middle">instruction is used to control the baseline</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="6"><img src="I-3.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[001]</td>
+        <td valign="middle">Push two bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">1</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">1</td>
+        <td valign="middle">Control value table entry number.</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="3" valign="top">MIAP[1]</td>
+        <td valign="middle">Move point 1 to the location specified in control value table entry 1 (baseline).</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Round the value.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp0 and rp1 to point 1.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>A second MIAP[] is used to control the cap height.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="6"><img src="I-4.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[001]</td>
+        <td valign="middle">Push two bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">12</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">0</td>
+        <td valign="middle">Control value table entry number.</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="3" valign="top">MIAP[1]</td>
+        <td valign="middle">Move point 12 to the location specified in control value table entry 0 (cap height).</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Round the value.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp0 and rp1 to point 11.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>A MIRP[] is used to control the left serif height. An ALIGNRP[] instruction is used to align the bottom of the right serif with the left.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="7"><img src="I-5.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[001]</td>
+        <td valign="middle">Push two bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">11</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">2</td>
+        <td valign="middle">Control value table location number.</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="4" valign="top">MIRP[11101]</td>
+        <td valign="middle">Control the serif height by moving point 11 until its distance from rp0 (point 12) is the value in control value table location 2 (height of serif).</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp1 to rp0.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Change rp0 to 11.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Use the minimum distance</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td align="center" valign="middle" colspan="1" rowspan="3"><img src="I-6.gif" align="absmiddle"></td>
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">14</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">ALIGNRP[]</td>
+        <td valign="middle">Align point 14 with rp0 (point 11)</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>Interpolate in x-direction and the y-direction to distribute changes made to instructed points to those that were unaffected by instructions.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td valign="middle">IUP[1]</td>
+        <td valign="middle">Interpolate in the x-direction.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">IUP[0]</td>
+        <td valign="middle">Interpolate in the y-direction.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p><a href="Chap3.html#CONTENTS">Return to Contents</a><br></p>
+    <h2><a name="value_program"></a>A sample control value program</h2>The control value program is a set of TrueType instructions that are executed once when the font is first accessed and again whenever the font, point size or transformation matrix change. The control value program is stored in the 'prep' table.A sample control value program is presented below. It begins by setting the value of scantype and establishing a new value for the control value cut-in.<br>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td valign="middle">PUSHW[000]</td>
+        <td valign="middle">Push one word.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">511</td>
+        <td valign="middle">Value signifying no stubs.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">SCANCTRL[]</td>
+        <td valign="middle">Set scantype</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">70</td>
+        <td valign="middle">Cut-in value</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">SCVTCI</td>
+        <td valign="middle">Set the control value cut-in to 70/64</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>The next set of instructions are used to establish an alternative control vaue cut-in for cases where the number of pixels per em in a glyph is less than 50. In such cases the default is set to 128/64ths, which is two pixels.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td valign="middle">MPPEM[]</td>
+        <td valign="middle">Get the number of pixels per em in the current glyph.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">PUSHB[]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">50</td>
+        <td valign="middle">Pixel per em value.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">GT[]</td>
+        <td valign="middle">Compares the number at the top of the stack (50) with the number below it (the number of pixels per em). If ppem &gt; 50, TRUE is pushed onto the stack. Otherwise, false is pushed.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">IF[]</td>
+        <td valign="middle">If comparison yielded TRUE execute the body of the IF statement.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">PUSHB[]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">128</td>
+        <td valign="middle">Cut-in value.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">SCVTCI[]</td>
+        <td valign="middle">Set the control value cut-in</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">EIF[]</td>
+        <td valign="middle">End of if statement.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>Next a number of points are established in the twilight zone. The first step is to set the zone pointers to refer to the zone 0, the twilight zone.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">0</td>
+        <td valign="middle">Zone pointer number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">SZPS[]</td>
+        <td valign="middle">Set all the zone pointers to reference the twilight zone.</td>
+      </tr>
+    </table>
+    <p>The vectors are set to the y-axis so that vertical relationships can be controlled.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td valign="middle">SVTCA[0]</td>
+        <td valign="middle">Set the freedom and projection vector to point to the y-axis.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>A point is established at the rounded ascent height.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td valign="middle">PUSHB[001]</td>
+        <td valign="middle">Push two bytes onto the stack..</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">0</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">14</td>
+        <td valign="middle">Control value table entry number.</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="2" valign="middle">MIAP[1]</td>
+        <td valign="middle">Set twilight point 0 to rounded height of control value table entry 14 (the ascent).</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp0 and rp1 to point 0.</td>
+      </tr>
+    </table>
+    <p><br>
+    Another point is established at the rounded baseline position.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td valign="middle">PUSHB[001]</td>
+        <td valign="middle">Push two bytes onto the stack..</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">1</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">1</td>
+        <td valign="middle">Control value table entry number.</td>
+      </tr>
+      <tr valign="middle">
+        <td rowspan="2" valign="middle">MIAP[1]</td>
+        <td valign="middle">Set twilight point 1 to rounded height of control value table entry 1 (the baseline).</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">Set rp0 and rp1 to point 0.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>Reference point 2 is set to the ascent.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td valign="middle">PUSHB[]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">0</td>
+        <td valign="middle">Reference point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">SRP2[]</td>
+        <td valign="middle">Set rp2 to point 0.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>A third point is established at the unrounded cap height.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td valign="middle">PUSHB[001]</td>
+        <td valign="middle">Push two bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">2</td>
+        <td valign="middle">Point number</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">0</td>
+        <td valign="middle">Control value table entry number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">MIAP[0]</td>
+        <td valign="middle">Set twilight point 2 to the unrounded height specified in control value table entry number 0 (the cap height).</td>
+      </tr>
+    </table>
+    <p><br>
+    The cap height is interpolated betwen the ascent and the baseline to preserve its location relative to those two rounded values. The coordinate for the interpolated point is obtained and its value written back to control value table location 0.<br></p>
+    <p><br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">1</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">SRP1[]</td>
+        <td valign="middle">Set reference point 1 to point 1 (the baseline height.) Note that rp2 is still at point 0 which is the ascent height.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">2</td>
+        <td valign="middle">Point to interpolate.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">IP[]</td>
+        <td valign="middle">Interpolate the cap height between the ascent and the baseline.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">2</td>
+        <td valign="middle">Point number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">GC[1]</td>
+        <td valign="middle">Get the current value for point 2 now that it has been interpolated</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">PUSHB[000]</td>
+        <td valign="middle">Push one byte onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">0</td>
+        <td valign="middle">Control value table address.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">WCVTP[]</td>
+        <td valign="middle">Write it back to control value table 0.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>Function 0 is called to read, round and then write back the newly interpolated control value table entry 0. Since the function now called does not access any points in the glyph zone, it is unnecessary to reset the zone pointers to zone 1. The default value for the zone pointers will be automatically resetablished for each glyph program.<br>
+    <br></p>
+    <table width="80%">
+      <tr valign="middle">
+        <td valign="middle">PUSHB[001]</td>
+        <td valign="middle">Push two bytes onto the stack.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">2</td>
+        <td valign="middle">Function parameter.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">0</td>
+        <td valign="middle">Function number.</td>
+      </tr>
+      <tr valign="middle">
+        <td valign="middle">CALL[]</td>
+        <td valign="middle">Use FDED 0 to read, round and write the newly interpolated control value table entry.</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p><a href="Chap3.html#CONTENTS">Return to Contents</a><br></p>
+    <h2><a name="results"></a>Checking the results</h2>The best test of whether a font is successful is to view examples that are typical of the expected use. Look at examples of what you intend to print. If a font is expected to serve as a screen font on a 72 dpi device, look at sample test at 10 and 12 point on the screen. Other tests can be useful, however, in isolating particular problems.<br>
+    <p>The waterfall, a line of text that is repeated at sizes that decrease by one pixel per em, makes weight jumps more apparent. A waterfall with screen fonts is shown in Figure 25. Figure 25 shows the same text on a high resolution printer.<br></p>
+    <p><font size="2"><strong>Figure 24</strong> A waterfall with 9 to 24 point Geneva at 72 dpi</font></p>
+    <p><img src="fig3-24.gif" alt="figure3-24" align="absmiddle"></p>
+    <p><br></p>
+    <p><font size="2"><strong>Figure 25</strong> A waterfall with 6 to 24 point Geneva</font></p>
+    <p><img src="fig3-25.gif" alt="figure3-25" align="absmiddle"></p>
+    <p><br></p>
+    <p>Comparing text from the bold and plain variations of a font at a succession of sizes allows you to ensure that they are readily distinguishable.<br></p>
+    <p><font size="2"><strong>Figure 26</strong></font></p>
+    <p><img src="fig3-26.gif" align="absmiddle"></p>
+    <p><br></p>
+    <p>Spacing tests allow you to see how letters look in context. Examine each upper case letter between the H and the O. This allows you to see how the glyph will look next to a flat and a round glyph. For lower case letters use the n and the o.<br></p>
+    <p><font size="2"><strong>Figure 27</strong> A spacing test with 12 point New York</font></p>
+    <p><img src="fig3-27.gif" align="absmiddle"></p>
+    <p><br></p>
+    <p>Another useful test is to look at capital letters followed by lower case.<br></p>
+    <p><font size="2"><strong>Figure 28</strong> Capitals followed by lower case glyphs</font></p>
+    <p><img src="fig3-28.gif" align="absmiddle"></p>
+    <p><br></p>
+    <p>Pangrams allow you to see the entire alphabet in a small amount of text.<br></p>
+    <p><font size="2"><strong>Figure 29</strong> A pangram</font></p>
+    <p><img src="fig3-29.gif" align="absmiddle"></p>
+    <p><br></p>
+    <p>It is also important to check the alignment of the ascenders and descenders and to compare characters posessing similar characteristics.<br></p>
+    <p><font size="2"><strong>Figure 30</strong> Sets of related glyphs</font></p>
+    <p><img src="fig3-30.gif" align="absmiddle"></p>
+  </div>
+
+      </section>
+  </div><!-- /content -->
+
+  <div id="globalfooter">
+    <div id="breadory">
+      <ol id="breadcrumbs">
+        <li class="home"><a href="../../../index.html">Developer</a></li>
+        <li><a href="../../index.html">Fonts</a></li>
+        <li><a href="../index.html">TrueType™ Reference Manual</a></li>
+        <li>Instructing Fonts</li>
+      </ol>
+      <div id="directorynav" class="directorynav">
+	<div id="dn-cola" class="column">
+		<h3><a href="../../../platforms/index.html">Platforms</a></h3>
+		<ul>
+			<li><a href="../../../ios/index.html">iOS</a></li>
+			<li><a href="../../../osx/index.html">OS X</a></li>
+			<li><a href="../../../watchos/index.html">watchOS</a></li>
+			<li><a href="../../../tvos/index.html">tvOS</a></li>
+		</ul>
+		<h3><a href="../../../resources/index.html">Tools</a></h3>
+		<ul>
+			<li><a href="../../../xcode/index.html">Xcode</a></li>
+			<li><a href="../../../swift/index.html">Swift</a></li>
+		</ul>
+	</div>
+	<div id="dn-colb" class="column">
+		<h3><a href="../../../resources/index.html">Resources</a></h3>
+		<ul>
+			<li><a href="../../../library/index.html">Documentation</a></li>
+			<li><a href="../../../videos/index.html">Videos</a></li>
+			<li><a href="https://forums.developer.apple.com/">Forums</a></li>
+			<li><a href="../../../app-store/index.html">App Store</a></li>
+			<li><a href="../../../safari/index.html">Safari and Web</a></li>
+			<li><a href="../../../education/index.html">Education</a></li>
+			<li><a href="../../../enterprise/index.html">Enterprise</a></li>
+		</ul>
+	</div>
+	<div id="dn-colc" class="column">
+		<h3><a href="../../../programs/index.html">Programs</a></h3>
+		<ul>
+			<li><a href="../../../programs/index.html">Developer Program</a></li>
+			<li><a href="../../../programs/enterprise/index.html">Enterprise Program</a></li>
+			<li><a href="../../../programs/ios/university/index.html">iOS University Program</a></li>
+			<li><a href="../../../programs/mfi/index.html">MFi Program</a></li>
+		</ul>
+	</div>
+	<div id="dn-cold" class="column">
+		<h3><a href="../../../support/index.html">Support</a></h3>
+		<ul>
+			<li><a href="../../../support/development/index.html">Development</a></li>
+			<li><a href="../../../support/distribution/index.html">Distribution</a></li>
+			<li><a href="../../../support/membership/index.html">Membership</a></li>
+			<li><a href="../../../system-status/index.html">System Status</a></li>
+		</ul>
+	</div>
+	<div id="dn-cole" class="column">
+		<h3><a href="https://developer.apple.com/account/">Account</a></h3>
+		<ul>
+			<li><a href="https://developer.apple.com/account/">Developer Account</a></li>
+			<li><a href="../../../go/index-id=certificates-ids-profiles.html">Certificates, IDs &amp; Profiles</a></li>
+			<li><a href="https://itunesconnect.apple.com">iTunes Connect</a></li>			
+			<li><a href="../../../terms/index.html">License Agreements</a></li>
+		</ul>
+	</div>
+</div>
+
+    </div><!--/breadory-->
+    <ul class="gf-links piped footer-links">
+  <li><a href="../../../news/index.html" class="first">News &amp; Updates</a></li>
+  <li><a href="../../../bug-reporting/index.html">Report Bugs</a></li>
+  <li><a href="../../../contact/index.html">Contact Us</a></li>
+</ul>
+
+<div class="gf-sosumi footer-sosumi">
+  <p>Copyright © 2016 Apple Inc. All rights reserved.</p>
+    <ul class="piped">
+        <li><a href="http://www.apple.com/legal/internet-services/terms/site.html" class="first">Terms of Use</a></li>
+        <li><a href="http://www.apple.com/privacy/privacy-policy/">Privacy Policy</a></li>
+    </ul>
+</div>
+
+<!--<div id="gf-links piped footer-links">
+	<ul>
+		<li><a href="/cn/" title="Simplified Chinese">简体中文</a></li>
+		<li><a href="/jp/" title="Japanese">日本語</a></li>
+		<li><a href="/kr/" title="Korean">한국어</a></li>
+	</ul>
+</div>-->
+
+  </div><!--/globalfooter-->
+</body>
+</html>

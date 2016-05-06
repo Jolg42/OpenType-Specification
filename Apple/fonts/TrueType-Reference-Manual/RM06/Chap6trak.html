@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="Author" content="Apple Inc." />
+<meta name="viewport" content="width=1024" />
+<link rel="shortcut icon" href="../../../favicon.ico" />
+<link rel="icon" href="../../../favicon.ico" />
+<link rel="stylesheet" href="https://www.apple.com/wss/fonts?family=Myriad+Set+Pro&amp;v=2" type="text/css" />
+<link rel="stylesheet" href="../../../assets/styles/transition-global.css" type="text/css" />
+<link rel="stylesheet" href="../../../assets/styles/transition-header.css" type="text/css" />
+<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/core/styles/adc.css" type="text/css" />
+<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/styles/topbar.css" type="text/css" />
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/lib/prototype.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/lib/scriptaculous.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/browserdetect.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/apple_core.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/search_decorator.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/adc_core.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/scripts/ac_retina.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/topbarDropdown.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	document.write('<link rel="stylesheet" type="text/css" href="https://devimages.apple.com.edgekey.net/assets/styles/script.css" media="screen">');
+</script>
+<!-- Augmented Search -->
+<!--<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/styles/augmented_search.css" type="text/css">-->
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/lib/jquery/jquery-1.11.0.min.js"></script>
+<script>jQuery.noConflict();</script>
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/lib/jquery/jquery.retinate.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/scripts/augmented_search.js"></script>-->
+<script src="../../../assets/scripts/augmented_search.js"></script>
+<script src="../../../assets/scripts/global-header.js"></script>
+
+  <meta name="Author" content="Apple Inc.">
+  <meta name="viewport" content="width=1024">
+  <link rel="stylesheet" href="../AAT.css" type="text/css">
+  <link rel="shortcut icon" href="https://devimages.apple.com.edgekey.net/favicon.ico">
+  <link rel="icon" href="https://devimages.apple.com.edgekey.net/favicon.ico">
+  <title>Tracking Table</title>
+</head>
+<body class="white sidenav-page">
+  <nav id="globalheader" role="navigation" aria-label="Global Navigation">
+  <div id="gh-content" class="gh-content">
+    <ul class="gh-menu">
+      <li id="gh-menu-icon-toggle" class="gh-menu-icon gh-menu-icon-toggle enhance">
+        <button id="gh-svg-icons" class="gh-svg-wrapper">
+          <span class="text-replace">Menu</span>
+          <svg x="0px" y="0px" width="100%" viewBox="0 0 96 96" class="gh-svg gh-svg-top" enable-background="new 0 0 96 96"><rect width="32" height="4" x="32" y="46" class="gh-svg-rect gh-svg-rect-top"></rect></svg>
+          <svg x="0px" y="0px" width="100%" viewBox="0 0 96 96" class="gh-svg gh-svg-bottom" enable-background="new 0 0 96 96"><rect width="32" height="4" x="32" y="46" class="gh-svg-rect gh-svg-rect-bottom"></rect></svg>
+        </button>
+      </li>
+      <li id="gh-menu-icon-home" class="gh-menu-icon gh-menu-icon-home">
+        <a href="../../../index.html">
+          <span class="text-replace">Apple Developer</span>
+        </a>
+      </li>
+    </ul>
+    <div class="gh-nav">
+      <div class="gh-nav-view">
+        <ul class="gh-nav-list">
+
+          <li class="gh-tab gh-nav-developer" data-hires="true"><a class="gh-tab-link" href="../../../index.html"><span class="text-replace">Apple Developer</span></a></li>
+          <li class="gh-tab gh-nav-technologies"><a class="gh-tab-link" href="../../../platforms/index.html">Platforms</a></li>
+          <li class="gh-tab gh-nav-resources"><a class="gh-tab-link" href="../../../resources/index.html">Resources</a></li>
+          <li class="gh-tab gh-nav-programs"><a class="gh-tab-link" href="../../../programs/index.html">Program</a></li>
+          <li class="gh-tab gh-nav-support"><a class="gh-tab-link" href="../../../support/index.html">Support</a></li>
+          <li class="gh-tab gh-nav-account">
+            <a class="gh-tab-link gh-account-profile" href="https://developer.apple.com/account/">Account</a>
+          </li>
+          <li class="gh-tab gh-nav-search">
+
+            <div id="gh-search" class="gh-search" role="search">
+              <form action="/search/index.php" method="get" class="gh-search-form" id="gh-search-form" role="search">
+
+                <div class="gh-search-input-wrapper">
+                  <label for="gh-search-input" class="text-replace">Search Apple Developer</label>
+                  <input type="text" name="q" id="gh-search-input" class="augmented gh-search-input" placeholder="Search Apple Developer" autocomplete="off" autocorrect="off" autocapitalize="off">
+                </div>
+
+                <button disabled type="submit" id="gh-search-submit" class="gh-search-submit gh-search-magnify"><span class="text-replace">Search Apple Developer</span></button>
+                <button disabled type="reset" id="gh-search-reset" class="gh-search-reset"><span class="text-replace">Reset</span></button>
+
+              </form>
+            </div>
+
+            <a class="gh-search-magnify" href="../../../search/index.html"><span class="text-replace">Search Apple Developer</span></a>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+  <div id="top">
+<!-- SiteCatalyst code version: H.8. Copyright 1997-2006 Omniture, Inc. -->
+<script type="text/javascript">
+/* RSID: */
+var s_account="appleglobal,appleusdeveloper"
+</script>
+
+<script type="text/javascript" src="https://www.apple.com/metrics/scripts/s_code_h.js"></script>
+<script type="text/javascript">
+s.pageName= AC && AC.Tracking && AC.Tracking.pageName();
+s.channel="www.us.developer"
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)</script>
+<!-- End SiteCatalyst code version: H.8. -->
+</div>
+
+  <div id="content" class="content" data-hires="false">
+    <section>
+  <div id="navBar">
+    <!-- NAVBARSTART -->
+    <p class="bold"><a href="../index.html">TrueType Reference Manual</a></p>
+    <ul class="outer">
+      <li><a href="../RM01/Chap1.html">Digitizing Letterforms</a></li>
+      <li><a href="../RM02/Chap2.html">The Font Engine</a></li>
+      <li><a href="../RM03/Chap3.html">Instructing Fonts</a></li>
+      <li><a href="../RM04/Chap4.html">The Graphics State</a></li>
+      <li><a href="../RM05/Chap5.html">The Instruction Set</a></li>
+      <li><a href="Chap6.html">Font Tables</a></li>
+      <li class="c1">
+        <ul class="inner">
+          <li><a href="Chap6.html#Intro">Introduction</a></li>
+          <li><a href="Chap6.html#Types">Data Types</a></li>
+          <li><a href="Chap6.html#Overview">Overview of TrueType</a></li>
+          <li><a href="Chap6AATIntro.html">Overview of AAT</a></li>
+          <li><a href="Chap6Tables.html">Special Tables</a></li>
+          <li><a href="Chap6.html#Directory">The Font Directory</a></li>
+          <li><a href="Chap6acnt.html">The <code>'acnt'</code> table</a></li>
+          <li><a href="Chap6ankr.html">The <code>'ankr'</code> table</a></li>
+          <li><a href="Chap6avar.html">The <code>'avar'</code> table</a></li>
+          <li><a href="Chap6bdat.html">The <code>'bdat'</code> table</a></li>
+          <li><a href="Chap6bhed.html">The <code>'bhed'</code> table</a></li>
+          <li><a href="Chap6bloc.html">The <code>'bloc'</code> table</a></li>
+          <li><a href="Chap6bsln.html">The <code>'bsln'</code> table</a></li>
+          <li><a href="Chap6cmap.html">The <code>'cmap'</code> table</a></li>
+          <li><a href="Chap6cvar.html">The <code>'cvar'</code> table</a></li>
+          <li><a href="Chap6cvt.html">The <code>'cvt '</code> table</a></li>
+          <li><a href="Chap6EBSC.html">The <code>'EBSC'</code> table</a></li>
+          <li><a href="Chap6fdsc.html">The <code>'fdsc'</code> table</a></li>
+          <li><a href="Chap6feat.html">The <code>'feat'</code> table</a></li>
+          <li><a href="Chap6fmtx.html">The <code>'fmtx'</code> table</a></li>
+          <li><a href="Chap6fond.html">The <code>'fond'</code> table</a></li>
+          <li><a href="Chap6fpgm.html">The <code>'fpgm'</code> table</a></li>
+          <li><a href="Chap6fvar.html">The <code>'fvar'</code> table</a></li>
+          <li><a href="Chap6gasp.html">The <code>'gasp'</code> table</a></li>
+          <li><a href="Chap6gcid.html">The <code>'gcid'</code> table</a></li>
+          <li><a href="Chap6glyf.html">The <code>'glyf'</code> table</a></li>
+          <li><a href="Chap6gvar.html">The <code>'gvar'</code> table</a></li>
+          <li><a href="Chap6hdmx.html">The <code>'hdmx'</code> table</a></li>
+          <li><a href="Chap6head.html">The <code>'head'</code> table</a></li>
+          <li><a href="Chap6hhea.html">The <code>'hhea'</code> table</a></li>
+          <li><a href="Chap6hmtx.html">The <code>'hmtx'</code> table</a></li>
+          <li><a href="Chap6just.html">The <code>'just'</code> table</a></li>
+          <li><a href="Chap6kern.html">The <code>'kern'</code> table</a></li>
+          <li><a href="Chap6kerx.html">The <code>'kerx'</code> table</a></li>
+          <li><a href="Chap6lcar.html">The <code>'lcar'</code> table</a></li>
+          <li><a href="Chap6loca.html">The <code>'loca'</code> table</a></li>
+          <li><a href="Chap6ltag.html">The <code>'ltag'</code> table</a></li>
+          <li><a href="Chap6maxp.html">The <code>'maxp'</code> table</a></li>
+          <li><a href="Chap6meta.html">The <code>'meta'</code> table</a></li>
+          <li><a href="Chap6mort.html">The <code>'mort'</code> table</a></li>
+          <li><a href="Chap6morx.html">The <code>'morx'</code> table</a></li>
+          <li><a href="Chap6name.html">The <code>'name'</code> table</a></li>
+          <li><a href="Chap6opbd.html">The <code>'opbd'</code> table</a></li>
+          <li><a href="Chap6OS2.html">The <code>'OS/2'</code> table</a></li>
+          <li><a href="Chap6post.html">The <code>'post'</code> table</a></li>
+          <li><a href="Chap6prep.html">The <code>'prep'</code> table</a></li>
+          <li><a href="Chap6prop.html">The <code>'prop'</code> table</a></li>
+          <li><a href="Chap6sbix.html">The <code>'sbix'</code> table</a></li>
+          <li>The <code>'trak'</code> table</li>
+          <li><a href="Chap6vhea.html">The <code>'vhea'</code> table</a></li>
+          <li><a href="Chap6vmtx.html">The <code>'vmtx'</code> table</a></li>
+          <li><a href="Chap6xref.html">The <code>'xref'</code> table</a></li>
+          <li><a href="Chap6Zapf.html">The <code>'Zapf'</code> table</a></li>
+        </ul>
+      </li>
+      <li><a href="../RM07/appendixA.html">Instruction Set Summary</a></li>
+      <li><a href="../RM07/appendixB.html">Glyph Mappings</a></li>
+      <li><a href="../RM08/appendixE.html">Converting Outlines</a></li>
+	<li><a href="../RM09/AppendixF.html">Font Feature Registry</a></li>
+    </ul><!-- NAVBAREND -->
+  </div>
+  <div id="chapterContent">
+    <header><h1><a name="trak" id="trak"></a>The <code>'trak'</code> table</h1></header>
+    <h2>Introduction</h2>
+    <p>The <dfn>tracking table</dfn> (tag: <code>'trak'</code>) allows you to design AAT fonts which allow adjustment to normal interglyph spacing. The spacing is based on the font size and the track number. The user or application selects the font size and track number and the correct amount of interglyph space for each glyph in the font is calculated and applied to the text. The information you specify in the tracking table is used to calculate the proper amount of spacing for all glyph sizes of your font.</p>
+    <p>Tracking is similar to <a href="Chap6kern.html">kerning</a>. Tracking controls the amount of spacing by performing a calculation that uses point size and a specified track number to determine interglyph spacing adjustment. The same adjustment is applied to all glyphs in the font. In contrast, kerning considers the identity of two or more neighboring glyphs to select pre-determined interglyph spacing adjustment values.</p>
+    <p>The following figure shows how tracking makes adjustments to a glyph's advanced width to achieve tight, normal, and loose text, depending upon the track value.</p>
+    <p><img src="FF49.gif" width="251" height="315" align="bottom"></p>
+    <p>The amount of reduction or increase in the advanced width is determined by the use of per-size track values stored in the tracking table. If the point size and track number required are stored, these values are used. If the point size and track number required are not found in the tracking table, interpolation or extrapolation is performed to determine the adjustment to the advance width that is required for the font size and tracking number specified.</p>
+    <p>The per-size track values are specified in the table in FUnits. For a font that has 2048 units per em, an FUnit value of 10 is 10/2048 = 4.88E-3 ems. During tracking, the stored or calculated FUnit value in ems is multiplied by the point size and added to the advance widths of each glyph. If the value is negative, the advance width is decreased. If the value is positive, the advance width is increased.</p>
+    <p>The tracking table you create should have per-size tracking values for track numbers -1, 0, and +1 at a minimum of two font sizes. Additional font sizes can also be included in the table. Tracking numbers are arbitrary, but the values -1, 0, and +1 should be used to indicate loose, normal, and tight tracking, respectively.</p>
+    <p>The tracking table allows you to cross-reference a descriptive phrase related to each track number that you include in the table. These non-functional phrases are included in the name table (tag name <code>'name'</code>). These phrases are included as <code>nameIDs</code> for <code>nameRecord[count]</code>, where <code>count</code> is the sequential order number of the name records. The tracking table provides a cross-reference to the <code>count</code> value in the name table. A possible name for track sizes -1, 0 and -1 may be loose, normal, and tight. Similar phrases may also be used to describe the characteristics of your font. See the example that follows for further clarification.</p>
+    <h2>Tracking Table Format</h2>
+    <p>The overall structure of the tracking table consists of a tracking header, track data table for horizontal text and track data table for vertical text, as shown in the following figure. Since offsets are provided to the horizontal and vertical tables, their order is arbitrary.</p>
+    <p><img src="FF50.gif" width="244" height="120" align="bottom"></p>
+    <p>The overall tracking table format is as follows:</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th align="middle">
+          <p align="left">Type</p>
+        </th>
+        <th align="middle">
+          <p align="left">Name</p>
+        </th>
+        <th align="left">
+          <p align="left">Description</p>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>fixed</td>
+        <td>version</td>
+        <td class="description">Version number of the tracking table (0x00010000 for the current version).</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>format</td>
+        <td class="description">Format of the tracking table (set to 0).</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>horizOffset</td>
+        <td class="description">Offset from start of tracking table to TrackData for horizontal text (or 0 if none).</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>vertOffset</td>
+        <td class="description">Offset from start of tracking table to TrackData for vertical text (or 0 if none).</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>reserved</td>
+        <td class="description">Reserved. Set to 0.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>TrackData</td>
+        <td>horizData</td>
+        <td class="description">TrackData for horizontal text (if present).</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>TrackData</td>
+        <td>vertData</td>
+        <td class="description">TrackData for vertical text (if present).</td>
+      </tr>
+    </table>
+    <p>The <code>TrackData</code> table format (which must be longword aligned) is shown in the following table:</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th align="middle">
+          <p align="left">Type</p>
+        </th>
+        <th align="middle">
+          <p align="left">Name</p>
+        </th>
+        <th align="left">
+          <p align="left">Description</p>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>nTracks</td>
+        <td class="description">Number of separate tracks included in this table.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>nSizes</td>
+        <td class="description">Number of point sizes included in this table.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint32</td>
+        <td>sizeTableOffset</td>
+        <td class="description">Offset from start of the tracking table to the start of the size subtable.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>trackTableEntry</td>
+        <td>trackTable[]</td>
+        <td class="description">Array[nTracks] of TrackTableEntry records.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>fixed32</td>
+        <td>sizeTable[]</td>
+        <td class="description">Array[nSizes] of size values.</td>
+      </tr>
+    </table>
+    <p>The trackTableEntry format is as follows:</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th align="middle">
+          <p align="left">Type</p>
+        </th>
+        <th align="middle">
+          <p align="left">Name</p>
+        </th>
+        <th align="left">
+          <p align="left">Description</p>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>fixed32</td>
+        <td>track</td>
+        <td class="description">Track value for this record.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>nameIndex</td>
+        <td class="description">The 'name' table index for this track (a short word or phrase like "loose" or "very tight"). NameIndex has a value greater than 255 and less than 32768.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>offset</td>
+        <td class="description">Offset from start of tracking table to per-size tracking values for this track.</td>
+      </tr>
+    </table>
+    <h2>Tracking Table Example</h2>
+    <p>Here is an example of a tracking table that has three tracks (normal at 0, tight at -1, and loose at +1). Per-size tracking values are specified for 12-point and 24- point text for each track. The data for this example is summarized in the following table:</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th align="middle">
+          <p align="left">Track</p>
+        </th>
+        <th align="middle">
+          <p align="left">Font size</p>
+        </th>
+        <th align="middle">
+          <p align="left">FUnits</p>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>-1</td>
+        <td>12</td>
+        <td class="description">-15</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>-1</td>
+        <td>24</td>
+        <td class="description">-7</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>0</td>
+        <td>12</td>
+        <td class="description">0</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>0</td>
+        <td>24</td>
+        <td class="description">0</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>+1</td>
+        <td>12</td>
+        <td class="description">50</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>+1</td>
+        <td>24</td>
+        <td class="description">20</td>
+      </tr>
+    </table>
+    <p>The tracking table for this example is as follows:</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th align="middle">
+          <p align="left">Offset/<br>
+          length</p>
+        </th>
+        <th align="middle">
+          <p align="left">Value</p>
+        </th>
+        <th align="middle">
+          <p align="left">Name</p>
+        </th>
+        <th align="left">
+          <p align="left">Comment</p>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>0/4</td>
+        <td>0x00010000</td>
+        <td>version</td>
+        <td class="description">Version number of the tracking table, in fixed-point format.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>4/2</td>
+        <td>0</td>
+        <td>format</td>
+        <td class="description">Format 0 is the only format defined at this time.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>6/2</td>
+        <td>12</td>
+        <td>horizOffset</td>
+        <td class="description">Offset to TrackData for horizontal text.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>8/2</td>
+        <td>0</td>
+        <td>vertOffset</td>
+        <td class="description">Offset to TrackData for vertical text (a value of 0 means none)</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>10/2</td>
+        <td>0</td>
+        <td>(pad</td>
+        <td class="description">word) Padding to ensure the following. TrackData table is longword aligned.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td colspan="4">(The <code>TrackData</code> for horizontal text is next)</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>12/2</td>
+        <td>3</td>
+        <td>nTracks</td>
+        <td class="description">Number of tracks included.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>14/2</td>
+        <td>2</td>
+        <td>nSizes</td>
+        <td class="description">Number of font sizes for each track.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>16/4</td>
+        <td>44</td>
+        <td>sizeTableOffset</td>
+        <td class="description">Offset of the size subtable.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td colspan="4">(The three sorted <code>TrackTableEntry</code> records follow)</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>20/4</td>
+        <td>0xFFFF0000</td>
+        <td>track</td>
+        <td class="description">Fixed-point representation of -1 (first of three tracks).</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>24/2</td>
+        <td>256</td>
+        <td>nameIndex</td>
+        <td class="description">The 'name' table index for the descriptive string "tight."</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>26/2</td>
+        <td>52</td>
+        <td>offset</td>
+        <td class="description">Offset of the two per-size tracking values for track number -1.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>28/4</td>
+        <td>0x00000000</td>
+        <td>track</td>
+        <td class="description">Fixed-point representation of 0 (second of three tracks).</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>32/2</td>
+        <td>258</td>
+        <td>nameIndex</td>
+        <td class="description">The 'name' table index for the descriptive string "normal."</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>34/2</td>
+        <td>60</td>
+        <td>offset</td>
+        <td class="description">Offset of the two per-size tracking values for track number 0.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>38/4</td>
+        <td>0x00010000</td>
+        <td>track</td>
+        <td class="description">Fixed-point representation of +1 (third of three tracks).</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>40/2</td>
+        <td>257</td>
+        <td>nameIndex</td>
+        <td class="description">The 'name' table index for the descriptive string "loose."</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>42/2</td>
+        <td>56</td>
+        <td>offset</td>
+        <td class="description">Offset of the two per-size tracking values for track number +1.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td colspan="4">(The size subtable [i.e. the <code>sizeTable</code> array] is next)</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>44/4</td>
+        <td>0x000C0000</td>
+        <td>sizeTable[1]</td>
+        <td class="description">Fixed-point representation of 12 points.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>48/4</td>
+        <td>0x00180000</td>
+        <td>sizeTable[2]</td>
+        <td class="description">Fixed-point representation of 24 points.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td colspan="4">(The per-size tracking values whose offsets were included in the <code>TrackTableEntry</code> records are included last)</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>52/2</td>
+        <td>-15</td>
+        <td>value</td>
+        <td class="description">FUnits of tight tracking at 12-point.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>54/2</td>
+        <td>-7</td>
+        <td>value</td>
+        <td class="description">FUnits of tight tracking at 24-point.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>56/2</td>
+        <td>50</td>
+        <td>value</td>
+        <td class="description">FUnits of loose tracking at 12-point.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>58/2</td>
+        <td>20</td>
+        <td>value</td>
+        <td class="description">FUnits of loose tracking at 24-point.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>60/2</td>
+        <td>0</td>
+        <td>value</td>
+        <td class="description">FUnits of normal tracking at 12-point.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>62/2</td>
+        <td>0</td>
+        <td>value</td>
+        <td class="description">FUnits of normal tracking at 24-point.</td>
+      </tr>
+    </table>
+  </div>
+
+      </section>
+  </div><!-- /content -->
+
+  <div id="globalfooter">
+    <div id="breadory">
+      <ol id="breadcrumbs">
+        <li class="home"><a href="../../../index.html">Developer</a></li>
+        <li><a href="../../index.html">Fonts</a></li>
+        <li><a href="../index.html">TrueType™ Reference Manual</a></li>
+        <li>The TrueType Font File</li>
+      </ol>
+      <div id="directorynav" class="directorynav">
+	<div id="dn-cola" class="column">
+		<h3><a href="../../../platforms/index.html">Platforms</a></h3>
+		<ul>
+			<li><a href="../../../ios/index.html">iOS</a></li>
+			<li><a href="../../../osx/index.html">OS X</a></li>
+			<li><a href="../../../watchos/index.html">watchOS</a></li>
+			<li><a href="../../../tvos/index.html">tvOS</a></li>
+		</ul>
+		<h3><a href="../../../resources/index.html">Tools</a></h3>
+		<ul>
+			<li><a href="../../../xcode/index.html">Xcode</a></li>
+			<li><a href="../../../swift/index.html">Swift</a></li>
+		</ul>
+	</div>
+	<div id="dn-colb" class="column">
+		<h3><a href="../../../resources/index.html">Resources</a></h3>
+		<ul>
+			<li><a href="../../../library/index.html">Documentation</a></li>
+			<li><a href="../../../videos/index.html">Videos</a></li>
+			<li><a href="https://forums.developer.apple.com/">Forums</a></li>
+			<li><a href="../../../app-store/index.html">App Store</a></li>
+			<li><a href="../../../safari/index.html">Safari and Web</a></li>
+			<li><a href="../../../education/index.html">Education</a></li>
+			<li><a href="../../../enterprise/index.html">Enterprise</a></li>
+		</ul>
+	</div>
+	<div id="dn-colc" class="column">
+		<h3><a href="../../../programs/index.html">Programs</a></h3>
+		<ul>
+			<li><a href="../../../programs/index.html">Developer Program</a></li>
+			<li><a href="../../../programs/enterprise/index.html">Enterprise Program</a></li>
+			<li><a href="../../../programs/ios/university/index.html">iOS University Program</a></li>
+			<li><a href="../../../programs/mfi/index.html">MFi Program</a></li>
+		</ul>
+	</div>
+	<div id="dn-cold" class="column">
+		<h3><a href="../../../support/index.html">Support</a></h3>
+		<ul>
+			<li><a href="../../../support/development/index.html">Development</a></li>
+			<li><a href="../../../support/distribution/index.html">Distribution</a></li>
+			<li><a href="../../../support/membership/index.html">Membership</a></li>
+			<li><a href="../../../system-status/index.html">System Status</a></li>
+		</ul>
+	</div>
+	<div id="dn-cole" class="column">
+		<h3><a href="https://developer.apple.com/account/">Account</a></h3>
+		<ul>
+			<li><a href="https://developer.apple.com/account/">Developer Account</a></li>
+			<li><a href="../../../go/index-id=certificates-ids-profiles.html">Certificates, IDs &amp; Profiles</a></li>
+			<li><a href="https://itunesconnect.apple.com">iTunes Connect</a></li>			
+			<li><a href="../../../terms/index.html">License Agreements</a></li>
+		</ul>
+	</div>
+</div>
+
+    </div><!--/breadory-->
+    <ul class="gf-links piped footer-links">
+  <li><a href="../../../news/index.html" class="first">News &amp; Updates</a></li>
+  <li><a href="../../../bug-reporting/index.html">Report Bugs</a></li>
+  <li><a href="../../../contact/index.html">Contact Us</a></li>
+</ul>
+
+<div class="gf-sosumi footer-sosumi">
+  <p>Copyright © 2016 Apple Inc. All rights reserved.</p>
+    <ul class="piped">
+        <li><a href="http://www.apple.com/legal/internet-services/terms/site.html" class="first">Terms of Use</a></li>
+        <li><a href="http://www.apple.com/privacy/privacy-policy/">Privacy Policy</a></li>
+    </ul>
+</div>
+
+<!--<div id="gf-links piped footer-links">
+	<ul>
+		<li><a href="/cn/" title="Simplified Chinese">简体中文</a></li>
+		<li><a href="/jp/" title="Japanese">日本語</a></li>
+		<li><a href="/kr/" title="Korean">한국어</a></li>
+	</ul>
+</div>-->
+
+  </div><!--/globalfooter-->
+</body>
+</html>

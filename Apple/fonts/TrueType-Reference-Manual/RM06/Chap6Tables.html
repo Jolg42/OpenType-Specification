@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="Author" content="Apple Inc." />
+<meta name="viewport" content="width=1024" />
+<link rel="shortcut icon" href="../../../favicon.ico" />
+<link rel="icon" href="../../../favicon.ico" />
+<link rel="stylesheet" href="https://www.apple.com/wss/fonts?family=Myriad+Set+Pro&amp;v=2" type="text/css" />
+<link rel="stylesheet" href="../../../assets/styles/transition-global.css" type="text/css" />
+<link rel="stylesheet" href="../../../assets/styles/transition-header.css" type="text/css" />
+<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/core/styles/adc.css" type="text/css" />
+<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/styles/topbar.css" type="text/css" />
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/lib/prototype.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/lib/scriptaculous.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/browserdetect.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/apple_core.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/search_decorator.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/adc_core.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/scripts/ac_retina.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/topbarDropdown.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	document.write('<link rel="stylesheet" type="text/css" href="https://devimages.apple.com.edgekey.net/assets/styles/script.css" media="screen">');
+</script>
+<!-- Augmented Search -->
+<!--<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/styles/augmented_search.css" type="text/css">-->
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/lib/jquery/jquery-1.11.0.min.js"></script>
+<script>jQuery.noConflict();</script>
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/lib/jquery/jquery.retinate.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/scripts/augmented_search.js"></script>-->
+<script src="../../../assets/scripts/augmented_search.js"></script>
+<script src="../../../assets/scripts/global-header.js"></script>
+
+  <meta name="Author" content="Apple Inc.">
+  <meta name="viewport" content="width=1024">
+  <link rel="stylesheet" href="../AAT.css" type="text/css">
+  <link rel="shortcut icon" href="https://devimages.apple.com.edgekey.net/favicon.ico">
+  <link rel="icon" href="https://devimages.apple.com.edgekey.net/favicon.ico">
+  <title>Apple Advanced Typography Font Tables</title>
+</head>
+<body class="white sidenav-page">
+  <nav id="globalheader" role="navigation" aria-label="Global Navigation">
+  <div id="gh-content" class="gh-content">
+    <ul class="gh-menu">
+      <li id="gh-menu-icon-toggle" class="gh-menu-icon gh-menu-icon-toggle enhance">
+        <button id="gh-svg-icons" class="gh-svg-wrapper">
+          <span class="text-replace">Menu</span>
+          <svg x="0px" y="0px" width="100%" viewBox="0 0 96 96" class="gh-svg gh-svg-top" enable-background="new 0 0 96 96"><rect width="32" height="4" x="32" y="46" class="gh-svg-rect gh-svg-rect-top"></rect></svg>
+          <svg x="0px" y="0px" width="100%" viewBox="0 0 96 96" class="gh-svg gh-svg-bottom" enable-background="new 0 0 96 96"><rect width="32" height="4" x="32" y="46" class="gh-svg-rect gh-svg-rect-bottom"></rect></svg>
+        </button>
+      </li>
+      <li id="gh-menu-icon-home" class="gh-menu-icon gh-menu-icon-home">
+        <a href="../../../index.html">
+          <span class="text-replace">Apple Developer</span>
+        </a>
+      </li>
+    </ul>
+    <div class="gh-nav">
+      <div class="gh-nav-view">
+        <ul class="gh-nav-list">
+
+          <li class="gh-tab gh-nav-developer" data-hires="true"><a class="gh-tab-link" href="../../../index.html"><span class="text-replace">Apple Developer</span></a></li>
+          <li class="gh-tab gh-nav-technologies"><a class="gh-tab-link" href="../../../platforms/index.html">Platforms</a></li>
+          <li class="gh-tab gh-nav-resources"><a class="gh-tab-link" href="../../../resources/index.html">Resources</a></li>
+          <li class="gh-tab gh-nav-programs"><a class="gh-tab-link" href="../../../programs/index.html">Program</a></li>
+          <li class="gh-tab gh-nav-support"><a class="gh-tab-link" href="../../../support/index.html">Support</a></li>
+          <li class="gh-tab gh-nav-account">
+            <a class="gh-tab-link gh-account-profile" href="https://developer.apple.com/account/">Account</a>
+          </li>
+          <li class="gh-tab gh-nav-search">
+
+            <div id="gh-search" class="gh-search" role="search">
+              <form action="/search/index.php" method="get" class="gh-search-form" id="gh-search-form" role="search">
+
+                <div class="gh-search-input-wrapper">
+                  <label for="gh-search-input" class="text-replace">Search Apple Developer</label>
+                  <input type="text" name="q" id="gh-search-input" class="augmented gh-search-input" placeholder="Search Apple Developer" autocomplete="off" autocorrect="off" autocapitalize="off">
+                </div>
+
+                <button disabled type="submit" id="gh-search-submit" class="gh-search-submit gh-search-magnify"><span class="text-replace">Search Apple Developer</span></button>
+                <button disabled type="reset" id="gh-search-reset" class="gh-search-reset"><span class="text-replace">Reset</span></button>
+
+              </form>
+            </div>
+
+            <a class="gh-search-magnify" href="../../../search/index.html"><span class="text-replace">Search Apple Developer</span></a>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+  <div id="top">
+<!-- SiteCatalyst code version: H.8. Copyright 1997-2006 Omniture, Inc. -->
+<script type="text/javascript">
+/* RSID: */
+var s_account="appleglobal,appleusdeveloper"
+</script>
+
+<script type="text/javascript" src="https://www.apple.com/metrics/scripts/s_code_h.js"></script>
+<script type="text/javascript">
+s.pageName= AC && AC.Tracking && AC.Tracking.pageName();
+s.channel="www.us.developer"
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)</script>
+<!-- End SiteCatalyst code version: H.8. -->
+</div>
+
+  <div id="content" class="content" data-hires="false">
+    <section>
+  <div id="navBar">
+    <!-- NAVBARSTART -->
+    <p class="bold"><a href="../index.html">TrueType Reference Manual</a></p>
+    <ul class="outer">
+      <li><a href="../RM01/Chap1.html">Digitizing Letterforms</a></li>
+      <li><a href="../RM02/Chap2.html">The Font Engine</a></li>
+      <li><a href="../RM03/Chap3.html">Instructing Fonts</a></li>
+      <li><a href="../RM04/Chap4.html">The Graphics State</a></li>
+      <li><a href="../RM05/Chap5.html">The Instruction Set</a></li>
+      <li><a href="Chap6.html">Font Tables</a></li>
+      <li class="c1">
+        <ul class="inner">
+          <li><a href="Chap6.html#Intro">Introduction</a></li>
+          <li><a href="Chap6.html#Types">Data Types</a></li>
+          <li><a href="Chap6.html#Overview">Overview of TrueType</a></li>
+          <li><a href="Chap6AATIntro.html">Overview of AAT</a></li>
+          <li>Special Tables</li>
+          <li><a href="Chap6.html#Directory">The Font Directory</a></li>
+          <li><a href="Chap6acnt.html">The <code>'acnt'</code> table</a></li>
+          <li><a href="Chap6ankr.html">The <code>'ankr'</code> table</a></li>
+          <li><a href="Chap6avar.html">The <code>'avar'</code> table</a></li>
+          <li><a href="Chap6bdat.html">The <code>'bdat'</code> table</a></li>
+          <li><a href="Chap6bhed.html">The <code>'bhed'</code> table</a></li>
+          <li><a href="Chap6bloc.html">The <code>'bloc'</code> table</a></li>
+          <li><a href="Chap6bsln.html">The <code>'bsln'</code> table</a></li>
+          <li><a href="Chap6cmap.html">The <code>'cmap'</code> table</a></li>
+          <li><a href="Chap6cvar.html">The <code>'cvar'</code> table</a></li>
+          <li><a href="Chap6cvt.html">The <code>'cvt '</code> table</a></li>
+          <li><a href="Chap6EBSC.html">The <code>'EBSC'</code> table</a></li>
+          <li><a href="Chap6fdsc.html">The <code>'fdsc'</code> table</a></li>
+          <li><a href="Chap6feat.html">The <code>'feat'</code> table</a></li>
+          <li><a href="Chap6fmtx.html">The <code>'fmtx'</code> table</a></li>
+          <li><a href="Chap6fond.html">The <code>'fond'</code> table</a></li>
+          <li><a href="Chap6fpgm.html">The <code>'fpgm'</code> table</a></li>
+          <li><a href="Chap6fvar.html">The <code>'fvar'</code> table</a></li>
+          <li><a href="Chap6gasp.html">The <code>'gasp'</code> table</a></li>
+          <li><a href="Chap6gcid.html">The <code>'gcid'</code> table</a></li>
+          <li><a href="Chap6glyf.html">The <code>'glyf'</code> table</a></li>
+          <li><a href="Chap6gvar.html">The <code>'gvar'</code> table</a></li>
+          <li><a href="Chap6hdmx.html">The <code>'hdmx'</code> table</a></li>
+          <li><a href="Chap6head.html">The <code>'head'</code> table</a></li>
+          <li><a href="Chap6hhea.html">The <code>'hhea'</code> table</a></li>
+          <li><a href="Chap6hmtx.html">The <code>'hmtx'</code> table</a></li>
+          <li><a href="Chap6just.html">The <code>'just'</code> table</a></li>
+          <li><a href="Chap6kern.html">The <code>'kern'</code> table</a></li>
+          <li><a href="Chap6kerx.html">The <code>'kerx'</code> table</a></li>
+          <li><a href="Chap6lcar.html">The <code>'lcar'</code> table</a></li>
+          <li><a href="Chap6loca.html">The <code>'loca'</code> table</a></li>
+          <li><a href="Chap6ltag.html">The <code>'ltag'</code> table</a></li>
+          <li><a href="Chap6maxp.html">The <code>'maxp'</code> table</a></li>
+          <li><a href="Chap6meta.html">The <code>'meta'</code> table</a></li>
+          <li><a href="Chap6mort.html">The <code>'mort'</code> table</a></li>
+          <li><a href="Chap6morx.html">The <code>'morx'</code> table</a></li>
+          <li><a href="Chap6name.html">The <code>'name'</code> table</a></li>
+          <li><a href="Chap6opbd.html">The <code>'opbd'</code> table</a></li>
+          <li><a href="Chap6OS2.html">The <code>'OS/2'</code> table</a></li>
+          <li><a href="Chap6post.html">The <code>'post'</code> table</a></li>
+          <li><a href="Chap6prep.html">The <code>'prep'</code> table</a></li>
+          <li><a href="Chap6prop.html">The <code>'prop'</code> table</a></li>
+          <li><a href="Chap6sbix.html">The <code>'sbix'</code> table</a></li>
+          <li><a href="Chap6trak.html">The <code>'trak'</code> table</a></li>
+          <li><a href="Chap6vhea.html">The <code>'vhea'</code> table</a></li>
+          <li><a href="Chap6vmtx.html">The <code>'vmtx'</code> table</a></li>
+          <li><a href="Chap6xref.html">The <code>'xref'</code> table</a></li>
+          <li><a href="Chap6Zapf.html">The <code>'Zapf'</code> table</a></li>
+        </ul>
+      </li>
+      <li><a href="../RM07/appendixA.html">Instruction Set Summary</a></li>
+      <li><a href="../RM07/appendixB.html">Glyph Mappings</a></li>
+      <li><a href="../RM08/appendixE.html">Converting Outlines</a></li>
+	<li><a href="../RM09/AppendixF.html">Font Feature Registry</a></li>
+    </ul><!-- NAVBAREND -->
+  </div>
+  <div id="chapterContent">
+    <header><h1>Apple Advanced Typography Font Tables</h1></header>
+    <p>This chapter discusses three table components that are used by many of the Apple Advanced Typography (AAT) tables and a section that summarizes all of the AAT tables. In addition, the role of each of the AAT font tables included in this document is summarized.</p>
+    <h2>Table Components</h2>
+    <p>The three table components that are described in this section are binary searching tables, lookup tables, and state tables. <dfn>Binary search tables</dfn>contain data that assist in conducting binary searches for information in the table that it resides in. <dfn>Lookup tables</dfn>map glyph indexes to information without context. <dfn>State tables</dfn>map glyph indexes to actions with context.</p>
+    <h3><a name="BinSrchHeader"></a>Binary Searching Tables</h3>
+    <p>So that text processing will take as little time as possible, many of the font tables contain information that speed up the process of searching for the entry associated with a particular glyph index. This information is contained in a <dfn>binary search header</dfn>, or <code>BinSrchHeader</code> structure. The format of a <code>BinSrchHeader</code> structure is as follows:</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th>Type</th>
+        <th>Name</th>
+        <th align="left">Description</th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>unitSize</td>
+        <td class="description">Size of a lookup unit for this search in bytes.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>nUnits</td>
+        <td class="description">Number of units of the preceding size to be searched.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>searchRange</td>
+        <td class="description">The value of unitSize times the largest power of 2 that is less than or equal to the value of nUnits.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>entrySelector</td>
+        <td class="description">The log base 2 of the largest power of 2 less than or equal to the value of nUnits.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>rangeShift</td>
+        <td class="description">The value of unitSize times the difference of the value of nUnits minus the largest power of 2 less than or equal to the value of nUnits.</td>
+      </tr>
+    </table>
+    <p>To guarantee that a binary search terminates, you must include one or more special "end of search table" values at the end of the data to be searched. The number of termination values that need to be included is table-specific. The value that indicates binary search termination is 0xFFFF. The presence of this special value makes the search logic as fast as possible, at a fairly minimal cost in extra space in the font table. The binary search header is often used in lookup tables.</p>
+    <h3><a name="LookupTables"></a>Lookup Tables</h3>
+    <p>Lookup tables provide a way of looking up information about a glyph index.</p>
+    <p>Some lookup tables do simple array-type lookup. Others involve groupings, allowing you to treat many different glyph indexes in the same way (that is, to look up the same information about them). The top-level description of a lookup table contains a format number and a format-specific header. The format of the Lookup Table header is as follows:</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th>Type</th>
+        <th>Name</th>
+        <th align="left">Description</th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>format</td>
+        <td class="description">Format of this lookup table. There are five lookup table formats, each with a format number.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>variable</td>
+        <td>fsHeader</td>
+        <td class="description">Format-specific header (each of these is described in the following sections), followed by the actual lookup data. The details of the fsHeader structure are given with the different formats.</td>
+      </tr>
+    </table>
+    <p>The result of a lookup is referred to in the following descriptions as a <dfn>lookup value</dfn>. A lookup value is interpreted differently for different types of tables. Each page dealing with specific tables gives information on how to interpret the lookup values specific to that table.</p>
+    <p>There are five formats of lookup tables:</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th>Format</th>
+        <th align="left">Description</th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>0</td>
+        <td class="description">Simple array format. The lookup data is an array of lookup values, indexed by glyph index.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>2</td>
+        <td class="description">Segment single format. Each non-overlapping segment has a single lookup value that applies to all glyphs in the segment. A segment is defined as a contiguous range of glyph indexes.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>4</td>
+        <td class="description">Segment array format. A segment mapping is performed (as with Format 2), but instead of a single lookup value for all the glyphs in the segment, each glyph in the segment gets its own separate lookup value.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>6</td>
+        <td class="description">Single table format. The lookup data is a sorted list of &lt;glyph index,lookup value&gt; pairs.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>8</td>
+        <td class="description">Trimmed array format. The lookup data is a simple trimmed array indexed by glyph index.</td>
+      </tr>
+    </table>
+    <h4>Simple Array Format 0 Lookup Table</h4>
+    <p>The <code>fsHeader</code> field of a Format 0 lookup table presents an array of lookup values, indexed by glyph index. What these values represent depends on the font table for which you are using the lookup table.</p>
+    <h4><a name="LookupFormat2"></a>Segment Single Format 2 Lookup Table</h4>
+    <p>The <code>fsHeader</code> field of a Format 2 lookup table divides some portion of the glyph indexes into contiguous ranges or segments. The format of a segment single format 2 lookup table is as follows:</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th>Type</th>
+        <th>Name</th>
+        <th align="left">Description</th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>BinSrchHeader</td>
+        <td>binSrchHeader</td>
+        <td class="description">The units for this binary search are of type LookupSegment, and always have a minimum length of 6.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>LookupSegment</td>
+        <td>segments[]</td>
+        <td class="description">The actual segments. These must already be sorted, according to the first word in each one (the last glyph in each segment).</td>
+      </tr>
+    </table>
+    <p>The format of a Format 2 <code>LookupSegment</code> is as follows:</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th>Type</th>
+        <th>Name</th>
+        <th align="left">Description</th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>lastGlyph</td>
+        <td class="description">Last glyph index in this segment</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>firstGlyph</td>
+        <td class="description">First glyph index in this segment</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>variable</td>
+        <td>value</td>
+        <td class="description">The lookup value (only one)</td>
+      </tr>
+    </table>
+    <p>For a format 2 lookup table, the single lookup value is applied uniformly to all the glyphs in the segment.</p>
+    <h4>Segment Array Format 4 Lookup Table</h4>
+    <p>The <code>fsHeader</code> field of a Format 4 lookup table divides some portion of the glyph indexes into contiguous ranges or segments. The format of a segment array Format 4 lookup table is as follows:</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th>Type</th>
+        <th>Name</th>
+        <th align="left">Description</th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>BinSrchHeader</td>
+        <td>binSrchHeader</td>
+        <td class="description">The units for this binary search are of type LookupSegment and always have a minimum length of 6.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>LookupSegment</td>
+        <td>segments[]</td>
+        <td class="description">The actual segments. These must already be sorted, according to the first word in each one (the last glyph in each segment).</td>
+      </tr>
+    </table>
+    <p>The format of a Format 4 lookupSegment is as follows:</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th>Type</th>
+        <th>Name</th>
+        <th align="left">Description</th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>lastGlyph</td>
+        <td class="description">Last glyph index in this segment</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>firstGlyph</td>
+        <td class="description">First glyph index in this segment</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>value</td>
+        <td class="description">A 16-bit offset from the start of the table to the data</td>
+      </tr>
+    </table>
+    <h4><a name="LookupFormat6"></a>Single Table Format 6 Lookup Table</h4>
+    <p>The <code>fsHeader</code> field of a Format 6 lookup table stores the lookup data as a sorted list of pairs of a glyph index and its lookup result. The format of a single table Format 6 lookup table is as follows:</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th>Type</th>
+        <th>Name</th>
+        <th align="left">Description</th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>BinSrchHeader</td>
+        <td>binSrchHeader</td>
+        <td class="description">The units for this binary search are of type LookupSingle and always have a minimum length of 4.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>LookupSingle</td>
+        <td>entries[]</td>
+        <td class="description">The actual entries, sorted by glyph index.</td>
+      </tr>
+    </table>
+    <p>The <a name="LookupSingle"></a>format of a Format 6 <code>LookupSingle</code> is as follows:</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th>Type</th>
+        <th>Name</th>
+        <th align="left">Description</th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>glyph</td>
+        <td class="description">The glyph index</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>variable</td>
+        <td>value</td>
+        <td class="description">The lookup value</td>
+      </tr>
+    </table>
+    <h4><a name="LookupFormat8"></a>Trimmed Array Format 8 Lookup Table</h4>
+    <p>The <code>fsHeader</code> field of a Format 8 lookup table stores the lookup data as a simple trimmed array indexed by glyph index. The format of a trimmed array Format 8 lookup table is as follows:</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th>Type</th>
+        <th>Name</th>
+        <th align="left">Description</th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>firstGlyph</td>
+        <td class="description">First glyph index included in the trimmed array.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>glyphCount</td>
+        <td class="description">Total number of glyphs (equivalent to the last glyph minus the value of firstGlyph plus 1).</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>variable</td>
+        <td>valueArray[]</td>
+        <td class="description">The lookup values (indexed by the glyph index minus the value of firstGlyph).</td>
+      </tr>
+    </table>
+    <h3><a name="StateTables"></a>State Tables</h3>
+    <p>The following introductory discussion of state tables uses a small number of classes and states to describe the basics concepts. The full set of predefined classes and states used by AAT tables are defined in the <a href="Chap6Tables.html#ClassSubtable">Class Subtable</a> section.</p>
+    <p>State tables are used in the Justification, Kerning, and Glyph Metamorphosis Tables to provide glyph processing. The basic format of state tables is given in this section. Table-specific state table format data is included in the page describing the specific table.</p>
+    <p>A <dfn>state</dfn>is a set of rules for mapping a class of glyphs into a particular <dfn>condition</dfn>(such as "middle of a word") and an <dfn>action</dfn>that modifies the stream of glyphs. The finite state machine maintains an index into the state array, called the <dfn>current state</dfn>. The current state is initialized to a special value, called the <dfn>initial state</dfn>. The movement within a finite state machine from one state to another is called a <dfn>transition</dfn>.</p>
+    <p>AAT tables provide information that support the contextual processing of the glyphs in a line. The line is represented in memory by the glyph array, an array of glyph records, which are stored in display order. Each glyph record contains data about the glyph, including its glyph index. The glyph array is processed by a finite state machine, which takes the glyph ranges as input and may or may not change the input in response to its characteristics.</p>
+    <p>The finite state machine maps the input glyphs into classes. In terms of text, a class is a collection of glyphs that have some property in common. Examples of classes might be arithmetic digits, letters that form a ligature when the first glyph is "f", and glyphs that separate words. For each glyph in the glyph array, the finite state machine performs an action appropriate to the glyph's class and state.</p>
+    <p>Each action always results in a change of state and sometimes results in a change of class. The change of state may be from one state to the same state or to a different state. The finite state machine then continues with the next glyph in the glyph array. After processing all glyphs in the glyph array, the finite state machine performs the action in the current state indicated by a special class, called <dfn>end of text</dfn>or <dfn>end of line</dfn>.</p>
+    <p>In order to represent the operations of a finite state machine, a stylized flowchart is useful to show the relationships of the states, classes and actions. States are represented by ovals and actions are represented by arrows. Arrow captions are the classes for which the specified action occurs. Depending on the state and class, an action will either be in the same state (shown by a loop back to that state) or will indicate a change of state (shown by an arrow from one state to another state).</p>
+    <p>All state table processes begin in the <dfn>start state</dfn>. This is the initial state of the diagram. Let's look at an example of a finite state machine and its corresponding interpretation in a state table.</p>
+    <p>If you divided all the glyphs of your font into classes of "letters" (A, B, a, b, and so on) and "out of bounds" (anything that is not a letter), you could devise a finite state machine to capitalize the first letter of every word in a stream of text. The machine begins at the START state and at the beginning of the stream of data. It determines whether the first glyph is a member of the "letter" class or some other class, in which case the glyph is "out of bounds." If the glyph is a letter, then the machine capitalizes the letter and moves to the IN WORD state. If the next glyph is in the "letter" class, the machine stays in the IN WORD state and does nothing. If the glyph is in another class, it is "out of bounds," and the machine goes back to the START state.</p>
+    <p>Note that this finite state machine would interpret punctuation marks as "out of bounds" and capitalize the next glyph in the sequence. As a result, the word "won't" would be converted to "won'T."</p>
+    <p>The following figure gives a schematic representation of a finite state machine that capitalizes the first letter in a word.</p>
+    <p><img src="FF27.gif" width="402" height="183" naturalsizeflag="3"></p>
+    <p>You could make this finite state machine more complex by specifying the additional rule: make only the first letter of each word uppercase and make all subsequent letters lowercase. You can add a new rule to the IN WORD state that tells the machine to change all glyphs in the "letter" class to their lowercase forms, as shown in the following figure:</p>
+    <p><img src="FF29.gif" width="402" height="176" naturalsizeflag="3"></p>
+    <p>However, this finite state machine always changes the first glyph of every word to its uppercase form, regardless of whether it's already uppercase, and it changes the subsequent glyphs of words to lowercase, even if they're already lowercase. You can minimize the work of this finite state machine by adding more classes, such as "uppercase" and "lowercase" (abbreviated as UC and LC in the following figure). When the finite state machine begins in the START state, it moves to the IN WORD state if it encounters a letter, but performs an action only with a member of the "lowercase" class. In the IN WORD state, it cycles through glyphs, changing them if they're members of the "uppercase" class, doing nothing if they're members of the "lowercase" class, and moving back to the START state if they're "out of bounds." In this way, the finite state machine changes only those glyphs that are not appropriate for their place in the word; all others are preserved.</p>
+    <p><img src="FF30.gif" width="398" height="181" naturalsizeflag="3"></p>
+    <p>A <dfn>state table</dfn>representation summarizes and organizes the data used by the finite state machine to specify the classes, states, and actions that the machine can take. The four possible transition and action pairs for the finite state machine described in the preceding figure are shown in the following figure. The first member of the pair is the state that the machine should go to, and the second member is the action, if any, the machine should take. An entry of "&lt; &gt;" indicates that the finite state machine should take no action and should return to the current state.</p>
+    <p><img src="FF31.gif" width="379" height="88" naturalsizeflag="3"></p>
+    <p>The state table for these pairs creates an array that has all of the possible states (rows) and the possible classes (columns), as shown in the next figure. Depending on the beginning state and the class of glyph, the machine can decide on the appropriate transition and action to take.</p>
+    <p><img src="FF32.gif" width="367" height="131" naturalsizeflag="3"></p>
+    <p>The state table data structure is divided into four sections: the state header, the class subtable, the state array, and the entry subtable. The state header contains information about the size of a state and the offsets to the other subtables. The class subtable allows you to divide the glyphs of your font into different classes. The state array describes the order of states in the table. The entry subtable contains the class and state-dependent actions.</p>
+    <p>Some of these subtables use <dfn>per-glyph tables</dfn>. These are tables that hold some type of information (such as offsets) about every glyph in the font, correlated to glyph indexes.</p>
+    <p>A state table starts with a <a name="StateHeader"></a>state table header, known as the <code>StateHeader</code> data type. The format of the state table header is as follows:</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th>Type</th>
+        <th>Name</th>
+        <th align="left">Description</th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>stateSize</td>
+        <td class="description">Size of a state, in bytes. The size is limited to 8 bits, although the field is 16 bits for alignment.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>classTable</td>
+        <td class="description">Byte offset from the beginning of the state table to the class subtable.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>stateArray</td>
+        <td class="description">Byte offset from the beginning of the state table to the state array.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>entryTable</td>
+        <td class="description">Byte offset from the beginning of the state table to the entry subtable.</td>
+      </tr>
+    </table>
+    <h4><a name="ClassSubtable"></a>The Class Subtable</h4>
+    <p>The class subtable maps the glyph indexes of your font into classes. The subtable consists of the glyph index of the first glyph, the number of glyphs in the class table, and then an array of the class codes associated with each glyph. To limit the size of the class table, you should design your font so that glyphs processed by a given state table have glyph indexes that are in a small range.</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th>Type</th>
+        <th>Name</th>
+        <th align="left">Description</th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>firstGlyph</td>
+        <td class="description">Glyph index of the first glyph in the class table.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>nGlyphs</td>
+        <td class="description">Number of glyphs in class table.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint8</td>
+        <td>classArray[]</td>
+        <td class="description">The class codes (indexed by glyph index minus firstGlyph). Class codes range from 0 to the value of stateSize minus 1.</td>
+      </tr>
+    </table>
+    <p>The first four class codes (0, 1, 2 and 3) are predefined. Subsequent class codes may be defined by the font developer. The class codes and their descriptions are as follows:</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th>Class Code</th>
+        <th align="left">Description</th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>0</td>
+        <td class="description">End of text. This class should not appear in the class array.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>1</td>
+        <td class="description">Out of bounds. All glyph indexes that are less than firstGlyph, or greater than or equal to firstGlyph plus nGlyphs will automatically be assigned class code 1. Class code 1 may also appear in the class array.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>2</td>
+        <td class="description">Deleted glyph. Sometimes contextual processing removes a glyph from the glyph array by changing its glyph index to the deleted glyph index, 0xFFFF. This glyph code is automatically assigned class "deleted," which should not appear in the class array.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>3</td>
+        <td class="description">End of line. This class should not appear in the class array.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>4 through (stateSize-1)</td>
+        <td class="description">Your class codes. Class codes that you may typically use to accommodate the needs of your font include letter, space, and punctuation. For example, a state table may define the letter glyphs as Class 4, the space glyph as Class 6, and the punctuation glyph as Class 7.</td>
+      </tr>
+    </table>
+    <h4>The State Array</h4>
+    <p>The state array is actually an array of arrays. Each entry in the state array is itself an array of uint8 values that represent indexes into the Entry Subtable, one for each class code defined by this state table. The first two states are predefined. State 0 is the <dfn>start of text state</dfn>. State 1 is the <dfn>start of line state</dfn>. One of these two states will be chosen as the initial state (depending on context) during text processing. All other states are available to the font designer.</p>
+    <h4>The Entry Subtable</h4>
+    <p>The entry subtable contains the state table action information. The values in the entry subtable have the following format:</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th>Type</th>
+        <th>Name</th>
+        <th align="left">Description</th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>newState</td>
+        <td class="description">Byte offset from beginning of state table to the new state</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>flags</td>
+        <td class="description">Table specific</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>variable</td>
+        <td>glyphOffsets[]</td>
+        <td class="description">Optional offsets to per-glyph tables</td>
+      </tr>
+    </table>
+    <p>The <code>newState</code> value is stored as a byte offset for quick access: the address of the entry table index is the sum of the state table address, <code>newState</code>, and the class code. This means that the maximum number of states depends on <code>stateSize</code> and the offset of the state array from the beginning of the state table.</p>
+    <p>The contents of the <code>flags</code> field are table specific. See the formats of the individual tables for details.</p>
+    <p>Some actions, which are defined in the entry subtable, optionally compute a value by using a glyph index as an index into a per-glyph table. The tables contain entries only for those glyphs used as indexes into the table. The offset is a signed word offset from the beginning of the state table to the putative position of the entry for glyph index 0, if it appeared in the table. This allows the address of a particular entry to be computed as:</p>
+    <p><code>(glyph index + offset) * 2 + state table address</code></p>
+    <p>Notice that this means that the offset can be either negative or positive, depending on the smallest glyph index in the table and the beginning of the table relative to the beginning of the state table.</p>
+    <p>State table headers are embedded in other tables. The class table, state array, and entry tables should follow the embedding table's header, and can be in any order. The class and entry tables must be word aligned. Any per-glyph tables follow the sections of the state table and must be word aligned.</p>
+    <h3><a name="ExtendedStateHeader">Extended State Tables:</a></h3>
+    <p>The original definition of an AAT state table was largely dictated by hardware limitations of the late 1980's, when the TrueType format was first developed. As hardware limitations became less stringent and larger fonts more common, AAT introduced the <em>extended state table</em> format, which is now used by most AAT tables.</p>
+    <p>The extended state table format is very similar to the original state table format. The basic structure, an <code>STXHeader</code>, is as follows:</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th>Type</th>
+        <th>Name</th>
+        <th align="left">Description</th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint32</td>
+        <td>nClasses</td>
+        <td class="description">Number of classes, which is the number of 16-bit entry indices in a single line in the state array.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint32</td>
+        <td>classTableOffset</td>
+        <td class="description">Offset from the start of this state table header to the start of the class table.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint32</td>
+        <td>stateArrayOffset</td>
+        <td class="description">Offset from the start of this state table header to the start of the state array.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint32</td>
+        <td>entryTableOffset</td>
+        <td class="description">Offset from the start of this state table header to the start of the entry table.</td>
+      </tr>
+    </table>
+    <p>Historically the class table had been a tight array of 8-bit values. However, in certain cases (such as Asian fonts) the potential wide separation between glyph indices covered by the same class table has led to much wasted space in the table. Therefore, the class tables in extended state tables are now simply LookupTables, where the looked-up value is a 16-bit class value. Note that a format 8 LookupTable (trimmed array) yields the same results as class array defined in the original state table format.</p>
+    <p>Another important difference between the original and extended state table is that the entries in the state array are now 16-bit zero-based indices into the entry table, instead of being 8-bit indices. This enormously increases the range and power of state tables using this new format.</p>
+  </div>
+
+      </section>
+  </div><!-- /content -->
+
+  <div id="globalfooter">
+    <div id="breadory">
+      <ol id="breadcrumbs">
+        <li class="home"><a href="../../../index.html">Developer</a></li>
+        <li><a href="../../index.html">Fonts</a></li>
+        <li><a href="../index.html">TrueType™ Reference Manual</a></li>
+        <li>The TrueType Font File</li>
+      </ol>
+      <div id="directorynav" class="directorynav">
+	<div id="dn-cola" class="column">
+		<h3><a href="../../../platforms/index.html">Platforms</a></h3>
+		<ul>
+			<li><a href="../../../ios/index.html">iOS</a></li>
+			<li><a href="../../../osx/index.html">OS X</a></li>
+			<li><a href="../../../watchos/index.html">watchOS</a></li>
+			<li><a href="../../../tvos/index.html">tvOS</a></li>
+		</ul>
+		<h3><a href="../../../resources/index.html">Tools</a></h3>
+		<ul>
+			<li><a href="../../../xcode/index.html">Xcode</a></li>
+			<li><a href="../../../swift/index.html">Swift</a></li>
+		</ul>
+	</div>
+	<div id="dn-colb" class="column">
+		<h3><a href="../../../resources/index.html">Resources</a></h3>
+		<ul>
+			<li><a href="../../../library/index.html">Documentation</a></li>
+			<li><a href="../../../videos/index.html">Videos</a></li>
+			<li><a href="https://forums.developer.apple.com/">Forums</a></li>
+			<li><a href="../../../app-store/index.html">App Store</a></li>
+			<li><a href="../../../safari/index.html">Safari and Web</a></li>
+			<li><a href="../../../education/index.html">Education</a></li>
+			<li><a href="../../../enterprise/index.html">Enterprise</a></li>
+		</ul>
+	</div>
+	<div id="dn-colc" class="column">
+		<h3><a href="../../../programs/index.html">Programs</a></h3>
+		<ul>
+			<li><a href="../../../programs/index.html">Developer Program</a></li>
+			<li><a href="../../../programs/enterprise/index.html">Enterprise Program</a></li>
+			<li><a href="../../../programs/ios/university/index.html">iOS University Program</a></li>
+			<li><a href="../../../programs/mfi/index.html">MFi Program</a></li>
+		</ul>
+	</div>
+	<div id="dn-cold" class="column">
+		<h3><a href="../../../support/index.html">Support</a></h3>
+		<ul>
+			<li><a href="../../../support/development/index.html">Development</a></li>
+			<li><a href="../../../support/distribution/index.html">Distribution</a></li>
+			<li><a href="../../../support/membership/index.html">Membership</a></li>
+			<li><a href="../../../system-status/index.html">System Status</a></li>
+		</ul>
+	</div>
+	<div id="dn-cole" class="column">
+		<h3><a href="https://developer.apple.com/account/">Account</a></h3>
+		<ul>
+			<li><a href="https://developer.apple.com/account/">Developer Account</a></li>
+			<li><a href="../../../go/index-id=certificates-ids-profiles.html">Certificates, IDs &amp; Profiles</a></li>
+			<li><a href="https://itunesconnect.apple.com">iTunes Connect</a></li>			
+			<li><a href="../../../terms/index.html">License Agreements</a></li>
+		</ul>
+	</div>
+</div>
+
+    </div><!--/breadory-->
+    <ul class="gf-links piped footer-links">
+  <li><a href="../../../news/index.html" class="first">News &amp; Updates</a></li>
+  <li><a href="../../../bug-reporting/index.html">Report Bugs</a></li>
+  <li><a href="../../../contact/index.html">Contact Us</a></li>
+</ul>
+
+<div class="gf-sosumi footer-sosumi">
+  <p>Copyright © 2016 Apple Inc. All rights reserved.</p>
+    <ul class="piped">
+        <li><a href="http://www.apple.com/legal/internet-services/terms/site.html" class="first">Terms of Use</a></li>
+        <li><a href="http://www.apple.com/privacy/privacy-policy/">Privacy Policy</a></li>
+    </ul>
+</div>
+
+<!--<div id="gf-links piped footer-links">
+	<ul>
+		<li><a href="/cn/" title="Simplified Chinese">简体中文</a></li>
+		<li><a href="/jp/" title="Japanese">日本語</a></li>
+		<li><a href="/kr/" title="Korean">한국어</a></li>
+	</ul>
+</div>-->
+
+  </div><!--/globalfooter-->
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+  <head>
+    <title>CBLC - Color Bitmap Location Table</title>
+    <link rel="STYLESHEET" href="otspec.css" type="text/css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <div class="toprule">
+    </div>
+    <p class="menu">
+      <a href="http://www.microsoft.com/typography/default.mspx">Microsoft Typography</a> | <a href="http://www.microsoft.com/typography/creators.htm">Developer...</a> | <a href="default.htm">OpenType specification</a> | <a href="otff.htm#otttables">OpenType tables</a> | The BASE table</p>
+    <div class="middlerule">
+    </div>
+    <div class="contents">
+     <h1>CBLC - Color Bitmap Location Table</h1>
+     <h2>Table structure</h2>
+      <p>Two new tables are used to embed color bitmaps in OFF fonts. They are the 'CBLC' table, backward compatible with the existing EBLC table for embedded bitmap locators, and the 'CBDT' table for embedded color bitmap data. </p>
+      <p>The 'CBLC' table begins with a header containing the table version and number of strikes. An OFF font may have one or more strikes embedded in the 'CBDT' table.</p>
+<h2>cblcHeader</h2>
+<table class="gray">
+    <tr>
+          <th style="width: 20%;">Type</th>
+          <th style="width: 20%;">Name</th>
+          <th style="width: 60%;">Description</th>
+        </tr>
+        <tr>
+          <td>FIXED</td>
+          <td>version</td>
+          <td>Initially defined as 0x00030000</td>
+        </tr>
+        <tr>
+          <td>ULONG</td>
+          <td>numsizes</td>
+          <td>Number of bitmapSizeTables</td>
+        </tr>
+      </table>
+        <br />
+        <p>The cblcHeader is followed immediately by the bitmapSizeTable array(s). The numSizes in the cblcHeader indicates the number of bitmapSizeTables in the array. Each strike is defined by one bitmapSizeTable.</p>
+<h2>bitmapSizeTable</h2>
+<table class="gray">
+    <tr>
+          <th style="width: 20%;">Type</th>
+          <th style="width: 20%;">Name</th>
+          <th style="width: 60%;">Description</th>
+        </tr>
+        <tr>
+          <td>ULONG</td>
+          <td>indexSubTableArrayOffset</td>
+          <td>Offset to index subtable from beginning of CBLC.</td>
+        </tr>
+        <tr>
+          <td>ULONG</td>
+          <td>indexTablesSize</td>
+          <td>number of bytes in corresponding index subtables and array</td>
+        </tr>
+        <tr>
+          <td>ULONG</td>
+          <td>numberofIndexSubTables</td>
+          <td>an index subtable for each range or format change</td>
+        </tr>
+        <tr>
+          <td>ULONG</td>
+          <td>colorRef</td>
+          <td>not used; set to 0.</td>
+        </tr>
+        <tr>
+          <td>sbitLineMetrics</td>
+          <td>Hori</td>
+          <td>line metrics for text rendered horizontally</td>
+        </tr>
+        <tr>
+          <td>sbitLineMetrics</td>
+          <td>Vert</td>
+          <td>line metrics for text rendered vertically</td>
+        </tr>
+        <tr>
+          <td>USHORT</td>
+          <td>startGlyphIndex</td>
+          <td>lowest glyph index for this size</td>
+        </tr>
+        <tr>
+          <td>USHORT</td>
+          <td>endGlyphIndex</td>
+          <td>highest glyph index for this size</td>
+        </tr>
+         <tr>
+          <td>BYTE</td>
+          <td>ppemX</td>
+          <td>horizontal pixels per Em</td>
+        </tr>
+        <tr>
+          <td>BYTE</td>
+          <td>ppemY</td>
+          <td>vertical pixels per Em</td>
+        </tr>
+        <tr>
+          <td>BYTE</td>
+          <td>bitDepth</td>
+          <td>In addtition to already defined bitDepth values 1, 2, 4, and 8 supported by existing implementations, the value of 32 is used to identify color bitmaps with 8 bit per pixel RGBA channels</td>
+        </tr>
+        <tr>
+          <td>CHAR</td>
+          <td>Flags</td>
+          <td>vertical or horizontal (see bitmapFlags)</td>
+        </tr>
+      </table>
+        <br />
+     <p>The indexSubTableArrayOffset is the offset from the beginning of the 'CBLC' table to the indexSubTableArray. Each strike has one of these arrays to support various formats and discontiguous ranges of bitmaps. The indexTablesSize is the total number of bytes in the indexSubTableArray and the associated indexSubTables. The numberOfIndexSubTables is a count of the indexSubTables for this strike. </p>
+     <p>The rest of the CBLC table structure is identical to one already defined for <a href="eblc.htm">EBLC</a></p>
+         <hr class="separator">
+      <p class="fineprint">This page was last updated 25 April 2014.</p>
+      <p class="fineprint">&copy; 2014 Microsoft Corporation. All rights reserved. <a href="http://www.microsoft.com/Misc/cpyright.htm">Terms of use</a>.</p>
+      <p class="fineprint">Comments to the MST group: <a href="https://www.microsoft.com/typography/AboutMST.mspx">how to contact us</a>.</p>
+    </div>
+    <div class="middlerule">
+    </div>
+    <p class="menu">
+      <a href="http://www.microsoft.com/typography/default.mspx">Microsoft Typography</a> | <a href="http://www.microsoft.com/typography/creators.htm">Developer...</a> | <a href="default.htm">OpenType specification</a> | <a href="otff.htm#otttables">OpenType tables</a> | The BASE table</p>
+    <div class="bottomrule">
+    </div>
+  </body>
+</html>

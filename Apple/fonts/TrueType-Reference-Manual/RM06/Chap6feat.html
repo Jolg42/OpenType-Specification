@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="Author" content="Apple Inc." />
+<meta name="viewport" content="width=1024" />
+<link rel="shortcut icon" href="../../../favicon.ico" />
+<link rel="icon" href="../../../favicon.ico" />
+<link rel="stylesheet" href="https://www.apple.com/wss/fonts?family=Myriad+Set+Pro&amp;v=2" type="text/css" />
+<link rel="stylesheet" href="../../../assets/styles/transition-global.css" type="text/css" />
+<link rel="stylesheet" href="../../../assets/styles/transition-header.css" type="text/css" />
+<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/core/styles/adc.css" type="text/css" />
+<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/styles/topbar.css" type="text/css" />
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/lib/prototype.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/lib/scriptaculous.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/browserdetect.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/apple_core.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/search_decorator.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/adc_core.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/scripts/ac_retina.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/topbarDropdown.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	document.write('<link rel="stylesheet" type="text/css" href="https://devimages.apple.com.edgekey.net/assets/styles/script.css" media="screen">');
+</script>
+<!-- Augmented Search -->
+<!--<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/styles/augmented_search.css" type="text/css">-->
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/lib/jquery/jquery-1.11.0.min.js"></script>
+<script>jQuery.noConflict();</script>
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/lib/jquery/jquery.retinate.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/scripts/augmented_search.js"></script>-->
+<script src="../../../assets/scripts/augmented_search.js"></script>
+<script src="../../../assets/scripts/global-header.js"></script>
+
+  <meta name="Author" content="Apple Inc.">
+  <meta name="viewport" content="width=1024">
+  <link rel="stylesheet" href="../AAT.css" type="text/css">
+  <link rel="shortcut icon" href="https://devimages.apple.com.edgekey.net/favicon.ico">
+  <link rel="icon" href="https://devimages.apple.com.edgekey.net/favicon.ico">
+  <title>Feature Name Table</title>
+</head>
+<body class="white sidenav-page">
+  <nav id="globalheader" role="navigation" aria-label="Global Navigation">
+  <div id="gh-content" class="gh-content">
+    <ul class="gh-menu">
+      <li id="gh-menu-icon-toggle" class="gh-menu-icon gh-menu-icon-toggle enhance">
+        <button id="gh-svg-icons" class="gh-svg-wrapper">
+          <span class="text-replace">Menu</span>
+          <svg x="0px" y="0px" width="100%" viewBox="0 0 96 96" class="gh-svg gh-svg-top" enable-background="new 0 0 96 96"><rect width="32" height="4" x="32" y="46" class="gh-svg-rect gh-svg-rect-top"></rect></svg>
+          <svg x="0px" y="0px" width="100%" viewBox="0 0 96 96" class="gh-svg gh-svg-bottom" enable-background="new 0 0 96 96"><rect width="32" height="4" x="32" y="46" class="gh-svg-rect gh-svg-rect-bottom"></rect></svg>
+        </button>
+      </li>
+      <li id="gh-menu-icon-home" class="gh-menu-icon gh-menu-icon-home">
+        <a href="../../../index.html">
+          <span class="text-replace">Apple Developer</span>
+        </a>
+      </li>
+    </ul>
+    <div class="gh-nav">
+      <div class="gh-nav-view">
+        <ul class="gh-nav-list">
+
+          <li class="gh-tab gh-nav-developer" data-hires="true"><a class="gh-tab-link" href="../../../index.html"><span class="text-replace">Apple Developer</span></a></li>
+          <li class="gh-tab gh-nav-technologies"><a class="gh-tab-link" href="../../../platforms/index.html">Platforms</a></li>
+          <li class="gh-tab gh-nav-resources"><a class="gh-tab-link" href="../../../resources/index.html">Resources</a></li>
+          <li class="gh-tab gh-nav-programs"><a class="gh-tab-link" href="../../../programs/index.html">Program</a></li>
+          <li class="gh-tab gh-nav-support"><a class="gh-tab-link" href="../../../support/index.html">Support</a></li>
+          <li class="gh-tab gh-nav-account">
+            <a class="gh-tab-link gh-account-profile" href="https://developer.apple.com/account/">Account</a>
+          </li>
+          <li class="gh-tab gh-nav-search">
+
+            <div id="gh-search" class="gh-search" role="search">
+              <form action="/search/index.php" method="get" class="gh-search-form" id="gh-search-form" role="search">
+
+                <div class="gh-search-input-wrapper">
+                  <label for="gh-search-input" class="text-replace">Search Apple Developer</label>
+                  <input type="text" name="q" id="gh-search-input" class="augmented gh-search-input" placeholder="Search Apple Developer" autocomplete="off" autocorrect="off" autocapitalize="off">
+                </div>
+
+                <button disabled type="submit" id="gh-search-submit" class="gh-search-submit gh-search-magnify"><span class="text-replace">Search Apple Developer</span></button>
+                <button disabled type="reset" id="gh-search-reset" class="gh-search-reset"><span class="text-replace">Reset</span></button>
+
+              </form>
+            </div>
+
+            <a class="gh-search-magnify" href="../../../search/index.html"><span class="text-replace">Search Apple Developer</span></a>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+  <div id="top">
+<!-- SiteCatalyst code version: H.8. Copyright 1997-2006 Omniture, Inc. -->
+<script type="text/javascript">
+/* RSID: */
+var s_account="appleglobal,appleusdeveloper"
+</script>
+
+<script type="text/javascript" src="https://www.apple.com/metrics/scripts/s_code_h.js"></script>
+<script type="text/javascript">
+s.pageName= AC && AC.Tracking && AC.Tracking.pageName();
+s.channel="www.us.developer"
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)</script>
+<!-- End SiteCatalyst code version: H.8. -->
+</div>
+
+  <div id="content" class="content" data-hires="false">
+    <section>
+  <div id="navBar">
+    <!-- NAVBARSTART -->
+    <p class="bold"><a href="../index.html">TrueType Reference Manual</a></p>
+    <ul class="outer">
+      <li><a href="../RM01/Chap1.html">Digitizing Letterforms</a></li>
+      <li><a href="../RM02/Chap2.html">The Font Engine</a></li>
+      <li><a href="../RM03/Chap3.html">Instructing Fonts</a></li>
+      <li><a href="../RM04/Chap4.html">The Graphics State</a></li>
+      <li><a href="../RM05/Chap5.html">The Instruction Set</a></li>
+      <li><a href="Chap6.html">Font Tables</a></li>
+      <li class="c1">
+        <ul class="inner">
+          <li><a href="Chap6.html#Intro">Introduction</a></li>
+          <li><a href="Chap6.html#Types">Data Types</a></li>
+          <li><a href="Chap6.html#Overview">Overview of TrueType</a></li>
+          <li><a href="Chap6AATIntro.html">Overview of AAT</a></li>
+          <li><a href="Chap6Tables.html">Special Tables</a></li>
+          <li><a href="Chap6.html#Directory">The Font Directory</a></li>
+          <li><a href="Chap6acnt.html">The <code>'acnt'</code> table</a></li>
+          <li><a href="Chap6ankr.html">The <code>'ankr'</code> table</a></li>
+          <li><a href="Chap6avar.html">The <code>'avar'</code> table</a></li>
+          <li><a href="Chap6bdat.html">The <code>'bdat'</code> table</a></li>
+          <li><a href="Chap6bhed.html">The <code>'bhed'</code> table</a></li>
+          <li><a href="Chap6bloc.html">The <code>'bloc'</code> table</a></li>
+          <li><a href="Chap6bsln.html">The <code>'bsln'</code> table</a></li>
+          <li><a href="Chap6cmap.html">The <code>'cmap'</code> table</a></li>
+          <li><a href="Chap6cvar.html">The <code>'cvar'</code> table</a></li>
+          <li><a href="Chap6cvt.html">The <code>'cvt '</code> table</a></li>
+          <li><a href="Chap6EBSC.html">The <code>'EBSC'</code> table</a></li>
+          <li><a href="Chap6fdsc.html">The <code>'fdsc'</code> table</a></li>
+          <li>The <code>'feat'</code> table</li>
+          <li><a href="Chap6fmtx.html">The <code>'fmtx'</code> table</a></li>
+          <li><a href="Chap6fond.html">The <code>'fond'</code> table</a></li>
+          <li><a href="Chap6fpgm.html">The <code>'fpgm'</code> table</a></li>
+          <li><a href="Chap6fvar.html">The <code>'fvar'</code> table</a></li>
+          <li><a href="Chap6gasp.html">The <code>'gasp'</code> table</a></li>
+          <li><a href="Chap6gcid.html">The <code>'gcid'</code> table</a></li>
+          <li><a href="Chap6glyf.html">The <code>'glyf'</code> table</a></li>
+          <li><a href="Chap6gvar.html">The <code>'gvar'</code> table</a></li>
+          <li><a href="Chap6hdmx.html">The <code>'hdmx'</code> table</a></li>
+          <li><a href="Chap6head.html">The <code>'head'</code> table</a></li>
+          <li><a href="Chap6hhea.html">The <code>'hhea'</code> table</a></li>
+          <li><a href="Chap6hmtx.html">The <code>'hmtx'</code> table</a></li>
+          <li><a href="Chap6just.html">The <code>'just'</code> table</a></li>
+          <li><a href="Chap6kern.html">The <code>'kern'</code> table</a></li>
+          <li><a href="Chap6kerx.html">The <code>'kerx'</code> table</a></li>
+          <li><a href="Chap6lcar.html">The <code>'lcar'</code> table</a></li>
+          <li><a href="Chap6loca.html">The <code>'loca'</code> table</a></li>
+          <li><a href="Chap6ltag.html">The <code>'ltag'</code> table</a></li>
+          <li><a href="Chap6maxp.html">The <code>'maxp'</code> table</a></li>
+          <li><a href="Chap6meta.html">The <code>'meta'</code> table</a></li>
+          <li><a href="Chap6mort.html">The <code>'mort'</code> table</a></li>
+          <li><a href="Chap6morx.html">The <code>'morx'</code> table</a></li>
+          <li><a href="Chap6name.html">The <code>'name'</code> table</a></li>
+          <li><a href="Chap6opbd.html">The <code>'opbd'</code> table</a></li>
+          <li><a href="Chap6OS2.html">The <code>'OS/2'</code> table</a></li>
+          <li><a href="Chap6post.html">The <code>'post'</code> table</a></li>
+          <li><a href="Chap6prep.html">The <code>'prep'</code> table</a></li>
+          <li><a href="Chap6prop.html">The <code>'prop'</code> table</a></li>
+          <li><a href="Chap6sbix.html">The <code>'sbix'</code> table</a></li>
+          <li><a href="Chap6trak.html">The <code>'trak'</code> table</a></li>
+          <li><a href="Chap6vhea.html">The <code>'vhea'</code> table</a></li>
+          <li><a href="Chap6vmtx.html">The <code>'vmtx'</code> table</a></li>
+          <li><a href="Chap6xref.html">The <code>'xref'</code> table</a></li>
+          <li><a href="Chap6Zapf.html">The <code>'Zapf'</code> table</a></li>
+        </ul>
+      </li>
+      <li><a href="../RM07/appendixA.html">Instruction Set Summary</a></li>
+      <li><a href="../RM07/appendixB.html">Glyph Mappings</a></li>
+      <li><a href="../RM08/appendixE.html">Converting Outlines</a></li>
+	<li><a href="../RM09/AppendixF.html">Font Feature Registry</a></li>
+    </ul><!-- NAVBAREND -->
+  </div>
+  <div id="chapterContent">
+    <header><h1><a name="feat" id="feat"></a>The <code>'feat'</code> table</h1></header>
+    <h2>General table information</h2>
+    <h2>Introduction</h2>
+    <p>Thefeature name table(tag name: <code>'feat'</code>) allows you to include the font's text features, the settings for each text feature, and the name table indices for common (human-readable) names for the features and settings.</p>
+    <p>Apple has defined a standard set of text features. You may include one or more of these or create your own text features. Font features that will be supported by your font must be part of the <a href="../RM09/AppendixF.html">Font Feature Registry</a> maintained by Apple Inc. You can suggest additions to this registry by emailing:</p>
+    <address>
+      applefonts@apple.com
+    </address>
+    <h2>Feature Name Table Format</h2>
+    <p>The feature name table consists of a feature name table header, feature name array, setting name array, and feature set records. The overall structure of the feature name table is shown in the following figure:</p>
+    <p><img src="FF72.gif" width="242" height="118" align="bottom"></p>
+    <p>The format of the feature name table header is as follows:</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th>
+          <div align="left">
+            Type
+          </div>
+        </th>
+        <th>
+          <div align="left">
+            Name
+          </div>
+        </th>
+        <th align="left">
+          <div align="left">
+            Description
+          </div>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>fixed32</td>
+        <td>version</td>
+        <td class="description">Version number of the feature name table (0x00010000 for the current version).</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>featureNameCount</td>
+        <td class="description">The number of entries in the feature name array.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>(none)</td>
+        <td class="description">Reserved (set to zero).</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint32</td>
+        <td>(none)</td>
+        <td class="description">Reserved (set to zero).</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>FeatureName</td>
+        <td>names[featureNameCount]</td>
+        <td class="description">The feature name array.</td>
+      </tr>
+    </table>
+    <p>The feature name array follows the feature name header. The feature name array is sorted by feature type. A featureName record specifies the feature ID, the name table index for the feature's name, and the offset in bytes to the feature's name in the name table. The format of the feature name array is as follows:</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th>
+          <div align="left">
+            Type
+          </div>
+        </th>
+        <th>
+          <div align="left">
+            Name
+          </div>
+        </th>
+        <th align="left">
+          <div align="left">
+            Description
+          </div>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>feature</td>
+        <td class="description">Feature type.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>nSettings</td>
+        <td class="description">The number of records in the setting name array.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint32</td>
+        <td>settingTable</td>
+        <td class="description">Offset in bytes from the beginning of this table to this feature's setting name array. The actual type of record this offset refers to will depend on the exclusivity value, as described below.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>featureFlags</td>
+        <td class="description">Single-bit flags associated with the feature type.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>int16</td>
+        <td>nameIndex</td>
+        <td class="description">The name table index for the feature's name. This index has values greater than 255 and less than 32768.</td>
+      </tr>
+    </table>
+    <p>The <code>featureFlags</code> field contains single-bit flags associated with the feature type. The flags and their interpretations are shown in the following table:</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th>
+          <div align="left">
+            Mask value
+          </div>
+        </th>
+        <th align="left">
+          <div align="left">
+            Interpretation
+          </div>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>0x8000</td>
+        <td class="description">Exclusive settings. If set, the feature settings are mutually exclusive.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>0x4000</td>
+        <td class="description">If clear, then the setting with an index of 0 in the setting name array for this feature should be taken as the default for the feature (if one is required). If set, then bits 0-15 of this <code>featureFlags</code> field contain the index of the setting which is to be taken as the default.</td>
+      </tr>
+      <tr>
+        <td>0x3F00</td>
+        <td class="description">Unused, must be set to 0.</td>
+      </tr>
+      <tr>
+        <td>0x00FF</td>
+        <td class="description">If bits 30 and 31 are set, then these sixteen bits indicate the index of the setting in the setting name array for this feature which should be taken as the default.</td>
+      </tr>
+    </table>
+    <p>The setting name array follows the feature name array. The format of the setting name array is as follows:</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th>
+          <div align="left">
+            Type
+          </div>
+        </th>
+        <th>
+          <div align="left">
+            Name
+          </div>
+        </th>
+        <th align="left">
+          <div align="left">
+            Description
+          </div>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>setting</td>
+        <td class="description">The setting.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>int16</td>
+        <td>nameIndex</td>
+        <td class="description">The name table index for the setting's name. The nameIndex must be greater than 255 and less than 32768.</td>
+      </tr>
+    </table>
+    <p>For feature types that don't have exclusive settings, there will always be a pair of values. One value turns a selector on and a second value turns the selector off. The on setting must be even and the off setting must be one greater than the corresponding on setting. The off setting is therefore always odd. As a result, only the on setting should have an entry in the setting name array.</p>
+    <p>The setting name arrays must follow the feature name arrays. Each setting name array is sorted by setting. However, the setting name arrays can be arranged in any order.</p>
+    <h2>Features and Settings</h2>
+    <p>All features and settings used in your font should be registered in the <a href="../RM09/AppendixF.html">Font Feature Registry</a>. Please see that document for the current set of feature and selector constants.</p>
+    <h2>Default Feature Settings</h2>
+    <p>If a feature is marked as being “exclusive” in the <code>featureFlags</code> field (bit 31 is set), then one of its settings will correspond to the state of the glyph array when no setting is applied at all.</p>
+    <p>For example, the Letter Case feature (ID 3) has six selectors defined (upper- and lower-case, all caps, all lower-case, small caps, initial caps, initial caps with small caps). When no selector is applied to the text for the letter case feature, then the text will appear with mixed upper- and lower-case, just as it would if the explicit upper and lower-case selector were applied.</p>
+    <p>This is important because a menu or other UI element needs to be able to indicate which selector is "on" when no selector is being applied.</p>
+    <p>Which selector will be equivalent to the default behavior can usually (but not always) be deduced from the contents of the <a href="Chap6morx.html"><code>'morx'</code> table</a>. In order to deal with situations where this is not the case, bits 30 and 0-16 of the <code>featureFlags</code> field can be used to determine what selector should be treated as the default. If bit 31 is clear (and the feature is therefore marked as "non-exclusive"), then the value of these bits is ignored. If bit 31 is set, and bit 30 is clear, then the first selector for this feature—that is, the one with index 0 in its settings name array—is the default. If both bits 31 and 30 are set, then bits 0-16 contain the index in the settings name array of the default feature.</p>
+    <h2>Features and Language Codes</h2>
+    <p>The feature type 39 is used in conjunction with the <a href="Chap6ltag.html"><code>'ltag'</code> table</a> to provide for language-specific glyphs. It must always be flagged as an exclusive feature.</p>
+    <p>For feature type 39, a selector value of 0 means, as elsewhere “no change,” and will generally be used for language-independent glyphs (such as general Cyrillic). Other selector values are <em>one more than</em> an index into the <a href="Chap6ltag.html"><code>'ltag'</code> table</a> and can be used to indicate switching to a set of language-specific glyphs (such as for Serbian). See the documentation for the <a href="Chap6ltag.html"><code>'ltag'</code> table</a> for details.</p>
+    <p>Note that it is up to the font designer to decide what glyphs are language-independent and which are language-specific.</p>
+    <h2>Feature Name Table Example</h2>
+    <p>This example font has four features that are listed in the name table at offsets to be specified in this feature name table. Table 17-26 summarizes the feature name data to be included for this font.</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th align="left">
+          <div align="left">
+            Text feature
+          </div>
+        </th>
+        <th>
+          <div align="left">
+            Feature
+          </div>
+        </th>
+        <th align="left">
+          <div align="left">
+            Setting
+          </div>
+        </th>
+        <th>
+          <div align="left">
+            Setting value
+          </div>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>All typographic features</td>
+        <td>0</td>
+        <td class="description">On</td>
+        <td class="description">0</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>Ligatures</td>
+        <td>1</td>
+        <td class="description">Common on</td>
+        <td class="description">2</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>Letter case</td>
+        <td>3</td>
+        <td class="description">Upper and Lower</td>
+        <td class="description">0</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>Letter case</td>
+        <td>3</td>
+        <td class="description">Small caps</td>
+        <td class="description">3</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>Letter case</td>
+        <td>3</td>
+        <td class="description">Initial caps</td>
+        <td class="description">4</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>Number spacing</td>
+        <td class="description">6</td>
+        <td>Monospaced</td>
+        <td class="description">0</td>
+      </tr>
+      <tr>
+        <td>Number spacing</td>
+        <td>6</td>
+        <td class="description">Proportional</td>
+        <td class="description">1</td>
+      </tr>
+    </table>
+    <p>The feature name table for this example font is as follows:</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th>
+          <div align="left">
+            Offset/<br>
+            length
+          </div>
+        </th>
+        <th>
+          <div align="left">
+            Value
+          </div>
+        </th>
+        <th>
+          <div align="left">
+            Name
+          </div>
+        </th>
+        <th align="left">
+          <div align="left">
+            Comment
+          </div>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>0/4</td>
+        <td>0x00010000</td>
+        <td>version</td>
+        <td class="description">Version number of the feature name table, in fixed-point format.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>4/2</td>
+        <td>4</td>
+        <td>featureNameCount</td>
+        <td class="description">The number of features in this feature name table is 4.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>6/2</td>
+        <td>0</td>
+        <td>(reserved)</td>
+        <td class="description">Reserved, must be zero.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>8/4</td>
+        <td>0</td>
+        <td>(reserved)</td>
+        <td class="description">Reserved, must be zero.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td colspan="4" class="description">(The <code>featureName</code> array starts here. The first feature is "all typographic features," feature 0)</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>12/2</td>
+        <td>0</td>
+        <td>feature</td>
+        <td class="description">Feature code is 0.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>14/2</td>
+        <td>1</td>
+        <td>nSettings</td>
+        <td class="description">There is 1 setting for feature 0.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>16/4</td>
+        <td>60</td>
+        <td>settingTable</td>
+        <td class="description">Offset from the beginning of this table to the setting name array for feature 0 is 60 bytes.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>20/2</td>
+        <td>0</td>
+        <td>featureFlags</td>
+        <td class="description">Zero means non-exclusive settings.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>22/2</td>
+        <td>260</td>
+        <td>nameIndex</td>
+        <td class="description">The name table index for this feature's name.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td colspan="4" class="description">(The second <code>featureName</code> starts here. The second feature is "ligatures," feature 1)</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>24/2</td>
+        <td>1</td>
+        <td>feature</td>
+        <td class="description">Feature code is 1.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>26/2</td>
+        <td>1</td>
+        <td>nSettings</td>
+        <td class="description">There is 1 setting for feature 1.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>28/4</td>
+        <td>64</td>
+        <td>settingTable</td>
+        <td class="description">Offset in bytes from the beginning of this table to this feature's setting name array.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>32/2</td>
+        <td>0</td>
+        <td>featureFlags</td>
+        <td class="description">Zero means non-exclusive settings.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>34/2</td>
+        <td>256</td>
+        <td>nameIndex</td>
+        <td class="description">The name table index for this feature's name.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td colspan="4" class="description">(The third <code>featureName</code> record starts here. The third feature is "letter case," feature 3)</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>36/2</td>
+        <td>3</td>
+        <td>feature</td>
+        <td class="description">Feature code is 3.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>38/2</td>
+        <td>3</td>
+        <td>nSettings</td>
+        <td class="description">There are 3 settings for feature 3. These are 0, 3, and 4.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>40/4</td>
+        <td>68</td>
+        <td>settingTable</td>
+        <td class="description">Offset in bytes from the beginning of this table to this feature's setting name array.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>44/2</td>
+        <td>0x8000</td>
+        <td>featureFlags</td>
+        <td class="description">High bit on means this feature has mutually exclusive settings; since bits 30 is clear, the first setting (upper- and lower-case) is the default.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>46/2</td>
+        <td>262</td>
+        <td>nameIndex</td>
+        <td class="description">The name table index for this feature's name.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td colspan="4" class="description">(The fourth and last <code>featureName</code> starts here. The fourth feature is "number spacing," feature 6)</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>48/2</td>
+        <td>6</td>
+        <td>feature</td>
+        <td class="description">Feature code is 6</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>50/2</td>
+        <td>1</td>
+        <td>nSettings</td>
+        <td class="description">There is 1 setting for feature 6.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>52/4</td>
+        <td>80</td>
+        <td>settingTable</td>
+        <td class="description">Offset in bytes from the beginning of this table to this feature's setting name array.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>56/2</td>
+        <td>0xC001</td>
+        <td>featureFlags</td>
+        <td class="description">High bit on means this feature has mutually exclusive settings.Bit 30 is set, so bits 0-16 contain the index of the default setting for this feature, in this case setting index 1 (value 1, proportional numerals).</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>58/2</td>
+        <td>258</td>
+        <td>nameIndex</td>
+        <td class="description">The name table index for this feature's name.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td colspan="4" class="description">(The <code>settingName</code> array follows; the first setting array is for the "all typographic features" feature)</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>60/2</td>
+        <td>0</td>
+        <td>setting</td>
+        <td class="description">Setting value 0 (on).</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>62/2</td>
+        <td>261</td>
+        <td>nameIndex</td>
+        <td class="description">The name table index for this feature setting's name.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td colspan="4" class="description">(The second <code>settingName</code> array is for the "ligature" feature)</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>64/2</td>
+        <td>2</td>
+        <td>setting</td>
+        <td class="description">Setting value 2 (common ligs on).</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>66/2</td>
+        <td>257</td>
+        <td>nameIndex</td>
+        <td class="description">The name table index for this feature setting's name.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td colspan="4" class="description">(The third <code>settingName</code> array is for the "letter case" feature)</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>68/2</td>
+        <td>0</td>
+        <td>setting</td>
+        <td class="description">Setting value 0 (upper and lower case).</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>70/2</td>
+        <td>268</td>
+        <td>nameIndex</td>
+        <td class="description">The name table index for this feature setting's name.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>72/2</td>
+        <td>3</td>
+        <td>setting</td>
+        <td class="description">Setting value 3 (small caps).</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>74/2</td>
+        <td>264</td>
+        <td>nameIndex</td>
+        <td class="description">The name table index for this feature setting's name.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>76/2</td>
+        <td>4</td>
+        <td>setting</td>
+        <td class="description">Setting value 4 (initial caps).</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>78/2</td>
+        <td>265</td>
+        <td>nameIndex</td>
+        <td class="description">The name table index for this feature setting's name.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td colspan="4" class="description">(The fourth <code>settingName</code> array is for the "number case" feature)</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>80/2</td>
+        <td>0</td>
+        <td>setting</td>
+        <td class="description">Setting value 0 (monospaced).</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>82/2</td>
+        <td>259</td>
+        <td>nameIndex</td>
+        <td class="description">The name table index for this feature setting's name.</td>
+      </tr>
+      <tr>
+        <td>84/2</td>
+        <td>1</td>
+        <td>setting</td>
+        <td class="description">Setting value 1 (proportional).</td>
+      </tr>
+      <tr>
+        <td>86/2</td>
+        <td>260</td>
+        <td>nameIndex</td>
+        <td class="description">The name table index for this feature setting's name.</td>
+      </tr>
+    </table>
+    <hr>
+    <h2>Dependencies</h2>
+    <p>The <code>'feat'</code> table is intimately connected with the <a href="Chap6morx.html">Extended Glyph Metamorphosis (<code>'morx'</code>) Table</a>. An edit to the one will usually entail an edit to the other. Note, in paticular, that any default setting identified by bits 0-15 and 30 of the <code>featureFlags</code> field should be consistent with what can be determined from the <code>'morx'</code> table.</p>
+  </div>
+
+      </section>
+  </div><!-- /content -->
+
+  <div id="globalfooter">
+    <div id="breadory">
+      <ol id="breadcrumbs">
+        <li class="home"><a href="../../../index.html">Developer</a></li>
+        <li><a href="../../index.html">Fonts</a></li>
+        <li><a href="../index.html">TrueType™ Reference Manual</a></li>
+        <li>The TrueType Font File</li>
+      </ol>
+      <div id="directorynav" class="directorynav">
+	<div id="dn-cola" class="column">
+		<h3><a href="../../../platforms/index.html">Platforms</a></h3>
+		<ul>
+			<li><a href="../../../ios/index.html">iOS</a></li>
+			<li><a href="../../../osx/index.html">OS X</a></li>
+			<li><a href="../../../watchos/index.html">watchOS</a></li>
+			<li><a href="../../../tvos/index.html">tvOS</a></li>
+		</ul>
+		<h3><a href="../../../resources/index.html">Tools</a></h3>
+		<ul>
+			<li><a href="../../../xcode/index.html">Xcode</a></li>
+			<li><a href="../../../swift/index.html">Swift</a></li>
+		</ul>
+	</div>
+	<div id="dn-colb" class="column">
+		<h3><a href="../../../resources/index.html">Resources</a></h3>
+		<ul>
+			<li><a href="../../../library/index.html">Documentation</a></li>
+			<li><a href="../../../videos/index.html">Videos</a></li>
+			<li><a href="https://forums.developer.apple.com/">Forums</a></li>
+			<li><a href="../../../app-store/index.html">App Store</a></li>
+			<li><a href="../../../safari/index.html">Safari and Web</a></li>
+			<li><a href="../../../education/index.html">Education</a></li>
+			<li><a href="../../../enterprise/index.html">Enterprise</a></li>
+		</ul>
+	</div>
+	<div id="dn-colc" class="column">
+		<h3><a href="../../../programs/index.html">Programs</a></h3>
+		<ul>
+			<li><a href="../../../programs/index.html">Developer Program</a></li>
+			<li><a href="../../../programs/enterprise/index.html">Enterprise Program</a></li>
+			<li><a href="../../../programs/ios/university/index.html">iOS University Program</a></li>
+			<li><a href="../../../programs/mfi/index.html">MFi Program</a></li>
+		</ul>
+	</div>
+	<div id="dn-cold" class="column">
+		<h3><a href="../../../support/index.html">Support</a></h3>
+		<ul>
+			<li><a href="../../../support/development/index.html">Development</a></li>
+			<li><a href="../../../support/distribution/index.html">Distribution</a></li>
+			<li><a href="../../../support/membership/index.html">Membership</a></li>
+			<li><a href="../../../system-status/index.html">System Status</a></li>
+		</ul>
+	</div>
+	<div id="dn-cole" class="column">
+		<h3><a href="https://developer.apple.com/account/">Account</a></h3>
+		<ul>
+			<li><a href="https://developer.apple.com/account/">Developer Account</a></li>
+			<li><a href="../../../go/index-id=certificates-ids-profiles.html">Certificates, IDs &amp; Profiles</a></li>
+			<li><a href="https://itunesconnect.apple.com">iTunes Connect</a></li>			
+			<li><a href="../../../terms/index.html">License Agreements</a></li>
+		</ul>
+	</div>
+</div>
+
+    </div><!--/breadory-->
+    <ul class="gf-links piped footer-links">
+  <li><a href="../../../news/index.html" class="first">News &amp; Updates</a></li>
+  <li><a href="../../../bug-reporting/index.html">Report Bugs</a></li>
+  <li><a href="../../../contact/index.html">Contact Us</a></li>
+</ul>
+
+<div class="gf-sosumi footer-sosumi">
+  <p>Copyright © 2016 Apple Inc. All rights reserved.</p>
+    <ul class="piped">
+        <li><a href="http://www.apple.com/legal/internet-services/terms/site.html" class="first">Terms of Use</a></li>
+        <li><a href="http://www.apple.com/privacy/privacy-policy/">Privacy Policy</a></li>
+    </ul>
+</div>
+
+<!--<div id="gf-links piped footer-links">
+	<ul>
+		<li><a href="/cn/" title="Simplified Chinese">简体中文</a></li>
+		<li><a href="/jp/" title="Japanese">日本語</a></li>
+		<li><a href="/kr/" title="Korean">한국어</a></li>
+	</ul>
+</div>-->
+
+  </div><!--/globalfooter-->
+</body>
+</html>

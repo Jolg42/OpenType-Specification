@@ -1,0 +1,26 @@
+/* agreement overlay */
+.lightbox-screendoor { opacity: .6 !important; background-color: #666; }
+.lightbox-content { padding:0; }
+.lightbox-frame { width: 650px; }
+.lightbox-frame.lightbox-frame-shadow {
+	-webkit-box-shadow: 0 1px 40px rgb(50, 50, 50);
+	   -moz-box-shadow: 0 1px 40px rgb(50, 50, 50);
+	     -o-box-shadow: 0 1px 40px rgb(50, 50, 50);
+	        box-shadow: 0 1px 40px rgb(50, 50, 50);
+}
+#agreement { width: 653px; _width: 645px; height: 550px; _height: 549px; background: url("https://devimages.apple.com.edgekey.net/assets/elements/agreement/agreement_callout_bg.jpg") repeat-x 0 100%;
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #f2f2f2),color-stop(0.5, #f2f2f2),color-stop(0.75, #f2f2f2),color-stop(1, #E2E2E2));
+	background-image: -moz-linear-gradient(center top,rgb(242,242,242) 0%,rgb(242,242,242) 75%,rgb(242,242,242) 50%,rgb(226,226,226) 100%); }
+#agreement .header { height: 25px; width: 650px; background: url("https://devimages.apple.com.edgekey.net/assets/elements/agreement/agreement_header_bg.png"); }
+#agreement .padder { padding: 24px 40px 22px; overflow-y: scroll; height: 385px; margin-right: 5px; background: url("https://devimages.apple.com.edgekey.net/assets/elements/agreement/agreement_bottom_bg.png") 0 100% repeat-x; }
+#agreement h3 { font-size: 16px; margin-bottom: 3px; }
+#agreement p { font-size: 12px; margin-right: 0; }
+#agreement .agreement { position: absolute; bottom:0; width: 606px; height:80px; padding-left:33px; padding-top:13px; *padding-top:12px; padding-right:10px; border-top:1px solid #d2d2d2; background: #f2f2f2; color:#424242; z-index:10; border-radius:0 0 5px 5px; -moz-border-radius:0 0 5px 5px; }
+#agreement .agreement img { float:left; margin-right:0; }
+#agreement .agreement p { word-spacing: 0; margin-bottom: 0px; font-size: 11px; font-weight: bold; text-align: center; margin-right: 23px; }
+#agreement .agreement a#download { float: left; position: relative; left: 296px; margin-top: -6px; width: 139px; }
+#disagree-text { z-index: 100; position: absolute; left: 160px; top: 504px; _top: 499px; width: 139px; }
+
+#agreement.noCheckbox .agreement { height:50px; }
+#agreement.noCheckbox .agreement a#download { top:10px; }
+#agreement.noCheckbox .padder { height:415px; }

@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="Author" content="Apple Inc." />
+<meta name="viewport" content="width=1024" />
+<link rel="shortcut icon" href="../../../favicon.ico" />
+<link rel="icon" href="../../../favicon.ico" />
+<link rel="stylesheet" href="https://www.apple.com/wss/fonts?family=Myriad+Set+Pro&amp;v=2" type="text/css" />
+<link rel="stylesheet" href="../../../assets/styles/transition-global.css" type="text/css" />
+<link rel="stylesheet" href="../../../assets/styles/transition-header.css" type="text/css" />
+<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/core/styles/adc.css" type="text/css" />
+<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/styles/topbar.css" type="text/css" />
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/lib/prototype.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/lib/scriptaculous.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/browserdetect.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/apple_core.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/search_decorator.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/adc_core.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/scripts/ac_retina.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/topbarDropdown.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	document.write('<link rel="stylesheet" type="text/css" href="https://devimages.apple.com.edgekey.net/assets/styles/script.css" media="screen">');
+</script>
+<!-- Augmented Search -->
+<!--<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/styles/augmented_search.css" type="text/css">-->
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/lib/jquery/jquery-1.11.0.min.js"></script>
+<script>jQuery.noConflict();</script>
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/lib/jquery/jquery.retinate.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/scripts/augmented_search.js"></script>-->
+<script src="../../../assets/scripts/augmented_search.js"></script>
+<script src="../../../assets/scripts/global-header.js"></script>
+
+  <meta name="Author" content="Apple Inc.">
+  <meta name="viewport" content="width=1024">
+  <link rel="stylesheet" href="../AAT.css" type="text/css">
+  <link rel="shortcut icon" href="https://devimages.apple.com.edgekey.net/favicon.ico">
+  <link rel="icon" href="https://devimages.apple.com.edgekey.net/favicon.ico">
+  <title>About Apple Advanced Typography Fonts</title>
+</head>
+<body class="white sidenav-page">
+  <nav id="globalheader" role="navigation" aria-label="Global Navigation">
+  <div id="gh-content" class="gh-content">
+    <ul class="gh-menu">
+      <li id="gh-menu-icon-toggle" class="gh-menu-icon gh-menu-icon-toggle enhance">
+        <button id="gh-svg-icons" class="gh-svg-wrapper">
+          <span class="text-replace">Menu</span>
+          <svg x="0px" y="0px" width="100%" viewBox="0 0 96 96" class="gh-svg gh-svg-top" enable-background="new 0 0 96 96"><rect width="32" height="4" x="32" y="46" class="gh-svg-rect gh-svg-rect-top"></rect></svg>
+          <svg x="0px" y="0px" width="100%" viewBox="0 0 96 96" class="gh-svg gh-svg-bottom" enable-background="new 0 0 96 96"><rect width="32" height="4" x="32" y="46" class="gh-svg-rect gh-svg-rect-bottom"></rect></svg>
+        </button>
+      </li>
+      <li id="gh-menu-icon-home" class="gh-menu-icon gh-menu-icon-home">
+        <a href="../../../index.html">
+          <span class="text-replace">Apple Developer</span>
+        </a>
+      </li>
+    </ul>
+    <div class="gh-nav">
+      <div class="gh-nav-view">
+        <ul class="gh-nav-list">
+
+          <li class="gh-tab gh-nav-developer" data-hires="true"><a class="gh-tab-link" href="../../../index.html"><span class="text-replace">Apple Developer</span></a></li>
+          <li class="gh-tab gh-nav-technologies"><a class="gh-tab-link" href="../../../platforms/index.html">Platforms</a></li>
+          <li class="gh-tab gh-nav-resources"><a class="gh-tab-link" href="../../../resources/index.html">Resources</a></li>
+          <li class="gh-tab gh-nav-programs"><a class="gh-tab-link" href="../../../programs/index.html">Program</a></li>
+          <li class="gh-tab gh-nav-support"><a class="gh-tab-link" href="../../../support/index.html">Support</a></li>
+          <li class="gh-tab gh-nav-account">
+            <a class="gh-tab-link gh-account-profile" href="https://developer.apple.com/account/">Account</a>
+          </li>
+          <li class="gh-tab gh-nav-search">
+
+            <div id="gh-search" class="gh-search" role="search">
+              <form action="/search/index.php" method="get" class="gh-search-form" id="gh-search-form" role="search">
+
+                <div class="gh-search-input-wrapper">
+                  <label for="gh-search-input" class="text-replace">Search Apple Developer</label>
+                  <input type="text" name="q" id="gh-search-input" class="augmented gh-search-input" placeholder="Search Apple Developer" autocomplete="off" autocorrect="off" autocapitalize="off">
+                </div>
+
+                <button disabled type="submit" id="gh-search-submit" class="gh-search-submit gh-search-magnify"><span class="text-replace">Search Apple Developer</span></button>
+                <button disabled type="reset" id="gh-search-reset" class="gh-search-reset"><span class="text-replace">Reset</span></button>
+
+              </form>
+            </div>
+
+            <a class="gh-search-magnify" href="../../../search/index.html"><span class="text-replace">Search Apple Developer</span></a>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+  <div id="top">
+<!-- SiteCatalyst code version: H.8. Copyright 1997-2006 Omniture, Inc. -->
+<script type="text/javascript">
+/* RSID: */
+var s_account="appleglobal,appleusdeveloper"
+</script>
+
+<script type="text/javascript" src="https://www.apple.com/metrics/scripts/s_code_h.js"></script>
+<script type="text/javascript">
+s.pageName= AC && AC.Tracking && AC.Tracking.pageName();
+s.channel="www.us.developer"
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)</script>
+<!-- End SiteCatalyst code version: H.8. -->
+</div>
+
+  <div id="content" class="content" data-hires="false">
+    <section>
+  <div id="navBar">
+    <!-- NAVBARSTART -->
+    <p class="bold"><a href="../index.html">TrueType Reference Manual</a></p>
+    <ul class="outer">
+      <li><a href="../RM01/Chap1.html">Digitizing Letterforms</a></li>
+      <li><a href="../RM02/Chap2.html">The Font Engine</a></li>
+      <li><a href="../RM03/Chap3.html">Instructing Fonts</a></li>
+      <li><a href="../RM04/Chap4.html">The Graphics State</a></li>
+      <li><a href="../RM05/Chap5.html">The Instruction Set</a></li>
+      <li><a href="Chap6.html">Font Tables</a></li>
+      <li class="c1">
+        <ul class="inner">
+          <li><a href="Chap6.html#Intro">Introduction</a></li>
+          <li><a href="Chap6.html#Types">Data Types</a></li>
+          <li><a href="Chap6.html#Overview">Overview of TrueType</a></li>
+          <li>Overview of AAT</li>
+          <li><a href="Chap6Tables.html">Special Tables</a></li>
+          <li><a href="Chap6.html#Directory">The Font Directory</a></li>
+          <li><a href="Chap6acnt.html">The <code>'acnt'</code> table</a></li>
+          <li><a href="Chap6ankr.html">The <code>'ankr'</code> table</a></li>
+          <li><a href="Chap6avar.html">The <code>'avar'</code> table</a></li>
+          <li><a href="Chap6bdat.html">The <code>'bdat'</code> table</a></li>
+          <li><a href="Chap6bhed.html">The <code>'bhed'</code> table</a></li>
+          <li><a href="Chap6bloc.html">The <code>'bloc'</code> table</a></li>
+          <li><a href="Chap6bsln.html">The <code>'bsln'</code> table</a></li>
+          <li><a href="Chap6cmap.html">The <code>'cmap'</code> table</a></li>
+          <li><a href="Chap6cvar.html">The <code>'cvar'</code> table</a></li>
+          <li><a href="Chap6cvt.html">The <code>'cvt '</code> table</a></li>
+          <li><a href="Chap6EBSC.html">The <code>'EBSC'</code> table</a></li>
+          <li><a href="Chap6fdsc.html">The <code>'fdsc'</code> table</a></li>
+          <li><a href="Chap6feat.html">The <code>'feat'</code> table</a></li>
+          <li><a href="Chap6fmtx.html">The <code>'fmtx'</code> table</a></li>
+          <li><a href="Chap6fond.html">The <code>'fond'</code> table</a></li>
+          <li><a href="Chap6fpgm.html">The <code>'fpgm'</code> table</a></li>
+          <li><a href="Chap6fvar.html">The <code>'fvar'</code> table</a></li>
+          <li><a href="Chap6gasp.html">The <code>'gasp'</code> table</a></li>
+          <li><a href="Chap6gcid.html">The <code>'gcid'</code> table</a></li>
+          <li><a href="Chap6glyf.html">The <code>'glyf'</code> table</a></li>
+          <li><a href="Chap6gvar.html">The <code>'gvar'</code> table</a></li>
+          <li><a href="Chap6hdmx.html">The <code>'hdmx'</code> table</a></li>
+          <li><a href="Chap6head.html">The <code>'head'</code> table</a></li>
+          <li><a href="Chap6hhea.html">The <code>'hhea'</code> table</a></li>
+          <li><a href="Chap6hmtx.html">The <code>'hmtx'</code> table</a></li>
+          <li><a href="Chap6just.html">The <code>'just'</code> table</a></li>
+          <li><a href="Chap6kern.html">The <code>'kern'</code> table</a></li>
+          <li><a href="Chap6kerx.html">The <code>'kerx'</code> table</a></li>
+          <li><a href="Chap6lcar.html">The <code>'lcar'</code> table</a></li>
+          <li><a href="Chap6loca.html">The <code>'loca'</code> table</a></li>
+          <li><a href="Chap6ltag.html">The <code>'ltag'</code> table</a></li>
+          <li><a href="Chap6maxp.html">The <code>'maxp'</code> table</a></li>
+          <li><a href="Chap6meta.html">The <code>'meta'</code> table</a></li>
+          <li><a href="Chap6mort.html">The <code>'mort'</code> table</a></li>
+          <li><a href="Chap6morx.html">The <code>'morx'</code> table</a></li>
+          <li><a href="Chap6name.html">The <code>'name'</code> table</a></li>
+          <li><a href="Chap6opbd.html">The <code>'opbd'</code> table</a></li>
+          <li><a href="Chap6OS2.html">The <code>'OS/2'</code> table</a></li>
+          <li><a href="Chap6post.html">The <code>'post'</code> table</a></li>
+          <li><a href="Chap6prep.html">The <code>'prep'</code> table</a></li>
+          <li><a href="Chap6prop.html">The <code>'prop'</code> table</a></li>
+          <li><a href="Chap6sbix.html">The <code>'sbix'</code> table</a></li>
+          <li><a href="Chap6trak.html">The <code>'trak'</code> table</a></li>
+          <li><a href="Chap6vhea.html">The <code>'vhea'</code> table</a></li>
+          <li><a href="Chap6vmtx.html">The <code>'vmtx'</code> table</a></li>
+          <li><a href="Chap6xref.html">The <code>'xref'</code> table</a></li>
+          <li><a href="Chap6Zapf.html">The <code>'Zapf'</code> table</a></li>
+        </ul>
+      </li>
+      <li><a href="../RM07/appendixA.html">Instruction Set Summary</a></li>
+      <li><a href="../RM07/appendixB.html">Glyph Mappings</a></li>
+      <li><a href="../RM08/appendixE.html">Converting Outlines</a></li>
+	<li><a href="../RM09/AppendixF.html">Font Feature Registry</a></li>
+    </ul><!-- NAVBAREND -->
+  </div>
+  <div id="chapterContent">
+    <header><h1><a name="Start" id="Start"></a>About Apple Advanced Typography Fonts</h1></header>
+    <h2>Introduction</h2>
+    <p>Apple's text imaging technology, Apple Advanced Typography (AAT), enables applications to provide users with fonts having special typographical effects, such as cursive connection, ornateness, and complex ligatures. Many of these features are required for scripts other than Roman, such as Arabic or Devanagari.</p>
+    <p>Apple currently provides support for drawing using AAT fonts via Apple Type Services for Unicode™ Imaging (ATSUI).</p>
+    <p>This document is intended for font developers who are creating fonts to be used with AAT. This document explains the font tables you include in the <code>'sfnt'</code> resource in order for your font to offer special features and effects.</p>
+    <p>The complete <code>'sfnt'</code> resource is not described here. The other tables of the resource are described in the <a href="../index.html">TrueType font specification</a>. You may also need <cite>The Unicode Standard: Worldwide Character Encoding</cite>, version 2.0, which is available from Addison-Wesley. See the <a href="http://www.unicode.org">Unicode Consortium's web site</a> for more information on Unicode.</p>
+    <p>Font vendors can create tables that implement different sets of features. Applications can pick and choose your font to determine the features available. The font tables store sets of strings identifying the features that can be presented to the user.</p>
+    <p>Apple has defined a set of text features in the <a href="../RM09/AppendixF.html">AAT Font Feature Registry</a>. Additional features will be added by Apple and by font developers. You may include one or more of these features or create your own text features. Font features that will be supported by your font must be a part of the Registry; to suggest additions to the Registry, contact:</p>
+    <address>
+      <a href="mailto:applefonts@apple.com">applefonts@apple.com</a>
+    </address>
+    <h2>Characters, Glyphs, and Fonts</h2>
+    <p>Fundamental to understanding text processing is the distinction between characters and glyphs. A <dfn>character</dfn>is an abstract object having a single and unique semantic or phonetic meaning. A <dfn>glyph</dfn>represents the visual, graphical appearance of a character. For example, glyphs in different fonts, such as Times Roman or Zapf Chancery, may be used to represent the character "A". Here's an example of a kanji glyph which corresponds to characters in several different languages:</p>
+    <p><img src="FF01.gif" width="89" height="80" naturalsizeflag="3"></p>
+    <p>A <dfn>font</dfn>is a collection of glyphs with some element of design consistency, such as the use of serifs or consistent stroke thickness. Fonts usually incorporate other information, such as which glyphs represent ligatures or contextual forms.</p>
+    <p>Many glyphs do not have a one-to-one relationship to characters: one or more glyphs may make up a single character (for example, an "i" could be rendered as a dot accent over a dotless "i"), and a single glyph can represent two or more characters ("f" and "i" could be represented by the "fi" ligature). Context may also determine which glyph is used to represent a character. For example, in a cursive font four glyphs may represent the same character: a separate glyph for the character at the beginning, middle, and end of a word; and a glyph for the character in isolation.</p>
+    <p>Within a font, each glyph is associated with a 16-bit code called its <dfn>glyph index</dfn>. Different fonts may have different glyph indexes for a given glyph.</p>
+    <p>A <dfn>complex font</dfn>contains information associating some glyph indices with certain combinations of characters and rules. For example, information in a font may associate the glyph ID 0x1A01 (which represents the "fi" ligature) with the combination of the two characters 0x0066 (lowercase "f") followed by 0x0069 (lowercase "i"). Any font lacking such associative information is called a <dfn>simple font</dfn>.</p>
+    <p>Technically, a simple font is a font that only contains the standard required tables (<code>'cmap'</code>, <code>'glyf'</code>, <code>'head'</code>, <code>'hhea'</code>, <code>'hmtx'</code>, <code>'loca'</code>, <code>'maxp'</code>, <code>'post'</code>) and possibly the non-layout related optional tables (<code>'cvt '</code>, <code>'fpgm'</code>, <code>'hdmx'</code>, <code>'prep'</code>). All TrueType fonts released with Macintosh System 7 are simple fonts.</p>
+    <p>The glyphs in a complex font can be divided into two classes: <dfn>rendering forms</dfn>, for which combination rules appear; and <dfn>character glyphs</dfn>, which have a one-to-one correspondence with character codes. Rendering forms include ligatures, applied marks, and contextual forms; these are discussed further in later sections. In general, only character glyphs contain entries in the font's character-to-glyph mapping table. Other tables in the font are used to generate rendering forms.</p>
+    <h3>Character Properties</h3>
+    <p>A character code has an associated set of <dfn>character properties</dfn>. Some of these have to do with simple character identity: the blank is a whitespace character, whereas an 'A' is not. Others have to do with character direction: Hebrew letters have a right- to-left orientation, whereas roman letters have a left-to-right orientation.</p>
+    <h3>String and String Ordering</h3>
+    <p>A <dfn>string</dfn>is an ordered array of bytes which make up character codes. Some character codes comprise one byte, and others comprise two bytes. The order implicit in this array may be different from the order in which the corresponding glyphs would be displayed (called the <dfn>visual order</dfn>). A string is an example of <dfn>backing store</dfn>, which is an ordered repository of character codes. The <dfn>backing store order</dfn>designates the order in which character codes are stored in, for instance, a document -- that is, before any rendering actions have been performed. Sometimes the term <dfn>phonetic order</dfn>is used as a synonym for backing store order.</p>
+    <p>Remember that this ordering within a string reflects raw, simple character codes in phonetic order. In particular, Arabic strings are not presented to an AAT text processor in already reversed order. For instance, in a string of mixed Arabic and English like the one shown in the following figure, the characters appear left to right in the order in which they should appear on the page for the native speaker of that language. Fortunately, all of this bidirectional ordering is handled by ATSUI using the Unicode bidirectional algorithm, so ATSUI clients need not worry themselves about doing bidirectional reordering.</p>
+    <p><img src="FF03.gif" width="557" height="182" naturalsizeflag="3"></p>
+    <h3>Diacritical Marks</h3>
+    <p><dfn>Diacritical marks</dfn>are any mark added to a glyph or a combination of glyphs in a particular script that creates a new phonetic value that is different from the unmarked glyph or glyphs. Diacritical marks include accents, umlauts, tildes, cedillas, or dots that signal the presence of vowels (such as in Hebrew or Arabic).</p>
+    <p>Languages such as Arabic need this feature because there are two forms of the written language: with vowels, for children's books; and without vowels, because adults have learned to read the language without the vowels.</p>
+    <h3>Ligatures and Contextual Forms</h3>
+    <p>A <dfn>ligature</dfn>is a single glyph that represents a combination of two or more individual glyphs. An example is the "fi" ligature in English.</p>
+    <p>An <dfn>accented form</dfn>is a special subclass of ligature: a glyph that combines a letter with a diacritical mark. For example, the glyphs "ä" and "ò" are accented forms. Multiple accent marks themselves may be present in a font as <dfn>accent ligatures</dfn>, as shown in this figure:</p>
+    <p><img src="FF02.gif" width="435" height="235" naturalsizeflag="3"></p>
+    <p>A <dfn>contextual form</dfn>is an alternate form of a glyph whose use depends on the glyph's placement in a word. In Arabic, for example, characters have different contextual forms according to where they appear (at the beginning, the middle, or the end of a word). The following figure shows the forms of the Arabic letter "ha" that appear alone, at the start, middle, or end in a word. The same character code is used for each case. The information that you provide in the font tables allows the correct glyph to be chosen.</p>
+    <p><img src="FF05.gif" width="202" height="149" naturalsizeflag="3"></p>
+    <p>Ligatures are two or more glyphs combined to form a single new glyph, whereas contextual forms are variations on the shape of one glyph. The following figure shows how two fonts might form the "fi" ligature, the first using ligatures, the second using contextual forms. The first "fi" ligature is a single glyph that replaces the regular "f" and "i" glyphs. At the bottom of the following figure, the "i" glyph is changed into a contextual form before it is placed with the "f" glyph to form the "fi" ligature. In this second case, the "fi" ligature is not one stand-alone glyph, but two glyphs, after the "i" has been changed. If the "i" glyph had not followed the "f" glyph, the form would not have been changed.</p>
+    <p><img src="FF04.gif" width="222" height="115" naturalsizeflag="3"></p>
+    <p>To include ligatures and contextual forms in your font, you should include a <a href="Chap6mort.html">glyph metamorphosis table</a>.</p>
+    <h3>Noncontextual Forms</h3>
+    <p>A <dfn>noncontextual form</dfn>is an alternate form of a glyph that can be used anywhere in text, regardless of its context. An example of this might be two or more styles of the number set 0 through 9. You might include one set of numbers which proportional spacing and one set with fixed-width spacing for users who want to create columns of numbers with your font. In the following figure, there are three forms of the number set (although not all from the same font): <dfn>lining numbers</dfn>, which are numbers with proportional spacing that are about the same height and do not extend below the baseline; <dfn>traditional numbers</dfn>, which are numbers with proportional spacing that vary in height and position in relation to the baseline; and <dfn>fixed-width numbers</dfn>, which are appropriate for tabulations.</p>
+    <p><img src="FF24.gif" width="212" height="99" naturalsizeflag="3"></p>
+    <h3>Case Substitution</h3>
+    <p>You can also use case substitution, which substitutes uppercase or lowercase noncontextual forms of the glyphs, even though that is not what the user originally chose. This is different from contextual forms because the positions of the glyphs and their meaning do not change. In the following figure, the same set of letters is shown four different ways: the first, with no case substitution; the second, with all the letters translated to their uppercase forms; the third, with all letters translated to their lowercase forms; and the fourth, with all lowercase letters translated to small caps.</p>
+    <p><img src="FF23.gif" width="222" height="134" naturalsizeflag="3"></p>
+    <p>To include noncontextual forms in your font, you need to include a <a href="Chap6mort.html">glyph metamorphosis table</a>.</p>
+    <h3>Indic Rearrangement</h3>
+    <p>In some Indic-derived languages, the order of certain glyphs is changed even though the script is always read left to right. For example, in Devanagari script a short "i" is printed before the consonant that it logically follows: thus the word "Hindi," when printed in Devanagari is rearranged to "iHndi". In many Southeast Asian languages, vowel markers can appear on all four sides of the consonant that they modify.</p>
+    <p>Glyphs in the string appear in phonetic or semantic order. In the previous example, the backing store would contain character codes in the order "hindi," not in the order "ihndi."</p>
+    <h3>Swash Variants</h3>
+    <p>A <dfn>swash</dfn>is a variation, often ornamental, of an existing glyph. Both variations of the glyph are present in the font at the same time. The feature name and glyph metamorphosis AAT font tables identify swash variants of existing glyphs. Users can select swash forms via an application at any time.</p>
+    <h4>Fractions</h4>
+    <p>By using the contextual form and swash capabilities, you can provide for the automatic construction of fractions. Because a fraction slash character code is defined in the Macintosh set (code 0xDA), you can set up a font table that, for example, recognizes strings of the type "digits, fraction slash, digits." You can then make several choices, depending on the glyph repertoire -- for example, a "one-half" glyph may be predrawn and in the font. If there is no predrawn form, then you can substitute smaller superscript and subscript digit glyphs, or you can set up a cross-stream kerning table to shift digits relative to the baseline automatically. An example is given in the following figure:</p>
+    <p><img src="FF06.gif" width="219" height="101" naturalsizeflag="3"></p>
+    <h4>Vertical Substitution of Forms</h4>
+    <p><dfn>Vertical substitution</dfn>is a swash variation in which a glyph is replaced by an alternate form in a vertical line. (Note that this substitute glyph is not merely the first glyph rotated but is a stand-alone glyph.) For vertical substitution to work, the vertically rotated forms must exist in the font and must be indicated as such in the font's tables; otherwise, no glyphs are substituted. Default behavior is to perform any such substitutions permitted by the font. The following figure shows how this works:</p>
+    <p><img src="FF07.gif" width="322" height="207" naturalsizeflag="3"></p>
+    <h4>Small Caps</h4>
+    <p>The small caps style is not simply the use of capital letters in a slightly smaller size. Small caps can be specified as a special form of swash variant. If your AAT font contains true small caps glyphs, they can be used in text runs.</p>
+    <h2>Text Style Matching</h2>
+    <p>Font families and font styles were once distinct, orthogonal objects. The problem was that this only allowed for a fixed set of styles, such as bold, italic, underline, outline, shadow, condense, and extend.</p>
+    <p>In contrast, AAT font families can have several different width variants and uniquely named styles such as Antique, Book, Titling, and Caption. Applications can allow users to select runs of text with mixed families and styles and choose a new font family without affecting the styles of the run.</p>
+    <p><a name="Matching" id="Matching"></a>AAT uses the font tables to interpret the font style information, choose the closest matching font, and algorithmically style the text to fulfill the style request. The next table shows some examples of the text style matching function. The examples show the result of selecting a new font family for an existing old style run to create a "new style run."</p>
+    <p>&nbsp;</p>
+    <pre>
+<u>Existing style run</u>             <u>New font family</u>        <u>New style run</u>
+Times Bold                     Courier                Courier Bold
+Times Bold                     Chicago                Chicago+textFace(bold)
+Times Bold                     Skia                   Skia+variant(bold)
+Skia Italic+variant(bold)      Times                  Times Bold Italic
+Skia Italic+variant(bold)      Courier                Courier Bold+textface(italic)
+Skia Italic+variant(bold)      Chicago                Chicago+textface(bold, italic)
+</pre>To create fonts that support text style matching, you can include a <a href="Chap6fdsc.html">font descriptors table</a>.
+    <h2>Baselines</h2>
+    <p>The <dfn>baseline</dfn>of a glyph is a line that defines the position of the glyph with respect to other glyphs. The importance of the baseline is illustrated when different size glyphs are used; in this case the baseline represents a stable place from which glyphs rise and descend proportionally. The following figure shows the common baseline for Roman glyphs:</p>
+    <p><img src="FF08.gif" width="382" height="80" naturalsizeflag="3"></p>
+    <p>Scripts other than Roman may display related but different behavior: for example, the glyphs in a line of text may descend from the baseline or may be centered on a baseline.</p>
+    <p>The following baselines are currently supported:</p>
+    <dl>
+      <dd>
+        <dl>
+          <dt>Roman baseline.</dt>
+          <dd>This defines the alignment used in most Roman-script languages, where most of the glyph is above the baseline, sometimes with portions below it. The baseline is near the bottom of the entire row of glyphs.</dd>
+          <dt>Ideographic centered baseline.</dt>
+          <dd>This defines the behavior of Chinese, Japanese, and Korean ideographic scripts, which are centered on the line height.</dd>
+          <dt>Ideographic low baseline.</dt>
+          <dd>This also defines behavior used in Chinese, Japanese, and Korean, but with the glyphs lowered slightly so that ideographs adjacent to Roman characters descend slightly below the Roman baseline.</dd>
+          <dt>Hanging baseline.</dt>
+          <dd>This defines the alignment used in Devanagari and derived scripts, where most of the glyph is below the baseline.</dd>
+          <dt>Math baseline.</dt>
+          <dd>This defines the alignment used for setting mathematics, where operators such as the minus sign are centered vertically at half the x- height in a font.</dd>
+        </dl>
+      </dd>
+    </dl>
+    <p>When you design your font, you can add definitions of its default baseline and the relative positions of other types of baselines within the font's em- square. The following figure shows a glyph from a font whose primary baseline is the Roman baseline. However, two other baselines are also marked: the hanging baseline and the ideographic centered baseline. If you used this font with text whose dominant baseline was, for instance, the hanging baseline, this font would align itself with the dominant run of text by aligning its hanging baseline with that of the dominant run.</p>
+    <p><img src="FF09.gif" width="324" height="115" naturalsizeflag="3"></p>
+    <p>There can be dramatic differences in the general relationships of glyphs with reference to the baseline. The following figure shows three scripts and the relation of different sizes of glyphs to the dominant baseline in each script:</p>
+    <p><img src="FF10.gif" width="542" height="198" naturalsizeflag="3"></p>
+    <p>The baselines within a script in the preceding figure match correctly, but the relationship between the Roman, Indic, and Chinese scripts is incorrect. When the user or the application selects a dominant run of text, all fonts reference that run's baselines for their relative positions, no matter what their type, size, or default baseline. In the following figure, the dominant run is the smaller Roman run of text:</p>
+    <p><img src="FF11.gif" width="541" height="188" naturalsizeflag="3"></p>
+    <p>All languages can take advantage of these relative baseline adjustment capabilities. For instance, you could create so-called drop capitals in Roman fonts by specifying a hanging baseline for the run of text, shown in the following figure. Here, the dominant baseline for this text is the Roman baseline for 18-point type. The hanging baseline of the drop capitals aligns with the hanging baseline measurement of the regular text.</p>
+    <p><img src="FF12.gif" width="199" height="51" naturalsizeflag="3"></p>
+    <p>To provide baseline control of your font, you must include a <a href="Chap6bsln.html">baseline table</a>.</p>
+    <h2>Optical Bounds</h2>
+    <p>Unless you make certain adjustments, glyphs can seem to line up incorrectly at the margins. Two factors contribute to this effect. First, the advance widths of glyphs contain a certain amount of extra whitespace to account for the normal interglyph spacing. This extra whitespace is called the <dfn>sidebearings</dfn>, split into the left sidebearing and the right sidebearing. This produces certain anomalies, since the actual left sidebearing distance varies with the size of the glyph. For example, if different sizes of the same glyph are flush left, they do not appear to line up correctly, as shown in this figure:</p>
+    <p><img src="FF14.gif" width="113" height="182" naturalsizeflag="3"></p>
+    <p>The second problem is that because of certain optical effects, curved lines do not appear to line up properly with straight lines. To remedy this, you can design curved glyphs such as "C" or "S" so that they extend slightly below the baseline, thereby appearing to line up with straight glyphs such as "H", like this:</p>
+    <p><img src="FF15.gif" width="326" height="85" naturalsizeflag="3"></p>
+    <p>This same optical effect occurs at the extreme edges of lines. In both halves of the following figure, the uppercase "O" glyph is aligned with the uppercase "H" glyphs, in the sense that the leftmost edge of the "H" is even with the left-most edge of the "O." However, without the vertical line to convince the viewer the letters do not appear to align correctly.</p>
+    <p><img src="FF16.gif" width="408" height="161" naturalsizeflag="3"></p>
+    <p>To compensate for these effects, you can use optical alignment information contained in the font tables. You use optical leading and trailing edges when determining the leading and trailing edges of a line of text, whether at tab stops or line starts. These values are obtained from the font as a pair of offsets from the edges of the glyph.</p>
+    <p>To provide optical bounds control for your font, you can include an <a href="Chap6opbd.html">optical bounds table</a>.</p>
+    <h2>Kerning</h2>
+    <p><dfn>Kerning</dfn>is the fine adjustment to the normal spacing that occurs between two or more glyphs. Kerning does not refer to glyphs that overhang their bounds or to glyphs that extend beyond their leading or trailing edges defined by the character origin and advance width.</p>
+    <p>You can use information in the font tables to determine how much to increase or decrease the space between two glyphs. This amount can depend on more than just the two adjacent glyphs: it can also depend on preceding or following glyphs. For example, you can kern the first two pairs of glyphs in the following figure, but if you applied the same distances in the third pair, you would have the quotation mark colliding with the top stem of the "F." Your kerning data can compensate for this and provide a different kerning amount in cases like this.</p>
+    <p><img src="FF19.gif" width="153" height="175" naturalsizeflag="3"></p>
+    <p>The font tables allow n glyphs to map into n-1 kerning values (that is, interglyph positional shifts). When kerning, the offset between the glyphs is effectively split. The following figure shows where the caret would appear between the two glyphs.</p>
+    <p><img src="FF20.gif" width="222" height="79" naturalsizeflag="3"></p>
+    <p>There is another kind of kerning, called <dfn>cross-stream kerning</dfn>, that allows the automatic movement of glyphs perpendicular to the line orientation of the text. For horizontal text, this means vertically. In the following figure, a hyphen between two uppercase glyphs is raised so that it falls near the midpoint of the height of those glyphs.</p>
+    <p><img src="FF21.gif" width="249" height="52" naturalsizeflag="3"></p>
+    <p>Cross-stream kerning is required for scripts such as Taliq (used in Urdu). It can also assist in the creation of fractions, as described in the section on swash variants. Another Roman font example of cross-stream kerning is shown here: <img src="FF48.gif" width="534" height="107" naturalsizeflag="3"></p>
+    <p>To provide kerning in your font, you need to include a <a href="Chap6kern.html">kerning table</a>.</p>
+    <h2>Tracking</h2>
+    <p>You can increase or decrease glyph widths by applying a tracking value to a glyph. This value, called the <dfn>track number</dfn>, specifies whether interglyph spacing is to be decreased or increased. The actual positional shifts are the result of two- dimensional interpolation based on the track number, the text size in points, and the <dfn>threshold values</dfn>in the font's tracking table. These threshold values are used to permit <dfn>nonlinear tracking</dfn>amounts: for example, a manufacturer can use four different sets of values for text in these point-size ranges: 8 to 12, 12 to 15, 15 to 36, and over 36.</p>
+    <p>A track number is a value that specifies the relative tightness or looseness of the interglyph spacing. Positive track numbers result in an increase in the advance width of all glyphs in the font. Negative track numbers result in a decrease in the advance width of all glyphs. Increasing the advance width of glyphs increases the interglyph spacing to provide a relatively loose sequence of glyphs. Decreasing the advance width of glyphs decreases the interglyph spacing to provide a relatively tight sequence of glyphs. Normal tracking, tight tracking, and loose tracking are shown in the following figure:</p>
+    <p><img src="FF18.gif" width="281" height="145" naturalsizeflag="3"></p>
+    <p>To provide tracking for your font, you must include a <a href="Chap6trak.html">tracking table</a>.</p>
+    <h2>Justification</h2>
+    <p><dfn>Justification</dfn>is the process of typographically stretching or shrinking a line of text to fit within a given horizontal width or vertical height. You can assign portions of line gap to different classes of glyphs, at different priority levels, and you can include facilities for handling complex kashida-like justification. A <dfn>kashida</dfn>is an extension bar that connects the glyphs of a word that is used by Arabic and cursive Roman.</p>
+    <p>The following figure shows how the use of kashidas can affect the appearance of a line:</p>
+    <p><img src="FF13.gif" width="551" height="192" naturalsizeflag="3"></p>
+    <p>Unlike other models of justification, which are based on a proportional assignment of extra whitespace in a fixed ratio of interword to interglyph (for instance, 9:1 as in the Apple LaserWriter printer), AAT fonts permit the assignment of whitespace at a given priority level until either all the gap is filled or else a maximum specified amount is reached. For this reason, interglyph spacing need not occur as often as it does in proportional models (or even occur at all). If the gap can be filled by interword spacing, it will be, and without the need for interglyph spacing. If you want to use proportional assignment in your font, however, Line Layout permits it.</p>
+    <p>The AAT justification model allows you to achieve a variety of effects with your font. Here are some possibilities.</p>
+    <dl>
+      <dd>
+        <dl>
+          <dt>Regular justification</dt>
+          <dd>Usually, typographers don't want to add interglyph spacing unless absolutely necessary. This justification model supports this scheme fully by allowing you to assign different priorities to whitespace glyphs and interglyph glyphs. The whitespace glyphs have the higher priority and are always processed first. Interglyph spacing is considered only if the given gap cannot be filled by whitespace. You can override this by setting a flag in the whitespace glyphs so that whitespace is added only when justifying a line that uses your font.</dd>
+          <dt>Simple one-level kashidas</dt>
+          <dd>You can use a kashida connecting bar instead of whitespace to justify lines of connected script, such as occur in Arabic. Usually kashidas are the only kind of justification used in a line of connected script. You can specify as glyphs of kashida justification priority for lines of such glyphs, with whatever factors are needed and the unlimited bits set.</dd>
+          <dt>Multiple-level kashidas</dt>
+          <dd>Sometimes you may wish to provide for different classes of kashidas on a single line: one set that occupies all the gap up to a certain threshold and another set that takes up the remainder.</dd>
+        </dl>
+      </dd>
+    </dl>
+    <p>The justification table stores justification information for the glyphs of your font and for the font as a whole. You can store both horizontal and vertical adjustments or adjustments for one direction.</p>
+    <p>The following figure demonstrates how AAT allows you to adjust the priorities of the inter-character and inter-word spacings to achieve justification control. The first line of text has the default settings for interglyph and interword spacing. The second line of text has all justification effects assigned to interword spacing. The last line of text has all justification effects assigned to interglyph spacing.</p>
+    <p><img src="FF34.gif" width="587" height="110" naturalsizeflag="3"></p>
+    <p>To provide justification in your font, you can include a <a href="Chap6just.html">justification table</a>.</p>
+    <h2>Vertical Metrics</h2>
+    <p>Vertical metrics for vertical fonts are analogous to horizontal metrics for horizontal fonts. Each glyph must be placed in a horizontal position relative to a common centerline and a vertical placement relative to the previous glyph.</p>
+    <p>In order to provide vertical control over each glyph, two control points are included in the glyph's outline. One point is included at its vertical origin and one point is included at its vertical advance. This allows instructions to fine-tune each glyph's vertical device metrics.</p>
+    <p>Vertical metrics are provided for vertical fonts by including a <a href="Chap6vhea.html">vertical header table</a> (tag name: <code>'vhea'</code>) and a vertical metrics table (tag name: <code>'vmtx'</code>) in the font. The vertical header table contains line spacing metrics analogous to the horizontal header table (tag name: <code>'hhea'</code>). The <a href="Chap6vmtx.html">vertical metrics table</a> contains vertical sidebearings and advances analogous to the horizontal metrics table (tag name: <code>'hmtx'</code>).</p>
+    <h2>Font Variations</h2>
+    <p>Typefaces are defined by specifying a font's family and style. Conventional styles are usually limited to a small set of orthogonal attributes. Typical styles include bold, italic, bold italic, underline, shadow, condensed, and extended. Currently, most font families contain one to four styles. In contrast, AAT allows you to design font families with any number of named styles. Typical style names are regular, bold, demi, black, antique, italic, thin, and ultra condensed. AAT style variations are a mechanism through which you can build high quality styles into the typeface itself. This reduces the dependence on algorithmic styling in the graphics system.</p>
+    <p>Applications use AAT style variations by passing the font a list of style coordinates that describe the degree of stylizing for each of the font's possible style variations. A style coordinate is a pair of numbers. The tag identifies the style axis and the coordinate specifies how much of that variation to apply. Typical axes are color, width, contrast, and optical size. The following figure shows a style axis for bold. The minimum boldness is on the left and the maximum boldness is on the right. The center glyph is the default level of boldness for this font.</p>
+    <p><img src="FF22.gif" width="407" height="78" naturalsizeflag="3"></p>
+    <p>A given style axis in a font has a minimum and maximum coordinate value. The coordinate value simply identifies the point between the minimum and maximum values on the style coordinate. The different styles produced by interpolation along any single style axis is called an <dfn>instance</dfn>. The range of instances that can be created along any axis is termed the <dfn>dynamic range</dfn>.</p>
+    <p>Style coordinates can be combined to allow style variations with two, three, four, or any number of style axes. For instance, you may choose to create a font with a bold and condense axes. The user of the font can then specify any simultaneous combination of boldness and condenseness. An example of a two-dimensional array of capital "G" glyphs for a font with style variations for bold and condense is shown in the next figure. The condense style increases from top to bottom and the bold style increases from left to right. Any of the glyph styles shown or any glyph styles between those shown can be selected by specifying the desired coordinates on the two style axes. The default glyph is shown in gray.</p>
+    <p><img src="FF25.gif" width="385" height="349" naturalsizeflag="3"></p>
+    <p>To create fonts with font variations, you can include a font variation table, a glyph variations table, and a control value table (CVT) variations table. This is only required for instructed fonts. The <a href="Chap6fvar.html">font variation table</a> provides global information concerning the style axes included and the coordinates for named locations in the style space. The <a href="Chap6gvar.html">glyph variations table</a> provides all of the data for stylizing a glyph's outlines and metrics. The <a href="Chap6cvar.html">control value table (CVT) variations table</a> provides the data for stylizing the control value table to match the styling done to outlines.</p>
+    <h2>Bitmaps</h2>
+    <p>AAT supports both outline and bitmap descriptions of glyphs. Outline glyph descriptions are useful since they can be scaled and transformed. However, bitmap glyph descriptions are useful for very small sizes of glyphs that are difficult to produce using instructed outlines.</p>
+    <p>To create an AAT bitmap font, you need to include a bitmap location table and a bitmap data table.</p>
+    <p>The <a href="Chap6bloc.html">bitmap location table</a> (tag name: <code>'bloc'</code>) provides information about the availability of bitmaps at requested point sizes in the font. If a bitmap is included in the font, it also tells where the data is located in the bitmap data table. The <a href="Chap6bdat.html">bitmap data table</a> (tag name: <code>'bmap'</code>) is a collection of bitmaps for all of the bitmapped glyphs in the font.</p>
+    <h2>Accent Attachment</h2>
+    <p>The <a href="Chap6acnt.html">accent attachment table</a> (tag name: <code>'acnt'</code>) provides a useful method of combining component glyphs into compound glyphs. Each component can be independently transformed and instructed prior to combination. The resulting combinations can then be transformed and instructed.</p>
+    <h2>Features and Settings</h2>
+    <p>The <a href="Chap6feat.html">feature name table</a> (tag name: <code>'feat'</code>) allows you to include the font's text features, the settings for each text feature, and the name table indices for common (human-readable) names for the features and settings.</p>
+    <p>Here are the currently defined feature types:</p>
+    <ul>
+      <li>all typographic features</li>
+      <li>ligatures</li>
+      <li>cursive connection</li>
+      <li>letter case</li>
+      <li>vertical substitution</li>
+      <li>rearrangement</li>
+      <li>number spacing</li>
+      <li>smart swashes</li>
+      <li>diacritics</li>
+      <li>vertical position</li>
+      <li>fractions</li>
+      <li>overlapping characters</li>
+      <li>typographic extras</li>
+      <li>mathematical extras</li>
+      <li>ornament sets</li>
+      <li>character alternatives</li>
+      <li>design complexity</li>
+      <li>style options</li>
+      <li>character shape</li>
+      <li>number case</li>
+      <li>character spacing</li>
+    </ul>
+    <h2>Changes from TrueType 1.0</h2>
+    <p>The TrueType 2.0 scaler released as part of AAT has added functionality to support the increased functionality of AAT. This change in functionality has forced some very minor changes in the interpretation of certain fields in TrueType fonts and the addition of bit flags to some fields. This section describes these changes.</p>
+    <p>It must be emphasized that old format TrueType fonts will always render correctly on new TrueType scalers, and new format fonts will always render correctly on old scalers. However, optimum functionality occurs when new format fonts are run using the new TrueType 2.0 scaler.</p>
+    <h3><code>'glyf'</code> Table</h3>
+    <p>There are two changes connected with the <code>'glyf'</code> table, dealing with overlapping contours and compound glyph components under rotation.</p>
+    <h4>Overlapping contours</h4>
+    <p>One addition to the <code>'glyf'</code> table is the designation of glyphs with overlapping contours. This is not needed for rendering by TrueType scalers, but is needed when a TrueType font must be converted to a Type 1 Font and rendered on a printer under some Level 2 PostScript implementations.</p>
+    <p>Since the introduction of the original <code>'glyf'</code> format, Level 2 Postscript has been introduced. Some printers that incorporate Level 2 Postscript use an even-odd fill algorithm for Type 1 fonts rather than the non-zero winding number fill that was used in previous PostScript implementations. Therefore, to accurately translate a TrueType font to a Type 1 font for use on the Level 2 printers, glyphs with overlapping contours must be simplified, so it is necessary to know which glyphs have overlapping contours. Glyphs that are not properly flagged will be rendered on these printers with white space holes where the contours overlap.</p>
+    <p>For simple glyphs, you should set bit 6 of the first Outline Flag byte to 1 if the unhinted glyph outline has overlapping contours or if variation controls or hinting controls can ever cause any of the contours to overlap. Otherwise this bit should be set to 0.</p>
+    <p>For compound glyphs, you should set bit 10 of the flags word in the first component to 1 if any of the component glyphs can ever have overlapping contours or if the contours of any component can ever overlap the contours of another component in the compound glyph. Otherwise set this bit to 0. Note that bit 4 of this flag word is designated for flagging overlapping contours in some old documentation. This bit is obsolete and is ignored by all scalers.</p>
+    <h4>Compound glyphs with rotated components</h4>
+    <p>If a compound glyph comprises components in which a 2 by 2 transform is applied to the component and the translation of the component is supplied by offset numbers rather than by anchor points, then the offset numbers are multiplied by the scale factor of the transform before translating the component. Furthermore in the TrueType 1.0 scaler, if the transform was a rotation of 45 degrees, the scale factor was multiplied by 2. In the TrueType 2.0 scaler, this special case of 45 degrees no longer causes the scale factor to be multiplied by 2. In other words, components that are rotated 45 degrees and that use numerical offsets for translation will be rendered differently on TrueType 1.0 scalers than on TrueType 2.0 scalers. We recommend that anchor points be used to specify the translation of components that are rotated 45 degrees. Such components will render the same on all scalers.</p>
+    <h3>The <code>'sfnt'</code> directory</h3>
+    <p>The very first entry in an <code>'sfnt'</code> is the font directory. This directory specifies the number of tables in the font, and other font information. The first 4 bytes of the directory were originally designated as the version number of the <code>'sfnt'</code>. So current TrueType fonts all have version 1.0 (0x00010000) in these four bytes.</p>
+    <p>In AAT, the <code>'sfnt'</code> format has been extended for use by other scalers in addition to TrueType, (for example, PostScript). Therefore, the first four bytes of the <code>'sfnt'</code> are now interpreted to designate the scaler that should be used to render the font. So, TrueType fonts should now have <code>'true'</code> (0x74727564) at the beginning of the <code>'sfnt'</code>.</p>
+    <h3>The <code>'head'</code> Table</h3>
+    <p>Four new bits have been defined for the flags field in the <code>'head'</code> table for use by the AAT line layout code to optimize performance. One additional bit has been defined for use in vertical fonts, and one bit has been added for the Microsoft implementation of the TrueType scaler. These new bits are described in the following table:</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th>Mask</th>
+        <th>Name</th>
+        <th align="left">Meaning</th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>0x0010</td>
+        <td>instructionsChangeAdvanceWidths</td>
+        <td class="description">Used by the Microsoft implementation of the TrueType scaler.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>0x0020</td>
+        <td>xPositionSpecifiesBaseline</td>
+        <td class="description">This bit should be set in fonts that are intended to be laid out vertically and in which the glyphs have been drawn such that an x coordinate of 0 corresponds to the desired vertical baseline.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>0x0040</td>
+        <td>reserved</td>
+        <td class="description">This bit must be set to zero.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>0x0080</td>
+        <td>fontRequiresLayout</td>
+        <td class="description">This bit should be set if rendering from this font is incorrect without the intervention of layout. An example would be an Arabic font, where linguistically incorrect output will result if layout is not involved in the rendering process.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>0x0100</td>
+        <td>fontHasNormalLayout</td>
+        <td class="description">This bit should be set if the font contains metamorphosis table effects that happen by default.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>0x0200</td>
+        <td>fontCanReorder</td>
+        <td class="description">This bit should be set if the font contains any strong right-to-left glyphs (for a discussion of strong directional properties, see the <code>'prop'</code> table chapter).</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>0x0400</td>
+        <td>fontCanRearrange</td>
+        <td class="description">This bit should be set if the font contains an entry in the metamorphosis table for Indic-style rearrangement.</td>
+      </tr>
+    </table>
+    <h3>The <code>'post'</code> Table</h3>
+    <p>Composite fonts on Japanese, Chinese or Korean printers only work with character codes. AAT printer drivers only know about glyph index values. The scaler uses the newly defined <code>'post'</code> table version 4 to reencode a font that maps to a composite font on a printer. This encoding consists of naming the glyphs by using their character codes. The driver has PostScript code that knows how to take this ASCII string, strip the leading 'a', and convert the rest to hex. The resulting hex is the character code of the glyph. In this manner, the composite fonts on the printer are used.</p>
+    <p>Any font that maps to a composite font on the printer needs to include a format 4 <code>'post'</code> table. The structure of format 4 <code>'post'</code> table is as follows: the <code>postTableHeader</code> is followed by an array of <code>uint16</code> values. An entry for every glyph is required. The index into the array equals the glyph index. The data in the array is the character code that maps to the specified glyph index. The name will be synthesized from this character code by prepending a lower-case ASCII 'a'. If a glyph has no corresponding character in the composite font, then that glyph's entry in this table should be 0xFFFF.</p>
+  </div>
+
+      </section>
+  </div><!-- /content -->
+
+  <div id="globalfooter">
+    <div id="breadory">
+      <ol id="breadcrumbs">
+        <li class="home"><a href="../../../index.html">Developer</a></li>
+        <li><a href="../../index.html">Fonts</a></li>
+        <li><a href="../index.html">TrueType™ Reference Manual</a></li>
+        <li>The TrueType Font File</li>
+      </ol>
+      <div id="directorynav" class="directorynav">
+	<div id="dn-cola" class="column">
+		<h3><a href="../../../platforms/index.html">Platforms</a></h3>
+		<ul>
+			<li><a href="../../../ios/index.html">iOS</a></li>
+			<li><a href="../../../osx/index.html">OS X</a></li>
+			<li><a href="../../../watchos/index.html">watchOS</a></li>
+			<li><a href="../../../tvos/index.html">tvOS</a></li>
+		</ul>
+		<h3><a href="../../../resources/index.html">Tools</a></h3>
+		<ul>
+			<li><a href="../../../xcode/index.html">Xcode</a></li>
+			<li><a href="../../../swift/index.html">Swift</a></li>
+		</ul>
+	</div>
+	<div id="dn-colb" class="column">
+		<h3><a href="../../../resources/index.html">Resources</a></h3>
+		<ul>
+			<li><a href="../../../library/index.html">Documentation</a></li>
+			<li><a href="../../../videos/index.html">Videos</a></li>
+			<li><a href="https://forums.developer.apple.com/">Forums</a></li>
+			<li><a href="../../../app-store/index.html">App Store</a></li>
+			<li><a href="../../../safari/index.html">Safari and Web</a></li>
+			<li><a href="../../../education/index.html">Education</a></li>
+			<li><a href="../../../enterprise/index.html">Enterprise</a></li>
+		</ul>
+	</div>
+	<div id="dn-colc" class="column">
+		<h3><a href="../../../programs/index.html">Programs</a></h3>
+		<ul>
+			<li><a href="../../../programs/index.html">Developer Program</a></li>
+			<li><a href="../../../programs/enterprise/index.html">Enterprise Program</a></li>
+			<li><a href="../../../programs/ios/university/index.html">iOS University Program</a></li>
+			<li><a href="../../../programs/mfi/index.html">MFi Program</a></li>
+		</ul>
+	</div>
+	<div id="dn-cold" class="column">
+		<h3><a href="../../../support/index.html">Support</a></h3>
+		<ul>
+			<li><a href="../../../support/development/index.html">Development</a></li>
+			<li><a href="../../../support/distribution/index.html">Distribution</a></li>
+			<li><a href="../../../support/membership/index.html">Membership</a></li>
+			<li><a href="../../../system-status/index.html">System Status</a></li>
+		</ul>
+	</div>
+	<div id="dn-cole" class="column">
+		<h3><a href="https://developer.apple.com/account/">Account</a></h3>
+		<ul>
+			<li><a href="https://developer.apple.com/account/">Developer Account</a></li>
+			<li><a href="../../../go/index-id=certificates-ids-profiles.html">Certificates, IDs &amp; Profiles</a></li>
+			<li><a href="https://itunesconnect.apple.com">iTunes Connect</a></li>			
+			<li><a href="../../../terms/index.html">License Agreements</a></li>
+		</ul>
+	</div>
+</div>
+
+    </div><!--/breadory-->
+    <ul class="gf-links piped footer-links">
+  <li><a href="../../../news/index.html" class="first">News &amp; Updates</a></li>
+  <li><a href="../../../bug-reporting/index.html">Report Bugs</a></li>
+  <li><a href="../../../contact/index.html">Contact Us</a></li>
+</ul>
+
+<div class="gf-sosumi footer-sosumi">
+  <p>Copyright © 2016 Apple Inc. All rights reserved.</p>
+    <ul class="piped">
+        <li><a href="http://www.apple.com/legal/internet-services/terms/site.html" class="first">Terms of Use</a></li>
+        <li><a href="http://www.apple.com/privacy/privacy-policy/">Privacy Policy</a></li>
+    </ul>
+</div>
+
+<!--<div id="gf-links piped footer-links">
+	<ul>
+		<li><a href="/cn/" title="Simplified Chinese">简体中文</a></li>
+		<li><a href="/jp/" title="Japanese">日本語</a></li>
+		<li><a href="/kr/" title="Korean">한국어</a></li>
+	</ul>
+</div>-->
+
+  </div><!--/globalfooter-->
+</body>
+</html>

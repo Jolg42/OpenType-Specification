@@ -1,0 +1,189 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+  <head>
+    <title>CBDT - Color Bitmap Data Table</title>
+    <link rel="STYLESHEET" href="otspec.css" type="text/css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <div class="toprule">
+    </div>
+    <p class="menu">
+      <a href="http://www.microsoft.com/typography/default.mspx">Microsoft Typography</a> | <a href="http://www.microsoft.com/typography/creators.htm">Developer...</a> | <a href="default.htm">OpenType specification</a> | <a href="otff.htm#otttables">OpenType tables</a> | The BASE table</p>
+    <div class="middlerule">
+    </div>
+    <div class="contents">
+     <h1>CBDT - Color Bitmap Data Table</h1>
+     <h2>Table structure</h2>
+      <p>Two tables are used to embed color bitmaps in OFF fonts. They are the 'CBLC' table for embedded bitmap locators and the 'CBDT' table for embedded color bitmap data. The formats of these two tables are backward compatible with EBLC and EBDT used for embedded monochrome and grayscale bitmaps</p>
+      <p>The 'EBDT' table begins with a header containing simply the table version number</p>
+<table class="gray">
+    <tr>
+          <th style="width: 20%;">Type</th>
+          <th style="width: 20%;">Name</th>
+          <th style="width: 60%;">Description</th>
+        </tr>
+        <tr>
+          <td>FIXED</td>
+          <td>version</td>
+          <td>Initially defined as 0x00030000</td>
+        </tr>
+      </table>
+        <p>The rest of the 'CBDT' table is a collection of bitmap data. The data can be presented in three possible formats, indicated by information in the 'CBLC' table. Some of the formats contain metric information plus image data, and other formats contain only the image data. Long word alignment is not required for these sub tables; byte alignment is sufficient.  </p>
+
+      <h2>Uncompressed Color Bitmaps</h2>
+        <p>The value ‘32’ of the bitDepth field of bitmapSizeTable struct defined in the CBLC table, to identify color bitmaps with 8-bit blue/green/red/alpha channels per pixel, encoded in that order for each pixel (referred to as BGRA from hereon). The color channels represent pre-multiplied color and are encode colors in the sRGB colorspace. For example, the color “full-green with half translucency” is encoded as \x00\x80\x00\x80, and not \x00\xFF\x00\x80.</p>
+        <p>All imageFormat values defined in the EBDT / EBLC tables are valid for use with the CBDT / CBLC tables.</p>
+      <h2>Compressed Color Bitmaps</h2>
+        <p>Images for each individual glyph are stored as straight PNG data. Only the following chunks are allowed in such PNG data: IHDR, PLTE, tRNS, sRGB, IDAT, and IEND. If other chunks are present, the behavior is undefined. The image data shall be in the sRGB colorspace, regardless of color information that may be present in other chunks in the PNG data. The individual images must have the same size as expected by the table in the bitmap metrics.</p>
+      <h2>Glyph Metrics</h2>
+        <p>There are also two different formats for glyph metrics: big glyph metrics and small glyph metrics. Big glyph metrics define metrics information for both horizontal and vertical layouts. This is important in fonts (such as Kanji) where both types of layout may be used. Small glyph metrics define metrics information for one layout direction only. Which direction applies, horizontal or vertical, is determined by the 'flags' field in the bitmapSizeTable field of the 'CBLC' table. </p>    
+      <h2>bigGlyphMetrics</h2>  
+        <table class="gray">
+        <tr>
+          <th style="width: 20%;">Type</th>
+          <th style="width: 20%;">Name</th>
+        </tr>
+        <tr>
+          <td>BYTE</td>
+          <td>height</td>
+        </tr>
+        <tr>
+          <td>BYTE</td>
+          <td>width</td>
+        </tr>
+        <tr>
+          <td>CHAR</td>
+          <td>horiBearingX</td>
+        </tr>
+        <tr>
+          <td>CHAR</td>
+          <td>horiBearingY</td>
+        </tr>
+        <tr>
+          <td>BYTE</td>
+          <td>horiAdvance</td>
+        </tr>
+        <tr>
+          <td>CHAR</td>
+          <td>vertBearingX</td>
+        </tr>
+        <tr>
+          <td>CHAR</td>
+          <td>vertBearingY</td>
+        </tr>
+        <tr>
+          <td>BYTE</td>
+          <td>vertAdvance</td>
+        </tr>
+      </table>
+
+<h2>smallGlyphMetrics</h2>  
+        <table class="gray">
+        <tr>
+          <th style="width: 20%;">Type</th>
+          <th style="width: 20%;">Name</th>
+        </tr>
+        <tr>
+          <td>BYTE</td>
+          <td>height</td>
+        </tr>
+        <tr>
+          <td>BYTE</td>
+          <td>width</td>
+        </tr>
+        <tr>
+          <td>CHAR</td>
+          <td>BearingX</td>
+        </tr>
+        <tr>
+          <td>CHAR</td>
+          <td>BearingY</td>
+        </tr>
+        <tr>
+          <td>BYTE</td>
+          <td>Advance</td>
+        </tr>
+        </table>
+     <h2>Glyph Bitmap Data Formats</h2>
+      <p>In addition to nine different formats already defined for glyph bitmap data in the EBDT table, there are three new formats described below</p>
+  <h2>Format 17: small metrics, PNG image data</h2>
+             <table class="gray">
+        <tr>
+          <th style="width: 20%;">Type</th>
+          <th style="width: 20%;">Name</th>
+          <th style="width: 60%;">Description</th>
+        </tr>
+        <tr>
+          <td>smallGlyphMetrics</td>
+          <td>glyphMetrics</td>
+          <td>Metrics information for the glyph</td>
+        </tr>
+        <tr>
+          <td>ULONG</td>
+          <td>dataLen</td>
+          <td>Length of data in bytes</td>
+        </tr>
+        <tr>
+          <td>Variable</td>
+          <td>data</td>
+          <td>Raw PNG data</td>
+        </tr>
+      </table> 
+           
+<h2>Format 18: big metrics, PNG image data</h2>   
+        <table class="gray">
+        <tr>
+          <th style="width: 20%;">Type</th>
+          <th style="width: 20%;">Name</th>
+          <th style="width: 60%;">Description</th>
+        </tr>
+                <tr>
+          <td>bigGlyphMetrics</td>
+          <td>glyphMetrics</td>
+          <td>Metrics information for the glyph</td>
+        </tr>
+        <tr>
+          <td>ULONG</td>
+          <td>dataLen</td>
+          <td>Length of data in bytes</td>
+        </tr>
+        <tr>
+          <td>Variable</td>
+          <td>data</td>
+          <td>Raw PNG data</td>
+        </tr>
+      </table>
+    <h2>Format 19: metrics in CBLC, PNG image data</h2>   
+        <table class="gray">
+        <tr>
+          <th style="width: 20%;">Type</th>
+          <th style="width: 20%;">Name</th>
+          <th style="width: 60%;">Description</th>
+        </tr>
+        <tr>
+          <td>ULONG</td>
+          <td>dataLen</td>
+          <td>Length of data in bytes</td>
+        </tr>
+        <tr>
+          <td>Variable</td>
+          <td>data</td>
+          <td>Raw PNG data</td>
+        </tr>
+      </table>
+      <h2>Scaling behavior</h2>
+        <p>Applications using these glyphs may need to scale them to fit the raster size available for display. How this scaling takes place is application dependent. It is recommended that where possible the application downscale using the closest sized bitmap that is larger than the desired end raster size.</p>
+      <hr class="separator">
+      <p class="fineprint">This page was last updated 25 April 2014.</p>
+      <p class="fineprint">&copy; 2014 Microsoft Corporation. All rights reserved. <a href="http://www.microsoft.com/Misc/cpyright.htm">Terms of use</a>.</p>
+      <p class="fineprint">Comments to the MST group: <a href="https://www.microsoft.com/typography/AboutMST.mspx">how to contact us</a>.</p>
+    </div>
+    <div class="middlerule">
+    </div>
+    <p class="menu">
+      <a href="http://www.microsoft.com/typography/default.mspx">Microsoft Typography</a> | <a href="http://www.microsoft.com/typography/creators.htm">Developer...</a> | <a href="default.htm">OpenType specification</a> | <a href="otff.htm#otttables">OpenType tables</a> | The BASE table</p>
+    <div class="bottomrule">
+    </div>
+  </body>
+</html>

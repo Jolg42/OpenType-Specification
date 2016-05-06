@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="Author" content="Apple Inc." />
+<meta name="viewport" content="width=1024" />
+<link rel="shortcut icon" href="../../../favicon.ico" />
+<link rel="icon" href="../../../favicon.ico" />
+<link rel="stylesheet" href="https://www.apple.com/wss/fonts?family=Myriad+Set+Pro&amp;v=2" type="text/css" />
+<link rel="stylesheet" href="../../../assets/styles/transition-global.css" type="text/css" />
+<link rel="stylesheet" href="../../../assets/styles/transition-header.css" type="text/css" />
+<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/core/styles/adc.css" type="text/css" />
+<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/styles/topbar.css" type="text/css" />
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/lib/prototype.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/lib/scriptaculous.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/browserdetect.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/apple_core.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/search_decorator.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/adc_core.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/scripts/ac_retina.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/topbarDropdown.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	document.write('<link rel="stylesheet" type="text/css" href="https://devimages.apple.com.edgekey.net/assets/styles/script.css" media="screen">');
+</script>
+<!-- Augmented Search -->
+<!--<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/styles/augmented_search.css" type="text/css">-->
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/lib/jquery/jquery-1.11.0.min.js"></script>
+<script>jQuery.noConflict();</script>
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/lib/jquery/jquery.retinate.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/scripts/augmented_search.js"></script>-->
+<script src="../../../assets/scripts/augmented_search.js"></script>
+<script src="../../../assets/scripts/global-header.js"></script>
+
+  <meta name="Author" content="Apple Inc.">
+  <meta name="viewport" content="width=1024">
+  <link rel="stylesheet" href="../AAT.css" type="text/css">
+  <link rel="shortcut icon" href="https://devimages.apple.com.edgekey.net/favicon.ico">
+  <link rel="icon" href="https://devimages.apple.com.edgekey.net/favicon.ico">
+  <title>Baseline Table</title>
+</head>
+<body class="white sidenav-page">
+  <nav id="globalheader" role="navigation" aria-label="Global Navigation">
+  <div id="gh-content" class="gh-content">
+    <ul class="gh-menu">
+      <li id="gh-menu-icon-toggle" class="gh-menu-icon gh-menu-icon-toggle enhance">
+        <button id="gh-svg-icons" class="gh-svg-wrapper">
+          <span class="text-replace">Menu</span>
+          <svg x="0px" y="0px" width="100%" viewBox="0 0 96 96" class="gh-svg gh-svg-top" enable-background="new 0 0 96 96"><rect width="32" height="4" x="32" y="46" class="gh-svg-rect gh-svg-rect-top"></rect></svg>
+          <svg x="0px" y="0px" width="100%" viewBox="0 0 96 96" class="gh-svg gh-svg-bottom" enable-background="new 0 0 96 96"><rect width="32" height="4" x="32" y="46" class="gh-svg-rect gh-svg-rect-bottom"></rect></svg>
+        </button>
+      </li>
+      <li id="gh-menu-icon-home" class="gh-menu-icon gh-menu-icon-home">
+        <a href="../../../index.html">
+          <span class="text-replace">Apple Developer</span>
+        </a>
+      </li>
+    </ul>
+    <div class="gh-nav">
+      <div class="gh-nav-view">
+        <ul class="gh-nav-list">
+
+          <li class="gh-tab gh-nav-developer" data-hires="true"><a class="gh-tab-link" href="../../../index.html"><span class="text-replace">Apple Developer</span></a></li>
+          <li class="gh-tab gh-nav-technologies"><a class="gh-tab-link" href="../../../platforms/index.html">Platforms</a></li>
+          <li class="gh-tab gh-nav-resources"><a class="gh-tab-link" href="../../../resources/index.html">Resources</a></li>
+          <li class="gh-tab gh-nav-programs"><a class="gh-tab-link" href="../../../programs/index.html">Program</a></li>
+          <li class="gh-tab gh-nav-support"><a class="gh-tab-link" href="../../../support/index.html">Support</a></li>
+          <li class="gh-tab gh-nav-account">
+            <a class="gh-tab-link gh-account-profile" href="https://developer.apple.com/account/">Account</a>
+          </li>
+          <li class="gh-tab gh-nav-search">
+
+            <div id="gh-search" class="gh-search" role="search">
+              <form action="/search/index.php" method="get" class="gh-search-form" id="gh-search-form" role="search">
+
+                <div class="gh-search-input-wrapper">
+                  <label for="gh-search-input" class="text-replace">Search Apple Developer</label>
+                  <input type="text" name="q" id="gh-search-input" class="augmented gh-search-input" placeholder="Search Apple Developer" autocomplete="off" autocorrect="off" autocapitalize="off">
+                </div>
+
+                <button disabled type="submit" id="gh-search-submit" class="gh-search-submit gh-search-magnify"><span class="text-replace">Search Apple Developer</span></button>
+                <button disabled type="reset" id="gh-search-reset" class="gh-search-reset"><span class="text-replace">Reset</span></button>
+
+              </form>
+            </div>
+
+            <a class="gh-search-magnify" href="../../../search/index.html"><span class="text-replace">Search Apple Developer</span></a>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+  <div id="top">
+<!-- SiteCatalyst code version: H.8. Copyright 1997-2006 Omniture, Inc. -->
+<script type="text/javascript">
+/* RSID: */
+var s_account="appleglobal,appleusdeveloper"
+</script>
+
+<script type="text/javascript" src="https://www.apple.com/metrics/scripts/s_code_h.js"></script>
+<script type="text/javascript">
+s.pageName= AC && AC.Tracking && AC.Tracking.pageName();
+s.channel="www.us.developer"
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)</script>
+<!-- End SiteCatalyst code version: H.8. -->
+</div>
+
+  <div id="content" class="content" data-hires="false">
+    <section>
+  <div id="navBar">
+    <!-- NAVBARSTART -->
+    <p class="bold"><a href="../index.html">TrueType Reference Manual</a></p>
+    <ul class="outer">
+      <li><a href="../RM01/Chap1.html">Digitizing Letterforms</a></li>
+      <li><a href="../RM02/Chap2.html">The Font Engine</a></li>
+      <li><a href="../RM03/Chap3.html">Instructing Fonts</a></li>
+      <li><a href="../RM04/Chap4.html">The Graphics State</a></li>
+      <li><a href="../RM05/Chap5.html">The Instruction Set</a></li>
+      <li><a href="Chap6.html">Font Tables</a></li>
+      <li class="c1">
+        <ul class="inner">
+          <li><a href="Chap6.html#Intro">Introduction</a></li>
+          <li><a href="Chap6.html#Types">Data Types</a></li>
+          <li><a href="Chap6.html#Overview">Overview of TrueType</a></li>
+          <li><a href="Chap6AATIntro.html">Overview of AAT</a></li>
+          <li><a href="Chap6Tables.html">Special Tables</a></li>
+          <li><a href="Chap6.html#Directory">The Font Directory</a></li>
+          <li><a href="Chap6acnt.html">The <code>'acnt'</code> table</a></li>
+          <li><a href="Chap6ankr.html">The <code>'ankr'</code> table</a></li>
+          <li><a href="Chap6avar.html">The <code>'avar'</code> table</a></li>
+          <li><a href="Chap6bdat.html">The <code>'bdat'</code> table</a></li>
+          <li><a href="Chap6bhed.html">The <code>'bhed'</code> table</a></li>
+          <li><a href="Chap6bloc.html">The <code>'bloc'</code> table</a></li>
+          <li>The <code>'bsln'</code> table</li>
+          <li><a href="Chap6cmap.html">The <code>'cmap'</code> table</a></li>
+          <li><a href="Chap6cvar.html">The <code>'cvar'</code> table</a></li>
+          <li><a href="Chap6cvt.html">The <code>'cvt '</code> table</a></li>
+          <li><a href="Chap6EBSC.html">The <code>'EBSC'</code> table</a></li>
+          <li><a href="Chap6fdsc.html">The <code>'fdsc'</code> table</a></li>
+          <li><a href="Chap6feat.html">The <code>'feat'</code> table</a></li>
+          <li><a href="Chap6fmtx.html">The <code>'fmtx'</code> table</a></li>
+          <li><a href="Chap6fond.html">The <code>'fond'</code> table</a></li>
+          <li><a href="Chap6fpgm.html">The <code>'fpgm'</code> table</a></li>
+          <li><a href="Chap6fvar.html">The <code>'fvar'</code> table</a></li>
+          <li><a href="Chap6gasp.html">The <code>'gasp'</code> table</a></li>
+          <li><a href="Chap6gcid.html">The <code>'gcid'</code> table</a></li>
+          <li><a href="Chap6glyf.html">The <code>'glyf'</code> table</a></li>
+          <li><a href="Chap6gvar.html">The <code>'gvar'</code> table</a></li>
+          <li><a href="Chap6hdmx.html">The <code>'hdmx'</code> table</a></li>
+          <li><a href="Chap6head.html">The <code>'head'</code> table</a></li>
+          <li><a href="Chap6hhea.html">The <code>'hhea'</code> table</a></li>
+          <li><a href="Chap6hmtx.html">The <code>'hmtx'</code> table</a></li>
+          <li><a href="Chap6just.html">The <code>'just'</code> table</a></li>
+          <li><a href="Chap6kern.html">The <code>'kern'</code> table</a></li>
+          <li><a href="Chap6kerx.html">The <code>'kerx'</code> table</a></li>
+          <li><a href="Chap6lcar.html">The <code>'lcar'</code> table</a></li>
+          <li><a href="Chap6loca.html">The <code>'loca'</code> table</a></li>
+          <li><a href="Chap6ltag.html">The <code>'ltag'</code> table</a></li>
+          <li><a href="Chap6maxp.html">The <code>'maxp'</code> table</a></li>
+          <li><a href="Chap6meta.html">The <code>'meta'</code> table</a></li>
+          <li><a href="Chap6mort.html">The <code>'mort'</code> table</a></li>
+          <li><a href="Chap6morx.html">The <code>'morx'</code> table</a></li>
+          <li><a href="Chap6name.html">The <code>'name'</code> table</a></li>
+          <li><a href="Chap6opbd.html">The <code>'opbd'</code> table</a></li>
+          <li><a href="Chap6OS2.html">The <code>'OS/2'</code> table</a></li>
+          <li><a href="Chap6post.html">The <code>'post'</code> table</a></li>
+          <li><a href="Chap6prep.html">The <code>'prep'</code> table</a></li>
+          <li><a href="Chap6prop.html">The <code>'prop'</code> table</a></li>
+          <li><a href="Chap6sbix.html">The <code>'sbix'</code> table</a></li>
+          <li><a href="Chap6trak.html">The <code>'trak'</code> table</a></li>
+          <li><a href="Chap6vhea.html">The <code>'vhea'</code> table</a></li>
+          <li><a href="Chap6vmtx.html">The <code>'vmtx'</code> table</a></li>
+          <li><a href="Chap6xref.html">The <code>'xref'</code> table</a></li>
+          <li><a href="Chap6Zapf.html">The <code>'Zapf'</code> table</a></li>
+        </ul>
+      </li>
+      <li><a href="../RM07/appendixA.html">Instruction Set Summary</a></li>
+      <li><a href="../RM07/appendixB.html">Glyph Mappings</a></li>
+      <li><a href="../RM08/appendixE.html">Converting Outlines</a></li>
+	<li><a href="../RM09/AppendixF.html">Font Feature Registry</a></li>
+    </ul><!-- NAVBAREND -->
+  </div>
+  <div id="chapterContent">
+    <header><h1><a name="bsln" id="bsln"></a>The <code>'bsln'</code> table</h1></header>
+    <h2>Introduction</h2>
+    <p>The <dfn>baseline table</dfn> (tag name: <code>'bsln'</code>) allows you to design your AAT fonts to accommodate the automatic alignment of text to different baselines. All fonts have a natural baseline defined by the position of each glyph in the font's em-square. AAT fonts may include additional information which identifies other baseline positions to which glyphs may be aligned.</p>
+    <p>Baseline positions can be included representing a Roman baseline, an ideographic baseline (either centered or lowered), a hanging baseline, and a mathematical baseline.</p>
+    <p>Two kinds of information are included in a baseline table: baseline positions, which allow the alignment of runs of text; and baseline values, which for each glyph in the font identify which baseline position is its default baseline position. In a font containing glyphs from multiple languages, such as English and Japanese, the baseline values can identify which glyphs belong to which default baseline positions -- the English glyphs to the Roman default baseline, and the Japanese glyphs to the ideographic centered default baseline.</p>
+    <p>There are 32 pre-defined baseline values. Baselines with values of 0 through 4 should be provided for all horizontal AAT fonts. The remaining values are reserved for future use:</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th align="middle">
+          <p align="left">Value</p>
+        </th>
+        <th align="left">
+          <p align="left">Description</p>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>0</td>
+        <td class="description">Roman baseline. This defines the alignment used in most Latin script languages, where most of the glyph is above the baseline, with portions (such as descenders) possibly below it. The baseline appears near the bottom of the entire line.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>1</td>
+        <td class="description">Ideographic centered baseline. This defines the behavior used by Chinese, Japanese and Korean ideographic scripts, which center themselves halfway through the line height.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>2</td>
+        <td class="description">Ideographic low baseline. This also defines behavior used in Chinese, Japanese and Korean, like the previous value, but with the glyphs lowered slightly so that ideographs that appear adjacent to Latin characters appear to descend slightly below the roman baseline.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>3</td>
+        <td class="description">Hanging baseline. This defines the alignment used in Devanagari and derived scripts, where most of the bulk of the glyphs are below the baseline, with some portions possibly above it, and where the baseline itself appears near the top of the line. This value is also used for drop capitals.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>4</td>
+        <td class="description">Math baseline. This defines the alignment used for setting mathematics, where operators like the minus sign need to be centered. It will usually be set at half the x-height in a font.</td>
+      </tr>
+    </table>
+    <h2>Baseline Table Format</h2>
+    <p>A baseline table consists of a baseline table header, a default baseline, and either a distance-based array (Formats 0 or 1) or a control point-based array (Formats 2 or 3) containing the format-specific baseline data. The font developer must choose between using distance-based data or control point-based data. Only one of these is present in any one font. The overall structure of the baseline table is shown here:</p>
+    <p><img src="FF26.gif" width="247" height="220" align="bottom"></p>
+    <p>The baseline table format is as follows:</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th align="middle">
+          <p align="left">Type</p>
+        </th>
+        <th align="middle">
+          <p align="left">Name</p>
+        </th>
+        <th align="left">
+          <p align="left">Description</p>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>fixed32</td>
+        <td>version</td>
+        <td class="description">Version number of the Baseline table (0x00010000 for the current version).</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>format</td>
+        <td class="description">Format of the baseline table. Only one baseline format may be selected for the font.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>defaultBaseline</td>
+        <td class="description">Default baseline value for all glyphs. This value can be from 0 through 31.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>variable</td>
+        <td>parts</td>
+        <td class="description">Format-specific data. This will be either a Format0Part, a Format1Part, a Format2Part or a Format3Part, depending on the value of the format field.</td>
+      </tr>
+    </table>
+    <p>There are four defined values for the <code>format</code> field of the <code>'bsln'</code> table, and associated with each value is a record that contains format-specific data. Baseline tables can have one of the following formats:</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th align="middle">
+          <p align="left">Value</p>
+        </th>
+        <th align="left">
+          <p align="left">Description</p>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>0</td>
+        <td class="description">Distance-based, no mapping.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>1</td>
+        <td class="description">Distance-based, with mapping.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>2</td>
+        <td class="description">Control point-based, no mapping.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>3</td>
+        <td class="description">Control point-based, with mapping.</td>
+      </tr>
+    </table>
+    <p>Depending on the value of the format field, the value of the <code>defaultBaseline</code> field may apply to all the glyphs of the font (with Formats 0 or 2) or may apply just to those glyphs of the font that do not have specific mapping data (Formats 1 and 3).</p>
+    <p>Format 1 and Format 3 Baseline tables use <a href="Chap6Tables.html#LookupTables">lookup table</a> to associate a baseline value with a particular glyph. This is how to intrepret the lookup value for each of the five lookup table formats:</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th align="middle">
+          <p align="left">Lookup format</p>
+        </th>
+        <th align="left">
+          <p align="left">Interpretation</p>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>0</td>
+        <td class="description">Array of 16-bit baseline values, one for each glyph in the font.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>2</td>
+        <td class="description">The value of each lookupSegment is a 16-bit baseline value.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>4</td>
+        <td class="description">The value of each lookupSegment is a 16-bit offset from the start of the lookup table to an array of 16-bit baseline values, one for each glyph in the segment.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>6</td>
+        <td class="description">The value of each lookupSingle is a 16-bit baseline value for that glyph.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>8</td>
+        <td class="description">The valueArray is an array of 16-bit baseline values, one for each glyph in the trimmed array.</td>
+      </tr>
+    </table>
+    <h3>Format 0 Baseline Table</h3>
+    <p>A format 0 baseline table has a single default baseline value for all glyphs in the font (the <code>defaultBaseline</code> field of the header). Baseline positions -- the distances from the natural baseline to a given baseline -- are given in <code>FUnit</code> distance units. There is no mapping table associated with this format. There is no lookup table associated with this format. The format-specific part is called a <code>Format0Part</code>, and has the following format:</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th align="middle">
+          <p align="left">Type</p>
+        </th>
+        <th align="middle">
+          <p align="left">Name</p>
+        </th>
+        <th align="left">
+          <p align="left">Description</p>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>int16</td>
+        <td>deltas[]</td>
+        <td class="description">These are the FUnit distance deltas from the font's natural baseline to the other baselines used in the font. A total of 32 deltas must be assigned.</td>
+      </tr>
+    </table>
+    <h3>Format 1 Baseline Table</h3>
+    <p>A format 1 baseline table has a single default baseline designated for all glyphs in the font (the <code>defaultBaseline</code> field) and a lookup table that allows different glyphs in the font to have different dominant baselines. Glyphs not covered by the mapping table use the default baseline. The format-specific part is called a <code>Format1Part</code>, and has the following format:</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th align="middle">
+          <p align="left">Type</p>
+        </th>
+        <th align="middle">
+          <p align="left">Name</p>
+        </th>
+        <th align="left">
+          <p align="left">Description</p>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>int16</td>
+        <td>deltas[]</td>
+        <td class="description">These are the FUnit distance deltas from the font's natural baseline to the other baselines used in the font. A total of 32 deltas must be assigned.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>LookupTable</td>
+        <td>mappingData</td>
+        <td class="description">Lookup table that maps glyphs to their baseline values. See above for interpretation of the lookup values.</td>
+      </tr>
+    </table>
+    <h3>Format 2 Baseline Table</h3>
+    <p>A format 2 baseline table designates a single default baseline value for all glyphs in the font. It also designates one particular glyph in the font, called the <dfn>standard glyph</dfn>, as having a set of control points. After instructions have been applied to this glyph, these control points define the baseline positions. There is no lookup table associated with this format. The format-specific part is called a <code>Format2Part</code>, and has the following format:</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th align="middle">
+          <p align="left">Type</p>
+        </th>
+        <th align="middle">
+          <p align="left">Name</p>
+        </th>
+        <th align="left">
+          <p align="left">Description</p>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>stdGlyph</td>
+        <td class="description">The specific glyph index number in this font that is used to set the baseline values. This is the standard glyph. This glyph must contain a set of control points (whose numbers are contained in the ctlPoints field) that are used to determine baseline distances.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>ctlPoints[]</td>
+        <td class="description">Set of control point numbers, associated with the standard glyph. A value of 0xFFFF means there is no corresponding control point in the standard glyph. A total of 32 control points must be assigned.</td>
+      </tr>
+    </table>
+    <h3>Format 3 Baseline Table</h3>
+    <p>A format 3 baseline table designates a single default baseline value for all glyphs in the font and a lookup table that allows different glyphs in the font to have different designated default baselines. It also designates one particular glyph in the font called the standard glyph, as having a set of control points that, after hinting, will be used to define the baseline positions. The format-specific part is called a <code>Format3Part</code>, and has the following format:</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th align="middle">
+          <p align="left">Type</p>
+        </th>
+        <th align="middle">
+          <p align="left">Name</p>
+        </th>
+        <th align="left">
+          <p align="left">Description</p>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>stdGlyph</td>
+        <td class="description">Glyph index of the glyph in this font to be used to set the baseline values. This glyph must contain a set of control points (whose numbers are contained in the following field) that determines baseline distances.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>ctlPoints[]</td>
+        <td class="description">Array of 32 control point numbers, associated with the standard glyph. A value of 0xFFFF means there is no corresponding control point in the standard glyph.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>LookupTable</td>
+        <td>mappingData</td>
+        <td class="description">Lookup table that maps glyphs to their baseline values. See above for interpretation of the lookup values.</td>
+      </tr>
+    </table>
+    <h2>Baseline Table Examples</h2>
+    <h3>Example: Using Baselines</h3>
+    <p>You can use the <code>'bsln'</code> table to define multiple baselines within your font. In the following figure, the uppercase glyph "D" sits in the em square. The natural baseline is at y = 0 in font coordinates. In the absence of any other information, different sizes of this glyph render with this line in common -- that is, the pen will always rest on this line. This example uses the distance formats.</p>
+    <p><img src="FF51.gif" width="227" height="102" align="bottom"></p>
+    <p>The next figure shows that a second baseline, marked as a hanging baseline, has been added to the first. The roman baseline is the same as the font's natural baseline, so the delta between the two is zero. The hanging baseline is above the natural baseline by some distance. In this font's coordinate system, "up" is towards more positive coordinates, so the shift is a positive value.</p>
+    <p><img src="FF52.gif" width="327" height="146" align="bottom"></p>
+    <p>Let's look at an example of how these distances get applied. In the next figure, the initial text begins with three uppercase D glyphs at different sizes. The user specifies that the first two uppercase D glyphs should have a hanging baseline.</p>
+    <p><img src="FF53.gif" width="439" height="78" align="bottom"></p>
+    <p>The first step is to resolve all baselines to the line of text's dominant baseline (which, in this example is Roman). In the next figure, the first two uppercase D glyphs are now hanging from the hanging baseline, which is aligned to the main text's baseline.</p>
+    <p><img src="FF54.gif" width="439" height="106" align="bottom"></p>
+    <p>The final step is shown in the next figure. The hanging baseline of the first two uppercase D glyphs is aligned to the hanging baseline of the main text. The dominant baseline for this run of text remains the Roman baseline.</p>
+    <p><img src="FF55.gif" width="441" height="84" align="bottom"></p>
+    <h3>Example: Assigning Baseline Delta Values and Control Points</h3>
+    <p>AAT fonts require assignment of delta values or control points in the baseline table for all baselines used in the font. Values may either be distance- based or control point-based. Fonts that use control points retain baseline information on the screen better at small point sizes than fonts using distance-based baseline tables.</p>
+    <h4>Distance-Based Formats</h4>
+    <p>Format 0 and 1 baseline tables are distance-based in that they specify baseline delta values in pure FUnits. The delta values are the distances from the natural baseline to the specified baseline. AAT fonts require assignment of delta values in the baseline table for all baselines used in the font.</p>
+    <p>Consider a glyph of a "P" with an em-square of 1000, an ascender of 932, a decender of -482, and a Roman baseline. A possible assignment of baseline deltas for this glyph and other glyphs is shown in this figure:</p>
+    <p><img src="FF28.gif" width="329" height="227" align="bottom"></p>
+    <p>The following table summarizes the baseline data for a distance-based baseline table.</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th align="middle">
+          <p align="left">Baseline</p>
+        </th>
+        <th align="middle">
+          <p align="left">Baseline value</p>
+        </th>
+        <th align="middle">
+          <p align="left">Delta value (FUnits)</p>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>Roman</td>
+        <td>0</td>
+        <td class="description">0</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>Ideographic Centered</td>
+        <td>1</td>
+        <td class="description">352</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>Ideographic Low</td>
+        <td>2</td>
+        <td class="description">352</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>Hanging</td>
+        <td>3</td>
+        <td class="description">705</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>Math</td>
+        <td>4</td>
+        <td class="description">352</td>
+      </tr>
+    </table>
+    <h4>Control Point-based Formats</h4>
+    <p>Format 2 and 3 baseline tabled are control point-based in that they specify a particular glyph in the font as being the "standard glyph" with a set of control points that, after hinting, are used to define the baselines.</p>
+    <p>Again, consider a glyph of a "P" with an em-square of 1000, an ascender of 932, a decender of -482, and a Roman dominant baseline. A possible assignment of control points for this standard glyph is shown in this figure:</p>
+    <p><img src="FF33.gif" width="390" height="235" align="bottom"></p>
+    <p>The following table summarizes the baseline data for a control point-based baseline table.</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th align="middle">
+          <p align="left">Baseline</p>
+        </th>
+        <th align="middle">
+          <p align="left">Baseline value</p>
+        </th>
+        <th align="middle">
+          <p align="left">Control point</p>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>Roman</td>
+        <td>0</td>
+        <td class="description">34</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>Ideographic Centered</td>
+        <td>1</td>
+        <td class="description">35</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>Ideographic Low</td>
+        <td>2</td>
+        <td class="description">35</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>Hanging</td>
+        <td>3</td>
+        <td class="description">36</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>Math</td>
+        <td>4</td>
+        <td class="description">35</td>
+      </tr>
+    </table>
+    <h3>Example: Format 1 Baseline Table</h3>
+    <p>Perhaps you want to create a baseline table for a font containing mixed kanji and Roman glyphs. All of the Roman glyphs should have the Roman baseline value, and all the kanji glyphs should have the ideographic centered baseline value.</p>
+    <p>The suppositions made in this example are as follows:</p>
+    <ul>
+      <li>The Roman glyphs occupy glyph indices 2 through 270, and the kanji glyphs occupy glyph indices 271 through 8200.</li>
+      <li>The intrinsic baseline of the kanji glyphs is roman-style (that is, the glyphs sit on the bottom of the em-square).</li>
+      <li>There is a difference of 855 FUnits between the roman and ideographic centered baselines.</li>
+      <li>The cap height for the roman letters is 1520 FUnits. (In this example, the cap height is equivalent to the hanging baseline measurement.)</li>
+    </ul>
+    <p>The following figure shows the baseline table Format 1 baseline assignments for this example font.</p>
+    <p><img src="FF36.gif" width="502" height="189" align="bottom"></p>
+    <p>The following table shows how to build a Format 1 baseline table for the example font.</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th align="middle">
+          <p align="left">Offset<br>
+          /length</p>
+        </th>
+        <th align="middle">
+          <p align="left">Value</p>
+        </th>
+        <th align="middle">
+          <p align="left">Name</p>
+        </th>
+        <th align="left">
+          <p align="left">Comment</p>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>0/4</td>
+        <td>0x00010000</td>
+        <td>version</td>
+        <td class="description">Version number of the baseline table, in fixed-point format.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>4/2</td>
+        <td>1</td>
+        <td>format</td>
+        <td class="description">Format of the baseline table. This baseline table will use the distance-based deltas with lookup tables.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>6/2</td>
+        <td>1</td>
+        <td>defaultBaseline</td>
+        <td class="description">The default baseline is the ideographic centered baseline having baseline value&nbsp;= 1. By specifying this value, we only need to include the Roman glyphs in the lookup table. The kanji glyphs are already on the default baseline.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td colspan="4">(The baseline table's <code>Format1Part</code> starts here)</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>8/2</td>
+        <td>0</td>
+        <td>delta</td>
+        <td class="description">Delta in FUnits from default baseline to Roman baseline (baseline value = 0).</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>10/2</td>
+        <td>855</td>
+        <td>delta</td>
+        <td class="description">Delta in FUnits from default baseline to ideographic centered baseline (1).</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>12/2</td>
+        <td>0</td>
+        <td>delta</td>
+        <td class="description">No delta value for ideographic low baseline (2).</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>14/2</td>
+        <td>1520</td>
+        <td>delta</td>
+        <td class="description">Delta in FUnits from default baseline to hanging baseline (3).</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>16/56</td>
+        <td>0</td>
+        <td>No</td>
+        <td class="description">delta values for baseline values 4 through 31.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td colspan="4">(The lookup table of the <code>Format1Part</code> starts here)</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>72/2</td>
+        <td>2</td>
+        <td>format</td>
+        <td class="description">Lookup table Format 2 (means a <a href="Chap6Tables.html#LookupFormat2">segment single</a> table format).</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td colspan="4">(The next 5 fields are the lookup table's <code>BinSrchHeader</code>)</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>74/2</td>
+        <td>6</td>
+        <td>unitSize</td>
+        <td class="description">Size of a LookupSegment record (2 bytes for the starting glyph index, 2 bytes for the ending glyph index, and 2 bytes for the baseline value).</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>76/2</td>
+        <td>1</td>
+        <td>nUnits</td>
+        <td class="description">Number of units of the preceding size to be searched.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>78/2</td>
+        <td>6</td>
+        <td>searchRange</td>
+        <td class="description">The unitSize times the largest power of two that is less than or equal to nUnits.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>80/2</td>
+        <td>0</td>
+        <td>entrySelector</td>
+        <td class="description">The log base 2 of the largest power of two less than or equal to nUnits.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>82/2</td>
+        <td>0</td>
+        <td>rangeShift</td>
+        <td class="description">The unitSize times the difference of nUnits minus the largest power of two less than or equal to nUnits.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td colspan="4">(First <code>LookupSegment</code> for Roman glyphs)</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>84/2</td>
+        <td>270</td>
+        <td>lastGlyph</td>
+        <td class="description">Ending glyph index for the Roman glyphs.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>86/2</td>
+        <td>2</td>
+        <td>firstGlyph</td>
+        <td class="description">Starting glyph index for the Roman glyphs.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>88/2</td>
+        <td>0</td>
+        <td>value</td>
+        <td class="description">Roman baseline value = 0 for the Roman glyphs in this range.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td colspan="4">(Last <code>LookupSegment</code>)</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>90/2</td>
+        <td>0xFFFF</td>
+        <td>lastGlyph</td>
+        <td class="description">Special value for the last glyph in the last lookup segment.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>92/2</td>
+        <td>0xFFFF</td>
+        <td>firstGlyph</td>
+        <td class="description">Special value for the first glyph in the last lookup segment.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>94/2</td>
+        <td>0</td>
+        <td>value</td>
+        <td class="description">Termination value.</td>
+      </tr>
+    </table>
+    <h3>Example: Format 3 Baseline Table</h3>
+    <p>This example uses the same basic setup as previous example of a baseline table Format 1, with the addition of control point information for more accurate placement of baseline shifts. Let's imagine we've designated glyph 22 as the glyph containing the control point information. That glyph will have control point #80 at the Roman baseline, control point #81 at the ideographic centered baseline, and control point #82 at the hanging baseline.</p>
+    <p>Table 3-9 shows how to build a Format 3 baseline table for the example font.</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th align="middle">
+          <p align="left">Offset<br>
+          /length</p>
+        </th>
+        <th align="middle">
+          <p align="left">Value</p>
+        </th>
+        <th align="middle">
+          <p align="left">Name</p>
+        </th>
+        <th align="left">
+          <p align="left">Comment</p>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>0/4</td>
+        <td>0x00010000</td>
+        <td>version</td>
+        <td class="description">Version number of the baseline table, in fixed-point format, is 1.0.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>4/2</td>
+        <td>3</td>
+        <td>format</td>
+        <td class="description">A Format 3 baseline table.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>6/2</td>
+        <td>1</td>
+        <td>defaultBaseline</td>
+        <td class="description">The default baseline is the ideographic centered baseline.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td colspan="4">(The baseline table's <code>Format3Part</code> starts here)</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>8/2</td>
+        <td>22</td>
+        <td>stdGlyph</td>
+        <td class="description">Glyph index of the standard glyph, which contains the control point information.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>10/2</td>
+        <td>80</td>
+        <td>ctlPoint</td>
+        <td class="description">Control point for Roman baseline in the standard glyph (baseline value 0).</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>12/2</td>
+        <td>81</td>
+        <td>ctlPoint</td>
+        <td class="description">Control point for ideographic centered baseline in the standard glyph (baseline value 1).</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>14/2</td>
+        <td>0xFFFF</td>
+        <td>ctlPoint</td>
+        <td class="description">This special value means there is no control point for the ideographic low baseline class (baseline value 2).</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>16/2</td>
+        <td>82</td>
+        <td>ctlPoint</td>
+        <td class="description">Control point for hanging baseline in the standard glyph (baseline value 3).</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>18/56</td>
+        <td>0xFFFF</td>
+        <td>ctlPoint</td>
+        <td class="description">This special value means there are no control points for baseline classes 4 through 31.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td colspan="4">(The lookup table of the <code>Format3Part</code> starts here)</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>74/2</td>
+        <td>2</td>
+        <td>format</td>
+        <td class="description">Lookup table Format 2 (a <a href="Chap6Tables.html#LookupFormat2">segment single</a> table).</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td colspan="4">(The next 5 fields are the lookup table's <code>BinSrchHeader</code>)</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>76/2</td>
+        <td>6</td>
+        <td>unitSize</td>
+        <td class="description">Size of a LookupSegment record (2 bytes for the starting glyph index, 2 bytes for the ending glyph index, and 2 bytes for the baseline value).</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>78/2</td>
+        <td>1</td>
+        <td>nUnits</td>
+        <td class="description">Number of units of the preceding size to be searched.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>80/2</td>
+        <td>6</td>
+        <td>searchRange</td>
+        <td class="description">The unitSize times the largest power of 2 that is less than or equal to nUnits.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>82/2</td>
+        <td>0</td>
+        <td>entrySelector</td>
+        <td class="description">The log base 2 of the largest power of two less than or equal to nUnits.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>84/2</td>
+        <td>0</td>
+        <td>rangeShift</td>
+        <td class="description">The unitSize times the difference of nUnits minus the largest power of two less than or equal to nUnits.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td colspan="4">(First <code>LookupSegment</code> for Roman glyphs)</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>86/2</td>
+        <td>270</td>
+        <td>lastGlyph</td>
+        <td class="description">Ending glyph index for the Roman glyphs.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>88/2</td>
+        <td>2</td>
+        <td>firstGlyph</td>
+        <td class="description">Starting glyph index for the Roman glyphs.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>90/2</td>
+        <td>0</td>
+        <td>value</td>
+        <td class="description">Roman baseline value = 0 for the Roman glyphs in this range.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td colspan="4">(Last <code>LookupSegment</code>)</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>92/2</td>
+        <td>0xFFFF</td>
+        <td>lastGlyph</td>
+        <td class="description">Special value for the last glyph in the last lookup segment.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>94/2</td>
+        <td>0xFFFF</td>
+        <td>firstGlyph</td>
+        <td class="description">Special value for the first glyph in the last lookup segment.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>96/2</td>
+        <td>0</td>
+        <td>value</td>
+        <td class="description">Termination value</td>
+      </tr>
+    </table>
+  </div>
+
+      </section>
+  </div><!-- /content -->
+
+  <div id="globalfooter">
+    <div id="breadory">
+      <ol id="breadcrumbs">
+        <li class="home"><a href="../../../index.html">Developer</a></li>
+        <li><a href="../../index.html">Fonts</a></li>
+        <li><a href="../index.html">TrueType™ Reference Manual</a></li>
+        <li>The TrueType Font File</li>
+      </ol>
+      <div id="directorynav" class="directorynav">
+	<div id="dn-cola" class="column">
+		<h3><a href="../../../platforms/index.html">Platforms</a></h3>
+		<ul>
+			<li><a href="../../../ios/index.html">iOS</a></li>
+			<li><a href="../../../osx/index.html">OS X</a></li>
+			<li><a href="../../../watchos/index.html">watchOS</a></li>
+			<li><a href="../../../tvos/index.html">tvOS</a></li>
+		</ul>
+		<h3><a href="../../../resources/index.html">Tools</a></h3>
+		<ul>
+			<li><a href="../../../xcode/index.html">Xcode</a></li>
+			<li><a href="../../../swift/index.html">Swift</a></li>
+		</ul>
+	</div>
+	<div id="dn-colb" class="column">
+		<h3><a href="../../../resources/index.html">Resources</a></h3>
+		<ul>
+			<li><a href="../../../library/index.html">Documentation</a></li>
+			<li><a href="../../../videos/index.html">Videos</a></li>
+			<li><a href="https://forums.developer.apple.com/">Forums</a></li>
+			<li><a href="../../../app-store/index.html">App Store</a></li>
+			<li><a href="../../../safari/index.html">Safari and Web</a></li>
+			<li><a href="../../../education/index.html">Education</a></li>
+			<li><a href="../../../enterprise/index.html">Enterprise</a></li>
+		</ul>
+	</div>
+	<div id="dn-colc" class="column">
+		<h3><a href="../../../programs/index.html">Programs</a></h3>
+		<ul>
+			<li><a href="../../../programs/index.html">Developer Program</a></li>
+			<li><a href="../../../programs/enterprise/index.html">Enterprise Program</a></li>
+			<li><a href="../../../programs/ios/university/index.html">iOS University Program</a></li>
+			<li><a href="../../../programs/mfi/index.html">MFi Program</a></li>
+		</ul>
+	</div>
+	<div id="dn-cold" class="column">
+		<h3><a href="../../../support/index.html">Support</a></h3>
+		<ul>
+			<li><a href="../../../support/development/index.html">Development</a></li>
+			<li><a href="../../../support/distribution/index.html">Distribution</a></li>
+			<li><a href="../../../support/membership/index.html">Membership</a></li>
+			<li><a href="../../../system-status/index.html">System Status</a></li>
+		</ul>
+	</div>
+	<div id="dn-cole" class="column">
+		<h3><a href="https://developer.apple.com/account/">Account</a></h3>
+		<ul>
+			<li><a href="https://developer.apple.com/account/">Developer Account</a></li>
+			<li><a href="../../../go/index-id=certificates-ids-profiles.html">Certificates, IDs &amp; Profiles</a></li>
+			<li><a href="https://itunesconnect.apple.com">iTunes Connect</a></li>			
+			<li><a href="../../../terms/index.html">License Agreements</a></li>
+		</ul>
+	</div>
+</div>
+
+    </div><!--/breadory-->
+    <ul class="gf-links piped footer-links">
+  <li><a href="../../../news/index.html" class="first">News &amp; Updates</a></li>
+  <li><a href="../../../bug-reporting/index.html">Report Bugs</a></li>
+  <li><a href="../../../contact/index.html">Contact Us</a></li>
+</ul>
+
+<div class="gf-sosumi footer-sosumi">
+  <p>Copyright © 2016 Apple Inc. All rights reserved.</p>
+    <ul class="piped">
+        <li><a href="http://www.apple.com/legal/internet-services/terms/site.html" class="first">Terms of Use</a></li>
+        <li><a href="http://www.apple.com/privacy/privacy-policy/">Privacy Policy</a></li>
+    </ul>
+</div>
+
+<!--<div id="gf-links piped footer-links">
+	<ul>
+		<li><a href="/cn/" title="Simplified Chinese">简体中文</a></li>
+		<li><a href="/jp/" title="Japanese">日本語</a></li>
+		<li><a href="/kr/" title="Korean">한국어</a></li>
+	</ul>
+</div>-->
+
+  </div><!--/globalfooter-->
+</body>
+</html>

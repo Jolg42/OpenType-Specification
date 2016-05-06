@@ -1,0 +1,2979 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="Author" content="Apple Inc." />
+<meta name="viewport" content="width=1024" />
+<link rel="shortcut icon" href="../../../favicon.ico" />
+<link rel="icon" href="../../../favicon.ico" />
+<link rel="stylesheet" href="https://www.apple.com/wss/fonts?family=Myriad+Set+Pro&amp;v=2" type="text/css" />
+<link rel="stylesheet" href="../../../assets/styles/transition-global.css" type="text/css" />
+<link rel="stylesheet" href="../../../assets/styles/transition-header.css" type="text/css" />
+<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/core/styles/adc.css" type="text/css" />
+<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/styles/topbar.css" type="text/css" />
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/lib/prototype.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/lib/scriptaculous.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/browserdetect.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/apple_core.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/search_decorator.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/adc_core.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/scripts/ac_retina.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/topbarDropdown.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	document.write('<link rel="stylesheet" type="text/css" href="https://devimages.apple.com.edgekey.net/assets/styles/script.css" media="screen">');
+</script>
+<!-- Augmented Search -->
+<!--<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/styles/augmented_search.css" type="text/css">-->
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/lib/jquery/jquery-1.11.0.min.js"></script>
+<script>jQuery.noConflict();</script>
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/lib/jquery/jquery.retinate.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/scripts/augmented_search.js"></script>-->
+<script src="../../../assets/scripts/augmented_search.js"></script>
+<script src="../../../assets/scripts/global-header.js"></script>
+
+  <meta name="generator" content="HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 15.10), see www.w3.org">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="Author" content="Apple Inc.">
+  <meta name="viewport" content="width=1024">
+  <link rel="shortcut icon" href="https://devimages.apple.com.edgekey.net/favicon.ico">
+  <link rel="icon" href="https://devimages.apple.com.edgekey.net/favicon.ico">
+  <link rel="stylesheet" href="../AAT.css" type="text/css">
+  <title>Font Feature Registry</title>
+</head>
+<body class="white sidenav-page">
+  <nav id="globalheader" role="navigation" aria-label="Global Navigation">
+  <div id="gh-content" class="gh-content">
+    <ul class="gh-menu">
+      <li id="gh-menu-icon-toggle" class="gh-menu-icon gh-menu-icon-toggle enhance">
+        <button id="gh-svg-icons" class="gh-svg-wrapper">
+          <span class="text-replace">Menu</span>
+          <svg x="0px" y="0px" width="100%" viewBox="0 0 96 96" class="gh-svg gh-svg-top" enable-background="new 0 0 96 96"><rect width="32" height="4" x="32" y="46" class="gh-svg-rect gh-svg-rect-top"></rect></svg>
+          <svg x="0px" y="0px" width="100%" viewBox="0 0 96 96" class="gh-svg gh-svg-bottom" enable-background="new 0 0 96 96"><rect width="32" height="4" x="32" y="46" class="gh-svg-rect gh-svg-rect-bottom"></rect></svg>
+        </button>
+      </li>
+      <li id="gh-menu-icon-home" class="gh-menu-icon gh-menu-icon-home">
+        <a href="../../../index.html">
+          <span class="text-replace">Apple Developer</span>
+        </a>
+      </li>
+    </ul>
+    <div class="gh-nav">
+      <div class="gh-nav-view">
+        <ul class="gh-nav-list">
+
+          <li class="gh-tab gh-nav-developer" data-hires="true"><a class="gh-tab-link" href="../../../index.html"><span class="text-replace">Apple Developer</span></a></li>
+          <li class="gh-tab gh-nav-technologies"><a class="gh-tab-link" href="../../../platforms/index.html">Platforms</a></li>
+          <li class="gh-tab gh-nav-resources"><a class="gh-tab-link" href="../../../resources/index.html">Resources</a></li>
+          <li class="gh-tab gh-nav-programs"><a class="gh-tab-link" href="../../../programs/index.html">Program</a></li>
+          <li class="gh-tab gh-nav-support"><a class="gh-tab-link" href="../../../support/index.html">Support</a></li>
+          <li class="gh-tab gh-nav-account">
+            <a class="gh-tab-link gh-account-profile" href="https://developer.apple.com/account/">Account</a>
+          </li>
+          <li class="gh-tab gh-nav-search">
+
+            <div id="gh-search" class="gh-search" role="search">
+              <form action="/search/index.php" method="get" class="gh-search-form" id="gh-search-form" role="search">
+
+                <div class="gh-search-input-wrapper">
+                  <label for="gh-search-input" class="text-replace">Search Apple Developer</label>
+                  <input type="text" name="q" id="gh-search-input" class="augmented gh-search-input" placeholder="Search Apple Developer" autocomplete="off" autocorrect="off" autocapitalize="off">
+                </div>
+
+                <button disabled type="submit" id="gh-search-submit" class="gh-search-submit gh-search-magnify"><span class="text-replace">Search Apple Developer</span></button>
+                <button disabled type="reset" id="gh-search-reset" class="gh-search-reset"><span class="text-replace">Reset</span></button>
+
+              </form>
+            </div>
+
+            <a class="gh-search-magnify" href="../../../search/index.html"><span class="text-replace">Search Apple Developer</span></a>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+  <div id="top">
+<!-- SiteCatalyst code version: H.8. Copyright 1997-2006 Omniture, Inc. -->
+<script type="text/javascript">
+/* RSID: */
+var s_account="appleglobal,appleusdeveloper"
+</script>
+
+<script type="text/javascript" src="https://www.apple.com/metrics/scripts/s_code_h.js"></script>
+<script type="text/javascript">
+s.pageName= AC && AC.Tracking && AC.Tracking.pageName();
+s.channel="www.us.developer"
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)</script>
+<!-- End SiteCatalyst code version: H.8. -->
+</div>
+
+  <div id="content" class="content" data-hires="false">
+    <section>
+
+  <div id="navBar">
+    <!-- NAVBARSTART -->
+    <p class="bold"><a href="../index.html">TrueType Reference Manual</a></p>
+    <ul class="outer">
+      <li><a href="../RM01/Chap1.html">Digitizing Letterforms</a></li>
+      <li><a href="../RM02/Chap2.html">The Font Engine</a></li>
+      <li><a href="../RM03/Chap3.html">Instructing Fonts</a></li>
+      <li><a href="../RM04/Chap4.html">The Graphics State</a></li>
+      <li><a href="../RM05/Chap5.html">The Instruction Set</a></li>
+      <li><a href="../RM06/Chap6.html">Font Tables</a></li>
+      <li class="c1">
+        <ul class="inner">
+          <li><a href="../RM06/Chap6.html#Intro">Introduction</a></li>
+          <li><a href="../RM06/Chap6.html#Types">Data Types</a></li>
+          <li><a href="../RM06/Chap6.html#Overview">Overview of TrueType</a></li>
+          <li><a href="../RM06/Chap6AATIntro.html">Overview of AAT</a></li>
+          <li><a href="../RM06/Chap6Tables.html">Special Tables</a></li>
+          <li><a href="../RM06/Chap6.html#Directory">The Font Directory</a></li>
+          <li><a href="../RM06/Chap6acnt.html">The <code>'acnt'</code> table</a></li>
+          <li><a href="../RM06/Chap6ankr.html">The <code>'ankr'</code> table</a></li>
+          <li><a href="../RM06/Chap6avar.html">The <code>'avar'</code> table</a></li>
+          <li><a href="../RM06/Chap6bdat.html">The <code>'bdat'</code> table</a></li>
+          <li><a href="../RM06/Chap6bhed.html">The <code>'bhed'</code> table</a></li>
+          <li><a href="../RM06/Chap6bloc.html">The <code>'bloc'</code> table</a></li>
+          <li><a href="../RM06/Chap6bsln.html">The <code>'bsln'</code> table</a></li>
+          <li><a href="../RM06/Chap6cmap.html">The <code>'cmap'</code> table</a></li>
+          <li><a href="../RM06/Chap6cvar.html">The <code>'cvar'</code> table</a></li>
+          <li><a href="../RM06/Chap6cvt.html">The <code>'cvt '</code> table</a></li>
+          <li><a href="../RM06/Chap6EBSC.html">The <code>'EBSC'</code> table</a></li>
+          <li><a href="../RM06/Chap6fdsc.html">The <code>'fdsc'</code> table</a></li>
+          <li><a href="../RM06/Chap6feat.html">The <code>'feat'</code> table</a></li>
+          <li><a href="../RM06/Chap6fmtx.html">The <code>'fmtx'</code> table</a></li>
+          <li><a href="../RM06/Chap6fond.html">The <code>'fond'</code> table</a></li>
+          <li><a href="../RM06/Chap6fpgm.html">The <code>'fpgm'</code> table</a></li>
+          <li><a href="../RM06/Chap6fvar.html">The <code>'fvar'</code> table</a></li>
+          <li><a href="../RM06/Chap6gasp.html">The <code>'gasp'</code> table</a></li>
+          <li><a href="../RM06/Chap6gcid.html">The <code>'gcid'</code> table</a></li>
+          <li><a href="../RM06/Chap6glyf.html">The <code>'glyf'</code> table</a></li>
+          <li><a href="../RM06/Chap6gvar.html">The <code>'gvar'</code> table</a></li>
+          <li><a href="../RM06/Chap6hdmx.html">The <code>'hdmx'</code> table</a></li>
+          <li><a href="../RM06/Chap6head.html">The <code>'head'</code> table</a></li>
+          <li><a href="../RM06/Chap6hhea.html">The <code>'hhea'</code> table</a></li>
+          <li><a href="../RM06/Chap6hmtx.html">The <code>'hmtx'</code> table</a></li>
+          <li><a href="../RM06/Chap6just.html">The <code>'just'</code> table</a></li>
+          <li><a href="../RM06/Chap6kern.html">The <code>'kern'</code> table</a></li>
+          <li><a href="../RM06/Chap6kerx.html">The <code>'kerx'</code> table</a></li>
+          <li><a href="../RM06/Chap6lcar.html">The <code>'lcar'</code> table</a></li>
+          <li><a href="../RM06/Chap6loca.html">The <code>'loca'</code> table</a></li>
+          <li><a href="../RM06/Chap6maxp.html">The <code>'maxp'</code> table</a></li>
+          <li><a href="../RM06/Chap6meta.html">The <code>'meta'</code> table</a></li>
+          <li><a href="../RM06/Chap6mort.html">The <code>'mort'</code> table</a></li>
+          <li><a href="../RM06/Chap6morx.html">The <code>'morx'</code> table</a></li>
+          <li><a href="../RM06/Chap6name.html">The <code>'name'</code> table</a></li>
+          <li><a href="../RM06/Chap6opbd.html">The <code>'opbd'</code> table</a></li>
+          <li><a href="../RM06/Chap6OS2.html">The <code>'OS/2'</code> table</a></li>
+          <li><a href="../RM06/Chap6post.html">The <code>'post'</code> table</a></li>
+          <li><a href="../RM06/Chap6prep.html">The <code>'prep'</code> table</a></li>
+          <li><a href="../RM06/Chap6prop.html">The <code>'prop'</code> table</a></li>
+          <li><a href="../RM06/Chap6sbix.html">The <code>'sbix'</code> table</a></li>
+          <li><a href="../RM06/Chap6trak.html">The <code>'trak'</code> table</a></li>
+          <li><a href="../RM06/Chap6vhea.html">The <code>'vhea'</code> table</a></li>
+          <li><a href="../RM06/Chap6vmtx.html">The <code>'vmtx'</code> table</a></li>
+          <li><a href="../RM06/Chap6xref.html">The <code>'xref'</code> table</a></li>
+          <li><a href="../RM06/Chap6Zapf.html">The <code>'Zapf'</code> table</a></li>
+        </ul>
+      </li>
+      <li><a href="../RM07/appendixA.html">Instruction Set Summary</a></li>
+      <li><a href="../RM07/appendixB.html">Glyph Mappings</a></li>
+      <li><a href="../RM08/appendixE.html">Converting Outlines</a></li>
+      <li>Font Feature Registry</li>
+    </ul><!-- NAVBAREND -->
+  </div>
+  <div id="chapterContent">
+    <h1>Font Feature Registry</h1>
+    <h2>Introduction</h2>
+    <p>This document describes the set of currently defined typographic and layout features available from applications using AAT. It describes these features from several points of view, including that of the font designer, the user, and the application developer. This is a dynamic list - the AAT architecture allows new kinds of features to be defined without requiring a revision to either the application or the ATSUI software itself. You can submit new features to the Registry <a href="mailto:fonttools@apple.com">here</a>.</p>
+    <hr align="left">
+    <h2>The designer/user model</h2>
+    <p>Typographic effects are achieved in AAT through the use of two sixteen-bit numbers called a <em>feature</em> and <em>selector</em>.  (Selectors are often called “settings.”) The feature code indicates a general class of effect (e.g., ligatures) and the selector code the specific effect (e.g., rare ligatures).</p>
+    <p>Features are classified as "exclusive" and "nonexclusive." This indicates whether several different selectors within a given feature type may be selected at once. Thus, it is possible to have both common and rare ligatures turned on, whereas it is impossible to display a given fraction as simultaneously vertical <em>and</em> diagonal.</p>
+    <p>For nonexclusive features, selectors come in pairs consisting of an even number (0, 2, 4,…) and the odd number following it (1, 3, 5,…).  The even number indicates that the selector is <em>on</em>, and the odd number that it is explicitly <em>off</em>.</p>
+    <p>For example, the ligature feature has selectors for common ligatures. A selector of 2 means that they are to be turned on and a selector of 3 forces them to be off. Now, Unicode includes a pre-defined fi ligature, &#xFB01; U+FB01 LATIN SMALL LIGATURE FI. It is included in Unicode for compatibility reasons and ordinarily should not be inserted into text by the user. If for any reason it is, then the feature/selector pair 1/3 could be used to display the ligature as separate f and i glyphs.</p>
+    <p>In the tables below, the value shown for such paired selectors is always the even one, turning the feature on.</p>
+    <h2>Defined Features</h2>
+    <p>A list of the main features types follows, with links to their descriptions. This is not an exhaustive list of possible feature/selector pairs. In particular, font designers may use custom feature/selector pairs as required. Such custom feature/selector pairs will appear in the UI if the <code>'feat'</code>, <code>'morx'</code>, and <code>'name'</code> tables are properly set up. Feature types greater than 255 are reserved for custom features.</p>
+    <p>Early versions of the AAT Font Feature Registry included a number of feature/selector pairs whose use is now discouraged. As a rule, font features should <em>not</em> be used to change the appearance of text when the same effect can be achieved by changing the character stream.</p>
+    <p>For example, the feature/selector pair <code>kMathematicalExtrasType/kAsteriskToMultiplyOnSelector</code> is used to give an asterisk (*) the appearance of a multiplication sign (×). Both are encoded in Unicode (the asterisk as U+002A and multiplication sign as U+00D7). Changes such as these are generally confusing to users because they can't tell whether the <em>text</em> itself has changed or just its appearance. Such feature/selector pairs were generally defined before all text could be assumed to be Unicode. Since that all text on OS X and iOS is now represented as Unicode, such feature/selector pairs should generally not be used.</p>
+    <p>The exception would be cases where a character is in Unicode only for compatibility reasons, such as the ﬁ ligature.</p>
+    <p>Discouraged and deprecated selectors are shown <span class="deprecated">like this</span>.</p>
+    <div style="margin-left: 2em">
+      <ul class="circle">
+        <li><a href="AppendixF.html#Type0">All Typographic Features</a></li>
+        <li><a href="AppendixF.html#Type34">Alternate Kana</a></li>
+        <li><a href="AppendixF.html#Type24">Annotation</a></li>
+        <li><a href="AppendixF.html#Type33">Case Sensitive Layout</a></li>
+        <li><a href="AppendixF.html#Type17">Character Alternatives</a></li>
+        <li><a href="AppendixF.html#Type20">Character Shape</a></li>
+        <li><a href="AppendixF.html#Type103">CJK Roman Spacing</a></li>
+        <li><a href="AppendixF.html#Type29">CJK Symbol Alternatives</a></li>
+        <li><a href="AppendixF.html#Type31">CJK Vertical Roman Placement</a></li>
+        <li><a href="AppendixF.html#Type36">Contextual Alternates</a></li>
+        <li><a href="AppendixF.html#Type2">Cursive Connection</a></li>
+        <li><a href="AppendixF.html#Type18">Design Complexity</a></li>
+        <li><a href="AppendixF.html#Type9">Diacritics</a></li>
+        <li><a href="AppendixF.html#Type11">Fractions</a></li>
+        <li><a href="AppendixF.html#Type30">Ideographic Alternatives</a></li>
+        <li><a href="AppendixF.html#Type26">Ideographic Spacing</a></li>
+        <li><a href="AppendixF.html#Type32">Italic CJK Roman</a></li>
+        <li><a href="AppendixF.html#Type25">Kana Spacing</a></li>
+        <li><a href="AppendixF.html#Type39">Language Tag</a></li>
+        <li><a href="AppendixF.html#Type3">Letter Case</a></li>
+        <li><a href="AppendixF.html#Type1">Ligatures</a></li>
+        <li><a href="AppendixF.html#Type5">Linguistic Rearrangement</a></li>
+        <li><a href="AppendixF.html#Type37">Lower Case</a></li>
+        <li><a href="AppendixF.html#Type15">Mathematical Extras</a></li>
+        <li><a href="AppendixF.html#Type21">Number Case</a></li>
+        <li><a href="AppendixF.html#Type6">Number Spacing</a></li>
+        <li><a href="AppendixF.html#Type16">Ornament Sets</a></li>
+        <li><a href="AppendixF.html#Type13">Overlapping Characters</a></li>
+        <li><a href="AppendixF.html#Type28">Ruby Kana</a></li>
+        <li><a href="AppendixF.html#Type8">Smart Swash</a></li>
+        <li><a href="AppendixF.html#Type19">Style Options</a></li>
+        <li><a href="AppendixF.html#Type35">Stylistic Alternatives</a></li>
+        <li><a href="AppendixF.html#Type22">Text Spacing</a></li>
+        <li><a href="AppendixF.html#Type23">Transliteration</a></li>
+        <li><a href="AppendixF.html#Type14">Typographic Extras</a></li>
+        <li><a href="AppendixF.html#Type27">Unicode Decomposition</a></li>
+        <li><a href="AppendixF.html#Type38">Upper Case</a></li>
+        <li><a href="AppendixF.html#Type10">Vertical Position</a></li>
+        <li><a href="AppendixF.html#Type4">Vertical Substitution</a></li>
+      </ul>
+    </div>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3><a name="Type0" id="Type0"></a>All Typographic Features</h3>
+    <table summary="The All Typographic Features feature">
+      <tr>
+        <th>Feature Constant</th>
+        <th>Feature Value</th>
+        <th>Feature Type</th>
+      </tr>
+      <tr>
+        <td>kAllTypographicFeatures</td>
+        <td>0</td>
+        <td>Nonexclusive</td>
+      </tr>
+    </table>
+    <p>The All Typographic Features feature type allows the user to specify whether or not any effects should occur. It is an all or nothing bit—if off, all other specifications are ignored. This feature might be turned off by a user who receives a non-AAT document and wants to ensure that the document does not reflow.</p>
+    <p>Note that this feature should be present in the UI only for debugging purposes. It should not be shown to general users, as it will disable features required to make the text legible.</p>
+    <table summary="Selectors for the All Typographic Features feature">
+      <tr>
+        <th>Selector Name</th>
+        <th>Selector Constant(s)</th>
+        <th>Selector Value</th>
+        <th>Selector Function</th>
+      </tr>
+      <tr>
+        <td class="description">All Typographic Features</td>
+        <td>kAllTypeFeaturesOnSelector<br>
+        kAllTypeFeaturesOffSelector</td>
+        <td>0</td>
+        <td class="description">Turns on or off all other features. This feature/selector pair is required and will be added to a <code>'morx'</code> table automatically by <span class="toolName">ftxenhancer</span>.</td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3><a name="Type1" id="Type1"></a>Ligatures</h3>
+    <table summary="The Ligatures feature">
+      <tr>
+        <th>Feature Constant</th>
+        <th>Feature Value</th>
+        <th>Feature Type</th>
+      </tr>
+      <tr>
+        <td>kLigatures</td>
+        <td>1</td>
+        <td>Nonexclusive</td>
+      </tr>
+    </table>
+    <p>The Ligatures feature type permits selection from different kinds of ligatures. It is a non-exclusive feature type.</p>
+    <table summary="Selectors for the Ligatures feature">
+      <tr>
+        <th>Selector Name</th>
+        <th>Selector Constant(s)</th>
+        <th>Selector Value</th>
+        <th>Selector Function</th>
+      </tr>
+      <tr>
+        <td class="description">Required Ligatures</td>
+        <td>kRequiredLigaturesOnSelector<br>
+        kRequiredLigaturesOffSelector</td>
+        <td>0</td>
+        <td class="description">Those ligatures that are linguistically required, such as occur in Arabic or Hindi. This should generally not be visible in the UI.</td>
+      </tr>
+      <tr>
+        <td class="description">Common Ligatures</td>
+        <td>kCommonLigaturesOnSelector<br>
+        kCommonLigaturesOffSelector</td>
+        <td>2</td>
+        <td class="description">The ligatures that usually appear in well-set text, for instance the "fi" and "fl" ligatures in English. (Note that such ligatures may be serpately encoded within Unicode, but only as compatibility characters.)</td>
+      </tr>
+      <tr>
+        <td class="description">Rare Ligatures</td>
+        <td>kRareLigaturesOnSelector<br>
+        kRareLigaturesOffSelector</td>
+        <td>4</td>
+        <td class="description">Ligatures in a font that are less common than those included in the Common category, for instance an "fj" ligature. (Note that such ligatures may be serpately encoded within Unicode, but only as compatibility characters.)</td>
+      </tr>
+      <tr>
+        <td class="deprecatedDescription">Logos</td>
+        <td class="deprecated">kLogosOnSelector<br>
+        kLogosOffSelector</td>
+        <td class="deprecated">6</td>
+        <td class="deprecatedDescription">Ligatures representing logos (e.g. trademarks). For instance, typing the word "Taligent" and seeing the Taligent logo. This feature/selector pair should not be used; rather, appropriate graphics should be inserted into the text.</td>
+      </tr>
+      <tr>
+        <td class="description">Rebus Pictures</td>
+        <td>kRebusPicturesOnSelector<br>
+        kRebusPicturesOffSelector</td>
+        <td>8</td>
+        <td class="description">Ligatures that are pictures representing words or syllables.</td>
+      </tr>
+      <tr>
+        <td class="description">Diphthong Ligatures</td>
+        <td>kDiphthongLigaturesOnSelector<br>
+        kDiphthongLigaturesOffSelector</td>
+        <td>10</td>
+        <td class="description">Ligatures like Æ and æ. The use of this selector is strongly discouraged.</td>
+      </tr>
+      <tr>
+        <td class="description">Squared Ligatures</td>
+        <td>kSquaredLigaturesOnSelector<br>
+        kSquaredLigaturesOffSelector</td>
+        <td>12</td>
+        <td class="description">These are ligatures where the component letters are arranged in a lattice, such that the ligature fits into the space of a single letter. For examples, see Unicodes U+3300 through U+3357 and U+337B through U+337F.</td>
+      </tr>
+      <tr>
+        <td class="description">Squared Ligatures, Abbreviated</td>
+        <td>kAbbrevSquaredLigaturesOnSelector<br>
+        kAbbrevSquaredLigaturesOffSelector</td>
+        <td>14</td>
+        <td class="description">These are similar to the previously described ligatures, but in abbreviated form.</td>
+      </tr>
+      <tr>
+        <td class="description">Symbol Ligatures</td>
+        <td>kSymbolLigaturesOnSelector<br>
+        kSymbolLigaturesOffSelector</td>
+        <td>16</td>
+        <td class="description">Ligatures displayed using a graphic (e.g., emoji)</td>
+      </tr>
+      <tr>
+        <td class="description">Contextual Ligatures</td>
+        <td>kContextualLigaturesOnSelector<br>
+        kContextualLigaturesOffSelector</td>
+        <td>18</td>
+        <td class="description">Ligatures which appear in some context and not in others.</td>
+      </tr>
+      <tr>
+        <td class="description">Historical Ligatures</td>
+        <td>kHistoricalLigaturesOnSelector<br>
+        kHistoricalLigaturesOffSelector</td>
+        <td>20</td>
+        <td class="description">Ligatures which are generally not in current use.</td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3><a name="Type2" id="Type2"></a>Cursive Connection</h3>
+    <table summary="The Cursive Connection feature">
+      <tr>
+        <th>Feature Constant</th>
+        <th>Feature Value</th>
+        <th>Feature Type</th>
+      </tr>
+      <tr>
+        <td>kCursiveConnection</td>
+        <td>2</td>
+        <td>Exclusive</td>
+      </tr>
+    </table>
+    <p>The Cursive Connection feature type is used for cursively-connected scripts. It is required for Arabic, but may be used for other scripts as well.</p>
+    <table summary="Selectors for the Cursive Connection feature">
+      <tr>
+        <th>Selector Name</th>
+        <th>Selector Constant(s)</th>
+        <th>Selector Value</th>
+        <th>Selector Function</th>
+      </tr>
+      <tr>
+        <td class="description">Unconnected</td>
+        <td>kUnconnectedSelector</td>
+        <td>0</td>
+        <td class="description">Disables cursive connection altogether. Note that selecting this for some scripts will result in incorrect liguistic appearance.</td>
+      </tr>
+      <tr>
+        <td class="description">Partially Connected</td>
+        <td>kPartiallyConnectedSelector</td>
+        <td>1</td>
+        <td class="description">Selects pre-drawn letterforms that connect in a non-contextual manner.</td>
+      </tr>
+      <tr>
+        <td class="description">Cursive</td>
+        <td>kCursiveSelector</td>
+        <td>2</td>
+        <td class="description">Selects full, contextual connection of letterforms. This setting must always be the default in fonts for scripts that require this behavior.</td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3><a name="Type3" id="Type3"></a>Letter Case</h3>
+    <table summary="The Letter Case feature">
+      <tr>
+        <th>Feature Constant</th>
+        <th>Feature Value</th>
+        <th>Feature Type</th>
+      </tr>
+      <tr>
+        <td>kLetterCase</td>
+        <td>3</td>
+        <td>Exclusive</td>
+      </tr>
+    </table>
+    <p>The Letter Case feature type is used to specify changes to the case of letters (in scripts where case has meaning), in either a contextual or a non-contextual manner. </p>
+    <p>The Letter Case feature is deprecated. Use the Lower Case and Upper Case features instead.</p>
+    <table summary="Selectors for the Letter Case feature">
+      <tr>
+        <th>Selector Name</th>
+        <th>Selector Constant(s)</th>
+        <th>Selector Value</th>
+        <th>Selector Function</th>
+      </tr>
+      <tr>
+        <td class="deprecatedDescription">Upper &amp; Lower Case</td>
+        <td class="deprecated">kUpperAndLowerCaseSelector</td>
+        <td class="deprecated">0</td>
+        <td class="deprecatedDescription">The default setting; it leaves letters in whichever case the user has specified.</td>
+      </tr>
+      <tr>
+        <td class="deprecatedDescription">All Caps</td>
+        <td class="deprecated">kAllCapsSelector</td>
+        <td class="deprecated">1</td>
+        <td class="deprecatedDescription">Converts all letters non-contextually to upper-case. Remember that this effect (like all others described in this document) happens only to the appearance of the letters; even though a lower-case letter may have an upper-case appearance through the use of this feature, the string the user typed remains invariant (i.e. still lower-case).</td>
+      </tr>
+      <tr>
+        <td class="deprecatedDescription">All Lower Case</td>
+        <td class="deprecated">kAllLowerCaseSelector</td>
+        <td class="deprecated">2</td>
+        <td class="deprecatedDescription">Converts all letters non-contextually to lower-case.</td>
+      </tr>
+      <tr>
+        <td class="deprecatedDescription">Small Caps</td>
+        <td class="deprecated">kSmallCapsSelector</td>
+        <td class="deprecated">3</td>
+        <td class="deprecatedDescription">Converts lower-case letters non-contextually into true small caps forms.</td>
+      </tr>
+      <tr>
+        <td class="deprecatedDescription">Initial Caps</td>
+        <td class="deprecated">kInitialCapsSelector</td>
+        <td class="deprecated">4</td>
+        <td class="deprecatedDescription">Contextually converts the first letter of a word into upper-case and the remaining letters into lower-case.</td>
+      </tr>
+      <tr>
+        <td class="deprecatedDescription">Initial Caps and Small Caps</td>
+        <td class="deprecated">kInitialCapsAndSmallCapsSelector</td>
+        <td class="deprecated">5</td>
+        <td class="deprecatedDescription">Contextually converts the first letter of a word into upper-case and the remaining letters into small caps.</td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3><a name="Type4" id="Type4"></a>Vertical Substitution</h3>
+    <table summary="The Vertical Substitution feature">
+      <tr>
+        <th>Feature Constant</th>
+        <th>Feature Value</th>
+        <th>Feature Type</th>
+      </tr>
+      <tr>
+        <td>kVerticalSubstitution</td>
+        <td>4</td>
+        <td>Nonexclusive</td>
+      </tr>
+    </table>
+    <p>The Vertical Substitution feature type can be used to specify that glyphs need to change their appearance in vertical runs of text.</p>
+    <p>There is only one selector for this feature:</p>
+    <table summary="Selectors for the Vertical Substitution feature">
+      <tr>
+        <th>Selector Name</th>
+        <th>Selector Constant(s)</th>
+        <th>Selector Value</th>
+        <th>Selector Function</th>
+      </tr>
+      <tr>
+        <td class="description">Vertical Substitution</td>
+        <td>kSubstituteVerticalFormsOnSelector<br>
+        kSubstituteVerticalFormsOffSelector</td>
+        <td>0</td>
+        <td class="description">Turns on the feature.</td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3><a name="Type5" id="Type5"></a>Linguistic Rearrangement</h3>
+    <table summary="The Linguistic Rearrangement feature">
+      <tr>
+        <th>Feature Constant</th>
+        <th>Feature Value</th>
+        <th>Feature Type</th>
+      </tr>
+      <tr>
+        <td>kLinguisticRearrangement</td>
+        <td>5</td>
+        <td>Nonexclusive</td>
+      </tr>
+    </table>
+    <p>The Linguistic Rearrangement feature type specifies whether linguistic rearrangement of glyphs (such as happens in South Asian scripts) should happen. It is on by default for fonts representing these scripts.</p>
+    <p>It is important to note that this feature is different than the notion of linguistic reordering, which happens when text from predominantly left-to-right scripts (such as Latin) is mixed with text from predominantly right-to-left scripts (such as Hebrew).</p>
+    <p>As a rule, this feature should not be visible in the UI.</p>
+    <p>There is only one selector for this feature:</p>
+    <table summary="Selectors for the Linguistic Rearrangement feature">
+      <tr>
+        <th>Selector Name</th>
+        <th>Selector Constant(s)</th>
+        <th>Selector Value</th>
+        <th>Selector Function</th>
+      </tr>
+      <tr>
+        <td class="description">Linguistic Rearrangement</td>
+        <td>kLinguisticRearrangementOnSelector<br>
+        kLinguisticRearrangementOffSelector</td>
+        <td>0</td>
+        <td class="description">Turns on the feature.</td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3><a name="Type6" id="Type6"></a>Number Spacing</h3>
+    <table summary="The Number Spacing feature">
+      <tr>
+        <th>Feature Constant</th>
+        <th>Feature Value</th>
+        <th>Feature Type</th>
+      </tr>
+      <tr>
+        <td>kNumberSpacing</td>
+        <td>6</td>
+        <td>Exclusive</td>
+      </tr>
+    </table>
+    <p>The Number Spacing feature type specifies a choice for the appearance of digits. </p>
+    <table summary="Selectors for the Number Spacing feature">
+      <tr>
+        <th>Selector Name</th>
+        <th>Selector Constant(s)</th>
+        <th>Selector Value</th>
+        <th>Selector Function</th>
+      </tr>
+      <tr>
+        <td class="description">Monospaced Numbers</td>
+        <td>kMonospacedNumbersSelector</td>
+        <td>0</td>
+        <td class="description">Uniform width numbers, useful for displaying in columns. Sometimes known as "columnating" numbers.</td>
+      </tr>
+      <tr>
+        <td class="description">Proportional Numbers</td>
+        <td>kProportionalNumbersSelector</td>
+        <td>1</td>
+        <td class="description">Numbers whose widths vary.</td>
+      </tr>
+      <tr>
+        <td class="description">Third-width Numerals</td>
+        <td>kThirdWidthNumbersSelector</td>
+        <td>2</td>
+        <td class="description">Thin numerals.</td>
+      </tr>
+      <tr>
+        <td class="description">Quarter-width Numerals</td>
+        <td>kQuarterWidthNumbersSelector</td>
+        <td>3</td>
+        <td class="description">Very thin numerals.</td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3><a name="Type8" id="Type8"></a>Smart Swash</h3>
+    <table summary="The Smart Swash feature">
+      <tr>
+        <th>Feature Constant</th>
+        <th>Feature Value</th>
+        <th>Feature Type</th>
+      </tr>
+      <tr>
+        <td>kSmartSwash</td>
+        <td>8</td>
+        <td>Nonexclusive</td>
+      </tr>
+    </table>
+    <p>The Smart Swashes feature type controls contextual swash substitution. These are swashes that appear based on an analysis of context, rather than via simple substitution. This is a non-exclusive feature type.</p>
+    <table summary="Selectors for the Smart Swashes feature">
+      <tr>
+        <th>Selector Name</th>
+        <th>Selector Constant(s)</th>
+        <th>Selector Value</th>
+        <th>Selector Function</th>
+      </tr>
+      <tr>
+        <td class="description">Word Initial Swashes</td>
+        <td>kWordInitialSwashesOnSelector<br>
+        kWordInitialSwashesOffSelector</td>
+        <td>0</td>
+        <td class="description">Special forms that can appear at the start of a word (or a line).</td>
+      </tr>
+      <tr>
+        <td class="description">Word Final Swashes</td>
+        <td>kWordFinalSwashesOnSelector<br>
+        kWordFinalSwashesOffSelector</td>
+        <td>2</td>
+        <td class="description">Special forms that can appear at the end of a word (or a line).</td>
+      </tr>
+      <tr>
+        <td class="deprecatedDescription">Line Initial Swashes</td>
+        <td class="deprecated">kLineInitialSwashesOnSelector<br>
+        kLineInitialSwashesOffSelector</td>
+        <td class="deprecated">4</td>
+        <td class="deprecatedDescription">Special forms that can appear only at the start of a line. This is unsupported in CoreText.</td>
+      </tr>
+      <tr>
+        <td class="deprecatedDescription">Line Final Swashes</td>
+        <td class="deprecated">kLineFinalSwashesOnSelector<br>
+        kLineFinalSwashesOffSelector</td>
+        <td class="deprecated">6</td>
+        <td class="deprecatedDescription">Special forms that can appear only at the end of a line. This is unsupported in CoreText.</td>
+      </tr>
+      <tr>
+        <td class="description">Non-Final Swashes</td>
+        <td>kNonFinalSwashesOnSelector<br>
+        kNonFinalSwashesOffSelector</td>
+        <td>8</td>
+        <td class="description">Forms that are used at the beginning or middle of words. An example of this is the archaic use of the long-s (ſ) for a medial s.</td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3><a name="Type9" id="Type9"></a>Diacritics</h3>
+    <table summary="The Diacritics feature">
+      <tr>
+        <th>Feature Constant</th>
+        <th>Feature Value</th>
+        <th>Feature Type</th>
+      </tr>
+      <tr>
+        <td>kDiacritics</td>
+        <td>9</td>
+        <td>Exclusive</td>
+      </tr>
+    </table>
+    <p>The Diacritics feature type allows control over how diacritics (i.e. accent marks or applied vowels) appear in text.</p>
+    <table summary="Selectors for the Diacritics feature">
+      <tr>
+        <th>Selector Name</th>
+        <th>Selector Constant(s)</th>
+        <th>Selector Value</th>
+        <th>Selector Function</th>
+      </tr>
+      <tr>
+        <td class="description">Show Diacritics</td>
+        <td>kShowDiacriticsSelector</td>
+        <td>0</td>
+        <td class="description">This is the default. It means to display the diacritics normally (that is, attached to their baseforms in the right place).</td>
+      </tr>
+      <tr>
+        <td class="description">Hide Diacritics</td>
+        <td>kHideDiacriticsSelector</td>
+        <td>1</td>
+        <td class="description">Don't show the diacritics. This is useful in Arabic children's book text, where the same text can be shown with vowels for one reading audience and without vowels for another.</td>
+      </tr>
+      <tr>
+        <td class="description">Decompose Diacritics</td>
+        <td>kDecomposeDiacriticsSelector</td>
+        <td>2</td>
+        <td class="description">Show the diacritics, but rather than attaching them to their baseforms, show them inline with the rest of the text.</td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3><a name="Type10" id="Type10"></a>Vertical Position</h3>
+    <table summary="The Vertical Position feature">
+      <tr>
+        <th>Feature Constant</th>
+        <th>Feature Value</th>
+        <th>Feature Type</th>
+      </tr>
+      <tr>
+        <td>kVerticalPosition</td>
+        <td>10</td>
+        <td>Exclusive</td>
+      </tr>
+    </table>
+    <p>The Vertical Position feature type controls things like superscripts and subscripts. </p>
+    <table summary="Selectors for the Vertical Position feature">
+      <tr>
+        <th>Selector Name</th>
+        <th>Selector Constant(s)</th>
+        <th>Selector Value</th>
+        <th>Selector Function</th>
+      </tr>
+      <tr>
+        <td class="description">No Vertical Position</td>
+        <td>kNormalPositionSelector</td>
+        <td>0</td>
+        <td class="description">This is the default. It means to display the text with no vertical displacement.</td>
+      </tr>
+      <tr>
+        <td class="description">Superiors</td>
+        <td>kSuperiorsSelector</td>
+        <td>1</td>
+        <td class="description">Changes any characters having superior forms in the font into those forms.</td>
+      </tr>
+      <tr>
+        <td class="description">Inferiors</td>
+        <td>kInferiorsSelector</td>
+        <td>2</td>
+        <td class="description">Changes any characters having inferior forms in the font into those forms.</td>
+      </tr>
+      <tr>
+        <td class="description">Ordinals</td>
+        <td>kOrdinalsSelector</td>
+        <td>3</td>
+        <td class="description">Contextually changes certain letters into their superior forms, like in Spanish changing from 1a to 1ª.</td>
+      </tr>
+      <tr>
+        <td class="description">Scientific Inferiors</td>
+        <td>kScientificInferiorsSelector</td>
+        <td>4</td>
+        <td class="description">Changes any characters having them into inferior forms designed for a technical context (as in H<sub>2</sub>O).</td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3><a name="Type11" id="Type11"></a>Fractions</h3>
+    <table summary="The Fractions feature">
+      <tr>
+        <th>Feature Constant</th>
+        <th>Feature Value</th>
+        <th>Feature Type</th>
+      </tr>
+      <tr>
+        <td>kFractions</td>
+        <td>11</td>
+        <td>Exclusive</td>
+      </tr>
+    </table>
+    <p>The Fractions feature type controls the selection and/or generation of fractions.</p>
+    <table summary="Selectors for the Fractions feature">
+      <tr>
+        <th>Selector Name</th>
+        <th>Selector Constant(s)</th>
+        <th>Selector Value</th>
+        <th>Selector Function</th>
+      </tr>
+      <tr>
+        <td class="description">No Fractions</td>
+        <td>kNoFractionsSelector</td>
+        <td>0</td>
+        <td class="description">This means fractions should not be formed automatically.</td>
+      </tr>
+      <tr>
+        <td class="description">Vertical Fractions</td>
+        <td>kVerticalFractionsSelector</td>
+        <td>1</td>
+        <td class="description">Form vertical (pre-drawn) fractions present in the font.</td>
+      </tr>
+      <tr>
+        <td class="description">Diagonal Fractions</td>
+        <td>kDiagonalFractionsSelector</td>
+        <td>2</td>
+        <td class="description">Acts like the Vertical Fractions selector, but fractions will be synthesized using superiors and inferiors (or special-purpose numerator and denominator forms, if present in the font).</td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3><a name="Type13" id="Type13"></a>Overlapping Characters</h3>
+    <table summary="The Overlapping Characters feature">
+      <tr>
+        <th>Feature Constant</th>
+        <th>Feature Value</th>
+        <th>Feature Type</th>
+      </tr>
+      <tr>
+        <td>kOverlappingCharacters</td>
+        <td>13</td>
+        <td>Nonexclusive</td>
+      </tr>
+    </table>
+    <p>The Overlapping Characters feature type permits the user to prevent the collision of long tails on characters with other characters.</p>
+    <table summary="Selectors for the Overlapping Characters feature">
+      <tr>
+        <th>Selector Name</th>
+        <th>Selector Constant(s)</th>
+        <th>Selector Value</th>
+        <th>Selector Function</th>
+      </tr>
+      <tr>
+        <td class="description">Overlap Prevention</td>
+        <td>kPreventOverlapOnSelector<br>
+        kPreventOverlapOffSelector</td>
+        <td>0</td>
+        <td class="description">Turns overlap prevention on or off.</td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3><a name="Type14" id="Type14"></a>Typographic Extras</h3>
+    <table summary="The Typographic Extras feature">
+      <tr>
+        <th>Feature Constant</th>
+        <th>Feature Value</th>
+        <th>Feature Type</th>
+      </tr>
+      <tr>
+        <td>kTypographicExtras</td>
+        <td>14</td>
+        <td>Nonexclusive</td>
+      </tr>
+    </table>
+    <p>The Typographic Extras feature type represents a collection of effects that are associated with fine typography. It is a non-exclusive feature type.</p>
+    <p>Except for the slashed/unslashed selector, the use of this feature is discouraged. Font features should not be used to mimic possible changes in the underlying text, as it confuses users.</p>
+    <table summary="Selectors for the Typographic Extras feature">
+      <tr>
+        <th>Selector Name</th>
+        <th>Selector Constant(s)</th>
+        <th>Selector Value</th>
+        <th>Selector Function</th>
+      </tr>
+      <tr>
+        <td class="deprecatedDescription">Hyphens to Em Dash</td>
+        <td class="deprecated">kHyphensToEmDashOnSelector<br>
+        kHyphensToEmDashOffSelector</td>
+        <td class="deprecated">0</td>
+        <td class="deprecatedDescription">Causes two adjacent hyphens to change into a single em dash. Use of this selector is discouraged.</td>
+      </tr>
+      <tr>
+        <td class="deprecatedDescription">Hyphen to En Dash</td>
+        <td class="deprecated">kHyphenToEnDashOnSelector<br>
+        kHyphenToEnDashOffSelector</td>
+        <td class="deprecated">2</td>
+        <td class="deprecatedDescription">Changes the hyphen in a space-hyphen-space or digit-hyphen-digit group into an en dash. Use of this selector is discouraged.</td>
+      </tr>
+      <tr>
+        <td class="description">Unslashed Zero</td>
+        <td>kSlashedZeroOnSelector<br>
+        kSlashedZeroOffSelector</td>
+        <td>4</td>
+        <td class="description">Makes sure the unslashed zero is always used (even if the font designates the slashed zero as default), of course assuming the unslashed zero actually exists in the font.</td>
+      </tr>
+      <tr>
+        <td class="deprecatedDescription">Form Interrobang</td>
+        <td class="deprecated">kFormInterrobangOnSelector<br>
+        kFormInterrobangOffSelector</td>
+        <td class="deprecated">6</td>
+        <td class="deprecatedDescription">Maps the strings '?!' or '!?' to the interrobang (if present in the font). Use of this selector is discouraged.</td>
+      </tr>
+      <tr>
+        <td class="deprecatedDescription">Smart Quotes</td>
+        <td class="deprecated">kSmartQuotesOnSelector<br>
+        kSmartQuotesOffSelector</td>
+        <td class="deprecated">8</td>
+        <td class="deprecatedDescription">Contextually replaces straight quotes with curly quotes. Use of this selector is discouraged.</td>
+      </tr>
+      <tr>
+        <td class="deprecatedDescription">Periods to Ellipsis</td>
+        <td class="deprecated">kPeriodsToEllipsisOnSelector<br>
+        kPeriodsToEllipsisOffSelector</td>
+        <td class="deprecated">10</td>
+        <td class="deprecatedDescription">Replaces a sequence of three periods with the ellipsis. Use of this selector is discouraged.</td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3><a name="Type15" id="Type15"></a>Mathematical Extras</h3>
+    <table summary="The Mathematical Extras feature">
+      <tr>
+        <th>Feature Constant</th>
+        <th>Feature Value</th>
+        <th>Feature Type</th>
+      </tr>
+      <tr>
+        <td>kMathematicalExtras</td>
+        <td>15</td>
+        <td>Nonexclusive</td>
+      </tr>
+    </table>
+    <p>The Mathematical Extras feature type represents a collection of effects useful in setting figures and mathematics. It is a non-exclusive feature type.</p>
+    <table summary="Selectors for the Mathematical Extras feature">
+      <tr>
+        <th>Selector Name</th>
+        <th>Selector Constant(s)</th>
+        <th>Selector Value</th>
+        <th>Selector Function</th>
+      </tr>
+      <tr>
+        <td class="deprecatedDescription">Hyphen To Minus</td>
+        <td class="deprecated">kHyphenToMinusOnSelector<br>
+        kHyphenToMinusOffSelector</td>
+        <td class="deprecated">0</td>
+        <td class="deprecatedDescription">Changes the hyphen in a space-hyphen-space or digit-hyphen-digit group into a minus. Use of this selector is discouraged.</td>
+      </tr>
+      <tr>
+        <td class="deprecatedDescription">Asterisk to Multiply</td>
+        <td class="deprecated">kAsteriskToMultiplyOnSelector<br>
+        kAsteriskToMultiplyOffSelector</td>
+        <td class="deprecated">2</td>
+        <td class="deprecatedDescription">Changes the "*" in a space-*-space group into a multiplication sign (×). Use of this selector is discouraged.</td>
+      </tr>
+      <tr>
+        <td class="deprecatedDescription">Slash to Divide</td>
+        <td class="deprecated">kSlashToDivideOnSelector<br>
+        kSlashToDivideOffSelector</td>
+        <td class="deprecated">4</td>
+        <td class="deprecatedDescription">Changes the "/" in a space-/-space group into a division sign (÷). Use of this selector is discouraged.</td>
+      </tr>
+      <tr>
+        <td class="deprecatedDescription">Inequality Ligatures</td>
+        <td class="deprecated">kInequalityLigaturesOnSelector<br>
+        kInequalityLigaturesOffSelector</td>
+        <td class="deprecated">6</td>
+        <td class="deprecatedDescription">Changes the &gt;= sequence into a greater-than-or-equal glyph and the &lt;= sequence into a less-than-or-equal glyph. Use of this selector is discouraged.</td>
+      </tr>
+      <tr>
+        <td class="deprecatedDescription">Exponents</td>
+        <td class="deprecated">kExponentsOnSelector<br>
+        kExponentsOffSelector</td>
+        <td class="deprecated">8</td>
+        <td class="deprecatedDescription">Takes digits immediately following a "^" and changes them into their superior forms. Use of this selector is discouraged.</td>
+      </tr>
+      <tr>
+        <td class="description">Mathematical Greek</td>
+        <td>kMathematicalGreekOnSelector<br>
+        kMathematicalGreekOffSelector</td>
+        <td>10</td>
+        <td class="description">Special forms of Greek glyphs designed for use in mathematics (as opposed to writing Greek).</td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3><a name="Type16" id="Type16"></a>Ornament Sets</h3>
+    <table summary="The Ornament Sets feature">
+      <tr>
+        <th>Feature Constant</th>
+        <th>Feature Value</th>
+        <th>Feature Type</th>
+      </tr>
+      <tr>
+        <td>kOrnamentSets</td>
+        <td>16</td>
+        <td>Exclusive</td>
+      </tr>
+    </table>
+    <p>The Ornament Sets feature type specifies non-letter ornament sets of glyphs. For example, fleurons or decorative borders could be represented by this feature type.</p>
+    <p>This feature is useful to allow a single pi font to stand in for several.</p>
+    <p>As a rule, this feature should only be used for characters in one of Unicode's private use areas.</p>
+    <table summary="Selectors for the Ornament Sets feature">
+      <tr>
+        <th>Selector Name</th>
+        <th>Selector Constant(s)</th>
+        <th>Selector Value</th>
+        <th>Selector Function</th>
+      </tr>
+      <tr>
+        <td class="description">None</td>
+        <td>kNoOrnamentsSelector</td>
+        <td>0</td>
+        <td class="description">Do not select any ornaments.</td>
+      </tr>
+      <tr>
+        <td class="description">Dingbats</td>
+        <td>kDingbatsSelector</td>
+        <td>1</td>
+        <td class="description">Chooses miscellaneous symbols such as arrows, stars, and pointing hands used for occasional emphasis in display.</td>
+      </tr>
+      <tr>
+        <td class="description">Pi Characters</td>
+        <td>kPiCharactersSelector</td>
+        <td>2</td>
+        <td class="description">Chooses a set of related symbols designed for a particular purpose (e.g. cartography or musical notation) which do not make up a formal alphabet.</td>
+      </tr>
+      <tr>
+        <td class="description">Fleurons</td>
+        <td>kFleuronsSelector</td>
+        <td>3</td>
+        <td class="description">Chooses ornaments in the shape of flowers, vine leaves, and so on.</td>
+      </tr>
+      <tr>
+        <td class="description">Decorative Borders</td>
+        <td>kDecorativeBordersSelector</td>
+        <td>4</td>
+        <td class="description">Chooses glyphs designed to be used in interlocking or repeating patterns as borders for text.</td>
+      </tr>
+      <tr>
+        <td class="description">International Symbols</td>
+        <td>kInternationalSymbolsSelector</td>
+        <td>5</td>
+        <td class="description">Chooses glyphs representing standard, internationally-recognizable icons.</td>
+      </tr>
+      <tr>
+        <td class="description">Math Symbols</td>
+        <td>kMathSymbolsSelector</td>
+        <td>6</td>
+        <td class="description">Chooses special symbols used in setting mathematics or logic text. This should only be used for forms which are not already included in Unicode.</td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3><a name="Type17" id="Type17"></a>Character Alternatives</h3>
+    <table summary="The Character Alternatives feature">
+      <tr>
+        <th>Feature Constant</th>
+        <th>Feature Value</th>
+        <th>Feature Type</th>
+      </tr>
+      <tr>
+        <td>kCharacterAlternatives</td>
+        <td>17</td>
+        <td>Exclusive</td>
+      </tr>
+    </table>
+    <p>The selectors for this feature simply select different sets of glyphs in a font. For example, a font with twenty ampersands could place them in twenty selectors under this feature type. Use of the Style Options feature type is, however, preferred when feasible. The first setting for this feature (selector 0) should be "No Alternates".</p>
+    <p>The selectors are not ennumerated.</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3><a name="Type18" id="Type18"></a>Design Complexity</h3>
+    <table summary="The Design Complexity feature">
+      <tr>
+        <th>Feature Constant</th>
+        <th>Feature Value</th>
+        <th>Feature Type</th>
+      </tr>
+      <tr>
+        <td>kDesignComplexity</td>
+        <td>18</td>
+        <td>Exclusive</td>
+      </tr>
+    </table>
+    <p>The Design Complexity feature type controls the overall appearance of the font. It can be used to allow a <em>single font</em> to contain plain glyphs, italic glyphs, calligraphic chancery glyphs, etc. Design Level 1 should be available for any font which utilizes this feature type, and it should generally be the default setting. The remaining design levels progress from simplest to most complex.</p>
+    <table summary="Selectors for the Design Complexity feature">
+      <tr>
+        <th>Selector Name</th>
+        <th>Selector Constant(s)</th>
+        <th>Selector Value</th>
+        <th>Selector Function</th>
+      </tr>
+      <tr>
+        <td class="description">Design Level 1</td>
+        <td>kDesignLevel1Selector</td>
+        <td>0</td>
+        <td class="description">Normal glyphs (first design level)</td>
+      </tr>
+      <tr>
+        <td class="description">Design Level 2</td>
+        <td>kDesignLevel2Selector</td>
+        <td>1</td>
+        <td class="description">Second design level</td>
+      </tr>
+      <tr>
+        <td class="description">Design Level 3</td>
+        <td>kDesignLevel3Selector</td>
+        <td>2</td>
+        <td class="description">Third design level</td>
+      </tr>
+      <tr>
+        <td class="description">Design Level 4</td>
+        <td>kDesignLevel4Selector</td>
+        <td>3</td>
+        <td class="description">Fourth design level</td>
+      </tr>
+      <tr>
+        <td class="description">Design Level 5</td>
+        <td>kDesignLevel5Selector</td>
+        <td>4</td>
+        <td class="description">Fifth design level</td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3><a name="Type19" id="Type19"></a>Style Options</h3>
+    <table summary="The Style Options feature">
+      <tr>
+        <th>Feature Constant</th>
+        <th>Feature Value</th>
+        <th>Feature Type</th>
+      </tr>
+      <tr>
+        <td>kStyleOptions</td>
+        <td>19</td>
+        <td>Exclusive</td>
+      </tr>
+    </table>
+    <p>The Style Options feature type allows the font designer to group together collections of non-contextual substitutions into named sets.</p>
+    <table summary="Selectors for the Style Options feature">
+      <tr>
+        <th>Selector Name</th>
+        <th>Selector Constant(s)</th>
+        <th>Selector Value</th>
+        <th>Selector Function</th>
+      </tr>
+      <tr>
+        <td class="description">No Style Options</td>
+        <td>kNoStyleOptionsSelector</td>
+        <td>0</td>
+        <td class="description">Use plain text.</td>
+      </tr>
+      <tr>
+        <td class="description">Display Text</td>
+        <td>kDisplayTextSelector</td>
+        <td>1</td>
+        <td class="description">Chooses glyphs designed to emphasize the unique appearance of the design at display sizes, typically above 24 point.</td>
+      </tr>
+      <tr>
+        <td class="description">Engraved Text</td>
+        <td>kEngravedTextSelector</td>
+        <td>2</td>
+        <td class="description">Chooses glyphs with contrasting strokes parallel to the main strokes, particularly those designed to look like they're engraved in stone.</td>
+      </tr>
+      <tr>
+        <td class="description">Illuminated Caps</td>
+        <td>kIlluminatedCapsSelector</td>
+        <td>3</td>
+        <td class="description">Chooses capital letter glyphs with decoration filling the white space surrounding the glyph, in the manner used by medieval scribes.</td>
+      </tr>
+      <tr>
+        <td class="description">Titling Caps</td>
+        <td>kTitlingCapsSelector</td>
+        <td>4</td>
+        <td class="description">Specifies conversion of capital letters to a special titling form.</td>
+      </tr>
+      <tr>
+        <td class="description">Tall Caps</td>
+        <td>kTallCapsSelector</td>
+        <td>5</td>
+        <td class="description">Specifies conversion of certain capital letters into taller forms.</td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3><a name="Type20" id="Type20"></a>Character Shape</h3>
+    <table summary="The Character Shape feature">
+      <tr>
+        <th>Feature Constant</th>
+        <th>Feature Value</th>
+        <th>Feature Type</th>
+      </tr>
+      <tr>
+        <td>kCharacterShape</td>
+        <td>20</td>
+        <td>Exclusive</td>
+      </tr>
+    </table>
+    <p>The Character Shape feature type is useful when a single font contains different appearances for the same character which are not traditionally treated as swashes.</p>
+    <p>Note that for a Simplified Chinese to Traditional Chinese mapping, there are often several possible choices. Use the traditional characters alternative sets for these.</p>
+    <table summary="Selectors for the Character Shape feature">
+      <tr>
+        <th>Selector Name</th>
+        <th>Selector Constant(s)</th>
+        <th>Selector Value</th>
+        <th>Selector Function</th>
+      </tr>
+      <tr>
+        <td class="description">Traditional Glyphs</td>
+        <td>kTraditionalCharactersSelector</td>
+        <td>0</td>
+        <td class="description">Use traditional forms for characters.</td>
+      </tr>
+      <tr>
+        <td class="description">Simplified Glyphs</td>
+        <td>kSimplifiedCharactersSelector</td>
+        <td>1</td>
+        <td class="description">Use simplified forms for characters. The use of this selector for simplified glyphs sperately encoded within Unicode (e.g., 说 for 説).</td>
+      </tr>
+      <tr>
+        <td class="description">JIS 1978 Glyphs</td>
+        <td>kJIS1978CharactersSelector</td>
+        <td>2</td>
+        <td class="description">Use character shapes for Japanese characters as defined by the JIS (Japanese Industrial Standard) C 6226-1978 document.</td>
+      </tr>
+      <tr>
+        <td class="description">JIS 1983 Glyphs</td>
+        <td>kJIS1983CharactersSelector</td>
+        <td>3</td>
+        <td class="description">Use character shapes for Japanese characters as defined by the JIS X 0208-1983 document.</td>
+      </tr>
+      <tr>
+        <td class="description">JIS 1990 Glyphs</td>
+        <td>kJIS1990CharactersSelector</td>
+        <td>4</td>
+        <td class="description">Use character shapes for Japanese characters as defined by the JIS X 0208-1990 document.</td>
+      </tr>
+      <tr>
+        <td class="description">Traditional Glyphs, Alternative Set 1</td>
+        <td>kTraditionalAltOneSelector</td>
+        <td>5</td>
+        <td class="description">Use alternate set 1 of traditional forms for characters.</td>
+      </tr>
+      <tr>
+        <td class="description">Traditional Glyphs, Alternative Set 2</td>
+        <td>kTraditionalAltTwoSelector</td>
+        <td>6</td>
+        <td class="description">Use alternate set 2 of traditional forms for characters.</td>
+      </tr>
+      <tr>
+        <td class="description">Traditional Glyphs, Alternative Set 3</td>
+        <td>kTraditionalAltThreeSelector</td>
+        <td>7</td>
+        <td class="description">Use alternate set 3 of traditional forms for characters.</td>
+      </tr>
+      <tr>
+        <td class="description">Traditional Glyphs, Alternative Set 4</td>
+        <td>kTraditionalAltFourSelector</td>
+        <td>8</td>
+        <td class="description">Use alternate set 4 of traditional forms for characters.</td>
+      </tr>
+      <tr>
+        <td class="description">Traditional Glyphs, Alternative Set 5</td>
+        <td>kTraditionalAltFiveSelector</td>
+        <td>9</td>
+        <td class="description">Use alternate set 5 of traditional forms for characters.</td>
+      </tr>
+      <tr>
+        <td class="description">Expert Glyphs</td>
+        <td>kExpertCharactersSelector</td>
+        <td>10</td>
+        <td class="description">Use "expert" forms of ideographs, such as are defined in the Fujitsu FMR character set.</td>
+      </tr>
+      <tr>
+        <td class="description">JIS 2004 Glyphs</td>
+        <td>kJIS2004CharactersSelector</td>
+        <td>11</td>
+        <td class="description">Use character shapes for Japanese characters as defined by the JIS X 0208-2004 document.</td>
+      </tr>
+      <tr>
+        <td class="description">Hojo Glyphs</td>
+        <td>kHojoCharactersSelector</td>
+        <td>12</td>
+        <td class="description">The JIS X 0212-1990 (aka, “Hojo Kanji”) and JIS X 0213:2004 character sets overlap significantly. In some cases their prototypical glyphs differ. When building fonts that support both JIS X 0212-1990 and JIS X 0213:2004 (such as those supporting the Adobe-Japan 1-6 character collection), it is recommended that JIS X 0213:2004 forms be preferred as the encoded form. The 'hojo' feature is used to access the JIS X 0212-1990 glyphs for the cases when the JIS X 0213:2004 form is encoded.</td>
+      </tr>
+      <tr>
+        <td class="description">NLC Glyphs</td>
+        <td>kNLCCharactersSelector</td>
+        <td>13</td>
+        <td class="description">The National Language Council (NLC) of Japan has defined new glyph shapes for a number of JIS characters in 2000. This selector is used to access those glyphs.</td>
+      </tr>
+      <tr>
+        <td class="description">Traditional Names</td>
+        <td>kTraditionalNamesCharactersSelector</td>
+        <td>14</td>
+        <td class="description">Maps simplified forms in a font to corresponding traditional forms which can be used in personal names.</td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3><a name="Type21" id="Type21"></a>Number Case</h3>
+    <table summary="The Number Case feature">
+      <tr>
+        <th>Feature Constant</th>
+        <th>Feature Value</th>
+        <th>Feature Type</th>
+      </tr>
+      <tr>
+        <td>kNumberCase</td>
+        <td>21</td>
+        <td>Exclusive</td>
+      </tr>
+    </table>
+    <p>Number Case is independent of Letter Case. Lower Case Numbers (also called "traditional" or "old style") are digits which may descend below the baseline, as opposed to Upper Case Numbers (also called "lining"), which do <em>not</em> descend below the baseline.</p>
+    <table summary="Selectors for the Number Case feature">
+      <tr>
+        <th>Selector Name</th>
+        <th>Selector Constant(s)</th>
+        <th>Selector Value</th>
+        <th>Selector Function</th>
+      </tr>
+      <tr>
+        <td class="description">Lower Case Numbers</td>
+        <td>kLowerCaseNumbersSelector</td>
+        <td>0</td>
+        <td class="description">These forms of numbers may descend below the baseline. They are sometimes known as "traditional" or "old-style" numbers.</td>
+      </tr>
+      <tr>
+        <td class="description">Upper Case Numbers</td>
+        <td>kUpperCaseNumbersSelector</td>
+        <td>1</td>
+        <td class="description">These forms of numbers do not descend below the baseline. They are sometimes known as "lining" numbers.</td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3><a name="Type22" id="Type22"></a>Text Spacing</h3>
+    <table summary="The Text Spacing feature">
+      <tr>
+        <th>Feature Constant</th>
+        <th>Feature Value</th>
+        <th>Feature Type</th>
+      </tr>
+      <tr>
+        <td>kTextSpacing</td>
+        <td>22</td>
+        <td>Exclusive</td>
+      </tr>
+    </table>
+    <p>The Text Spacing feature type is used to select between the proportional, monospaced and half-width forms of characters in a font. Use of this feature type is optional; for more precise control see the Kana Spacing and Ideographic Spacing feature types.</p>
+    <table summary="Selectors for the Text Spacing feature">
+      <tr>
+        <th>Selector Name</th>
+        <th>Selector Constant(s)</th>
+        <th>Selector Value</th>
+        <th>Selector Function</th>
+      </tr>
+      <tr>
+        <td class="description">Proportional</td>
+        <td>kProportionalTextSelector</td>
+        <td>0</td>
+        <td class="description">Selects the proportional forms of letters.</td>
+      </tr>
+      <tr>
+        <td class="description">Monospace</td>
+        <td>kMonospacedTextSelector</td>
+        <td>1</td>
+        <td class="description">Selects the monospace forms of letters.</td>
+      </tr>
+      <tr>
+        <td class="description">Half-width</td>
+        <td>kHalfWidthTextSelector</td>
+        <td>2</td>
+        <td class="description">Selects the half-width forms of letters.</td>
+      </tr>
+      <tr>
+        <td class="description">Third-width</td>
+        <td>kThirdWidthTextSelector</td>
+        <td>3</td>
+        <td class="description">Selects the third-width forms of letters.</td>
+      </tr>
+      <tr>
+        <td class="description">Quarter-width</td>
+        <td>kQuarterWidthTextSelector</td>
+        <td>4</td>
+        <td class="description">Selects the quarter-width forms of letters.</td>
+      </tr>
+      <tr>
+        <td class="description">Alternate Proportional</td>
+        <td>kAltProportionalTextSelector</td>
+        <td>5</td>
+        <td class="description">Selects alternate proportional forms of letters.</td>
+      </tr>
+      <tr>
+        <td class="description">Alternate Half-width</td>
+        <td>kAltHalfWidthTextSelector</td>
+        <td>6</td>
+        <td class="description">Selects alternate half-width forms of letters.</td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3><a name="Type23" id="Type23"></a>Transliteration</h3>
+    <table summary="The Transliteration feature">
+      <tr>
+        <th>Feature Constant</th>
+        <th>Feature Value</th>
+        <th>Feature Type</th>
+      </tr>
+      <tr>
+        <td>kTransliteration</td>
+        <td>23</td>
+        <td>Exclusive</td>
+      </tr>
+    </table>
+    <p>The Transliteration feature types allows text is one format to be displayed using another format. An example is taking a hiragana string and displaying it as katakana. As transliteration is usually done in character space, its use is strongly discouraged.</p>
+    <table summary="Selectors for the Transliteration feature">
+      <tr>
+        <th>Selector Name</th>
+        <th>Selector Constant(s)</th>
+        <th>Selector Value</th>
+        <th>Selector Function</th>
+      </tr>
+      <tr>
+        <td class="description">No Transliteration</td>
+        <td>kNoTransliterationSelector</td>
+        <td>0</td>
+        <td class="description">Indicates that no transliteration should take place.</td>
+      </tr>
+      <tr>
+        <td class="deprecatedDescription">Hanja to Hangul</td>
+        <td class="deprecated">kHanjaToHangulSelector</td>
+        <td class="deprecated">1</td>
+        <td class="deprecatedDescription">Indicates hanja should be transliterated to hangul.</td>
+      </tr>
+      <tr>
+        <td class="deprecatedDescription">Hiragana To Katakana</td>
+        <td class="deprecated">kHiraganaToKatakanaSelector</td>
+        <td class="deprecated">2</td>
+        <td class="deprecatedDescription">Indicates hiragana should be transliterated to katakana.</td>
+      </tr>
+      <tr>
+        <td class="deprecatedDescription">Katakana To Hiragana</td>
+        <td class="deprecated">kKatakanaToHiraganaSelector</td>
+        <td class="deprecated">3</td>
+        <td class="deprecatedDescription">Indicates katakana should be transliterated to hiragana.</td>
+      </tr>
+      <tr>
+        <td class="deprecatedDescription">Kana To Romanization</td>
+        <td class="deprecated">kKanaToRomanizationSelector</td>
+        <td class="deprecated">4</td>
+        <td class="deprecatedDescription">Indicates hiragana and katakana should be transliterated to romaji.</td>
+      </tr>
+      <tr>
+        <td class="deprecatedDescription">Romanization To Hiragana</td>
+        <td class="deprecated">kRomanizationToHiraganaSelector</td>
+        <td class="deprecated">5</td>
+        <td class="deprecatedDescription">Indicates romaji should be transliterated to hiragana.</td>
+      </tr>
+      <tr>
+        <td class="deprecatedDescription">Romanization To Katakana</td>
+        <td class="deprecated">kRomanizationToKatakanaSelector</td>
+        <td class="deprecated">6</td>
+        <td class="deprecatedDescription">Indicates romaji should be transliterated to katakana.</td>
+      </tr>
+      <tr>
+        <td class="deprecatedDescription">Hanja To Hangul Alt One</td>
+        <td class="deprecated">kHanjaToHangulAltOneSelector</td>
+        <td class="deprecated">7</td>
+        <td class="deprecatedDescription">This indicates that hanja with multiple readings should be translirated into hangul for their second reading.</td>
+      </tr>
+      <tr>
+        <td class="deprecatedDescription">Hanja To Hangul Alt Two</td>
+        <td class="deprecated">kHanjaToHangulAltTwoSelector</td>
+        <td class="deprecated">8</td>
+        <td class="deprecatedDescription">This indicates that hanja with multiple readings should be translirated into hangul for their third reading.</td>
+      </tr>
+      <tr>
+        <td class="deprecatedDescription">Hanja To Hangul Alt Three</td>
+        <td class="deprecated">kHanjaToHangulAltThreeSelector</td>
+        <td class="deprecated">9</td>
+        <td class="deprecatedDescription">This indicates that hanja with multiple readings should be translirated into hangul for their fourth reading.</td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3><a name="Type24" id="Type24"></a>Annotation</h3>
+    <table summary="The Annotation feature">
+      <tr>
+        <th>Feature Constant</th>
+        <th>Feature Value</th>
+        <th>Feature Type</th>
+      </tr>
+      <tr>
+        <td>kAnnotation</td>
+        <td>24</td>
+        <td>Exclusive</td>
+      </tr>
+    </table>
+    <p>The Annotation feature type specifies annotations (or adornments) to basic lettershapes. For instance, most Japanese fonts include versions of numbers that are circled, parenthesized, have periods after them, and so on. Many of these are separately encoded in Unicode for compatibility reasons, but the use of this feature allows for a more extensive set of annotated numerals to be available.</p>
+    <table summary="Selectors for the Annotation feature">
+      <tr>
+        <th>Selector Name</th>
+        <th>Selector Constant(s)</th>
+        <th>Selector Value</th>
+        <th>Selector Function</th>
+      </tr>
+      <tr>
+        <td class="description">No Annotation</td>
+        <td>kNoAnnotationSelector</td>
+        <td>0</td>
+        <td class="description">Indicates that characters should appear without annotation.</td>
+      </tr>
+      <tr>
+        <td class="description">Box Annotation</td>
+        <td>kBoxAnnotationSelector</td>
+        <td>1</td>
+        <td class="description">Use the forms of characters surrounded by a box cartouche.</td>
+      </tr>
+      <tr>
+        <td class="description">Rounded Box Annotation</td>
+        <td>kRoundedBoxAnnotationSelector</td>
+        <td>2</td>
+        <td class="description">Use the forms of characters surrounded by a box cartouche with rounded corners.</td>
+      </tr>
+      <tr>
+        <td class="description">Circle Annotation</td>
+        <td>kCircleAnnotationSelector</td>
+        <td>3</td>
+        <td class="description">Use the forms of characters surrounded by a circle. For instance, see Unicodes U+3260 through U+326F.</td>
+      </tr>
+      <tr>
+        <td class="description">Inverted Circle Annotation</td>
+        <td>kInvertedCircleAnnotationSelector</td>
+        <td>4</td>
+        <td class="description">Same as Circle Annotation, but with white and black reversed. For instance, see Unicodes U+2776 through U+277F.</td>
+      </tr>
+      <tr>
+        <td class="description">Parenthesis Annotation</td>
+        <td>kParenthesisAnnotationSelector</td>
+        <td>5</td>
+        <td class="description">Use the forms of characters surrounded by parentheses. For instance, see Unicodes U+2474 through U+2487.</td>
+      </tr>
+      <tr>
+        <td class="description">Period Annotation</td>
+        <td>kPeriodAnnotationSelector</td>
+        <td>6</td>
+        <td class="description">Use the forms of characters followed by a period. For instance, see Unicodes U+2488 through U+249B.</td>
+      </tr>
+      <tr>
+        <td class="description">Roman Numeral Annotation</td>
+        <td>kRomanNumeralAnnotationSelector</td>
+        <td>7</td>
+        <td class="description">Display the given characters in their Roman Numeral form.</td>
+      </tr>
+      <tr>
+        <td class="description">Diamond Annotation</td>
+        <td>kDiamondAnnotationSelector</td>
+        <td>8</td>
+        <td class="description">Display the text surrounded by a diamond.</td>
+      </tr>
+      <tr>
+        <td class="description">Inverted Box Annotation</td>
+        <td>kInvertedBoxAnnotationSelector</td>
+        <td>9</td>
+        <td class="description">Same as Box Annotation, but with white and black reversed.</td>
+      </tr>
+      <tr>
+        <td class="description">Inverted Rounded Box Annotation</td>
+        <td>kInvertedRoundedBoxAnnotationSelector</td>
+        <td>10</td>
+        <td class="description">Same as Rounded Box Annotation, but with white and black reversed.</td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3><a name="Type25" id="Type25"></a>Kana Spacing</h3>
+    <table summary="The Kana Spacing feature">
+      <tr>
+        <th>Feature Constant</th>
+        <th>Feature Value</th>
+        <th>Feature Type</th>
+      </tr>
+      <tr>
+        <td>kKanaSpacing</td>
+        <td>25</td>
+        <td>Exclusive</td>
+      </tr>
+    </table>
+    <p>The Kana Spacing feature type is used to select widths specifically for Japanese hiragana and katakana characters.</p>
+    <table summary="Selectors for the Kana Spacing feature">
+      <tr>
+        <th>Selector Name</th>
+        <th>Selector Constant(s)</th>
+        <th>Selector Value</th>
+        <th>Selector Function</th>
+      </tr>
+      <tr>
+        <td class="description">Full Width</td>
+        <td>kFullWidthKanaSelector</td>
+        <td>0</td>
+        <td class="description">Selects the full width forms of kana.</td>
+      </tr>
+      <tr>
+        <td class="description">Proportional</td>
+        <td>kProportionalKanaSelector</td>
+        <td>1</td>
+        <td class="description">Selects the proportional forms of kana.</td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3><a name="Type26" id="Type26"></a>Ideographic Spacing</h3>
+    <table summary="The Ideographic Spacing feature">
+      <tr>
+        <th>Feature Constant</th>
+        <th>Feature Value</th>
+        <th>Feature Type</th>
+      </tr>
+      <tr>
+        <td>kIdeographicSpacing</td>
+        <td>26</td>
+        <td>Exclusive</td>
+      </tr>
+    </table>
+    <p>The Ideographic Spacing feature type is used to select between full-width and proportional forms of ideographs (i.e. Han-derived characters).</p>
+    <table summary="Selectors for the Ideographic Spacing feature">
+      <tr>
+        <th>Selector Name</th>
+        <th>Selector Constant(s)</th>
+        <th>Selector Value</th>
+        <th>Selector Function</th>
+      </tr>
+      <tr>
+        <td class="description">Full Width</td>
+        <td>kFullWidthIdeographsSelector</td>
+        <td>0</td>
+        <td class="description">Selects the full width forms of ideographs.</td>
+      </tr>
+      <tr>
+        <td class="description">Proportional</td>
+        <td>kProportionalIdeographsSelector</td>
+        <td>1</td>
+        <td class="description">Selects the proportional forms of ideographs.</td>
+      </tr>
+      <tr>
+        <td class="description">Half Width</td>
+        <td>kHalfWidthIdeographsSelector</td>
+        <td>2</td>
+        <td class="description">Selects the half-width forms of ideographs.</td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3><a name="Type27" id="Type27"></a>Unicode Decomposition</h3>
+    <table summary="The Unicode Decomposition feature">
+      <tr>
+        <th>Feature Constant</th>
+        <th>Feature Value</th>
+        <th>Feature Type</th>
+      </tr>
+      <tr>
+        <td>kUnicodeDecomposition</td>
+        <td>27</td>
+        <td>Nonexclusive</td>
+      </tr>
+    </table>
+    <p>This feature is used to make various forms of Unicode composition/decomposition visible to the user.</p>
+    <table summary="Selectors for the Unicode Decomposition feature">
+      <tr>
+        <th>Selector Name</th>
+        <th>Selector Constant(s)</th>
+        <th>Selector Value</th>
+        <th>Selector Function</th>
+      </tr>
+      <tr>
+        <td class="description">Canonical Composition</td>
+        <td>kCanonicalCompositionOnSelector<br>
+        kCanonicalCompositionOffSelector</td>
+        <td>0</td>
+        <td class="description">Displays decomposed Unicode as fully composed. This selector should generally not appear in the UI.</td>
+      </tr>
+      <tr>
+        <td class="description">Compatibility Composition</td>
+        <td>kCompatibilityCompositionOnSelector<br>
+        kCompatibilityCompositionOffSelector</td>
+        <td>2</td>
+        <td class="description">Displays decomposed compatibility Unicode as fully composed. This selector should generally not appear in the UI.</td>
+      </tr>
+      <tr>
+        <td class="description">Transcoding Composition</td>
+        <td>kTranscodingCompositionOnSelector<br>
+        kTranscodingCompositionOffSelector</td>
+        <td>4</td>
+        <td class="description">Some of the old Macintosh text encodings used with QuickDraw included characters not encoded in Unicode. To provide round-trip compatibility between the two, Apple includes in its implementation of Unicode's Private Use area characters that interact with others to control the transcoding process.  This feature/selector pair is used to control whether or not these transcoding controls are used.</td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3><a name="Type28" id="Type28"></a>Ruby Kana</h3>
+    <table summary="The Ruby Kana feature">
+      <tr>
+        <th>Feature Constant</th>
+        <th>Feature Value</th>
+        <th>Feature Type</th>
+      </tr>
+      <tr>
+        <td>kRubyKana</td>
+        <td>28</td>
+        <td>Nonexclusive</td>
+      </tr>
+    </table>
+    <p>Japanese typesetting often uses smaller kana glyphs, generally in superscripted form, to clarify the meaning of kanji which may be unfamiliar to the reader. These are called ruby, from the old typesetting term for four-point-sized type. This feature identifies glyphs in the font which have been designed for this use, substituting them for the default designs.</p>
+    <p>A layout engine will need to do scaling and repositioning of glyphs in order to generate proper ruby. This feature by itself is insufficient.</p>
+    <table summary="Selectors for the Ruby Kana feature">
+      <tr>
+        <th>Selector Name</th>
+        <th>Selector Constant(s)</th>
+        <th>Selector Value</th>
+        <th>Selector Function</th>
+      </tr>
+      <tr>
+        <td class="deprecatedDescription">No Ruby Kana</td>
+        <td class="deprecated">kNoRubyKanaSelector</td>
+        <td class="deprecated">0</td>
+        <td class="deprecatedDescription">Do not use ruby shapes</td>
+      </tr>
+      <tr>
+        <td class="deprecatedDescription">Ruby Kana</td>
+        <td class="deprecated">kRubyKanaSelector</td>
+        <td class="deprecated">1</td>
+        <td class="deprecatedDescription">Use ruby shapes</td>
+      </tr>
+      <tr>
+        <td class="description">Ruby Kana</td>
+        <td>kRubyKanaOnSelector<br>
+        RubyKanaOffSelector</td>
+        <td>2</td>
+        <td class="description">Turns ruby shapes on or off</td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3><a name="Type29" id="Type29"></a>CJK Symbol Alternatives</h3>
+    <table summary="The CJK Symbol Alternatives feature">
+      <tr>
+        <th>Feature Constant</th>
+        <th>Feature Value</th>
+        <th>Feature Type</th>
+      </tr>
+      <tr>
+        <td>kCJKSymbolAlternatives</td>
+        <td>29</td>
+        <td>Exclusive</td>
+      </tr>
+    </table>
+    <p>This feature allows the selection of various alternate forms specific to East Asian symbol characters (e.g., 〠 U+3020 POSTAL MARK FACE).</p>
+    <table summary="Selectors for the CJK Symbol Alternatives feature">
+      <tr>
+        <th>Selector Name</th>
+        <th>Selector Constant(s)</th>
+        <th>Selector Value</th>
+        <th>Selector Function</th>
+      </tr>
+      <tr>
+        <td class="description">No CJK Symbol Alternatives</td>
+        <td>kNoCJKSymbolAlternativesSelector</td>
+        <td>0</td>
+        <td class="description">Use standard forms (that is, the ones characters are mapped to by the <code>'cmap')</code></td>
+      </tr>
+      <tr>
+        <td class="description">CJK Symbol Alt One</td>
+        <td>kCJKSymbolAltOneSelector</td>
+        <td>1</td>
+        <td class="description">Use the first set of alternate forms</td>
+      </tr>
+      <tr>
+        <td class="description">CJK Symbol Alt Two</td>
+        <td>kCJKSymbolAltTwoSelector</td>
+        <td>2</td>
+        <td class="description">Use the second set of alternate forms</td>
+      </tr>
+      <tr>
+        <td class="description">CJK Symbol Alt Three</td>
+        <td>kCJKSymbolAltThreeSelector</td>
+        <td>3</td>
+        <td class="description">Use the third set of alternate forms</td>
+      </tr>
+      <tr>
+        <td class="description">CJK Symbol Alt Four</td>
+        <td>kCJKSymbolAltFourSelector</td>
+        <td>4</td>
+        <td class="description">Use the fourth set of alternate forms</td>
+      </tr>
+      <tr>
+        <td class="description">CJK Symbol Alt Five</td>
+        <td>kCJKSymbolAltFiveSelector</td>
+        <td>5</td>
+        <td class="description">Use the fifth set of alternate forms</td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3><a name="Type30" id="Type30"></a>Ideographic Alternatives</h3>
+    <table summary="The Ideographic Alternatives feature">
+      <tr>
+        <th>Feature Constant</th>
+        <th>Feature Value</th>
+        <th>Feature Type</th>
+      </tr>
+      <tr>
+        <td>kIdeographicAlternatives</td>
+        <td>30</td>
+        <td>Exclusive</td>
+      </tr>
+    </table>
+    <p>This feature allows the selection of various alternate forms specific to East Asian ideographs (e.g., 誠 U+8AA0 vs. 説 U+8AAC, although these two have been separately encoded).</p>
+    <table summary="Selectors for the Ideographic Alternatives feature">
+      <tr>
+        <th>Selector Name</th>
+        <th>Selector Constant(s)</th>
+        <th>Selector Value</th>
+        <th>Selector Function</th>
+      </tr>
+      <tr>
+        <td class="description">No Ideographic Alternatives</td>
+        <td>kNoIdeographicAlternativesSelector</td>
+        <td>0</td>
+        <td class="description">Use standard forms (that is, the ones characters are mapped to by the <code>'cmap')</code></td>
+      </tr>
+      <tr>
+        <td class="description">Ideographic Alt One</td>
+        <td>kIdeographicAltOneSelector</td>
+        <td>1</td>
+        <td class="description">Use the first set of alternate forms</td>
+      </tr>
+      <tr>
+        <td class="description">Ideographic Alt Two</td>
+        <td>kIdeographicAltTwoSelector</td>
+        <td>2</td>
+        <td class="description">Use the second set of alternate forms</td>
+      </tr>
+      <tr>
+        <td class="description">Ideographic Alt Three</td>
+        <td>kIdeographicAltThreeSelector</td>
+        <td>3</td>
+        <td class="description">Use the third set of alternate forms</td>
+      </tr>
+      <tr>
+        <td class="description">Ideographic Alt Four</td>
+        <td>kIdeographicAltFourSelector</td>
+        <td>4</td>
+        <td class="description">Use the fourth set of alternate forms</td>
+      </tr>
+      <tr>
+        <td class="description">Ideographic Alt Five</td>
+        <td>kIdeographicAltFiveSelector</td>
+        <td>5</td>
+        <td class="description">Use the fifth set of alternate forms</td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3><a name="Type31" id="Type31"></a>CJK Vertical Roman Placement</h3>
+    <table summary="The Ideographic Alternatives feature">
+      <tr>
+        <th>Feature Constant</th>
+        <th>Feature Value</th>
+        <th>Feature Type</th>
+      </tr>
+      <tr>
+        <td>kCJKVerticalRomanPlacement</td>
+        <td>31</td>
+        <td>Exclusive</td>
+      </tr>
+    </table>
+    <p>This feature controls how romaji are positioned relative to kanji. The same effect can be achieved by setting the baseline.</p>
+    <table summary="Selectors for the CJK Vertical Roman Placement feature">
+      <tr>
+        <th>Selector Name</th>
+        <th>Selector Constant(s)</th>
+        <th>Selector Value</th>
+        <th>Selector Function</th>
+      </tr>
+      <tr>
+        <td class="description">CJK Vertical Roman Centered</td>
+        <td>kCJKVerticalRomanCenteredSelector</td>
+        <td>0</td>
+        <td class="description">Center Roman glyphs vertically so that their centers and the centers of ideographs are the same</td>
+      </tr>
+      <tr>
+        <td class="description">CJK Vertical Roman H Baseline</td>
+        <td>kCJKVerticalRomanHBaselineSelector</td>
+        <td>1</td>
+        <td class="description">Use a standard Roman baseline for Roman glyphs</td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3><a name="Type32" id="Type32"></a>Italic CJK Roman</h3>
+    <table summary="The Italic CJK Roman feature">
+      <tr>
+        <th>Feature Constant</th>
+        <th>Feature Value</th>
+        <th>Feature Type</th>
+      </tr>
+      <tr>
+        <td>kItalicCJKRoman</td>
+        <td>32</td>
+        <td>Nonexclusive</td>
+      </tr>
+    </table>
+    <p>Determines whether romaji are written using italic glyphs when mixed with kanji.</p>
+    <table summary="Selectors for the Italic CJK Roman feature">
+      <tr>
+        <th>Selector Name</th>
+        <th>Selector Constant(s)</th>
+        <th>Selector Value</th>
+        <th>Selector Function</th>
+      </tr>
+      <tr>
+        <td class="deprecatedDescription">No CJK Italic Roman</td>
+        <td class="deprecated">kNoCJKItalicRomanSelector</td>
+        <td class="deprecated">0</td>
+        <td class="deprecatedDescription">Do not use italic glyphs for romaji</td>
+      </tr>
+      <tr>
+        <td class="deprecatedDescription">CJK Italic Roman</td>
+        <td class="deprecated">kCJKItalicRomanSelector</td>
+        <td class="deprecated">1</td>
+        <td class="deprecatedDescription">Use italic glyphs for romaji</td>
+      </tr>
+      <tr>
+        <td class="description">CJK Italic Roman</td>
+        <td>kCJKItalicRomanOnSelector<br>
+        CJKItalicRomanOffSelector</td>
+        <td>2</td>
+        <td class="description">Turns the use of italics for romaji on and off</td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3><a name="Type33" id="Type33"></a>Case Sensitive Layout</h3>
+    <table summary="The Case Sensitive Layout feature">
+      <tr>
+        <th>Feature Constant</th>
+        <th>Feature Value</th>
+        <th>Feature Type</th>
+      </tr>
+      <tr>
+        <td>kCaseSensitiveLayout</td>
+        <td>33</td>
+        <td>Nonexclusive</td>
+      </tr>
+    </table>
+    <p>This feature allows for alternate forms of punctuation when found in lower-case-only text. For example, an em-dash looks best if its position when surrounded by lower-case letters is lower than its position when surrounded by numerals or upper-case letters.</p>
+    <table summary="Selectors for the Case Sensitive Layout feature">
+      <tr>
+        <th>Selector Name</th>
+        <th>Selector Constant(s)</th>
+        <th>Selector Value</th>
+        <th>Selector Function</th>
+      </tr>
+      <tr>
+        <td class="description">Case Sensitive Layout</td>
+        <td>kCaseSensitiveLayoutOnSelector<br>
+        CaseSensitiveLayoutOffSelector</td>
+        <td>0</td>
+        <td class="description">Turn case-sensitive casing on or off</td>
+      </tr>
+      <tr>
+        <td class="description">Case Sensitive Spacing</td>
+        <td>kCaseSensitiveSpacingOnSelector<br>
+        CaseSensitiveSpacingOffSelector</td>
+        <td>2</td>
+        <td class="description">Turn case-sensitive spacing on or off</td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3><a name="Type34" id="Type34"></a>Alternate Kana</h3>
+    <table summary="The Alternate Kana feature">
+      <tr>
+        <th>Feature Constant</th>
+        <th>Feature Value</th>
+        <th>Feature Type</th>
+      </tr>
+      <tr>
+        <td>kAlternateKana</td>
+        <td>34</td>
+        <td>Nonexclusive</td>
+      </tr>
+    </table>
+    <p>This allows different forms for kana to be used in horizontal or vertical text.</p>
+    <table summary="Selectors for the Alternate Kana feature">
+      <tr>
+        <th>Selector Name</th>
+        <th>Selector Constant(s)</th>
+        <th>Selector Value</th>
+        <th>Selector Function</th>
+      </tr>
+      <tr>
+        <td class="description">Alternate Horiz Kana</td>
+        <td>kAlternateHorizKanaOnSelector<br>
+        AlternateHorizKanaOffSelector</td>
+        <td>0</td>
+        <td class="description">Indicates that alternate forms for hiragana and katakana should be used in horizontal text.</td>
+      </tr>
+      <tr>
+        <td class="description">Alternate Vert Kana</td>
+        <td>kAlternateVertKanaOnSelector<br>
+        AlternateVertKanaOffSelector</td>
+        <td>2</td>
+        <td class="description">Indicates that alternate forms for hiragana and katakana should be used in vertical text.</td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3><a name="Type35" id="Type35"></a>Stylistic Alternatives</h3>
+    <table summary="The Stylistic Alternatives feature">
+      <tr>
+        <th>Feature Constant</th>
+        <th>Feature Value</th>
+        <th>Feature Type</th>
+      </tr>
+      <tr>
+        <td>kStylisticAlternatives</td>
+        <td>35</td>
+        <td>Nonexclusive</td>
+      </tr>
+    </table>
+    <p>This feature allows for different stylistic alternatives for glyphs and is largely equivalent to a nonexclusive version of the Character Alternatives feature. It is intended specifically to be used as the AAT equivalent of the OpenType <code>'ss01'</code> through <code>'ss20'</code> features.</p>
+    <table summary="Selectors for the Stylistic Alternatives feature">
+      <tr>
+        <th>Selector Name</th>
+        <th>Selector Constant(s)</th>
+        <th>Selector Value</th>
+        <th>Selector Function</th>
+      </tr>
+      <tr>
+        <td class="description">No Stylistic Alternates</td>
+        <td>kNoStylisticAlternatesSelector</td>
+        <td>0</td>
+        <td class="description">Use standard forms (that is, the ones characters are mapped to by the <code>'cmap')</code></td>
+      </tr>
+      <tr>
+        <td class="description">Stylistic Alt One</td>
+        <td>kStylisticAltOneOnSelector<br>
+        StylisticAltOneOffSelector</td>
+        <td>2</td>
+        <td class="description">Turns the first set of alternates on or off</td>
+      </tr>
+      <tr>
+        <td class="description">Stylistic Alt Two</td>
+        <td>kStylisticAltTwoOnSelector<br>
+        StylisticAltTwoOffSelector</td>
+        <td>4</td>
+        <td class="description">Turns the second set of alternates on or off</td>
+      </tr>
+      <tr>
+        <td class="description">Stylistic Alt Three</td>
+        <td>kStylisticAltThreeOnSelector<br>
+        StylisticAltThreeOffSelector</td>
+        <td>6</td>
+        <td class="description">Turns the third set of alternates on or off</td>
+      </tr>
+      <tr>
+        <td class="description">Stylistic Alt Four</td>
+        <td>kStylisticAltFourOnSelector<br>
+        StylisticAltFourOffSelector</td>
+        <td>8</td>
+        <td class="description">Turns the fourth set of alternates on or off</td>
+      </tr>
+      <tr>
+        <td class="description">Stylistic Alt Five</td>
+        <td>kStylisticAltFiveOnSelector<br>
+        StylisticAltFiveOffSelector</td>
+        <td>10</td>
+        <td class="description">Turns the fifth set of alternates on or off</td>
+      </tr>
+      <tr>
+        <td class="description">Stylistic Alt Six</td>
+        <td>kStylisticAltSixOnSelector<br>
+        StylisticAltSixOffSelector</td>
+        <td>12</td>
+        <td class="description">Turns the sixth set of alternates on or off</td>
+      </tr>
+      <tr>
+        <td class="description">Stylistic Alt Seven</td>
+        <td>kStylisticAltSevenOnSelector<br>
+        StylisticAltSevenOffSelector</td>
+        <td>14</td>
+        <td class="description">Turns the seventh set of alternates on or off</td>
+      </tr>
+      <tr>
+        <td class="description">Stylistic Alt Eight</td>
+        <td>kStylisticAltEightOnSelector<br>
+        StylisticAltEightOffSelector</td>
+        <td>16</td>
+        <td class="description">Turns the eighth set of alternates on or off</td>
+      </tr>
+      <tr>
+        <td class="description">Stylistic Alt Nine</td>
+        <td>kStylisticAltNineOnSelector<br>
+        StylisticAltNineOffSelector</td>
+        <td>18</td>
+        <td class="description">Turns the ninth set of alternates on or off</td>
+      </tr>
+      <tr>
+        <td class="description">Stylistic Alt Ten</td>
+        <td>kStylisticAltTenOnSelector<br>
+        StylisticAltTenOffSelector</td>
+        <td>20</td>
+        <td class="description">Turns the tenth set of alternates on or off</td>
+      </tr>
+      <tr>
+        <td class="description">Stylistic Alt Eleven</td>
+        <td>kStylisticAltElevenOnSelector<br>
+        StylisticAltElevenOffSelector</td>
+        <td>22</td>
+        <td class="description">Turns the eleventh set of alternates on or off</td>
+      </tr>
+      <tr>
+        <td class="description">Stylistic Alt Twelve</td>
+        <td>kStylisticAltTwelveOnSelector<br>
+        StylisticAltTwelveOffSelector</td>
+        <td>24</td>
+        <td class="description">Turns the twelfth set of alternates on or off</td>
+      </tr>
+      <tr>
+        <td class="description">Stylistic Alt Thirteen</td>
+        <td>kStylisticAltThirteenOnSelector<br>
+        StylisticAltThirteenOffSelector</td>
+        <td>26</td>
+        <td class="description">Turns the thirteenth set of alternates on or off</td>
+      </tr>
+      <tr>
+        <td class="description">Stylistic Alt Fourteen</td>
+        <td>kStylisticAltFourteenOnSelector<br>
+        StylisticAltFourteenOffSelector</td>
+        <td>28</td>
+        <td class="description">Turns the fourteenth set of alternates on or off</td>
+      </tr>
+      <tr>
+        <td class="description">Stylistic Alt Fifteen</td>
+        <td>kStylisticAltFifteenOnSelector<br>
+        StylisticAltFifteenOffSelector</td>
+        <td>30</td>
+        <td class="description">Turns the fifteenth set of alternates on or off</td>
+      </tr>
+      <tr>
+        <td class="description">Stylistic Alt Sixteen</td>
+        <td>kStylisticAltSixteenOnSelector<br>
+        StylisticAltSixteenOffSelector</td>
+        <td>32</td>
+        <td class="description">Turns the sixteenth set of alternates on or off</td>
+      </tr>
+      <tr>
+        <td class="description">Stylistic Alt Seventeen</td>
+        <td>kStylisticAltSeventeenOnSelector<br>
+        StylisticAltSeventeenOffSelector</td>
+        <td>34</td>
+        <td class="description">Turns the seventeenth set of alternates on or off</td>
+      </tr>
+      <tr>
+        <td class="description">Stylistic Alt Eighteen</td>
+        <td>kStylisticAltEighteenOnSelector<br>
+        StylisticAltEighteenOffSelector</td>
+        <td>36</td>
+        <td class="description">Turns the eighteenth set of alternates on or off</td>
+      </tr>
+      <tr>
+        <td class="description">Stylistic Alt Nineteen</td>
+        <td>kStylisticAltNineteenOnSelector<br>
+        StylisticAltNineteenOffSelector</td>
+        <td>38</td>
+        <td class="description">Turns the nineteenth set of alternates on or off</td>
+      </tr>
+      <tr>
+        <td class="description">Stylistic Alt Twenty</td>
+        <td>kStylisticAltTwentyOnSelector<br>
+        StylisticAltTwentyOffSelector</td>
+        <td>40</td>
+        <td class="description">Turns the twentieth set of alternates on or off</td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3><a name="Type36" id="Type36"></a>Contextual Alternates</h3>
+    <table summary="The Contextual Alternates feature">
+      <tr>
+        <th>Feature Constant</th>
+        <th>Feature Value</th>
+        <th>Feature Type</th>
+      </tr>
+      <tr>
+        <td>kContextualAlternates</td>
+        <td>36</td>
+        <td>Nonexclusive</td>
+      </tr>
+    </table>
+    <p>This feature is used to support alternate shapes for context-dependent glyphs and swashes</p>
+    <table summary="Selectors for the Contextual Alternates feature">
+      <tr>
+        <th>Selector Name</th>
+        <th>Selector Constant(s)</th>
+        <th>Selector Value</th>
+        <th>Selector Function</th>
+      </tr>
+      <tr>
+        <td class="description">Contextual Alternates</td>
+        <td>kContextualAlternatesOnSelector<br>
+        ContextualAlternatesOffSelector</td>
+        <td>0</td>
+        <td class="description">Turn alternates on or off for context-dependent glyphs</td>
+      </tr>
+      <tr>
+        <td class="description">Swash Alternates</td>
+        <td>kSwashAlternatesOnSelector<br>
+        SwashAlternatesOffSelector</td>
+        <td>2</td>
+        <td class="description">Turn alternates on or off for context-dependent swashes</td>
+      </tr>
+      <tr>
+        <td class="description">Contextual Swash Alternates</td>
+        <td>kContextualSwashAlternatesOnSelector<br>
+        ContextualSwashAlternatesOffSelector</td>
+        <td>4</td>
+        <td class="description">Turn alternates on or off for context-dependent glyphs and swashes</td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3><a name="Type37" id="Type37"></a>Lower Case</h3>
+    <table summary="The Lower Case feature">
+      <tr>
+        <th>Feature Constant</th>
+        <th>Feature Value</th>
+        <th>Feature Type</th>
+      </tr>
+      <tr>
+        <td>kLowerCase</td>
+        <td>37</td>
+        <td>Exclusive</td>
+      </tr>
+    </table>
+    <p>This feature replaces some of the functionality of the Letter Case feature. It is used to alter the appearance of lower-case text to that either of small caps or petite caps. [Some fonts contain an additional size of capital letters, shorter than the regular smallcaps and whimsically referred to as petite caps. Such forms are most likely to be found in designs with a small lowercase x-height, where they better harmonise with lowercase text than the taller smallcaps [for examples of petite caps, see the Emigre type families Mrs Eaves and Filosofia].) The display of actual upper-case glyphs for lower-case letters is discouraged.</p>
+    <table summary="Selectors for the Lower Case feature">
+      <tr>
+        <th>Selector Name</th>
+        <th>Selector Constant(s)</th>
+        <th>Selector Value</th>
+        <th>Selector Function</th>
+      </tr>
+      <tr>
+        <td class="description">Default Lower Case</td>
+        <td>kDefaultLowerCaseSelector</td>
+        <td>0</td>
+        <td class="description">Use standard lower-case glyphs</td>
+      </tr>
+      <tr>
+        <td class="description">Lower Case Small Caps</td>
+        <td>kLowerCaseSmallCapsSelector</td>
+        <td>1</td>
+        <td class="description">Display lower-case glyphs as small caps. (This is the most common way of displaying small caps.)</td>
+      </tr>
+      <tr>
+        <td class="description">Lower Case Petite Caps</td>
+        <td>kLowerCasePetiteCapsSelector</td>
+        <td>2</td>
+        <td class="description">Display lower-case glyphs as petite caps</td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3><a name="Type38" id="Type38"></a>Upper Case</h3>
+    <table summary="The Upper Case feature">
+      <tr>
+        <th>Feature Constant</th>
+        <th>Feature Value</th>
+        <th>Feature Type</th>
+      </tr>
+      <tr>
+        <td>kUpperCase</td>
+        <td>38</td>
+        <td>Exclusive</td>
+      </tr>
+    </table>
+    <p>This feature replaces some of the functionality of the Letter Case feature. It is used to alter the appearance of upper-case text to that either of small caps or petite caps. [Some fonts contain an additional size of capital letters, shorter than the regular smallcaps and whimsically referred to as petite caps. Such forms are most likely to be found in designs with a small lowercase x-height, where they better harmonise with lowercase text than the taller smallcaps [for examples of petite caps, see the Emigre type families Mrs Eaves and Filosofia].) The display of actual lower-case glyphs for upper-case letters is discouraged.</p>
+    <table summary="Selectors for the Upper Case feature">
+      <tr>
+        <th>Selector Name</th>
+        <th>Selector Constant(s)</th>
+        <th>Selector Value</th>
+        <th>Selector Function</th>
+      </tr>
+      <tr>
+        <td class="description">Default Upper Case</td>
+        <td>kDefaultUpperCaseSelector</td>
+        <td>0</td>
+        <td class="description">Use standard upper-case glyphs</td>
+      </tr>
+      <tr>
+        <td class="description">Upper Case Small Caps</td>
+        <td>kUpperCaseSmallCapsSelector</td>
+        <td>1</td>
+        <td class="description">Display upper-case glyphs as small caps (used commonly with acronyms).</td>
+      </tr>
+      <tr>
+        <td class="description">Upper Case Petite Caps</td>
+        <td>kUpperCasePetiteCapsSelector</td>
+        <td>2</td>
+        <td class="description">Display upper-case glyphs as petite caps</td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3><a name="Type39" id="Type39"></a>Language Tag</h3>
+    <table summary="The Language Tag feature">
+      <tr>
+        <th>Feature Constant</th>
+        <th>Feature Value</th>
+        <th>Feature Type</th>
+      </tr>
+      <tr>
+        <td>kLanguageTag</td>
+        <td>39</td>
+        <td>Exclusive</td>
+      </tr>
+    </table>
+    <p>This feature allows the use of language-specific glyphs. The selectors, other than 0, are one more than indices within the <code>'ltag'</code> table, which then maps them to a standard IETF language tag.</p>
+    <p>For example, if the language tag at index 0 of the <code>'ltag'</code> table is "sr" (for Serbian), then a feature/selector combination of 39/1 would change glyphs into any Serbian-specific shapes.</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3><a name="Type103" id="Type103"></a>CJK Roman Spacing</h3>
+    <table summary="The CJK Roman Spacing feature">
+      <tr>
+        <th>Feature Constant</th>
+        <th>Feature Value</th>
+        <th>Feature Type</th>
+      </tr>
+      <tr>
+        <td>kCJKRomanSpacing</td>
+        <td>103</td>
+        <td>Exclusive</td>
+      </tr>
+    </table>
+    <p>The CJK Roman Spacing feature type is used to select between the proportional and half-width forms of Roman characters in a CJK font.</p>
+    <table summary="Selectors for the CJK Roman Spacing feature">
+      <tr>
+        <th>Selector Name</th>
+        <th>Selector Constant(s)</th>
+        <th>Selector Value</th>
+        <th>Selector Function</th>
+      </tr>
+      <tr>
+        <td class="description">Half-width</td>
+        <td>kHalfWidthCJKRomanSelector</td>
+        <td>0</td>
+        <td class="description">Selects the half-width forms of letters.</td>
+      </tr>
+      <tr>
+        <td class="description">Proportional</td>
+        <td>kProportionalCJKRomanSelector</td>
+        <td>1</td>
+        <td class="description">Selects the proportional forms of letters.</td>
+      </tr>
+      <tr>
+        <td class="description">Default Roman</td>
+        <td>kDefaultCJKRomanSelector</td>
+        <td>2</td>
+        <td class="description">Selects the default Roman forms of letters.</td>
+      </tr>
+      <tr>
+        <td class="description">Full-width Roman</td>
+        <td>kFullWidthCJKRomanSelector</td>
+        <td>3</td>
+        <td class="description">Selects the full-width Roman forms of letters.</td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <hr align="left">
+    <h2>The application interface</h2>
+    <p>For convenience, this section gives the C language interface that applications use to support the feature types and selectors listed above.</p>
+    <p>The most current version of this interface is available in the header <code>SFNTTypes.h</code>.</p>
+    <p>&nbsp;</p>
+    <pre>
+enum {
+  kAllTypographicFeaturesType   = 0,
+  kLigaturesType                = 1,
+  kCursiveConnectionType        = 2,
+  kLetterCaseType               = 3,    /* deprecated - use kLowerCaseType or kUpperCaseType instead */
+  kVerticalSubstitutionType     = 4,
+  kLinguisticRearrangementType  = 5,
+  kNumberSpacingType            = 6,
+  kSmartSwashType               = 8,
+  kDiacriticsType               = 9,
+  kVerticalPositionType         = 10,
+  kFractionsType                = 11,
+  kOverlappingCharactersType    = 13,
+  kTypographicExtrasType        = 14,
+  kMathematicalExtrasType       = 15,
+  kOrnamentSetsType             = 16,
+  kCharacterAlternativesType    = 17,
+  kDesignComplexityType         = 18,
+  kStyleOptionsType             = 19,
+  kCharacterShapeType           = 20,
+  kNumberCaseType               = 21,
+  kTextSpacingType              = 22,
+  kTransliterationType          = 23,
+  kAnnotationType               = 24,
+  kKanaSpacingType              = 25,
+  kIdeographicSpacingType       = 26,
+  kUnicodeDecompositionType     = 27,
+  kRubyKanaType                 = 28,
+  kCJKSymbolAlternativesType    = 29,
+  kIdeographicAlternativesType  = 30,
+  kCJKVerticalRomanPlacementType = 31,
+  kItalicCJKRomanType           = 32,
+  kCaseSensitiveLayoutType      = 33,
+  kAlternateKanaType            = 34,
+  kStylisticAlternativesType    = 35,
+  kContextualAlternatesType     = 36,
+  kLowerCaseType                = 37,
+  kUpperCaseType                = 38,
+  kLanguageTagType              = 39,
+  kCJKRomanSpacingType          = 103,
+  kLastFeatureType              = -1
+};
+/*
+ *  Summary:
+ *    Selectors for feature type kAllTypographicFeaturesType
+ */
+enum {
+  kAllTypeFeaturesOnSelector    = 0,
+  kAllTypeFeaturesOffSelector   = 1
+};
+/*
+ *  Summary:
+ *    Selectors for feature type kLigaturesType
+ */
+enum {
+  kRequiredLigaturesOnSelector  = 0,
+  kRequiredLigaturesOffSelector = 1,
+  kCommonLigaturesOnSelector    = 2,
+  kCommonLigaturesOffSelector   = 3,
+  kRareLigaturesOnSelector      = 4,
+  kRareLigaturesOffSelector     = 5,
+  kLogosOnSelector              = 6,
+  kLogosOffSelector             = 7,
+  kRebusPicturesOnSelector      = 8,
+  kRebusPicturesOffSelector     = 9,
+  kDiphthongLigaturesOnSelector = 10,
+  kDiphthongLigaturesOffSelector = 11,
+  kSquaredLigaturesOnSelector   = 12,
+  kSquaredLigaturesOffSelector  = 13,
+  kAbbrevSquaredLigaturesOnSelector = 14,
+  kAbbrevSquaredLigaturesOffSelector = 15,
+  kSymbolLigaturesOnSelector    = 16,
+  kSymbolLigaturesOffSelector   = 17,
+  kContextualLigaturesOnSelector = 18,
+  kContextualLigaturesOffSelector = 19,
+  kHistoricalLigaturesOnSelector = 20,
+  kHistoricalLigaturesOffSelector = 21
+};
+/*
+ *  Summary:
+ *    Selectors for feature type kCursiveConnectionType
+ */
+enum {
+  kUnconnectedSelector          = 0,
+  kPartiallyConnectedSelector   = 1,
+  kCursiveSelector              = 2
+};
+/*
+ *  Summary:
+ *    Selectors for feature type kLetterCaseType
+ */
+enum {
+  kUpperAndLowerCaseSelector    = 0,    /* deprecated */
+  kAllCapsSelector              = 1,    /* deprecated */
+  kAllLowerCaseSelector         = 2,    /* deprecated */
+  kSmallCapsSelector            = 3,    /* deprecated */
+  kInitialCapsSelector          = 4,    /* deprecated */
+  kInitialCapsAndSmallCapsSelector = 5  /* deprecated */
+};
+/*
+ *  Summary:
+ *    Selectors for feature type kVerticalSubstitutionType
+ */
+enum {
+  kSubstituteVerticalFormsOnSelector = 0,
+  kSubstituteVerticalFormsOffSelector = 1
+};
+/*
+ *  Summary:
+ *    Selectors for feature type kLinguisticRearrangementType
+ */
+enum {
+  kLinguisticRearrangementOnSelector = 0,
+  kLinguisticRearrangementOffSelector = 1
+};
+/*
+ *  Summary:
+ *    Selectors for feature type kNumberSpacingType
+ */
+enum {
+  kMonospacedNumbersSelector    = 0,
+  kProportionalNumbersSelector  = 1,
+  kThirdWidthNumbersSelector    = 2,
+  kQuarterWidthNumbersSelector  = 3
+};
+/*
+ *  Summary:
+ *    Selectors for feature type kSmartSwashType
+ */
+enum {
+  kWordInitialSwashesOnSelector = 0,
+  kWordInitialSwashesOffSelector = 1,
+  kWordFinalSwashesOnSelector   = 2,
+  kWordFinalSwashesOffSelector  = 3,
+  kLineInitialSwashesOnSelector = 4,
+  kLineInitialSwashesOffSelector = 5,
+  kLineFinalSwashesOnSelector   = 6,
+  kLineFinalSwashesOffSelector  = 7,
+  kNonFinalSwashesOnSelector    = 8,
+  kNonFinalSwashesOffSelector   = 9
+};
+/*
+ *  Summary:
+ *    Selectors for feature type kDiacriticsType
+ */
+enum {
+  kShowDiacriticsSelector       = 0,
+  kHideDiacriticsSelector       = 1,
+  kDecomposeDiacriticsSelector  = 2
+};
+/*
+ *  Summary:
+ *    Selectors for feature type kVerticalPositionType
+ */
+enum {
+  kNormalPositionSelector       = 0,
+  kSuperiorsSelector            = 1,
+  kInferiorsSelector            = 2,
+  kOrdinalsSelector             = 3,
+  kScientificInferiorsSelector  = 4
+};
+/*
+ *  Summary:
+ *    Selectors for feature type kFractionsType
+ */
+enum {
+  kNoFractionsSelector          = 0,
+  kVerticalFractionsSelector    = 1,
+  kDiagonalFractionsSelector    = 2
+};
+/*
+ *  Summary:
+ *    Selectors for feature type kOverlappingCharactersType
+ */
+enum {
+  kPreventOverlapOnSelector     = 0,
+  kPreventOverlapOffSelector    = 1
+};
+/*
+ *  Summary:
+ *    Selectors for feature type kTypographicExtrasType
+ */
+enum {
+  kHyphensToEmDashOnSelector    = 0,
+  kHyphensToEmDashOffSelector   = 1,
+  kHyphenToEnDashOnSelector     = 2,
+  kHyphenToEnDashOffSelector    = 3,
+  kSlashedZeroOnSelector        = 4,
+  kSlashedZeroOffSelector       = 5,
+  kFormInterrobangOnSelector    = 6,
+  kFormInterrobangOffSelector   = 7,
+  kSmartQuotesOnSelector        = 8,
+  kSmartQuotesOffSelector       = 9,
+  kPeriodsToEllipsisOnSelector  = 10,
+  kPeriodsToEllipsisOffSelector = 11
+};
+/*
+ *  Summary:
+ *    Selectors for feature type kMathematicalExtrasType
+ */
+enum {
+  kHyphenToMinusOnSelector      = 0,
+  kHyphenToMinusOffSelector     = 1,
+  kAsteriskToMultiplyOnSelector = 2,
+  kAsteriskToMultiplyOffSelector = 3,
+  kSlashToDivideOnSelector      = 4,
+  kSlashToDivideOffSelector     = 5,
+  kInequalityLigaturesOnSelector = 6,
+  kInequalityLigaturesOffSelector = 7,
+  kExponentsOnSelector          = 8,
+  kExponentsOffSelector         = 9,
+  kMathematicalGreekOnSelector  = 10,
+  kMathematicalGreekOffSelector = 11
+};
+/*
+ *  Summary:
+ *    Selectors for feature type kOrnamentSetsType
+ */
+enum {
+  kNoOrnamentsSelector          = 0,
+  kDingbatsSelector             = 1,
+  kPiCharactersSelector         = 2,
+  kFleuronsSelector             = 3,
+  kDecorativeBordersSelector    = 4,
+  kInternationalSymbolsSelector = 5,
+  kMathSymbolsSelector          = 6
+};
+/*
+ *  Summary:
+ *    Selectors for feature type kCharacterAlternativesType
+ */
+enum {
+  kNoAlternatesSelector         = 0
+};
+/*
+ *  Summary:
+ *    Selectors for feature type kDesignComplexityType
+ */
+enum {
+  kDesignLevel1Selector         = 0,
+  kDesignLevel2Selector         = 1,
+  kDesignLevel3Selector         = 2,
+  kDesignLevel4Selector         = 3,
+  kDesignLevel5Selector         = 4
+};
+/*
+ *  Summary:
+ *    Selectors for feature type kStyleOptionsType
+ */
+enum {
+  kNoStyleOptionsSelector       = 0,
+  kDisplayTextSelector          = 1,
+  kEngravedTextSelector         = 2,
+  kIlluminatedCapsSelector      = 3,
+  kTitlingCapsSelector          = 4,
+  kTallCapsSelector             = 5
+};
+/*
+ *  Summary:
+ *    Selectors for feature type kCharacterShapeType
+ */
+enum {
+  kTraditionalCharactersSelector = 0,
+  kSimplifiedCharactersSelector = 1,
+  kJIS1978CharactersSelector    = 2,
+  kJIS1983CharactersSelector    = 3,
+  kJIS1990CharactersSelector    = 4,
+  kTraditionalAltOneSelector    = 5,
+  kTraditionalAltTwoSelector    = 6,
+  kTraditionalAltThreeSelector  = 7,
+  kTraditionalAltFourSelector   = 8,
+  kTraditionalAltFiveSelector   = 9,
+  kExpertCharactersSelector     = 10,
+  kJIS2004CharactersSelector    = 11,
+  kHojoCharactersSelector       = 12,
+  kNLCCharactersSelector        = 13,
+  kTraditionalNamesCharactersSelector = 14
+};
+/*
+ *  Summary:
+ *    Selectors for feature type kNumberCaseType
+ */
+enum {
+  kLowerCaseNumbersSelector     = 0,
+  kUpperCaseNumbersSelector     = 1
+};
+/*
+ *  Summary:
+ *    Selectors for feature type kTextSpacingType
+ */
+enum {
+  kProportionalTextSelector     = 0,
+  kMonospacedTextSelector       = 1,
+  kHalfWidthTextSelector        = 2,
+  kThirdWidthTextSelector       = 3,
+  kQuarterWidthTextSelector     = 4,
+  kAltProportionalTextSelector  = 5,
+  kAltHalfWidthTextSelector     = 6
+};
+/*
+ *  Summary:
+ *    Selectors for feature type kTransliterationType
+ */
+enum {
+  kNoTransliterationSelector    = 0,
+  kHanjaToHangulSelector        = 1,
+  kHiraganaToKatakanaSelector   = 2,
+  kKatakanaToHiraganaSelector   = 3,
+  kKanaToRomanizationSelector   = 4,
+  kRomanizationToHiraganaSelector = 5,
+  kRomanizationToKatakanaSelector = 6,
+  kHanjaToHangulAltOneSelector  = 7,
+  kHanjaToHangulAltTwoSelector  = 8,
+  kHanjaToHangulAltThreeSelector = 9
+};
+/*
+ *  Summary:
+ *    Selectors for feature type kAnnotationType
+ */
+enum {
+  kNoAnnotationSelector         = 0,
+  kBoxAnnotationSelector        = 1,
+  kRoundedBoxAnnotationSelector = 2,
+  kCircleAnnotationSelector     = 3,
+  kInvertedCircleAnnotationSelector = 4,
+  kParenthesisAnnotationSelector = 5,
+  kPeriodAnnotationSelector     = 6,
+  kRomanNumeralAnnotationSelector = 7,
+  kDiamondAnnotationSelector    = 8,
+  kInvertedBoxAnnotationSelector = 9,
+  kInvertedRoundedBoxAnnotationSelector = 10
+};
+/*
+ *  Summary:
+ *    Selectors for feature type kKanaSpacingType
+ */
+enum {
+  kFullWidthKanaSelector        = 0,
+  kProportionalKanaSelector     = 1
+};
+/*
+ *  Summary:
+ *    Selectors for feature type kIdeographicSpacingType
+ */
+enum {
+  kFullWidthIdeographsSelector  = 0,
+  kProportionalIdeographsSelector = 1,
+  kHalfWidthIdeographsSelector  = 2
+};
+/*
+ *  Summary:
+ *    Selectors for feature type kUnicodeDecompositionType
+ */
+enum {
+  kCanonicalCompositionOnSelector = 0,
+  kCanonicalCompositionOffSelector = 1,
+  kCompatibilityCompositionOnSelector = 2,
+  kCompatibilityCompositionOffSelector = 3,
+  kTranscodingCompositionOnSelector = 4,
+  kTranscodingCompositionOffSelector = 5
+};
+/*
+ *  Summary:
+ *    Selectors for feature type kRubyKanaType
+ */
+enum {
+  kNoRubyKanaSelector           = 0,    /* deprecated - use kRubyKanaOffSelector instead */
+  kRubyKanaSelector             = 1,    /* deprecated - use kRubyKanaOnSelector instead */
+  kRubyKanaOnSelector           = 2,
+  kRubyKanaOffSelector          = 3
+};
+/*
+ *  Summary:
+ *    Selectors for feature type kCJKSymbolAlternativesType
+ */
+enum {
+  kNoCJKSymbolAlternativesSelector = 0,
+  kCJKSymbolAltOneSelector      = 1,
+  kCJKSymbolAltTwoSelector      = 2,
+  kCJKSymbolAltThreeSelector    = 3,
+  kCJKSymbolAltFourSelector     = 4,
+  kCJKSymbolAltFiveSelector     = 5
+};
+/*
+ *  Summary:
+ *    Selectors for feature type kIdeographicAlternativesType
+ */
+enum {
+  kNoIdeographicAlternativesSelector = 0,
+  kIdeographicAltOneSelector    = 1,
+  kIdeographicAltTwoSelector    = 2,
+  kIdeographicAltThreeSelector  = 3,
+  kIdeographicAltFourSelector   = 4,
+  kIdeographicAltFiveSelector   = 5
+};
+/*
+ *  Summary:
+ *    Selectors for feature type kCJKVerticalRomanPlacementType
+ */
+enum {
+  kCJKVerticalRomanCenteredSelector = 0,
+  kCJKVerticalRomanHBaselineSelector = 1
+};
+/*
+ *  Summary:
+ *    Selectors for feature type kItalicCJKRomanType
+ */
+enum {
+  kNoCJKItalicRomanSelector     = 0,    /* deprecated - use kCJKItalicRomanOffSelector instead */
+  kCJKItalicRomanSelector       = 1,    /* deprecated - use kCJKItalicRomanOnSelector instead */
+  kCJKItalicRomanOnSelector     = 2,
+  kCJKItalicRomanOffSelector    = 3
+};
+/*
+ *  Summary:
+ *    Selectors for feature type kCaseSensitiveLayoutType
+ */
+enum {
+  kCaseSensitiveLayoutOnSelector = 0,
+  kCaseSensitiveLayoutOffSelector = 1,
+  kCaseSensitiveSpacingOnSelector = 2,
+  kCaseSensitiveSpacingOffSelector = 3
+};
+/*
+ *  Summary:
+ *    Selectors for feature type kAlternateKanaType
+ */
+enum {
+  kAlternateHorizKanaOnSelector = 0,
+  kAlternateHorizKanaOffSelector = 1,
+  kAlternateVertKanaOnSelector  = 2,
+  kAlternateVertKanaOffSelector = 3
+};
+/*
+ *  Summary:
+ *    Selectors for feature type kStylisticAlternativesType
+ */
+enum {
+  kNoStylisticAlternatesSelector = 0,
+  kStylisticAltOneOnSelector    = 2,
+  kStylisticAltOneOffSelector   = 3,
+  kStylisticAltTwoOnSelector    = 4,
+  kStylisticAltTwoOffSelector   = 5,
+  kStylisticAltThreeOnSelector  = 6,
+  kStylisticAltThreeOffSelector = 7,
+  kStylisticAltFourOnSelector   = 8,
+  kStylisticAltFourOffSelector  = 9,
+  kStylisticAltFiveOnSelector   = 10,
+  kStylisticAltFiveOffSelector  = 11,
+  kStylisticAltSixOnSelector    = 12,
+  kStylisticAltSixOffSelector   = 13,
+  kStylisticAltSevenOnSelector  = 14,
+  kStylisticAltSevenOffSelector = 15,
+  kStylisticAltEightOnSelector  = 16,
+  kStylisticAltEightOffSelector = 17,
+  kStylisticAltNineOnSelector   = 18,
+  kStylisticAltNineOffSelector  = 19,
+  kStylisticAltTenOnSelector    = 20,
+  kStylisticAltTenOffSelector   = 21,
+  kStylisticAltElevenOnSelector = 22,
+  kStylisticAltElevenOffSelector = 23,
+  kStylisticAltTwelveOnSelector = 24,
+  kStylisticAltTwelveOffSelector = 25,
+  kStylisticAltThirteenOnSelector = 26,
+  kStylisticAltThirteenOffSelector = 27,
+  kStylisticAltFourteenOnSelector = 28,
+  kStylisticAltFourteenOffSelector = 29,
+  kStylisticAltFifteenOnSelector = 30,
+  kStylisticAltFifteenOffSelector = 31,
+  kStylisticAltSixteenOnSelector = 32,
+  kStylisticAltSixteenOffSelector = 33,
+  kStylisticAltSeventeenOnSelector = 34,
+  kStylisticAltSeventeenOffSelector = 35,
+  kStylisticAltEighteenOnSelector = 36,
+  kStylisticAltEighteenOffSelector = 37,
+  kStylisticAltNineteenOnSelector = 38,
+  kStylisticAltNineteenOffSelector = 39,
+  kStylisticAltTwentyOnSelector = 40,
+  kStylisticAltTwentyOffSelector = 41
+};
+/*
+ *  Summary:
+ *    Selectors for feature type kContextualAlternatesType
+ */
+enum {
+  kContextualAlternatesOnSelector = 0,
+  kContextualAlternatesOffSelector = 1,
+  kSwashAlternatesOnSelector    = 2,
+  kSwashAlternatesOffSelector   = 3,
+  kContextualSwashAlternatesOnSelector = 4,
+  kContextualSwashAlternatesOffSelector = 5
+};
+/*
+ *  Summary:
+ *    Selectors for feature type kLowerCaseType
+ */
+enum {
+  kDefaultLowerCaseSelector     = 0,
+  kLowerCaseSmallCapsSelector   = 1,
+  kLowerCasePetiteCapsSelector  = 2
+};
+/*
+ *  Summary:
+ *    Selectors for feature type kUpperCaseType
+ */
+enum {
+  kDefaultUpperCaseSelector     = 0,
+  kUpperCaseSmallCapsSelector   = 1,
+  kUpperCasePetiteCapsSelector  = 2
+};
+/*
+ *  Summary:
+ *    Selectors for feature type kCJKRomanSpacingType
+ */
+enum {
+  kHalfWidthCJKRomanSelector    = 0,
+  kProportionalCJKRomanSelector = 1,
+  kDefaultCJKRomanSelector      = 2,
+  kFullWidthCJKRomanSelector    = 3
+};
+</pre>
+  </div>
+
+      </section>
+  </div><!-- /content -->
+
+  <div id="globalfooter">
+    <div id="breadory">
+      <ol id="breadcrumbs">
+        <li class="home"><a href="../../../index.html">Developer</a></li>
+        <li><a href="../../index.html">Fonts</a></li>
+        <li><a href="../index.html">TrueType™ Reference Manual</a></li>
+        <li>Font Feature Registry</li>
+      </ol>
+      <div id="directorynav" class="directorynav">
+	<div id="dn-cola" class="column">
+		<h3><a href="../../../platforms/index.html">Platforms</a></h3>
+		<ul>
+			<li><a href="../../../ios/index.html">iOS</a></li>
+			<li><a href="../../../osx/index.html">OS X</a></li>
+			<li><a href="../../../watchos/index.html">watchOS</a></li>
+			<li><a href="../../../tvos/index.html">tvOS</a></li>
+		</ul>
+		<h3><a href="../../../resources/index.html">Tools</a></h3>
+		<ul>
+			<li><a href="../../../xcode/index.html">Xcode</a></li>
+			<li><a href="../../../swift/index.html">Swift</a></li>
+		</ul>
+	</div>
+	<div id="dn-colb" class="column">
+		<h3><a href="../../../resources/index.html">Resources</a></h3>
+		<ul>
+			<li><a href="../../../library/index.html">Documentation</a></li>
+			<li><a href="../../../videos/index.html">Videos</a></li>
+			<li><a href="https://forums.developer.apple.com/">Forums</a></li>
+			<li><a href="../../../app-store/index.html">App Store</a></li>
+			<li><a href="../../../safari/index.html">Safari and Web</a></li>
+			<li><a href="../../../education/index.html">Education</a></li>
+			<li><a href="../../../enterprise/index.html">Enterprise</a></li>
+		</ul>
+	</div>
+	<div id="dn-colc" class="column">
+		<h3><a href="../../../programs/index.html">Programs</a></h3>
+		<ul>
+			<li><a href="../../../programs/index.html">Developer Program</a></li>
+			<li><a href="../../../programs/enterprise/index.html">Enterprise Program</a></li>
+			<li><a href="../../../programs/ios/university/index.html">iOS University Program</a></li>
+			<li><a href="../../../programs/mfi/index.html">MFi Program</a></li>
+		</ul>
+	</div>
+	<div id="dn-cold" class="column">
+		<h3><a href="../../../support/index.html">Support</a></h3>
+		<ul>
+			<li><a href="../../../support/development/index.html">Development</a></li>
+			<li><a href="../../../support/distribution/index.html">Distribution</a></li>
+			<li><a href="../../../support/membership/index.html">Membership</a></li>
+			<li><a href="../../../system-status/index.html">System Status</a></li>
+		</ul>
+	</div>
+	<div id="dn-cole" class="column">
+		<h3><a href="https://developer.apple.com/account/">Account</a></h3>
+		<ul>
+			<li><a href="https://developer.apple.com/account/">Developer Account</a></li>
+			<li><a href="../../../go/index-id=certificates-ids-profiles.html">Certificates, IDs &amp; Profiles</a></li>
+			<li><a href="https://itunesconnect.apple.com">iTunes Connect</a></li>			
+			<li><a href="../../../terms/index.html">License Agreements</a></li>
+		</ul>
+	</div>
+</div>
+
+    </div><!--/breadory-->
+    <ul class="gf-links piped footer-links">
+  <li><a href="../../../news/index.html" class="first">News &amp; Updates</a></li>
+  <li><a href="../../../bug-reporting/index.html">Report Bugs</a></li>
+  <li><a href="../../../contact/index.html">Contact Us</a></li>
+</ul>
+
+<div class="gf-sosumi footer-sosumi">
+  <p>Copyright © 2016 Apple Inc. All rights reserved.</p>
+    <ul class="piped">
+        <li><a href="http://www.apple.com/legal/internet-services/terms/site.html" class="first">Terms of Use</a></li>
+        <li><a href="http://www.apple.com/privacy/privacy-policy/">Privacy Policy</a></li>
+    </ul>
+</div>
+
+<!--<div id="gf-links piped footer-links">
+	<ul>
+		<li><a href="/cn/" title="Simplified Chinese">简体中文</a></li>
+		<li><a href="/jp/" title="Japanese">日本語</a></li>
+		<li><a href="/kr/" title="Korean">한국어</a></li>
+	</ul>
+</div>-->
+
+  </div><!--/globalfooter-->
+</body>
+</html>

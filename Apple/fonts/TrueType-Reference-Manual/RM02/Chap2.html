@@ -1,0 +1,2091 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="Author" content="Apple Inc." />
+<meta name="viewport" content="width=1024" />
+<link rel="shortcut icon" href="../../../favicon.ico" />
+<link rel="icon" href="../../../favicon.ico" />
+<link rel="stylesheet" href="https://www.apple.com/wss/fonts?family=Myriad+Set+Pro&amp;v=2" type="text/css" />
+<link rel="stylesheet" href="../../../assets/styles/transition-global.css" type="text/css" />
+<link rel="stylesheet" href="../../../assets/styles/transition-header.css" type="text/css" />
+<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/core/styles/adc.css" type="text/css" />
+<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/styles/topbar.css" type="text/css" />
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/lib/prototype.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/lib/scriptaculous.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/browserdetect.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/apple_core.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/search_decorator.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/adc_core.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/scripts/ac_retina.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/topbarDropdown.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	document.write('<link rel="stylesheet" type="text/css" href="https://devimages.apple.com.edgekey.net/assets/styles/script.css" media="screen">');
+</script>
+<!-- Augmented Search -->
+<!--<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/styles/augmented_search.css" type="text/css">-->
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/lib/jquery/jquery-1.11.0.min.js"></script>
+<script>jQuery.noConflict();</script>
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/lib/jquery/jquery.retinate.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/scripts/augmented_search.js"></script>-->
+<script src="../../../assets/scripts/augmented_search.js"></script>
+<script src="../../../assets/scripts/global-header.js"></script>
+
+  <meta name="Author" content="Apple Inc.">
+  <meta name="viewport" content="width=1024">
+  <link rel="shortcut icon" href="https://devimages.apple.com.edgekey.net/favicon.ico">
+  <link rel="icon" href="https://devimages.apple.com.edgekey.net/favicon.ico">
+  <link rel="stylesheet" href="../AAT.css" type="text/css">
+  <title>The Font Engine</title>
+</head>
+<body class="white sidenav-page">
+  <nav id="globalheader" role="navigation" aria-label="Global Navigation">
+  <div id="gh-content" class="gh-content">
+    <ul class="gh-menu">
+      <li id="gh-menu-icon-toggle" class="gh-menu-icon gh-menu-icon-toggle enhance">
+        <button id="gh-svg-icons" class="gh-svg-wrapper">
+          <span class="text-replace">Menu</span>
+          <svg x="0px" y="0px" width="100%" viewBox="0 0 96 96" class="gh-svg gh-svg-top" enable-background="new 0 0 96 96"><rect width="32" height="4" x="32" y="46" class="gh-svg-rect gh-svg-rect-top"></rect></svg>
+          <svg x="0px" y="0px" width="100%" viewBox="0 0 96 96" class="gh-svg gh-svg-bottom" enable-background="new 0 0 96 96"><rect width="32" height="4" x="32" y="46" class="gh-svg-rect gh-svg-rect-bottom"></rect></svg>
+        </button>
+      </li>
+      <li id="gh-menu-icon-home" class="gh-menu-icon gh-menu-icon-home">
+        <a href="../../../index.html">
+          <span class="text-replace">Apple Developer</span>
+        </a>
+      </li>
+    </ul>
+    <div class="gh-nav">
+      <div class="gh-nav-view">
+        <ul class="gh-nav-list">
+
+          <li class="gh-tab gh-nav-developer" data-hires="true"><a class="gh-tab-link" href="../../../index.html"><span class="text-replace">Apple Developer</span></a></li>
+          <li class="gh-tab gh-nav-technologies"><a class="gh-tab-link" href="../../../platforms/index.html">Platforms</a></li>
+          <li class="gh-tab gh-nav-resources"><a class="gh-tab-link" href="../../../resources/index.html">Resources</a></li>
+          <li class="gh-tab gh-nav-programs"><a class="gh-tab-link" href="../../../programs/index.html">Program</a></li>
+          <li class="gh-tab gh-nav-support"><a class="gh-tab-link" href="../../../support/index.html">Support</a></li>
+          <li class="gh-tab gh-nav-account">
+            <a class="gh-tab-link gh-account-profile" href="https://developer.apple.com/account/">Account</a>
+          </li>
+          <li class="gh-tab gh-nav-search">
+
+            <div id="gh-search" class="gh-search" role="search">
+              <form action="/search/index.php" method="get" class="gh-search-form" id="gh-search-form" role="search">
+
+                <div class="gh-search-input-wrapper">
+                  <label for="gh-search-input" class="text-replace">Search Apple Developer</label>
+                  <input type="text" name="q" id="gh-search-input" class="augmented gh-search-input" placeholder="Search Apple Developer" autocomplete="off" autocorrect="off" autocapitalize="off">
+                </div>
+
+                <button disabled type="submit" id="gh-search-submit" class="gh-search-submit gh-search-magnify"><span class="text-replace">Search Apple Developer</span></button>
+                <button disabled type="reset" id="gh-search-reset" class="gh-search-reset"><span class="text-replace">Reset</span></button>
+
+              </form>
+            </div>
+
+            <a class="gh-search-magnify" href="../../../search/index.html"><span class="text-replace">Search Apple Developer</span></a>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+  <div id="top">
+<!-- SiteCatalyst code version: H.8. Copyright 1997-2006 Omniture, Inc. -->
+<script type="text/javascript">
+/* RSID: */
+var s_account="appleglobal,appleusdeveloper"
+</script>
+
+<script type="text/javascript" src="https://www.apple.com/metrics/scripts/s_code_h.js"></script>
+<script type="text/javascript">
+s.pageName= AC && AC.Tracking && AC.Tracking.pageName();
+s.channel="www.us.developer"
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)</script>
+<!-- End SiteCatalyst code version: H.8. -->
+</div>
+
+  <div id="content" class="content" data-hires="false">
+    <section>
+
+  <div id="navBar">
+    <!-- NAVBARSTART -->
+    <p class="bold"><a href="../index.html">TrueType Reference Manual</a></p>
+    <ul class="outer">
+      <li><a href="../RM01/Chap1.html">Digitizing Letterforms</a></li>
+      <li>The Font Engine</li>
+      <li><a href="../RM03/Chap3.html">Instructing Fonts</a></li>
+      <li><a href="../RM04/Chap4.html">The Graphics State</a></li>
+      <li><a href="../RM05/Chap5.html">The Instruction Set</a></li>
+      <li><a href="../RM06/Chap6.html">Font Tables</a></li>
+      <li class="c1">
+        <ul class="inner">
+          <li><a href="../RM06/Chap6.html#Intro">Introduction</a></li>
+          <li><a href="../RM06/Chap6.html#Types">Data Types</a></li>
+          <li><a href="../RM06/Chap6.html#Overview">Overview of TrueType</a></li>
+          <li><a href="../RM06/Chap6AATIntro.html">Overview of AAT</a></li>
+          <li><a href="../RM06/Chap6Tables.html">Special Tables</a></li>
+          <li><a href="../RM06/Chap6.html#Directory">The Font Directory</a></li>
+          <li><a href="../RM06/Chap6acnt.html">The <code>'acnt'</code> table</a></li>
+          <li><a href="../RM06/Chap6ankr.html">The <code>'ankr'</code> table</a></li>
+          <li><a href="../RM06/Chap6avar.html">The <code>'avar'</code> table</a></li>
+          <li><a href="../RM06/Chap6bdat.html">The <code>'bdat'</code> table</a></li>
+          <li><a href="../RM06/Chap6bhed.html">The <code>'bhed'</code> table</a></li>
+          <li><a href="../RM06/Chap6bloc.html">The <code>'bloc'</code> table</a></li>
+          <li><a href="../RM06/Chap6bsln.html">The <code>'bsln'</code> table</a></li>
+          <li><a href="../RM06/Chap6cmap.html">The <code>'cmap'</code> table</a></li>
+          <li><a href="../RM06/Chap6cvar.html">The <code>'cvar'</code> table</a></li>
+          <li><a href="../RM06/Chap6cvt.html">The <code>'cvt '</code> table</a></li>
+          <li><a href="../RM06/Chap6EBSC.html">The <code>'EBSC'</code> table</a></li>
+          <li><a href="../RM06/Chap6fdsc.html">The <code>'fdsc'</code> table</a></li>
+          <li><a href="../RM06/Chap6feat.html">The <code>'feat'</code> table</a></li>
+          <li><a href="../RM06/Chap6fmtx.html">The <code>'fmtx'</code> table</a></li>
+          <li><a href="../RM06/Chap6fond.html">The <code>'fond'</code> table</a></li>
+          <li><a href="../RM06/Chap6fpgm.html">The <code>'fpgm'</code> table</a></li>
+          <li><a href="../RM06/Chap6fvar.html">The <code>'fvar'</code> table</a></li>
+          <li><a href="../RM06/Chap6gasp.html">The <code>'gasp'</code> table</a></li>
+          <li><a href="../RM06/Chap6gcid.html">The <code>'gcid'</code> table</a></li>
+          <li><a href="../RM06/Chap6glyf.html">The <code>'glyf'</code> table</a></li>
+          <li><a href="../RM06/Chap6gvar.html">The <code>'gvar'</code> table</a></li>
+          <li><a href="../RM06/Chap6hdmx.html">The <code>'hdmx'</code> table</a></li>
+          <li><a href="../RM06/Chap6head.html">The <code>'head'</code> table</a></li>
+          <li><a href="../RM06/Chap6hhea.html">The <code>'hhea'</code> table</a></li>
+          <li><a href="../RM06/Chap6hmtx.html">The <code>'hmtx'</code> table</a></li>
+          <li><a href="../RM06/Chap6just.html">The <code>'just'</code> table</a></li>
+          <li><a href="../RM06/Chap6kern.html">The <code>'kern'</code> table</a></li>
+          <li><a href="../RM06/Chap6kerx.html">The <code>'kerx'</code> table</a></li>
+          <li><a href="../RM06/Chap6lcar.html">The <code>'lcar'</code> table</a></li>
+          <li><a href="../RM06/Chap6loca.html">The <code>'loca'</code> table</a></li>
+          <li><a href="../RM06/Chap6maxp.html">The <code>'maxp'</code> table</a></li>
+          <li><a href="../RM06/Chap6meta.html">The <code>'meta'</code> table</a></li>
+          <li><a href="../RM06/Chap6mort.html">The <code>'mort'</code> table</a></li>
+          <li><a href="../RM06/Chap6morx.html">The <code>'morx'</code> table</a></li>
+          <li><a href="../RM06/Chap6name.html">The <code>'name'</code> table</a></li>
+          <li><a href="../RM06/Chap6opbd.html">The <code>'opbd'</code> table</a></li>
+          <li><a href="../RM06/Chap6OS2.html">The <code>'OS/2'</code> table</a></li>
+          <li><a href="../RM06/Chap6post.html">The <code>'post'</code> table</a></li>
+          <li><a href="../RM06/Chap6prep.html">The <code>'prep'</code> table</a></li>
+          <li><a href="../RM06/Chap6prop.html">The <code>'prop'</code> table</a></li>
+          <li><a href="../RM06/Chap6sbix.html">The <code>'sbix'</code> table</a></li>
+          <li><a href="../RM06/Chap6trak.html">The <code>'trak'</code> table</a></li>
+          <li><a href="../RM06/Chap6vhea.html">The <code>'vhea'</code> table</a></li>
+          <li><a href="../RM06/Chap6vmtx.html">The <code>'vmtx'</code> table</a></li>
+          <li><a href="../RM06/Chap6xref.html">The <code>'xref'</code> table</a></li>
+          <li><a href="../RM06/Chap6Zapf.html">The <code>'Zapf'</code> table</a></li>
+        </ul>
+      </li>
+      <li><a href="../RM07/appendixA.html">Instruction Set Summary</a></li>
+      <li><a href="../RM07/appendixB.html">Glyph Mappings</a></li>
+      <li><a href="../RM08/appendixE.html">Converting Outlines</a></li>
+	<li><a href="../RM09/AppendixF.html">Font Feature Registry</a></li>
+    </ul><!-- NAVBAREND -->
+  </div>
+  <div id="chapterContent">
+    <header><h1>The Font Engine</h1></header>
+    <h2>Contents</h2>
+    <ul class="circle">
+      <li><a href="Chap2.html#intro">Introduction</a></li>
+      <li>
+        <a href="Chap2.html#how_works">How the font engine works</a>
+        <ul class="dot">
+          <li>
+            <a href="Chap2.html#scaling">Scaling the master outline</a>
+            <ul>
+              <li><a href="Chap2.html#converting">Converting FUnits to pixels</a></li>
+              <li><a href="Chap2.html#creating">Creating the origin point and the advance point</a></li>
+            </ul>
+          </li>
+          <li><a href="Chap2.html#grid_fitting">Grid-fitting a scaled outline</a></li>
+          <li>
+            <a href="Chap2.html#scan_converting">Scan converting a grid-fitted outline</a>
+            <ul>
+              <li><a href="Chap2.html#distinguishing">Distinguishing the inside from the outside of a glyph</a></li>
+              <li><a href="Chap2.html#control_dropouts">Using the scan converters to control dropouts</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="Chap2.html#environment">The interpreter environment</a>
+        <ul class="dot">
+          <li><a href="Chap2.html#where">Where instructions can be used</a></li>
+          <li><a href="Chap2.html#instruction_names">Instruction names</a></li>
+          <li><a href="Chap2.html#graphics_state">The graphics state</a></li>
+          <li><a href="Chap2.html#getting_information">Getting information from the interpreter</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="Chap2.html#instruction_processing">Instruction processing</a>
+        <ul class="dot">
+          <li>
+            <a href="Chap2.html#instruction_stream">The instruction stream</a>
+            <ul>
+              <li><a href="Chap2.html#altering">Altering the flow of control</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="Chap2.html#stack">The stack</a>
+            <ul>
+              <li><a href="Chap2.html#moving">Moving data from the instruction stream to the stack</a></li>
+              <li><a href="Chap2.html#managing">Managing the stack</a></li>
+              <li><a href="Chap2.html#repeating">Repeating an instruction with loop</a></li>
+              <li><a href="Chap2.html#performing_arithmetic">Performing arithmetic</a></li>
+              <li><a href="Chap2.html#performing_operations">Performing logical operations</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="Chap2.html#storage_area">The storage area</a>
+            <ul>
+              <li><a href="Chap2.html#reading">Reading from and writing to storage</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="Chap2.html#managing_points">Managing points in the pixel grid</a>
+        <ul class="dot">
+          <li>
+            <a href="Chap2.html#zones_points">Zones and points</a>
+            <ul>
+              <li><a href="Chap2.html#zone">Setting zone pointers</a></li>
+              <li><a href="Chap2.html#reference">Setting reference points</a></li>
+              <li><a href="Chap2.html#flipping_points">Flipping points</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="Chap2.html#movement">Movement in the pixel grid</a>
+            <ul>
+              <li><a href="Chap2.html#freedom_vector">Getting and setting the freedom vector</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="Chap2.html#point_location">Setting and getting point locations</a>
+            <ul>
+              <li><a href="Chap2.html#getting_projection_vector">Getting the location of a point along the projection vector</a></li>
+              <li><a href="Chap2.html#point">Setting the location of a point</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="Chap2.html#measurement">Measurement in the pixel grid</a>
+            <ul>
+              <li><a href="Chap2.html#setting_projection_vector">Setting the projection vector</a></li>
+              <li><a href="Chap2.html#distance">Finding the distance between two points</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="Chap2.html#engine_compensation">Engine compensation using color</a>
+            <ul>
+              <li><a href="Chap2.html#determing">Determining the color of a distance</a></li>
+              <li><a href="Chap2.html#compensate">Compensate for the engine characteristics</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="Chap2.html#rounding">Rounding</a>
+            <ul>
+              <li><a href="Chap2.html#minimum_distance">Rounding and the minimum distance</a></li>
+              <li><a href="Chap2.html#round_state">Setting the round state</a></li>
+              <li><a href="Chap2.html#rounding_operations">Order of rounding operations</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="Chap2.html#moving_points">Moving points</a>
+            <ul>
+              <li><a href="Chap2.html#shifting">Shifting the position of a point</a></li>
+              <li><a href="Chap2.html#specified_location">Moving a point to a specified location</a></li>
+              <li><a href="Chap2.html#stated_distance">Moving a point a stated distance</a></li>
+              <li><a href="Chap2.html#aligning_points">Aligning points</a></li>
+              <li><a href="Chap2.html#interpolating_points">Interpolating points</a></li>
+            </ul>
+          </li>
+          <li><a href="Chap2.html#twilight_zone">Creating points in the twilight zone</a></li>
+          <li>
+            <a href="Chap2.html#cut_in">Cut-in values</a>
+            <ul>
+              <li><a href="Chap2.html#table">The control value table</a></li>
+              <li><a href="Chap2.html#control_cut_in">The control value cut-in</a></li>
+              <li><a href="Chap2.html#single">The single width value and single width cut-in</a></li>
+            </ul>
+          </li>
+          <li><a href="Chap2.html#order">Order of operations</a></li>
+          <li>
+            <a href="Chap2.html#size">Size specific instructions</a>
+            <ul>
+              <li><a href="Chap2.html#DELTAP">A DELTAP example</a></li>
+              <li><a href="Chap2.html#DELTAC">A DELTAC example</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <hr align="left">
+    <p>&nbsp;</p>
+    <h2><a name="intro"></a>Introduction</h2>
+    <p>This chapter provides an overview of the key concepts needed to understand the TrueType font engine, the software that converts the information in a TrueType font into a raster image suitable for display on screen or printer.</p>
+    <p>&nbsp;</p>
+    <h2><a name="how_works"></a>How the font engine works</h2>
+    <p>Rasterizing a glyph outline is a multi-step process that proceeds as follows:<br></p>
+    <ul>
+      <li>The master outline description of the glyph is scaled to the appropriate size.</li>
+      <li>The scaled outline is grid-fitted according to its associated instructions.</li>
+      <li>The grid-fitted outline is scan converted to produce a bitmap image suitable for raster display.</li>
+    </ul>
+    <p>Figure 1 illustrates this process.</p>
+    <p><strong><font size="-1">Figure 1</font></strong> <font size="-1">The work of the font engine</font></p>
+    <table border="0" cellspacing="2" cellpadding="0">
+      <tr align="center" valign="middle">
+        <td align="center">
+          <p><font size="+2">master outline</font></p>
+          <p><img src="fig2-1-1.gif" alt="figure 1" align="absmiddle" width="130" height="140" naturalsizeflag="3"></p>
+        </td>
+        <td align="center">
+          <p><font size="+2">1-scaled outline</font></p>
+          <p><img src="fig2-1-2.gif" alt="figure 1" align="absmiddle" width="217" height="273" naturalsizeflag="3"></p>
+        </td>
+      </tr>
+      <tr align="center" valign="middle">
+        <td align="center">
+          <p><font size="+2">2-grid-fitted outline</font></p>
+          <p><img src="fig2-1-3.gif" alt="figure 1" align="absmiddle" width="217" height="273" naturalsizeflag="3"></p>
+        </td>
+        <td align="center">
+          <p><font size="+2">3-raster image</font></p>
+          <p><img src="fig2-1-4.gif" alt="figure 1" align="absmiddle" width="217" height="273" naturalsizeflag="3"></p>
+        </td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <h3><a name="scaling"></a>Scaling the master outline</h3>
+    <p>A TrueType font stores a master outline description for each glyph. When an application requests a particular glyph at a specific size for a specific device, the font engine will create the necessary bitmap.</p>
+    <p>The first step in this process is to scale the master outline to the desired size. Scaling an outline is the work of that portion of the font engine known as the scaler. When the master outline is scaled, the points that make up the glyph outline are changed from device independent em units to device dependent 26.6 fixed point numbers representing locations in a pixel grid. In the text that follows, master outline points shown as grid coordinates will have a bar over the coordinate numbers as in (x~,y~).</p>
+    <p>A scaled outline point can occupy any position expressible as a sixty-fourth of a pixel (i.e as a 26.6 fixed point number). Scaled coordinates which are still in their original outline positions (that is, have not been grid-fitted by instructions) will be shown with a tilde over the coordinates as in (x~, y~). Point coordinates that are expressed to the nearest sixty fourth of a pixel will be shown with a colon separating the whole number portion of the coordinate from the fractional portion. One and one half pixels will therefore be written as 1:32 in this notation.</p>
+    <p>Pixel centers are always at the intersection of two half-grid lines. The point (2:32, 7:32) occupies a pixel center while the point (3:0, 4:0) does not. The relationship of pixels to the grid is shown in FIGURE 2.</p>
+    <p><strong><font size="-1">FIGURE 2</font></strong> <font size="-1">Pixels and the grid</font></p>
+    <p><img src="FE01.gif" width="482" height="294" align="bottom"></p>
+    <p>&nbsp;</p>
+    <h4><a name="converting"></a>Converting FUnits to pixels</h4>
+    <p>The scaler converts values in the master coordinate system to values in the pixel coordinate system by multiplying them by a scale. This scale is:<br></p>
+    <p><code><font size="+1">pointSize * resolution / (72 points per inch * units_per_em).</font></code></p>
+    <p>where <em>pointSize</em> is the size at which the glyph is to be displayed, <em>resolution</em> is the resolution of the output device and <em>units per em</em> is the resolution of the grid of which the master outline was originally defined. The 72 in the denominator represents the number of points per inch.</p>
+    <p>For example, assume that a glyph feature is 550 FUnits in length and defined on a master grid with 2048 units per em. The following calculation reveals that its size on a 72 dpi screen at 18 points, is 4.83 pixels.<br></p>
+    <p>&nbsp;</p>
+    <pre>
+550 * [(18 * 72 )/ (72 * 2048 )] = 4.83
+</pre>
+    <p>&nbsp;</p>
+    <h3><a name="creating"></a>Creating the origin point and the advance point</h3>
+    <p>The scaler creates two additional points using the data in the <a href="../RM06/Chap6hdmx.html">'hdmx'</a> table in the font file. These points represent the origin and advance width of the glyph. The origin point is the original pen position. Imagine that the pen moves the left-side bearing distance, draws the glyph, moves the pen the advance width from the origin point and is now in place to begin the next glyph. This location is the advance point. The origin point and the advance point are accessible to instructions. If the points in a given glyph are numbered from 0 to n-1, the origin point would have the number n and the advance point the number n+1.<br></p>
+    <p><strong><font size="-1">FIGURE 3</font></strong> <font size="-1">A glyph outline with the origin and advance points added</font></p>
+    <p><img src="FE2.gif" width="456" height="533" align="bottom"></p>
+    <p>&nbsp;</p>
+    <p><br>
+    <br></p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h3><a name="grid_fitting"></a>Grid-fitting a scaled outline</h3>
+    <p>Once the master outline for a particular glyph has been scaled to the desired size and device, the instructions associated with that glyph can be executed. Two key goals of instructing glyphs are to eliminate the effect of chance relationships to the grid and to control key dimensions. For more information see <a href="../RM03/Chap3.html">Instructing Fonts.</a></p>
+    <p>As the previous statements indicate, a key effect of executing glyph instructions is to move the scaled outline points describing the glyph to new locations. Once so moved, points are said to be grid-fitted. Their coordinates are indicated as (x,y) positions in the coordinate grid.</p>
+    <p>Since instructions operate after the master outline has been scaled their effect is dependent upon the actual size and resolution of the glyph requested. FIGURE 4 shows a master outline and two grid-fitted outlines produced from that master by executing the associated glyph instructions. The grid-fitted outline produced by first scaling the master outline to 12 pixels per em and then executing the glyph instructions differs from that produced by first scaling the master outline to 18 pixels per em and then executing the glyph instructions.<br></p>
+    <p>The instructions need not be size or resolution specific since they refer to the points as they existed in the original master outline. Their actions are based on a geometric analysis of the features of a glyph and are size and resolution independent. The exceptions to this rule are the size and resolution specific DELTA instructions described later in this chapter.</p>
+    <p>&nbsp;</p>
+    <p><strong><font size="-1">FIGURE 4</font></strong> <font size="-1">Scaling then grid-fitting the master outline</font></p>
+    <p><img src="fig2-4-1.gif" width="245" height="227" align="bottom"><img src="fig2-4-2.gif" width="237" height="371" align="bottom"></p>
+    <p>&nbsp;</p>
+    <h3><a name="scan_converting"></a>Scan converting a grid-fitted outline</h3>
+    <p>Once the master outline has been scaled and grid-fitted, it is ready to be rasterized by the scan converter. The scan converter takes the grid-fitted outline and applies a set of rules to determine which pixels will be part of the glyph image when printed or displayed on the screen.<br></p>
+    <p>The first of these rules is as follows:<br></p>
+    <p><em>Rule 1: If a pixel's center falls within or on the glyph outline, that pixel is turned on and becomes part of the bitmap image of the glyph.</em></p>
+    <p><br></p>
+    <p>&nbsp;</p>
+    <h4><a name="distinguishing"></a>Distinguishing the inside from the outside of a glyph</h4>
+    <p>A key problem facing the scan converter is determining what it means for a pixel center to fall "within or on the glyph outline". Sometimes this may seem to be obvious, but complex glyphs can make this seemingly straight-forward questions a difficult one.<br></p>
+    <p>The TrueType scan converter solves this problem by using the non-zero winding number rule to distinguish the interior from the exterior of a glyph. This rule is as follows:<br></p>
+    <p><em>Points that have a non-zero winding number are inside the glyph. All other points are outside the glyph.</em></p>
+    <p>&nbsp;</p>
+    <p>The four steps presented below consitute a method for determining the winding number of a point.<br></p>
+    <p>&nbsp;</p>
+    <ol>
+      <li>Draw a ray from the point in question toward infinity. (The direction in which the ray points in unimportant.)</li>
+      <li>Starting with a count of zero.</li>
+      <li>Add one to the count each time a glyph contour crosses the ray from right to left or bottom to top. (Such a crossing is termed an on-transition because the TrueType scan converter scans from left to right and bottom to top.)<br></li>
+      <li>Subtract one from the count each time a contour of the glyph crosses the ray from left to right or top to bottom. (Such a crossing is termed an off-transition.)</li>
+      <li>If the final count is non-zero, the point is an interior point. Otherwise, it is an exterior point.</li>
+    </ol>
+    <p>The direction of a contour can be determined by looking at the point numbers that define the contour. Its direction is from a lower point number toward a higher point number.<br></p>
+    <p>An on-transition is shown in FIGURE 5. Here the contour crosses the ray from bottom to top.<br></p>
+    <p><strong><font size="-1">FIGURE 5</font></strong> <font size="-1">An on-transition</font></p>
+    <p><img src="FE4.gif" width="375" height="159" align="bottom"></p>
+    <p>&nbsp;</p>
+    <p>An off-transition is shown in FIGURE 6. Here the contour crosses the ray from left to right.<br></p>
+    <p><strong><font size="-1">FIGURE 6</font></strong> <font size="-1">An off-transition</font></p>
+    <p><img src="FE5.gif" width="398" height="159" align="bottom"></p>
+    <p>&nbsp;</p>
+    <p>FIGURE 7 demonstrates the use of winding numbers in determining whether a point is inside a glyph. Considering each of the points in questions, the following can be said:<br></p>
+    <ul>
+      <li>Points p<sub>1</sub> and p<sub>4</sub> each undergo a single transition giving them non-zero winding numbers. They are interior points.</li>
+      <li>Point p<sub>2</sub> under goes an off-transition followed by an on-transition giving it a zero winding number. It is an exterior point.</li>
+      <li>Points p<sub>3</sub> and p<sub>5</sub> illustrate the importance of properly setting curve directions. Point p<sub>3</sub> undergoes an on-transition followed by an off-transition, has zero winding number. It is an exterior point.</li>
+      <li>Point p<sub>5</sub>, on the other hand, undergoes an off-transition followed by a second off-transition giving it a winding number of 2. It is an interior point.</li>
+    </ul>
+    <p><strong><font size="-1">FIGURE 7</font></strong> <font size="-1">Interior and exterior points</font></p>
+    <p><img src="FE6.gif" width="419" height="293" align="bottom"></p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h4><a name="control_dropouts"></a>Using the scan converters to control dropouts</h4>
+    <p>TrueType instructions are designed to make it possible to gridfit a glyph so that the desired pixels will be turned on by the Rule 1 regardless of the point size or the transformation used. It is often difficult to foresee all possible transformations that a glyph might undergo. This fact makes it difficult to instruct a glyph to ensure that the proper grid-fitting distortion of the outline will take place for every desired transformation. This is often a problem for complex glyphs displayed at very small pixel per em sizes. In these situations, some renditions of a glyph may contain dropouts (holes or gaps in the rendered bitmap). In such cases, the use of an alternate scan conversion mode may prove desirable.<br></p>
+    <p>Font creators can, if desired, invoke two additional scan conversion rules by changing the scan converter mode from the default setting to the dropout control mode. The decision about which scan converter mode to use can be made on a font wide basis or glyph by glyph.<br></p>
+    <p>The choice of scan conversion mode is made by setting the value of the graphics state variable scan control. The interpreter considers each of three conditions in determining whether dropout control mode will be used:<br></p>
+    <ul>
+      <li>Is the glyph rotated?</li>
+      <li>Is the glyph stretched?</li>
+      <li>Is the current setting for ppem less than a specified ppem value?</li>
+    </ul>
+    <p>It is also possible to turn dropout control off completely.<br></p>
+    <p>Changing the value of scan control is a task accomplished using the SCANCTRL[] instruction. See <a href="../RM05/Chap5.html#SCANCTRL">SCANCTRL[] SCAN conversion ConTRoL.</a> for more on changing the value of scan control.<br></p>
+    <p>To understand the dropout control scan conversion rules, it is important to know that a scan line is a horizontal or vertical line that sweeps across the face of a glyph. The intersection of a horizontal and vertical scan line determines a pixel center.<br></p>
+    <p><strong><font size="-1">FIGURE 8</font></strong> <font size="-1">Adjacent pixels</font></p>
+    <p><img src="FE7.gif" width="306" height="152" align="bottom"></p>
+    <p>&nbsp;</p>
+    <p>A dropout occurs whenever there is a connected region within a glyph interior that contains two black pixels that cannot be connected by a line that passes only through black pixels. It is possible to test for potential dropouts by looking at an imaginary line segment connecting two adjacent pixel centers. If this line segment is intersected by both an on-transition contour and an off-transition contour, a potential dropout condition exists. The potential dropout becomes an actual dropout only if the two contour lines continue on in both directions to cut other line segments between adjacent pixel centers. This condition is illustrated in FIGURE 9.<br></p>
+    <p><strong><font size="-1">FIGURE 9</font></strong> <font size="-1">Condition leading to two dropouts</font></p>
+    <p><img src="fig2-9.gif" alt="figure2-9" align="absmiddle" width="337" height="360" naturalsizeflag="3"></p>
+    <p>Two lines or curves that join together immediately after crossing a scan line form a stub. Stubs do not cause dropouts but may result in a stem of the glyph that is shorter than desired. This situation is shown in FIGURE 10.<br></p>
+    <p><strong><font size="-1">FIGURE 10</font></strong> <font size="-1">A stub</font></p>
+    <p><img src="FE8.gif" width="342" height="223" align="bottom"></p>
+    <p>&nbsp;</p>
+    <p>The scan converter can be operated in a mode in which both dropouts and stubs are filled in. The rules employed in dropout and stub control mode (scan converter mode 0) are shown below.<br></p>
+    <p><em>Rule 2a: If a horizontal scan line connecting two adjacent pixel centers is intersected by both an on-transition contour and an off-transition contour, and neither of the two pixels was already turned on by rule 1, turn on the left-most pixel.</em></p>
+    <p>&nbsp;</p>
+    <p><em>Rule 2b: If a vertical scan line connecting two adjacent pixel centers is intersected by both an on-transition contour and an off-transition contour, and neither of the two pixels was already turned on by rule 1, turn on the bottom-most pixel.</em></p>
+    <p>&nbsp;</p>
+    <p>The scan converter can also be operated in a mode in which only dropouts are filled in and stubs are left as is (scan converter mode 1). Rules 3a and 3b describe its operation in this mode.<br></p>
+    <p><em>Rule 3a: If a horizontal scan line connecting two adjacent pixel centers is intersected by both an on-transition contour and an off-transition contour, neither of the pixels was already turned on by rule 1, and the two contours continue on to intersect other scan lines (this is not a 'stub'), turn on the left-most pixel.</em></p>
+    <p>&nbsp;</p>
+    <p><em>Rule 3b: If a vertical scan line connecting two adjacent pixel centers is intersected by both an on-transition contour and an off-transition contour, neither of the pixels was already turned on by rule 1, and the two contours continue on to intersect other scan lines (this is not a 'stub'),turn on the bottom-most pixel.</em></p>
+    <p>&nbsp;</p>
+    <p>Scan line segments that form a square with the intersected scan line defining their boundaries are examined to verify that they are intersected by two contours. It is possible that these could be different contours than the ones intersecting the dropout scan line segment. This is very unlikely but may have to be controlled with grid-fitting in some exotic glyphs.<br></p>
+    <p><br></p>
+    <p>&nbsp;</p>
+    <h2><a name="environment"></a>The interpreter environment</h2>
+    <p>The interpreter is the portion of the TrueType interpreter that executes the instructions found in a font file.<br></p>
+    <p>&nbsp;</p>
+    <h3><a name="where"></a>Where instructions can be used</h3>
+    <p>Instructions can be associated with particular glyphs or can be associated with a font as a whole. Instructions associated with a particular glyph are termed a <em>glyph program</em>. Instructions can also be used in the <em>font program</em> and the <em>control value program</em>.<br></p>
+    <p>The <em>font program</em> (found in the 'fpgm' table in the font file) is a set of instructions executed once, the first time a font is accessed by an application. The <em>font program</em> is used to create function definitions (see <a href="../RM05/Chap5.html#FDEF">"FDEF[] Function DEFinition"</a>) and instruction definitions (see <a href="../RM05/Chap5.html#IDEF">"IDEF[] Instruction DEFinition"</a>). Functions and instructions defined in the <em>font program</em> can be accessed in the individual <em>glyph programs</em>. See also, "A sample font program" on page 3-145.<br>
+    The <em>control value program</em> is a sequence of instructions executed every time the point size or transformation changes. These instructions are stored in the 'prep' table of the font file. The <em>control value program</em> is used to make font wide changes rather than to manage individual glyphs. See also, <a href="../RM03/Chap3.html#value_program">"A sample control value program"</a>.<br></p>
+    <p>Instructions that belong to <em>glyph programs</em> are stored in the 'glyf' ' table of the font file. Instructions associated with a glyph are executed every time that glyph is requested.<br></p>
+    <p>&nbsp;</p>
+    <h3><a name="instruction_names"></a>Instruction names</h3>
+    <p>Instructions are uniquely specified by their opcodes but are more commonly referred to by their names.<br></p>
+    <p>Instruction names are of the form MNEMONIC[flag] where the mnemonic is intended as an aid to remembering the instruction's function. For example, the MDAP in MDAP[a] instruction stands for Move Direct Absolute Point. Similarly, RUTG[ ] is short for Round Up To Grid.<br></p>
+    <p>Closely related instructions sometimes share a single name. Such names can be mapped to unique opcodes using an associated set of flags. To calculate the opcode for an instruction variant, add the unsigned binary number represented by the flag to the lower of the two opcode values given in the documentation. In performing this operation, note that the left most bit is the most significant.<br></p>
+    <p>The flags that follow an instruction name also serve to define the semantic meaning of each instruction variant. The binary number is decomposed into a sequence of flags. Flags set to 1 represent TRUE. Flags set to 0 represent FALSE. The binary digits can also be grouped to make it possible to choose among more complex alternatives. In such cases, the documentation specifies the meaning associated with each possible numerical combination.<br></p>
+    <p>&nbsp;</p>
+    <h3><a name="graphics_state"></a>The graphics state</h3>
+    <p>The graphics state consists of a set of variables that guide the actions of the interpreter. The graphics state variables will be introduced as needed in this chapter. A complete list of the graphics state variables can be found in <a href="../RM04/Chap4.html">"The Graphics State"</a>.<br></p>
+    <p>The graphics state variables all have default values established at the start of interpretation of any font. The default value for a given graphics state variable is reestablished at the start of interpretation of any glyph. In other words, the graphics state has no inter-glyph memory. Changing the value of a graphics state variable while processing an individual glyph will produce a change that remains in effect only for that glyph.<br></p>
+    <p>To establish a new default value for a graphics state variable, it is necessary to change the value of that variable in the control value program. Changes made in the <em>control value program</em> will apply to all subsequently processed glyphs unless INSTCTRL[] is used to inhibit these new values.<br></p>
+    <p>Instructions are available for changing the value of each of the graphics state variables. Instructions that change the value of a graphics state variable sometimes have a name that begin with the word set. (The instructions that set the round state are an exception to this rule.) The new value is expected to be at the top of the stack.<br></p>
+    <p>The instructions that set the value of a graphics state variable are listed in Table 1.<br></p>
+    <p><br>
+    <strong><font size="-1">Table 1</font></strong> <font size="-1">Setting graphics state values</font></p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr valign="middle">
+        <th>Graphics state variable</th>
+        <th>Mnemonic</th>
+        <th>Instruction</th>
+        <td width="25%">&nbsp;</td>
+      </tr>
+      <tr valign="middle">
+        <td>freedom &amp; projection vector</td>
+        <td>Set Vectors To Coordinate Axis</td>
+        <td><a href="../RM05/Chap5.html#SVTCA">SVTCA[a]</a></td>
+        <td width="25%">&nbsp;</td>
+      </tr>
+      <tr valign="middle">
+        <td>projection vector</td>
+        <td>Set Projection Vector To Coordinate Axis</td>
+        <td><a href="../RM05/Chap5.html#SPVTCA">SPVTCA[a]</a></td>
+        <td width="25%">&nbsp;</td>
+      </tr>
+      <tr valign="middle">
+        <td>freedom vector</td>
+        <td>Set Freedom Vector To Coordinate Axis</td>
+        <td><a href="../RM05/Chap5.html#SFVTCA">SFVTCA[a]</a></td>
+        <td width="25%">&nbsp;</td>
+      </tr>
+      <tr valign="middle">
+        <td>projection vector</td>
+        <td>Set Projection Vector To Line</td>
+        <td><a href="../RM05/Chap5.html#SPVTL">SPVTL[a]</a></td>
+        <td width="25%">&nbsp;</td>
+      </tr>
+      <tr valign="middle">
+        <td>freedom vector</td>
+        <td>Set Freedom Vector To Line</td>
+        <td><a href="../RM05/Chap5.html#SFVTL">SFVTL[a]</a></td>
+        <td width="25%">&nbsp;</td>
+      </tr>
+      <tr valign="middle">
+        <td>freedom vector</td>
+        <td>Set Freedom Vector To Projection Vector</td>
+        <td><a href="../RM05/Chap5.html#SFVTPV">SFVTPV[]</a></td>
+        <td width="25%">&nbsp;</td>
+      </tr>
+      <tr valign="middle">
+        <td>dual projection vector</td>
+        <td>Set Dual Projection Vector To Line</td>
+        <td><a href="../RM05/Chap5.html#SDPVTL">SDPVTL[]</a></td>
+        <td width="25%">&nbsp;</td>
+      </tr>
+      <tr valign="middle">
+        <td>projection vector</td>
+        <td>Set Projection Vector To Line</td>
+        <td><a href="../RM05/Chap5.html#SPVTL">SVPTL[]</a></td>
+        <td width="25%">&nbsp;</td>
+      </tr>
+      <tr valign="middle">
+        <td>projection vector</td>
+        <td>Set Projection Vector From Stack</td>
+        <td><a href="../RM05/Chap5.html#SPVFS">SPVFS[]</a></td>
+        <td width="25%">&nbsp;</td>
+      </tr>
+      <tr valign="middle">
+        <td>freedom vector</td>
+        <td>Set Freedom Vector From Stack</td>
+        <td><a href="../RM05/Chap5.html#SFVFS">SFVFS[]</a></td>
+        <td width="25%">&nbsp;</td>
+      </tr>
+      <tr valign="middle">
+        <td>rp0</td>
+        <td>Set Reference Point 0</td>
+        <td><a href="../RM05/Chap5.html#SRPO">SRP0[]</a></td>
+        <td width="25%">&nbsp;</td>
+      </tr>
+      <tr valign="middle">
+        <td>rp1</td>
+        <td>Set Reference Point 1</td>
+        <td><a href="../RM05/Chap5.html#SRP1">SRP1[]</a></td>
+        <td width="25%">&nbsp;</td>
+      </tr>
+      <tr valign="middle">
+        <td>rp2</td>
+        <td>Set Reference Point 2</td>
+        <td><a href="../RM05/Chap5.html#SRP2">SRP2[]</a></td>
+        <td width="25%">&nbsp;</td>
+      </tr>
+      <tr valign="middle">
+        <td>zp0</td>
+        <td>Set Zone Pointer 0</td>
+        <td><a href="../RM05/Chap5.html#SZP0">SZP0[]</a></td>
+        <td width="25%">&nbsp;</td>
+      </tr>
+      <tr valign="middle">
+        <td>zp1</td>
+        <td>Set Zone Pointer 1</td>
+        <td><a href="../RM05/Chap5.html#SZP1">SZP1[]</a></td>
+        <td width="25%">&nbsp;</td>
+      </tr>
+      <tr valign="middle">
+        <td>zp2</td>
+        <td>Set Zone Pointer 2</td>
+        <td><a href="../RM05/Chap5.html#SZP2">SZP2[]</a></td>
+        <td width="25%">&nbsp;</td>
+      </tr>
+      <tr valign="middle">
+        <td>zp0, zp1, zp2</td>
+        <td>Set Zone PointerS</td>
+        <td><a href="../RM05/Chap5.html#SZPS">SZPS[]</a></td>
+        <td width="25%">&nbsp;</td>
+      </tr>
+      <tr valign="middle">
+        <td>round state</td>
+        <td>Round To Half Grid</td>
+        <td><a href="../RM05/Chap5.html#RTHG">RTHG[]</a></td>
+        <td></td>
+      </tr>
+      <tr valign="middle">
+        <td>round state</td>
+        <td>Round To Grid</td>
+        <td><a href="../RM05/Chap5.html#RTG">RTG[]</a></td>
+        <td width="25%">&nbsp;</td>
+      </tr>
+      <tr valign="middle">
+        <td>round state</td>
+        <td>Round To Double Grid</td>
+        <td><a href="../RM05/Chap5.html#RTDG">RTDG[]</a></td>
+        <td width="25%">&nbsp;</td>
+      </tr>
+      <tr valign="middle">
+        <td>round state</td>
+        <td>Round Up To Grid</td>
+        <td><a href="../RM05/Chap5.html#RUTG">RUTG[]</a></td>
+        <td width="25%">&nbsp;</td>
+      </tr>
+      <tr valign="middle">
+        <td>round state</td>
+        <td>Round Down To Grid</td>
+        <td><a href="../RM05/Chap5.html#RDTG">RDTG[]</a></td>
+        <td width="25%">&nbsp;</td>
+      </tr>
+      <tr valign="middle">
+        <td>round state</td>
+        <td>set Rounding Off</td>
+        <td><a href="../RM05/Chap5.html#ROFF">ROFF[]</a></td>
+        <td width="25%">&nbsp;</td>
+      </tr>
+      <tr valign="middle">
+        <td>round state</td>
+        <td>Super ROUND</td>
+        <td><a href="../RM05/Chap5.html#SROUND">SROUND[]</a></td>
+        <td width="25%">&nbsp;</td>
+      </tr>
+      <tr valign="middle">
+        <td>round state</td>
+        <td>Super 45 ROUND</td>
+        <td><a href="../RM05/Chap5.html#S45ROUND">S45ROUND[]</a></td>
+        <td width="25%">&nbsp;</td>
+      </tr>
+      <tr valign="middle">
+        <td>loop</td>
+        <td>Set LOOP</td>
+        <td><a href="../RM05/Chap5.html#SLOOP">SLOOP[]</a></td>
+        <td width="25%">&nbsp;</td>
+      </tr>
+      <tr valign="middle">
+        <td>single width cut-in</td>
+        <td>Set Single Width Cut-In</td>
+        <td><a href="../RM05/Chap5.html#SSWCI">SSWCI[]</a></td>
+        <td width="25%">&nbsp;</td>
+      </tr>
+      <tr valign="middle">
+        <td>control value cut-in</td>
+        <td>Set Control Value Table Cut-In</td>
+        <td><a href="../RM05/Chap5.html#SCVTCI">SCVTCI[]</a></td>
+        <td width="25%">&nbsp;</td>
+      </tr>
+      <tr valign="middle">
+        <td>minimum distance</td>
+        <td>Set Minimum Distance</td>
+        <td><a href="../RM05/Chap5.html#SMD">SMD[]</a></td>
+        <td width="25%">&nbsp;</td>
+      </tr>
+    </table>
+    <p>Two instructions are available for getting the value of the freedom vector and projection vector respectively. Instructions that retrieve the value of a state variable have names that begin with the word get. Get instructions will return the value of the state variable in question by placing that value on the top of the stack.<br></p>
+    <p>Table 2 lists the two get instructions.<br></p>
+    <p><br>
+    <strong><font size="-1">Table 2</font></strong> <font size="-1">: Getting graphics state variables</font></p>
+    <table border="1" width="80%" cellspacing="2" cellpadding="0">
+      <tr valign="middle">
+        <th>Mnemonic</th>
+        <th>Instruction</th>
+      </tr>
+      <tr valign="middle">
+        <td>Get Freedom Vector</td>
+        <td><a href="../RM05/Chap5.html#GFV">GFV[]</a></td>
+      </tr>
+      <tr valign="middle">
+        <td>Get Projection Vector</td>
+        <td><a href="../RM05/Chap5.html#GPV">GPV[]</a></td>
+      </tr>
+    </table>
+    <p>&nbsp;</p>
+    <h3><a name="getting_information"></a>Getting information from the interpreter</h3>
+    <p>Three instructions are provided to make it possible to obtain information about the glyph being interpreted and other data useful in instructing a glyph. The scaler version number can be requested with the GETINFO[ ] instruction. That same instruction can be used to inquire whether a glyph has been stretched or rotated. It is also possible to request the size in points or in pixels per em of the current glyph.<br></p>
+    <p><br>
+    <strong><font size="-1">Table 3</font></strong> <font size="-1">Getting information</font></p>
+    <table border="1" width="80%" cellspacing="2" cellpadding="0">
+      <tr valign="middle">
+        <th>Mnemonic</th>
+        <th>Instruction</th>
+      </tr>
+      <tr valign="middle">
+        <td>GET INFOrmation</td>
+        <td><a href="../RM05/Chap5.html#GETINFO">GETINFO[]</a></td>
+      </tr>
+      <tr valign="middle">
+        <td>Measure Pixels Per EM</td>
+        <td><a href="../RM05/Chap5.html#MPPEM">MPPEM[]</a></td>
+      </tr>
+      <tr valign="middle">
+        <td>Measure Point Size</td>
+        <td><a href="../RM05/Chap5.html#MPS">MPS[]</a></td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p>&nbsp;</p>
+    <h2><a name="instruction_processing"></a>Instruction processing</h2>
+    <p>This section describes those portions of the interpreter that are important for processing instructions. It begins by describing the instruction stream which holds the data and instructions that can be found in the font, control value or glyph programs. It continues on to discuss the stack, the place where the interpreter takes instruction parameters and stores instruction results and the interpreter storage area, a place in which values can be temporarily saved and later retrieved.<br></p>
+    <p>&nbsp;</p>
+    <h3><a name="instruction_stream"></a>The instruction stream</h3>
+    <p>The instruction opcodes and data that make up the <em>font</em>, <em>control value</em> or <em>glyph programs</em> are stored as a sequentially ordered sequence of byte values. From the point of view of the interpreter, they represent a sequentially ordered stream of byte values known as the <em>instruction stream</em>.<br></p>
+    <p>An instruction pointer (IP) marks the next instruction to be executed. As execution of instructions proceeds, the opcodes and data in the instruction stream are gradually used up. Instructions cannot add new data to the instruction stream. FIGURE 11 shows the instruction stream with the instruction pointer marking the next instruction to be executed.<br></p>
+    <p><strong><font size="-1">FIGURE 11</font></strong> <font size="-1">The instruction steam</font></p>
+    <p><img src="FE9.gif" width="311" height="290" align="bottom"></p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h4><a name="altering"></a>Altering the flow of control</h4>
+    <p>Normally, opcodes encountered in the instruction stream execute sequentially, however, the order of execution of can be altered by a set of instructions known as flow of control instructions. These instructions are listed in Table 4 below.<br></p>
+    <p><br>
+    <strong><font size="-1">Table 4</font></strong> <font size="-1">The flow of control instructions</font></p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr valign="middle" width="80%">
+        <th>Mnemonic</th>
+        <th>Instruction</th>
+      </tr>
+      <tr valign="middle">
+        <td>IF test</td>
+        <td><a href="../RM05/Chap5.html#IF">IF[]</a></td>
+      </tr>
+      <tr valign="middle">
+        <td>ELSE clause</td>
+        <td><a href="../RM05/Chap5.html#ELSE">ELSE[]</a></td>
+      </tr>
+      <tr valign="middle">
+        <td>End IF</td>
+        <td><a href="../RM05/Chap5.html#EIF">EIF[]</a></td>
+      </tr>
+      <tr valign="middle">
+        <td>Jump Relative On False</td>
+        <td><a href="../RM05/Chap5.html#JROF">JROF[]</a></td>
+      </tr>
+      <tr valign="middle">
+        <td>Jump Relative On True</td>
+        <td><a href="../RM05/Chap5.html#JROT">JROT[]</a></td>
+      </tr>
+      <tr valign="middle">
+        <td>JuMP Relative</td>
+        <td><a href="../RM05/Chap5.html#JMPR">JMPR[]</a></td>
+      </tr>
+      <tr valign="middle">
+        <td>LOOP and CALL</td>
+        <td><a href="../RM05/Chap5.html#LOOPCALL">LOOPCALL[]</a></td>
+      </tr>
+    </table>
+    <p><br></p>
+    <h4><a name="stack"></a>The stack</h4>
+    <p>The TrueType interpreter stores any data needed by instructions and the results created by instructions on the interpreter stack. Placing data on the stack is termed a push operation. Taking data from the stack is termed a pop operation. The last item pushed onto the stack will always be the first item popped.<br></p>
+    <p>Stack elements are always 32 bits wide. The data types used in the stack are documented in <a href="../RM05/Chap5.html#TABLE1">The Instruction Set</a>. That section also provides additional details on stack interactions.<br></p>
+    <p>&nbsp;</p>
+    <h4><a name="moving"></a>Moving data from the instruction stream to the stack</h4>
+    <p>A few instructions known collectively as push instructions move data from the instruction stream to the interpreter stack. These instructions are unique among the TrueType instruction set in taking their arguments from the instruction stream. All other instructions take any data needed from the stack. The push instructions are summarized in Table 5 below.<br></p>
+    <p><br>
+    <strong><font size="-1">Table 5</font></strong> <font size="-1">The push instructions</font></p>
+    <table border="1" width="80%" cellspacing="2" cellpadding="0">
+      <tr valign="middle">
+        <th>Mnemonic</th>
+        <th>Instruction</th>
+      </tr>
+      <tr valign="middle">
+        <td>PUSH N Bytes</td>
+        <td><a href="../RM05/Chap5.html#NPUSHB">NPUSHB[]</a></td>
+      </tr>
+      <tr valign="middle">
+        <td>PUSH N Words</td>
+        <td><a href="../RM05/Chap5.html#NPUSHW">NPUSHW[]</a></td>
+      </tr>
+      <tr valign="middle">
+        <td>PUSH Bytes</td>
+        <td><a href="../RM05/Chap5.html#PUSHB">PUSHB[abc]</a></td>
+      </tr>
+      <tr valign="middle">
+        <td>PUSH Words</td>
+        <td><a href="../RM05/Chap5.html#PUSHW">PUSHW[abc]</a></td>
+      </tr>
+    </table>
+    <p>Since the instruction stream is 8-bits wide and the stack is 32 bits wide, bytes that are pushed onto the stack are extended to 32-bits. When words (16-bit quantities) are pushed on the stack they are created from two bytes (the high byte appearing first in the instruction stream) and sign extended to 32 bits.<br></p>
+    <p><strong><font size="-1">FIGURE 12</font></strong> <font size="-1">Extending a byte value to form a long word</font></p>
+    <p><img src="FE10.gif" width="455" height="274" align="bottom"></p>
+    <p>&nbsp;</p>
+    <p>Those that push words combine two bytes to form a signed word and then sign extend that word until it is 32 bits wide. When two bytes are combined to form a word, the high byte of that word is always the one appearing first in the instruction stream. The low byte is the one that appears second. FIGURE 13 shows how two instruction stream bytes are combined and then sign extended when they are pushed onto the stack.<br></p>
+    <p><strong><font size="-1">FIGURE 13</font></strong> <font size="-1">Combining byte values to form a sign extended long word</font></p>
+    <p><img src="FE11.gif" width="483" height="304" align="bottom"></p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h4><a name="managing"></a>Managing the stack</h4>
+    <p>TrueType provides basic stack manipulation operations that make it possible to change the contents of the stack or reorder its elements. These instructions are listed in Table 6 below.<br></p>
+    <p><br>
+    <strong><font size="-1">Table 6</font></strong> <font size="-1">: Managing the stack</font></p>
+    <table border="1" width="80%" cellspacing="2" cellpadding="0">
+      <tr valign="middle">
+        <th>Mnemonic</th>
+        <th>Instruction</th>
+      </tr>
+      <tr valign="middle">
+        <td>CLEAR the stack</td>
+        <td><a href="../RM05/Chap5.html#CLEAR">CLEAR[]</a></td>
+      </tr>
+      <tr valign="middle">
+        <td>DEPTH of the stack</td>
+        <td><a href="../RM05/Chap5.html#DEPTH">DEPTH[]</a></td>
+      </tr>
+      <tr valign="middle">
+        <td>DUPlicate top stack element</td>
+        <td><a href="../RM05/Chap5.html#DUP">DUP[]</a></td>
+      </tr>
+      <tr valign="middle">
+        <td>POP top stack element</td>
+        <td><a href="../RM05/Chap5.html#POP">POP[]</a></td>
+      </tr>
+      <tr valign="middle">
+        <td>Copy INDEXed element</td>
+        <td><a href="../RM05/Chap5.html#CINDEX">CINDEX[]</a></td>
+      </tr>
+      <tr valign="middle">
+        <td>Move INDEXed element</td>
+        <td><a href="../RM05/Chap5.html#MINDEX">MINDEX[]</a></td>
+      </tr>
+      <tr valign="middle">
+        <td>ROLL top 3 stack elements</td>
+        <td><a href="../RM05/Chap5.html#ROLL">ROLL[]</a></td>
+      </tr>
+      <tr valign="middle">
+        <td>SWAP top two stack elements</td>
+        <td><a href="../RM05/Chap5.html#SWAP">SWAP[]</a></td>
+      </tr>
+    </table>
+    <p><br></p>
+    <h4><a name="repeating"></a>Repeating an instruction with loop</h4>
+    <p>Normally an instruction encountered in the instruction stream will execute only once. Some instructions look at the loop state variable and execute the number of times that variable dictates. The instructions that use the loop variable are listed in Table 7.<br></p>
+    <p>The default value for the loop variable is 1. Setting loop to zero or a negative value is illegal. The loop variable is set with the SLOOP[ ] instruction shown in Table 8.<br></p>
+    <p><br>
+    <strong><font size="-1">Table 7</font></strong> <font size="-1">Instructions that use the loop variable</font></p>
+    <table border="1" width="80%" cellspacing="2" cellpadding="0">
+      <tr valign="middle">
+        <th>Mnemonic</th>
+        <th>Instruction</th>
+      </tr>
+      <tr valign="middle">
+        <td>Align Relative Point</td>
+        <td><a href="../RM05/Chap5.html#ALIGNRP">ALIGNRP[]</a></td>
+      </tr>
+      <tr valign="middle">
+        <td>FLIP PoinT</td>
+        <td><a href="../RM05/Chap5.html#FLIPPT">FLIPPT[]</a></td>
+      </tr>
+      <tr valign="middle">
+        <td>Interpolate Point</td>
+        <td><a href="../RM05/Chap5.html#IP">IP[]</a></td>
+      </tr>
+      <tr valign="middle">
+        <td>SHift Point</td>
+        <td><a href="../RM05/Chap5.html#SHP">SHP[a]</a></td>
+      </tr>
+      <tr valign="middle">
+        <td>SHift by PIXEL amount</td>
+        <td><a href="../RM05/Chap5.html#SHPIX">SHPIX[]</a></td>
+      </tr>
+    </table>
+    <p><br>
+    <strong><font size="-1">Table 8</font></strong> <font size="-1">Setting the value of the loop variable</font></p>
+    <table border="1" width="80%" cellspacing="2" cellpadding="0">
+      <tr valign="middle">
+        <th>Mnemonic</th>
+        <th>Instruction</th>
+      </tr>
+      <tr valign="middle">
+        <td>Set LOOP</td>
+        <td><a href="../RM05/Chap5.html#SLOOP">SLOOP[]</a></td>
+      </tr>
+    </table><br>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h4><a name="performing_arithmetic"></a>Performing arithmetic</h4>
+    <p>The TrueType instruction set provides the basic arithmetic functions as enumerated in Table 8. Unless otherwise noted, arithmetic is done on 26.6 fixed point numbers producing 26.6 fixed point results.</p>
+    <p><br>
+    <strong><font size="-1">Table 9</font></strong> <font size="-1">Performing logical operations.</font></p>
+    <table border="1" width="80%" cellspacing="2" cellpadding="0">
+      <tr valign="middle">
+        <th>Mnemonic</th>
+        <th>Instruction</th>
+      </tr>
+      <tr valign="middle">
+        <td>ADD</td>
+        <td><a href="../RM05/Chap5.html#ADD">ADD[]</a></td>
+      </tr>
+      <tr valign="middle">
+        <td>SUBtract</td>
+        <td><a href="../RM05/Chap5.html#SUB">SUB[]</a></td>
+      </tr>
+      <tr valign="middle">
+        <td>DIVide</td>
+        <td><a href="../RM05/Chap5.html#DIV">DIV[]</a></td>
+      </tr>
+      <tr valign="middle">
+        <td>MULtiply</td>
+        <td><a href="../RM05/Chap5.html#MUL">MUL[]</a></td>
+      </tr>
+      <tr valign="middle">
+        <td>ABSolute value</td>
+        <td><a href="../RM05/Chap5.html#ABS">ABS[]</a></td>
+      </tr>
+      <tr valign="middle">
+        <td>NEGate</td>
+        <td><a href="../RM05/Chap5.html#NEG">NEG[]</a></td>
+      </tr>
+      <tr valign="middle">
+        <td>FLOOR</td>
+        <td><a href="../RM05/Chap5.html#FLOOR">FLOOR[]</a></td>
+      </tr>
+      <tr valign="middle">
+        <td>CEILING</td>
+        <td><a href="../RM05/Chap5.html#CEILING">CEILING[]</a></td>
+      </tr>
+      <tr valign="middle">
+        <td>MAXimum</td>
+        <td><a href="../RM05/Chap5.html#MAX">MAX[]</a></td>
+      </tr>
+      <tr valign="middle">
+        <td>MINimum</td>
+        <td><a href="../RM05/Chap5.html#MIN">MIN[]</a></td>
+      </tr>
+    </table><br>
+    <p>&nbsp;</p>
+    <h4><a name="performing_operations"></a>Performing logical operations</h4>
+    <p>The TrueType instruction set provides a set of basic logical functions. They are enumerated in Table 10. These functions return zero if the result is FALSE and a non-zero value if the result is TRUE.</p>
+    <p><br>
+    <strong><font size="-1">Table 10</font></strong> <font size="-1">Performing logical operations.</font></p>
+    <table border="1" width="80%" cellspacing="2" cellpadding="0">
+      <tr valign="middle" width="80%">
+        <th>Mnemonic</th>
+        <th>Instruction</th>
+        <td width="34%">&nbsp;</td>
+      </tr>
+      <tr valign="middle">
+        <td>Less Than</td>
+        <td><a href="../RM05/Chap5.html#LT">LT[]</a></td>
+        <td width="34%">&nbsp;</td>
+      </tr>
+      <tr valign="middle">
+        <td>Less Than or EQual</td>
+        <td><a href="../RM05/Chap5.html#LTEQ">LTEQ[]</a></td>
+        <td width="34%">&nbsp;</td>
+      </tr>
+      <tr valign="middle">
+        <td>Greater Than</td>
+        <td><a href="../RM05/Chap5.html#GT">GT[]</a></td>
+        <td></td>
+      </tr>
+      <tr valign="middle">
+        <td>Greater Than or EQual</td>
+        <td><a href="../RM05/Chap5.html#GTEQ">GTEQ[]</a></td>
+        <td width="34%">&nbsp;</td>
+      </tr>
+      <tr valign="middle">
+        <td>EQual</td>
+        <td><a href="../RM05/Chap5.html#EQ">EQ[]</a></td>
+        <td width="34%">&nbsp;</td>
+      </tr>
+      <tr valign="middle">
+        <td>Not EQual</td>
+        <td><a href="../RM05/Chap5.html#NEQ">NEQ[]</a></td>
+        <td width="34%">&nbsp;</td>
+      </tr>
+      <tr valign="middle">
+        <td>ODD element</td>
+        <td><a href="../RM05/Chap5.html#ODD">ODD[]</a></td>
+        <td width="34%">&nbsp;</td>
+      </tr>
+      <tr valign="middle">
+        <td>EVEN element</td>
+        <td><a href="../RM05/Chap5.html#EVEN">EVEN[]</a></td>
+        <td width="34%">&nbsp;</td>
+      </tr>
+      <tr valign="middle">
+        <td>AND</td>
+        <td><a href="../RM05/Chap5.html#AND">AND[]</a></td>
+        <td width="34%">&nbsp;</td>
+      </tr>
+      <tr valign="middle">
+        <td>OR</td>
+        <td><a href="../RM05/Chap5.html#OR">OR[]</a></td>
+        <td width="34%">&nbsp;</td>
+      </tr>
+      <tr valign="middle">
+        <td>NOT</td>
+        <td><a href="../RM05/Chap5.html#NOT">NOT[]</a></td>
+        <td width="34%">&nbsp;</td>
+      </tr>
+    </table><br>
+    <br>
+    <p>&nbsp;</p>
+    <h3><a name="storage_area"></a>The storage area</h3>
+    <p>The interpreter maintains a storage area consisting of a portion of memory that can be used for temporary storage of data taken from the interpreter stack. It is possible to read the values of stored data and to write new values to storage. Storage locations range from 0 to n-1 where n is the value established in the maxStorage entry in the 'maxp' table of the font file. Values are 32 bit numbers.<br></p>
+    <p>&nbsp;</p>
+    <h4><a name="reading"></a>Reading from and writing to storage</h4>
+    <p>The following two instructions make it possible to read a value from a location in the interpreter storage area and to write a new value to a storage location.<br></p>
+    <p><br>
+    <strong><font size="-1">Table 11</font></strong> <font size="-1">: Accessing Storage</font></p>
+    <table border="1" width="80%" cellspacing="2" cellpadding="0">
+      <tr valign="middle">
+        <th>Mnemonic</th>
+        <th>Instruction</th>
+      </tr>
+      <tr valign="middle">
+        <td>Read from Storage</td>
+        <td><a href="../RM05/Chap5.html#RS">RS[]</a></td>
+      </tr>
+      <tr valign="middle">
+        <td>Write to Storage</td>
+        <td><a href="../RM05/Chap5.html#WS">WS[]</a></td>
+      </tr>
+    </table><br>
+    <p><br></p>
+    <p>&nbsp;</p>
+    <h2><a name="managing_points"></a>Managing points in the pixel grid</h2>
+    <p>The key task of the TrueType instruction set is one of grid-fitting glyph outlines to allow the scan converter to produce superior bitmap images for display. That task consists of reshaping glyph outlines by moving the points that make up their outline. The following sections describe the instructions that are used to manage points in the pixel grid.<br></p>
+    <p>&nbsp;</p>
+    <h3><a name="zones_points"></a>Zones and points</h3>
+    <p>Points are locations in a grid. As stored in the font file, points have coordinates that are expressed in FUnits. These coordinates refer to positions in the master grid. Once scaled by the font engine, however, point locations are expressed as 26.6 fixed point numbers representing locations in the device specific pixel grid. That is, they are given to the nearest sixty-fourth of a pixel. The notation wn:fp is used to express point locations where wn refers to a whole number and fp refers to the fractional part. The number six would be written 6:0. The number one fourth would be written 0:16. When it is convenient, point locations will be expressed as decimal numbers, such as 2.5 to represent the position two and one-half.<br></p>
+    <p>Instructions reference the points that comprise a glyph outline by specifying a given point number in a particular zone. The points that make up the outline of the current glyph are said to be in the glyph zone (zone 1). These points are defined in the 'glyf' table in the font file.<br></p>
+    <p>A second group of points useful in instructing glyphs can be created using instructions. These points are said to be in the twilight zone (zone 0). Points in zone 0 are created by instructions in a glyph program. These points are not reinitialized at the beginning of each glyph program, so each glyph program must be certain to set these points in the desired location before accessing them.<br></p>
+    <p>Instructions do not refer to zones explicitly but use one or more of three zone pointers which can be set to either of the two zones. If an instruction uses zone pointer 1 (zp1), that instruction will use points in the zone it references. It can point to either the twilight zone or the glyph zone.<br></p>
+    <p>Some instructions will assume that the points they reference are in the zone referenced by a particular zone pointer. Other instructions require an explicit designation of the zone pointer through the setting of a flag (i.e through the use of an instruction variant).<br></p>
+    <p>All of the following uniquely specify the same point in the glyph zone:<br></p>
+    <ul>
+      <li>point 5 in the glyph zone</li>
+      <li>point 5 in zone 1</li>
+      <li>point 5 in the zone pointed to by zp0 where zp0 points to zone 1</li>
+      <li>point 5 in the zone pointed to by zp2 where zp2 points to zone 1</li>
+      <li>rp0 in zp0 where zp0 points to zone 1and rp0 has the value 5</li>
+      <li>rp0 in zp2 where zp2 points to zone 1 and rp0 has the value 5</li>
+    </ul>
+    <p>All of the following specify the same point in the twilight zone</p>
+    <ul>
+      <li>point 5 in the twilight zone</li>
+      <li>point 5 in zone 0</li>
+      <li>point 5 in the zone pointed to by zp1 where zp1 points to zone 0</li>
+      <li>rp0 in zp1 where zp1 points to zone 0 and rp0 has the value 5</li>
+    </ul>
+    <p>Note that point 5 in the twilight zone is not the same point as point 5 in the glyph zone.<br></p>
+    <p>&nbsp;</p>
+    <h4><a name="zone"></a>Setting zone pointers</h4>
+    <p>The instructions for establishing the value of zone pointers are listed in Table 12.<br></p>
+    <p><br>
+    <strong><font size="-1">Table 12</font></strong> <font size="-1">: Setting Zone Pointers</font></p>
+    <table border="1" width="80%" cellspacing="2" cellpadding="0">
+      <tr valign="middle">
+        <th>Mnemonic</th>
+        <th>Instruction</th>
+      </tr>
+      <tr valign="middle">
+        <td>Set Zone Pointer 0</td>
+        <td><a href="../RM05/Chap5.html#SZP0">SZPO[]</a></td>
+      </tr>
+      <tr valign="middle">
+        <td>Set Zone Pointer 1</td>
+        <td><a href="../RM05/Chap5.html#SZP1">SZP1[]</a></td>
+      </tr>
+      <tr valign="middle">
+        <td>Set Zone Pointer 2</td>
+        <td><a href="../RM05/Chap5.html#SZP2">SZP2[]</a></td>
+      </tr>
+      <tr valign="middle">
+        <td>Set Zone PointerS</td>
+        <td><a href="../RM05/Chap5.html#SZPS">SZPS[]</a></td>
+      </tr>
+    </table>
+    <p>Since both the glyph zone and the twilight zone number their points beginning with zero, the same number can appear in both zones. To unambiguously specify a point it is necessary to use its number and its zone. For example, point 6 in the glyph zone designates a unique point.<br></p>
+    <p>&nbsp;</p>
+    <h4><a name="reference"></a>Setting reference points</h4>
+    <p>Some instructions will refer to points not by their number but through the device of reference points. Each of three reference points, rp0, rp1 and rp2 can be associated with an integer representing a point number. When that reference point is associated with a particular zone, a point is unambiguously specified. Instructions for setting reference points to point numbers are listed in Table 13.<br></p>
+    <p><br>
+    <strong><font size="-1">Table 13</font></strong> <font size="-1">Setting Reference Points</font></p>
+    <table border="1" width="80%" cellspacing="2" cellpadding="0">
+      <tr valign="middle">
+        <th>Mnemonic</th>
+        <th>Instruction</th>
+      </tr>
+      <tr valign="middle">
+        <td>Set Reference Point 0</td>
+        <td><a href="../RM05/Chap5.html#SRPO">SRPO[]</a></td>
+      </tr>
+      <tr valign="middle">
+        <td>Set Reference Point 1</td>
+        <td><a href="../RM05/Chap5.html#SRP1">SRP1[]</a></td>
+      </tr>
+      <tr valign="middle">
+        <td>Set Reference Point 2</td>
+        <td><a href="../RM05/Chap5.html#SRP2">SRP2[]</a></td>
+      </tr>
+    </table><br>
+    <p>&nbsp;</p>
+    <h4><a name="flipping_points"></a>Flipping points</h4>
+    <p>On-curve points can be changed to off-curve points and vice versa. A single point or a range of points can be changed. Table 10 lists the instructions that flip points.<br></p>
+    <p><br>
+    <strong><font size="-1">Table 14</font></strong> <font size="-1">Flipping points</font></p>
+    <table border="1" width="80%" cellspacing="2" cellpadding="0">
+      <tr valign="middle">
+        <th>Mnemonic</th>
+        <th>Instruction</th>
+      </tr>
+      <tr valign="middle">
+        <td>FLIP PoinT</td>
+        <td><a href="../RM05/Chap5.html#FLIPPT">FLIPPT[]</a></td>
+      </tr>
+      <tr valign="middle">
+        <td>FLIP RanGe ON</td>
+        <td><a href="../RM05/Chap5.html#FLIPRGON">FLIPRGON[]</a></td>
+      </tr>
+      <tr valign="middle">
+        <td>FLIP RanGe OFF</td>
+        <td><a href="../RM05/Chap5.html#FLIPRGOFF">FLIPRGOFF[]</a></td>
+      </tr>
+    </table><br>
+    <p>&nbsp;</p>
+    <h3><a name="movement"></a>Movement in the pixel grid</h3>
+    <p>Movement of points in the pixel grid is always along the <em>freedom vector</em>, a graphics state variable representing a vector in the pixel grid. The <em>freedom vector</em> can be translated in space so that it maintains its orientation relative to the coordinate system but passes through the point that is to be moved. By convention, the <em>freedom vector</em> is shown as a dotted line passing through a point that is to be moved. Points move along the vector.<br></p>
+    <p>For most instructions, a given freedom vector and its 180 degree opposite are equivalent. The lone exception is the SHPIX[ ] instruction which measures distance along the freedom vector. When points are moved along the freedom vector, the direction of movement of the point will be shown as illustrated in FIGURE 14.<br></p>
+    <p><strong><font size="-1">FIGURE 14</font></strong> <font size="-1">Moving points along the <em>freedom vector</em></font></p>
+    <p><img src="FE12.gif" width="405" height="150" align="bottom"><br></p>
+    <p>&nbsp;</p>
+    <h3><a name="freedom_vector"></a>Getting and setting the freedom vector</h3>
+    <p>One instruction exists for obtaining the current value of the freedom vector. Its value is returned as a pair of (x,y) coordinates. The freedom vector can be set by specifying its coordinates on the stack, by setting it to either or the coordinate axes, by setting it to be parallel or perpendicular to a line or by setting it to be parallel or perpendicular to the projection vector. The instructions for setting the freedom vector are listed in Table 15.<br></p>
+    <p><br></p>
+    <p>&nbsp;</p>
+    <h3><a name="point_location"></a>Setting and getting point locations</h3>
+    <p>The following sections describe how to find the location of a point in the pixel grid and how to set it to a specified location.<br></p>
+    <p>&nbsp;</p>
+    <h4><a name="getting_projection_vector"></a>Getting the location of a point along the projection vector</h4>
+    <p><br>
+    The location of a point is expressed as a position along the current <em>projection vector</em>. To understand how the interpreter determines the location of a point imagine that a perpendicular is dropped from that point to the vector. In the illustrations that follow, lines used to project distances onto the <em>projection vector</em> are dashed. The location where the perpendicular intersects with the <em>projection vector</em> is used to <em>read</em> the coordinate of the point.<br></p>
+    <p>This process is illustrated in FIGURE 15. In the illustration, points p<sub>1</sub>, p<sub>2</sub> and p<sub>3</sub> are all at coordinate position 1.2 as would any point that can be found on line L<sub>1</sub>L<sub>1</sub>'. Point p<sub>4</sub> is at coordinate position -0.6.<br></p>
+    <p><strong><font size="-1">FIGURE 15</font></strong> <font size="-1">Getting the coordinate of a point</font></p>
+    <p><img src="FE13.gif" width="421" height="363" align="bottom"></p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h4><a name="point"></a>Setting the location of a point</h4>
+    <p>To set the coordinate of a point means to make its projection onto the <em>projection vector</em> equal to the desired value. Conceptually, this is done by moving the point along the <em>freedom vector</em> to the position where the vector intersects with a perpendicular to the <em>projection vector</em> at the desired coordinate value.<br></p>
+    <p>In FIGURE 16 the three points p<sub>1</sub>, p<sub>2</sub> and p<sub>3</sub> are all set to have the same value along the <em>projection vector</em>. Each point is moved along the <em>freedom vector</em> until it reaches the intersection point of the freedom vector and a perpendicular to the <em>projection vector</em> at the coordinate position 2.<br></p>
+    <p><strong><font size="-1">FIGURE 16</font></strong> <font size="-1">Setting the coordinate of a point</font></p>
+    <p><img src="FE14.gif" width="533" height="337" align="bottom"></p>
+    <p>&nbsp;</p>
+    <p>The instructions for getting and setting a point coordinate are listed inTABLE 1<br></p>
+    <p><br>
+    <strong><font size="-1">TABLE 1</font></strong> <font size="-1">Getting and setting a point coordinate</font></p>
+    <table border="1" width="80%" cellspacing="2" cellpadding="0">
+      <tr valign="middle">
+        <th>Mnemonic</th>
+        <th>Instruction</th>
+      </tr>
+      <tr valign="middle">
+        <td>Get Coordinate</td>
+        <td><a href="../RM05/Chap5.html#GC">GC[a]</a></td>
+      </tr>
+      <tr valign="middle">
+        <td>Set Coordinate From Stack</td>
+        <td><a href="../RM05/Chap5.html#SCFS">SCFS[]</a></td>
+      </tr>
+    </table><br>
+    <p>&nbsp;</p>
+    <h3><a name="measurement"></a>Measurement in the pixel grid</h3>
+    <p>Measurement of distances in the pixel grid is always along the <em>projection vector</em>, a graphics state variable describing a vector in the pixel grid. Grid distances are signed values. Measuring the distance from point A to point B will produce a result with the opposite sign from that obtained by measuring the distance from point B to point A.<br></p>
+    <p>By convention, a solid line emanating from the origin of the grid coordinate system with grid units marked by long lines and half-grid units marked by short lines is used to represent the projection vector. The projection vector is shown in FIGURE 17.<br></p>
+    <p><strong><font size="-1">FIGURE 17</font></strong> <font size="-1">The projection vector</font></p>
+    <p><img src="FE15.gif" width="435" height="186" align="bottom"></p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h4><a name="setting_projection_vector"></a>Setting the projection vector</h4>
+    <p>One instruction exists for obtaining the current value of the <em>projection vector</em>. Its value is returned as a pair of (x,y) coordinates. The instructions for getting and setting the <em>projection vector</em> are listed in Table 16.<br></p>
+    <p><br>
+    <strong><font size="-1">Table 16</font></strong> <font size="-1">Getting and setting the projection vector</font></p>
+    <table border="1" width="80%" cellspacing="2" cellpadding="0">
+      <tr valign="middle">
+        <th>Mnemonic</th>
+        <th>Instruction</th>
+      </tr>
+      <tr valign="middle">
+        <td>Get Projection Vector</td>
+        <td><a href="../RM05/Chap5.html#GPV">GPV</a></td>
+      </tr>
+      <tr valign="middle">
+        <td>Set Dual Projection Vector To Line</td>
+        <td><a href="../RM05/Chap5.html#SDPVTL">SDPVTL[]</a></td>
+      </tr>
+      <tr valign="middle">
+        <td>Set Projection Vector From Stack</td>
+        <td><a href="../RM05/Chap5.html#SPVFS">SPVFS[]</a></td>
+      </tr>
+      <tr valign="middle">
+        <td>Set Projection Vector To Coordinate Axis</td>
+        <td><a href="../RM05/Chap5.html#SPVTCA">SPVTCA[a]</a></td>
+      </tr>
+      <tr valign="middle">
+        <td>Set Projection Vector To Line</td>
+        <td><a href="../RM05/Chap5.html#SPVTL">SPVTL[a]</a></td>
+      </tr>
+    </table><br>
+    <p>&nbsp;</p>
+    <h4><a name="distance"></a>Finding the distance between two points</h4>
+    <p>The distance between two points is determined by comparing their locations along the <em>projection vector</em>. Distances between a point and a reference point are always obtained by subtracting the coordinate, along the projection vector, of the reference point from the coordinate of the point.<br></p>
+    <p>When measuring the distance between two points it is important to distinguish between the master outline distance between those points and their grid-fitted distance difference. Distance is measured along the projection vector and is a signed quantity. The value returned is a F26Dot6 number representing a quantity in pixels. In other words, the distance is measured between points in the scaled outline resident in the pixel grid.</p>
+    <p><br>
+    <strong><font size="-1">Table 17</font></strong> <font size="-1">Measuring the distance between two points</font></p>
+    <table border="1" width="80%" cellspacing="2" cellpadding="0">
+      <tr valign="middle">
+        <th>Mnemonic</th>
+        <th>Instruction</th>
+      </tr>
+      <tr valign="middle">
+        <td>Measure Distance</td>
+        <td><a href="../RM05/Chap5.html#MD">MD[a]</a></td>
+      </tr>
+    </table><br>
+    <p>&nbsp;</p>
+    <h3><a name="engine_compensation"></a>Engine compensation using color</h3>
+    <p>In addition to the property of magnitude, distances also have the property of color. Color is used to compensate for the effects of different marking engines on the appearance of the final output image of a glyph.<br></p>
+    <p>&nbsp;</p>
+    <h4><a name="determing"></a>Determining the color of a distance</h4>
+    <p>The TrueType interpreter distinguishes between three different types of distances: black, white, and grey.<br></p>
+    <p>Black areas are those containing pixels turned on by the scan converter. White areas are areas containing no pixels turned on by the scan converter.<br></p>
+    <p>When considering the distance between two points, the following rules will determine whether the distance is black, white, or grey:<br></p>
+    <p>Distances that cross only black areas are black distances. Distances that cross only white areas are white distances. Distances that cross a combination of black and white areas can be black, white or grey depending upon the combination of distances types covered.<br></p>
+    <ul>
+      <li>If there is black to the right of both points (along the projection vector), the distance is grey.</li>
+      <li>If there is black to the left of both points, the distance is grey.</li>
+    </ul>
+    <p>The rules shown in FIGURE 18 can be used to determine the color of a distance made up of subdistances of differing color.<br></p>
+    <p><strong><font size="-1">FIGURE 18</font></strong> <font size="-1">Combining distance colors</font></p>
+    <p><img src="FE16.gif" width="533" height="270" align="bottom"></p>
+    <p>&nbsp;</p>
+    <p>FIGURE 19 shows an example of how black, white, and grey distances are combined. The distance [4,5] is black; [4,0] is grey and [5,0] is white. The combined distance [4,0] adds a black distance to a white distance to get a grey distance. When that grey distance is added to the black distance [0,1] the resulting distance [4,1] is grey plus black or black.<br></p>
+    <p><strong><font size="-1">FIGURE 19</font></strong> <font size="-1">White, black and grey distances</font></p>
+    <p><img src="FE17.gif" width="356" height="295" align="bottom"></p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h4><a name="compensate"></a>Compensate for the engine characteristics</h4>
+    <p>The distance type is used in determining how the instructions listed in Table 18 and the other instructions that use the graphic state variable round state will manage distance values. With grey distances, because they combine black and white distances, no engine compensation takes place. Black or white distances, however, require a compensation term be added or subtracted before rounding takes place. The amount of compensation needed will be set by the printer driver. For example, if the printing engine has large pixels, the interpreter will compensate by making black distances tend to shrink and white distances tend to grow. The result in that on different dot-size printers, the font should produce equivalent weight and color for the final outputted glyphs.<br></p>
+    <p><br></p>
+    <p>&nbsp;</p>
+    <h3><a name="rounding"></a>Rounding</h3>
+    <p>All rounding done by the TrueType interpreter is applied to values representing distances between two points, rather than to grid positions. The effect of rounding a value depends upon the setting of the round state variable. Values can be rounded to integers or half integers.<br></p>
+    <p>All rounding works by using a round state setting to control how the domain of 26.6 fixed point numbers is mapped to a set of discrete values that are separated by equal distances. A number of predefined rounding rules are available and can be set using instructions. These make up possible to round to the nearest integer (RTG[]), to the nearest half integer (RTHG[]), the nearest smaller integer (RDTG[]), the nearest larger integer (RUTG[]) or the nearest half integer or integer (RTDG[]).<br></p>
+    <p>The effect of rounding the distance 1.4 with each of the predefined round states is shown in FIGURE 20.<br></p>
+    <p><strong><font size="-1">FIGURE 20</font></strong> <font size="-1">The effect of the round states</font></p>
+    <p><img src="FE18.gif" width="484" height="377" align="bottom"></p>
+    <p>&nbsp;</p>
+    <p>In addition to the predefined rounding states, two instructions can be used to set custom round states. They are SROUND[] and S45ROUND[]. These work by setting the <em>period</em>, <em>phase</em> and <em>threshold</em>, that together define the actions of a round, separately.<br></p>
+    <p>&nbsp;</p>
+    <ul>
+      <li>The period specifies the length of the separation or space between rounded values.</li>
+      <li>The phase specifies the offset of the rounded values from multiples of the period.</li>
+      <li>The threshold specifies the part of the domain, prior to a rounded value, that is mapped onto each value. More intuitively, the threshold tells a value when to "fall forward" to the next largest integer.</li>
+    </ul>
+    <p>Each of the predefined round states is equivalent to a particular setting of the period, phase and threshold. The relationship is shown in Table 19.<br></p>
+    <p><br>
+    <strong><font size="-1">Table 19</font></strong> <font size="-1">Mapping predefined round states to custom states</font></p>
+    <table border="1" width="80%" cellspacing="2" cellpadding="0">
+      <tr valign="middle">
+        <th>Instruction</th>
+        <th>period</th>
+        <th>phase</th>
+        <th>threshold</th>
+      </tr>
+      <tr valign="middle">
+        <td>RTG[]</td>
+        <td>grid</td>
+        <td>0</td>
+        <td>4/8 period</td>
+      </tr>
+      <tr valign="middle">
+        <td>RTHG[]</td>
+        <td>grid</td>
+        <td>1/2*period</td>
+        <td>4/8 period</td>
+      </tr>
+      <tr valign="middle">
+        <td>RTDG[]</td>
+        <td>1/2 * grid</td>
+        <td>0</td>
+        <td>4/8 period/64</td>
+      </tr>
+      <tr valign="middle">
+        <td>RUTG[]</td>
+        <td>grid</td>
+        <td>0</td>
+        <td>period -1</td>
+      </tr>
+      <tr valign="middle">
+        <td>RDTG[]</td>
+        <td>grid</td>
+        <td>0</td>
+        <td>0</td>
+      </tr>
+    </table><br>
+    <p>The period is based on the value of the <em>gridPeriod</em>, the distance between grid positions. For SROUND[], the <em>gridPeriod</em> is equal to 1.0 pixels. For S45ROUND[], the <em>gridPeriod</em> is square root of 2 pixels. Table 20 shows the possible values for the period and how they relate to the <em>gridPeriod</em>. For additional information on setting the period, phase and threshold, see the entries for SROUND[] and S45ROUND[] in <a href="../RM05/Chap5.html#TABLE1">The Instruction Set</a>.<br></p>
+    <p>The period parameters can have values of 1/2 pixel, 1 pixel, or 2 pixels.<br></p>
+    <p><br>
+    <strong><font size="-1">Table 20</font></strong> <font size="-1">Setting the period</font></p>
+    <table border="1" width="80%" cellspacing="2" cellpadding="0">
+      <tr valign="middle">
+        <th>binary</th>
+        <th>setting</th>
+      </tr>
+      <tr valign="middle">
+        <td>00</td>
+        <td>gridPeriod/2</td>
+      </tr>
+      <tr valign="middle">
+        <td>01</td>
+        <td>gridPeriod</td>
+      </tr>
+      <tr valign="middle">
+        <td>10</td>
+        <td>gridPeriod*2</td>
+      </tr>
+      <tr valign="middle">
+        <td>11</td>
+        <td>Reserved</td>
+      </tr>
+    </table><br>
+    <p>The period specifies the length of the separation or space between rounded values. As shown on the number lines in the illustrations below, if the period is 0.5, rounded values are separated by half integers. A period of 1.0 separates rounded values by one integer. A period of 2.0 separates rounded values by two.<br></p>
+    <p>In FIGURE 21, the three number lines, with small circles representing possible rounded values, illustrate three possible period settings.<br></p>
+    <p><strong><font size="-1">FIGURE 21</font></strong><font size="-1">Examples of the period</font></p>
+    <p><img src="FE19.gif" width="484" height="226" align="bottom"></p>
+    <p>The phase specifies the offset of the rounded values from multiples of the period. As shown in the first example below, if the phase is zero, and the period is one, we have the familiar case where values are not offset and will round to integral values. In the second case, where the phase is 0.25 and the period is 1.0, rounded values are offset by one-quarter and will round to 0.25, 1.25, 2.25 and so forth.<br></p>
+    <p>The phase parameters can have values of 0 pixels, 1/4 pixel, 1/2 pixel, or 3/4 pixel. In the examples in FIGURE 22 below, the period is 1.0.<br></p>
+    <p><strong><font size="-1">FIGURE 22</font></strong> <font size="-1">Examples of the phase</font></p>
+    <p><img src="FE20.gif" width="484" height="175" align="bottom"></p>
+    <p>&nbsp;</p>
+    <p>The threshold represents the portion of the period that rounds up to the next value. FIGURE 23 shows two examples where the period and phase are held constant and the value of the threshold is changed. In the first case, a threshold of 0.5 is equivalent to round to grid. In the second case, a threshold of 0.25 results in values from, for example, 0.75 through 1.75 rounding to the value 1.<br></p>
+    <p>The threshold parameters can have values of -3/8 period, -2/8 period,... 11/8 period. It can also have the special value largest-number-smaller-than-period which causes rounding e quivalent to CEILING. In the examples in FIGURE 23 below, the period is one, the phase is zero and the threshold is one-half.<br></p>
+    <p><strong><font size="-1">FIGURE 23</font></strong> <font size="-1">Examples of the threshold</font></p>
+    <p><img src="FE21.gif" width="475" height="229" align="bottom"></p>
+    <p>&nbsp;</p>
+    <p>A more complex example is shown in FIGURE 24. For example, SROUND(01:01:1000) maps numbers into the values 0.25, 1.25, 2.25, The numbers from -0.25 up to but not including 0.75 are mapped into 0.25. The range of numbers from 0.75 up to but not including 1.75 map into 1.25. Similarly, the numbers from 1.75 up to but not including 2.75 map into the number 2.25 and so on. In other words, the period is 1.0, the phase is 0.26 and the threshold is 0.5.<br></p>
+    <p><strong><font size="-1">FIGURE 24</font></strong> <font size="-1">A complex example</font></p>
+    <p><img src="FE22.gif" width="513" height="145" align="bottom"></p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h4><a name="minimum_distance"></a>Rounding and the minimum distance</h4>
+    <p><br></p>
+    <p>When rounding, it is possible that certain values will round to zero or to an unacceptably small value. This is especially likely at small pixel per em sizes. Sometimes rounding a value to zero is undesirable because it will result in a glyph feature, such as a counter or stem, disappearing. To avoid undesirable rounding to zero, there is a minimum distance variable in the graphics state. The MIRP[] and MDRP[] instructions both make use of the minimum distance state variable. This represents the smallest possible value to which any value can be rounded. Values less than the minimum distance value will be rounded up to the minimum distance regardless of the round state, when the minimum distance Boolean is set.<br></p>
+    <p>&nbsp;</p>
+    <h4><a name="round_state"></a>Setting the round state</h4>
+    <p><br></p>
+    <p>The instructions that can be used to set the round state are listed in Table 21.<br></p>
+    <p><br>
+    <strong><font size="-1">Table 21</font></strong> <font size="-1">Setting the round state</font></p>
+    <table border="1" width="80%" cellspacing="2" cellpadding="0">
+      <tr valign="middle">
+        <th>Mnemonic</th>
+        <th>Instruction</th>
+        <td width="34%">&nbsp;</td>
+      </tr>
+      <tr valign="middle">
+        <td>Round Down To GRid</td>
+        <td><a href="../RM05/Chap5.html#RDTG">RDTG[]</a></td>
+        <td></td>
+      </tr>
+      <tr valign="middle">
+        <td>turn Rounding OFF</td>
+        <td><a href="../RM05/Chap5.html#ROFF">ROFF[]</a></td>
+        <td width="34%">&nbsp;</td>
+      </tr>
+      <tr valign="middle">
+        <td>Round To Double Grid</td>
+        <td><a href="../RM05/Chap5.html#RTDG">RTDG[]</a></td>
+        <td width="34%">&nbsp;</td>
+      </tr>
+      <tr valign="middle">
+        <td>Round To Grid</td>
+        <td><a href="../RM05/Chap5.html#RTG">RTG[]</a></td>
+        <td width="34%">&nbsp;</td>
+      </tr>
+      <tr valign="middle">
+        <td>Round To Half Grid</td>
+        <td><a href="../RM05/Chap5.html#RTHG">RTHG[]</a></td>
+        <td width="34%">&nbsp;</td>
+      </tr>
+      <tr valign="middle">
+        <td>Round Up To Grid</td>
+        <td><a href="../RM05/Chap5.html#RUTG">RUTG[]</a></td>
+        <td width="34%">&nbsp;</td>
+      </tr>
+      <tr valign="middle">
+        <td>Super 45 ROUND</td>
+        <td><a href="../RM05/Chap5.html#S45ROUND">S45ROUND[]</a></td>
+        <td width="34%">&nbsp;</td>
+      </tr>
+      <tr valign="middle">
+        <td>Super ROUND</td>
+        <td><a href="../RM05/Chap5.html#SROUND">SROUND[]</a></td>
+        <td width="34%">&nbsp;</td>
+      </tr>
+    </table><br>
+    <br>
+    <p>&nbsp;</p>
+    <h4><a name="rounding_operations"></a>Order of rounding operations</h4>
+    <p>Rounding occurs after compensation for the color of a distance. The steps in the rounding of a number n are:<br></p>
+    <p>&nbsp;</p>
+    <ol>
+      <li>add engine compensation to n</li>
+      <li>subtract the phase from n</li>
+      <li>add the threshold to n</li>
+      <li>truncate n to the next lowest periodic value (ignore the phase)</li>
+      <li>add the phase back to n</li>
+      <li>if rounding caused a positive number to become negative, set n to the positive round value closest to 0</li>
+      <li>if rounding caused a negative number of become positive, set n to the negative round value closest to 0<br>
+        <p>&nbsp;</p>
+        <h3><a name="moving_points"></a>Moving points</h3>The following sections describe those instructions that move points.<br>
+        <h4><a name="shifting"></a>Shifting the position of a point</h4>The position of a single point, the points that make up a contour, or all of the points in a zone can be shifted by the amount that a reference point has been shifted using one of the instructions listed in Table 22. The magnitude of the shift is a signed value. It is also possible to shift a point by a specified amount.<br>
+        <p><br>
+        <strong><font size="-1">Table 22</font></strong> <font size="-1">Shifting points</font></p>
+        <table border="1" width="80%" cellspacing="2" cellpadding="0">
+          <tr valign="middle">
+            <th>Mnemonic</th>
+            <th>Instruction</th>
+          </tr>
+          <tr valign="middle">
+            <td>SHift Point</td>
+            <td><a href="../RM05/Chap5.html#SHP">SHP[a]</a></td>
+          </tr>
+          <tr valign="middle">
+            <td>SHift Contour</td>
+            <td><a href="../RM05/Chap5.html#SHC">SHC[a]</a></td>
+          </tr>
+          <tr valign="middle">
+            <td>SHift Zone</td>
+            <td><a href="../RM05/Chap5.html#SHZ">SHZ[a]</a></td>
+          </tr>
+          <tr valign="middle">
+            <td>SHift by PIXEL amount</td>
+            <td><a href="../RM05/Chap5.html#SHPIX">SHPIX[]</a></td>
+          </tr>
+        </table><br>
+        <h4><a name="specified_location"></a>Moving a point to a specified location</h4>Points can be moved to a given coordinate location with one of two <em>absolute</em> instructions. The location to which the point is moved can be specified in the control value table, as in the case of MIAP[], or in the instruction itself, as in MDAP[].<br>
+        <p><br>
+        <strong><font size="-1">Table 23</font></strong> <font size="-1">Moving to a specified location</font></p>
+        <table border="1" width="80%" cellspacing="2" cellpadding="0">
+          <tr valign="middle">
+            <th>Mnemonic</th>
+            <th>Instruction</th>
+          </tr>
+          <tr valign="middle">
+            <td>Move Indirect Absolute Point</td>
+            <td><a href="../RM05/Chap5.html#MIAP">MIAP[a]</a></td>
+          </tr>
+          <tr valign="middle">
+            <td>Move Direct Absolute Point</td>
+            <td><a href="../RM05/Chap5.html#MDAP">MDAP[a]</a></td>
+          </tr>
+        </table><br>
+        <h4><a name="stated_distance"></a>Moving a point a stated distance</h4>Points can be moved relative to other points. When a point moves a given number of units, movement will be along the freedom vector but the distance moved will be measured along the projection vector. To understand how the interpreter will carry out such a move imagine that the current location of that point is projected onto that vector, and the point is moved along the freedom vector until it is the required number of units along the vector.<br>
+        <p>It is illegal to execute instructions that move points when the freedom and projection vectors are orthogonal. Attempts to do so will yield undefined results and will be different on different versions of the TrueType software.<br></p>
+        <p><br>
+        <strong><font size="-1">Table 24</font></strong> <font size="-1">: Moving points relative to a reference point</font></p>
+        <table border="1" width="80%" cellspacing="2" cellpadding="0">
+          <tr valign="middle">
+            <th>Mnemonic</th>
+            <th>Instruction</th>
+          </tr>
+          <tr valign="middle">
+            <td>Move Direct Relative Point</td>
+            <td><a href="../RM05/Chap5.html#MDRP">MDRP[abcde]</a></td>
+          </tr>
+          <tr valign="middle">
+            <td>Move Indirect Relative Point</td>
+            <td><a href="../RM05/Chap5.html#MIRP">MIRP[abcde]</a></td>
+          </tr>
+          <tr valign="middle">
+            <td>Move Stack Indirect Relative Point</td>
+            <td><a href="../RM05/Chap5.html#MSIRP">MSRP[a]</a></td>
+          </tr>
+        </table><br>
+        <h4><a name="aligning_points"></a>Aligning points</h4>Instructions can be used to align points relative to each other or to a reference point. Points are said to be aligned if the distance between them, along the current projection vector, is zero. Table 25 lists the instructions that align points.
+        <p><br>
+        <strong><font size="-1">Table 25</font></strong> <font size="-1">: Aligning points</font></p>
+        <table border="1" width="80%" cellspacing="2" cellpadding="0">
+          <tr valign="middle">
+            <th>Mnemonic</th>
+            <th>Instruction</th>
+          </tr>
+          <tr valign="middle">
+            <td>ALIGN PoinTS</td>
+            <td><a href="../RM05/Chap5.html#ALIGNPTS">ALIGNPTS[]</a></td>
+          </tr>
+          <tr valign="middle">
+            <td>ALIGN to Reference Point</td>
+            <td><a href="../RM05/Chap5.html#ALIGNRP">ALIGNRP[]</a></td>
+          </tr>
+          <tr valign="middle">
+            <td>move point to InterSection</td>
+            <td><a href="../RM05/Chap5.html#ISECT">ISECTP[]</a></td>
+          </tr>
+        </table><br>
+        <h4><a name="interpolating_points"></a>Interpolating points</h4>Two interpolation instructions make it possible to adjust the position of a point or points based on the movements of other points.<br>
+        <p>The first of the interpolation instructions, IP[ ], changes the position of a point based on their changes in the position of two reference points. The second, IUP[ ] interpolates all untouched points between touched points.<br></p>
+        <p>Points that are acted upon by a TrueType instruction are said to have been touched. Points that are touched will be not be affected by the IUP[ ] instruction. If it is desirable to have an IUP[ ] instruction affect such a point, it can be untouched using the UTP[ ] instruction. Points can be touched without moving them by using the MDAP[] instruction with no rounding. Additional complexities of the interpolation instructions will be explained in <a href="../RM05/Chap5.html#TABLE1">The Instruction Set</a>.</p>
+        <p><br>
+        <strong><font size="-1">Table 26</font></strong> <font size="-1">Interpolating points</font></p>
+        <table border="1" width="80%" cellspacing="2" cellpadding="0">
+          <tr valign="middle">
+            <th>Mnemonic</th>
+            <th>Instruction</th>
+          </tr>
+          <tr valign="middle">
+            <td>UnTouch Point</td>
+            <td><a href="../RM05/Chap5.html#UTP">UTP[]</a></td>
+          </tr>
+          <tr valign="middle">
+            <td>Interpolate Point[ ]</td>
+            <td><a href="../RM05/Chap5.html#IP">IP[]</a></td>
+          </tr>
+          <tr valign="middle">
+            <td>Interpolate Untouched Point</td>
+            <td><a href="../RM05/Chap5.html#IUP">IUP[]</a></td>
+          </tr>
+        </table><br>
+        <p>&nbsp;</p>
+        <h3><a name="twilight_zone"></a>Creating points in the twilight zone</h3>Table 27 Points in the twilight zone are not part of the font file but must be created with one of the direct instructions (MIRP[], MSIRP[] or MIAP[]).<br>
+        <p><strong><font size="-1">TABLE 27</font></strong><font size="-1">: Creating points in the twilight zone</font></p>
+        <table border="1" width="80%" cellspacing="2" cellpadding="0">
+          <tr valign="middle">
+            <th>Mnemonic</th>
+            <th>Instruction</th>
+          </tr>
+          <tr valign="middle">
+            <td>Move Indirect Absolute Point</td>
+            <td><a href="../RM05/Chap5.html#MIAP">MIAP[]</a></td>
+          </tr>
+          <tr valign="middle">
+            <td>Move Indirect Relative Point</td>
+            <td><a href="../RM05/Chap5.html#MIRP">MIRP[]</a></td>
+          </tr>
+          <tr valign="middle">
+            <td>Move Stack Indirect Relative Point</td>
+            <td><a href="../RM05/Chap5.html#MSIRP">MSIRP[]</a></td>
+          </tr>
+        </table><br>
+        <p>MIAP[] is used to create a point that is a specific distance (x,y) away from the origin (0,0). MIRP[] is used to create a point that is a specific distance away from a reference point. The reference point can itself be in either zone 0 or zone 1. Both MIAP[] and MIRP[] obtain the distance from the control value table. MSIRP[] also creates a point that is a specified distance from a reference point, however, the distance is taken from the stack rather than from the control value table.<br></p>
+        <p>Once created, points can be moved by MDRP[] and other instructions. A new reference to the point by MIAP[], MIRP[], or MSIRP[] will create a completely new position that has nothing to do with the previous position of the point (unless the point is itself the reference point used by the MIRP[] or the MSIRP[] instructions).<br></p>
+        <p>For example, suppose rp0 refers to point 7 in zone1, and its coordinates are 3:0, 4:0). Suppose that zone pointer 1 is set to point at zone 0, the projection and freedom vectors are set to the x-axis, and the instruction MSIRP[] is executed with the values 1 and 0:48 on the stack. The result is that point 1 in zone 0 will have ungrid-fitted coordinates of (3:48, 4:0) and grid-fitted values of (4:0, 4:0). If the freedom and projection vectors are now set to the y-axis, and the instruction MSIRP[] is executed with the values 1 and 0:20 on the stack, the new ungrid-fitted and grid-fitted values of point 1 in zone 0 will be (4:0, 5:20).<br></p>
+        <p>&nbsp;</p>
+        <h3><a name="cut_in"></a>Cut-in values</h3>The TrueType language offers several means of coordinating the size of features within individual glyphs and across glyphs in a font. Such coordination is useful when the number of pixels available for a feature or a glyph are few in number. It prevents small differences in the size from becoming exaggerated by the change in the placement of pixel centers relative to a glyph outline.<br>
+        <p>Such coordination, however, becomes a liability when small differences in the size or placement of features can be effectively represented by the number of available pixels. TrueType allows you to regularize features at small numbers of pixels per em while allowing the outline to revert to the original design once a sufficient number of pixels is available.<br></p>
+        <p>There are two different ways to accomplish this goal. Each one uses a cut-in value. The first method uses the control value table and the <em>control value cut-in</em>. This method allows for arbitrary values to be substituted for the actual value. The second method takes regularization a step further and substitutes a single value known as the <em>single width value</em>. It is used with the <em>single width cut-in</em>.<br></p>
+        <h4><a name="table"></a>The control value table</h4>The control value table is an ordered list of values used by the indirect instructions. By using a control value table entry rather than an outline measurement, it is possible to collapse values that vary by a small amount to a single value at certain pixel per em sizes. The control value table works by using the control value cut-in described in the next section.<br>
+        <h4><a name="control_cut_in"></a>The control value cut-in</h4>The control value cut-in limits the regularizing effects of the control value table to cases where the difference between the table value and the measurement taken from the original outline is sufficiently small.<br>
+        <p>The cut-in is a factor only in instructions that reference the control value table. These are the indirect instructions (MIRP[] and MIAP[]). By having these instructions look at the cut-in value it is possible for a point to be moved to a position specified in the control value table only in cases where the value in the table is sufficiently close to that in the original outline. In practice this means that the original outline will be favored at high pixel per em values, where there will typically be a large difference between the control value table entry and the outline distance, while at small pixel per em values, distances can be made to converge on a single value. This makes it possible to have related stems have a uniform width at small pixel per em values while allowing the original subtleties of the font design to reemerge at larger sizes.<br></p>
+        <ul>
+          <li>The cut-in is applied according to the following rules:</li>
+          <li>When the absolute value of the difference is less than or equal to the cut-in, the control value table entry is used.</li>
+          <li>When the absolute value of the difference between the table entry and the outline value is greater than the cut-in the actual value is used.</li>
+        </ul>
+        <p>Note that the difference shown in Table 28 is the difference between the scaled control value table entry and the scaled outline distance. The cut-in is a F26DOT6 value, i.e. it is in pixels.<br></p>
+        <p><br>
+        <strong><font size="-1">Table 28</font></strong> <font size="-1">Some examples of the use of the cut-in in MIAP[]</font></p>
+        <table border="1" width="80%" cellspacing="2" cellpadding="0">
+          <tr valign="middle">
+            <th>CVT Value</th>
+            <th>Original Outline Value</th>
+            <th>|Difference|</th>
+            <th>Cut-in</th>
+            <th>Value used</th>
+          </tr>
+          <tr valign="middle">
+            <td>93</td>
+            <td>80</td>
+            <td>13</td>
+            <td>68/64</td>
+            <td>outline</td>
+          </tr>
+          <tr valign="middle">
+            <td>100</td>
+            <td>99 20/64</td>
+            <td>44/64</td>
+            <td>68/64</td>
+            <td>table</td>
+          </tr>
+          <tr valign="middle">
+            <td>97</td>
+            <td>95 60/64</td>
+            <td>68/64</td>
+            <td>68/64</td>
+            <td>table</td>
+          </tr>
+        </table><br>
+        <p>FIGURE 25 below illustrates the use of the cut-in. In the master outline for the font shown, the capital J dips below the base line. At small pixel per em sizes, this subtlety cannot be shown. Even one pixel below the baseline would be too much at 18 ppem. When the character is grid-fitted the curve is held to the baseline by an indirect instruction so long as the actual distance below the baseline is less than the cut-in. When the distance difference exceeds the cut-in value of 68/64, the original value is reinstated. In this particular case, the curve is held to the base line through 81 pixels per em but reverts to its original design at 82 pixels per em as shown.<br></p>
+        <p><strong><font size="-1">FIGURE 25</font></strong> <font size="-1">Overshoot and the cut-in</font></p>
+        <p><img src="FE23.gif" width="418" height="201" align="bottom"></p>
+        <p>&nbsp;</p>
+        <p>The effect of the cut-in varies with its value. Decreasing the value of the cut-in will have the affect of causing the outline to revert to the original design at a smaller ppem value. Increasing the value of the cut-in will cause the outline to revert to the original design at a higher ppem value.<br></p>
+        <p>Table 29 demonstrates some of the effects of changing the cut-in.<br></p>
+        <p><br>
+        <strong><font size="-1">Table 29</font></strong> <font size="-1">Varying the cut-in value</font></p>
+        <table border="1" width="80%" cellspacing="2" cellpadding="0">
+          <tr valign="middle">
+            <th>cut-in</th>
+            <th>outline value</th>
+            <th>CVT value</th>
+            <th>difference</th>
+            <th>value uses</th>
+          </tr>
+          <tr valign="middle">
+            <td>64/64 = 1</td>
+            <td>98 60/64</td>
+            <td>100</td>
+            <td>68/64</td>
+            <td>outline</td>
+          </tr>
+          <tr valign="middle">
+            <td>64/64 = 1</td>
+            <td>99</td>
+            <td>100</td>
+            <td>64/64 = 1</td>
+            <td>CVT</td>
+          </tr>
+          <tr valign="middle">
+            <td>64/64 = 1</td>
+            <td>101</td>
+            <td>100</td>
+            <td>64/64= 1</td>
+            <td>CVT</td>
+          </tr>
+          <tr valign="middle">
+            <td>64/64 = 1</td>
+            <td>101 4/64</td>
+            <td>100</td>
+            <td>68/64</td>
+            <td>outline</td>
+          </tr>
+          <tr valign="middle">
+            <td>68/64</td>
+            <td>98 56/64</td>
+            <td>100</td>
+            <td>72/64/16</td>
+            <td>outline</td>
+          </tr>
+          <tr valign="middle">
+            <td>17/16</td>
+            <td>98 15/16</td>
+            <td>100</td>
+            <td>17/16</td>
+            <td>CVT</td>
+          </tr>
+          <tr valign="middle">
+            <td>17/16</td>
+            <td>101 1/16</td>
+            <td>100</td>
+            <td>17/16</td>
+            <td>CVT</td>
+          </tr>
+          <tr valign="middle">
+            <td>17/16</td>
+            <td>101 2/16</td>
+            <td>100</td>
+            <td>18/16</td>
+            <td>outline</td>
+          </tr>
+          <tr valign="middle">
+            <td>18/16</td>
+            <td>98 13/16</td>
+            <td>100</td>
+            <td>19/16</td>
+            <td>outline</td>
+          </tr>
+          <tr valign="middle">
+            <td>18/16</td>
+            <td>98 14/16</td>
+            <td>100</td>
+            <td>18/16</td>
+            <td>CVT</td>
+          </tr>
+          <tr valign="middle">
+            <td>18/16</td>
+            <td>101 2/16</td>
+            <td>100</td>
+            <td>18/16</td>
+            <td>CVT</td>
+          </tr>
+          <tr valign="middle">
+            <td>18/16</td>
+            <td>101 3/16</td>
+            <td>100</td>
+            <td>19/16</td>
+            <td>outline</td>
+          </tr>
+        </table><br>
+        <h4><a name="single"></a>The single width value and single width cut-in</h4>The <em>single width cut-in</em> is the distance difference at which the interpreter will ignore both outline values and the control value table entries in favor of the <em>single width value</em>. It allows desired features to revert to a single predetermined size. The default for both the single width and the single width cut-in is zero pixels. It will not have any effect unless the default is set to another value.<br>
+        <p>The single width cut-in is used with MIRP[] and MDRP[].<br></p>
+        <p>This might be useful at very small grid sizes where forcing all controlled glyph features to assume the same dimensions can be an advantage in certain fonts. When the absolute difference between the single width value and the original outline value is smaller than the single width cut-in, the <em>single width value</em> is used.<br></p>
+        <p>.<br>
+        <strong><font size="-1">Table 30</font></strong> <font size="-1">varying the single width value</font></p>
+        <table border="1" width="80%" cellspacing="2" cellpadding="0">
+          <tr valign="middle">
+            <th>single width cut-in</th>
+            <th>outline value</th>
+            <th>single width value</th>
+            <th>difference</th>
+            <th>value uses</th>
+          </tr>
+          <tr valign="middle">
+            <td>0</td>
+            <td>99</td>
+            <td>100</td>
+            <td>1</td>
+            <td>outline</td>
+          </tr>
+          <tr valign="middle">
+            <td>0</td>
+            <td>100</td>
+            <td>100</td>
+            <td>0</td>
+            <td>outline</td>
+          </tr>
+          <tr valign="middle">
+            <td>1</td>
+            <td>98 15/16</td>
+            <td>100</td>
+            <td>1 4/64</td>
+            <td>outline</td>
+          </tr>
+          <tr valign="middle">
+            <td>1</td>
+            <td>99</td>
+            <td>100</td>
+            <td>1</td>
+            <td>single width</td>
+          </tr>
+          <tr valign="middle">
+            <td>1</td>
+            <td>101</td>
+            <td>100</td>
+            <td>1</td>
+            <td>single width</td>
+          </tr>
+          <tr valign="middle">
+            <td>1</td>
+            <td>101 1/16</td>
+            <td>100</td>
+            <td>1 4/64</td>
+            <td>outline</td>
+          </tr>
+        </table><br>
+        <h3><a name="order"></a>Order of operations</h3>Instructions sometimes will move a point, calculate a value, compensate for the color of the value, round according to the round state and then apply the cut-in tests. The order in which these operations are executed is significant and is given here.
+        <p><br>
+        <strong><font size="-1">Table 31</font></strong> <font size="-1">Order of operations in move instructions</font></p>
+        <table border="1" width="80%" cellspacing="2" cellpadding="0">
+          <tr valign="middle">
+            <td rowspan="6">MIRP[]</td>
+            <td>check single width cut-in</td>
+          </tr>
+          <tr valign="middle">
+            <td>check control value cut-in</td>
+          </tr>
+          <tr valign="middle">
+            <td>compensate for the color of the distance</td>
+          </tr>
+          <tr valign="middle">
+            <td>round the distance</td>
+          </tr>
+          <tr valign="middle">
+            <td>check the minimum distance</td>
+          </tr>
+          <tr valign="middle">
+            <td>move the point</td>
+          </tr>
+          <tr valign="middle">
+            <td rowspan="5">MDRP[]</td>
+            <td>check the single width cut-in</td>
+          </tr>
+          <tr valign="middle">
+            <td>compensate for the color of the distance</td>
+          </tr>
+          <tr valign="middle">
+            <td>round the distance</td>
+          </tr>
+          <tr valign="middle">
+            <td>check the minimum distance</td>
+          </tr>
+          <tr valign="middle">
+            <td>move the point</td>
+          </tr>
+          <tr valign="middle">
+            <td rowspan="3">MIAP[]</td>
+            <td>check the control value cut-in</td>
+          </tr>
+          <tr valign="middle">
+            <td>round the value</td>
+          </tr>
+          <tr valign="middle">
+            <td>move the point</td>
+          </tr>
+          <tr valign="middle">
+            <td>MSIRP[]</td>
+            <td>move the point</td>
+          </tr>
+          <tr valign="middle">
+            <td rowspan="2">MDAP[]</td>
+            <td>round the value</td>
+          </tr>
+          <tr valign="middle">
+            <td>move the point</td>
+          </tr>
+        </table><br>
+        <p>&nbsp;</p>
+        <h3><a name="size"></a>Size specific instructions</h3>All of the instructions mentioned to this point are not size specific. Their actions are always applied, unless a conditional statement causes some of the code in a sequence not to execute. Sometimes it is necessary to change the outline at particular ppem value to produce the desired result. The DELTA instructions make this possible.<br>
+        <p>Since DELTA instructions are exceptions to the grid-fitting performed by other instructions, it is important that they be added to glyph instructions after all other instructions have been decided upon. Any changes to the other instructions may change a DELTA's effect or render it useless.<br></p>
+        <p>There are two different types of DELTA instructions. The first type, the DELTAP, works by directly specifying the point number at which the exception is to be applied. The second type, the DELTAC, works by specifying the control value table entry number at which the exception is to be applied.<br></p>
+        <p><strong><font size="-1">Table 32</font></strong> <font size="-1">The DELTA instructions</font></p>
+        <table border="1" width="80%" cellspacing="2" cellpadding="0">
+          <tr valign="middle">
+            <th>Mnemonic</th>
+            <th>Instruction</th>
+          </tr>
+          <tr valign="middle">
+            <td>DELTA exception P1</td>
+            <td><a href="../RM05/Chap5.html#DELTAP1">DELTAP1[]</a></td>
+          </tr>
+          <tr valign="middle">
+            <td>DELTA exception P2</td>
+            <td><a href="../RM05/Chap5.html#DELTAP2">DELTAP2[]</a></td>
+          </tr>
+          <tr valign="middle">
+            <td>DELTA exception P3</td>
+            <td><a href="../RM05/Chap5.html#DELTAP3">DELTAP3[]</a></td>
+          </tr>
+          <tr valign="middle">
+            <td>DELTA exception C1</td>
+            <td><a href="../RM05/Chap5.html#DELTAC1">DELTAC1[]</a></td>
+          </tr>
+          <tr valign="middle">
+            <td>DELTA exception C2</td>
+            <td><a href="../RM05/Chap5.html#DELTAC2">DELTAC2[]</a></td>
+          </tr>
+          <tr valign="middle">
+            <td>DELTA exception C3</td>
+            <td><a href="../RM05/Chap5.html#DELTAC3">DELTAC3[]</a></td>
+          </tr>
+        </table><br>
+        <p>The 8 bit arg component of the DELTA instructions decomposes into two parts. The first 4 bits represent the relative number of pixels per em at which the exception is applied. The second 4 bits represent the magnitude of the change to be made. The structure of the arg is shown in FIGURE 26.<br></p>
+        <p><strong><font size="-1">FIGURE 26</font></strong> <font size="-1">The arg parameter to the DELTA instructions</font></p>
+        <pre>
+--------------------------- arg = | rel ppem | magnitude | ---------------------------
+  
+</pre>
+        <p>The relative number of pixels per em at which a DELTA is applied is a function of the delta base and the choice of DELTA instruction. Table 33 below summarizes the sizes at which the various instructions apply.<br></p>
+        <p><br>
+        <strong><font size="-1">Table 33</font></strong> <font size="-1">The range of the Delta instructions</font></p>
+        <table border="1" width="80%" cellspacing="2" cellpadding="0">
+          <tr valign="middle">
+            <td>DELTAC1</td>
+            <td>DELTAP1</td>
+            <td>(delta_base) through (delta_base + 15)</td>
+          </tr>
+          <tr valign="middle">
+            <td>DELTAC2</td>
+            <td>DELTAP2</td>
+            <td>(delta_base + 16) through (delta_base + 31)</td>
+          </tr>
+          <tr valign="middle">
+            <td>DELTAC3</td>
+            <td>DELTAP3</td>
+            <td>(delta_base + 32) through (delta_base + 47)</td>
+          </tr>
+        </table><br>
+        <p>The magnitude of the change produced by a DELTA instruction is a pixel value dependent upon the current value of the delta shift state variable. The number of possible steps is 2 to the power delta shift. Each step has the magnitude 1 over that number.<br></p>
+        <p>Since only four bits are available to store the exception size, the magnitude of the change made to the point location is remapped before it is stored in the exception specification. The table below maps the number of steps in the exception to the number that should be stored as the second part of argi.<br></p>
+        <p><br>
+        <strong><font size="-1">Table 34</font></strong> <font size="-1">: Magnitude values mapped to number of steps to move</font></p>
+        <table border="1" width="80%" cellspacing="2" cellpadding="0">
+          <tr valign="middle">
+            <th>Magnitude</th>
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+          </tr>
+          <tr valign="middle">
+            <th>Number of steps</th>
+            <td>-8</td>
+            <td>-7</td>
+            <td>-6</td>
+            <td>-5</td>
+            <td>-4</td>
+            <td>-3</td>
+            <td>-2</td>
+            <td>-1</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+          </tr>
+        </table><br>
+        <p>&nbsp;</p>
+        <h4><a name="DELTAP"></a>A DELTAP example</h4>In the example below, a DELTAP1 is applied to point 12 at 9 pixels per em. Assume that the delta shift has been set to 6.Moving point p by -3/64 of a pixel, prevents the dropout shown at the left. This instruction would expect the parameter 1(number of exceptions) and $05 which can be decomposed into the byte 0, the relative pixels per em value, and the byte 5 which represents -3 steps in magnitude (but is stored as exception 5 in table above).<br>
+        <p><strong><font size="-1">Figure 27</font></strong> <font size="-1">A dropout is filled in using a DELTAP instruction</font></p>
+        <p><img src="FE24.gif" width="422" height="329" align="bottom"></p>
+        <p>&nbsp;</p>
+        <h4><a name="DELTAC"></a>A DELTAC example</h4><br>
+        <p>In the example below, imagine that control value table entries 4 and 11 refer to features that are close in size and expected to grow together. At 12 ppem and 14 ppem, these features will round together (assuming the round state is round to grid). At 13 ppem, the two values will round in opposite directions. The actual figures are shown in TABLE 3.<br></p>
+        <p><br>
+        <strong><font size="-1">TABLE 3</font></strong> <font size="-1">Scale control value table entry values</font></p>
+        <table border="1" width="80%" cellspacing="2" cellpadding="0">
+          <tr valign="middle">
+            <th>Control value table</th>
+            <th colspan="4">Control value table values in pixels per em</th>
+          </tr>
+          <tr valign="middle">
+            <td>Entry number</td>
+            <td>Value in FUnits</td>
+            <td>12 ppem</td>
+            <td>13 ppem</td>
+            <td>14 ppem</td>
+          </tr>
+          <tr valign="middle">
+            <td>4</td>
+            <td>120</td>
+            <td>45/64</td>
+            <td>49/64</td>
+            <td>53/64</td>
+          </tr>
+          <tr valign="middle">
+            <td>11</td>
+            <td>125</td>
+            <td>47/64</td>
+            <td>51/64</td>
+            <td>55/64</td>
+          </tr>
+        </table><br>
+        <p>A DELTAC instruction can be used to force the values to round together. At the default delta base of 9, the exception will take place at a ppem value of 13. The exception value of 8 signifies one step. At the default delta shift value, this will mean a movement of 4/64 of a pixel.<br></p>
+        <p><br></p>
+        <table border="1" width="80%" cellspacing="2" cellpadding="0">
+          <tr valign="middle">
+            <td>PUSHB[]</td>
+            <td>Push one byte onto the stack.</td>
+          </tr>
+          <tr valign="middle">
+            <td>1</td>
+            <td>Number of control value table, exception pairs.</td>
+          </tr>
+          <tr valign="middle">
+            <td>4</td>
+            <td>Control value table entry number</td>
+          </tr>
+          <tr valign="middle">
+            <td>72</td>
+            <td>Exception 72 = 0100 10002 signifying a relative pixel per em value of 4 and a magnitude of 8.</td>
+          </tr>
+          <tr valign="middle">
+            <td>DELTAC1[]</td>
+            <td>Create a delta exception to a control value table entry.</td>
+          </tr>
+        </table><br>
+        <p>The values that are actually in the control value table or that are part of the instruction are in bold face. The other values presented are strictly to aid in understanding the example.<br></p>
+        <p>For the sake of this example, assume that the delta base is 9 producing a range from 9 through 24 pixels per em. Assume further that the delta shift is 4 making the smallest possible move equal to 1/16 of a pixel.<br></p>
+      </li>
+    </ol>
+  </div>
+
+      </section>
+  </div><!-- /content -->
+
+  <div id="globalfooter">
+    <div id="breadory">
+      <ol id="breadcrumbs">
+        <li class="home"><a href="../../../index.html">Developer</a></li>
+        <li><a href="../../index.html">Fonts</a></li>
+        <li><a href="../index.html">TrueType™ Reference Manual</a></li>
+        <li>The Font Engine</li>
+      </ol>
+      <div id="directorynav" class="directorynav">
+	<div id="dn-cola" class="column">
+		<h3><a href="../../../platforms/index.html">Platforms</a></h3>
+		<ul>
+			<li><a href="../../../ios/index.html">iOS</a></li>
+			<li><a href="../../../osx/index.html">OS X</a></li>
+			<li><a href="../../../watchos/index.html">watchOS</a></li>
+			<li><a href="../../../tvos/index.html">tvOS</a></li>
+		</ul>
+		<h3><a href="../../../resources/index.html">Tools</a></h3>
+		<ul>
+			<li><a href="../../../xcode/index.html">Xcode</a></li>
+			<li><a href="../../../swift/index.html">Swift</a></li>
+		</ul>
+	</div>
+	<div id="dn-colb" class="column">
+		<h3><a href="../../../resources/index.html">Resources</a></h3>
+		<ul>
+			<li><a href="../../../library/index.html">Documentation</a></li>
+			<li><a href="../../../videos/index.html">Videos</a></li>
+			<li><a href="https://forums.developer.apple.com/">Forums</a></li>
+			<li><a href="../../../app-store/index.html">App Store</a></li>
+			<li><a href="../../../safari/index.html">Safari and Web</a></li>
+			<li><a href="../../../education/index.html">Education</a></li>
+			<li><a href="../../../enterprise/index.html">Enterprise</a></li>
+		</ul>
+	</div>
+	<div id="dn-colc" class="column">
+		<h3><a href="../../../programs/index.html">Programs</a></h3>
+		<ul>
+			<li><a href="../../../programs/index.html">Developer Program</a></li>
+			<li><a href="../../../programs/enterprise/index.html">Enterprise Program</a></li>
+			<li><a href="../../../programs/ios/university/index.html">iOS University Program</a></li>
+			<li><a href="../../../programs/mfi/index.html">MFi Program</a></li>
+		</ul>
+	</div>
+	<div id="dn-cold" class="column">
+		<h3><a href="../../../support/index.html">Support</a></h3>
+		<ul>
+			<li><a href="../../../support/development/index.html">Development</a></li>
+			<li><a href="../../../support/distribution/index.html">Distribution</a></li>
+			<li><a href="../../../support/membership/index.html">Membership</a></li>
+			<li><a href="../../../system-status/index.html">System Status</a></li>
+		</ul>
+	</div>
+	<div id="dn-cole" class="column">
+		<h3><a href="https://developer.apple.com/account/">Account</a></h3>
+		<ul>
+			<li><a href="https://developer.apple.com/account/">Developer Account</a></li>
+			<li><a href="../../../go/index-id=certificates-ids-profiles.html">Certificates, IDs &amp; Profiles</a></li>
+			<li><a href="https://itunesconnect.apple.com">iTunes Connect</a></li>			
+			<li><a href="../../../terms/index.html">License Agreements</a></li>
+		</ul>
+	</div>
+</div>
+
+    </div><!--/breadory-->
+    <ul class="gf-links piped footer-links">
+  <li><a href="../../../news/index.html" class="first">News &amp; Updates</a></li>
+  <li><a href="../../../bug-reporting/index.html">Report Bugs</a></li>
+  <li><a href="../../../contact/index.html">Contact Us</a></li>
+</ul>
+
+<div class="gf-sosumi footer-sosumi">
+  <p>Copyright © 2016 Apple Inc. All rights reserved.</p>
+    <ul class="piped">
+        <li><a href="http://www.apple.com/legal/internet-services/terms/site.html" class="first">Terms of Use</a></li>
+        <li><a href="http://www.apple.com/privacy/privacy-policy/">Privacy Policy</a></li>
+    </ul>
+</div>
+
+<!--<div id="gf-links piped footer-links">
+	<ul>
+		<li><a href="/cn/" title="Simplified Chinese">简体中文</a></li>
+		<li><a href="/jp/" title="Japanese">日本語</a></li>
+		<li><a href="/kr/" title="Korean">한국어</a></li>
+	</ul>
+</div>-->
+
+  </div><!--/globalfooter-->
+</body>
+</html>

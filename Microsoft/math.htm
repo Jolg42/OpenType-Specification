@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="otspec.css" rel="STYLESHEET" type="text/css">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>MATH - The mathematical typesetting table</title>
+    <style type="text/css">TABLE.gray TH, TABLE.gray TD {
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="toprule"></div>
+
+    <p class="menu">
+        <a href="http://www.microsoft.com/typography/default.mspx">Microsoft Typography</a> |
+        <a href="http://www.microsoft.com/typography/creators.htm">Developer...</a> |
+        <a href="default.htm">OpenType specification</a> |
+        <a href="otff.htm#otttables">OpenType tables</a> |
+        <span>The BASE table</span>
+    </p>
+
+    <div class="middlerule"></div>
+
+    <div class="contents">
+        <h1>MATH - The mathematical typesetting table</h1>
+
+        <h2>MATH table overview</h2>
+
+        <p>Mathematical formulas are complex text objects in which multiple elements with various metric, style or positioning attributes are combined. In order for a math handling engine to support layout of mathematical formulas, several types of font-specific information particular to the layout of formulas are required. The MATH table format defines data structures for font-specific information necessary for math formula layout.</p>
+
+        <p>General structure of math formulas is hierarchical, with formulas composed of smaller sub-formula components, where each sub-formula may be composed of even simpler sub-formulas, and so on down to individual characters, e.g. letters or numbers. </p>
+
+        <p class="center">
+            <img alt="image001.jpg" src="images/image001.jpg">
+        </p>
+
+        <p class="center"><strong>Example of a complex hierarchical math formula and the diagram showing the pieces of metal type and spacing materials used in a traditional printing application</strong></p>
+
+        <p>&nbsp;</p>
+
+        <p>Likewise, process of math formula layout is also recursive. Child components are formatted first and then arranged to form their parent’s layout with this process repeated on every level starting from simplest blocks up to the whole formula. Each sub-formula has its own component structure and rules for how to perform layout. For example, fraction consists of nominator and denominator sub-formulas, which will be placed on top one another with fraction rule separating them. Integral contains integral sign, optional upper and lower limits, and following integral expression (which are all sub-formulas).</p>
+
+        <p>Math formula layout rules are quite different from text substitution and positioning rules expressed in tables like GSUB and GPOS. Regular glyph runs have full context font layout tables can operate on, so actions like contextual substitution or kerning can be expressed in terms of known glyph sequences. For math formula, virtually any component can be a complex formula as well. </p>
+
+        <p>Math handling engine works with boxes representing individual formula components as units of layout. During layout process individual boxes can be arranged relative to each other, stretched depending on sizes of sibling boxes, or use different glyph variants based on box size and position in the formula. </p>
+
+        <p>MATH table provides font-specific information about font and individual glyphs that math handling engine uses to produce formula layout that matches font design and realizes full font potential by using available glyph stylistic alternates and stretching variants.</p>
+
+        <h2>MATH – Table organization and structure</h2>
+
+        <p><strong>Shared Table: MathValueRecord</strong></p>
+
+        <p>MATH subtables use MathValueRecord to describe values, in font design units, that place or adjust elements of math formulas. A MathValueRecord may also specify an offset to a device table which provides corrections to this value at particular display resolutions. </p>
+
+        <p>When designing a MATH table, device tables may be specified for many values used for positioning elements of a formula, suggesting many device corrections. However, a math handling engine may not permit those corrections to accumulate. This accumulation will result in formula dimensions that are significantly different from scaled-down dimensions of the same formula rendered on a high-resolution device. Therefore, accumulation is undesirable and leads to inconsistencies between screen and print versions, as well as possible clipping.</p>
+
+        <p>To maintain consistency across devices with different resolutions, only limited device corrections are permitted. When too many device corrections are called for, some of these corrections may be cancelled by a math handling engine. Because of that, it is suggested that the format 1 is used for the device table referenced by a MathValueRecord. This format allows the font designer to specify corrections of -2, -1, 0, and 1 pixels. The recommended values to use in MathValueRecords are -1, 0, or 1.</p>
+
+        <p>&nbsp;</p>
+
+        <p><em>MathValueRecord</em></p>
+
+        <table class="gray">
+            <tr>
+                <th>Type</th>
+                <th>Name</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>SHORT</td>
+                <td>Value</td>
+                <td>The X or Y value in design units</td>
+            </tr>
+            <tr>
+                <td>Offset</td>
+                <td>DeviceTable</td>
+                <td>Offset to the device table – from the beginning of parent table. May be NULL. Suggested format for device table is 1.</td>
+            </tr>
+        </table>
+
+        <p>&nbsp;</p>
+
+        <p><strong>MATH Table Header</strong></p>
+
+        <p>The MATH table begins with a header that consists of a version number for the table (Version), which is currently set to 1.0 (0x00010000), and specified offsets to the following tables that store information on positioning of math formula elements:</p>
+
+        <ul>
+            <li>MathConstants table stores font parameters to be used in typesetting of each supported mathematical function, such as a fraction or a radical.</li>
+            <li>MathGlyphInfo table supplies positioning information that is defined on a per-glyph basis.</li>
+            <li>MathVariants table contains information to be used in constructing glyph variants of different height or width, either by finding a pre-defined glyph with desired measurements in the font, or by assembling the required shape from pieces found in the glyph set.</li>
+        </ul>
+
+        <p><em>Math Header Table</em></p>
+
+        <table class="gray">
+            <tr>
+                <th>Type</th>
+                <th>Name</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Fixed</td>
+                <td>Version</td>
+                <td>Version of the MATH table, currently set to 0x00010000</td>
+            </tr>
+            <tr>
+                <td>Offset</td>
+                <td>MathConstants</td>
+                <td>Offset to MathConstants table - from the beginning of MATH table.</td>
+            </tr>
+            <tr>
+                <td>Offset</td>
+                <td>MathGlyphInfo</td>
+                <td>Offset to MathGlyphInfo table - from the beginning of MATH table.</td>
+            </tr>
+            <tr>
+                <td>Offset</td>
+                <td>MathVariants</td>
+                <td>Offset to MathVariants table - from the beginning of MATH table.</td>
+            </tr>
+        </table>
+
+        <p>&nbsp;</p>
+
+        <p><strong>MathConstants Table</strong></p>
+
+        <p>The MathConstants table defines miscellaneous constants required to properly position elements of mathematical formulas. These constants belong to several groups of semantically related values such as values needed to properly position accents, values for positioning superscripts and subscripts, and values for positioning elements of fractions. The table also contains general use constants that may affect all parts of the formula, such as axis height and math leading. Note that most of the constants deal with the vertical positioning.</p>
+
+        <p>In most cases, values in the MathConstants table are assumed to be positive. For example, for descenders and shift down values a positive constant signifies movement in a downwards direction. Most values in the MathConstants table are represented by a MathValueRecord, which allows the font designer to supply device corrections to those values when necessary. For values involving base and dependent elements (e.g. superscripts or limits) value is defined in the font size of the base.</p>
+
+        <p>When selecting names for values in the MathConstants table, the following naming convention should be used:</p>
+
+        <ul>
+            <li><strong>Height</strong> – Specifies a distance from the main baseline.</li>
+            <li><strong>Kern</strong> – Represents a fixed amount of empty space to be introduced.</li>
+            <li><strong>Gap</strong> – Represents an amount of empty space that may need to be increased to meet certain criteria.</li>
+            <li><strong>Drop and Rise</strong> – Specifies the relationship between measurements of two elements to be positioned relative to each other (but not necessarily in a stack-like manner) that must meet certain criteria. For a Drop, one of the positioned elements has to be moved down to satisfy those criteria; for a Rise, the movement is upwards.</li>
+            <li><strong>Shift</strong> – Defines a vertical shift applied to an element sitting on a baseline.</li>
+            <li><strong>Dist</strong> – Defines a distance between baselines of two elements.</li>
+        </ul>
+
+        <p>&nbsp;</p>
+
+        <p><em>MathConstants Table</em></p>
+
+        <table class="gray">
+            <tr>
+                <th>Type</th>
+                <th>Name</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>SHORT</td>
+                <td>ScriptPercentScaleDown</td>
+                <td>Percentage of scaling down for script level 1. Suggested value: 80%.</td>
+            </tr>
+            <tr>
+                <td>SHORT</td>
+                <td>ScriptScriptPercentScaleDown</td>
+                <td>Percentage of scaling down for script level 2 (ScriptScript). Suggested value: 60%.</td>
+            </tr>
+            <tr>
+                <td>USHORT</td>
+                <td>DelimitedSubFormulaMinHeight</td>
+                <td>Minimum height required for a delimited expression to be treated as a sub-formula. Suggested value: normal line height ×1.5.</td>
+            </tr>
+            <tr>
+                <td>USHORT</td>
+                <td>DisplayOperatorMinHeight</td>
+                <td>Minimum height of n-ary operators (such as integral and summation) for formulas in display mode.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>MathLeading</td>
+                <td>White space to be left between math formulas to ensure proper line spacing. For example, for applications that treat line gap as a part of line ascender, formulas with ink going above (os2.sTypoAscender + os2.sTypoLineGap - MathLeading) or with ink going below os2.sTypoDescender will result in increasing line height.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>AxisHeight</td>
+                <td>Axis height of the font.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>AccentBaseHeight</td>
+                <td>Maximum (ink) height of accent base that does not require raising the accents. Suggested: x‑height of the font (os2.sxHeight) plus any possible overshots.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>FlattenedAccentBaseHeight</td>
+                <td>Maximum (ink) height of accent base that does not require flattening the accents. Suggested: cap height of the font (os2.sCapHeight).</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>SubscriptShiftDown</td>
+                <td>The standard shift down applied to subscript elements. Positive for moving in the downward direction. Suggested: os2.ySubscriptYOffset.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>SubscriptTopMax</td>
+                <td>Maximum allowed height of the (ink) top of subscripts that does not require moving subscripts further down. Suggested: 4/5 x- height.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>SubscriptBaselineDropMin</td>
+                <td>Minimum allowed drop of the baseline of subscripts relative to the (ink) bottom of the base. Checked for bases that are treated as a box or extended shape. Positive for subscript baseline dropped below the base bottom.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>SuperscriptShiftUp</td>
+                <td>Standard shift up applied to superscript elements. Suggested: os2.ySuperscriptYOffset.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>SuperscriptShiftUpCramped</td>
+                <td>Standard shift of superscripts relative to the base, in cramped style.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>SuperscriptBottomMin</td>
+                <td>Minimum allowed height of the (ink) bottom of superscripts that does not require moving subscripts further up. Suggested: ¼ x-height.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>SuperscriptBaselineDropMax</td>
+                <td>Maximum allowed drop of the baseline of superscripts relative to the (ink) top of the base. Checked for bases that are treated as a box or extended shape. Positive for superscript baseline below the base top.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>SubSuperscriptGapMin</td>
+                <td>Minimum gap between the superscript and subscript ink. Suggested: 4×default rule thickness.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>SuperscriptBottomMaxWith Subscript</td>
+                <td>The maximum level to which the (ink) bottom of superscript can be pushed to increase the gap between superscript and subscript, before subscript starts being moved down. Suggested: 4/5 x-height.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>SpaceAfterScript</td>
+                <td>Extra white space to be added after each subscript and superscript. Suggested: 0.5pt for a 12 pt font.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>UpperLimitGapMin</td>
+                <td>Minimum gap between the (ink) bottom of the upper limit, and the (ink) top of the base operator.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>UpperLimitBaselineRiseMin</td>
+                <td>Minimum distance between baseline of upper limit and (ink) top of the base operator.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>LowerLimitGapMin</td>
+                <td>Minimum gap between (ink) top of the lower limit, and (ink) bottom of the base operator.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>LowerLimitBaselineDropMin</td>
+                <td>Minimum distance between baseline of the lower limit and (ink) bottom of the base operator.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>StackTopShiftUp</td>
+                <td>Standard shift up applied to the top element of a stack.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>StackTopDisplayStyleShiftUp</td>
+                <td>Standard shift up applied to the top element of a stack in display style.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>StackBottomShiftDown</td>
+                <td>Standard shift down applied to the bottom element of a stack. Positive for moving in the downward direction.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>StackBottomDisplayStyleShiftDown</td>
+                <td>Standard shift down applied to the bottom element of a stack in display style. Positive for moving in the downward direction.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>StackGapMin</td>
+                <td>Minimum gap between (ink) bottom of the top element of a stack, and the (ink) top of the bottom element. Suggested: 3×default rule thickness.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>StackDisplayStyleGapMin</td>
+                <td>Minimum gap between (ink) bottom of the top element of a stack, and the (ink) top of the bottom element in display style. Suggested: 7×default rule thickness.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>StretchStackTopShiftUp</td>
+                <td>Standard shift up applied to the top element of the stretch stack.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>StretchStackBottomShiftDown</td>
+                <td>Standard shift down applied to the bottom element of the stretch stack. Positive for moving in the downward direction.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>StretchStackGapAboveMin</td>
+                <td>Minimum gap between the ink of the stretched element, and the (ink) bottom of the element above. Suggested: UpperLimitGapMin.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>StretchStackGapBelowMin</td>
+                <td>Minimum gap between the ink of the stretched element, and the (ink) top of the element below. Suggested: LowerLimitGapMin.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>FractionNumeratorShiftUp</td>
+                <td>Standard shift up applied to the numerator.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>FractionNumeratorDisplayStyle ShiftUp</td>
+                <td>Standard shift up applied to the numerator in display style. Suggested: StackTopDisplayStyleShiftUp.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>FractionDenominatorShiftDown</td>
+                <td>Standard shift down applied to the denominator. Positive for moving in the downward direction.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>FractionDenominatorDisplay StyleShiftDown</td>
+                <td>Standard shift down applied to the denominator in display style. Positive for moving in the downward direction. Suggested: StackBottomDisplayStyleShiftDown.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>FractionNumeratorGapMin</td>
+                <td>Minimum tolerated gap between the (ink) bottom of the numerator and the ink of the fraction bar. Suggested: default rule thickness.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>FractionNumDisplayStyle GapMin</td>
+                <td>Minimum tolerated gap between the (ink) bottom of the numerator and the ink of the fraction bar in display style. Suggested: 3×default rule thickness.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>FractionRuleThickness</td>
+                <td>Thickness of the fraction bar. Suggested: default rule thickness.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>FractionDenominatorGapMin</td>
+                <td>Minimum tolerated gap between the (ink) top of the denominator and the ink of the fraction bar. Suggested: default rule thickness.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>FractionDenomDisplayStyleGap Min</td>
+                <td>Minimum tolerated gap between the (ink) top of the denominator and the ink of the fraction bar in display style. Suggested: 3×default rule thickness.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>SkewedFractionHorizontalGap</td>
+                <td>Horizontal distance between the top and bottom elements of a skewed fraction.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>SkewedFractionVerticalGap</td>
+                <td>Vertical distance between the ink of the top and bottom elements of a skewed fraction.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>OverbarVerticalGap</td>
+                <td>Distance between the overbar and the (ink) top of he base. Suggested: 3×default rule thickness.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>OverbarRuleThickness</td>
+                <td>Thickness of overbar. Suggested: default rule thickness.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>OverbarExtraAscender</td>
+                <td>Extra white space reserved above the overbar. Suggested: default rule thickness.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>UnderbarVerticalGap</td>
+                <td>Distance between underbar and (ink) bottom of the base. Suggested: 3×default rule thickness.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>UnderbarRuleThickness</td>
+                <td>Thickness of underbar. Suggested: default rule thickness.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>UnderbarExtraDescender</td>
+                <td>Extra white space reserved below the underbar. Always positive. Suggested: default rule thickness.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>RadicalVerticalGap</td>
+                <td>Space between the (ink) top of the expression and the bar over it. Suggested: 1¼ default rule thickness.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>RadicalDisplayStyleVerticalGap</td>
+                <td>Space between the (ink) top of the expression and the bar over it. Suggested: default rule thickness + ¼ x-height.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>RadicalRuleThickness</td>
+                <td>Thickness of the radical rule. This is the thickness of the rule in designed or constructed radical signs. Suggested: default rule thickness.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>RadicalExtraAscender</td>
+                <td>Extra white space reserved above the radical. Suggested: RadicalRuleThickness.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>RadicalKernBeforeDegree</td>
+                <td>Extra horizontal kern before the degree of a radical, if such is present.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>RadicalKernAfterDegree</td>
+                <td>Negative kern after the degree of a radical, if such is present. Suggested: −10/18 of em.</td>
+            </tr>
+            <tr>
+                <td>SHORT</td>
+                <td>RadicalDegreeBottomRaise Percent</td>
+                <td>Height of the bottom of the radical degree, if such is present, in proportion to the ascender of the radical sign. Suggested: 60%.</td>
+            </tr>
+        </table>
+
+        <p>&nbsp;</p>
+
+        <p><strong>MathGlyphInfo Table</strong></p>
+
+        <p>The MathGlyphInfo table contains positioning information that is defined on per-glyph basis. The table consists of the following parts:</p>
+
+        <ul>
+            <li>Offset to MathItalicsCorrectionInfo table that contains information on italics correction values.</li>
+            <li>Offset to MathTopAccentAttachment table that contains horizontal positions for attaching mathematical accents.</li>
+            <li>Offset to Extended Shape coverage table. The glyphs covered by this table are to be considered extended shapes.</li>
+            <li>Offset to MathKernInfo table that provides per-glyph information for mathematical kerning.</li>
+        </ul>
+
+        <p>NOTE: Here, and elsewhere in the subclause – please refer to subclause 6.2.4 "Features and Lookups" for description of the coverage table formats.</p>
+
+        <p>&nbsp;</p>
+
+        <p><em>MathGlyphInfo Table</em></p>
+
+        <table class="gray">
+            <tr>
+                <th>Type</th>
+                <th>Name</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Offset</td>
+                <td>MathItalicsCorrectionInfo</td>
+                <td>Offset to MathItalicsCorrectionInfo table - from the beginning of MathGlyphInfo table.</td>
+            </tr>
+            <tr>
+                <td>Offset</td>
+                <td>MathTopAccentAttachment</td>
+                <td>Offset to MathTopAccentAttachment table - from the beginning of MathGlyphInfo table.</td>
+            </tr>
+            <tr>
+                <td>Offset</td>
+                <td>ExtendedShapeCoverage</td>
+                <td>Offset to coverage table for Extended Shape glyphs - from the beginning of MathGlyphInfo table. When the left or right glyph of a box is an extended shape variant, the (ink) box (and not the default position defined by values in MathConstants table) should be used for vertical positioning purposes. May be NULL..</td>
+            </tr>
+            <tr>
+                <td>Offset</td>
+                <td>MathKernInfo</td>
+                <td>Offset to MathKernInfo table - from the beginning of MathGlyphInfo table.</td>
+            </tr>
+        </table>
+
+        <p>&nbsp;</p>
+
+        <p><strong>MathItalicsCorrectonInfo Table</strong></p>
+
+        <p>The MathItalicsCorrectionInfo table contains italics correction values for slanted glyphs used in math typesetting. The table consists of the following parts:</p>
+
+        <ul>
+            <li>Coverage of glyphs for which the italics correction values are provided. It is assumed to be zero for all other glyphs.</li>
+            <li>Count of covered glyphs.</li>
+            <li>Array of italic correction values for each covered glyph, in order of coverage. The italics correction is the measurement of how slanted the glyph is, and how much its top part protrudes to the right. For example, taller letters tend to have larger italics correction, and a <em>V</em> will probably have larger italics correction than an <em>L</em>.</li>
+        </ul>
+
+        <p style='margin-left: 35.3pt;'>Italics correction can be used in the following situations:</p>
+
+        <div style='margin-left: 2em;'>
+            <ul>
+                <li>When a run of slanted characters is followed by a straight character (such as an operator or a delimiter), the italics correction of the last glyph is added to its advance width.</li>
+                <li>When positioning limits on an N-ary operator (e.g., integral sign), the horizontal position of the upper limit is moved to the right by ½ of the italics correction, while the position of the lower limit is moved to the left by the same distance.</li>
+                <li>When positioning superscripts and subscripts, their default horizontal positions are also different by the amount of the italics correction of the preceding glyph.</li>
+            </ul>
+        </div>
+
+        <p><em>MathItalicsCorrectionInfo Table</em></p>
+
+        <table class="gray">
+            <tr>
+                <th>Type</th>
+                <th>Name</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Offset</td>
+                <td>Coverage</td>
+                <td>Offset to Coverage table - from the beginning of MathItalicsCorrectionInfo table.</td>
+            </tr>
+            <tr>
+                <td>USHORT</td>
+                <td>ItalicsCorrectionCount</td>
+                <td>Number of italics correction values. Should coincide with the number of covered glyphs.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>ItalicsCorrection [ItalicsCorrectionCount]</td>
+                <td>Array of MathValueRecords defining italics correction values for each covered glyph.</td>
+            </tr>
+        </table>
+
+        <p>&nbsp;</p>
+
+        <p><strong>MathTopAccentAttachment Table</strong></p>
+
+        <p>The MathTopAccentAttachment table contains information on horizontal positioning of top math accents. The table consists of the following parts:</p>
+
+        <ul>
+            <li>Coverage of glyphs for which information on horizontal positioning of math accents is provided. To position accents over any other glyph, its geometrical center (with respect to advance width) can be used.</li>
+            <li>Count of covered glyphs.</li>
+            <li>Array of top accent attachment points for each covered glyph, in order of coverage. These attachment points are to be used for finding horizontal positions of accents over characters. It is done by aligning the attachment point of the base glyph with the attachment point of the accent. Note that this is very similar to mark-to-base attachment, but here alignment only happens in the horizontal direction, and the vertical positions of accents are determined by different means.</li>
+        </ul>
+
+        <p><em>MathTopAccentAttachment Table</em></p>
+
+        <table class="gray">
+            <tr>
+                <th>Type</th>
+                <th>Name</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Offset</td>
+                <td>TopAccentCoverage</td>
+                <td>Offset to Coverage table - from the beginning of MathTopAccentAttachment table.</td>
+            </tr>
+            <tr>
+                <td>USHORT</td>
+                <td>TopAccentAttachmentCount</td>
+                <td>Number of top accent attachment point values. Should coincide with the number of covered glyphs.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>TopAccentAttachment [TopAccentAttachmentCount]</td>
+                <td>Array of MathValueRecords defining top accent attachment points for each covered glyph.</td>
+            </tr>
+        </table>
+
+        <p>&nbsp;</p>
+
+        <p><strong>ExtendedShapeCoverage Table</strong></p>
+
+        <p>The glyphs covered by this table are to be considered extended shapes. These glyphs are variants extended in the vertical direction, e.g., to match height of another part of the formula. Because their dimensions may be very large in comparison with normal glyphs in the glyph set, the standard positioning algorithms will not produce the best results when applied to them. In the vertical direction, other formula elements will be positioned not relative to those glyphs, but instead to the ink box of the subexpression containing them.</p>
+
+        <p>For example, consider a fraction enclosed in parentheses with a superscript. Notice how the superscripts on ‘<em>z</em>’ and ‘<em>Z</em>’ are also aligned vertically, although they have different heights. If the right parenthesis was not considered an extended shape, the superscript would be put in position aligned with any other superscript on the line, like this:</p>
+
+        <p class="center">
+            <img src="images/image002.png">
+        </p>
+
+        <p>Because this is undesirable, the right parenthesis in this case should be considered an extended shape, resulting in superscript positioned relative to the whole subexpression:</p>
+
+        <p class="center">
+            <img src="images/image003.png">
+        </p>
+
+        <p>&nbsp;</p>
+
+        <p><strong>MathKernInfo Table</strong></p>
+
+        <p>The MathKernInfo table provides information on glyphs for which mathematical (height-dependent) kerning values are defined. It consists of the following fields:</p>
+
+        <ul>
+            <li>Coverage of glyphs for which mathematical kerning information is provided.</li>
+            <li>Count of MathKernInfoRecords. Should coincide with the number of glyphs in Coverage table.</li>
+            <li>Array of MathKernInfoRecords for each covered glyph, in order of coverage.</li>
+        </ul>
+
+        <p><em>MathKernInfo Table</em></p>
+
+        <table class="gray">
+            <tr>
+                <th>Type</th>
+                <th>Name</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Offset</td>
+                <td>MathKernCoverage</td>
+                <td>Offset to Coverage table - from the beginning of the MathKernInfo table.</td>
+            </tr>
+            <tr>
+                <td>USHORT</td>
+                <td>MathKernCount</td>
+                <td>Number of MathKernInfoRecords.</td>
+            </tr>
+            <tr>
+                <td>MathKernInfoRecord</td>
+                <td>MathKernInfoRecords [MathKernCount]</td>
+                <td>Array of MathKernInfoRecords, per-glyph information for mathematical positioning of subscripts and superscripts.</td>
+            </tr>
+        </table>
+
+        <p>&nbsp;</p>
+
+        <p><strong>MathKernInfoRecord Table</strong></p>
+
+        <p>Each MathKernInfoRecord points to up to four kern tables for each of the corners around the glyph.</p>
+
+        <p><em>MathKernInfoRecord Table</em></p>
+
+        <table class="gray">
+            <tr>
+                <th>Type</th>
+                <th>Name</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Offset</td>
+                <td>TopRightMathKern</td>
+                <td>Offset to MathKern table for top right corner - from the beginning of MathKernInfo table. May be NULL.</td>
+            </tr>
+            <tr>
+                <td>Offset</td>
+                <td>TopLeftMathKern</td>
+                <td>Offset to MathKern table for the top left corner - from the beginning of MathKernInfo table. May be NULL.</td>
+            </tr>
+            <tr>
+                <td>Offset</td>
+                <td>BottomRightMathKern</td>
+                <td>Offset to MathKern table for bottom right corner - from the beginning of MathKernInfo table. May be NULL.</td>
+            </tr>
+            <tr>
+                <td>Offset</td>
+                <td>BottomLeftMathKern</td>
+                <td>Offset to MathKern table for bottom left corner - from the beginning of MathKernInfo table. May be NULL.</td>
+            </tr>
+        </table>
+
+        <p>&nbsp;</p>
+
+        <p><strong>MathKern Table</strong></p>
+
+        <p>The MathKern table contains adjustments to horizontal positions of subscripts and superscripts. The purpose of this table is to improve spacing in situations such as
+            <img src="images/image004.png" />
+            or
+            <img src="images/image005.png" />. The kerning algorithm consists of the following steps:
+        </p>
+
+        <ul>
+            <li>Calculate vertical positions of subscripts and superscripts.</li>
+            <li>Set the default horizontal position for the subscript immediately after the base glyph.</li>
+            <li>Set the default horizontal position for the superscript as shifted relative to the position of the subscript by the italics correction of the base glyph.</li>
+            <li>Based on the vertical positions, calculate the height of the top/ bottom for the bounding boxes of sub/superscript relative to the base glyph, and the height of the top/ bottom of the base relative to the super/ subscript. These will be the correction heights.</li>
+            <li>Get the kern values corresponding to these correction heights for the appropriate corner of the base glyph and sub/superscript glyph from the appropriate MathKern tables. Kern the default horizontal positions by the minimum of sums of those values at the correction heights for the base and for the sub/superscript.</li>
+            <li>If either one of the base or superscript expression has to be treated as a box not providing glyph</li>
+        </ul>
+
+        <p class="center">
+            <img src="images/image006.png" />
+        </p>
+
+        <p class="center"><strong>Example of horizontal and vertical kerning adjustments for superscript positioning.</strong></p>
+
+        <p>&nbsp;</p>
+
+        <p>Kern value corresponding to a particular height from the MathKern table is determined by finding two consecutive indexes in the CorrectionHeight array so that the value of the correction height at hand falls between the two heights found at those indexes. The KernValue array entry corresponding to the larger index gives the sought value. If the correction height is less than all heights in the table, the first value (index 0) should be used. For a height that is greater than all heights in the table, the last entry should be used.</p>
+
+        <p>&nbsp;</p>
+
+        <p><em>MathKern Table</em></p>
+
+        <table class="gray">
+            <tr>
+                <th>Type</th>
+                <th>Name</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>USHORT</td>
+                <td>HeightCount</td>
+                <td>Number of heights on which the kern value changes.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>CorrectionHeight[HeightCount]</td>
+                <td>Array of correction heights at which the kern value changes. Sorted by the height value in design units.</td>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>KernValue[HeightCount+1]</td>
+                <td>Array of kern values corresponding to heights.</br>
+				First value is the kern value for all heights less or equal than the first height in this table.</br>
+				Last value is the value to be applied for all heights greater than the last height in this table.</br>
+				Negative values are interpreted as "move glyphs closer to each other".</td>
+            </tr>
+        </table>
+
+        <p>&nbsp;</p>
+
+        <p><strong>MathVariants Table</strong></p>
+
+        <p>The MathVariants table solves the following problem: given a particular default glyph shape and a certain width or height, find a variant shape glyph (or construct created by putting several glyph together) that has the required measurement. This functionality is needed for growing the parentheses to match the height of the expression within, growing the radical sign to match the height of the expression under the radical, stretching accents like tilde when they are put over several characters, for stretching arrows, horizontal curly braces, and so forth.</p>
+
+        <p>The MathVariants table consists of the following fields:</p>
+
+        <ul>
+            <li>Count and coverage of glyph that can grow in the vertical direction.</li>
+            <li>Count and coverage of glyphs that can grow in the horizontal direction.</li>
+            <li>MinConnectorOverlap defines by how much two glyphs need to overlap with each other when used to construct a larger shape. Each glyph to be used as a building block in constructing extended shapes will have a straight part at either or both ends. This connector part is used to connect that glyph to other glyphs in the assembly. These connectors need to overlap to compensate for rounding errors and hinting corrections at a lower resolution. The MinConnectorOverlap value tells how much overlap is necessary for this particular font.</li>
+            <li>Two arrays of offsets to MathGlyphConstruction tables: one array for glyphs that grow in the vertical direction, and the other array for glyphs that grow in the horizontal direction. The arrays must be arranged in coverage order and have specified sizes.</li>
+        </ul>
+
+        <p><em>MathVariants Table</em></p>
+
+        <table class="gray">
+            <tr>
+                <th>Type</th>
+                <th>Name</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>USHORT</td>
+                <td>MinConnectorOverlap</td>
+                <td>Minimum overlap of connecting glyphs during glyph construction, in design units.</td>
+            </tr>
+            <tr>
+                <td>Offset</td>
+                <td>VertGlyphCoverage</td>
+                <td>Offset to Coverage table - from the beginning of MathVariants table.</td>
+            </tr>
+            <tr>
+                <td>Offset</td>
+                <td>HorizGlyphCoverage</td>
+                <td>Offset to Coverage table - from the beginning of MathVariants table.</td>
+            </tr>
+            <tr>
+                <td>USHORT</td>
+                <td>VertGlyphCount</td>
+                <td>Number of glyphs for which information is provided for vertically growing variants.</td>
+            </tr>
+            <tr>
+                <td>USHORT</td>
+                <td>HorizGlyphCount</td>
+                <td>Number of glyphs for which information is provided for horizontally growing variants.</td>
+            </tr>
+            <tr>
+                <td>Offset</td>
+                <td>VertGlyphConstruction [VertGlyphCount]</td>
+                <td>Array of offsets to MathGlyphConstruction tables - from the beginning of the MathVariants table, for shapes growing in vertical direction.</td>
+            </tr>
+            <tr>
+                <td>Offset</td>
+                <td>HorizGlyphConstruction [HorizGlyphCount]</td>
+                <td>Array of offsets to MathGlyphConstruction tables - from the beginning of the MathVariants table, for shapes growing in horizontal direction.</td>
+            </tr>
+        </table>
+
+        <p>&nbsp;</p>
+
+        <p><strong>MathGlyphConstruction Table</strong></p>
+
+        <p>The MathGlyphConstruction table provides information on finding or assembling extended variants for one particular glyph. It can be used for shapes that grow in both horizontal and vertical directions.</p>
+
+        <p>The first entry is the offset to the GlyphAssembly table that specifies how the shape for this glyph can be assembled from parts found in the glyph set of the font. If no such assembly exists, this offset will be set to NULL.</p>
+
+        <p>The MathGlyphConstruction table also contains the count and array of ready-made glyph variants for the specified glyph. Each variant consists of the glyph index and this glyph’s measurement in the direction of extension (vertical or horizontal).</p>
+
+        <p>Note that it is quite possible that both the GlyphAssembly table and some variants are defined for a particular glyph. For example, the font may specify several variants for curly braces of different sizes, and a general mechanism of how larger versions of curly braces can be constructed by stacking parts found in the glyph set. First attempt is made to find glyph among provided variants. However, if the required size is bigger than all glyph variants provided, the general mechanism can be employed to typeset the curly braces as a glyph assembly.</p>
+
+        <p>&nbsp;</p>
+
+        <p><em>MathGlyphConstruction Table</em></p>
+
+        <table class="gray">
+            <tr>
+                <th>Type</th>
+                <th>Name</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Offset</td>
+                <td>GlyphAssembly</td>
+                <td>Offset to GlyphAssembly table for this shape - from the beginning of MathGlyphConstruction table. May be NULL.</td>
+            </tr>
+            <tr>
+                <td>USHORT</td>
+                <td>VariantCount</td>
+                <td>Count of glyph growing variants for this glyph.</td>
+            </tr>
+            <tr>
+                <td>MathGlyphVariantRecord</td>
+                <td>MathGlyphVariantRecord [VariantCount]</td>
+                <td>MathGlyphVariantRecords for alternative variants of the glyphs.</td>
+            </tr>
+        </table>
+
+        <p>&nbsp;</p>
+
+        <p><em>MathGlyphVariantRecord Table</em></p>
+
+        <table class="gray">
+            <tr>
+                <th>Type</th>
+                <th>Name</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>GlyphID</td>
+                <td>VariantGlyph</td>
+                <td>Glyph ID for the variant.</td>
+            </tr>
+            <tr>
+                <td>USHORT</td>
+                <td>AdvanceMeasurement</td>
+                <td>Advance width/height, in design units, of the variant, in the direction of requested glyph extension.</td>
+            </tr>
+        </table>
+
+        <p>&nbsp;</p>
+
+        <p><strong>GlyphAssembly Table</strong></p>
+
+        <p>The GlyphAssembly table specifies how the shape for a particular glyph can be constructed from parts found in the glyph set. The table defines the italics correction of the resulting assembly, and a number of parts that have to be put together to form the required shape.</p>
+		
+		<p>&nbsp;</p>
+
+        <p><em>GlyphAssembly</em></p>
+
+        <table class="gray">
+            <tr>
+                <th>Type</th>
+                <th>Name</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>MathValueRecord</td>
+                <td>ItalicsCorrection</td>
+                <td>Italics correction of this GlyphAssembly. Should not depend on the assembly size.</td>
+            </tr>
+            <tr>
+                <td>USHORT</td>
+                <td>PartCount</td>
+                <td>Number of parts in this assembly.</td>
+            </tr>
+            <tr>
+                <td>GlyphPartRecord</td>
+                <td>PartRecords[PartCount]</td>
+                <td>Array of part records, from left to right and bottom to top.</td>
+            </tr>
+        </table>
+
+        <p>&nbsp;</p>
+
+        <p>The result of the assembly process is an array of glyphs with an offset specified for each of those glyphs. When drawn consecutively at those offsets, the glyphs should combine correctly and produce the required shape.</p>
+
+        <p>The offsets in the direction of growth (advance offsets), as well as the number of parts labeled as extenders, are determined based on the size requirement for the resulting assembly.</p>
+
+        <p>Note that the glyphs comprising the assembly should be designed so that they align properly in the direction that is orthogonal to the direction of growth.</p>
+
+        <p>Thus, a GlyphPartRecord consists of the following fields:</p>
+
+        <ul>
+            <li>Glyph ID for the part.</li>
+            <li>Lengths of the connectors on each end of the glyph. The connectors are straight parts of the glyph that can be used to link it with the next or previous part. The connectors of neighboring parts can overlap, which provides flexibility of how these glyphs can be put together. However, the overlap should not be less than the value of MinConnectorOverlap defined in the MathVariants tables, and it should not exceed the length of either of two overlapping connectors. If the part does not have a connector on one of its sides, the corresponding length should be set to zero.</li>
+            <li>The full advance of the part. It is also used to determine the measurement of the result by using the following formula:</li>
+        </ul>
+
+        <p class="center"><em>Size of Assembly = Offset of the Last Part + Full Advance of the Last Part</em></p>
+
+        <ul>
+            <li>PartFlags is the last field. It identifies a number of parts as <em>extenders</em> – those parts that can be repeated (that is, multiple instances of them can be used in place of one) or skipped altogether. Usually the extenders are vertical or horizontal bars of the appropriate thickness, aligned with the rest of the assembly.</li>
+        </ul>
+
+        <p>To ensure that the width/height is distributed equally and the symmetry of the shape is preserved, following steps can be used by math handling client.</p>
+
+        <ol>
+            <li>Assemble all parts by overlapping connectors by maximum amount, and removing all extenders. This gives the smallest possible result.</li>
+            <li>Determine how much extra width/height can be distributed into all connections between neighboring parts. If that is enough to achieve the size goal, extend each connection equally by changing overlaps of connectors to finish the job.</li>
+            <li>If all connections have been extended to minimum overlap and further growth is needed, add one of each extender, and repeat the process from the first step.</li>
+        </ol>
+
+        <p>Note that for assemblies growing in vertical direction, the distribution of height or the result between ascent and descent is not defined. The math handling client is responsible for positioning the resulting assembly relative to the baseline.</p>
+
+        <p>&nbsp;</p>
+
+        <p><em>GlyphPartRecord Table</em></p>
+
+        <table class="gray">
+            <tr>
+                <th>Type</th>
+                <th>Name</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>GlyphID</td>
+                <td>Glyph</td>
+                <td>Glyph ID for the part.</td>
+            </tr>
+            <tr>
+                <td>USHORT</td>
+                <td>StartConnectorLength</td>
+                <td>Advance width/ height of the straight bar connector material, in design units, is at the beginning of the glyph, in the direction of the extension.</td>
+            </tr>
+            <tr>
+                <td>USHORT</td>
+                <td>EndConnectorLength</td>
+                <td>Advance width/ height of the straight bar connector material, in design units, is at the end of the glyph, in the direction of the extension.</td>
+            </tr>
+            <tr>
+                <td>USHORT</td>
+                <td>FullAdvance</td>
+                <td>Full advance width/height for this part, in the direction of the extension. In design units.</td>
+            </tr>
+            <tr>
+                <td>USHORT</td>
+                <td>PartFlags</td>
+                <td>Part qualifiers. PartFlags enumeration currently uses only one bit:
+                    <br />
+                    0x0001 fExtender If set, the part can be skipped or repeated.<br />
+                    0xFFFE Reserved.</td>
+            </tr>
+        </table>
+
+        <h2>OFF tags used with MATH Table</h2>
+
+        <p>The following tags are being used by math handling engine to access a particular set of glyph varioants. For detailed description of the feature tags see subclause 6.4.3.2.</p>
+
+        <p>&nbsp;</p>
+
+        <p><em>OFF tags for math processing</em></p>
+
+        <table class="gray">
+            <tr>
+                <th>Tag</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>math</td>
+                <td>Script tag to be used with the MATH table features. The only language system supported with this tag is the default.</td>
+            </tr>
+            <tr>
+                <td><a href="features_pt.htm#ssty">ssty</a></td>
+                <td>Script Style<br />
+                    This feature provides glyph variants adjusted to be more suitable for use in subscripts and superscripts.<br />
+                    These script style forms should not be scaled or moved in the font; scaling and moving them is done by the math handling client. Instead, the ssty feature should provide glyph forms that result in shapes that look good as superscripts and subscripts when scaled and positioned by the Math engine. When designing the script forms, the font developer may assume that MATH.MathConstants.ScriptPercentScaleDown and MATH.MathConstants.ScriptScriptPercentScaleDown will be the scaling factors used by the Math engine.<br />
+                    This feature can have a parameter indicating the script level: 1 for simple subscripts and superscripts, 2 for second level subscripts and superscripts (that is, scripts on scripts), and so on. (Currently, only the first two alternates are used).<br />
+                    For glyphs that are not covered by this feature, the original glyph is used in subscripts and superscripts.<br />
+					Recommended format: Alternate Substitution table (Single Substitution if there are no second level forms). There should be no context.</td>
+            </tr>
+            <tr>
+                <td><a href="features_fj.htm#flac">flac</a></td>
+                <td>Flattened Accents over Capitals<br />
+                    This feature provides flattened forms of accents to be used over high-rise bases such as capitals.<br />
+					This feature should only change the shape of the accent and should not move it in the vertical or horizontal direction. Moving of the accents is done by the math handling client.<br />
+					Accents are flattened by the Math engine if their base is higher than MATH.MathConstants. FlattenedAccentBaseHeight.<br />
+                    Recommended format: Single Substitution table. There should be no context.</td>
+            </tr>
+            <tr>
+                <td><a href="features_ae.htm#dtls">dtls</a></td>
+                <td>Dotless Forms<br />
+                    This feature provides dotless forms for Math Alphanumeric characters, such as U+1D422 MATHEMATICAL BOLD SMALL I, U+1D423 MATHEMATICAL BOLD SMALL J, U+1D456 U+MATHEMATICAL ITALIC SMALL I, U+1D457 MATHEMATICAL ITALIC SMALL J, and so on.<br />
+                    The dotless forms are to be used as base forms for placing mathematical accents over them.<br />
+					Recommended format: Single Substitution table. There should be no context.</td>
+            </tr>
+        </table>
+
+        <hr class="separator">
+
+        <p class="fineprint">This page was last updated 17 September 2014.</p>
+        <p class="fineprint">&copy; 2014 Microsoft Corporation. All rights reserved. <a href="http://www.microsoft.com/Misc/cpyright.htm">Terms of use</a>.</p>
+        <p class="fineprint">Comments to the MST group: <a href="https://www.microsoft.com/typography/AboutMST.mspx">how to contact us</a>.</p>
+    </div>
+
+    <div class="middlerule"></div>
+
+    <p class="menu">
+        <a href="http://www.microsoft.com/typography/default.mspx">Microsoft Typography</a> |
+        <a href="http://www.microsoft.com/typography/creators.htm">Developer...</a> |
+        <a href="default.htm">OpenType specification</a> |
+        <a href="otff.htm#otttables">OpenType tables</a> |
+        <span>The BASE table</span>
+    </p>
+
+    <div class="bottomrule"></div>
+</body>
+</html>

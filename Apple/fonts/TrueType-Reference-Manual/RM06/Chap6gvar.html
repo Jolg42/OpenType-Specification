@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="Author" content="Apple Inc." />
+<meta name="viewport" content="width=1024" />
+<link rel="shortcut icon" href="../../../favicon.ico" />
+<link rel="icon" href="../../../favicon.ico" />
+<link rel="stylesheet" href="https://www.apple.com/wss/fonts?family=Myriad+Set+Pro&amp;v=2" type="text/css" />
+<link rel="stylesheet" href="../../../assets/styles/transition-global.css" type="text/css" />
+<link rel="stylesheet" href="../../../assets/styles/transition-header.css" type="text/css" />
+<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/core/styles/adc.css" type="text/css" />
+<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/styles/topbar.css" type="text/css" />
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/lib/prototype.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/lib/scriptaculous.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/browserdetect.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/apple_core.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/search_decorator.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/adc_core.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/scripts/ac_retina.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/topbarDropdown.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	document.write('<link rel="stylesheet" type="text/css" href="https://devimages.apple.com.edgekey.net/assets/styles/script.css" media="screen">');
+</script>
+<!-- Augmented Search -->
+<!--<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/styles/augmented_search.css" type="text/css">-->
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/lib/jquery/jquery-1.11.0.min.js"></script>
+<script>jQuery.noConflict();</script>
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/lib/jquery/jquery.retinate.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/scripts/augmented_search.js"></script>-->
+<script src="../../../assets/scripts/augmented_search.js"></script>
+<script src="../../../assets/scripts/global-header.js"></script>
+
+  <meta name="Author" content="Apple Inc.">
+  <meta name="viewport" content="width=1024">
+  <link rel="stylesheet" href="../AAT.css" type="text/css">
+  <link rel="shortcut icon" href="https://devimages.apple.com.edgekey.net/favicon.ico">
+  <link rel="icon" href="https://devimages.apple.com.edgekey.net/favicon.ico">
+  <title>Glyph Variations Table</title>
+</head>
+<body class="white sidenav-page">
+  <nav id="globalheader" role="navigation" aria-label="Global Navigation">
+  <div id="gh-content" class="gh-content">
+    <ul class="gh-menu">
+      <li id="gh-menu-icon-toggle" class="gh-menu-icon gh-menu-icon-toggle enhance">
+        <button id="gh-svg-icons" class="gh-svg-wrapper">
+          <span class="text-replace">Menu</span>
+          <svg x="0px" y="0px" width="100%" viewBox="0 0 96 96" class="gh-svg gh-svg-top" enable-background="new 0 0 96 96"><rect width="32" height="4" x="32" y="46" class="gh-svg-rect gh-svg-rect-top"></rect></svg>
+          <svg x="0px" y="0px" width="100%" viewBox="0 0 96 96" class="gh-svg gh-svg-bottom" enable-background="new 0 0 96 96"><rect width="32" height="4" x="32" y="46" class="gh-svg-rect gh-svg-rect-bottom"></rect></svg>
+        </button>
+      </li>
+      <li id="gh-menu-icon-home" class="gh-menu-icon gh-menu-icon-home">
+        <a href="../../../index.html">
+          <span class="text-replace">Apple Developer</span>
+        </a>
+      </li>
+    </ul>
+    <div class="gh-nav">
+      <div class="gh-nav-view">
+        <ul class="gh-nav-list">
+
+          <li class="gh-tab gh-nav-developer" data-hires="true"><a class="gh-tab-link" href="../../../index.html"><span class="text-replace">Apple Developer</span></a></li>
+          <li class="gh-tab gh-nav-technologies"><a class="gh-tab-link" href="../../../platforms/index.html">Platforms</a></li>
+          <li class="gh-tab gh-nav-resources"><a class="gh-tab-link" href="../../../resources/index.html">Resources</a></li>
+          <li class="gh-tab gh-nav-programs"><a class="gh-tab-link" href="../../../programs/index.html">Program</a></li>
+          <li class="gh-tab gh-nav-support"><a class="gh-tab-link" href="../../../support/index.html">Support</a></li>
+          <li class="gh-tab gh-nav-account">
+            <a class="gh-tab-link gh-account-profile" href="https://developer.apple.com/account/">Account</a>
+          </li>
+          <li class="gh-tab gh-nav-search">
+
+            <div id="gh-search" class="gh-search" role="search">
+              <form action="/search/index.php" method="get" class="gh-search-form" id="gh-search-form" role="search">
+
+                <div class="gh-search-input-wrapper">
+                  <label for="gh-search-input" class="text-replace">Search Apple Developer</label>
+                  <input type="text" name="q" id="gh-search-input" class="augmented gh-search-input" placeholder="Search Apple Developer" autocomplete="off" autocorrect="off" autocapitalize="off">
+                </div>
+
+                <button disabled type="submit" id="gh-search-submit" class="gh-search-submit gh-search-magnify"><span class="text-replace">Search Apple Developer</span></button>
+                <button disabled type="reset" id="gh-search-reset" class="gh-search-reset"><span class="text-replace">Reset</span></button>
+
+              </form>
+            </div>
+
+            <a class="gh-search-magnify" href="../../../search/index.html"><span class="text-replace">Search Apple Developer</span></a>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+  <div id="top">
+<!-- SiteCatalyst code version: H.8. Copyright 1997-2006 Omniture, Inc. -->
+<script type="text/javascript">
+/* RSID: */
+var s_account="appleglobal,appleusdeveloper"
+</script>
+
+<script type="text/javascript" src="https://www.apple.com/metrics/scripts/s_code_h.js"></script>
+<script type="text/javascript">
+s.pageName= AC && AC.Tracking && AC.Tracking.pageName();
+s.channel="www.us.developer"
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)</script>
+<!-- End SiteCatalyst code version: H.8. -->
+</div>
+
+  <div id="content" class="content" data-hires="false">
+    <section>
+  <div id="navBar">
+    <!-- NAVBARSTART -->
+    <p class="bold"><a href="../index.html">TrueType Reference Manual</a></p>
+    <ul class="outer">
+      <li><a href="../RM01/Chap1.html">Digitizing Letterforms</a></li>
+      <li><a href="../RM02/Chap2.html">The Font Engine</a></li>
+      <li><a href="../RM03/Chap3.html">Instructing Fonts</a></li>
+      <li><a href="../RM04/Chap4.html">The Graphics State</a></li>
+      <li><a href="../RM05/Chap5.html">The Instruction Set</a></li>
+      <li><a href="Chap6.html">Font Tables</a></li>
+      <li class="c1">
+        <ul class="inner">
+          <li><a href="Chap6.html#Intro">Introduction</a></li>
+          <li><a href="Chap6.html#Types">Data Types</a></li>
+          <li><a href="Chap6.html#Overview">Overview of TrueType</a></li>
+          <li><a href="Chap6AATIntro.html">Overview of AAT</a></li>
+          <li><a href="Chap6Tables.html">Special Tables</a></li>
+          <li><a href="Chap6.html#Directory">The Font Directory</a></li>
+          <li><a href="Chap6acnt.html">The <code>'acnt'</code> table</a></li>
+          <li><a href="Chap6ankr.html">The <code>'ankr'</code> table</a></li>
+          <li><a href="Chap6avar.html">The <code>'avar'</code> table</a></li>
+          <li><a href="Chap6bdat.html">The <code>'bdat'</code> table</a></li>
+          <li><a href="Chap6bhed.html">The <code>'bhed'</code> table</a></li>
+          <li><a href="Chap6bloc.html">The <code>'bloc'</code> table</a></li>
+          <li><a href="Chap6bsln.html">The <code>'bsln'</code> table</a></li>
+          <li><a href="Chap6cmap.html">The <code>'cmap'</code> table</a></li>
+          <li><a href="Chap6cvar.html">The <code>'cvar'</code> table</a></li>
+          <li><a href="Chap6cvt.html">The <code>'cvt '</code> table</a></li>
+          <li><a href="Chap6EBSC.html">The <code>'EBSC'</code> table</a></li>
+          <li><a href="Chap6fdsc.html">The <code>'fdsc'</code> table</a></li>
+          <li><a href="Chap6feat.html">The <code>'feat'</code> table</a></li>
+          <li><a href="Chap6fmtx.html">The <code>'fmtx'</code> table</a></li>
+          <li><a href="Chap6fond.html">The <code>'fond'</code> table</a></li>
+          <li><a href="Chap6fpgm.html">The <code>'fpgm'</code> table</a></li>
+          <li><a href="Chap6fvar.html">The <code>'fvar'</code> table</a></li>
+          <li><a href="Chap6gasp.html">The <code>'gasp'</code> table</a></li>
+          <li><a href="Chap6gcid.html">The <code>'gcid'</code> table</a></li>
+          <li><a href="Chap6glyf.html">The <code>'glyf'</code> table</a></li>
+          <li>The <code>'gvar'</code> table</li>
+          <li><a href="Chap6hdmx.html">The <code>'hdmx'</code> table</a></li>
+          <li><a href="Chap6head.html">The <code>'head'</code> table</a></li>
+          <li><a href="Chap6hhea.html">The <code>'hhea'</code> table</a></li>
+          <li><a href="Chap6hmtx.html">The <code>'hmtx'</code> table</a></li>
+          <li><a href="Chap6just.html">The <code>'just'</code> table</a></li>
+          <li><a href="Chap6kern.html">The <code>'kern'</code> table</a></li>
+          <li><a href="Chap6kerx.html">The <code>'kerx'</code> table</a></li>
+          <li><a href="Chap6lcar.html">The <code>'lcar'</code> table</a></li>
+          <li><a href="Chap6loca.html">The <code>'loca'</code> table</a></li>
+          <li><a href="Chap6ltag.html">The <code>'ltag'</code> table</a></li>
+          <li><a href="Chap6maxp.html">The <code>'maxp'</code> table</a></li>
+          <li><a href="Chap6meta.html">The <code>'meta'</code> table</a></li>
+          <li><a href="Chap6mort.html">The <code>'mort'</code> table</a></li>
+          <li><a href="Chap6morx.html">The <code>'morx'</code> table</a></li>
+          <li><a href="Chap6name.html">The <code>'name'</code> table</a></li>
+          <li><a href="Chap6opbd.html">The <code>'opbd'</code> table</a></li>
+          <li><a href="Chap6OS2.html">The <code>'OS/2'</code> table</a></li>
+          <li><a href="Chap6post.html">The <code>'post'</code> table</a></li>
+          <li><a href="Chap6prep.html">The <code>'prep'</code> table</a></li>
+          <li><a href="Chap6prop.html">The <code>'prop'</code> table</a></li>
+          <li><a href="Chap6sbix.html">The <code>'sbix'</code> table</a></li>
+          <li><a href="Chap6trak.html">The <code>'trak'</code> table</a></li>
+          <li><a href="Chap6vhea.html">The <code>'vhea'</code> table</a></li>
+          <li><a href="Chap6vmtx.html">The <code>'vmtx'</code> table</a></li>
+          <li><a href="Chap6xref.html">The <code>'xref'</code> table</a></li>
+          <li><a href="Chap6Zapf.html">The <code>'Zapf'</code> table</a></li>
+        </ul>
+      </li>
+      <li><a href="../RM07/appendixA.html">Instruction Set Summary</a></li>
+      <li><a href="../RM07/appendixB.html">Glyph Mappings</a></li>
+      <li><a href="../RM08/appendixE.html">Converting Outlines</a></li>
+	<li><a href="../RM09/AppendixF.html">Font Feature Registry</a></li>
+    </ul><!-- NAVBAREND -->
+  </div>
+  <div id="chapterContent">
+    <header><h1><a name="gvar" id="gvar"></a>The <code>'gvar'</code> table</h1></header>
+    <h2>General table information</h2>
+    <p>Apple Advanced Typography style variations allow the font designer to build high quality styles into the typeface itself. This reduces the dependence on algorithmic styling in the graphics system. To include font variations in your font, you must also include the <a href="Chap6fvar.html">font variations table</a>.</p>
+    <p>The <dfn>glyph variations table</dfn> (tag name: <code>'gvar'</code>) allows you to include all of the data required for stylizing the glyphs in your font.</p>
+    <ul>
+      <li><strong>NOTE</strong>: The material in this chapter only applies to TrueType fonts; Type 1 fonts with variations (i.e. Multiple Master fonts) encode their glyph variation data differently. Consult Adobe's documentation on Type 1 Multiple Master fonts for further information.</li>
+    </ul>
+    <p>Conceptually, variation fonts define <dfn> <em>axes</em> </dfn> over which font characteristics can vary. Thus, in the figure below, we see the Q glyph from Skia drawn at various points along the <code>'wght'</code> axis. Since the minimum and maximum values have been defined as +0.7 and +1.3, respectively, the specification of a style coordinate of 1.0 refers to the style of the center 'Q.'</p>
+    <p><img src="FF66.gif" width="399" height="136" align="bottom"></p>
+    <p>Multiple axes can be combined within a single font. For example, you may want to create a <code>'wght'</code> axis and a <code>'wdth'</code> axis. The user can then select any combination of weight and width, such as 75% bold and 50% condensed. The next figure shows an example of a two-axis font variation in which the weight axis has a minimum value of 1.0 and maximum of 1.5 and the width axis has a minimum of 0.6 and a maximum of 1.0.</p>
+    <p><img src="FF67.gif" width="389" height="352" align="bottom"></p>Data for how these axes are presented to the user is contained in the <a href="Chap6fvar.html">font variations table</a>. The glyph variations table contains data which is used to determine the outline for a glyph given a combination of settings for the various axes.
+    <p>This is done by using <em>tuples</em>. The terminology is derived from mathematics, but its meaning there (an n-tuple is defined as an ordered list of <code>n</code> numbers) may not illuminate its use in the <code>'gvar'</code> table. For a variation font, a <em>tuple</em> is a list of deltas applied to the points in a glyph found in the <a href="Chap6glyf.html"><code>'glyf'</code> table</a>. The results determine the actual coordinates of the points on the outline for the glyph as it is to be rendered. Hinting can then be applied to this modified outline. The hints themselves can vary for the glyph; this is controlled by the <a href="Chap6cvar.html"><code>'cvar'</code> table</a>.</p>
+    <p>Each tuple is associated with a set of coordinates, one for each axis. These coordinates determine whether or not the tuple is applied and supply a multiplier applied to the deltas. The glyph's shape can therefore vary smoothly as the user adjusts the settings for the axes.</p>
+    <p>So that a glyph can vary in its dimensions as well as its shape, tuples have entries for each point in the glyph plus entries for four "phantom points," which represent the glyph's side-bearings. These phantom points are, in order, the left-side phantom point, the right-side phantom point, the top phantom point, and the bottom phantom point.</p>
+    <h2>Structure of the <code>'gvar'</code> table</h2>
+    <p>Conceptually, the <code>'gvar'</code> table is very straightforward. Its apparent complexity is the result of the techniques used to compress the data.</p>
+    <p>For each glyph in the font, the <code>'gvar'</code> table stores a set of tuples. (This set may be empty.) The tuples have coordinates, one per axis. Optionally, they also have intermediate coordinates; if they do, there is one per axis. The tuple also has a list of points it moves, and the deltas for those points.</p>
+    <h3>Header</h3>
+    <p>The glyph variations table consists of a glyph variations table header, glyph offset array, glyph style coordinate array, and glyph variations array. The overall structure of the glyph variations table is shown in the following figure:</p>
+    <p><img src="FF69.gif" width="243" height="120" align="bottom"></p>
+    <p>The glyph variations table header format is shown in this table:</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th align="middle">
+          <p align="left">Type</p>
+        </th>
+        <th align="middle">
+          <p align="left">Name</p>
+        </th>
+        <th align="left">
+          <p align="left">Description</p>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>version</td>
+        <td class="description">Version number of the glyph variations table (1 for the current version).</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>reserved</td>
+        <td class="description">Currently unused; set to 0.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>axisCount</td>
+        <td class="description">The number of style axes for this font. This must be the same number as <code>axisCount</code> in the <code>'fvar'</code> table.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>sharedCoordCount</td>
+        <td class="description">The number of shared coordinates.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint32</td>
+        <td>offsetToCoord</td>
+        <td class="description">Byte offset from the beginning of this table to the list of shared style coordinates.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>glyphCount</td>
+        <td class="description">The number of glyphs in this font; this should match the number of the glyphs store elsewhere in the font.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>flags</td>
+        <td class="description">Bit-field that gives the format of the offset array that follows. If the flag is 0, the type is uint16. If the flag is 1, the type is unit 32.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint32</td>
+        <td>offsetToData</td>
+        <td class="description">Byte offset from the beginning of this table to the first glyph <code>glyphVariationData</code>.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16 or uint32</td>
+        <td>offset[glyphCount+1]</td>
+        <td class="description">Byte offsets from the beginning of the <code>glyphVariationData</code> array to the <code>glyphVariationData</code> for each glyph in the font. The format of this field is set by the flags field.</td>
+      </tr>
+    </table>
+    <p>The shared coordinates pointed to by the <code>globalCoordCount</code> are a space-saving mechanism.  Instead of storing its own coordinates, a tuple can instead have an index into the global coordinate space.</p>
+    <p>The number of bytes occupied by the global coordinates can be found using the expression <code>offsetToData - offsetToCoord</code>. This size should be equal to <code>globalCoordCount * axisCount * sizeof(shortFrac)</code>. That is, there are <code>globalCoord</code> <code>shortFrac</code>&amp;s for each axis in the font.</p>
+    <p>If the flag bitfield is set to 1, the offsets to the per-glyph data four bytes in size. If the flag bit-field is set to 0, the offsets are two bytes.</p>
+    <p>The offset array follows the glyph variation header. The offset array gives the offset from the beginning of the <code>glyphVariationData</code> array. This data specifies where each glyph variation begins. The variation data is the same order as the glyph order. This allows the length of a particular glyph variation to be computed by subtracting the offset of the next variation from the current one. This means that there must be <code>glyphCount</code> + 1 entries in the offset array.</p>
+    <h3>Coordinates</h3>
+    <p>Tuple coordiantes are used by CoreText to determine which tuples apply given the user's settings for the variation axes.</p>
+    <p>The first step in this process is normalizing the setting for a given axis; that is, mapping the value from the range defined by the <code>'fvar'</code> table to the range <code>[-1, 1]</code>. (Note that this is exactly the range of values which can be represented by a <code>shortFrac</code>.)</p>
+    <p>The default mapping is to do this so that the minimum value for the axis maps to -1, the default value to 0, and the maximum value to 1. Values between two of these three key values are mapped linearly to the range <code>[-1, 0)</code> (if less than the default) or the range <code>(0, 1]</code> (if more than the default). This linear mapping can be refined via the <code>'avar'</code> table.</p>
+    <p>To use Skia as an example, Skia has two axes, weight and width. The weight axis has the range <code>[0.48, 3.2]</code> defined in the <code>'fvar'</code> table, with a default value of 1.0. The width axis has the range <code>[0.62, 1.3]</code> and the default value of 1.0.</p>
+    <p>If the user sets the weight to 0.5, this is normalized to ( 1.0 - 0.5 ) / ( 1.0 - 0.48 ) = -0.96. If the user sets the weight to 1.25, this is normalized to ( 1.25 - 1.0 ) / ( 3.2 - 1.0 ) = 0.11.</p>
+    <p>If a tuple's coordinate for a given axis is 0, then the normalized setting of that axis is ignored when determining whether or not to apply that tuple.</p>
+    <p>Otherwise, tuple is applied if and only if the current normalized setting for each axis is between the coordinate for that axis and 0 (inclusive).</p>
+    <p>For each axis (except the ignored ones), a scalar is calculated linearly. So if the normalized setting is 0.5 and the coordinate 1, the scalar is 0.5. The product of all the scalars for non-ignored axes is the scalar for the tuple. For each point the tuple moves, the deltas are multiplied by the tuple's scalar and then added to the point's position. The end result is the point's <em>actual</em> position for drawing the glyph.</p>
+
+    <h3>The <code>glyphVariationData</code> structure</h3>
+    <p>The <code>glyphVariationData</code> array follows the glyph variation offset array. The data for each glyph is structured as follows:</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th align="middle">
+          <p align="left">Type</p>
+        </th>
+        <th align="middle">
+          <p align="left">Name</p>
+        </th>
+        <th align="left">
+          <p align="left">Description</p>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>tupleCount</td>
+        <td class="description">A packed field. The high 4 bits are flags and the low 12 bits are the number of tuples for this glyph. The number of tuples can be any number between 1 and 4095.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>offsetToData</td>
+        <td class="description">Byte offset from the beginning of the <code>glyphVariationData</code> to the serialized glyph data (see below).</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>tuple</td>
+        <td>tuple[tupleCount]</td>
+        <td class="description">The tuple array.</td>
+      </tr>
+    </table>
+    <p>The <code>tupleCount</code> is a packed field comprising a flag and the number of tuples. The format of the <code>tupleCount</code> field is shown here:</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th align="middle">
+          <p align="left">Value</p>
+        </th>
+        <th align="middle">
+          <p align="left">Name</p>
+        </th>
+        <th align="left">
+          <p align="left">Description</p>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>0x8000</td>
+        <td>tuples_share_point_numbers</td>
+        <td class="description">Flag indicating that some or all tuples reference a common set of packed point numbers that follow.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>0x7000</td>
+        <td>reserved_tuple_count_flags</td>
+        <td class="description">Flags reserved for future use.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>0x0FFF</td>
+        <td>tuple_count_mask</td>
+        <td class="description">Mask using the low bits to give the tuple count.</td>
+      </tr>
+    </table>
+    <p>Currently, the only flag bit supported is 0x8000, <code>tuples_share_point_numbers</code>. This means that all of the tuples reference a common set of packed point numbers that follow immediately after the tuple array.</p>
+    <h3>The <code>tupleHeader</code> structure</h3>
+    <p>The glyph variation data header is followed by a series of tuples. Each tuple begins with a tuple header. The format of the tuple header is as follows:</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th align="middle">
+          <p align="left">Type</p>
+        </th>
+        <th align="middle">
+          <p align="left">Name</p>
+        </th>
+        <th align="left">
+          <p align="left">Description</p>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>tupleSize</td>
+        <td class="description">The size in bytes of serialized data for this tuple.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>tupleIndex</td>
+        <td class="description">A packed field. The high 4 bits are flags. The interpretation of these flags is provided in Table 14-5. The low 12 bits are an index into the global tuple coordinates.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>shortFrac</td>
+        <td>embeddedCoord[]</td>
+        <td class="description">Embedded coordinate tuples, if any.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>shortFrac</td>
+        <td>intermediateCoord[]</td>
+        <td class="description">Intermediate coordinate tuples, if any.</td>
+      </tr>
+    </table>
+    <p>The <code>tupleSize</code> field is <em>not</em> the size of the full tuple variation data for this tuple. Rather, it refers to the number of bytes used by this tuple within the glyph's serialized data. The next tuple data can actually be calculated using code something like the following:</p>
+    <pre>
+const FTTupleHeader_gvar*
+NextTupleVariation( const FTTupleHeader_gvar* iTupleVar, int iAxisCount )
+{
+       int tBump = sizeof( FTTupleHeader_gvar ); /* four bytes == two * sizeof( UInt16 ) */
+       int tTupleIndex = iTupleVar-&gt;tupleIndex;
+       if ( tTupleIndex &amp; embedded_tuple_coord )
+               tBump += iAxisCount * sizeof( shortFrac );
+       if ( tTupleIndex &amp; intermediate_tuple )
+               tBump += 2 * iAxisCount * sizeof( shortFrac );
+       return (const FTTupleHeader_gvar*)((char*)iTupleVar + tBump);
+}</pre>
+    <p>The <code>tupleIndex</code> is a packed field consisting of a flag and an index mask into the array of global tuple coordinates. The tupleIndex field format is described in the following table:</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th align="middle">
+          <p align="left">Value</p>
+        </th>
+        <th align="middle">
+          <p align="left">Name</p>
+        </th>
+        <th align="left">
+          <p align="left">Description</p>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>0x8000</td>
+        <td>embedded_tuple_coord</td>
+        <td class="description">Flag indicating that the coordinate for this tuple follows immediately after the tupleIndex. The low 12 bits of the tupleIndex are ignored.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>0x4000</td>
+        <td>intermediate_tuple</td>
+        <td class="description">Flag indicating that this is an intermediate tuple. The two coordinates following the tupleIndex (and the optional embedded coordinate) specify the domain for this tuple.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>0x2000</td>
+        <td>private_point_numbers</td>
+        <td class="description">Flag indicating that the preceding tuple data for this tuple is a set of packed point numbers that this tuple operates on. If this bit is clear, this tuple uses shared point numbers.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>0x1000</td>
+        <td>reserved_tuple_index_flag</td>
+        <td class="description">Flag reserved for future use.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>0x0FFF</td>
+        <td>tuple_index_mask</td>
+        <td class="description">Mask using the low bits to give the tuple index.</td>
+      </tr>
+    </table>
+    <h3>Serialized data</h3>
+    <p>After the coordinate data for the glyph's tuples is a block of serialized data. This data contains the points the tuples operate on and their deltas.</p>
+    <p>If the <code>tuples_share_point_numbers</code> flag is set, the serialized data begins with a packed set of point numbers which are used by <em>all</em> the glyph's tuples. The format for packed point numbers is below.</p>
+    <p>The remaining serialized data contains information specific to the individual tuples (in order). Since the <code>tupleHeader</code> contains the number of bytes of serialized data the tuple uses, it isn't necessary to parse the serialized data for tuples which aren't applied.</p>
+    <p>If the <code>tuples_share_point_numbers</code> is clear, then each tuple's serialized data begins with the packed list of points the tuple operates on. This is followed by the packed deltas for the points' x-coordinates, and then the packed deltas for the points' y-coordinates.</p>
+    <h3>Packed Point Numbers</h3>
+    <p>Point numbers are stored as a count followed by the first point number. Each subsequent point is stored as the difference between it and the previous point number. The data is packed into runs of bytes and words.</p>
+    <p>If the count will fit in 7 bits, the point count is packed into a byte. If the count will not fit in 7 bits, it is stored in 2 bytes, with the high bit of the first byte set. If count = 0, every point on the glyph is used and no data follows. If count is nonzero, a series of runs of bytes and words follows. In this case each run begins with a control byte. The control byte's high bit specifies whether the run is bytes or words and the low 7 bits specify the number of elements in the run minus 1.</p>
+    <p>The packed point count flag format is as follows:</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th align="middle">
+          <p align="left">Mask</p>
+        </th>
+        <th align="middle">
+          <p align="left">Name</p>
+        </th>
+        <th align="left">
+          <p align="left">Description</p>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>0x80</td>
+        <td>points_are_words</td>
+        <td class="description">Flag indicating that the point number run is a word.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>0x7F</td>
+        <td>point_run_count_mask</td>
+        <td class="description">Mask indicating that the low 7 bits are the number of elements minus 1.</td>
+      </tr>
+    </table>
+    <h3>Packed Deltas</h3>
+    <p>The packed delta data does <em>not</em> include the number of deltas to follow. This is because the packed delta data contains one delta per point. Otherwise, the delta packing technique is similar to that used by the points. Deltas are stored as a series of runs. Each run is a control byte followed by the actual deltas. The control byte specifies the size of the data in the run in the high two bits, and the number of deltas in the low six bits.</p>
+    <p>The packed tuple delta field formats are shown in the following table. Note that if neither the 0x80 or 0x40 flags are set, then the run contains signed byte deltas.</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th align="middle">
+          <p align="left">Mask</p>
+        </th>
+        <th align="middle">
+          <p align="left">Name</p>
+        </th>
+        <th align="left">
+          <p align="left">Description</p>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>0x80</td>
+        <td>deltas_are_zero</td>
+        <td class="description">Flag indicating that this run contains no data. This means that all of the deltas in this run are zero, so no explicit deltas are stored.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>0x40</td>
+        <td>deltas_are_words</td>
+        <td class="description">Flag indicating that the run contains 16-bit signed deltas.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>0x3F</td>
+        <td>delta_run_count_mask</td>
+        <td class="description">Flag and mask using the low 6 bits to provide the number of deltas in the run minus 1.</td>
+      </tr>
+    </table>
+    <h3>Point Numbers for Component Glyph Variations</h3>
+    <p>The foregoing discussion applies to simple glyphs. Component glyph variations are structured similarly. The difference is that simple glyphs are defined by points and component glyphs are defined by other glyphs. Component glyph variations describe how the position of each component specified by offsets changes and how the metrics of the parent composite glyph change. These changes are represented by fake point numbers. One fake point number is assigned to each component and then 4 more are assigned for the final glyph's metrics.</p>
+    <p>Consider the component glyph 'é'. If the accent was specified using anchor points, then there would be no use for variation data. The accent can be repositioned by moving the attachment points in either the base glyph or the accent. However, if the accent was specified by an offset, the variation data could be used to describe how its position changes.</p>
+    <p>The fake point number assignment and the delta assignments for the example component glyph are as follows:</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th align="middle">
+          <p align="left">Fake point number</p>
+        </th>
+        <th align="left">
+          <p align="left">Delta assignments</p>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>0</td>
+        <td class="description">Base glyph.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>1</td>
+        <td class="description">Accent glyph.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>2</td>
+        <td class="description">Left side bearing metric point.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>3</td>
+        <td class="description">Right side bearing metric point.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>4</td>
+        <td class="description">Top side bearing metric point.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>5</td>
+        <td class="description">Bottom side bearing metric point.</td>
+      </tr>
+    </table>
+    <h2>Examples</h2>
+    <p>As an example, consider Skia, the variation font that ships with OS X. It begins with a header:<p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th align="middle">
+          <p align="left">Value</p>
+        </th>
+        <th align="middle">
+          <p align="left">Name</p>
+        </th>
+        <th align="left">
+          <p align="left">Description</p>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>1</td>
+        <td>version</td>
+        <td class="description">Table version number</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>0</td>
+        <td>reserved</td>
+        <td class="description">Currently unused; set to 0.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>2</td>
+        <td>axisCount</td>
+        <td class="description">The font has two axes; detailed information about them is found in the <code>'fvar'</code> table.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>8</td>
+        <td>globalCoordCount</td>
+        <td class="description">There are eight shared coordinates.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>00000954</td>
+        <td>offsetToCoord</td>
+        <td class="description">Byte offset from the beginning of this table to the shared coordinates.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>591</td>
+        <td>glyphCount</td>
+        <td class="description">The number of glyphs in this font.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>1</td>
+        <td>flags</td>
+        <td class="description">Offsets to <code>glyphVariationData</code>s are four bytes.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>00000974</td>
+        <td>offsetToData</td>
+        <td class="description">Byte offset from the beginning of this table to the first glyph <code>glyphVariationData</code>.</td>
+      </tr>
+    </table>
+    <p>The header implies that 32 bytes (0x0974 - 0x0954 = 0x0020 = 32) used by shared coordinates. Each shared coordinate consists of two <code>shortFrac</code>, one per axis, and each <code>shortFrac</code> is two bytes in size. Since there are eight shared coordinates, we would expect them to require 8 x 2 x 2 = 32 bytes to store, so this number is correct.</p>
+    <p>The first five offsets to <code>glyphVariationData</code>s are:</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th align="middle">
+          <p align="left">Offset</p>
+        </th>
+        <th align="left">
+          <p align="left">Glyph</p>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>00000000</td>
+        <td class="description">Offset to data for the <code>.notdef</code> glyph (glyph 0)</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>00000000</td>
+        <td class="description">Offset to data for the <code>.null</code> glyph (glyph 1)</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>00000000</td>
+        <td class="description">Offset to data for the <code>nonmarkingreturn</code> glyph (glyph 2)</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>00000050</td>
+        <td class="description">Offset to data for the <code>space</code> glyph (glyph 3)</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>00000009E</td>
+        <td class="description">Offset to data for the <code>empty.1</code> glyph (glyph 4)</td>
+      </tr>
+    </table>
+    <p>From this, we can tell that the first two glyphs have no variation data at all. Glyph three has 80 bytes of variation data (0x0050 - 0x0000), and the space glyph has 78 bytes (0x009E - 0x0050).</p>
+    <p>Initially, it may be surprising that glyphs with no visual appearance have variation data. Remember, however, that each glyph has four "dummy" points indicating how its metrics change. Even non-printing glyphs might need to vary their metrics.</p>
+    <p>Next we have thirty-two bytes for our eight shared coordinates:</p>
+    <pre>
+4000 0000
+C000 0000
+0000 4000
+0000 C000
+C000 C000
+4000 C000
+4000 4000
+C000 4000</pre>
+    <p>According to the <code>'fvar'</code> table, the first axis is the weight axis (<code>'wght'</code>) and the second axis the width axis (<code>'wdth'</code>). Converting from <code>shortFrac</code>s to floats, this gives us our eight coordinates:</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th align="middle">
+          <p align="left">Weight</p>
+        </th>
+        <th align="left">
+          <p align="left">Width</p>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>1.0</td>
+        <td>0.0</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>-1.0</td>
+        <td>0.0</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>0.0</td>
+        <td>1.0</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>0.0</td>
+        <td>-1.0</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>-1.0</td>
+        <td>-1.0</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>1.0</td>
+        <td>-1.0</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>1.0</td>
+        <td>1.0</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>-1.0</td>
+        <td>1.0</td>
+      </tr>
+    </table>
+    <h3>Glyph data</h3>
+    <p>Let's look at the data for some specific glyphs. Let's start with with the glyph for "I", glyph number 73.</p>
+    <p>The <code>glyphVariationData</code> array has an offset of <code>00006B68</code> for glyph 73 and an offset of <code>00006C76</code> for glyph 74. Glyph 73 therefore has <code>0x6C76 - 0x6B68</code>, or 270 bytes of data.</p>
+    <p>We add <code>0x00006B68</code> to the header's <code>offsetToData</code> field (<code>0x00000974</code>) to get the offset to the data for I (<code>0x000074DC</code>) and get the next 270 bytes:</p>
+    <pre>
+ 0008 0024 0033 2000 0015 2001 001B 2002
+ 0024 2003 0015 2004 0026 2007 000D 2006
+ 001A 2005 0040 0101 0181 8043 FF7E FF7E
+ FF7E FF7E 0081 4501 0101 0301 0401 0401
+ 0401 0280 4000 8281 8104 3A5A 3E43 2081
+ 040E 4015 457C 8300 0D9E F3F2 F0F0 F0F0
+ F39E A0A1 A1A1 9F80 0091 8191 000D 0A0A
+ 090A 0A0A 0A0A 0A0A 0A0A 0A0B 8000 1581
+ 8100 C489 00C4 8300 0D80 9998 9696 9696
+ 9980 8283 8383 8180 40FF 1881 8104 E6F9
+ 1021 0281 04E8 E5EB 4DDA 8300 0DCE D3D4
+ D3D3 D3D5 D2CE CCCD CDCD CD80 00A1 8191
+ 000D 0703 0402 0202 0303 0707 0808 0807
+ 8000 0981 8100 2840 00A4 0224 2466 8104
+ 08FA FAFA 2883 0082 02FF FFFF 8302 0101
+ 0184 9100 8006 0708 0808 080A 0780 03FE
+ FFFF FF81 0008 8182 02EE EEEE 8B6D 00</pre>
+    <p>The first word tells us that we have eight tuples which follow, and that this glyph's variation data doesn't use shared points (<code>tuples_share_point_numbers</code> is clear). The data for this tuple comes <code>0x0024</code> == 36 bytes in. Since the header takes up four bytes, and the minimum size for a tuple is four bytes, we can infer from this that each tuple take up exactly four bytes.<p>
+    <p>The eight tuples have data as follows:</p>
+    <pre>
+ 0033 2000
+ 0015 2001
+ 001B 2002
+ 0024 2003
+ 0015 2004
+ 0026 2007
+ 000D 2006
+ 001A 2005</pre>
+    <p>We note that all eight tuples have the <code>private_point_numbers</code> flag set, so all eight have their point numbers embedded in the glyph variation data. (Of course, we expected that, since the glyph variation header indicates that there are no shared point numbers.)</p>
+    <p>For the record, the tuples claim to use a total of 233 bytes. Add this to the 36 bytes for the header and tuples, and we get 269 bytes. The remaining byte is padding.</p>
+    <p>The first tuple will use 51 bytes of serialized data. Its <code>private_point_numbers</code> is set, so its serialized data includes its points. Its <code>embedded_tuple_coord</code> flag is clear, so the bottom 12 bits give an index into the shared coordinates, namely 0, so its coordinates are (<code>'wght'</code>: 1.0, <code>'wdth'</code>: 0.0). In essence, what this means is that this tuple is only used if the weight variation is greater than the default value.</p>
+    <p>The 51 bytes of serialized data are:</p>
+    <pre>
+00 40 01 01 01 81 80 43 FF 7E FF 7E FF 7E FF 7E 00 81 45 01 01 01 03 01 04 01 04 01 04 01 02 80 40 00 82 81 81 04 3A 5A 3E 43 20 81 04 0E 40 15 45 7C 83</pre>
+    <p>The point numbers start at the beginning of the serialized array for the tuple. Our first byte is 00, which is the special value meaning "all the points for the glyph." (In this case, that's points 0 through 13, plus the four phantom points, 14 through 17.)</p>
+    <p>The remaining 50 bytes of data for this tuple are the deltas. Each of the eighteen points will require two deltas, an x-delta and a y-delta. The eighteen x-deltas come first.</p>
+    <p>Our first byte of x-delta data is <code>0x40</code>. The top two bits are flags, and the remainder is one less than the number of deltas in the run. We therefore have a run of one delta, which is a word in size (the flag <code>deltas_are_words</code> is set). The delta is thus <code>0x0101</code>, or 257 (the deltas are signed integers). The next byte is <code>0x01</code>, meaning two short deltas, namely <code>0x81</code> and <code>0x80</code>, respectively. Next is <code>0x43</code>, which means four long deltas (<code>FF7E FF7E FF7E FF7E</code>), then <code>00</code> for one short delta (<code>81</code>), then <code>45</code> for six long deltas (<code>0101 0103 0104 0104 0104 0102</code>), then <code>0x80</code> for one zero delta, then <code>0x40</code> one long delta (<code>0082</code>), then <code>0x81</code> for two zero deltas. Those are the x-deltas, and (if you're keeping track) there really are eighteen of them.</p>
+    <p>The y-deltas parse similarly: <code>0x81</code> for two zero deltas, <code>0x04</code> for five one-byte deltas (<code>3A 5A 3E 43 20</code>), <code>0x81</code> for two zero deltas, <code>0x04</code> for five one-byte deltas (<code>0E 40 15 45 7C</code>), and then <code>0x83</code> for four zero-byte deltas, a total of eighteen.</p>
+    <p>The deltas are all <code>int16</code>'s in em-units as defined by the font.</p>
+    <p>In the XML format used by ftxdumperfuser, the overall data for this one tuple is:</p>
+<pre>
+&lt;tuple size="51" index="0" embeddedTupleCoordinates="false" intermediateTuple="false" privatePointNumbers="true" &gt;
+    &lt;tupleCoordinate axisRefID="0" axisTag="wght" value="1" /&gt;
+    &lt;tupleCoordinate axisRefID="1" axisTag="wdth" value="0" /&gt;
+    &lt;tuplePoint number="0" xDelta="257" yDelta="0" /&gt;
+    &lt;tuplePoint number="1" xDelta="129" yDelta="58" /&gt;
+    &lt;tuplePoint number="2" xDelta="128" yDelta="90" /&gt;
+    &lt;tuplePoint number="3" xDelta="-130" yDelta="62" /&gt;
+    &lt;tuplePoint number="4" xDelta="-130" yDelta="67" /&gt;
+    &lt;tuplePoint number="5" xDelta="-130" yDelta="32" /&gt;
+    &lt;tuplePoint number="6" xDelta="-130" yDelta="0" /&gt;
+    &lt;tuplePoint number="7" xDelta="129" yDelta="14" /&gt;
+    &lt;tuplePoint number="8" xDelta="257" yDelta="64" /&gt;
+    &lt;tuplePoint number="9" xDelta="259" yDelta="21" /&gt;
+    &lt;tuplePoint number="10" xDelta="260" yDelta="69" /&gt;
+    &lt;tuplePoint number="11" xDelta="260" yDelta="124" /&gt;
+    &lt;tuplePoint number="12" xDelta="260" yDelta="0" /&gt;
+    &lt;tuplePoint number="13" xDelta="258" yDelta="0" /&gt;
+    &lt;tuplePoint number="14" xDelta="0" yDelta="0" /&gt;
+    &lt;tuplePoint number="15" xDelta="130" yDelta="0" /&gt;
+    &lt;tuplePoint number="16" xDelta="0" yDelta="0" /&gt;
+    &lt;tuplePoint number="17" xDelta="0" yDelta="0" /&gt;
+&lt;/tuple&gt;</pre>
+    <h2>Dependencies</h2>
+    <p>The <code>'gvar'</code> table should have the same number of axes as the <a href="Chap6fvar.html"><code>'fvar'</code> table</a>. The glyph and glyph point indices should be the same as in the <a href="Chap6glyf.html"><code>'glyf'</code> table</a>.</p>
+  </div>
+
+      </section>
+  </div><!-- /content -->
+
+  <div id="globalfooter">
+    <div id="breadory">
+      <ol id="breadcrumbs">
+        <li class="home"><a href="../../../index.html">Developer</a></li>
+        <li><a href="../../index.html">Fonts</a></li>
+        <li><a href="../index.html">TrueType™ Reference Manual</a></li>
+        <li>The TrueType Font File</li>
+      </ol>
+      <div id="directorynav" class="directorynav">
+	<div id="dn-cola" class="column">
+		<h3><a href="../../../platforms/index.html">Platforms</a></h3>
+		<ul>
+			<li><a href="../../../ios/index.html">iOS</a></li>
+			<li><a href="../../../osx/index.html">OS X</a></li>
+			<li><a href="../../../watchos/index.html">watchOS</a></li>
+			<li><a href="../../../tvos/index.html">tvOS</a></li>
+		</ul>
+		<h3><a href="../../../resources/index.html">Tools</a></h3>
+		<ul>
+			<li><a href="../../../xcode/index.html">Xcode</a></li>
+			<li><a href="../../../swift/index.html">Swift</a></li>
+		</ul>
+	</div>
+	<div id="dn-colb" class="column">
+		<h3><a href="../../../resources/index.html">Resources</a></h3>
+		<ul>
+			<li><a href="../../../library/index.html">Documentation</a></li>
+			<li><a href="../../../videos/index.html">Videos</a></li>
+			<li><a href="https://forums.developer.apple.com/">Forums</a></li>
+			<li><a href="../../../app-store/index.html">App Store</a></li>
+			<li><a href="../../../safari/index.html">Safari and Web</a></li>
+			<li><a href="../../../education/index.html">Education</a></li>
+			<li><a href="../../../enterprise/index.html">Enterprise</a></li>
+		</ul>
+	</div>
+	<div id="dn-colc" class="column">
+		<h3><a href="../../../programs/index.html">Programs</a></h3>
+		<ul>
+			<li><a href="../../../programs/index.html">Developer Program</a></li>
+			<li><a href="../../../programs/enterprise/index.html">Enterprise Program</a></li>
+			<li><a href="../../../programs/ios/university/index.html">iOS University Program</a></li>
+			<li><a href="../../../programs/mfi/index.html">MFi Program</a></li>
+		</ul>
+	</div>
+	<div id="dn-cold" class="column">
+		<h3><a href="../../../support/index.html">Support</a></h3>
+		<ul>
+			<li><a href="../../../support/development/index.html">Development</a></li>
+			<li><a href="../../../support/distribution/index.html">Distribution</a></li>
+			<li><a href="../../../support/membership/index.html">Membership</a></li>
+			<li><a href="../../../system-status/index.html">System Status</a></li>
+		</ul>
+	</div>
+	<div id="dn-cole" class="column">
+		<h3><a href="https://developer.apple.com/account/">Account</a></h3>
+		<ul>
+			<li><a href="https://developer.apple.com/account/">Developer Account</a></li>
+			<li><a href="../../../go/index-id=certificates-ids-profiles.html">Certificates, IDs &amp; Profiles</a></li>
+			<li><a href="https://itunesconnect.apple.com">iTunes Connect</a></li>			
+			<li><a href="../../../terms/index.html">License Agreements</a></li>
+		</ul>
+	</div>
+</div>
+
+    </div><!--/breadory-->
+    <ul class="gf-links piped footer-links">
+  <li><a href="../../../news/index.html" class="first">News &amp; Updates</a></li>
+  <li><a href="../../../bug-reporting/index.html">Report Bugs</a></li>
+  <li><a href="../../../contact/index.html">Contact Us</a></li>
+</ul>
+
+<div class="gf-sosumi footer-sosumi">
+  <p>Copyright © 2016 Apple Inc. All rights reserved.</p>
+    <ul class="piped">
+        <li><a href="http://www.apple.com/legal/internet-services/terms/site.html" class="first">Terms of Use</a></li>
+        <li><a href="http://www.apple.com/privacy/privacy-policy/">Privacy Policy</a></li>
+    </ul>
+</div>
+
+<!--<div id="gf-links piped footer-links">
+	<ul>
+		<li><a href="/cn/" title="Simplified Chinese">简体中文</a></li>
+		<li><a href="/jp/" title="Japanese">日本語</a></li>
+		<li><a href="/kr/" title="Korean">한국어</a></li>
+	</ul>
+</div>-->
+
+  </div><!--/globalfooter-->
+</body>
+</html>

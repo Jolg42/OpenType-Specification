@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="Author" content="Apple Inc." />
+<meta name="viewport" content="width=1024" />
+<link rel="shortcut icon" href="../../../favicon.ico" />
+<link rel="icon" href="../../../favicon.ico" />
+<link rel="stylesheet" href="https://www.apple.com/wss/fonts?family=Myriad+Set+Pro&amp;v=2" type="text/css" />
+<link rel="stylesheet" href="../../../assets/styles/transition-global.css" type="text/css" />
+<link rel="stylesheet" href="../../../assets/styles/transition-header.css" type="text/css" />
+<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/core/styles/adc.css" type="text/css" />
+<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/styles/topbar.css" type="text/css" />
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/lib/prototype.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/lib/scriptaculous.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/browserdetect.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/apple_core.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/search_decorator.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/adc_core.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/scripts/ac_retina.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/topbarDropdown.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	document.write('<link rel="stylesheet" type="text/css" href="https://devimages.apple.com.edgekey.net/assets/styles/script.css" media="screen">');
+</script>
+<!-- Augmented Search -->
+<!--<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/styles/augmented_search.css" type="text/css">-->
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/lib/jquery/jquery-1.11.0.min.js"></script>
+<script>jQuery.noConflict();</script>
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/lib/jquery/jquery.retinate.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/scripts/augmented_search.js"></script>-->
+<script src="../../../assets/scripts/augmented_search.js"></script>
+<script src="../../../assets/scripts/global-header.js"></script>
+
+  <meta name="Author" content="Apple Inc.">
+  <meta name="viewport" content="width=1024">
+  <link rel="shortcut icon" href="https://devimages.apple.com.edgekey.net/favicon.ico">
+  <link rel="icon" href="https://devimages.apple.com.edgekey.net/favicon.ico">
+  <link rel="stylesheet" href="../AAT.css" type="text/css">
+  <title>Instruction Set Summary</title>
+</head>
+<body class="white sidenav-page">
+  <nav id="globalheader" role="navigation" aria-label="Global Navigation">
+  <div id="gh-content" class="gh-content">
+    <ul class="gh-menu">
+      <li id="gh-menu-icon-toggle" class="gh-menu-icon gh-menu-icon-toggle enhance">
+        <button id="gh-svg-icons" class="gh-svg-wrapper">
+          <span class="text-replace">Menu</span>
+          <svg x="0px" y="0px" width="100%" viewBox="0 0 96 96" class="gh-svg gh-svg-top" enable-background="new 0 0 96 96"><rect width="32" height="4" x="32" y="46" class="gh-svg-rect gh-svg-rect-top"></rect></svg>
+          <svg x="0px" y="0px" width="100%" viewBox="0 0 96 96" class="gh-svg gh-svg-bottom" enable-background="new 0 0 96 96"><rect width="32" height="4" x="32" y="46" class="gh-svg-rect gh-svg-rect-bottom"></rect></svg>
+        </button>
+      </li>
+      <li id="gh-menu-icon-home" class="gh-menu-icon gh-menu-icon-home">
+        <a href="../../../index.html">
+          <span class="text-replace">Apple Developer</span>
+        </a>
+      </li>
+    </ul>
+    <div class="gh-nav">
+      <div class="gh-nav-view">
+        <ul class="gh-nav-list">
+
+          <li class="gh-tab gh-nav-developer" data-hires="true"><a class="gh-tab-link" href="../../../index.html"><span class="text-replace">Apple Developer</span></a></li>
+          <li class="gh-tab gh-nav-technologies"><a class="gh-tab-link" href="../../../platforms/index.html">Platforms</a></li>
+          <li class="gh-tab gh-nav-resources"><a class="gh-tab-link" href="../../../resources/index.html">Resources</a></li>
+          <li class="gh-tab gh-nav-programs"><a class="gh-tab-link" href="../../../programs/index.html">Program</a></li>
+          <li class="gh-tab gh-nav-support"><a class="gh-tab-link" href="../../../support/index.html">Support</a></li>
+          <li class="gh-tab gh-nav-account">
+            <a class="gh-tab-link gh-account-profile" href="https://developer.apple.com/account/">Account</a>
+          </li>
+          <li class="gh-tab gh-nav-search">
+
+            <div id="gh-search" class="gh-search" role="search">
+              <form action="/search/index.php" method="get" class="gh-search-form" id="gh-search-form" role="search">
+
+                <div class="gh-search-input-wrapper">
+                  <label for="gh-search-input" class="text-replace">Search Apple Developer</label>
+                  <input type="text" name="q" id="gh-search-input" class="augmented gh-search-input" placeholder="Search Apple Developer" autocomplete="off" autocorrect="off" autocapitalize="off">
+                </div>
+
+                <button disabled type="submit" id="gh-search-submit" class="gh-search-submit gh-search-magnify"><span class="text-replace">Search Apple Developer</span></button>
+                <button disabled type="reset" id="gh-search-reset" class="gh-search-reset"><span class="text-replace">Reset</span></button>
+
+              </form>
+            </div>
+
+            <a class="gh-search-magnify" href="../../../search/index.html"><span class="text-replace">Search Apple Developer</span></a>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+  <div id="top">
+<!-- SiteCatalyst code version: H.8. Copyright 1997-2006 Omniture, Inc. -->
+<script type="text/javascript">
+/* RSID: */
+var s_account="appleglobal,appleusdeveloper"
+</script>
+
+<script type="text/javascript" src="https://www.apple.com/metrics/scripts/s_code_h.js"></script>
+<script type="text/javascript">
+s.pageName= AC && AC.Tracking && AC.Tracking.pageName();
+s.channel="www.us.developer"
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)</script>
+<!-- End SiteCatalyst code version: H.8. -->
+</div>
+
+  <div id="content" class="content" data-hires="true">
+    <section>
+
+  <div id="navBar">
+    <!-- NAVBARSTART -->
+    <p class="bold"><a href="../index.html">TrueType Reference Manual</a></p>
+    <ul class="outer">
+      <li><a href="../RM01/Chap1.html">Digitizing Letterforms</a></li>
+      <li><a href="../RM02/Chap2.html">The Font Engine</a></li>
+      <li><a href="../RM03/Chap3.html">Instructing Fonts</a></li>
+      <li><a href="../RM04/Chap4.html">The Graphics State</a></li>
+      <li><a href="../RM05/Chap5.html">The Instruction Set</a></li>
+      <li><a href="../RM06/Chap6.html">Font Tables</a></li>
+      <li class="c1">
+        <ul class="inner">
+          <li><a href="../RM06/Chap6.html#Intro">Introduction</a></li>
+          <li><a href="../RM06/Chap6.html#Types">Data Types</a></li>
+          <li><a href="../RM06/Chap6.html#Overview">Overview of TrueType</a></li>
+          <li><a href="../RM06/Chap6AATIntro.html">Overview of AAT</a></li>
+          <li><a href="../RM06/Chap6Tables.html">Special Tables</a></li>
+          <li><a href="../RM06/Chap6.html#Directory">The Font Directory</a></li>
+          <li><a href="../RM06/Chap6acnt.html">The <code>'acnt'</code> table</a></li>
+          <li><a href="../RM06/Chap6ankr.html">The <code>'ankr'</code> table</a></li>
+          <li><a href="../RM06/Chap6avar.html">The <code>'avar'</code> table</a></li>
+          <li><a href="../RM06/Chap6bdat.html">The <code>'bdat'</code> table</a></li>
+          <li><a href="../RM06/Chap6bhed.html">The <code>'bhed'</code> table</a></li>
+          <li><a href="../RM06/Chap6bloc.html">The <code>'bloc'</code> table</a></li>
+          <li><a href="../RM06/Chap6bsln.html">The <code>'bsln'</code> table</a></li>
+          <li><a href="../RM06/Chap6cmap.html">The <code>'cmap'</code> table</a></li>
+          <li><a href="../RM06/Chap6cvar.html">The <code>'cvar'</code> table</a></li>
+          <li><a href="../RM06/Chap6cvt.html">The <code>'cvt '</code> table</a></li>
+          <li><a href="../RM06/Chap6EBSC.html">The <code>'EBSC'</code> table</a></li>
+          <li><a href="../RM06/Chap6fdsc.html">The <code>'fdsc'</code> table</a></li>
+          <li><a href="../RM06/Chap6feat.html">The <code>'feat'</code> table</a></li>
+          <li><a href="../RM06/Chap6fmtx.html">The <code>'fmtx'</code> table</a></li>
+          <li><a href="../RM06/Chap6fond.html">The <code>'fond'</code> table</a></li>
+          <li><a href="../RM06/Chap6fpgm.html">The <code>'fpgm'</code> table</a></li>
+          <li><a href="../RM06/Chap6fvar.html">The <code>'fvar'</code> table</a></li>
+          <li><a href="../RM06/Chap6gasp.html">The <code>'gasp'</code> table</a></li>
+          <li><a href="../RM06/Chap6gcid.html">The <code>'gcid'</code> table</a></li>
+          <li><a href="../RM06/Chap6glyf.html">The <code>'glyf'</code> table</a></li>
+          <li><a href="../RM06/Chap6gvar.html">The <code>'gvar'</code> table</a></li>
+          <li><a href="../RM06/Chap6hdmx.html">The <code>'hdmx'</code> table</a></li>
+          <li><a href="../RM06/Chap6head.html">The <code>'head'</code> table</a></li>
+          <li><a href="../RM06/Chap6hhea.html">The <code>'hhea'</code> table</a></li>
+          <li><a href="../RM06/Chap6hmtx.html">The <code>'hmtx'</code> table</a></li>
+          <li><a href="../RM06/Chap6just.html">The <code>'just'</code> table</a></li>
+          <li><a href="../RM06/Chap6kern.html">The <code>'kern'</code> table</a></li>
+          <li><a href="../RM06/Chap6kerx.html">The <code>'kerx'</code> table</a></li>
+          <li><a href="../RM06/Chap6lcar.html">The <code>'lcar'</code> table</a></li>
+          <li><a href="../RM06/Chap6loca.html">The <code>'loca'</code> table</a></li>
+          <li><a href="../RM06/Chap6maxp.html">The <code>'maxp'</code> table</a></li>
+          <li><a href="../RM06/Chap6meta.html">The <code>'meta'</code> table</a></li>
+          <li><a href="../RM06/Chap6mort.html">The <code>'mort'</code> table</a></li>
+          <li><a href="../RM06/Chap6morx.html">The <code>'morx'</code> table</a></li>
+          <li><a href="../RM06/Chap6name.html">The <code>'name'</code> table</a></li>
+          <li><a href="../RM06/Chap6opbd.html">The <code>'opbd'</code> table</a></li>
+          <li><a href="../RM06/Chap6OS2.html">The <code>'OS/2'</code> table</a></li>
+          <li><a href="../RM06/Chap6post.html">The <code>'post'</code> table</a></li>
+          <li><a href="../RM06/Chap6prep.html">The <code>'prep'</code> table</a></li>
+          <li><a href="../RM06/Chap6prop.html">The <code>'prop'</code> table</a></li>
+          <li><a href="../RM06/Chap6sbix.html">The <code>'sbix'</code> table</a></li>
+          <li><a href="../RM06/Chap6trak.html">The <code>'trak'</code> table</a></li>
+          <li><a href="../RM06/Chap6vhea.html">The <code>'vhea'</code> table</a></li>
+          <li><a href="../RM06/Chap6vmtx.html">The <code>'vmtx'</code> table</a></li>
+          <li><a href="../RM06/Chap6xref.html">The <code>'xref'</code> table</a></li>
+          <li><a href="../RM06/Chap6Zapf.html">The <code>'Zapf'</code> table</a></li>
+        </ul>
+      </li>
+      <li>Instruction Set Summary</li>
+      <li><a href="appendixB.html">Glyph Mappings</a></li>
+      <li><a href="../RM08/appendixE.html">Converting Outlines</a></li>
+	<li><a href="../RM09/AppendixF.html">Font Feature Registry</a></li>
+    </ul><!-- NAVBAREND -->
+  </div>
+  <div id="chapterContent">
+    <header><h1>Instruction Set Summary</h1></header>
+
+    <p><br>
+    The following tables provide a quick summary of the names, opcodes, instruction stream and stack interaction of the TrueType instruction set.<br></p>
+    <p>The first table lists those instructions that take data from the instruction stream and place it onto the interpreter stack. The second table lists the remaining TrueType instructions which take their arguments from the stack.<br></p>
+    <p><br>
+    <strong><font size="-1">Table 1</font></strong> <font size="-1">Instructions taking data from the instruction stream</font></p>
+    <table border="0" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th align="left">
+          <p align="left">Instruction</p>
+        </th>
+        <th align="left">
+          <p align="left">Opcode</p>
+        </th>
+        <th align="left">
+          <p align="left">From Instruction Stream</p>
+        </th>
+        <th align="left">
+          <p align="left">Pushes</p>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>NPUSHB[ ]</td>
+        <td>0x40</td>
+        <td>n, b1, b2,...bn</td>
+        <td>b1,b2...bn</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>NPUSHW[ ]</td>
+        <td>0x41</td>
+        <td>n, w1, w2,...w</td>
+        <td>w1,w2...wn</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>PUSHB[abc]</td>
+        <td>0xB0 - 0xB7</td>
+        <td>b0, b1,..bn</td>
+        <td>b0, b1, ...,bn</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>PUSHW[abc]</td>
+        <td>0xB8 - 0xBF</td>
+        <td>w0,w1,..wn</td>
+        <td>w0 ,w1, ...wn</td>
+      </tr>
+    </table>
+    <p><br></p>
+    <p><strong><font size="-1">Table 2</font></strong> <font size="-1">Instructions taking data from the interpreter stack</font></p>
+    <table border="0" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th align="left">
+          <p align="left">Instruction</p>
+        </th>
+        <th align="left">
+          <p align="left">Opcode</p>
+        </th>
+        <th align="left">
+          <p align="left">Pops</p>
+        </th>
+        <th align="left">
+          <p align="left">Pushes</p>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>AA[ ]</td>
+        <td>0x7F</td>
+        <td>p</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>ABS[ ]</td>
+        <td>0x64</td>
+        <td>n</td>
+        <td>|n|</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>ADD[ ]</td>
+        <td>0x60</td>
+        <td>n2, n1</td>
+        <td>(n1 + n2)</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>ALIGNPTS[ ]</td>
+        <td>0x27</td>
+        <td>p2, p1</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>ALIGNRP[ ]</td>
+        <td>0x3C</td>
+        <td>p1, p2, ... , ploopvalue</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>AND[ ]</td>
+        <td>0x5A</td>
+        <td>e2, e1</td>
+        <td>b</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>CALL[ ]</td>
+        <td>0x2B</td>
+        <td>f</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>CEILING[ ]</td>
+        <td>0x67</td>
+        <td>n</td>
+        <td>Èn</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>CINDEX[ ]</td>
+        <td>0x25</td>
+        <td>k</td>
+        <td>ek</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>CLEAR[ ]</td>
+        <td>0x22</td>
+        <td>all items on the stack</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>DEBUG[ ]</td>
+        <td>0x4F</td>
+        <td>n</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>DELTAC1[ ],</td>
+        <td>0x73</td>
+        <td>argn, cn, argn-1,cn-1, , arg1, c1</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>DELTAC2[ ]</td>
+        <td>0x74</td>
+        <td>argn, cn, argn-1,cn-1, , arg1, c1</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>DELTAC3[ ]</td>
+        <td>0x75</td>
+        <td>argn, cn, argn-1,cn-1, , arg1, c1</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>DELTAP1[ ]</td>
+        <td>0x5D</td>
+        <td>argn, pn, argn-1, pn-1, , arg1, p1</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>DELTAP2[ ]</td>
+        <td>0x71</td>
+        <td>argn, pn, argn-1, pn-1, , arg1, p1</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>DELTAP3[ ]</td>
+        <td>0x72</td>
+        <td>argn, pn, argn-1, pn-1, , arg1, p1</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>DEPTH[ ]</td>
+        <td>0x24</td>
+        <td>-</td>
+        <td>n</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>DIV[ ]</td>
+        <td>0x62</td>
+        <td>n2, n1</td>
+        <td>(n1 * 64)/ n2</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>DUP[ ]</td>
+        <td>0x20</td>
+        <td>e</td>
+        <td>e, e</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>EIF[ ]</td>
+        <td>0x59</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>ELSE</td>
+        <td>0x1B</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>ENDF[ ]</td>
+        <td>0x2D</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>EQ[ ]</td>
+        <td>0x54</td>
+        <td>e2, e1</td>
+        <td>b</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>EVEN[ ]</td>
+        <td>0x57</td>
+        <td>e</td>
+        <td>b</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>FDEF[ ]</td>
+        <td>0x2C</td>
+        <td>f</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>FLIPOFF[ ]</td>
+        <td>0x4E</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>FLIPON[ ]</td>
+        <td>0x4D</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>FLIPPT[ ]</td>
+        <td>0x80</td>
+        <td>p1, p2, ..., ploopvalue</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>FLIPRGOFF[ ]</td>
+        <td>0x82</td>
+        <td>h, l</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>FLIPRGON[ ]</td>
+        <td>0x81</td>
+        <td>h, l</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>FLOOR[ ]</td>
+        <td>0x66</td>
+        <td>n</td>
+        <td>În°</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>GC[a]</td>
+        <td>0x46 - 0x47</td>
+        <td>p</td>
+        <td>c</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>GETINFO[ ]</td>
+        <td>0x88</td>
+        <td>selector</td>
+        <td>result</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>GFV[ ]</td>
+        <td>0x0D</td>
+        <td>-</td>
+        <td>px, py</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>GPV[ ]</td>
+        <td>0x0C</td>
+        <td>-</td>
+        <td>px, py</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>GT[ ]</td>
+        <td>0x52</td>
+        <td>e2, e1</td>
+        <td>b</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>GTEQ[ ]</td>
+        <td>0x53</td>
+        <td>e2, e1</td>
+        <td>b</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>IDEF[ ]</td>
+        <td>0x89</td>
+        <td>f</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>IF[ ]</td>
+        <td>0x58</td>
+        <td>e</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>INSTCTRL</td>
+        <td>0x8E</td>
+        <td>s, v</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>IP[ ]</td>
+        <td>0x39</td>
+        <td>p1, p2, ... , ploopvalue</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>ISECT[ ]</td>
+        <td>0x0F</td>
+        <td>a1, a0, b1, b0, p</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>IUP[a]</td>
+        <td>0x30 - 0x31</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>JMPR</td>
+        <td>0x1C</td>
+        <td>offset</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>JROF[ ]</td>
+        <td>0x79</td>
+        <td>e, offset</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>JROT[ ]</td>
+        <td>0x78</td>
+        <td>e, offset</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>LOOPCALL[ ]</td>
+        <td>0x2A</td>
+        <td>f, count</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>LT[ ]</td>
+        <td>0x50</td>
+        <td>e2, e1</td>
+        <td>b</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>LTEQ[ ]</td>
+        <td>0x51</td>
+        <td>e2, e1</td>
+        <td>b</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>MAX[ ]</td>
+        <td>0X8B</td>
+        <td>e2, e1</td>
+        <td>max(e1, e2)</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>MD[a]</td>
+        <td>0x49 - 0x4A</td>
+        <td>p2,p1</td>
+        <td>d</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>MDAP[ a ]</td>
+        <td>0x2E - 0x2F</td>
+        <td>p</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>MDRP[abcde]</td>
+        <td>0xC0 - 0xDF</td>
+        <td>p</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>MIAP[a]</td>
+        <td>0x3E - 0x3F</td>
+        <td>n, p</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>MIN[ ]</td>
+        <td>0X8C</td>
+        <td>e2, e1</td>
+        <td>min(e1, e2)</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>MINDEX[ ]</td>
+        <td>0x26</td>
+        <td>k</td>
+        <td>ek</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>MIRP[abcde]</td>
+        <td>0xE0 - 0xFF</td>
+        <td>n, p</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>MPPEM[ ]</td>
+        <td>0x4B</td>
+        <td>-</td>
+        <td>ppem</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>MPS[ ]</td>
+        <td>0x4C</td>
+        <td>-</td>
+        <td>pointSize</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>MSIRP[a]</td>
+        <td>0x3A - 0x3B</td>
+        <td>d, p</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>MUL[ ]</td>
+        <td>0x63</td>
+        <td>n2, n1</td>
+        <td>(n1 * n2)/64</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>NEG[ ]</td>
+        <td>0x65</td>
+        <td>n</td>
+        <td>-n</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>NEQ[ ]</td>
+        <td>0x55</td>
+        <td>e2, e1</td>
+        <td>b</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>NOT[ ]</td>
+        <td>0x5C</td>
+        <td>e</td>
+        <td>( not e )</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>NROUND[ab]</td>
+        <td>0x6C - 0x6F</td>
+        <td>n1</td>
+        <td>n2</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>ODD[ ]</td>
+        <td>0x56</td>
+        <td>e</td>
+        <td>b</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>OR[ ]</td>
+        <td>0x5B</td>
+        <td>e2, e1</td>
+        <td>b</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>POP[ ]</td>
+        <td>0x21</td>
+        <td>e</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>RCVT[ ]</td>
+        <td>0x45</td>
+        <td>location</td>
+        <td>value</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>RDTG[ ]</td>
+        <td>0x7D</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>ROFF[ ]</td>
+        <td>0x7A</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>ROLL</td>
+        <td>0x8a</td>
+        <td>a,b,c</td>
+        <td>b,a,c</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>ROUND[ab]</td>
+        <td>0x68 - 0x6B</td>
+        <td>n1</td>
+        <td>n2</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>RS[ ]</td>
+        <td>0x43</td>
+        <td>n</td>
+        <td>v</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>RTDG[ ]</td>
+        <td>0x3D</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>RTG[ ]</td>
+        <td>0x18</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>RTHG[ ]</td>
+        <td>0x19</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>RUTG[ ]</td>
+        <td>0x7C</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>S45ROUND[ ]</td>
+        <td>0x77</td>
+        <td>n</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>SANGW[ ]</td>
+        <td>0x7E</td>
+        <td>weight</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>SCANCTRL[ ]</td>
+        <td>0x85</td>
+        <td>n</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>SCANTYPE[ ]</td>
+        <td>0x8D</td>
+        <td>n</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>SCFS[ ]</td>
+        <td>0x48</td>
+        <td>c, p</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>SCVTCI[ ]</td>
+        <td>0x1D</td>
+        <td>n</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>SDB[ ]</td>
+        <td>0x5E</td>
+        <td>n</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>SDPVTL[a]</td>
+        <td>0x86 - 0x87</td>
+        <td>p2, p1</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>SDS[ ]</td>
+        <td>0x5F</td>
+        <td>n</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>SFVFS[ ]</td>
+        <td>0x0B</td>
+        <td>y, x</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>SFVTCA[a]</td>
+        <td>0x04 - 0x05</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>SFVTL[a]</td>
+        <td>0x08 - 0x09</td>
+        <td>p2, p1</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>SFVTPV[ ]</td>
+        <td>0x0E</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>SHC[a]</td>
+        <td>0x34 - 0x35</td>
+        <td>c</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>SHP[a]</td>
+        <td>0x32 - 0x33</td>
+        <td>p1, p2, ..., ploopvalue</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>SHPIX[ ]</td>
+        <td>0x38</td>
+        <td>d, p1, p2, ..., ploopvalue</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>SHZ[a]</td>
+        <td>0x36 - 0x37</td>
+        <td>e</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>SLOOP[ ]</td>
+        <td>0x17</td>
+        <td>n</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>SMD[ ]</td>
+        <td>0x1A</td>
+        <td>distance</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>SPVFS[ ]</td>
+        <td>0x0A</td>
+        <td>y, x</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>SPVTCA[a]</td>
+        <td>0x02 - 0x03</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>SPVTL[a]</td>
+        <td>0x06 - 0x07</td>
+        <td>p2, p1</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>SROUND[ ]</td>
+        <td>0x76</td>
+        <td>n</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>SRP0[ ]</td>
+        <td>0x10</td>
+        <td>p</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>SRP1[ ]</td>
+        <td>0x11</td>
+        <td>p</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>SRP2[ ]</td>
+        <td>0x12</td>
+        <td>p</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>SSW[ ]</td>
+        <td>0x1F</td>
+        <td>n</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>SSWCI[ ]</td>
+        <td>0x1E</td>
+        <td>n</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>SUB[ ]</td>
+        <td>0x61</td>
+        <td>n2, n1</td>
+        <td>(n1 - n2)</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>SVTCA[a]</td>
+        <td>0x00 - 0x01</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>SWAP[ ]</td>
+        <td>0x23</td>
+        <td>e2, e1</td>
+        <td>e1, e2</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>SZP0[ ]</td>
+        <td>0x13</td>
+        <td>n</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>SZP1[ ]</td>
+        <td>0x14</td>
+        <td>n</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>SZP2[ ]</td>
+        <td>0x15</td>
+        <td>n</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>SZPS[ ]</td>
+        <td>0x16</td>
+        <td>n</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>UTP[ ]</td>
+        <td>0x29</td>
+        <td>p</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>WCVTF[ ]</td>
+        <td>0x70</td>
+        <td>n, l</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>WCVTP[ ]</td>
+        <td>0x44</td>
+        <td>v, l</td>
+        <td>-</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>WS[ ]</td>
+        <td>0x42</td>
+        <td>v, l</td>
+        <td>-</td>
+      </tr>
+    </table>
+  </div>
+
+      </section>
+  </div><!-- /content -->
+
+  <div id="globalfooter">
+    <div id="breadory">
+      <ol id="breadcrumbs">
+        <li class="home"><a href="../../../index.html">Developer</a></li>
+        <li><a href="../../index.html">Fonts</a></li>
+        <li><a href="../index.html">TrueType™ Reference Manual</a></li>
+        <li>Instruction Set Summary</li>
+      </ol>
+      <div id="directorynav" class="directorynav">
+	<div id="dn-cola" class="column">
+		<h3><a href="../../../platforms/index.html">Platforms</a></h3>
+		<ul>
+			<li><a href="../../../ios/index.html">iOS</a></li>
+			<li><a href="../../../osx/index.html">OS X</a></li>
+			<li><a href="../../../watchos/index.html">watchOS</a></li>
+			<li><a href="../../../tvos/index.html">tvOS</a></li>
+		</ul>
+		<h3><a href="../../../resources/index.html">Tools</a></h3>
+		<ul>
+			<li><a href="../../../xcode/index.html">Xcode</a></li>
+			<li><a href="../../../swift/index.html">Swift</a></li>
+		</ul>
+	</div>
+	<div id="dn-colb" class="column">
+		<h3><a href="../../../resources/index.html">Resources</a></h3>
+		<ul>
+			<li><a href="../../../library/index.html">Documentation</a></li>
+			<li><a href="../../../videos/index.html">Videos</a></li>
+			<li><a href="https://forums.developer.apple.com/">Forums</a></li>
+			<li><a href="../../../app-store/index.html">App Store</a></li>
+			<li><a href="../../../safari/index.html">Safari and Web</a></li>
+			<li><a href="../../../education/index.html">Education</a></li>
+			<li><a href="../../../enterprise/index.html">Enterprise</a></li>
+		</ul>
+	</div>
+	<div id="dn-colc" class="column">
+		<h3><a href="../../../programs/index.html">Programs</a></h3>
+		<ul>
+			<li><a href="../../../programs/index.html">Developer Program</a></li>
+			<li><a href="../../../programs/enterprise/index.html">Enterprise Program</a></li>
+			<li><a href="../../../programs/ios/university/index.html">iOS University Program</a></li>
+			<li><a href="../../../programs/mfi/index.html">MFi Program</a></li>
+		</ul>
+	</div>
+	<div id="dn-cold" class="column">
+		<h3><a href="../../../support/index.html">Support</a></h3>
+		<ul>
+			<li><a href="../../../support/development/index.html">Development</a></li>
+			<li><a href="../../../support/distribution/index.html">Distribution</a></li>
+			<li><a href="../../../support/membership/index.html">Membership</a></li>
+			<li><a href="../../../system-status/index.html">System Status</a></li>
+		</ul>
+	</div>
+	<div id="dn-cole" class="column">
+		<h3><a href="https://developer.apple.com/account/">Account</a></h3>
+		<ul>
+			<li><a href="https://developer.apple.com/account/">Developer Account</a></li>
+			<li><a href="../../../go/index-id=certificates-ids-profiles.html">Certificates, IDs &amp; Profiles</a></li>
+			<li><a href="https://itunesconnect.apple.com">iTunes Connect</a></li>			
+			<li><a href="../../../terms/index.html">License Agreements</a></li>
+		</ul>
+	</div>
+</div>
+
+    </div><!--/breadory-->
+    <ul class="gf-links piped footer-links">
+  <li><a href="../../../news/index.html" class="first">News &amp; Updates</a></li>
+  <li><a href="../../../bug-reporting/index.html">Report Bugs</a></li>
+  <li><a href="../../../contact/index.html">Contact Us</a></li>
+</ul>
+
+<div class="gf-sosumi footer-sosumi">
+  <p>Copyright © 2016 Apple Inc. All rights reserved.</p>
+    <ul class="piped">
+        <li><a href="http://www.apple.com/legal/internet-services/terms/site.html" class="first">Terms of Use</a></li>
+        <li><a href="http://www.apple.com/privacy/privacy-policy/">Privacy Policy</a></li>
+    </ul>
+</div>
+
+<!--<div id="gf-links piped footer-links">
+	<ul>
+		<li><a href="/cn/" title="Simplified Chinese">简体中文</a></li>
+		<li><a href="/jp/" title="Japanese">日本語</a></li>
+		<li><a href="/kr/" title="Korean">한국어</a></li>
+	</ul>
+</div>-->
+
+  </div><!--/globalfooter-->
+</body>
+</html>

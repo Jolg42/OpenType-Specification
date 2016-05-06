@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="Author" content="Apple Inc." />
+<meta name="viewport" content="width=1024" />
+<link rel="shortcut icon" href="../../../favicon.ico" />
+<link rel="icon" href="../../../favicon.ico" />
+<link rel="stylesheet" href="https://www.apple.com/wss/fonts?family=Myriad+Set+Pro&amp;v=2" type="text/css" />
+<link rel="stylesheet" href="../../../assets/styles/transition-global.css" type="text/css" />
+<link rel="stylesheet" href="../../../assets/styles/transition-header.css" type="text/css" />
+<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/core/styles/adc.css" type="text/css" />
+<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/styles/topbar.css" type="text/css" />
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/lib/prototype.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/lib/scriptaculous.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/browserdetect.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/apple_core.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/search_decorator.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/adc_core.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/scripts/ac_retina.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/topbarDropdown.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	document.write('<link rel="stylesheet" type="text/css" href="https://devimages.apple.com.edgekey.net/assets/styles/script.css" media="screen">');
+</script>
+<!-- Augmented Search -->
+<!--<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/styles/augmented_search.css" type="text/css">-->
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/lib/jquery/jquery-1.11.0.min.js"></script>
+<script>jQuery.noConflict();</script>
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/lib/jquery/jquery.retinate.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/scripts/augmented_search.js"></script>-->
+<script src="../../../assets/scripts/augmented_search.js"></script>
+<script src="../../../assets/scripts/global-header.js"></script>
+
+  <meta name="Author" content="Apple Inc.">
+  <meta name="viewport" content="width=1024">
+  <link rel="shortcut icon" href="https://devimages.apple.com.edgekey.net/favicon.ico">
+  <link rel="icon" href="https://devimages.apple.com.edgekey.net/favicon.ico">
+  <link rel="stylesheet" href="../AAT.css" type="text/css">
+  <title>Digitizing letterforms</title>
+</head>
+<body class="white sidenav-page">
+  <nav id="globalheader" role="navigation" aria-label="Global Navigation">
+  <div id="gh-content" class="gh-content">
+    <ul class="gh-menu">
+      <li id="gh-menu-icon-toggle" class="gh-menu-icon gh-menu-icon-toggle enhance">
+        <button id="gh-svg-icons" class="gh-svg-wrapper">
+          <span class="text-replace">Menu</span>
+          <svg x="0px" y="0px" width="100%" viewBox="0 0 96 96" class="gh-svg gh-svg-top" enable-background="new 0 0 96 96"><rect width="32" height="4" x="32" y="46" class="gh-svg-rect gh-svg-rect-top"></rect></svg>
+          <svg x="0px" y="0px" width="100%" viewBox="0 0 96 96" class="gh-svg gh-svg-bottom" enable-background="new 0 0 96 96"><rect width="32" height="4" x="32" y="46" class="gh-svg-rect gh-svg-rect-bottom"></rect></svg>
+        </button>
+      </li>
+      <li id="gh-menu-icon-home" class="gh-menu-icon gh-menu-icon-home">
+        <a href="../../../index.html">
+          <span class="text-replace">Apple Developer</span>
+        </a>
+      </li>
+    </ul>
+    <div class="gh-nav">
+      <div class="gh-nav-view">
+        <ul class="gh-nav-list">
+
+          <li class="gh-tab gh-nav-developer" data-hires="true"><a class="gh-tab-link" href="../../../index.html"><span class="text-replace">Apple Developer</span></a></li>
+          <li class="gh-tab gh-nav-technologies"><a class="gh-tab-link" href="../../../platforms/index.html">Platforms</a></li>
+          <li class="gh-tab gh-nav-resources"><a class="gh-tab-link" href="../../../resources/index.html">Resources</a></li>
+          <li class="gh-tab gh-nav-programs"><a class="gh-tab-link" href="../../../programs/index.html">Program</a></li>
+          <li class="gh-tab gh-nav-support"><a class="gh-tab-link" href="../../../support/index.html">Support</a></li>
+          <li class="gh-tab gh-nav-account">
+            <a class="gh-tab-link gh-account-profile" href="https://developer.apple.com/account/">Account</a>
+          </li>
+          <li class="gh-tab gh-nav-search">
+
+            <div id="gh-search" class="gh-search" role="search">
+              <form action="/search/index.php" method="get" class="gh-search-form" id="gh-search-form" role="search">
+
+                <div class="gh-search-input-wrapper">
+                  <label for="gh-search-input" class="text-replace">Search Apple Developer</label>
+                  <input type="text" name="q" id="gh-search-input" class="augmented gh-search-input" placeholder="Search Apple Developer" autocomplete="off" autocorrect="off" autocapitalize="off">
+                </div>
+
+                <button disabled type="submit" id="gh-search-submit" class="gh-search-submit gh-search-magnify"><span class="text-replace">Search Apple Developer</span></button>
+                <button disabled type="reset" id="gh-search-reset" class="gh-search-reset"><span class="text-replace">Reset</span></button>
+
+              </form>
+            </div>
+
+            <a class="gh-search-magnify" href="../../../search/index.html"><span class="text-replace">Search Apple Developer</span></a>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+  <div id="top">
+<!-- SiteCatalyst code version: H.8. Copyright 1997-2006 Omniture, Inc. -->
+<script type="text/javascript">
+/* RSID: */
+var s_account="appleglobal,appleusdeveloper"
+</script>
+
+<script type="text/javascript" src="https://www.apple.com/metrics/scripts/s_code_h.js"></script>
+<script type="text/javascript">
+s.pageName= AC && AC.Tracking && AC.Tracking.pageName();
+s.channel="www.us.developer"
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)</script>
+<!-- End SiteCatalyst code version: H.8. -->
+</div>
+
+  <div id="content" class="content" data-hires="true">
+    <section>
+
+
+  <div id="navBar">
+    <!-- NAVBARSTART -->
+    <p class="bold"><a href="../index.html">TrueType Reference Manual</a></p>
+    <ul class="outer">
+      <li>Digitizing Letterforms</li>
+      <li><a href="../RM02/Chap2.html">The Font Engine</a></li>
+      <li><a href="../RM03/Chap3.html">Instructing Fonts</a></li>
+      <li><a href="../RM04/Chap4.html">The Graphics State</a></li>
+      <li><a href="../RM05/Chap5.html">The Instruction Set</a></li>
+      <li><a href="../RM06/Chap6.html">Font Tables</a></li>
+      <li class="c1">
+        <ul class="inner">
+          <li><a href="../RM06/Chap6.html#Intro">Introduction</a></li>
+          <li><a href="../RM06/Chap6.html#Types">Data Types</a></li>
+          <li><a href="../RM06/Chap6.html#Overview">Overview of TrueType</a></li>
+          <li><a href="../RM06/Chap6AATIntro.html">Overview of AAT</a></li>
+          <li><a href="../RM06/Chap6Tables.html">Special Tables</a></li>
+          <li><a href="../RM06/Chap6.html#Directory">The Font Directory</a></li>
+          <li><a href="../RM06/Chap6acnt.html">The <code>'acnt'</code> table</a></li>
+          <li><a href="../RM06/Chap6ankr.html">The <code>'ankr'</code> table</a></li>
+          <li><a href="../RM06/Chap6avar.html">The <code>'avar'</code> table</a></li>
+          <li><a href="../RM06/Chap6bdat.html">The <code>'bdat'</code> table</a></li>
+          <li><a href="../RM06/Chap6bhed.html">The <code>'bhed'</code> table</a></li>
+          <li><a href="../RM06/Chap6bloc.html">The <code>'bloc'</code> table</a></li>
+          <li><a href="../RM06/Chap6bsln.html">The <code>'bsln'</code> table</a></li>
+          <li><a href="../RM06/Chap6cmap.html">The <code>'cmap'</code> table</a></li>
+          <li><a href="../RM06/Chap6cvar.html">The <code>'cvar'</code> table</a></li>
+          <li><a href="../RM06/Chap6cvt.html">The <code>'cvt '</code> table</a></li>
+          <li><a href="../RM06/Chap6EBSC.html">The <code>'EBSC'</code> table</a></li>
+          <li><a href="../RM06/Chap6fdsc.html">The <code>'fdsc'</code> table</a></li>
+          <li><a href="../RM06/Chap6feat.html">The <code>'feat'</code> table</a></li>
+          <li><a href="../RM06/Chap6fmtx.html">The <code>'fmtx'</code> table</a></li>
+          <li><a href="../RM06/Chap6fond.html">The <code>'fond'</code> table</a></li>
+          <li><a href="../RM06/Chap6fpgm.html">The <code>'fpgm'</code> table</a></li>
+          <li><a href="../RM06/Chap6fvar.html">The <code>'fvar'</code> table</a></li>
+          <li><a href="../RM06/Chap6gasp.html">The <code>'gasp'</code> table</a></li>
+          <li><a href="../RM06/Chap6gcid.html">The <code>'gcid'</code> table</a></li>
+          <li><a href="../RM06/Chap6glyf.html">The <code>'glyf'</code> table</a></li>
+          <li><a href="../RM06/Chap6gvar.html">The <code>'gvar'</code> table</a></li>
+          <li><a href="../RM06/Chap6hdmx.html">The <code>'hdmx'</code> table</a></li>
+          <li><a href="../RM06/Chap6head.html">The <code>'head'</code> table</a></li>
+          <li><a href="../RM06/Chap6hhea.html">The <code>'hhea'</code> table</a></li>
+          <li><a href="../RM06/Chap6hmtx.html">The <code>'hmtx'</code> table</a></li>
+          <li><a href="../RM06/Chap6just.html">The <code>'just'</code> table</a></li>
+          <li><a href="../RM06/Chap6kern.html">The <code>'kern'</code> table</a></li>
+          <li><a href="../RM06/Chap6kerx.html">The <code>'kerx'</code> table</a></li>
+          <li><a href="../RM06/Chap6lcar.html">The <code>'lcar'</code> table</a></li>
+          <li><a href="../RM06/Chap6loca.html">The <code>'loca'</code> table</a></li>
+          <li><a href="../RM06/Chap6maxp.html">The <code>'maxp'</code> table</a></li>
+          <li><a href="../RM06/Chap6meta.html">The <code>'meta'</code> table</a></li>
+          <li><a href="../RM06/Chap6mort.html">The <code>'mort'</code> table</a></li>
+          <li><a href="../RM06/Chap6morx.html">The <code>'morx'</code> table</a></li>
+          <li><a href="../RM06/Chap6name.html">The <code>'name'</code> table</a></li>
+          <li><a href="../RM06/Chap6opbd.html">The <code>'opbd'</code> table</a></li>
+          <li><a href="../RM06/Chap6OS2.html">The <code>'OS/2'</code> table</a></li>
+          <li><a href="../RM06/Chap6post.html">The <code>'post'</code> table</a></li>
+          <li><a href="../RM06/Chap6prep.html">The <code>'prep'</code> table</a></li>
+          <li><a href="../RM06/Chap6prop.html">The <code>'prop'</code> table</a></li>
+          <li><a href="../RM06/Chap6sbix.html">The <code>'sbix'</code> table</a></li>
+          <li><a href="../RM06/Chap6trak.html">The <code>'trak'</code> table</a></li>
+          <li><a href="../RM06/Chap6vhea.html">The <code>'vhea'</code> table</a></li>
+          <li><a href="../RM06/Chap6vmtx.html">The <code>'vmtx'</code> table</a></li>
+          <li><a href="../RM06/Chap6xref.html">The <code>'xref'</code> table</a></li>
+          <li><a href="../RM06/Chap6Zapf.html">The <code>'Zapf'</code> table</a></li>
+        </ul>
+      </li>
+      <li><a href="../RM07/appendixA.html">Instruction Set Summary</a></li>
+      <li><a href="../RM07/appendixB.html">Glyph Mappings</a></li>
+      <li><a href="../RM08/appendixE.html">Converting Outlines</a></li>
+	<li><a href="../RM09/AppendixF.html">Font Feature Registry</a></li>
+    </ul><!-- NAVBAREND -->
+  </div>
+  <div id="chapterContent">
+    <header><h1>Digitizing Letterform Designs</h1></header>
+    <h2>Table of Contents</h2>
+    <ul class="circle">
+      <li><a href="Chap1.html#intro">Introduction</a></li>
+      <li><a href="Chap1.html#points">Points</a></li>
+      <li>
+        <a href="Chap1.html#contours">Contours</a>
+        <ul class="dot">
+          <li><a href="Chap1.html#direction">The direction of contours</a></li>
+          <li><a href="Chap1.html#intersecting">Intersecting contours</a></li>
+          <li><a href="Chap1.html#compound">Compound glyphs</a></li>
+        </ul>
+      </li>
+      <li><a href="Chap1.html#master">The master grid</a></li>
+      <li><a href="Chap1.html#digitizing">Digitizing art work</a></li>
+      <li>
+        <a href="Chap1.html#creating">Creating outlines in the TrueType format</a>
+        <ul class="dot">
+          <li><a href="Chap1.html#necessary">How many points are necessary?</a></li>
+          <li><a href="Chap1.html#located">Where should points be located?</a></li>
+        </ul>
+      </li>
+    </ul>
+    <hr align="left">
+    <h2><a name="intro"></a>Introduction</h2>
+    <p>This chapter provides an overview of the major considerations in digitizing letterforms: digitizing letterform designs for the TrueType format. A complete specification of the format in which TrueType glyph outlines are represented in a font file is provided in <a href="../RM06/Chap6.html">TrueType Font files</a>.<br></p>
+    <h2><a name="points"></a>Points</h2>
+    <p>At the lowest level, each glyph in a TrueType font is described by a sequence of points on a grid. While two on-curve points are sufficient to describe a straight line, the addition of a third off-curve point between two on-curve points makes it possible to describe a parabolic curve. In such cases, each of the on-curve points represents an end point of the curve and the off-curve point is a control point. Changing the location of any of the three points changes the shape of the curve defined.<br></p>
+    <p>The definition of such a curve can be made formal as follows: given three points <cite>p<sub>0</sub>, p<sub>1</sub>, p<sub>2</sub></cite>, they define a curve from point <cite>p<sub>0</sub></cite> to point <cite>p<sub>2</sub></cite> with <cite>p<sub>1</sub></cite> an off-curve point. The control point <cite>p<sub>1</sub></cite> is at the point of intersection of the tangents to the curve at points <cite>p<sub>0</sub></cite> and <cite>p<sub>2</sub></cite>. Thus <cite>p<sub>0</sub>, p<sub>1</sub></cite> is tangent to the curve at point <cite>p<sub>0</sub></cite>. Similarly <cite>p<sub>2</sub></cite>, <cite>p<sub>1</sub></cite> is tangent to the curve at point <cite>p<sub>2</sub></cite>. The curve specified by these three points is defined by a parametric equation. For <cite>t</cite> ranging from 0 to 1, the position of <cite>p(t)</cite> is as shown:<br></p>
+    <center>
+      p(t) = (1-t)<sup>2</sup>p<sub>0</sub> + 2t(1-t)p<sub>1</sub> + t<sup>2</sup>p<sub>2</sub>
+    </center>
+    <p>Curves of the type just described are Bezier quadratic curves. A quadratic curve is shown in FIGURE 1.<br></p>
+    <blockquote>
+      <p><img src="fig01.gif" alt="figure 1" data-hires="false" width="167" height="184" naturalsizeflag="3" align="middle" border="1"><br>
+      <strong><font size="-1">FIGURE 1</font></strong> <font size="-1"><br>
+      A quadratic curve defined by three control points</font>.</p>
+    </blockquote>
+    <p><br>
+    Curves that are parabolic in nature can be represented by a single quadratic curve. More complex curves can be represented by several connected curves. The tangent-continuous joining of such components produces a quadratic spline. Such a joining occurs when curves are connected in a manner such that their shared points have the same tangent.<br></p>
+    <p>Connected quadratic curves have first degree continuity and tangent continuity if each curve point is on the line connecting the two flanking control points.<br></p>
+    <p>Such a curve is shown in FIGURE 2. Here two curves, p0, p1, p2 and p2, p3, p4 are connected at their common point p3.Note that in the illustration, points <cite>p<sub>1</sub></cite>, <cite>p<sub>2</sub></cite> and <cite>p<sub>3</sub></cite> are colinear.<br></p>
+    <blockquote>
+      <p><img src="blank.GIF" data-hires="false" alt="figure 2" align="bottom" width="73" height="58" border="1"><br>
+      <strong><font size="-1">FIGURE 2</font></strong> <font size="-1"><br>
+      Quadratic curves sharing a common on-curve point</font></p>
+    </blockquote>
+    <p><br>
+    It would also be possible to specify the curve shown in FIGURE 2 with one fewer point by removing point p3. Point p3 is not strictly needed to define the curve because its existence implied and its location can be reconstructed from the data given by the other points.<br></p>
+    <blockquote>
+      <p><img src="blank.GIF" alt="figure 3" data-hires="false" align="bottom" width="73" height="58" border="1"><br>
+      <strong><font size="-1">FIGURE 3<br></font></strong> <font size="-1">A quadratic curve with an implied on-curve point</font></p>
+    </blockquote>
+    <p>By combining curves and straight lines, it is possible to build up complex glyphs. Such a letterform is shown in FIGURE 4 below. The on-curve points that define the glyph are shown as small black circles. The off-curve points are shown as small open circles.<br></p>
+    <blockquote>
+      <p><img src="fig04.gif" data-hires="false" width="298" height="391" align="bottom" border="1"><br>
+      <strong><font size="-1">FIGURE 4</font></strong> <font size="-1"><br>
+      A glyph outline with on-curve and off-curve points</font></p>
+    </blockquote>
+    <h2><a name="contours"></a>Contours</h2>
+    <p>In relatively simple glyphs like the letter c shown in FIGURE 4, the sequence of points defining the glyph combine to form a closed shape termed a contour. In more complex glyphs like the letter B shown in FIGURE 5 below, sequences of points define three distinct closed shapes, each being a contour.<br></p>
+    <blockquote>
+      <p><img src="fig05.gif" width="372" data-hires="false" height="369" align="bottom" border="1"><br>
+      <strong><font size="-1">FIGURE 5<br></font></strong> <font size="-1">A glyph outline with three contours</font></p>
+    </blockquote>
+    <p>As can be deduced from these examples, glyphs can have zero or more contours. (The space glyph, which has an advance width but no other visible manifestation, has zero contours.)<br></p>
+    <h2><a name="direction"></a>The direction of contours:</h2>
+    <p>In defining a contour, a font manufacturer must keep a number of rules in mind. The points in a contour must be ordered consecutively beginning with, in the case of the first contour, point 0. Subsequent contours will begin with the first unused number. It must be possible to trace around each contour by going from point to point along the contour in the order specified in the font file.<br></p>
+    <p>The order in which points are specified is significant because it determines the direction of the contour. The direction is always from lower point number toward higher point number.<br></p>
+    <p>The direction of a glyph's contours is used to determine which portions of the shape defined by the contours is filled(black) and which portions are unfilled (white).<br></p>
+    <p>In making this determination, TrueType uses the non-zero winding number rule. See <a href="../RM02/Chap2.html#distinguishing">Distinguishing the inside from the outside of a glyph</a> for information on the application of this rule.<br></p>
+    <h2><a name="intersecting"></a>Intersecting contours:</h2>
+    <p>TrueType allows for the possibility that two contours might intersect. This feature can be convenient in describing the outlines of letters such as the Q. In such cases, the non-zero winding number rule is invoked to determine the appropriate fill. Black filled areas when placed over other black filled areas will remain black. An example of this effect is shown in FIGURE 6 below.<br></p>
+    <blockquote>
+      <p><img src="fig06.gif" alt="figure1-6" data-hires="false" align="absmiddle" width="201" height="243" naturalsizeflag="0" border="1"><br>
+      <strong><font size="-1">FIGURE 6</font></strong> <font size="-1"><br>
+      Overlapping contours</font></p>
+    </blockquote>
+    <h2><a name="compound"></a>Compound glyphs:</h2>
+    <p>Often it is convenient to combine some of the glyphs in a font to produce new glyphs. This is commonly done to produce accented characters in cases where the font includes both the base character and the accent character. TrueType allows for these combinations through the mechanism of compound glyphs. Some glyphs that might be created in this manner are shown in FIGURE 7.<br></p>
+    <blockquote>
+      <p><img src="fig07.gif" alt="figure 7" data-hires="false" width="393" height="96" naturalsizeflag="3" align="bottom" border="1"><br>
+      <strong><font size="-1">FIGURE 7</font></strong> <font size="-1"><br>
+      Component glyphs<br></font></p>
+    </blockquote>
+    <p>Compound glyphs consist of a base glyph and a second glyph that is added to produce a new glyph. The new glyph combines the two components to create the new compound form. If desired, glyphs can be created using more than two components.<br></p>
+    <h2><a name="placement"></a>Compound glyph placement</h2>
+    <p>To aid in the placement of the additional glyphs relative to the base glyph, information must be provided specifying the offset of the subsequent glyphs from a point in the first glyph.<br></p>
+    <p>Each of the glyphs combined to form a compound glyph can be scaled by a different amount. This might be useful, for example, in creating fractions by combining the fraction glyph and two digits.<br></p>
+    <p>Each of the glyphs that make up a compound glyph can have associated instructions. The compound glyph as a whole can also have instructions.<br></p>
+    <p>A detailed description of the specification for compound glyphs is given in <a href="../RM06/Chap6glyf.html#COMPOUNDGLYPHS">Compound glyphs</a>.<br></p>
+    <h2><a name="master"></a>The master grid</h2>
+    <p>The points that make up a glyph outline specification are located on a grid whose units are indivisible and of a size defined by the creator of the font. These units are termed font-units.<br></p>
+    <p>The grid is a two-dimensional coordinate system whose <cite>x</cite> -axis describes movement in a horizontal direction and whose <cite>y</cite> -axis describes movement in a vertical direction. The grid origin has the coordinates (0,0). The grid: sizegrid is not an infinite plane. Each point must be within the range -16384 through +16383 font-units.<br></p>
+    <p>In creating the glyph outlines, the font creator makes use of an imaginary square that derives from the old typographic concept of the em square. This square can be thought of an a tablet on which the characters are drawn, although it is permissible for characters to extend beyond the tablet or em square. It is the size of the font-unit relative to the size of the em square that determines the granularity of the grid. In other words, the resolution of the grid is a function of the number of font-units per em.<br></p>
+    <p>The greater the number of font-units per em, the greater subtlety of design that can be represented in the font file. In determining what is a suitable grid granularity, the font designer should take into account the maximum resolution of the potential output device and allow for possible loss of precision in data conversion. Outline scaling will be fastest if the units per em is a power of two. For example, the Apple core fonts are designed on a grid with 2048 units per em.<br></p>
+    <p>FIGURE 8 shows two different grids. The grid on the left cannot represent the subtlety of original design for the letter A. The grid on the right, with four times the number of units per em, comes closer, though a finer granularity is needed to faithfully render the original design.<br></p>
+    <blockquote>
+      <p><em><img src="fig08.gif" alt="figure 8" width="483" data-hires="false" height="346" naturalsizeflag="3" align="bottom" border="1"><br></em> <strong><font size="-1">FIGURE 8</font></strong> <font size="-1"><br>
+      Defining the master outline.</font></p>
+    </blockquote>
+    <h2>Placing glyphs in the grid</h2>
+    <p>The coordinates which define a glyph's shape also determine that glyph's placement relative to the coordinate grid. While there is no formal requirement that glyphs have a consistent relationship to the grid, in practice, applications depend upon the existence of some convention to aid in the layout of text.<br></p>
+    <p>In Roman fonts, which are intended to be laid out horizontally, a <cite>y</cite> -coordinate of 0 typically corresponds to the baseline of the font. No standard meaning is associated with an <cite>x</cite> -coordinate of 0 but applications will benefit if font foundries choose a standard meaning. A common convention is to place the glyph origin so that the value of the left edge of the glyph will equal the left side bearing. This option is illustrated in FIGURE 9. It is also possible to place the aesthetic center of glyphs at the <cite>x</cite> -axis as in FIGURE 10.<br></p>
+    <blockquote>
+      <p><img src="fig09.gif" alt="figure 9" data-hires="false" width="250" height="300" naturalsizeflag="3" align="bottom" border="1"><br>
+      <strong><font size="-1">FIGURE 9</font></strong> <font size="-1"><br>
+      Left side bearing of glyph is <cite>x</cite>-zero.</font></p>
+    </blockquote>
+    <blockquote>
+      <p><img src="fig10.gif" alt="figure 10" data-hires="false" width="350" height="280" naturalsizeflag="3" align="bottom" border="1"><br>
+      <strong><font size="-1">FIGURE 10</font></strong> <font size="-1"><br>
+      Aesthetic center of glyph is <cite>x</cite>-zero.</font></p>
+    </blockquote>
+    <p>Non-Roman fonts may wish to use other conventions for the meaning of the <cite>x</cite> -axis and <cite>y</cite> -axis. For good interaction with highlighting and carets, however, it is desirable that the body of the character be roughly centered within the advance width. A symmetrical character, for example, should have equal left and right side bearings. For example, a glyph might be placed with its aesthetic center at the <cite>x-coordinate</cite> value of 0. Glyphs placed in a column such that their <cite>x</cite> -coordinate values of 0 are coincident will appear to be nicely centered when rendered. This option might be used for Kanji or other fonts that are typeset vertically. An example of such a placement is shown in FIGURE 11.<br></p>
+    <blockquote>
+      <p><img src="fig11.GIF" alt="figure 11" data-hires="false" align="absmiddle" width="161" height="157" border="1"><br>
+      <strong><font size="-1">FIGURE 11</font></strong> <font size="-1"><br>
+      A Kanji character with <cite>x</cite>-zero at the aesthetic center of the glyph</font></p>
+    </blockquote>
+    <p>Another alternative is to place each glyph so that its leftmost extreme outline point has an <cite>x</cite> -value equal to the left-side-bearing of the glyph.<br></p>
+    <p>While in the days of metal type, glyphs could not extend beyond the em square, digital typefaces are not so constrained as is illustrated in FIGURE 12. The em square may be made large enough to completely contain all glyphs in a font, including accented glyphs. Or, if it proves convenient, portions of glyphs may extend outside the em square. Since TrueType fonts can handle either approach, the choice depends upon the preference of the font manufacturer.<br></p>
+    <blockquote>
+      <p><img src="fig12.gif" alt="figure1 12" data-hires="false" width="206" height="148" naturalsizeflag="3" align="bottom" border="1"><br>
+      <strong><font size="-1">FIGURE 12</font></strong> <font size="-1"><br>
+      Character extending outside of the em square</font></p>
+    </blockquote>
+    <h2><a name="digitizing"></a>Digitizing art work</h2>
+    <p>A TrueType font might originate as a set of designs on paper. In such a case, the drawing must be converted into digital data. The problem of digitizing a paper design can be solved in either of two ways. The art work can be scanned and the scanned image used as a template. Alternatively, a hand-held digitizing device can be moved over the art work with critical points describing the glyph's shape recorded. Critical points are corner and tangent points. Curve points that fall at extrema are also important.</p>
+    <p>Hand digitization has the advantage that it allows the person doing the work to smooth out any roughness in original image. When digitizing art work, the size of the drawing is important since it will be the key factor in determining the accuracy of the final result. Increasing the size will give finer control of detail. As a rule of thumb you should digitize art at an accuracy that is two times that you wish to achieve in the final result. For example, to digitize a TrueType fonts at 2048 units to the em you must take into account the fact that some accuracy is lost in digitizing. This means that if your digitizing tablet has 300 points per inch, you will need to use a drawing that is at a minimum 7 inches by 7 inches in size and possibly 13 by 13 inches. (2048/300=6.28)<br></p>
+    <p>Those who are most comfortable working on the screen may prefer to scan in glyphs images and use the scanned image as a guide. It is also possible to create original art work directly on the computer screen using a mouse. A large monitor is an advantage in such work but, without a high resolution display, fitting curves precisely may necessitate zooming in on sections of curve.<br></p>
+    <h2><a name="creating"></a>Creating outlines in the TrueType format</h2>
+    <p>Except in the case of glyphs composed of straight lines and parabolic curves, there is no single best description of the curves that describe a particular glyph. The problem inherent in digitizing a glyph is one of finding an acceptable solution for the intended use.<br></p>
+    <p>A good glyph outline is one that preserves the appearance intended in the original design. For most typefaces, curves should be smooth with no unintended bumps, flat spots or pits. Occasionally, a typeface design may make use of an unevenness in the appearance of curves.<br></p>
+    <p>In looking for bumps, be sure to distinguish between those that are due to flaws in the original outline of a character and the inevitable bumps that are the product of digitization on a low resolution device.<br></p>
+    <p>How closely must the curves used resemble the intended glyph design? For designs developed directly in the TrueType format, the answer is a simple one. The curves used will define the design exactly. A more complex problem arises when converting from some other format or when digitizing a paper design. This problem is addressed in <a href="../RM08/appendixE.html">Converting Outlines to the TrueType Format</a>.<br></p>
+    <h2><a name="necessary"></a>How many points are necessary?</h2>
+    <p>In describing a curve you should use neither too few nor too many points. Often an arc can be described by as few as 3 to 4 points. Curves with a small radius of curvature and curves with inflections will require many more points to faithfully render with quadratic curves. In considering the number of points needed to faithfully render an outline adding points will not necessarily produce a better result. The fewer points that are used to describe a curve, the less space that is needed to store each glyph description and hence the more compact the font. Fewer points also lead to faster scaling. Too few points, however, can result in loss of fidelity to original design. It is therefore desirable to use enough points to faithfully translate the shape of a glyph but not so many that there is a needless loss of space or speed in scaling. In addition to the loss of space and speed, an excessive number of points can result in warbling (rapid modulations in the shape) due to noise in the data or roundoff error. Finally, too many points can also make a font harder to instruct.<br></p>
+    <p>FIGURE 13, "Three circles too few(left), too many(middle), just right (right)." shows three different attempts to define a circle. In the leftmost example, four off-curve points are used but are insufficient to produce a round shape. The rightmost example uses 8 off-curve points which results in a circular curve that can be made a perfect circle with the exception of an arbitrarily small error factor. The middle example, also produces an accurate circular shape but uses more points than are necessary. In particular the on-curve points, located at the midpoints of the tangents to the curve, add no extra information and might have been omitted.<br></p>
+    <blockquote>
+      <p><img src="fig13.gif" width="482" height="172" data-hires="false" align="bottom" naturalsizeflag="3" border="1"><strong><font size="-1">FIGURE 13</font></strong> <font size="-1"><br>
+      Three circles too few(left), too many(middle), just right (right)</font></p>
+    </blockquote>
+    <h2><a name="located"></a>Where should points be located?</h2>
+    <p>A glyph outline should have points on extrema. That is, the curve positions with minimum <cite>x</cite>-value, minimum <cite>y</cite>-value, maximum <cite>x</cite>-value and maximum <cite>y</cite>-value should be marked by curve points. Some systems for representing outline fonts require an on-curve point at the point of tangency. This is not required in TrueType if the tangency point is midway between the flanking off-curve points..<br></p>
+    <p>It is, however, important to put an on-curve point at an inflection point in a curve. Inflection points are the point on the curve where the curvature is zero. An inflection point can be implied if it happens to be at the midpoint of the line connecting the off-curve points.<br></p>
+    <blockquote>
+      <p><img src="fig14.gif" alt="figure14" data-hires="false" width="213" height="253" naturalsizeflag="3" align="bottom" border="1"><br>
+      <strong><font size="-1">FIGURE 14</font></strong> <font size="-1"><br>
+      An inflection point</font></p>
+    </blockquote>
+  </div>
+
+      </section>
+  </div><!-- /content -->
+
+  <div id="globalfooter">
+    <div id="breadory">
+      <ol id="breadcrumbs">
+        <li class="home"><a href="../../../index.html">Developer</a></li>
+        <li><a href="../../index.html">Fonts</a></li>
+        <li><a href="../index.html">TrueType™ Reference Manual</a></li>
+        <li>Digitizing Letterform Designs</li>
+      </ol>
+      <div id="directorynav" class="directorynav">
+	<div id="dn-cola" class="column">
+		<h3><a href="../../../platforms/index.html">Platforms</a></h3>
+		<ul>
+			<li><a href="../../../ios/index.html">iOS</a></li>
+			<li><a href="../../../osx/index.html">OS X</a></li>
+			<li><a href="../../../watchos/index.html">watchOS</a></li>
+			<li><a href="../../../tvos/index.html">tvOS</a></li>
+		</ul>
+		<h3><a href="../../../resources/index.html">Tools</a></h3>
+		<ul>
+			<li><a href="../../../xcode/index.html">Xcode</a></li>
+			<li><a href="../../../swift/index.html">Swift</a></li>
+		</ul>
+	</div>
+	<div id="dn-colb" class="column">
+		<h3><a href="../../../resources/index.html">Resources</a></h3>
+		<ul>
+			<li><a href="../../../library/index.html">Documentation</a></li>
+			<li><a href="../../../videos/index.html">Videos</a></li>
+			<li><a href="https://forums.developer.apple.com/">Forums</a></li>
+			<li><a href="../../../app-store/index.html">App Store</a></li>
+			<li><a href="../../../safari/index.html">Safari and Web</a></li>
+			<li><a href="../../../education/index.html">Education</a></li>
+			<li><a href="../../../enterprise/index.html">Enterprise</a></li>
+		</ul>
+	</div>
+	<div id="dn-colc" class="column">
+		<h3><a href="../../../programs/index.html">Programs</a></h3>
+		<ul>
+			<li><a href="../../../programs/index.html">Developer Program</a></li>
+			<li><a href="../../../programs/enterprise/index.html">Enterprise Program</a></li>
+			<li><a href="../../../programs/ios/university/index.html">iOS University Program</a></li>
+			<li><a href="../../../programs/mfi/index.html">MFi Program</a></li>
+		</ul>
+	</div>
+	<div id="dn-cold" class="column">
+		<h3><a href="../../../support/index.html">Support</a></h3>
+		<ul>
+			<li><a href="../../../support/development/index.html">Development</a></li>
+			<li><a href="../../../support/distribution/index.html">Distribution</a></li>
+			<li><a href="../../../support/membership/index.html">Membership</a></li>
+			<li><a href="../../../system-status/index.html">System Status</a></li>
+		</ul>
+	</div>
+	<div id="dn-cole" class="column">
+		<h3><a href="https://developer.apple.com/account/">Account</a></h3>
+		<ul>
+			<li><a href="https://developer.apple.com/account/">Developer Account</a></li>
+			<li><a href="../../../go/index-id=certificates-ids-profiles.html">Certificates, IDs &amp; Profiles</a></li>
+			<li><a href="https://itunesconnect.apple.com">iTunes Connect</a></li>			
+			<li><a href="../../../terms/index.html">License Agreements</a></li>
+		</ul>
+	</div>
+</div>
+
+    </div><!--/breadory-->
+    <ul class="gf-links piped footer-links">
+  <li><a href="../../../news/index.html" class="first">News &amp; Updates</a></li>
+  <li><a href="../../../bug-reporting/index.html">Report Bugs</a></li>
+  <li><a href="../../../contact/index.html">Contact Us</a></li>
+</ul>
+
+<div class="gf-sosumi footer-sosumi">
+  <p>Copyright © 2016 Apple Inc. All rights reserved.</p>
+    <ul class="piped">
+        <li><a href="http://www.apple.com/legal/internet-services/terms/site.html" class="first">Terms of Use</a></li>
+        <li><a href="http://www.apple.com/privacy/privacy-policy/">Privacy Policy</a></li>
+    </ul>
+</div>
+
+<!--<div id="gf-links piped footer-links">
+	<ul>
+		<li><a href="/cn/" title="Simplified Chinese">简体中文</a></li>
+		<li><a href="/jp/" title="Japanese">日本語</a></li>
+		<li><a href="/kr/" title="Korean">한국어</a></li>
+	</ul>
+</div>-->
+
+  </div><!--/globalfooter-->
+</body>
+</html>

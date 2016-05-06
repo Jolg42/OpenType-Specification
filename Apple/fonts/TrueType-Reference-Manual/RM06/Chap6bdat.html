@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="Author" content="Apple Inc." />
+<meta name="viewport" content="width=1024" />
+<link rel="shortcut icon" href="../../../favicon.ico" />
+<link rel="icon" href="../../../favicon.ico" />
+<link rel="stylesheet" href="https://www.apple.com/wss/fonts?family=Myriad+Set+Pro&amp;v=2" type="text/css" />
+<link rel="stylesheet" href="../../../assets/styles/transition-global.css" type="text/css" />
+<link rel="stylesheet" href="../../../assets/styles/transition-header.css" type="text/css" />
+<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/core/styles/adc.css" type="text/css" />
+<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/styles/topbar.css" type="text/css" />
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/lib/prototype.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/lib/scriptaculous.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/browserdetect.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/apple_core.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/search_decorator.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/adc_core.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/scripts/ac_retina.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/topbarDropdown.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	document.write('<link rel="stylesheet" type="text/css" href="https://devimages.apple.com.edgekey.net/assets/styles/script.css" media="screen">');
+</script>
+<!-- Augmented Search -->
+<!--<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/styles/augmented_search.css" type="text/css">-->
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/lib/jquery/jquery-1.11.0.min.js"></script>
+<script>jQuery.noConflict();</script>
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/lib/jquery/jquery.retinate.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/scripts/augmented_search.js"></script>-->
+<script src="../../../assets/scripts/augmented_search.js"></script>
+<script src="../../../assets/scripts/global-header.js"></script>
+
+  <meta name="Author" content="Apple Inc.">
+  <meta name="viewport" content="width=1024">
+  <link rel="stylesheet" href="../AAT.css" type="text/css">
+  <link rel="shortcut icon" href="https://devimages.apple.com.edgekey.net/favicon.ico">
+  <link rel="icon" href="https://devimages.apple.com.edgekey.net/favicon.ico">
+  <title>Bitmap Data Table</title>
+</head>
+<body class="white sidenav-page">
+  <nav id="globalheader" role="navigation" aria-label="Global Navigation">
+  <div id="gh-content" class="gh-content">
+    <ul class="gh-menu">
+      <li id="gh-menu-icon-toggle" class="gh-menu-icon gh-menu-icon-toggle enhance">
+        <button id="gh-svg-icons" class="gh-svg-wrapper">
+          <span class="text-replace">Menu</span>
+          <svg x="0px" y="0px" width="100%" viewBox="0 0 96 96" class="gh-svg gh-svg-top" enable-background="new 0 0 96 96"><rect width="32" height="4" x="32" y="46" class="gh-svg-rect gh-svg-rect-top"></rect></svg>
+          <svg x="0px" y="0px" width="100%" viewBox="0 0 96 96" class="gh-svg gh-svg-bottom" enable-background="new 0 0 96 96"><rect width="32" height="4" x="32" y="46" class="gh-svg-rect gh-svg-rect-bottom"></rect></svg>
+        </button>
+      </li>
+      <li id="gh-menu-icon-home" class="gh-menu-icon gh-menu-icon-home">
+        <a href="../../../index.html">
+          <span class="text-replace">Apple Developer</span>
+        </a>
+      </li>
+    </ul>
+    <div class="gh-nav">
+      <div class="gh-nav-view">
+        <ul class="gh-nav-list">
+
+          <li class="gh-tab gh-nav-developer" data-hires="true"><a class="gh-tab-link" href="../../../index.html"><span class="text-replace">Apple Developer</span></a></li>
+          <li class="gh-tab gh-nav-technologies"><a class="gh-tab-link" href="../../../platforms/index.html">Platforms</a></li>
+          <li class="gh-tab gh-nav-resources"><a class="gh-tab-link" href="../../../resources/index.html">Resources</a></li>
+          <li class="gh-tab gh-nav-programs"><a class="gh-tab-link" href="../../../programs/index.html">Program</a></li>
+          <li class="gh-tab gh-nav-support"><a class="gh-tab-link" href="../../../support/index.html">Support</a></li>
+          <li class="gh-tab gh-nav-account">
+            <a class="gh-tab-link gh-account-profile" href="https://developer.apple.com/account/">Account</a>
+          </li>
+          <li class="gh-tab gh-nav-search">
+
+            <div id="gh-search" class="gh-search" role="search">
+              <form action="/search/index.php" method="get" class="gh-search-form" id="gh-search-form" role="search">
+
+                <div class="gh-search-input-wrapper">
+                  <label for="gh-search-input" class="text-replace">Search Apple Developer</label>
+                  <input type="text" name="q" id="gh-search-input" class="augmented gh-search-input" placeholder="Search Apple Developer" autocomplete="off" autocorrect="off" autocapitalize="off">
+                </div>
+
+                <button disabled type="submit" id="gh-search-submit" class="gh-search-submit gh-search-magnify"><span class="text-replace">Search Apple Developer</span></button>
+                <button disabled type="reset" id="gh-search-reset" class="gh-search-reset"><span class="text-replace">Reset</span></button>
+
+              </form>
+            </div>
+
+            <a class="gh-search-magnify" href="../../../search/index.html"><span class="text-replace">Search Apple Developer</span></a>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+  <div id="top">
+<!-- SiteCatalyst code version: H.8. Copyright 1997-2006 Omniture, Inc. -->
+<script type="text/javascript">
+/* RSID: */
+var s_account="appleglobal,appleusdeveloper"
+</script>
+
+<script type="text/javascript" src="https://www.apple.com/metrics/scripts/s_code_h.js"></script>
+<script type="text/javascript">
+s.pageName= AC && AC.Tracking && AC.Tracking.pageName();
+s.channel="www.us.developer"
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)</script>
+<!-- End SiteCatalyst code version: H.8. -->
+</div>
+
+  <div id="content" class="content" data-hires="false">
+    <section>
+  <div id="navBar">
+    <!-- NAVBARSTART -->
+    <p class="bold"><a href="../index.html">TrueType Reference Manual</a></p>
+    <ul class="outer">
+      <li><a href="../RM01/Chap1.html">Digitizing Letterforms</a></li>
+      <li><a href="../RM02/Chap2.html">The Font Engine</a></li>
+      <li><a href="../RM03/Chap3.html">Instructing Fonts</a></li>
+      <li><a href="../RM04/Chap4.html">The Graphics State</a></li>
+      <li><a href="../RM05/Chap5.html">The Instruction Set</a></li>
+      <li><a href="Chap6.html">Font Tables</a></li>
+      <li class="c1">
+        <ul class="inner">
+          <li><a href="Chap6.html#Intro">Introduction</a></li>
+          <li><a href="Chap6.html#Types">Data Types</a></li>
+          <li><a href="Chap6.html#Overview">Overview of TrueType</a></li>
+          <li><a href="Chap6AATIntro.html">Overview of AAT</a></li>
+          <li><a href="Chap6Tables.html">Special Tables</a></li>
+          <li><a href="Chap6.html#Directory">The Font Directory</a></li>
+          <li><a href="Chap6acnt.html">The <code>'acnt'</code> table</a></li>
+          <li><a href="Chap6ankr.html">The <code>'ankr'</code> table</a></li>
+          <li><a href="Chap6avar.html">The <code>'avar'</code> table</a></li>
+          <li>The <code>'bdat'</code> table</li>
+          <li><a href="Chap6bhed.html">The <code>'bhed'</code> table</a></li>
+          <li><a href="Chap6bloc.html">The <code>'bloc'</code> table</a></li>
+          <li><a href="Chap6bsln.html">The <code>'bsln'</code> table</a></li>
+          <li><a href="Chap6cmap.html">The <code>'cmap'</code> table</a></li>
+          <li><a href="Chap6cvar.html">The <code>'cvar'</code> table</a></li>
+          <li><a href="Chap6cvt.html">The <code>'cvt '</code> table</a></li>
+          <li><a href="Chap6EBSC.html">The <code>'EBSC'</code> table</a></li>
+          <li><a href="Chap6fdsc.html">The <code>'fdsc'</code> table</a></li>
+          <li><a href="Chap6feat.html">The <code>'feat'</code> table</a></li>
+          <li><a href="Chap6fmtx.html">The <code>'fmtx'</code> table</a></li>
+          <li><a href="Chap6fond.html">The <code>'fond'</code> table</a></li>
+          <li><a href="Chap6fpgm.html">The <code>'fpgm'</code> table</a></li>
+          <li><a href="Chap6fvar.html">The <code>'fvar'</code> table</a></li>
+          <li><a href="Chap6gasp.html">The <code>'gasp'</code> table</a></li>
+          <li><a href="Chap6gcid.html">The <code>'gcid'</code> table</a></li>
+          <li><a href="Chap6glyf.html">The <code>'glyf'</code> table</a></li>
+          <li><a href="Chap6gvar.html">The <code>'gvar'</code> table</a></li>
+          <li><a href="Chap6hdmx.html">The <code>'hdmx'</code> table</a></li>
+          <li><a href="Chap6head.html">The <code>'head'</code> table</a></li>
+          <li><a href="Chap6hhea.html">The <code>'hhea'</code> table</a></li>
+          <li><a href="Chap6hmtx.html">The <code>'hmtx'</code> table</a></li>
+          <li><a href="Chap6just.html">The <code>'just'</code> table</a></li>
+          <li><a href="Chap6kern.html">The <code>'kern'</code> table</a></li>
+          <li><a href="Chap6kerx.html">The <code>'kerx'</code> table</a></li>
+          <li><a href="Chap6lcar.html">The <code>'lcar'</code> table</a></li>
+          <li><a href="Chap6loca.html">The <code>'loca'</code> table</a></li>
+          <li><a href="Chap6ltag.html">The <code>'ltag'</code> table</a></li>
+          <li><a href="Chap6maxp.html">The <code>'maxp'</code> table</a></li>
+          <li><a href="Chap6meta.html">The <code>'meta'</code> table</a></li>
+          <li><a href="Chap6mort.html">The <code>'mort'</code> table</a></li>
+          <li><a href="Chap6morx.html">The <code>'morx'</code> table</a></li>
+          <li><a href="Chap6name.html">The <code>'name'</code> table</a></li>
+          <li><a href="Chap6opbd.html">The <code>'opbd'</code> table</a></li>
+          <li><a href="Chap6OS2.html">The <code>'OS/2'</code> table</a></li>
+          <li><a href="Chap6post.html">The <code>'post'</code> table</a></li>
+          <li><a href="Chap6prep.html">The <code>'prep'</code> table</a></li>
+          <li><a href="Chap6prop.html">The <code>'prop'</code> table</a></li>
+          <li><a href="Chap6sbix.html">The <code>'sbix'</code> table</a></li>
+          <li><a href="Chap6trak.html">The <code>'trak'</code> table</a></li>
+          <li><a href="Chap6vhea.html">The <code>'vhea'</code> table</a></li>
+          <li><a href="Chap6vmtx.html">The <code>'vmtx'</code> table</a></li>
+          <li><a href="Chap6xref.html">The <code>'xref'</code> table</a></li>
+          <li><a href="Chap6Zapf.html">The <code>'Zapf'</code> table</a></li>
+        </ul>
+      </li>
+      <li><a href="../RM07/appendixA.html">Instruction Set Summary</a></li>
+      <li><a href="../RM07/appendixB.html">Glyph Mappings</a></li>
+      <li><a href="../RM08/appendixE.html">Converting Outlines</a></li>
+	<li><a href="../RM09/AppendixF.html">Font Feature Registry</a></li>
+    </ul><!-- NAVBAREND -->
+  </div>
+  <div id="chapterContent">
+    <header><h1><a name="bdat" id="bdat"></a>The <code>'bdat'</code> table</h1></header>
+    <h2>Introduction</h2>
+    <p>The <em>bitmap data table</em> (tag name: <code>'bdat'</code>) is a very simple structure; a version number followed by data. The data can be in various formats. Some of the formats contain metric information and other formats contain only the image. Some of the data may be compressed and other data may not. The <a href="Chap6bloc.html">bitmap location table</a> contains the information to locate and understand how to interpret the data contained in this table. The association of a particular bitmap with a particular glyph and point size is handled by the bitmap location table. The bitmap location table provides information about the availability of bitmap data in this table at requested sizes and indicates whether or not bitmaps are available. It also gives the offset location into this table for the bitmap data for a particular glyph. For mono-spaced glyphs the bitmap location table contains the metric information.</p>
+    <h2>Bitmap Data Table Formats</h2>
+    <p>The overall structure of the bitmap data table is shown in the following figure:</p>
+    <p><img src="FF76.gif" width="243" height="86" align="bottom" naturalsizeflag="3"></p>
+    <p>The format of the bitmap data table header is as follows:</p>
+    <table border="1" cellpadding="0">
+      <tr>
+        <th>
+          <div align="left">
+            Type
+          </div>
+        </th>
+        <th>
+          <div align="left">
+            Name
+          </div>
+        </th>
+        <th>
+          <div align="left">
+            Description
+          </div>
+        </th>
+      </tr>
+      <tr>
+        <td>fixed32</td>
+        <td>version</td>
+        <td class="description">Version number of the bitmap data table (0x00020000 for the initial version).</td>
+      </tr>
+      <tr>
+        <td>variable</td>
+        <td>glyphbitmap[numberBitMaps]</td>
+        <td class="description">The set of bitmapped glyphs included for this font. Formats are 1, 2, 4, 5, 6, and 7.</td>
+      </tr>
+    </table>
+    <p>There are six glyph bitmap formats supported by AAT. Some of the formats are designed to handle proportional glyphs, others are more applicable to mono-spaced glyphs. Within a given font, various formats can be used. For example, a kanji font will have the first few hundred glyphs in format 7 (proportional bit) and the next 7000 glyphs in format 5 (monospaced).</p>
+    <p>The bitmap data format codes are as follows:</p>
+    <table border="1" cellpadding="0">
+      <tr>
+        <th>
+          <div align="left">
+            Format
+          </div>
+        </th>
+        <th>
+          <div align="left">
+            Name
+          </div>
+        </th>
+        <th>
+          <div align="left">
+            Description
+          </div>
+        </th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td><a href="Chap6bdat.html#Format1">proportionalFormat1</a></td>
+        <td class="description">Small metrics and byte-aligned images.</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><a href="Chap6bdat.html#Format2">proportionalFormat2</a></td>
+        <td class="description">Small metrics and bit-aligned images.</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>(not used)</td>
+        <td class="description">(not used)</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td><a href="Chap6bdat.html#Format4">monoCompressedFormat4</a></td>
+        <td class="description">Just compressed images, metrics are in the bitmap location table.</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td><a href="Chap6bdat.html#Format5">monoFormat5</a></td>
+        <td class="description">Just bit-aligned images, metrics are in the bitmap location table.</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td><a href="Chap6bdat.html#Format6">proportionalByteFormat6</a></td>
+        <td class="description">Big metrics and byte-aligned images.</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td><a href="Chap6bdat.html#Format7">proportionalBitFormat7</a></td>
+        <td class="description">Big metrics and bit-aligned images.</td>
+      </tr>
+    </table>
+    <p>Note that four of these formats handle proportional bitmap data.</p>
+    <ul>
+      <li>Formats 1 and 2 are the same except for the alignment of the bitmap data. Both have small metrics.</li>
+      <li>Format 4 is a modified Huffman encoding scheme, and contains metric information and offsets to binary search trees and glyph data.</li>
+      <li>Format 5 is a simple format of bit-aligned bitmaps, padded to a byte boundary. All the metric information is in the format 2 index subtable of the bitmap location table. This format is a real space saver for glyphs that share the same metrics (for example, monospaced Chinese, Japanese or Korean glyphs). It is similar to formats 2 and 7, except that no metric information is included, just the bit-packed bitmaps.
+        <p><strong>NOTE</strong>: The data for a Format 5 table most likely will have some white lines above and below some of the glyphs. In other words, the bitmap will not have a tight bounding box around the black bits of the glyph. This is a small price since most of the glyphs should be tight and the savings of being able to share the metrics makes up for extra white pixels. In cases where it doesn't, this format should not be used.</p>
+      </li>
+      <li>Formats 6 and 7 are the same except for the alignment of the bitmap data. Both have big metrics.</li>
+    </ul>
+    <p>Most of the formats have metric information in either <code>bigGlyphMetrics</code> or <code>smallGlyphMetrics</code>. The big metrics contain both horizontal and vertical metrics whereas the small metrics only hold metrics for one direction.</p>
+    <p>Structure of the <code>bigGlyphMetrics</code> is shown in the following table:</p>
+    <table border="1" cellpadding="0">
+      <tr>
+        <th>
+          <div align="left">
+            Type
+          </div>
+        </th>
+        <th>
+          <div align="left">
+            Name
+          </div>
+        </th>
+        <th>
+          <div align="left">
+            Description
+          </div>
+        </th>
+      </tr>
+      <tr>
+        <td>uint8</td>
+        <td>height</td>
+        <td class="description">Number of rows of data.</td>
+      </tr>
+      <tr>
+        <td>uint8</td>
+        <td>width</td>
+        <td class="description">Number of columns of data.</td>
+      </tr>
+      <tr>
+        <td>sint8</td>
+        <td>horiBearingX</td>
+        <td class="description">Distance in pixels from the horizontal origin to the left edge of the bitmap.</td>
+      </tr>
+      <tr>
+        <td>sint8</td>
+        <td>horiBearingY</td>
+        <td class="description">Distance in pixels from the horizontal origin to the top edge of the bitmap.</td>
+      </tr>
+      <tr>
+        <td>uint8</td>
+        <td>horiAdvance</td>
+        <td class="description">Horizontal advance width in pixels.</td>
+      </tr>
+      <tr>
+        <td>sint8</td>
+        <td>vertBearingX</td>
+        <td class="description">Distance in pixels from the vertical origin to the left edge of the bitmap.</td>
+      </tr>
+      <tr>
+        <td>sint8</td>
+        <td>vertBearingY</td>
+        <td class="description">Distance in pixels from the vertical origin to the top edge of the bitmap.</td>
+      </tr>
+      <tr>
+        <td>uint8</td>
+        <td>vertAdvance</td>
+        <td class="description">Vertical advance width in pixels.</td>
+      </tr>
+    </table>
+    <p>Structure of the <code>smallGlyphMetrics</code> is shown in the following table:</p>
+    <table border="1" cellpadding="0">
+      <tr>
+        <th>
+          <div align="left">
+            Type
+          </div>
+        </th>
+        <th>
+          <div align="left">
+            Name
+          </div>
+        </th>
+        <th>
+          <div align="left">
+            Description
+          </div>
+        </th>
+      </tr>
+      <tr>
+        <td>uint8</td>
+        <td>height</td>
+        <td class="description">Number of rows of data.</td>
+      </tr>
+      <tr>
+        <td>uint8</td>
+        <td>width</td>
+        <td class="description">Number of columns of data.</td>
+      </tr>
+      <tr>
+        <td>sint8</td>
+        <td>bearingX</td>
+        <td class="description">Distance in pixels from the horizontal origin to the left edge of the bitmap (for horizontal text); or distance in pixels from the vertical origin to the top edge of the bitmap (for vertical text).</td>
+      </tr>
+      <tr>
+        <td>sint8</td>
+        <td>bearingY</td>
+        <td class="description">Distance in pixels from the horizontal origin to the top edge of the bitmap (for horizontal text); or distance in pixels from the vertical origin to the left edge of the bitmap (for vertical text).</td>
+      </tr>
+      <tr>
+        <td>uint8</td>
+        <td>advance</td>
+        <td class="description">Horizontal or vertical advance width in pixels.</td>
+      </tr>
+    </table>
+    <p>The figures below show the meaning of the metrics. Possible values for the 'g' glyph below could be: <code>horiBearingX</code> = 2, <code>horiBearingY</code> = 11; <code>horiAdvance</code> = 12; <code>vertBearingX</code> = -3; <code>vertBearingY</code> = -2; <code>vertAdvance</code> = 20 (note: although the advance is in the -y direction, it is still unsigned since it is a distance and not a direction; the direction of vertical text is assumed top to bottom); <code>height</code> = 16; and <code>width</code> = 9. Remember that we are dealing with integer metrics.</p>
+    <p>If you use <code>smallGlyphMetrics</code>, you must set the bit in the <code>bitmapSizeTable.flags</code> of the bitmap location table to the inform the scaler as to the orientation of the metrics (using <code>bitmapFlags</code>).</p>
+    <p><img src="FF212.gif" width="290" height="173" align="bottom" naturalsizeflag="3"></p>
+    <p><img src="FF213.gif" width="198" height="204" align="bottom" naturalsizeflag="3"></p>
+    <p><a name="Format1" id="Format1"></a>Format 1 glyph bitmap has the following format:</p>
+    <table border="1" cellpadding="0">
+      <tr>
+        <th>
+          <div align="left">
+            Type
+          </div>
+        </th>
+        <th>
+          <div align="left">
+            Name
+          </div>
+        </th>
+        <th>
+          <div align="left">
+            Description
+          </div>
+        </th>
+      </tr>
+      <tr>
+        <td>smallGlyphMetrics</td>
+        <td>smallMetrics</td>
+        <td class="description">Metric information for the glyph.</td>
+      </tr>
+      <tr>
+        <td>variable</td>
+        <td>imageData</td>
+        <td class="description">Byte-aligned bitmap data.</td>
+      </tr>
+    </table>
+    <p><a name="Format2" id="Format2"></a>Format 2 glyph bitmap has the following format:</p>
+    <table border="1" cellpadding="0">
+      <tr>
+        <th>
+          <div align="left">
+            Type
+          </div>
+        </th>
+        <th>
+          <div align="left">
+            Name
+          </div>
+        </th>
+        <th>
+          <div align="left">
+            Description
+          </div>
+        </th>
+      </tr>
+      <tr>
+        <td>smallGlyphMetrics</td>
+        <td>smallMetrics</td>
+        <td class="description">Metric information for the glyph.</td>
+      </tr>
+      <tr>
+        <td>variable</td>
+        <td>imageData</td>
+        <td class="description">Bit-aligned bitmap data padded to a byte boundary.</td>
+      </tr>
+    </table>
+    <p><a name="Format4" id="Format4"></a>Format 4 glyph bitmap has the following format:</p>
+    <table border="1" cellpadding="0">
+      <tr>
+        <th>
+          <div align="left">
+            Type
+          </div>
+        </th>
+        <th>
+          <div align="left">
+            Name
+          </div>
+        </th>
+        <th>
+          <div align="left">
+            Description
+          </div>
+        </th>
+      </tr>
+      <tr>
+        <td>uint32</td>
+        <td>whiteTreeOffset</td>
+        <td class="description">Offset to the white tree.</td>
+      </tr>
+      <tr>
+        <td>uint32</td>
+        <td>blackTreeOffset</td>
+        <td class="description">Offset to the black tree.</td>
+      </tr>
+      <tr>
+        <td>uint32</td>
+        <td>glyphDataOffset</td>
+        <td class="description">Offset to the glyph data.</td>
+      </tr>
+      <tr>
+        <td>variable</td>
+        <td>trees and glyph data</td>
+        <td class="description">The white tree, black tree, and glyph is found after all of the glyph bitmap 4 data arrays.</td>
+      </tr>
+    </table>
+    <p><a name="Format5" id="Format5"></a>Format 5 glyph bitmap has the following format:</p>
+    <table border="1" cellpadding="0">
+      <tr>
+        <th>
+          <div align="left">
+            Type
+          </div>
+        </th>
+        <th>
+          <div align="left">
+            Name
+          </div>
+        </th>
+        <th>
+          <div align="left">
+            Description
+          </div>
+        </th>
+      </tr>
+      <tr>
+        <td>variable</td>
+        <td>imageData</td>
+        <td class="description">Bit-aligned bitmap data padded to byte boundaries.</td>
+      </tr>
+    </table>
+    <p><a name="Format6" id="Format6"></a>Format 6 glyph bitmap has the following format:</p>
+    <table border="1" cellpadding="0">
+      <tr>
+        <th>
+          <div align="left">
+            Type
+          </div>
+        </th>
+        <th>
+          <div align="left">
+            Name
+          </div>
+        </th>
+        <th>
+          <div align="left">
+            Description
+          </div>
+        </th>
+      </tr>
+      <tr>
+        <td>bigGlyphMetrics</td>
+        <td>bigMetrics</td>
+        <td class="description">Metric information for the glyph.</td>
+      </tr>
+      <tr>
+        <td>variable</td>
+        <td>imageData</td>
+        <td class="description">Byte-aligned bitmap data.</td>
+      </tr>
+    </table>
+    <p><a name="Format7" id="Format7"></a>Format 7 glyph bitmap has the following format:</p>
+    <table border="1" cellpadding="0">
+      <tr>
+        <th>
+          <div align="left">
+            Type
+          </div>
+        </th>
+        <th>
+          <div align="left">
+            Name
+          </div>
+        </th>
+        <th>
+          <div align="left">
+            Description
+          </div>
+        </th>
+      </tr>
+      <tr>
+        <td>bigGlyphMetrics</td>
+        <td>bigMetrics</td>
+        <td class="description">Metric information for the glyph.</td>
+      </tr>
+      <tr>
+        <td>variable</td>
+        <td>imageData</td>
+        <td class="description">Bit-aligned bitmap data.</td>
+      </tr>
+    </table>
+    <h2>Dependencies</h2>
+    <p>A <code>'bdat'</code> table is inextricably connected with the font's <code><a href="Chap6bloc.html">'bloc'</a></code> <a href="Chap6bdat.html">(bitmap location) table</a>. If one is present, the other must be, too, and a change to one will almost inevitably trigger a change in the other.</p>
+    <p>As a rule, most font editing tools will probably find it more convenient to read and write the two tables simultaneously rather than treat them separately. This, for example, is done by Apple’s <span class="toolName">ftxdumperfuser</span> tool.</p>
+  </div>
+
+      </section>
+  </div><!-- /content -->
+
+  <div id="globalfooter">
+    <div id="breadory">
+      <ol id="breadcrumbs">
+        <li class="home"><a href="../../../index.html">Developer</a></li>
+        <li><a href="../../index.html">Fonts</a></li>
+        <li><a href="../index.html">TrueType™ Reference Manual</a></li>
+        <li>The TrueType Font File</li>
+      </ol>
+      <div id="directorynav" class="directorynav">
+	<div id="dn-cola" class="column">
+		<h3><a href="../../../platforms/index.html">Platforms</a></h3>
+		<ul>
+			<li><a href="../../../ios/index.html">iOS</a></li>
+			<li><a href="../../../osx/index.html">OS X</a></li>
+			<li><a href="../../../watchos/index.html">watchOS</a></li>
+			<li><a href="../../../tvos/index.html">tvOS</a></li>
+		</ul>
+		<h3><a href="../../../resources/index.html">Tools</a></h3>
+		<ul>
+			<li><a href="../../../xcode/index.html">Xcode</a></li>
+			<li><a href="../../../swift/index.html">Swift</a></li>
+		</ul>
+	</div>
+	<div id="dn-colb" class="column">
+		<h3><a href="../../../resources/index.html">Resources</a></h3>
+		<ul>
+			<li><a href="../../../library/index.html">Documentation</a></li>
+			<li><a href="../../../videos/index.html">Videos</a></li>
+			<li><a href="https://forums.developer.apple.com/">Forums</a></li>
+			<li><a href="../../../app-store/index.html">App Store</a></li>
+			<li><a href="../../../safari/index.html">Safari and Web</a></li>
+			<li><a href="../../../education/index.html">Education</a></li>
+			<li><a href="../../../enterprise/index.html">Enterprise</a></li>
+		</ul>
+	</div>
+	<div id="dn-colc" class="column">
+		<h3><a href="../../../programs/index.html">Programs</a></h3>
+		<ul>
+			<li><a href="../../../programs/index.html">Developer Program</a></li>
+			<li><a href="../../../programs/enterprise/index.html">Enterprise Program</a></li>
+			<li><a href="../../../programs/ios/university/index.html">iOS University Program</a></li>
+			<li><a href="../../../programs/mfi/index.html">MFi Program</a></li>
+		</ul>
+	</div>
+	<div id="dn-cold" class="column">
+		<h3><a href="../../../support/index.html">Support</a></h3>
+		<ul>
+			<li><a href="../../../support/development/index.html">Development</a></li>
+			<li><a href="../../../support/distribution/index.html">Distribution</a></li>
+			<li><a href="../../../support/membership/index.html">Membership</a></li>
+			<li><a href="../../../system-status/index.html">System Status</a></li>
+		</ul>
+	</div>
+	<div id="dn-cole" class="column">
+		<h3><a href="https://developer.apple.com/account/">Account</a></h3>
+		<ul>
+			<li><a href="https://developer.apple.com/account/">Developer Account</a></li>
+			<li><a href="../../../go/index-id=certificates-ids-profiles.html">Certificates, IDs &amp; Profiles</a></li>
+			<li><a href="https://itunesconnect.apple.com">iTunes Connect</a></li>			
+			<li><a href="../../../terms/index.html">License Agreements</a></li>
+		</ul>
+	</div>
+</div>
+
+    </div><!--/breadory-->
+    <ul class="gf-links piped footer-links">
+  <li><a href="../../../news/index.html" class="first">News &amp; Updates</a></li>
+  <li><a href="../../../bug-reporting/index.html">Report Bugs</a></li>
+  <li><a href="../../../contact/index.html">Contact Us</a></li>
+</ul>
+
+<div class="gf-sosumi footer-sosumi">
+  <p>Copyright © 2016 Apple Inc. All rights reserved.</p>
+    <ul class="piped">
+        <li><a href="http://www.apple.com/legal/internet-services/terms/site.html" class="first">Terms of Use</a></li>
+        <li><a href="http://www.apple.com/privacy/privacy-policy/">Privacy Policy</a></li>
+    </ul>
+</div>
+
+<!--<div id="gf-links piped footer-links">
+	<ul>
+		<li><a href="/cn/" title="Simplified Chinese">简体中文</a></li>
+		<li><a href="/jp/" title="Japanese">日本語</a></li>
+		<li><a href="/kr/" title="Korean">한국어</a></li>
+	</ul>
+</div>-->
+
+  </div><!--/globalfooter-->
+</body>
+</html>

@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="Author" content="Apple Inc." />
+<meta name="viewport" content="width=1024" />
+<link rel="shortcut icon" href="../../../favicon.ico" />
+<link rel="icon" href="../../../favicon.ico" />
+<link rel="stylesheet" href="https://www.apple.com/wss/fonts?family=Myriad+Set+Pro&amp;v=2" type="text/css" />
+<link rel="stylesheet" href="../../../assets/styles/transition-global.css" type="text/css" />
+<link rel="stylesheet" href="../../../assets/styles/transition-header.css" type="text/css" />
+<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/core/styles/adc.css" type="text/css" />
+<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/styles/topbar.css" type="text/css" />
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/lib/prototype.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/lib/scriptaculous.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/browserdetect.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/apple_core.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/search_decorator.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/adc_core.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/scripts/ac_retina.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/topbarDropdown.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	document.write('<link rel="stylesheet" type="text/css" href="https://devimages.apple.com.edgekey.net/assets/styles/script.css" media="screen">');
+</script>
+<!-- Augmented Search -->
+<!--<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/styles/augmented_search.css" type="text/css">-->
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/lib/jquery/jquery-1.11.0.min.js"></script>
+<script>jQuery.noConflict();</script>
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/lib/jquery/jquery.retinate.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/scripts/augmented_search.js"></script>-->
+<script src="../../../assets/scripts/augmented_search.js"></script>
+<script src="../../../assets/scripts/global-header.js"></script>
+
+  <meta name="Author" content="Apple Inc.">
+  <meta name="viewport" content="width=1024">
+  <link rel="stylesheet" href="../AAT.css" type="text/css">
+  <link rel="shortcut icon" href="https://devimages.apple.com.edgekey.net/favicon.ico">
+  <link rel="icon" href="https://devimages.apple.com.edgekey.net/favicon.ico">
+  <title>Glyph Outline Table</title>
+</head>
+<body class="white sidenav-page">
+  <nav id="globalheader" role="navigation" aria-label="Global Navigation">
+  <div id="gh-content" class="gh-content">
+    <ul class="gh-menu">
+      <li id="gh-menu-icon-toggle" class="gh-menu-icon gh-menu-icon-toggle enhance">
+        <button id="gh-svg-icons" class="gh-svg-wrapper">
+          <span class="text-replace">Menu</span>
+          <svg x="0px" y="0px" width="100%" viewBox="0 0 96 96" class="gh-svg gh-svg-top" enable-background="new 0 0 96 96"><rect width="32" height="4" x="32" y="46" class="gh-svg-rect gh-svg-rect-top"></rect></svg>
+          <svg x="0px" y="0px" width="100%" viewBox="0 0 96 96" class="gh-svg gh-svg-bottom" enable-background="new 0 0 96 96"><rect width="32" height="4" x="32" y="46" class="gh-svg-rect gh-svg-rect-bottom"></rect></svg>
+        </button>
+      </li>
+      <li id="gh-menu-icon-home" class="gh-menu-icon gh-menu-icon-home">
+        <a href="../../../index.html">
+          <span class="text-replace">Apple Developer</span>
+        </a>
+      </li>
+    </ul>
+    <div class="gh-nav">
+      <div class="gh-nav-view">
+        <ul class="gh-nav-list">
+
+          <li class="gh-tab gh-nav-developer" data-hires="true"><a class="gh-tab-link" href="../../../index.html"><span class="text-replace">Apple Developer</span></a></li>
+          <li class="gh-tab gh-nav-technologies"><a class="gh-tab-link" href="../../../platforms/index.html">Platforms</a></li>
+          <li class="gh-tab gh-nav-resources"><a class="gh-tab-link" href="../../../resources/index.html">Resources</a></li>
+          <li class="gh-tab gh-nav-programs"><a class="gh-tab-link" href="../../../programs/index.html">Program</a></li>
+          <li class="gh-tab gh-nav-support"><a class="gh-tab-link" href="../../../support/index.html">Support</a></li>
+          <li class="gh-tab gh-nav-account">
+            <a class="gh-tab-link gh-account-profile" href="https://developer.apple.com/account/">Account</a>
+          </li>
+          <li class="gh-tab gh-nav-search">
+
+            <div id="gh-search" class="gh-search" role="search">
+              <form action="/search/index.php" method="get" class="gh-search-form" id="gh-search-form" role="search">
+
+                <div class="gh-search-input-wrapper">
+                  <label for="gh-search-input" class="text-replace">Search Apple Developer</label>
+                  <input type="text" name="q" id="gh-search-input" class="augmented gh-search-input" placeholder="Search Apple Developer" autocomplete="off" autocorrect="off" autocapitalize="off">
+                </div>
+
+                <button disabled type="submit" id="gh-search-submit" class="gh-search-submit gh-search-magnify"><span class="text-replace">Search Apple Developer</span></button>
+                <button disabled type="reset" id="gh-search-reset" class="gh-search-reset"><span class="text-replace">Reset</span></button>
+
+              </form>
+            </div>
+
+            <a class="gh-search-magnify" href="../../../search/index.html"><span class="text-replace">Search Apple Developer</span></a>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+  <div id="top">
+<!-- SiteCatalyst code version: H.8. Copyright 1997-2006 Omniture, Inc. -->
+<script type="text/javascript">
+/* RSID: */
+var s_account="appleglobal,appleusdeveloper"
+</script>
+
+<script type="text/javascript" src="https://www.apple.com/metrics/scripts/s_code_h.js"></script>
+<script type="text/javascript">
+s.pageName= AC && AC.Tracking && AC.Tracking.pageName();
+s.channel="www.us.developer"
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)</script>
+<!-- End SiteCatalyst code version: H.8. -->
+</div>
+
+  <div id="content" class="content" data-hires="false">
+    <section>
+  <div id="navBar">
+    <!-- NAVBARSTART -->
+    <p class="bold"><a href="../index.html">TrueType Reference Manual</a></p>
+    <ul class="outer">
+      <li><a href="../RM01/Chap1.html">Digitizing Letterforms</a></li>
+      <li><a href="../RM02/Chap2.html">The Font Engine</a></li>
+      <li><a href="../RM03/Chap3.html">Instructing Fonts</a></li>
+      <li><a href="../RM04/Chap4.html">The Graphics State</a></li>
+      <li><a href="../RM05/Chap5.html">The Instruction Set</a></li>
+      <li><a href="Chap6.html">Font Tables</a></li>
+      <li class="c1">
+        <ul class="inner">
+          <li><a href="Chap6.html#Intro">Introduction</a></li>
+          <li><a href="Chap6.html#Types">Data Types</a></li>
+          <li><a href="Chap6.html#Overview">Overview of TrueType</a></li>
+          <li><a href="Chap6AATIntro.html">Overview of AAT</a></li>
+          <li><a href="Chap6Tables.html">Special Tables</a></li>
+          <li><a href="Chap6.html#Directory">The Font Directory</a></li>
+          <li><a href="Chap6acnt.html">The <code>'acnt'</code> table</a></li>
+          <li><a href="Chap6ankr.html">The <code>'ankr'</code> table</a></li>
+          <li><a href="Chap6avar.html">The <code>'avar'</code> table</a></li>
+          <li><a href="Chap6bdat.html">The <code>'bdat'</code> table</a></li>
+          <li><a href="Chap6bhed.html">The <code>'bhed'</code> table</a></li>
+          <li><a href="Chap6bloc.html">The <code>'bloc'</code> table</a></li>
+          <li><a href="Chap6bsln.html">The <code>'bsln'</code> table</a></li>
+          <li><a href="Chap6cmap.html">The <code>'cmap'</code> table</a></li>
+          <li><a href="Chap6cvar.html">The <code>'cvar'</code> table</a></li>
+          <li><a href="Chap6cvt.html">The <code>'cvt '</code> table</a></li>
+          <li><a href="Chap6EBSC.html">The <code>'EBSC'</code> table</a></li>
+          <li><a href="Chap6fdsc.html">The <code>'fdsc'</code> table</a></li>
+          <li><a href="Chap6feat.html">The <code>'feat'</code> table</a></li>
+          <li><a href="Chap6fmtx.html">The <code>'fmtx'</code> table</a></li>
+          <li><a href="Chap6fond.html">The <code>'fond'</code> table</a></li>
+          <li><a href="Chap6fpgm.html">The <code>'fpgm'</code> table</a></li>
+          <li><a href="Chap6fvar.html">The <code>'fvar'</code> table</a></li>
+          <li><a href="Chap6gasp.html">The <code>'gasp'</code> table</a></li>
+          <li><a href="Chap6gcid.html">The <code>'gcid'</code> table</a></li>
+          <li>The <code>'glyf'</code> table</li>
+          <li><a href="Chap6gvar.html">The <code>'gvar'</code> table</a></li>
+          <li><a href="Chap6hdmx.html">The <code>'hdmx'</code> table</a></li>
+          <li><a href="Chap6head.html">The <code>'head'</code> table</a></li>
+          <li><a href="Chap6hhea.html">The <code>'hhea'</code> table</a></li>
+          <li><a href="Chap6hmtx.html">The <code>'hmtx'</code> table</a></li>
+          <li><a href="Chap6just.html">The <code>'just'</code> table</a></li>
+          <li><a href="Chap6kern.html">The <code>'kern'</code> table</a></li>
+          <li><a href="Chap6kerx.html">The <code>'kerx'</code> table</a></li>
+          <li><a href="Chap6lcar.html">The <code>'lcar'</code> table</a></li>
+          <li><a href="Chap6loca.html">The <code>'loca'</code> table</a></li>
+          <li><a href="Chap6ltag.html">The <code>'ltag'</code> table</a></li>
+          <li><a href="Chap6maxp.html">The <code>'maxp'</code> table</a></li>
+          <li><a href="Chap6meta.html">The <code>'meta'</code> table</a></li>
+          <li><a href="Chap6mort.html">The <code>'mort'</code> table</a></li>
+          <li><a href="Chap6morx.html">The <code>'morx'</code> table</a></li>
+          <li><a href="Chap6name.html">The <code>'name'</code> table</a></li>
+          <li><a href="Chap6opbd.html">The <code>'opbd'</code> table</a></li>
+          <li><a href="Chap6OS2.html">The <code>'OS/2'</code> table</a></li>
+          <li><a href="Chap6post.html">The <code>'post'</code> table</a></li>
+          <li><a href="Chap6prep.html">The <code>'prep'</code> table</a></li>
+          <li><a href="Chap6prop.html">The <code>'prop'</code> table</a></li>
+          <li><a href="Chap6sbix.html">The <code>'sbix'</code> table</a></li>
+          <li><a href="Chap6trak.html">The <code>'trak'</code> table</a></li>
+          <li><a href="Chap6vhea.html">The <code>'vhea'</code> table</a></li>
+          <li><a href="Chap6vmtx.html">The <code>'vmtx'</code> table</a></li>
+          <li><a href="Chap6xref.html">The <code>'xref'</code> table</a></li>
+          <li><a href="Chap6Zapf.html">The <code>'Zapf'</code> table</a></li>
+        </ul>
+      </li>
+      <li><a href="../RM07/appendixA.html">Instruction Set Summary</a></li>
+      <li><a href="../RM07/appendixB.html">Glyph Mappings</a></li>
+      <li><a href="../RM08/appendixE.html">Converting Outlines</a></li>
+	<li><a href="../RM09/AppendixF.html">Font Feature Registry</a></li>
+    </ul><!-- NAVBAREND -->
+  </div>
+  <div id="chapterContent">
+    <header><h1><a name="glyf" id="glyf"></a>The <code>'glyf'</code> table</h1></header>
+    <p>The <code>'glyf'</code> table contains the data that defines the appearance of the glyphs in the font. This includes specification of the points that describe the contours that make up a glyph outline and the instructions that grid-fit that glyph. The <code>'glyf'</code> table supports the definition of simple glyphs and compound glyphs, that is, glyphs that are made up of other glyphs.</p>
+    <p>The number of glyphs in the font is restricted only by the value stated in the <code>'head'</code> table. The order in which glyphs are placed in a font is arbitrary.</p>
+    <h2>Glyph data</h2>
+    <p>Table 14 documents the format for glyph definitions. A zero or positive number of contours signals a simple glyph. If the number of contours is less than zero, the glyph is made up of components. If a glyph has zero contours, it need not have any glyph data. If the glyph is made up of contours, it is recommended that the value -1 be used in this field.</p>
+    <p>The minimum and maximum x and y values for the coordinate data in the glyph follow and together define the glyph's bounding box. This is the bounding box for the original glyph outline before any grid-fitting has taken place.</p>
+    <p><strong><font size="-1">Table 14</font></strong><font size="-1">: Glyph description</font></p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th align="left">
+          <p align="left">Type</p>
+        </th>
+        <th align="left">
+          <p align="left">Name</p>
+        </th>
+        <th align="left">
+          <p align="left">Description</p>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>int16</td>
+        <td>numberOfContours</td>
+        <td>If the number of contours is positive or zero, it is a single glyph;<br>
+        If the number of contours less than zero, the glyph is compound</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>FWord</td>
+        <td>xMin</td>
+        <td class="description">Minimum x for coordinate data</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>FWord</td>
+        <td>yMin</td>
+        <td class="description">Minimum y for coordinate data</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>FWord</td>
+        <td>xMax</td>
+        <td class="description">Maximum x for coordinate data</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>FWord</td>
+        <td>yMax</td>
+        <td class="description">Maximum y for coordinate data</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td colspan="3" class="description">(here follow the data for the simple or compound glyph)</td>
+      </tr>
+    </table>
+    <h3>Simple glyphs</h3>
+    <p>Table 15 specifies the format of a simple glyph. A more detailed description of glyph outline requirements is given in <a href="../RM01/Chap1.html">Digitizing Letterform Designs</a>.</p>
+    <p><strong><font size="-1">Table 15</font></strong><font size="-1">: Simple glyph definition</font></p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>endPtsOfContours[n]</td>
+        <td class="description">Array of last points of each contour; n is the number of contours; array entries are point indices</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>instructionLength</td>
+        <td class="description">Total number of bytes needed for instructions</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint8</td>
+        <td>instructions[instructionLength]</td>
+        <td class="description">Array of instructions for this glyph</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint8</td>
+        <td>flags[variable]</td>
+        <td class="description">Array of flags</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint8 or int16</td>
+        <td>xCoordinates[]</td>
+        <td class="description">Array of x-coordinates; the first is relative to (0,0), others are relative to previous point</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint8 or int16</td>
+        <td>yCoordinates[]</td>
+        <td class="description">Array of y-coordinates; the first is relative to (0,0), others are relative to previous point</td>
+      </tr>
+    </table>
+    <p>Each entry in the flags array is a byte in size.The meanings associated with each bit in that byte are given in Table 16 below.</p>
+    <p><strong><font size="-1">Table 16</font></strong><font size="-1">: Outline flags</font></p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th>Flags</th>
+        <th>Bit (0 is lsb)</th>
+        <th>Description</th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>On Curve</td>
+        <td>0</td>
+        <td>If set, the point is on the curve;<br>
+        Otherwise, it is off the curve.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>x-Short Vector</td>
+        <td>1</td>
+        <td>If set, the corresponding x-coordinate is 1 byte long;<br>
+        Otherwise, the corresponding x-coordinate is 2 bytes long</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>y-Short Vector</td>
+        <td>2</td>
+        <td>If set, the corresponding y-coordinate is 1 byte long;<br>
+        Otherwise, the corresponding y-coordinate is 2 bytes long</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>Repeat</td>
+        <td>3</td>
+        <td class="description">If set, the next byte specifies the number of additional times this set of flags is to be repeated. In this way, the number of flags listed can be smaller than the number of points in a character.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>This x is same (Positive x-Short vector)</td>
+        <td>4</td>
+        <td>This flag has one of two meanings, depending on how the x-Short Vector flag is set.<br>
+        If the x-Short Vector bit is set, this bit describes the sign of the value, with a value of 1 equalling positive and a zero value negative.<br>
+        If the x-short Vector bit is not set, and this bit is set, then the current x-coordinate is the same as the previous x-coordinate.<br>
+        If the x-short Vector bit is not set, and this bit is not set, the current x-coordinate is a signed 16-bit delta vector. In this case, the delta vector is the change in x</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>This y is same (Positive y-Short vector)</td>
+        <td>5</td>
+        <td>This flag has one of two meanings, depending on how the y-Short Vector flag is set.<br>
+        If the y-Short Vector bit is set, this bit describes the sign of the value, with a value of 1 equalling positive and a zero value negative.<br>
+        If the y-short Vector bit is not set, and this bit is set, then the current y-coordinate is the same as the previous y-coordinate.<br>
+        If the y-short Vector bit is not set, and this bit is not set, the current y-coordinate is a signed 16-bit delta vector. In this case, the delta vector is the change in y</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>Reserved</td>
+        <td>6 - 7</td>
+        <td class="description">Set to zero</td>
+      </tr>
+    </table>
+    <h3><a name="COMPOUNDGLYPHS" id="COMPOUNDGLYPHS"></a>Compound glyphs</h3>
+    <p>Compound glyphs are glyphs made up of two or more component glyphs. A compound glyph description begins like a simple glyph description with four words describing the bounding box. It is followed by n component glyph parts. Each component glyph parts consists of a flag entry, two offset entries and from one to four transformation entries.</p>
+    <p>The format for describing each component glyph in a compound glyph is documented in Table 17. The meanings associated with the flags in the first entry are given in Table 18.</p>
+    <p><strong><font size="-1">Table 17</font></strong><font size="-1">: Component glyph part description</font></p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th align="left">
+          <p align="left">Type</p>
+        </th>
+        <th align="left">
+          <p align="left">Name</p>
+        </th>
+        <th align="left">
+          <p align="left">Description</p>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>flags</td>
+        <td class="description">Component flag</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>glyphIndex</td>
+        <td class="description">Glyph index of component</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>int16, uint16, int8 or uint8</td>
+        <td>argument1</td>
+        <td class="description">X-offset for component or point number; type depends on bits 0 and 1 in component flags</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>int16, uint16, int8 or uint8</td>
+        <td>argument2</td>
+        <td class="description">Y-offset for component or point number type depends on bits 0 and 1 in component flags</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td colspan="2">transformation option</td>
+        <td class="description">One of the transformation options from Table 19</td>
+      </tr>
+    </table>
+    <p><strong><font size="-1">Table 18</font></strong><font size="-1">: Component flags</font></p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th align="left">
+          <p align="left">Flags</p>
+        </th>
+        <th align="left">
+          <p align="left">Bit</p>
+        </th>
+        <th align="left">
+          <p align="left">Description</p>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>ARG_1_AND_2_ARE_WORDS</td>
+        <td>0</td>
+        <td>If set, the arguments are words;<br>
+        If not set, they are bytes.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>ARGS_ARE_XY_VALUES</td>
+        <td>1</td>
+        <td>If set, the arguments are xy values;<br>
+        If not set, they are points.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>ROUND_XY_TO_GRID</td>
+        <td>2</td>
+        <td>If set, round the xy values to grid;<br>
+        if not set do not round xy values to grid (relevant only to bit 1 is set)</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>WE_HAVE_A_SCALE</td>
+        <td>3</td>
+        <td>If set, there is a simple scale for the component.<br>
+        If not set, scale is 1.0.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>(this bit is obsolete)</td>
+        <td>4</td>
+        <td class="description">(obsolete; set to zero)</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>MORE_COMPONENTS</td>
+        <td>5</td>
+        <td class="description">If set, at least one additional glyph follows this one.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>WE_HAVE_AN_X_AND_Y_SCALE</td>
+        <td>6</td>
+        <td class="description">If set the x direction will use a different scale than the y direction.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>WE_HAVE_A_TWO_BY_TWO</td>
+        <td>7</td>
+        <td class="description">If set there is a 2-by-2 transformation that will be used to scale the component.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>WE_HAVE_INSTRUCTIONS</td>
+        <td>8</td>
+        <td class="description">If set, instructions for the component character follow the last component.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>USE_MY_METRICS</td>
+        <td>9</td>
+        <td class="description">Use metrics from this component for the compound glyph.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>OVERLAP_COMPOUND</td>
+        <td>10</td>
+        <td class="description">If set, the components of this compound glyph overlap.</td>
+      </tr>
+    </table>
+    <p><strong><font size="-1">Table 19</font></strong><font size="-1">: Transformation Options</font></p>
+    <table border="1" width="80%" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th align="left">
+          <p align="left">Transformation Option</p>
+        </th>
+        <th align="left">
+          <p align="left">Meaning</p>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>transformation entry #1</td>
+        <td class="description">scale (same for x and y)</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td rowspan="2">transformation entry #2</td>
+        <td class="description">x-scale</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td class="description">y-scale</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td rowspan="4">transformation entry #3</td>
+        <td class="description">xscale</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td class="description">scale01</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td class="description">scale10</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td class="description">yscale</td>
+      </tr>
+    </table>
+    <p>The glyph data in a compound glyph differs from that of a simple glyph, consisting of descriptions of each of the components followed by any instructions for the compound glyph as a whole.</p>
+    <p>The glyph index describes the location of the jth component glyph.</p>
+    <p>The transformation entries determine the values of an affine transformation applied to the component prior to its being incorporated into the parent glyph. Given the component matrix [a b c d e f], the transformation applied to the component is:</p>
+    <p><img src="Formulas_glyf.png.html" width="319" height="181" align="bottom"></p>
+    <p>The values of a, b, c, and d are obtained as shown in Table 19a. The values of e and f are obtained as shown in the following pseudo-code below:</p>
+    <pre>
+if (ARG_1AND_2_ARE_WORDS &amp;&amp; ARGS_ARE_XY_VALUES)
+    1st short contains the value of e
+    2nd short contains the value of f
+else if (!ARG_1AND_2_ARE_WORDS &amp;&amp; ARGS_ARE_XY_VALUES)
+    1st byte contains the value of e
+    2nd byte contains the value of f
+else if (ARG_1AND_2_ARE_WORDS &amp;&amp; !ARGS_ARE_XY_VALUES)
+    1st short contains the index of matching point in compound being constructed
+    2nd short contains index of matching point in component
+else if (!ARG_1AND_2_ARE_WORDS &amp;&amp; !ARGS_ARE_XY_VALUES)
+    1st byte containing index of matching point in compound being constructed
+    2nd byte containing index of matching point in component
+</pre>
+    <p>Finally, m and n are calculated as follows:</p>
+    <p>First, let m&#x2080; = max(|a|, |b|) and n&#x2080; = max(|c|, |d|).</p>
+    <p>If |(|a|-|c|)| ≤ <sup>33</sup>/<sub>65536</sub>, then m = 2m&#x2080;; otherwise, m = m&#x2080;.</p>
+    <p>Similarly, if |(|b|-|d|)| ≤ <sup>33</sup>/<sub>65536</sub>, then n = 2n&#x2080;; otherwise, n = n&#x2080;</p>
+    <p>The linear transformation data is derived as shown in Table 19a.</p>
+    <p><strong>Important</strong></p>
+    <p>If e and f are specified directly as offsets rather than as point indices to be matched, then the correct values of the offsets depend on the transformation components. For example, if a general scale factor of one-half is applied to the component, this scale factor is also applied to the values of e and f before they are used to offset the component. Note also, that when the component is rotated by a multiple of 45 degrees, the scale factors are doubled. For these reasons, it is much easier to specify offsets through the use of anchor point and matching points than directly through offset values.</p>
+    <p><strong><font size="-1">Table 19a</font></strong><font size="-1">: Linear transformation</font></p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th align="middle">
+          <p align="left">WE_HAVE<br>
+          _A_SCALE</p>
+        </th>
+        <th align="middle">
+          <p align="left">WE_HAVE<br>
+          _AN_X_AND_<br>
+          Y<br>
+          SCALE</p>
+        </th>
+        <th align="middle">
+          <p align="left">WE_HAVE_A<br>
+          _TWO_BY_<br>
+          TWO</p>
+        </th>
+        <th align="middle">
+          <p align="left">a</p>
+        </th>
+        <th align="middle">
+          <p align="left">b</p>
+        </th>
+        <th align="middle">
+          <p align="left">c</p>
+        </th>
+        <th align="middle">
+          <p align="left">d</p>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>1.0</td>
+        <td>0.0</td>
+        <td>0.0</td>
+        <td class="description">1.0</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>1</td>
+        <td>0</td>
+        <td>0</td>
+        <td>1st short</td>
+        <td>0.0</td>
+        <td>0.0</td>
+        <td class="description">1st short</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>0</td>
+        <td>1</td>
+        <td>0</td>
+        <td>1st short</td>
+        <td>0.0</td>
+        <td>0.0</td>
+        <td class="description">2nd short</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>0</td>
+        <td>0</td>
+        <td>1</td>
+        <td>1st short</td>
+        <td>2nd short</td>
+        <td>3rd short</td>
+        <td class="description">4th short</td>
+      </tr>
+    </table>
+    <p>The numbers stored as shorts are treated as signed fixed binary point numbers with one bit to the left of the binary point and 14 to the right.</p>
+    <p>The application of the transformations and instructions can be thought of as occurring in the following order:</p>
+    <p>For each component</p>
+    <ul>
+      <li>Apply the local transformation, if any</li>
+      <li>Apply the global transformation (e.g. point size, resolution)</li>
+      <li>Gridfit the outline</li>
+      <li>Apply the translation from offsets or anchor points</li>
+    </ul>
+    <p>Gridfit the compound glyph if there are instructions</p>
+  </div>
+
+      </section>
+  </div><!-- /content -->
+
+  <div id="globalfooter">
+    <div id="breadory">
+      <ol id="breadcrumbs">
+        <li class="home"><a href="../../../index.html">Developer</a></li>
+        <li><a href="../../index.html">Fonts</a></li>
+        <li><a href="../index.html">TrueType™ Reference Manual</a></li>
+        <li>The TrueType Font File</li>
+      </ol>
+      <div id="directorynav" class="directorynav">
+	<div id="dn-cola" class="column">
+		<h3><a href="../../../platforms/index.html">Platforms</a></h3>
+		<ul>
+			<li><a href="../../../ios/index.html">iOS</a></li>
+			<li><a href="../../../osx/index.html">OS X</a></li>
+			<li><a href="../../../watchos/index.html">watchOS</a></li>
+			<li><a href="../../../tvos/index.html">tvOS</a></li>
+		</ul>
+		<h3><a href="../../../resources/index.html">Tools</a></h3>
+		<ul>
+			<li><a href="../../../xcode/index.html">Xcode</a></li>
+			<li><a href="../../../swift/index.html">Swift</a></li>
+		</ul>
+	</div>
+	<div id="dn-colb" class="column">
+		<h3><a href="../../../resources/index.html">Resources</a></h3>
+		<ul>
+			<li><a href="../../../library/index.html">Documentation</a></li>
+			<li><a href="../../../videos/index.html">Videos</a></li>
+			<li><a href="https://forums.developer.apple.com/">Forums</a></li>
+			<li><a href="../../../app-store/index.html">App Store</a></li>
+			<li><a href="../../../safari/index.html">Safari and Web</a></li>
+			<li><a href="../../../education/index.html">Education</a></li>
+			<li><a href="../../../enterprise/index.html">Enterprise</a></li>
+		</ul>
+	</div>
+	<div id="dn-colc" class="column">
+		<h3><a href="../../../programs/index.html">Programs</a></h3>
+		<ul>
+			<li><a href="../../../programs/index.html">Developer Program</a></li>
+			<li><a href="../../../programs/enterprise/index.html">Enterprise Program</a></li>
+			<li><a href="../../../programs/ios/university/index.html">iOS University Program</a></li>
+			<li><a href="../../../programs/mfi/index.html">MFi Program</a></li>
+		</ul>
+	</div>
+	<div id="dn-cold" class="column">
+		<h3><a href="../../../support/index.html">Support</a></h3>
+		<ul>
+			<li><a href="../../../support/development/index.html">Development</a></li>
+			<li><a href="../../../support/distribution/index.html">Distribution</a></li>
+			<li><a href="../../../support/membership/index.html">Membership</a></li>
+			<li><a href="../../../system-status/index.html">System Status</a></li>
+		</ul>
+	</div>
+	<div id="dn-cole" class="column">
+		<h3><a href="https://developer.apple.com/account/">Account</a></h3>
+		<ul>
+			<li><a href="https://developer.apple.com/account/">Developer Account</a></li>
+			<li><a href="../../../go/index-id=certificates-ids-profiles.html">Certificates, IDs &amp; Profiles</a></li>
+			<li><a href="https://itunesconnect.apple.com">iTunes Connect</a></li>			
+			<li><a href="../../../terms/index.html">License Agreements</a></li>
+		</ul>
+	</div>
+</div>
+
+    </div><!--/breadory-->
+    <ul class="gf-links piped footer-links">
+  <li><a href="../../../news/index.html" class="first">News &amp; Updates</a></li>
+  <li><a href="../../../bug-reporting/index.html">Report Bugs</a></li>
+  <li><a href="../../../contact/index.html">Contact Us</a></li>
+</ul>
+
+<div class="gf-sosumi footer-sosumi">
+  <p>Copyright © 2016 Apple Inc. All rights reserved.</p>
+    <ul class="piped">
+        <li><a href="http://www.apple.com/legal/internet-services/terms/site.html" class="first">Terms of Use</a></li>
+        <li><a href="http://www.apple.com/privacy/privacy-policy/">Privacy Policy</a></li>
+    </ul>
+</div>
+
+<!--<div id="gf-links piped footer-links">
+	<ul>
+		<li><a href="/cn/" title="Simplified Chinese">简体中文</a></li>
+		<li><a href="/jp/" title="Japanese">日本語</a></li>
+		<li><a href="/kr/" title="Korean">한국어</a></li>
+	</ul>
+</div>-->
+
+  </div><!--/globalfooter-->
+</body>
+</html>

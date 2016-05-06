@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="Author" content="Apple Inc." />
+<meta name="viewport" content="width=1024" />
+<link rel="shortcut icon" href="../../../favicon.ico" />
+<link rel="icon" href="../../../favicon.ico" />
+<link rel="stylesheet" href="https://www.apple.com/wss/fonts?family=Myriad+Set+Pro&amp;v=2" type="text/css" />
+<link rel="stylesheet" href="../../../assets/styles/transition-global.css" type="text/css" />
+<link rel="stylesheet" href="../../../assets/styles/transition-header.css" type="text/css" />
+<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/core/styles/adc.css" type="text/css" />
+<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/styles/topbar.css" type="text/css" />
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/lib/prototype.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/lib/scriptaculous.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/browserdetect.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/apple_core.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/search_decorator.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/adc_core.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/scripts/ac_retina.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/topbarDropdown.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	document.write('<link rel="stylesheet" type="text/css" href="https://devimages.apple.com.edgekey.net/assets/styles/script.css" media="screen">');
+</script>
+<!-- Augmented Search -->
+<!--<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/styles/augmented_search.css" type="text/css">-->
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/lib/jquery/jquery-1.11.0.min.js"></script>
+<script>jQuery.noConflict();</script>
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/lib/jquery/jquery.retinate.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/scripts/augmented_search.js"></script>-->
+<script src="../../../assets/scripts/augmented_search.js"></script>
+<script src="../../../assets/scripts/global-header.js"></script>
+
+  <meta name="Author" content="Apple Inc.">
+  <meta name="viewport" content="width=1024">
+  <link rel="shortcut icon" href="https://devimages.apple.com.edgekey.net/favicon.ico">
+  <link rel="icon" href="https://devimages.apple.com.edgekey.net/favicon.ico">
+  <link rel="stylesheet" href="../AAT.css" type="text/css">
+  <title>The Graphics State</title>
+</head>
+<body class="white sidenav-page">
+  <nav id="globalheader" role="navigation" aria-label="Global Navigation">
+  <div id="gh-content" class="gh-content">
+    <ul class="gh-menu">
+      <li id="gh-menu-icon-toggle" class="gh-menu-icon gh-menu-icon-toggle enhance">
+        <button id="gh-svg-icons" class="gh-svg-wrapper">
+          <span class="text-replace">Menu</span>
+          <svg x="0px" y="0px" width="100%" viewBox="0 0 96 96" class="gh-svg gh-svg-top" enable-background="new 0 0 96 96"><rect width="32" height="4" x="32" y="46" class="gh-svg-rect gh-svg-rect-top"></rect></svg>
+          <svg x="0px" y="0px" width="100%" viewBox="0 0 96 96" class="gh-svg gh-svg-bottom" enable-background="new 0 0 96 96"><rect width="32" height="4" x="32" y="46" class="gh-svg-rect gh-svg-rect-bottom"></rect></svg>
+        </button>
+      </li>
+      <li id="gh-menu-icon-home" class="gh-menu-icon gh-menu-icon-home">
+        <a href="../../../index.html">
+          <span class="text-replace">Apple Developer</span>
+        </a>
+      </li>
+    </ul>
+    <div class="gh-nav">
+      <div class="gh-nav-view">
+        <ul class="gh-nav-list">
+
+          <li class="gh-tab gh-nav-developer" data-hires="true"><a class="gh-tab-link" href="../../../index.html"><span class="text-replace">Apple Developer</span></a></li>
+          <li class="gh-tab gh-nav-technologies"><a class="gh-tab-link" href="../../../platforms/index.html">Platforms</a></li>
+          <li class="gh-tab gh-nav-resources"><a class="gh-tab-link" href="../../../resources/index.html">Resources</a></li>
+          <li class="gh-tab gh-nav-programs"><a class="gh-tab-link" href="../../../programs/index.html">Program</a></li>
+          <li class="gh-tab gh-nav-support"><a class="gh-tab-link" href="../../../support/index.html">Support</a></li>
+          <li class="gh-tab gh-nav-account">
+            <a class="gh-tab-link gh-account-profile" href="https://developer.apple.com/account/">Account</a>
+          </li>
+          <li class="gh-tab gh-nav-search">
+
+            <div id="gh-search" class="gh-search" role="search">
+              <form action="/search/index.php" method="get" class="gh-search-form" id="gh-search-form" role="search">
+
+                <div class="gh-search-input-wrapper">
+                  <label for="gh-search-input" class="text-replace">Search Apple Developer</label>
+                  <input type="text" name="q" id="gh-search-input" class="augmented gh-search-input" placeholder="Search Apple Developer" autocomplete="off" autocorrect="off" autocapitalize="off">
+                </div>
+
+                <button disabled type="submit" id="gh-search-submit" class="gh-search-submit gh-search-magnify"><span class="text-replace">Search Apple Developer</span></button>
+                <button disabled type="reset" id="gh-search-reset" class="gh-search-reset"><span class="text-replace">Reset</span></button>
+
+              </form>
+            </div>
+
+            <a class="gh-search-magnify" href="../../../search/index.html"><span class="text-replace">Search Apple Developer</span></a>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+  <div id="top">
+<!-- SiteCatalyst code version: H.8. Copyright 1997-2006 Omniture, Inc. -->
+<script type="text/javascript">
+/* RSID: */
+var s_account="appleglobal,appleusdeveloper"
+</script>
+
+<script type="text/javascript" src="https://www.apple.com/metrics/scripts/s_code_h.js"></script>
+<script type="text/javascript">
+s.pageName= AC && AC.Tracking && AC.Tracking.pageName();
+s.channel="www.us.developer"
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)</script>
+<!-- End SiteCatalyst code version: H.8. -->
+</div>
+
+  <div id="content" class="content" data-hires="true">
+    <section>
+
+  <div id="navBar">
+    <!-- NAVBARSTART -->
+    <p class="bold"><a href="../index.html">TrueType Reference Manual</a></p>
+    <ul class="outer">
+      <li><a href="../RM01/Chap1.html">Digitizing Letterforms</a></li>
+      <li><a href="../RM02/Chap2.html">The Font Engine</a></li>
+      <li><a href="../RM03/Chap3.html">Instructing Fonts</a></li>
+      <li>The Graphics State</li>
+      <li><a href="../RM05/Chap5.html">The Instruction Set</a></li>
+      <li><a href="../RM06/Chap6.html">Font Tables</a></li>
+      <li class="c1">
+        <ul class="inner">
+          <li><a href="../RM06/Chap6.html#Intro">Introduction</a></li>
+          <li><a href="../RM06/Chap6.html#Types">Data Types</a></li>
+          <li><a href="../RM06/Chap6.html#Overview">Overview of TrueType</a></li>
+          <li><a href="../RM06/Chap6AATIntro.html">Overview of AAT</a></li>
+          <li><a href="../RM06/Chap6Tables.html">Special Tables</a></li>
+          <li><a href="../RM06/Chap6.html#Directory">The Font Directory</a></li>
+          <li><a href="../RM06/Chap6acnt.html">The <code>'acnt'</code> table</a></li>
+          <li><a href="../RM06/Chap6ankr.html">The <code>'ankr'</code> table</a></li>
+          <li><a href="../RM06/Chap6avar.html">The <code>'avar'</code> table</a></li>
+          <li><a href="../RM06/Chap6bdat.html">The <code>'bdat'</code> table</a></li>
+          <li><a href="../RM06/Chap6bhed.html">The <code>'bhed'</code> table</a></li>
+          <li><a href="../RM06/Chap6bloc.html">The <code>'bloc'</code> table</a></li>
+          <li><a href="../RM06/Chap6bsln.html">The <code>'bsln'</code> table</a></li>
+          <li><a href="../RM06/Chap6cmap.html">The <code>'cmap'</code> table</a></li>
+          <li><a href="../RM06/Chap6cvar.html">The <code>'cvar'</code> table</a></li>
+          <li><a href="../RM06/Chap6cvt.html">The <code>'cvt '</code> table</a></li>
+          <li><a href="../RM06/Chap6EBSC.html">The <code>'EBSC'</code> table</a></li>
+          <li><a href="../RM06/Chap6fdsc.html">The <code>'fdsc'</code> table</a></li>
+          <li><a href="../RM06/Chap6feat.html">The <code>'feat'</code> table</a></li>
+          <li><a href="../RM06/Chap6fmtx.html">The <code>'fmtx'</code> table</a></li>
+          <li><a href="../RM06/Chap6fond.html">The <code>'fond'</code> table</a></li>
+          <li><a href="../RM06/Chap6fpgm.html">The <code>'fpgm'</code> table</a></li>
+          <li><a href="../RM06/Chap6fvar.html">The <code>'fvar'</code> table</a></li>
+          <li><a href="../RM06/Chap6gasp.html">The <code>'gasp'</code> table</a></li>
+          <li><a href="../RM06/Chap6gcid.html">The <code>'gcid'</code> table</a></li>
+          <li><a href="../RM06/Chap6glyf.html">The <code>'glyf'</code> table</a></li>
+          <li><a href="../RM06/Chap6gvar.html">The <code>'gvar'</code> table</a></li>
+          <li><a href="../RM06/Chap6hdmx.html">The <code>'hdmx'</code> table</a></li>
+          <li><a href="../RM06/Chap6head.html">The <code>'head'</code> table</a></li>
+          <li><a href="../RM06/Chap6hhea.html">The <code>'hhea'</code> table</a></li>
+          <li><a href="../RM06/Chap6hmtx.html">The <code>'hmtx'</code> table</a></li>
+          <li><a href="../RM06/Chap6just.html">The <code>'just'</code> table</a></li>
+          <li><a href="../RM06/Chap6kern.html">The <code>'kern'</code> table</a></li>
+          <li><a href="../RM06/Chap6kerx.html">The <code>'kerx'</code> table</a></li>
+          <li><a href="../RM06/Chap6lcar.html">The <code>'lcar'</code> table</a></li>
+          <li><a href="../RM06/Chap6loca.html">The <code>'loca'</code> table</a></li>
+          <li><a href="../RM06/Chap6maxp.html">The <code>'maxp'</code> table</a></li>
+          <li><a href="../RM06/Chap6meta.html">The <code>'meta'</code> table</a></li>
+          <li><a href="../RM06/Chap6mort.html">The <code>'mort'</code> table</a></li>
+          <li><a href="../RM06/Chap6morx.html">The <code>'morx'</code> table</a></li>
+          <li><a href="../RM06/Chap6name.html">The <code>'name'</code> table</a></li>
+          <li><a href="../RM06/Chap6opbd.html">The <code>'opbd'</code> table</a></li>
+          <li><a href="../RM06/Chap6OS2.html">The <code>'OS/2'</code> table</a></li>
+          <li><a href="../RM06/Chap6post.html">The <code>'post'</code> table</a></li>
+          <li><a href="../RM06/Chap6prep.html">The <code>'prep'</code> table</a></li>
+          <li><a href="../RM06/Chap6prop.html">The <code>'prop'</code> table</a></li>
+          <li><a href="../RM06/Chap6sbix.html">The <code>'sbix'</code> table</a></li>
+          <li><a href="../RM06/Chap6trak.html">The <code>'trak'</code> table</a></li>
+          <li><a href="../RM06/Chap6vhea.html">The <code>'vhea'</code> table</a></li>
+          <li><a href="../RM06/Chap6vmtx.html">The <code>'vmtx'</code> table</a></li>
+          <li><a href="../RM06/Chap6xref.html">The <code>'xref'</code> table</a></li>
+          <li><a href="../RM06/Chap6Zapf.html">The <code>'Zapf'</code> table</a></li>
+        </ul>
+      </li>
+      <li><a href="../RM07/appendixA.html">Instruction Set Summary</a></li>
+      <li><a href="../RM07/appendixB.html">Glyph Mappings</a></li>
+      <li><a href="../RM08/appendixE.html">Converting Outlines</a></li>
+	<li><a href="../RM09/AppendixF.html">Font Feature Registry</a></li>
+    </ul><!-- NAVBAREND -->
+  </div>
+  <div id="chapterContent">
+    <center>
+      <header><h1>The Graphics State</h1></header>
+    </center>
+    <h2><a name="CONTENTS" id="CONTENTS"></a>Contents</h2>
+    <ul class="circle">
+      <li><a href="Chap4.html#introduction">Introduction</a></li>
+      <li><a href="Chap4.html#auto%20flip">auto flip</a></li>
+      <li><a href="Chap4.html#control_value_cut-in">control value cut-in</a></li>
+      <li><a href="Chap4.html#delta%20base">delta base</a></li>
+      <li><a href="Chap4.html#delta%20shift">delta shift</a></li>
+      <li><a href="Chap4.html#dual%20projection%20vector">dual projection vector</a></li>
+      <li><a href="Chap4.html#freedom%20vector">freedom vector</a></li>
+      <li><a href="Chap4.html#instruct%20control">instruct control</a></li>
+      <li><a href="Chap4.html#loop">loop</a></li>
+      <li><a href="Chap4.html#minimum%20distance">minimum distance</a></li>
+      <li><a href="Chap4.html#projection%20vector">projection vector</a></li>
+      <li><a href="Chap4.html#round%20state">round state</a></li>
+      <li><a href="Chap4.html#rp0">rp0</a></li>
+      <li><a href="Chap4.html#rp1">rp1</a></li>
+      <li><a href="Chap4.html#rp2">rp2</a></li>
+      <li><a href="Chap4.html#scan%20control">scan control</a></li>
+      <li><a href="Chap4.html#single_width_cut_in">single_width_cut_in</a></li>
+      <li><a href="Chap4.html#single_width_value">single_width_value</a></li>
+      <li><a href="Chap4.html#zp0">zp0</a></li>
+      <li><a href="Chap4.html#zp1">zp1</a></li>
+      <li><a href="Chap4.html#zp2">zp2</a></li>
+    </ul>
+    <p><br></p>
+    <p><a name="introduction" id="introduction"></a><font size="+2">Introduction</font></p>
+    
+    The graphics state variables establish the context in which TrueType instructions are executed. This chapter provides an alphabetical listing of the variables that make up the graphics state along with a brief description of their purpose and the essential facts needed to understand their role. In particular it provides information on each variable's default value, the instruction used to set its value and a list of instructions affected by its setting. An overall discussion of the role of the graphics state variables can be found in Chapter 2, "The Font Engine."<br>
+    <p>Most of the graphics state variables have a default value as shown below. That value is established the first time a particular font is accessed and again at the start of interpretation of any glyph.<br></p>
+    <p>It is possible to change the default values of the graphics state variables using instructions. If the value is changed in the control value program, that value becomes the new default value. If the value of a state variable is changed by instructions associated with a particular glyph, the new value is not a new default value and will hold only for that glyph.<br></p>
+    <p><a href="Chap4.html#CONTENTS">Return to Contents</a><br></p>
+    <p><a name="auto flip"></a><font size="+2">auto flip</font></p>
+    
+    <pre>
+       Default TRUE    
+       
+       Set with        FLIPOFF[] 
+                               FLIPON[]
+       
+       Affects MIRP[]  
+</pre>
+    <p><br></p>
+    <p><br></p>
+    <p>Controls whether the sign of control value table entries will be changed to match the sign of the actual distance measurement with which it is compared. Setting auto flip to TRUE makes it possible to control distances measured with or against the projection vector with a single control value table entry. When auto flip is set to FALSE, distances must be measured with the projection vector.<br></p>
+    <p>&nbsp;</p>
+    <p><a href="Chap4.html#CONTENTS">Return to Contents</a><br></p>
+    <p><a name="control_value_cut-in" id="control_value_cut-in"></a><font size="+2">control value cut-in</font></p>
+    
+    <pre>
+       Default 17/16 pixels (F26Dot6)
+       
+       Set with        LCVTCI[]
+       
+       Affects MIAP[] 
+                               MIRP[]                          
+</pre>
+    <p><br></p>
+    <p>Limits the regularizing effects of control value table entries to cases where the difference between the table value and the measurement taken from the original outline is sufficiently small.<br></p>
+    <p>&nbsp;</p>
+    <p><br>
+    <a href="Chap4.html#CONTENTS">Return to Contents</a><br></p>
+    <p><a name="delta base"></a><font size="+2">delta base</font></p>
+    
+    <pre>
+       Default 9
+       
+       Set with        SDB[]
+       
+       Affects DELTAP1[] 
+                               DELTAP2[] 
+                               DELTAP3[] 
+                               DELTAC1[] 
+                               DELTAC2[] 
+                               DELTAC3[]
+</pre>
+    <p><br></p>
+    <p>&nbsp;</p>
+    <p>Establishes the base value used to calculate the range of point sizes to which a given DELTAC[] or DELTAP[] instruction will apply. The formulas given below are used to calculate the range of the various DELTA instructions.<br></p>
+    <p>&nbsp;</p>
+    <pre>
+   DELTAC1       DELTAP1         (delta_base) through (delta_base + 15)
+   DELTAC2       DELTAP2         (delta_base + 16) through (delta_base + 31)
+   DELTAC3       DELTAP3         (delta_base + 32) through (delta_base + 47)
+</pre>
+    <p><br></p>
+    <p><br>
+    <a href="Chap4.html#CONTENTS">Return to Contents</a><br></p>
+    <p><a name="delta shift"></a><font size="+2">delta shift</font></p>
+    
+    <pre>
+       Default 3
+       
+       Set with        SDS[]
+       
+       Affects DELTAP1[]
+                               DELTAP2[] 
+                               DELTAP3[] 
+                               DELTAC1[] 
+                               DELTAC2[] 
+                               DELTAC3[]
+</pre>
+    <p><br></p>
+    <p>&nbsp;</p>
+    <p>Determines the range of movement and smallest magnitude of movement (the step) in a DELTAC[] or DELTAP[] instruction. Changing the value of the delta shift makes it possible to trade off fine control of point movement for range of movement. A low delta shift favors range of movement over fine control. A high delta shift favors fine control over range of movement. The step has the value 1/2 to the power delta shift. The range of movement is calculated by taking the number of steps allowed (16) and multiplying it by the step.<br></p>
+    <p>The legal range for delta shift is zero through six. Negative values are illegal.<br></p>
+    <p><br></p>
+    <p><a href="Chap4.html#CONTENTS">Return to Contents</a><br></p>
+    <p><a name="dual projection vector"></a><font size="+2">dual projection vector</font></p>
+    
+    <pre>
+       Default none
+       
+       Set with        SDPVTL[]
+       
+       Affects IP[]
+                               GC[]   
+                               MD[]   
+                               MDRP[]   
+                               MIRP[]
+</pre>
+    <p><br></p>
+    <p><br></p>
+    <p>A second projection vector set to a line defined by the original outline location of two points. The dual projection vector is used when it is necessary to measure distances from the scaled outline before any instructions were executed.<br></p>
+    <p><br></p>
+    <p><a href="Chap4.html#CONTENTS">Return to Contents</a><br></p>
+    <p><a name="freedom vector"></a><font size="+2">freedom vector</font></p>
+    
+    <pre>
+       Default x-axis
+       
+       Set with        SFVTCA[] 
+                               SFVTL[] 
+                               SFTPV[] 
+                               SVTCA[] 
+                               SFVFS[]
+       Affects ALIGNPTS[] 
+                               ALIGNRP[]
+                               DELTAP1[] 
+                               DELTAP2[] 
+                               DELTAP3[] 
+                               IP[] 
+                               MDAP[] 
+                               MDRP[] 
+                               MIAP[] 
+                               MIRP[] 
+                               MSIRP[] 
+                               ROUND[] 
+                               SCFS[] 
+                               SHC[] 
+                               SHPIX[] 
+                               SHZ[] 
+                               UTP[]
+</pre>
+    <p><br></p>
+    <p>&nbsp;</p>
+    <p>A unit vector that establishes an axis along which points can move.<br></p>
+    <p><br></p>
+    <p><a href="Chap4.html#CONTENTS">Return to Contents</a><br></p>
+    <p><a name="instruct control"></a><font size="+2">instruct control</font></p>
+    
+    <pre>
+       Default         0
+       
+       Set with                INSTCTRL[]
+       
+       Affects all     instructions
+</pre>
+    <p><br></p>
+    <p>&nbsp;</p>
+    <p>Makes it possible to turn off instructions under some circumstances. When set to TRUE, no instructions will be executed.<br></p>
+    <p><br></p>
+    <p><a href="Chap4.html#CONTENTS">Return to Contents</a><br></p>
+    <p><a name="loop" id="loop"></a><font size="+2">loop</font></p>
+    
+    <pre>
+       Default 1
+       
+       Set with        SLOOP[]
+       
+       Affects ALIGNRP[]  
+                               FLIPPT[]  
+                               IP[]  
+                               SHP[]  
+                               SHPIX[]
+</pre>
+    <p><br></p>
+    <p>&nbsp;</p>
+    <p>Makes it possible to repeat certain instructions a designated number of times. The default value of one assures that unless the value of loop is altered, these instructions will execute one time.<br></p>
+    <p>&nbsp;</p>
+    <p><a href="Chap4.html#CONTENTS">Return to Contents</a><br></p>
+    <p><a name="minimum distance"></a><font size="+2">minimum distance</font></p>
+    
+    <pre>
+       Default 1 pixel (F26Dot6)
+       
+       Set with        SMD[]
+       
+       Affects MDRP[] 
+                               MIRP[]
+</pre>
+    <p><br></p>
+    <p>&nbsp;</p>
+    <p>Establishes the smallest possible value to which a distance will be rounded.<br></p>
+    <p><br></p>
+    <p><a href="Chap4.html#CONTENTS">Return to Contents</a><br></p>
+    <p><a name="projection vector"></a><font size="+2">projection vector</font></p>
+    
+    <pre>
+       Default x-axis
+       
+       Set with        SPVTCA[]
+       
+                               SPVTL[]
+                               SVTCA[] 
+                               SPVFS[]
+                               
+       Affects ALIGNPTS[] 
+                               ALIGNRP[] 
+                               DELTAP1[] 
+                               DELTAP2[] 
+                               DELTAP3[] 
+                               GC[] 
+                               IP[] 
+                               MD[] 
+                               MDAP[] 
+                               MDRP[] 
+                               MIAP[] 
+                               MIRP[] 
+                               MSIRP[] 
+                               SCFS[] 
+                               SHC[] 
+                               SHP[] 
+                               SHZ[]
+</pre>
+    <p><br></p>
+    <p>&nbsp;</p>
+    <p>A unit vector whose direction establishes an axis along which distances are measured.<br></p>
+    <p><br></p>
+    <p><a href="Chap4.html#CONTENTS">Return to Contents</a><br></p>
+    <p><a name="round state"></a><font size="+2">round state</font></p>
+    
+    <pre>
+       Default 1 (grid)
+       Set with        RDTG[]
+                               ROFF[] 
+                               RTDG[] 
+                               RTG[] 
+                               RTHG[] 
+                               RUTG[] 
+                               SROUND[] 
+                               S45ROUND[]
+                                       
+       Affects EVEN[]  
+                               ODD[]  
+                               MDAP[]  
+                               MIAP[]  
+                               MDRP[]  
+                               MIRP[]  
+                               ROUND[]
+</pre>
+    <p><br></p>
+    <p>Determines the manner in which values are rounded. Can be set to a number of predefined states or to a customized state with the SROUND or S45ROUND instructions.<br></p>
+    <p><br></p>
+    <p><a href="Chap4.html#CONTENTS">Return to Contents</a><br></p>
+    <p><a name="rp0" id="rp0"></a><font size="+2">rp0</font></p>
+    
+    <pre>
+       Default 0
+       Set with        SRP0[], MDRP[], MIAP[], MSIRP[]
+
+       Affects ALIGNRP[]
+                               MDRP[] 
+                               MIRP[] 
+                               MSIRP[]
+</pre>
+    <p><br></p>
+    <p>&nbsp;</p>
+    <p>The first of three reference points. References a point number that together with a zone designation specifies a point in either the glyph zone or the twilight zone.<br></p>
+    <p><br></p>
+    <p><a href="Chap4.html#CONTENTS">Return to Contents</a><br></p>
+    <p><a name="rp1" id="rp1"></a><font size="+2">rp1</font></p>
+    
+    <pre>
+       Default 0
+       
+       Set with        SRP1[], MDAP[], MDRP[], MIRP[]
+       Affects IP[]
+                               SHC[] 
+                               SHP[] 
+                               SHZ[]
+</pre>
+    <p><br></p>
+    <p>&nbsp;</p>
+    <p>The second of three reference points. References a point number that together with a zone designation specifies a point in either the glyph zone or the twilight zone.<br></p>
+    <p><br></p>
+    <p><a href="Chap4.html#CONTENTS">Return to Contents</a><br></p>
+    <p><a name="rp2" id="rp2"></a><font size="+2">rp2</font></p>
+    
+    <pre>
+       Default                 0
+       Set with        SRP2[], MDRP[], MIRP[]
+       Affects IP[] 
+                               SHC[] 
+                               SHP[] 
+                               SHZ[]
+</pre>
+    <p><br></p>
+    <p><br></p>
+    <p>The third of three reference points. References a point number that together with a zone designation specifies a point in to either the glyph zone or the twilight zone.<br></p>
+    <p><br></p>
+    <p><a href="Chap4.html#CONTENTS">Return to Contents</a><br></p>
+    <p><a name="scan control"></a><font size="+2">scan control</font></p>
+    
+    <pre>
+       Default FALSE
+       Set with        SCANCTRL[]
+</pre>
+    <p><br></p>
+    <p><br></p>
+    <p>Determines whether the interpreter will activate dropout control for the current glyph. Use of the dropout control mode can depend upon the currently prevailing combination of the following three conditions:<br></p>
+    <p>&nbsp;</p>
+    <ol>
+      <li>Is the glyph rotated?</li>
+      <li>Is the glyph stretched?</li>
+      <li>Is the current pixel per em setting less than a specified threshold?</li>
+    </ol>
+    <p>It is also possible to block dropout control if one of the above conditions is false.<br></p>
+    <p><br></p>
+    <p><a href="Chap4.html#CONTENTS">Return to Contents</a><br></p>
+    <p><a name="single_width_cut_in" id="single_width_cut_in"></a><font size="+2">single_width_cut_in</font></p>
+    
+    <pre>
+       Default 0 pixels (F26Dot6)
+       Set with        SSWCI[]
+       Affects MDRP[] 
+                               MIRP[]
+</pre>
+    <p><br></p>
+    <p><br></p>
+    <p>The distance difference below which the interpreter will replace a CVT distance or an actual distance in favor of the single width value.<br></p>
+    <p><br></p>
+    <p><a href="Chap4.html#CONTENTS">Return to Contents</a><br></p>
+    <p><a name="single_width_value" id="single_width_value"></a><font size="+2">single_width_value</font></p>
+    
+    <pre>
+       Default 0 pixels (F26Dot6)
+       Set with        SSW[]
+       
+       Affects MDRP[]
+                               MIRP[]
+</pre>
+    <p><br></p>
+    <p><br></p>
+    <p>The value used in place of the control value table distance or the actual distance value when the difference between that distance and the single width value is less than the single width cut-in.<br></p>
+    <p><br></p>
+    <p><a href="Chap4.html#CONTENTS">Return to Contents</a><br></p>
+    <p><a name="zp0" id="zp0"></a><font size="+2">zp0</font></p>
+    
+    <pre>
+       Default 1
+       Set with        SZP0[]  
+                               SZPS[]
+       Affects ALIGNPTS[] 
+                               ALIGNRP[] 
+                               DELTAP1[] 
+                               DELTAP2[] 
+                               DELTAP3[] 
+                               FLIPPT[] 
+                               FLIPRGOFF[] 
+                               FLIPRGON[] 
+                               IP[] 
+                               ISECT[] 
+                               MD[] 
+                               MDAP[] 
+                               MDRP[] 
+                               MIAP[] 
+                               MIRP[] 
+                               MSIRP 
+                               SHC[] 
+                               SHP[] 
+                               UTP[]
+</pre>
+    <p><br></p>
+    <p>&nbsp;</p>
+    <p>The first of three zone pointers. Can be set to reference either the glyph zone (Z0) or the twilight zone (Z1).<br></p>
+    <p><br></p>
+    <p><br>
+    <a href="Chap4.html#CONTENTS">Return to Contents</a><br></p>
+    <p><a name="zp1" id="zp1"></a><font size="+2">zp1</font></p>
+    
+    <pre>
+       Default 1
+       Set with        SZP1[]
+                               SZPS[]
+                               
+       Affects ALIGNPTS[] 
+                               ALIGNRP[] 
+                               IP[] 
+                               ISECT[] 
+                               MD[] 
+                               MDRP[] 
+                               MIRP[] 
+                               MSIRP[] 
+                               SDPVTL[] 
+                               SFVTL[] 
+                               SHC[] 
+                               SHP[] 
+                               SHZ[] 
+                               SPVTL[]
+</pre>
+    <p><br></p>
+    <p><br></p>
+    <p>The second of three zone pointers. Can be set to reference either the twilight zone (Z0) or the glyph zone (Z1).<br></p>
+    <p><br></p>
+    <p><a href="Chap4.html#CONTENTS">Return to Contents</a><br></p>
+    <p><a name="zp2" id="zp2"></a><font size="+2">zp2</font></p>
+    
+    <pre>
+       Default 1
+       Set with        SZP2[]
+                               SZPS[]
+                               
+       Affects GC[]
+                               IP[] 
+                               ISECT[] 
+                               IUP[] 
+                               SCFS[] 
+                               SDPVTL[] 
+                               SFVTL[] 
+                               SHC[] 
+                               SHP[] 
+                               SHPIX[] 
+                               SPVTL[]
+</pre>
+    <p><br></p>
+    <p><br></p>
+    <p>The third of three zone pointers. Can be set to reference either the twilight zone (Z0) or the glyph zone (Z1).<br></p>
+  </div>
+
+      </section>
+  </div><!-- /content -->
+
+  <div id="globalfooter">
+    <div id="breadory">
+      <ol id="breadcrumbs">
+        <li class="home"><a href="../../../index.html">Developer</a></li>
+        <li><a href="../../index.html">Fonts</a></li>
+        <li><a href="../index.html">TrueType™ Reference Manual</a></li>
+        <li>The Graphics State</li>
+      </ol>
+      <div id="directorynav" class="directorynav">
+	<div id="dn-cola" class="column">
+		<h3><a href="../../../platforms/index.html">Platforms</a></h3>
+		<ul>
+			<li><a href="../../../ios/index.html">iOS</a></li>
+			<li><a href="../../../osx/index.html">OS X</a></li>
+			<li><a href="../../../watchos/index.html">watchOS</a></li>
+			<li><a href="../../../tvos/index.html">tvOS</a></li>
+		</ul>
+		<h3><a href="../../../resources/index.html">Tools</a></h3>
+		<ul>
+			<li><a href="../../../xcode/index.html">Xcode</a></li>
+			<li><a href="../../../swift/index.html">Swift</a></li>
+		</ul>
+	</div>
+	<div id="dn-colb" class="column">
+		<h3><a href="../../../resources/index.html">Resources</a></h3>
+		<ul>
+			<li><a href="../../../library/index.html">Documentation</a></li>
+			<li><a href="../../../videos/index.html">Videos</a></li>
+			<li><a href="https://forums.developer.apple.com/">Forums</a></li>
+			<li><a href="../../../app-store/index.html">App Store</a></li>
+			<li><a href="../../../safari/index.html">Safari and Web</a></li>
+			<li><a href="../../../education/index.html">Education</a></li>
+			<li><a href="../../../enterprise/index.html">Enterprise</a></li>
+		</ul>
+	</div>
+	<div id="dn-colc" class="column">
+		<h3><a href="../../../programs/index.html">Programs</a></h3>
+		<ul>
+			<li><a href="../../../programs/index.html">Developer Program</a></li>
+			<li><a href="../../../programs/enterprise/index.html">Enterprise Program</a></li>
+			<li><a href="../../../programs/ios/university/index.html">iOS University Program</a></li>
+			<li><a href="../../../programs/mfi/index.html">MFi Program</a></li>
+		</ul>
+	</div>
+	<div id="dn-cold" class="column">
+		<h3><a href="../../../support/index.html">Support</a></h3>
+		<ul>
+			<li><a href="../../../support/development/index.html">Development</a></li>
+			<li><a href="../../../support/distribution/index.html">Distribution</a></li>
+			<li><a href="../../../support/membership/index.html">Membership</a></li>
+			<li><a href="../../../system-status/index.html">System Status</a></li>
+		</ul>
+	</div>
+	<div id="dn-cole" class="column">
+		<h3><a href="https://developer.apple.com/account/">Account</a></h3>
+		<ul>
+			<li><a href="https://developer.apple.com/account/">Developer Account</a></li>
+			<li><a href="../../../go/index-id=certificates-ids-profiles.html">Certificates, IDs &amp; Profiles</a></li>
+			<li><a href="https://itunesconnect.apple.com">iTunes Connect</a></li>			
+			<li><a href="../../../terms/index.html">License Agreements</a></li>
+		</ul>
+	</div>
+</div>
+
+    </div><!--/breadory-->
+    <ul class="gf-links piped footer-links">
+  <li><a href="../../../news/index.html" class="first">News &amp; Updates</a></li>
+  <li><a href="../../../bug-reporting/index.html">Report Bugs</a></li>
+  <li><a href="../../../contact/index.html">Contact Us</a></li>
+</ul>
+
+<div class="gf-sosumi footer-sosumi">
+  <p>Copyright © 2016 Apple Inc. All rights reserved.</p>
+    <ul class="piped">
+        <li><a href="http://www.apple.com/legal/internet-services/terms/site.html" class="first">Terms of Use</a></li>
+        <li><a href="http://www.apple.com/privacy/privacy-policy/">Privacy Policy</a></li>
+    </ul>
+</div>
+
+<!--<div id="gf-links piped footer-links">
+	<ul>
+		<li><a href="/cn/" title="Simplified Chinese">简体中文</a></li>
+		<li><a href="/jp/" title="Japanese">日本語</a></li>
+		<li><a href="/kr/" title="Korean">한국어</a></li>
+	</ul>
+</div>-->
+
+  </div><!--/globalfooter-->
+</body>
+</html>

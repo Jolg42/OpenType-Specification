@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+  <head>
+    <title>COLR - Color Table</title>
+    <link rel="STYLESHEET" href="otspec.css" type="text/css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <div class="toprule">
+    </div>
+    <p class="menu">
+      <a href="http://www.microsoft.com/typography/default.mspx">Microsoft Typography</a> | <a href="http://www.microsoft.com/typography/creators.htm">Developer...</a> | <a href="default.htm">OpenType specification</a> | <a href="otff.htm#otttables">OpenType tables</a> | The BASE table</p>
+    <div class="middlerule">
+    </div>
+    <div class="contents">
+     <h1>COLR - Color Table</h1>
+      <p>The COLR table adds support for multi-colored glyphs in a manner that is compatible with existing text engines and easy to support with current OFF font files.</p>
+      <p>The COLR table defines a list of base glyphs — which are regular glyphs, typically associated with a cmap entry. Each base glyph is associated by the COLR table to a list of glyphs, each corresponding to layers that can be combined, creating a colored representation of the base glyph. The layered glyphs are explicitly defined in bottom-up z-order and each of their advance widths must match those of the base glyph. If the font has vertical metrics, the associated layer glyphs must also have the same advance height and vertical Y origin as the base glyph.</p>
+      <p>The COLR table works together with the <a href="cpal.htm">CPAL</a> table which holds the color palettes used by the color layers.</p>  
+      <p>Fonts using 'COLR' and 'CPAL' tables must implement GlyphID 1 as the .null glyph. If the COLR table is present in a font but no CPAL table exists, then the COLR table will not be supported for this font.</p>
+     <h2>Header</h2>
+      <p>The table starts with a fixed portion describing the overall setup for the color font records. All offsets, unless otherwise noted, will be from the beginning of the table </p>
+      
+<table class="gray">
+    <tr>
+          <th style="width: 20%;">Type</th>
+          <th style="width: 20%;">Name</th>
+          <th style="width: 60%;">Description</th>
+        </tr>
+        <tr>
+          <td>USHORT</td>
+          <td>version</td>
+          <td>Table version number (starts at 0).</td>
+        </tr>
+        <tr>
+          <td>USHORT</td>
+          <td>numBaseGlyphRecords</td>
+          <td>Number of Base Glyph Records.</td>
+        </tr>
+        <tr>
+          <td>ULONG</td>
+          <td>offsetBaseGlyphRecord</td>
+          <td>Offset (from beginning of COLR table) to Base Glyph records.</td>
+        </tr>
+         <tr>
+          <td>ULONG</td>
+          <td>offsetLayerRecord</td>
+          <td>Offset (from beginning of COLR table) to Layer Records.</td>
+        </tr>
+        <tr>
+          <td>USHORT</td>
+          <td>numLayerRecords</td>
+          <td>Number of Layer Records.</td>
+        </tr>
+      </table>
+
+      <h2>Base Glyph Record</h2>
+      <p>The header of the COLR table points to the base glyph record. This record is used to match the base glyph to the layered glyphs. Each base glyph record contains a base glyph index. This is usually the glyph index that is referenced in the cmap table. The number of layers is used to indicate how many color layers will be used for this base glyph. Each record then has an index to a glyph layer record. There will be numLayers of layer records for each base glyph. The firstLayerIndex refers to the lowest z-order, or bottom, glyph id for the colored glyph. The next layer record will represent the next highest glyph in the z-order, and this continues bottom-up until it reaches the numLayers glyph at the top of the z-order. The index is relative to the start of the Layer Records. The index does not have to be unique for each base glyph ID. If two base glyphs need to share the color glyphs and palette indices, this is acceptable. Likewise a Base Glyph Record could point partway into a z-order of another base glyph.</p>
+      <p>The base glyph records are sorted by glyph id. It is assumed that a binary search can be used to efficiently access the glyph IDs that have color values. Any use scenario that attempts to map glyphs to character codes must be aware of the mapping done by the COLR table.</p>
+     <table class="gray">
+        <tr>
+          <th style="width: 20%;">Type</th>
+          <th style="width: 20%;">Name</th>
+          <th style="width: 60%;">Description</th>
+        </tr>
+        <tr>
+          <td>USHORT</td>
+          <td>GID</td>
+          <td>Glyph ID of reference glyph. This glyph is for reference only and is not rendered for color.</td>
+        </tr>
+        <tr>
+          <td>USHORT</td>
+          <td>firstLayerIndex</td>
+          <td>Index (from beginning of the Layer Records) to the layer record. There will be numLayers consecutive entries for this base glyph.</td>
+        </tr>
+        <tr>
+          <td>USHORT</td>
+          <td>numLayers</td>
+          <td>Number of color layers associated with this glyph.</td>
+        </tr>
+      </table>   
+      <h2>Layer Record</h2>
+        <table class="gray">
+        <tr>
+          <th style="width: 20%;">Type</th>
+          <th style="width: 20%;">Name</th>
+          <th style="width: 60%;">Description</th>
+        </tr>
+        <tr>
+          <td>USHORT</td>
+          <td>GID</td>
+          <td>Glyph ID of layer glyph (must be in z-order from bottom to top).</td>
+        </tr>
+        <tr>
+          <td>USHORT</td>
+          <td>paletteIndex</td>
+          <td>Index value to use with a selected color palette. This value must be less than numPaletteEntries in the <a href="cpal.htm">CPAL</a> table. A palette entry index value of 0xFFFF is a special case indicating that the text foreground color (defined by a higher-level client) should be used and shall not be treated as actual index into <a href="cpal.htm">CPAL</a> ColorRecord array.</td>
+        </tr>
+      </table>
+        <p>The selection of color palette to be used for a given layer record is the responsibility of a higher-level client. With CPAL version 0 – the palette selection needs to be made based on the information distributed with a font. CPAL version 1 offers user-selectable color palettes based on a textual descriptions of palette entries and palette labels.</p>    
+      <hr class="separator">
+      <p class="fineprint">This page was last updated 25 April 2014.</p>
+      <p class="fineprint">&copy; 2014 Microsoft Corporation. All rights reserved. <a href="http://www.microsoft.com/Misc/cpyright.htm">Terms of use</a>.</p>
+      <p class="fineprint">Comments to the MST group: <a href="https://www.microsoft.com/typography/AboutMST.mspx">how to contact us</a>.</p>
+    </div>
+    <div class="middlerule">
+    </div>
+    <p class="menu">
+      <a href="http://www.microsoft.com/typography/default.mspx">Microsoft Typography</a> | <a href="http://www.microsoft.com/typography/creators.htm">Developer...</a> | <a href="default.htm">OpenType specification</a> | <a href="otff.htm#otttables">OpenType tables</a> | The BASE table</p>
+    <div class="bottomrule">
+    </div>
+  </body>
+</html>

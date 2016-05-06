@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="Author" content="Apple Inc." />
+<meta name="viewport" content="width=1024" />
+<link rel="shortcut icon" href="../../../favicon.ico" />
+<link rel="icon" href="../../../favicon.ico" />
+<link rel="stylesheet" href="https://www.apple.com/wss/fonts?family=Myriad+Set+Pro&amp;v=2" type="text/css" />
+<link rel="stylesheet" href="../../../assets/styles/transition-global.css" type="text/css" />
+<link rel="stylesheet" href="../../../assets/styles/transition-header.css" type="text/css" />
+<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/core/styles/adc.css" type="text/css" />
+<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/styles/topbar.css" type="text/css" />
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/lib/prototype.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/lib/scriptaculous.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/browserdetect.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/apple_core.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/search_decorator.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/adc_core.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/scripts/ac_retina.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/topbarDropdown.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	document.write('<link rel="stylesheet" type="text/css" href="https://devimages.apple.com.edgekey.net/assets/styles/script.css" media="screen">');
+</script>
+<!-- Augmented Search -->
+<!--<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/styles/augmented_search.css" type="text/css">-->
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/lib/jquery/jquery-1.11.0.min.js"></script>
+<script>jQuery.noConflict();</script>
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/lib/jquery/jquery.retinate.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/scripts/augmented_search.js"></script>-->
+<script src="../../../assets/scripts/augmented_search.js"></script>
+<script src="../../../assets/scripts/global-header.js"></script>
+
+  <meta name="Author" content="Apple Inc.">
+  <meta name="viewport" content="width=1024">
+  <link rel="stylesheet" href="../AAT.css" type="text/css">
+  <link rel="shortcut icon" href="https://devimages.apple.com.edgekey.net/favicon.ico">
+  <link rel="icon" href="https://devimages.apple.com.edgekey.net/favicon.ico">
+  <title>Font Variations Table</title>
+</head>
+<body class="white sidenav-page">
+  <nav id="globalheader" role="navigation" aria-label="Global Navigation">
+  <div id="gh-content" class="gh-content">
+    <ul class="gh-menu">
+      <li id="gh-menu-icon-toggle" class="gh-menu-icon gh-menu-icon-toggle enhance">
+        <button id="gh-svg-icons" class="gh-svg-wrapper">
+          <span class="text-replace">Menu</span>
+          <svg x="0px" y="0px" width="100%" viewBox="0 0 96 96" class="gh-svg gh-svg-top" enable-background="new 0 0 96 96"><rect width="32" height="4" x="32" y="46" class="gh-svg-rect gh-svg-rect-top"></rect></svg>
+          <svg x="0px" y="0px" width="100%" viewBox="0 0 96 96" class="gh-svg gh-svg-bottom" enable-background="new 0 0 96 96"><rect width="32" height="4" x="32" y="46" class="gh-svg-rect gh-svg-rect-bottom"></rect></svg>
+        </button>
+      </li>
+      <li id="gh-menu-icon-home" class="gh-menu-icon gh-menu-icon-home">
+        <a href="../../../index.html">
+          <span class="text-replace">Apple Developer</span>
+        </a>
+      </li>
+    </ul>
+    <div class="gh-nav">
+      <div class="gh-nav-view">
+        <ul class="gh-nav-list">
+
+          <li class="gh-tab gh-nav-developer" data-hires="true"><a class="gh-tab-link" href="../../../index.html"><span class="text-replace">Apple Developer</span></a></li>
+          <li class="gh-tab gh-nav-technologies"><a class="gh-tab-link" href="../../../platforms/index.html">Platforms</a></li>
+          <li class="gh-tab gh-nav-resources"><a class="gh-tab-link" href="../../../resources/index.html">Resources</a></li>
+          <li class="gh-tab gh-nav-programs"><a class="gh-tab-link" href="../../../programs/index.html">Program</a></li>
+          <li class="gh-tab gh-nav-support"><a class="gh-tab-link" href="../../../support/index.html">Support</a></li>
+          <li class="gh-tab gh-nav-account">
+            <a class="gh-tab-link gh-account-profile" href="https://developer.apple.com/account/">Account</a>
+          </li>
+          <li class="gh-tab gh-nav-search">
+
+            <div id="gh-search" class="gh-search" role="search">
+              <form action="/search/index.php" method="get" class="gh-search-form" id="gh-search-form" role="search">
+
+                <div class="gh-search-input-wrapper">
+                  <label for="gh-search-input" class="text-replace">Search Apple Developer</label>
+                  <input type="text" name="q" id="gh-search-input" class="augmented gh-search-input" placeholder="Search Apple Developer" autocomplete="off" autocorrect="off" autocapitalize="off">
+                </div>
+
+                <button disabled type="submit" id="gh-search-submit" class="gh-search-submit gh-search-magnify"><span class="text-replace">Search Apple Developer</span></button>
+                <button disabled type="reset" id="gh-search-reset" class="gh-search-reset"><span class="text-replace">Reset</span></button>
+
+              </form>
+            </div>
+
+            <a class="gh-search-magnify" href="../../../search/index.html"><span class="text-replace">Search Apple Developer</span></a>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+  <div id="top">
+<!-- SiteCatalyst code version: H.8. Copyright 1997-2006 Omniture, Inc. -->
+<script type="text/javascript">
+/* RSID: */
+var s_account="appleglobal,appleusdeveloper"
+</script>
+
+<script type="text/javascript" src="https://www.apple.com/metrics/scripts/s_code_h.js"></script>
+<script type="text/javascript">
+s.pageName= AC && AC.Tracking && AC.Tracking.pageName();
+s.channel="www.us.developer"
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)</script>
+<!-- End SiteCatalyst code version: H.8. -->
+</div>
+
+  <div id="content" class="content" data-hires="false">
+    <section>
+  <div id="navBar">
+    <!-- NAVBARSTART -->
+    <p class="bold"><a href="../index.html">TrueType Reference Manual</a></p>
+    <ul class="outer">
+      <li><a href="../RM01/Chap1.html">Digitizing Letterforms</a></li>
+      <li><a href="../RM02/Chap2.html">The Font Engine</a></li>
+      <li><a href="../RM03/Chap3.html">Instructing Fonts</a></li>
+      <li><a href="../RM04/Chap4.html">The Graphics State</a></li>
+      <li><a href="../RM05/Chap5.html">The Instruction Set</a></li>
+      <li><a href="Chap6.html">Font Tables</a></li>
+      <li class="c1">
+        <ul class="inner">
+          <li><a href="Chap6.html#Intro">Introduction</a></li>
+          <li><a href="Chap6.html#Types">Data Types</a></li>
+          <li><a href="Chap6.html#Overview">Overview of TrueType</a></li>
+          <li><a href="Chap6AATIntro.html">Overview of AAT</a></li>
+          <li><a href="Chap6Tables.html">Special Tables</a></li>
+          <li><a href="Chap6.html#Directory">The Font Directory</a></li>
+          <li><a href="Chap6acnt.html">The <code>'acnt'</code> table</a></li>
+          <li><a href="Chap6ankr.html">The <code>'ankr'</code> table</a></li>
+          <li><a href="Chap6avar.html">The <code>'avar'</code> table</a></li>
+          <li><a href="Chap6bdat.html">The <code>'bdat'</code> table</a></li>
+          <li><a href="Chap6bhed.html">The <code>'bhed'</code> table</a></li>
+          <li><a href="Chap6bloc.html">The <code>'bloc'</code> table</a></li>
+          <li><a href="Chap6bsln.html">The <code>'bsln'</code> table</a></li>
+          <li><a href="Chap6cmap.html">The <code>'cmap'</code> table</a></li>
+          <li><a href="Chap6cvar.html">The <code>'cvar'</code> table</a></li>
+          <li><a href="Chap6cvt.html">The <code>'cvt '</code> table</a></li>
+          <li><a href="Chap6EBSC.html">The <code>'EBSC'</code> table</a></li>
+          <li><a href="Chap6fdsc.html">The <code>'fdsc'</code> table</a></li>
+          <li><a href="Chap6feat.html">The <code>'feat'</code> table</a></li>
+          <li><a href="Chap6fmtx.html">The <code>'fmtx'</code> table</a></li>
+          <li><a href="Chap6fond.html">The <code>'fond'</code> table</a></li>
+          <li><a href="Chap6fpgm.html">The <code>'fpgm'</code> table</a></li>
+          <li>The <code>'fvar'</code> table</li>
+          <li><a href="Chap6gasp.html">The <code>'gasp'</code> table</a></li>
+          <li><a href="Chap6gcid.html">The <code>'gcid'</code> table</a></li>
+          <li><a href="Chap6glyf.html">The <code>'glyf'</code> table</a></li>
+          <li><a href="Chap6gvar.html">The <code>'gvar'</code> table</a></li>
+          <li><a href="Chap6hdmx.html">The <code>'hdmx'</code> table</a></li>
+          <li><a href="Chap6head.html">The <code>'head'</code> table</a></li>
+          <li><a href="Chap6hhea.html">The <code>'hhea'</code> table</a></li>
+          <li><a href="Chap6hmtx.html">The <code>'hmtx'</code> table</a></li>
+          <li><a href="Chap6just.html">The <code>'just'</code> table</a></li>
+          <li><a href="Chap6kern.html">The <code>'kern'</code> table</a></li>
+          <li><a href="Chap6kerx.html">The <code>'kerx'</code> table</a></li>
+          <li><a href="Chap6lcar.html">The <code>'lcar'</code> table</a></li>
+          <li><a href="Chap6loca.html">The <code>'loca'</code> table</a></li>
+          <li><a href="Chap6ltag.html">The <code>'ltag'</code> table</a></li>
+          <li><a href="Chap6maxp.html">The <code>'maxp'</code> table</a></li>
+          <li><a href="Chap6meta.html">The <code>'meta'</code> table</a></li>
+          <li><a href="Chap6mort.html">The <code>'mort'</code> table</a></li>
+          <li><a href="Chap6morx.html">The <code>'morx'</code> table</a></li>
+          <li><a href="Chap6name.html">The <code>'name'</code> table</a></li>
+          <li><a href="Chap6opbd.html">The <code>'opbd'</code> table</a></li>
+          <li><a href="Chap6OS2.html">The <code>'OS/2'</code> table</a></li>
+          <li><a href="Chap6post.html">The <code>'post'</code> table</a></li>
+          <li><a href="Chap6prep.html">The <code>'prep'</code> table</a></li>
+          <li><a href="Chap6prop.html">The <code>'prop'</code> table</a></li>
+          <li><a href="Chap6sbix.html">The <code>'sbix'</code> table</a></li>
+          <li><a href="Chap6trak.html">The <code>'trak'</code> table</a></li>
+          <li><a href="Chap6vhea.html">The <code>'vhea'</code> table</a></li>
+          <li><a href="Chap6vmtx.html">The <code>'vmtx'</code> table</a></li>
+          <li><a href="Chap6xref.html">The <code>'xref'</code> table</a></li>
+          <li><a href="Chap6Zapf.html">The <code>'Zapf'</code> table</a></li>
+        </ul>
+      </li>
+      <li><a href="../RM07/appendixA.html">Instruction Set Summary</a></li>
+      <li><a href="../RM07/appendixB.html">Glyph Mappings</a></li>
+      <li><a href="../RM08/appendixE.html">Converting Outlines</a></li>
+	<li><a href="../RM09/AppendixF.html">Font Feature Registry</a></li>
+    </ul><!-- NAVBAREND -->
+  </div>
+  <div id="chapterContent">
+    <header><h1><a name="fvar"></a>The <code>'fvar'</code> table</h1></header>
+    <h2>General table information</h2>
+    <p>Apple Advanced Typography variations allow the font designer to build high quality styles into the typeface itself. This reduces the dependence on algorithmic styling in the graphics system. To include variations in your font, you must include the font variations table. If you are building a TrueType font, you will also need a <a href="Chap6gvar.html">glyph variations table</a>.</p>
+    <p>The <em>font variations table</em> (tag name: <code>'fvar'</code>) defines the global information concerning which variation axes are included in your font and any named coordinates in the variation space, called instances. An instance provides the application with a short list of "pre-chosen" coordinates to offer the user.</p>
+    <p>The next figure shows a capital 'Q' glyph drawn at various points along the 'wght' axis. Since the minimum and maximum values have been defined as +0.7 and +1.3, respectively, the specification of a style coordinate of 1.0 refers to the style of the center 'Q.'</p>
+    <p><img src="FF66.gif" width="399" height="136" align="bottom"></p>
+    <p>Multiple axes can be combined. For example, you may want to create a 'wght' axis and a 'wdth' axis. The user can then select any combination of weight and width, such as 75% bold and 50% condensed. The next figure shows an example of a two-axis font variation in which the weight axis has a minimum value of 1.0 and maximum of 1.5 and the width axis has a minimum of 0.6 and a maximum of 1.0.</p>
+    <p><img src="FF67.gif" width="389" height="352" align="bottom"></p>
+    <h2>Variation Axis Tags</h2>
+    <p>A set of "standard" axis tags has been defined by Apple. Other tags may be defined, but should be registered with Apple DTS (Developer Technical Support).</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th>
+          <div align="left">
+            Tag
+          </div>
+        </th>
+        <th>
+          <div align="left">
+            Name
+          </div>
+        </th>
+        <th>
+          <div align="left">
+            Default
+          </div>
+        </th>
+        <th align="left">
+          <div align="left">
+            Description
+          </div>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>'wght'</td>
+        <td>Weight</td>
+        <td>1.0</td>
+        <td class="description">Used for making a font range from light to black.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>'wdth'</td>
+        <td>Width</td>
+        <td>1.0</td>
+        <td class="description">Used for fonts ranging from narrow to wide.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>'slnt'</td>
+        <td>Slant</td>
+        <td>0.0</td>
+        <td class="description">Specifies the angle (in degrees) of italic slant.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>'opsz'</td>
+        <td>Optical Size</td>
+        <td>12.0</td>
+        <td class="description">Specifies the optical point size.</td>
+      </tr>
+    </table>
+    <p>All real numbers like 1.0 and 12.0 are actually stored as 16.16 fixed point numbers, so 1.0 is really 0x10000 and 12.0 is really 0xC0000.</p>
+    <h2>Font Variations Table Format</h2>
+    <p>The font variations table consists of a font variations table header, followed by the list of variations axis records, followed by the list of instance records. The overall structure of this table is shown in the following figure:</p>
+    <p><img src="FF68.gif" width="245" height="121" align="bottom"></p>
+    <p>The format of the font variations table header is shown in the following table:</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th>
+          <div align="left">
+            Type
+          </div>
+        </th>
+        <th>
+          <div align="left">
+            Name
+          </div>
+        </th>
+        <th align="left">
+          <div align="left">
+            Description
+          </div>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>fixed</td>
+        <td>version</td>
+        <td class="description">Set to 1.0 (0x10000).</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>offsetToData</td>
+        <td class="description">Offset in bytes from the beginning of the table to the beginning of the first axis data.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>countSizePairs</td>
+        <td class="description">Axis + instance = 2.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>axisCount</td>
+        <td class="description">The number of style axes in this font.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>axisSize</td>
+        <td class="description">The number of bytes in each gxFontVariationAxis record. Set to 20 bytes.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>instanceCount</td>
+        <td class="description">The number of named instances for the font found in the sfntInstance array.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>instanceSize</td>
+        <td class="description">The number of bytes in each gxFontInstance array. InstanceSize = axisCount * sizeof(gxShortFrac).</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>sfntVariationAxis</td>
+        <td>axis[axisCount]</td>
+        <td class="description">The font variation axis array.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>sfntInstance</td>
+        <td>instance[instanceCount]</td>
+        <td class="description">The instance array.</td>
+      </tr>
+    </table>
+    <p>Note: The <code>countSizePairs</code> is currently 2 to indicate two count-size pairs follow: the axis count-size pair, and the offset count-size pair. Future versions of the <code>"fvar"</code> table may increase this number.</p>
+    <p>The <a name="sfntVariationAxis"></a>format for the <code>sfntVariationAxis</code> array is as follows:</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th>
+          <div align="left">
+            Type
+          </div>
+        </th>
+        <th>
+          <div align="left">
+            Name
+          </div>
+        </th>
+        <th align="left">
+          <div align="left">
+            Description
+          </div>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint32</td>
+        <td>axisTag</td>
+        <td class="description">Axis name.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>fixed32</td>
+        <td>minValue</td>
+        <td class="description">The minimum style coordinate for the axis.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>fixed32</td>
+        <td>defaultValue</td>
+        <td class="description">The default style coordinate for the axis.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>fixed32</td>
+        <td>maxValue</td>
+        <td class="description">The maximum style coordinate for the axis.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>flags</td>
+        <td class="description">Set to zero.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>nameID</td>
+        <td class="description">The designation in the 'name' table.</td>
+      </tr>
+    </table>
+    <p>Each axis contains a tag with a registered name. Each axis is defined by its minimum value and maximum value. This is the dynamic range of the axis. A default value is also defined. The <code>nameID</code> specifies the name to be used in application style menus and font pickers. The <code>nameID</code> must be greater than 255 and less than 32768.</p>
+    <p>The <code>sfntInstance</code> array is a list of named coordinates. For example, it may be desirable to define and name specific coordinates for bold, demi, condense, demi condense, radical, or other appropriate styles.</p>
+    <p>The <a name="sfntInstance"></a>format of the <code>sfntInstance</code> array is shown in the following table:</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th>
+          <div align="left">
+            Type
+          </div>
+        </th>
+        <th>
+          <div align="left">
+            Name
+          </div>
+        </th>
+        <th align="left">
+          <div align="left">
+            Description
+          </div>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>nameID</td>
+        <td class="description">The name of the defined instance coordinate. Similar to the nameID in the variation axis record, this identifies a name in the font's 'name' table.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>uint16</td>
+        <td>flags</td>
+        <td class="description">Set to zero.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>fixed32</td>
+        <td>coord[axisCount]</td>
+        <td class="description">This is the coordinate of the defined instance.</td>
+      </tr>
+    </table>
+    <h2>Font Variations Table Example</h2>
+    <p>This example font has two variation axes. This table summarizes the font variation data to be included for this font:</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th>
+          <div align="left">
+            Axis Tag
+          </div>
+        </th>
+        <th>
+          <div align="left">
+            Min Value
+          </div>
+        </th>
+        <th>
+          <div align="left">
+            Default Value
+          </div>
+        </th>
+        <th>
+          <div align="left">
+            Maximum Value
+          </div>
+        </th>
+        <th>
+          <div align="left">
+            NameID
+          </div>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>'wght'</td>
+        <td>0.5</td>
+        <td>1.0</td>
+        <td>2.0</td>
+        <td class="description">256</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>'wdth'</td>
+        <td>0.5</td>
+        <td>1.0</td>
+        <td>2.0</td>
+        <td class="description">257</td>
+      </tr>
+    </table>
+    <p>The font variation table for this example font is given in the following table. The flags for both axes are 0.</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+      <tr align="left" valign="middle">
+        <th>
+          <div align="left">
+            Offset/<br>
+            length
+          </div>
+        </th>
+        <th>
+          <div align="left">
+            Value
+          </div>
+        </th>
+        <th>
+          <div align="left">
+            Name
+          </div>
+        </th>
+        <th align="left">
+          <div align="left">
+            Comment
+          </div>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>0/4</td>
+        <td>0x00010000</td>
+        <td>version</td>
+        <td class="description">Version number of the font variation table, in fixed-point format.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>4/2</td>
+        <td>20</td>
+        <td>offsetToData</td>
+        <td class="description">Offset from the beginning of the table to the beginning of the first axis data is 20 bytes.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>6/2</td>
+        <td>2</td>
+        <td>countSizePairs</td>
+        <td class="description">Set to 2.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>8/2</td>
+        <td>2</td>
+        <td>axisCount</td>
+        <td class="description">There are two axes in this font variation.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>10/2</td>
+        <td>20</td>
+        <td>axisSize</td>
+        <td class="description">Each gxFontVariation axis description requires 20 bytes.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>12/2</td>
+        <td>3</td>
+        <td>instanceCount</td>
+        <td class="description">There are three named instances.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>14/2</td>
+        <td>12</td>
+        <td>instanceSize</td>
+        <td class="description">Each sfntInstance requires 12 bytes.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td colspan="4">(The first <a href="Chap6fvar.html#sfntVariationAxis"><code>sfntVariationAxis</code></a> follows)</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>16/4</td>
+        <td>0x77676874</td>
+        <td>axisTag</td>
+        <td class="description">The axis tag in ASCII is 'wght'.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>20/4</td>
+        <td>0x00008000</td>
+        <td>minValue</td>
+        <td class="description">The minimum coordinate value defined for this axis is 0.5.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>24/4</td>
+        <td>0x00010000</td>
+        <td>defaultValue</td>
+        <td class="description">The default instance coordinate value defined for this axis is 1.0.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>28/4</td>
+        <td>0x00020000</td>
+        <td>maxValue</td>
+        <td class="description">The maximum value defined for this axis is 2.0.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>32/2</td>
+        <td>0x0000</td>
+        <td>flag</td>
+        <td class="description">No flag is set.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>34/2</td>
+        <td>256</td>
+        <td>nameID</td>
+        <td class="description">The nameID value in the name table.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td colspan="4">(The second <a href="Chap6fvar.html#sfntVariationAxis"><code>sfntVariationAxis</code></a> follows)</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>36/4</td>
+        <td>0x77647468</td>
+        <td>axisTag</td>
+        <td class="description">The axis tag in ASCII is 'wdth'.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>40/4</td>
+        <td>0x00008000</td>
+        <td>minValue</td>
+        <td class="description">The minimum coordinate value defined for this axis is 0.5.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>44/4</td>
+        <td>0x00010000</td>
+        <td>defaultValue</td>
+        <td class="description">The default instance coordinate value defined for this axis is 1.0.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>48/4</td>
+        <td>0x00020000</td>
+        <td>maxValue</td>
+        <td class="description">The maximum value defined for this axis is 2.0.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>52/2</td>
+        <td>0x0000</td>
+        <td>flag</td>
+        <td class="description">No flag is set.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>54/2</td>
+        <td>257</td>
+        <td>nameID</td>
+        <td class="description">The nameID designation in the name table.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td colspan="4">(The <a href="Chap6fvar.html#sfntInstance"><code>sfntInstance</code></a> array follows)</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>56/2</td>
+        <td>258</td>
+        <td>nameID[1]</td>
+        <td class="description">The nameID designation in the name table for the first instance.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>58/2</td>
+        <td>0</td>
+        <td>flags</td>
+        <td class="description">Set to zero.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>60/4</td>
+        <td>0x00008000</td>
+        <td>coordinate[1]</td>
+        <td class="description">Coordinate of the first instance along the first axis.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>64/4</td>
+        <td>0x00010000</td>
+        <td>coordinate[1]</td>
+        <td class="description">Coordinate of the first instance along the second axis.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>68/2</td>
+        <td>259</td>
+        <td>nameID[2]</td>
+        <td class="description">The nameID designation in the name table for the second instance.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>70/2</td>
+        <td>0</td>
+        <td>flags</td>
+        <td class="description">Set to zero.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>72/4</td>
+        <td>0x00020000</td>
+        <td>coordinate[2]</td>
+        <td class="description">Coordinate of the second instance along the first axis.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>76/4</td>
+        <td>0x00018000</td>
+        <td>coordinate[2]</td>
+        <td class="description">Coordinate of the second instance along the second axis.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>80/2</td>
+        <td>260</td>
+        <td>nameID[3]</td>
+        <td class="description">The nameID designation in the name table for the first instance.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>82/2</td>
+        <td>0</td>
+        <td>flags</td>
+        <td class="description">Set to zero.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>84/4</td>
+        <td>0x00020000</td>
+        <td>coordinate[3]</td>
+        <td class="description">Coordinate of the third instance along the first axis.</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>88/4</td>
+        <td>0x00008000</td>
+        <td>coordinate[3]</td>
+        <td class="description">Coordinate of the third instance along the second axis.</td>
+      </tr>
+    </table>
+    <h2>Dependencies</h2>
+    <p>The <code>'fvar'</code> table should have the same number of axes as the <a href="Chap6gvar.html"><code>'gvar'</code> table</a>. The name references should correspond do the correct entries in the <a href="Chap6name.html"><code>'name'</code> table</a>.</p>
+  </div>
+
+      </section>
+  </div><!-- /content -->
+
+  <div id="globalfooter">
+    <div id="breadory">
+      <ol id="breadcrumbs">
+        <li class="home"><a href="../../../index.html">Developer</a></li>
+        <li><a href="../../index.html">Fonts</a></li>
+        <li><a href="../index.html">TrueType™ Reference Manual</a></li>
+        <li>The TrueType Font File</li>
+      </ol>
+      <div id="directorynav" class="directorynav">
+	<div id="dn-cola" class="column">
+		<h3><a href="../../../platforms/index.html">Platforms</a></h3>
+		<ul>
+			<li><a href="../../../ios/index.html">iOS</a></li>
+			<li><a href="../../../osx/index.html">OS X</a></li>
+			<li><a href="../../../watchos/index.html">watchOS</a></li>
+			<li><a href="../../../tvos/index.html">tvOS</a></li>
+		</ul>
+		<h3><a href="../../../resources/index.html">Tools</a></h3>
+		<ul>
+			<li><a href="../../../xcode/index.html">Xcode</a></li>
+			<li><a href="../../../swift/index.html">Swift</a></li>
+		</ul>
+	</div>
+	<div id="dn-colb" class="column">
+		<h3><a href="../../../resources/index.html">Resources</a></h3>
+		<ul>
+			<li><a href="../../../library/index.html">Documentation</a></li>
+			<li><a href="../../../videos/index.html">Videos</a></li>
+			<li><a href="https://forums.developer.apple.com/">Forums</a></li>
+			<li><a href="../../../app-store/index.html">App Store</a></li>
+			<li><a href="../../../safari/index.html">Safari and Web</a></li>
+			<li><a href="../../../education/index.html">Education</a></li>
+			<li><a href="../../../enterprise/index.html">Enterprise</a></li>
+		</ul>
+	</div>
+	<div id="dn-colc" class="column">
+		<h3><a href="../../../programs/index.html">Programs</a></h3>
+		<ul>
+			<li><a href="../../../programs/index.html">Developer Program</a></li>
+			<li><a href="../../../programs/enterprise/index.html">Enterprise Program</a></li>
+			<li><a href="../../../programs/ios/university/index.html">iOS University Program</a></li>
+			<li><a href="../../../programs/mfi/index.html">MFi Program</a></li>
+		</ul>
+	</div>
+	<div id="dn-cold" class="column">
+		<h3><a href="../../../support/index.html">Support</a></h3>
+		<ul>
+			<li><a href="../../../support/development/index.html">Development</a></li>
+			<li><a href="../../../support/distribution/index.html">Distribution</a></li>
+			<li><a href="../../../support/membership/index.html">Membership</a></li>
+			<li><a href="../../../system-status/index.html">System Status</a></li>
+		</ul>
+	</div>
+	<div id="dn-cole" class="column">
+		<h3><a href="https://developer.apple.com/account/">Account</a></h3>
+		<ul>
+			<li><a href="https://developer.apple.com/account/">Developer Account</a></li>
+			<li><a href="../../../go/index-id=certificates-ids-profiles.html">Certificates, IDs &amp; Profiles</a></li>
+			<li><a href="https://itunesconnect.apple.com">iTunes Connect</a></li>			
+			<li><a href="../../../terms/index.html">License Agreements</a></li>
+		</ul>
+	</div>
+</div>
+
+    </div><!--/breadory-->
+    <ul class="gf-links piped footer-links">
+  <li><a href="../../../news/index.html" class="first">News &amp; Updates</a></li>
+  <li><a href="../../../bug-reporting/index.html">Report Bugs</a></li>
+  <li><a href="../../../contact/index.html">Contact Us</a></li>
+</ul>
+
+<div class="gf-sosumi footer-sosumi">
+  <p>Copyright © 2016 Apple Inc. All rights reserved.</p>
+    <ul class="piped">
+        <li><a href="http://www.apple.com/legal/internet-services/terms/site.html" class="first">Terms of Use</a></li>
+        <li><a href="http://www.apple.com/privacy/privacy-policy/">Privacy Policy</a></li>
+    </ul>
+</div>
+
+<!--<div id="gf-links piped footer-links">
+	<ul>
+		<li><a href="/cn/" title="Simplified Chinese">简体中文</a></li>
+		<li><a href="/jp/" title="Japanese">日本語</a></li>
+		<li><a href="/kr/" title="Korean">한국어</a></li>
+	</ul>
+</div>-->
+
+  </div><!--/globalfooter-->
+</body>
+</html>

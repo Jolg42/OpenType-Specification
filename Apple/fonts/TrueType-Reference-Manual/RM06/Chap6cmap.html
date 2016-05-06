@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="Author" content="Apple Inc." />
+<meta name="viewport" content="width=1024" />
+<link rel="shortcut icon" href="../../../favicon.ico" />
+<link rel="icon" href="../../../favicon.ico" />
+<link rel="stylesheet" href="https://www.apple.com/wss/fonts?family=Myriad+Set+Pro&amp;v=2" type="text/css" />
+<link rel="stylesheet" href="../../../assets/styles/transition-global.css" type="text/css" />
+<link rel="stylesheet" href="../../../assets/styles/transition-header.css" type="text/css" />
+<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/core/styles/adc.css" type="text/css" />
+<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/styles/topbar.css" type="text/css" />
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/lib/prototype.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/lib/scriptaculous.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/browserdetect.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/apple_core.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/search_decorator.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/adc_core.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/scripts/ac_retina.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/topbarDropdown.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	document.write('<link rel="stylesheet" type="text/css" href="https://devimages.apple.com.edgekey.net/assets/styles/script.css" media="screen">');
+</script>
+<!-- Augmented Search -->
+<!--<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/styles/augmented_search.css" type="text/css">-->
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/lib/jquery/jquery-1.11.0.min.js"></script>
+<script>jQuery.noConflict();</script>
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/lib/jquery/jquery.retinate.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/scripts/augmented_search.js"></script>-->
+<script src="../../../assets/scripts/augmented_search.js"></script>
+<script src="../../../assets/scripts/global-header.js"></script>
+
+  <meta name="Author" content="Apple Inc.">
+  <meta name="viewport" content="width=1024">
+  <link rel="shortcut icon" href="https://devimages.apple.com.edgekey.net/favicon.ico">
+  <link rel="icon" href="https://devimages.apple.com.edgekey.net/favicon.ico">
+  <link rel="stylesheet" href="../AAT.css" type="text/css">
+  <title>Character to Glyph Mapping Table</title>
+</head>
+<body class="white sidenav-page">
+  <nav id="globalheader" role="navigation" aria-label="Global Navigation">
+  <div id="gh-content" class="gh-content">
+    <ul class="gh-menu">
+      <li id="gh-menu-icon-toggle" class="gh-menu-icon gh-menu-icon-toggle enhance">
+        <button id="gh-svg-icons" class="gh-svg-wrapper">
+          <span class="text-replace">Menu</span>
+          <svg x="0px" y="0px" width="100%" viewBox="0 0 96 96" class="gh-svg gh-svg-top" enable-background="new 0 0 96 96"><rect width="32" height="4" x="32" y="46" class="gh-svg-rect gh-svg-rect-top"></rect></svg>
+          <svg x="0px" y="0px" width="100%" viewBox="0 0 96 96" class="gh-svg gh-svg-bottom" enable-background="new 0 0 96 96"><rect width="32" height="4" x="32" y="46" class="gh-svg-rect gh-svg-rect-bottom"></rect></svg>
+        </button>
+      </li>
+      <li id="gh-menu-icon-home" class="gh-menu-icon gh-menu-icon-home">
+        <a href="../../../index.html">
+          <span class="text-replace">Apple Developer</span>
+        </a>
+      </li>
+    </ul>
+    <div class="gh-nav">
+      <div class="gh-nav-view">
+        <ul class="gh-nav-list">
+
+          <li class="gh-tab gh-nav-developer" data-hires="true"><a class="gh-tab-link" href="../../../index.html"><span class="text-replace">Apple Developer</span></a></li>
+          <li class="gh-tab gh-nav-technologies"><a class="gh-tab-link" href="../../../platforms/index.html">Platforms</a></li>
+          <li class="gh-tab gh-nav-resources"><a class="gh-tab-link" href="../../../resources/index.html">Resources</a></li>
+          <li class="gh-tab gh-nav-programs"><a class="gh-tab-link" href="../../../programs/index.html">Program</a></li>
+          <li class="gh-tab gh-nav-support"><a class="gh-tab-link" href="../../../support/index.html">Support</a></li>
+          <li class="gh-tab gh-nav-account">
+            <a class="gh-tab-link gh-account-profile" href="https://developer.apple.com/account/">Account</a>
+          </li>
+          <li class="gh-tab gh-nav-search">
+
+            <div id="gh-search" class="gh-search" role="search">
+              <form action="/search/index.php" method="get" class="gh-search-form" id="gh-search-form" role="search">
+
+                <div class="gh-search-input-wrapper">
+                  <label for="gh-search-input" class="text-replace">Search Apple Developer</label>
+                  <input type="text" name="q" id="gh-search-input" class="augmented gh-search-input" placeholder="Search Apple Developer" autocomplete="off" autocorrect="off" autocapitalize="off">
+                </div>
+
+                <button disabled type="submit" id="gh-search-submit" class="gh-search-submit gh-search-magnify"><span class="text-replace">Search Apple Developer</span></button>
+                <button disabled type="reset" id="gh-search-reset" class="gh-search-reset"><span class="text-replace">Reset</span></button>
+
+              </form>
+            </div>
+
+            <a class="gh-search-magnify" href="../../../search/index.html"><span class="text-replace">Search Apple Developer</span></a>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+  <div id="top">
+<!-- SiteCatalyst code version: H.8. Copyright 1997-2006 Omniture, Inc. -->
+<script type="text/javascript">
+/* RSID: */
+var s_account="appleglobal,appleusdeveloper"
+</script>
+
+<script type="text/javascript" src="https://www.apple.com/metrics/scripts/s_code_h.js"></script>
+<script type="text/javascript">
+s.pageName= AC && AC.Tracking && AC.Tracking.pageName();
+s.channel="www.us.developer"
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)</script>
+<!-- End SiteCatalyst code version: H.8. -->
+</div>
+
+  <div id="content" class="content" data-hires="false">
+    <section>
+  <div id="navBar">
+    <!-- NAVBARSTART -->
+    <p class="bold"><a href="../index.html">TrueType Reference Manual</a></p>
+    <ul class="outer">
+      <li><a href="../RM01/Chap1.html">Digitizing Letterforms</a></li>
+      <li><a href="../RM02/Chap2.html">The Font Engine</a></li>
+      <li><a href="../RM03/Chap3.html">Instructing Fonts</a></li>
+      <li><a href="../RM04/Chap4.html">The Graphics State</a></li>
+      <li><a href="../RM05/Chap5.html">The Instruction Set</a></li>
+      <li><a href="Chap6.html">Font Tables</a></li>
+      <li class="c1">
+        <ul class="inner">
+          <li><a href="Chap6.html#Intro">Introduction</a></li>
+          <li><a href="Chap6.html#Types">Data Types</a></li>
+          <li><a href="Chap6.html#Overview">Overview of TrueType</a></li>
+          <li><a href="Chap6AATIntro.html">Overview of AAT</a></li>
+          <li><a href="Chap6Tables.html">Special Tables</a></li>
+          <li><a href="Chap6.html#Directory">The Font Directory</a></li>
+          <li><a href="Chap6acnt.html">The <code>'acnt'</code> table</a></li>
+          <li><a href="Chap6ankr.html">The <code>'ankr'</code> table</a></li>
+          <li><a href="Chap6avar.html">The <code>'avar'</code> table</a></li>
+          <li><a href="Chap6bdat.html">The <code>'bdat'</code> table</a></li>
+          <li><a href="Chap6bhed.html">The <code>'bhed'</code> table</a></li>
+          <li><a href="Chap6bloc.html">The <code>'bloc'</code> table</a></li>
+          <li><a href="Chap6bsln.html">The <code>'bsln'</code> table</a></li>
+          <li>The <code>'cmap'</code> table</li>
+          <li><a href="Chap6cvar.html">The <code>'cvar'</code> table</a></li>
+          <li><a href="Chap6cvt.html">The <code>'cvt '</code> table</a></li>
+          <li><a href="Chap6EBSC.html">The <code>'EBSC'</code> table</a></li>
+          <li><a href="Chap6fdsc.html">The <code>'fdsc'</code> table</a></li>
+          <li><a href="Chap6feat.html">The <code>'feat'</code> table</a></li>
+          <li><a href="Chap6fmtx.html">The <code>'fmtx'</code> table</a></li>
+          <li><a href="Chap6fond.html">The <code>'fond'</code> table</a></li>
+          <li><a href="Chap6fpgm.html">The <code>'fpgm'</code> table</a></li>
+          <li><a href="Chap6fvar.html">The <code>'fvar'</code> table</a></li>
+          <li><a href="Chap6gasp.html">The <code>'gasp'</code> table</a></li>
+          <li><a href="Chap6gcid.html">The <code>'gcid'</code> table</a></li>
+          <li><a href="Chap6glyf.html">The <code>'glyf'</code> table</a></li>
+          <li><a href="Chap6gvar.html">The <code>'gvar'</code> table</a></li>
+          <li><a href="Chap6hdmx.html">The <code>'hdmx'</code> table</a></li>
+          <li><a href="Chap6head.html">The <code>'head'</code> table</a></li>
+          <li><a href="Chap6hhea.html">The <code>'hhea'</code> table</a></li>
+          <li><a href="Chap6hmtx.html">The <code>'hmtx'</code> table</a></li>
+          <li><a href="Chap6just.html">The <code>'just'</code> table</a></li>
+          <li><a href="Chap6kern.html">The <code>'kern'</code> table</a></li>
+          <li><a href="Chap6kerx.html">The <code>'kerx'</code> table</a></li>
+          <li><a href="Chap6lcar.html">The <code>'lcar'</code> table</a></li>
+          <li><a href="Chap6loca.html">The <code>'loca'</code> table</a></li>
+          <li><a href="Chap6ltag.html">The <code>'ltag'</code> table</a></li>
+          <li><a href="Chap6maxp.html">The <code>'maxp'</code> table</a></li>
+          <li><a href="Chap6meta.html">The <code>'meta'</code> table</a></li>
+          <li><a href="Chap6mort.html">The <code>'mort'</code> table</a></li>
+          <li><a href="Chap6morx.html">The <code>'morx'</code> table</a></li>
+          <li><a href="Chap6name.html">The <code>'name'</code> table</a></li>
+          <li><a href="Chap6opbd.html">The <code>'opbd'</code> table</a></li>
+          <li><a href="Chap6OS2.html">The <code>'OS/2'</code> table</a></li>
+          <li><a href="Chap6post.html">The <code>'post'</code> table</a></li>
+          <li><a href="Chap6prep.html">The <code>'prep'</code> table</a></li>
+          <li><a href="Chap6prop.html">The <code>'prop'</code> table</a></li>
+          <li><a href="Chap6sbix.html">The <code>'sbix'</code> table</a></li>
+          <li><a href="Chap6trak.html">The <code>'trak'</code> table</a></li>
+          <li><a href="Chap6vhea.html">The <code>'vhea'</code> table</a></li>
+          <li><a href="Chap6vmtx.html">The <code>'vmtx'</code> table</a></li>
+          <li><a href="Chap6xref.html">The <code>'xref'</code> table</a></li>
+          <li><a href="Chap6Zapf.html">The <code>'Zapf'</code> table</a></li>
+        </ul>
+      </li>
+      <li><a href="../RM07/appendixA.html">Instruction Set Summary</a></li>
+      <li><a href="../RM07/appendixB.html">Glyph Mappings</a></li>
+      <li><a href="../RM08/appendixE.html">Converting Outlines</a></li>
+	<li><a href="../RM09/AppendixF.html">Font Feature Registry</a></li>
+    </ul><!-- NAVBAREND -->
+  </div>
+  <div id="chapterContent">
+    <header><h1><a name="cmap" id="cmap"></a>The <code>'cmap'</code> table</h1></header>
+    <h2>General table information</h2>
+    <p>The <code>'cmap'</code> table maps character codes to glyph indices. The choice of encoding for a particular font is dependent upon the conventions used by the intended platform. A font intended to run on multiple platforms with different encoding conventions will require multiple encoding tables. As a result, the <code>'cmap'</code> table may contain multiple subtables, one for each supported encoding scheme.</p>
+    <p>Character codes that do not correspond to any glyph in the font should be mapped to glyph index 0. At this location in the font there must be a special glyph representing a missing character, typically a box. No character code should be mapped to glyph index -1, which is a special value reserved in processing to indicate the position of a glyph deleted from the glyph stream.</p>
+    <p>The <code>'cmap'</code> table begins with an index containing the table version number followed by the number of encoding tables. The encoding subtables follow.</p>
+    <p>The original definition of the <code>'cmap'</code> table in versions of Unicode from 2.0 onwards, it is possible that fonts may require references to data that uses a mixture of sixteen and thirty-two or thirty-two bits per character.</p>
+    <p>It was originally suggested that a version number of 0 is used to indicate that only encoding subtables of types 0 through 6 are present in the <code>'cmap'</code> table.</p>
+    <p>This suggestion is now dropped. All <code>'cmap'</code> tables should set the version number to 0.</p>
+    <table>
+    <caption>The <code>'cmap'</code> index</caption>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>UInt16</td>
+        <td>version</td>
+        <td class="description">Version number (Set to zero)</td>
+      </tr>
+      <tr>
+        <td>UInt16</td>
+        <td>numberSubtables</td>
+        <td class="description">Number of encoding subtables</td>
+      </tr>
+    </table>
+    <h2>The <code>'cmap'</code> encoding subtables</h2>
+    <p>Each <code>'cmap'</code> table. The third entry is the offset of the actual mapping table.</p>
+    <table>
+    <caption>The <code>'cmap'</code> encoding subtable</caption>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>UInt16</td>
+        <td>platformID</td>
+        <td class="description">Platform identifier</td>
+      </tr>
+      <tr>
+        <td>UInt16</td>
+        <td>platformSpecificID</td>
+        <td class="description">Platform-specific encoding identifier</td>
+      </tr>
+      <tr>
+        <td>UInt32</td>
+        <td>offset</td>
+        <td class="description">Offset of the mapping table</td>
+      </tr>
+    </table>
+    <p>The <code>'cmap'</code> encoding subtables must be sorted first in ascending order by platform identifier and then by platform-specific encoding identifier.</p>
+    <p>The <code>platformID</code> and <code>platformSpecificID</code> fields use the same values as are used by the equivalent fields in the <a href="../Chap6name.html"><code>'name'</code></a> table:</p> 
+    <table border="1" cellspacing="2" cellpadding="0">
+    <caption><code>'cmap'</code> Platforms</caption>
+      <tr>
+        <th>
+          <div>
+            Platform ID
+          </div>
+        </th>
+        <th>
+          <div>
+            Platform
+          </div>
+        </th>
+        <th>
+            Description
+        </th>
+      </tr>
+      <tr>
+        <td>0</td>
+        <td>Unicode</td>
+        <td class="description">Indicates Unicode version.</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Macintosh</td>
+        <td class="description">Script Manager code.</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td colspan="2">(reserved; do not use)</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Microsoft</td>
+        <td class="description">Microsoft encoding.</td>
+      </tr>
+    </table>
+    <p>When the <code>platformID</code> is 0 (Unicode), the <code>platformSpecificID</code> is interpreted as follows:</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+    <caption>Unicode Platform-specific Encoding Identifiers</caption>
+      <tr align="left" valign="middle">
+        <th>
+          <div align="left">
+            Platform-<br>
+            specific<br>
+            ID code
+          </div>
+        </th>
+        <th align="left">
+          <div align="left">
+            Meaning
+          </div>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>0</td>
+        <td class="description">Default semantics</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>1</td>
+        <td class="description">Version 1.1 semantics</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>2</td>
+        <td class="description">ISO 10646 1993 semantics (deprecated)</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>3</td>
+        <td class="description">Unicode 2.0 or later semantics (BMP only)</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>4</td>
+        <td class="description">Unicode 2.0 or later semantics (non-BMP characters allowed)</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>5</td>
+        <td class="description">Unicode Variation Sequences</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>6</td>
+        <td class="description">Full Unicode coverage (used with type 13.0 cmaps by OpenType)</td>
+      </tr>
+    </table>
+    <p>When the <code>platformID</code> is 1 (Macintosh), the <code>platformSpecificID</code> is a QuickDraw script code.</p>
+    <p>Note that the use of the Macintosh <code>platformID</code> is currently discouraged. Subtables with a Macintosh <code>platformID</code> are only required for backwards compatibility with QuickDraw and will be synthesized from Unicode-based subtables if ever needed.</p>
+    <p>When the <code>platformID</code> is 3 (Windows), the <code>platformSpecificID</code> is a is interpreted as follows:</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+    <caption>Windows Platform-specific Encoding Identifiers</caption>
+      <tr align="left" valign="middle">
+        <th>
+          <div align="left">
+            Platform-<br>
+            specific<br>
+            ID code
+          </div>
+        </th>
+        <th align="left">
+          <div align="left">
+            Meaning
+          </div>
+        </th>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>0</td>
+        <td class="description">Symbol</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>1</td>
+        <td class="description">Unicode BMP-only (UCS-2)</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>2</td>
+        <td class="description">Shift-JIS</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>3</td>
+        <td class="description">PRC</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>4</td>
+        <td class="description">BigFive</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>5</td>
+        <td class="description">Johab</td>
+      </tr>
+      <tr align="left" valign="middle">
+        <td>10</td>
+        <td class="description">Unicode UCS-4</td>
+      </tr>
+    </table>
+    <p>Font should all have a Unicode cmap, either with a Unicode <code>platformID</code> or a Microsoft <code>platformID</code> and appropriate <code>platformSpecificID</code>.</p>
+    <p>Fonts should not have more than one cmap with a Unicode <code>platformID</code> and a type other than 14. If a font does such multiple cmaps, only one will be used and the others ignored. Which one is used is not defined.</p>
+    <p>The table below lists the available <code>platform</code>/<code>platformSpecificID</code> values for a Unicode cmap in the order in which the system looks for them.  That is, if a font has a 0/4 cmap (Unicode <code>platformID</code>, Unicode 2.0 or later <code>platformSpecificID</code>), that will be used by OS X and iOS as <em>the</em> Unicode cmap for the font and the others will be ignored.</p>
+    <table border="1" cellspacing="2" cellpadding="0">
+    <caption>Platform Identifiers</caption>
+      <tr>
+        <th>
+            platformID
+        </th>
+        <th>
+            platformSpecificID
+        </th>
+        <th>
+            Description
+        </th>
+      </tr>
+      <tr>
+        <td>0</td>
+        <td>4</td>
+        <td class="description">Unicode, 2.0 or later.</td>
+      </tr>
+      <tr>
+        <td>0</td>
+        <td>< 4</td>
+        <td class="description">Unicode, version of Unicode</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>10</td>
+        <td class="description">Windows, Unicode UCS-4</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>1</td>
+        <td class="description">Windows, Unicode BMP (UCS-2)</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>0</td>
+        <td class="description">Windows, Symbol</td>
+      </tr>
+    </table>
+    <p>If a font has a 3/10 cmap (Windows, UCS-4), it should also have a 3/1 (Windows, BMP-only) cmap as well for backwards compatibility with Windows XP.  The two should have identical mappings for Unicode's Basic Multilingual Plane.</p>
+    <p>See the <a href="http://www.microsoft.com/typography/otspec/cmap.htm">OpenType specification</a> for further requirements for the Windows platform.</p>
+    <p>Note that because the <code>'cmap'</code> table uses offsets to the actual data for any <code>platform</code>/<code>platformSpecificID</code>, it's possible for a type 0/4 and type 3/10 cmap to have the same actual data, not just identical data.</p>
+    <p>The Macintosh <code>platformID</code> is only useful for backwards compatibility with QuickDraw.  If a font lacks one, the system will synthesize one as required using a Unicode cmap as the data source.</p>
+    <p><code>platformID</code> values other than 0, 1, or 3 are allowed but cmaps using them will be ignored.</p> 
+    <h2>The <code>'cmap'</code> table and language codes</h2>
+    <p>Each <code>'cmap'</code> subtable has a two-byte language code associated with it. This language code is only used for subtables with a Macintosh <code>platformID</code>. For such subtables, it is interpreted as one more than a QuickDraw language code, or zero if the subtable is language independent. In all other subtables, it should be zero.</p>
+    <p>Note that the use of the Macintosh <code>platformID</code> is currently discouraged. Subtables with a Macintosh <code>platformID</code> are only required for backwards compatibility with QuickDraw and will be synthesized from Unicode-based subtables if ever needed.</p>
+    <h2>The <code>'cmap'</code> formats</h2>
+    <p>Each <code>'cmap'</code> subtable is in one of nine currently available formats. These are format 0, format 2, format 4, format 6, format 8.0, format 10.0, format 12.0, format 13.0, and format 14 described in the next section.</p>
+    <p>The Macintosh standard character to glyph mapping is supported by format 0. Format 2 supports a mixed 8/16 bit mapping useful for Japanese, Chinese and Korean. Format 4 is used for 16 bit mappings. Format 6 is used for dense 16 bit mappings.</p>
+    <p>Formats 8, 10, and 12, 13, and 14 (properly 8.0, 10.0, 12.0, 13.0, and 14) are used for mixed 16/32-bit and pure 32-bit mappings. This supports text encoded with surrogates in Unicode 2.0 and later.</p>
+    <p>Format 8.0, 10.0, 12.0, and 13.0 subtables all start with a 32-bit fixed-point format field.  The others all start with a 16-bit integer format field.  Because the decimal portion of the fixed-point format fields is currently always 0, type 8.0, 10.0, 12.0, and 13.0 subtables can be treated as having a 16-bit integer format field followed by sixteen bits of padding.</p>
+    <p>Many of the cmap formats are either obsolete or were designed to meet anticipated needs which never materialized. Modern font generation tools need not be able to write general-purpose cmaps in formats other than 4, 6, and 12. Formats 13 and 14 are both for specialized uses. Of the two, only support for format 14 is likely to be needed.</p>
+    <h3><code>'cmap'</code> format 0</h3>
+    <p>Format 0 is suitable for fonts whose character codes and glyph indices are restricted to a single byte. This was a very common situation when TrueType was introduced but is rarely encountered now.</p>
+    <table>
+    <caption><code>'cmap'</code> format 0</caption>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>UInt16</td>
+        <td>format</td>
+        <td class="description">Set to 0</td>
+      </tr>
+      <tr>
+        <td>UInt16</td>
+        <td>length</td>
+        <td class="description">Length in bytes of the subtable (set to 262 for format 0)</td>
+      </tr>
+      <tr>
+        <td>UInt16</td>
+        <td>language</td>
+        <td class="description">Language code (see above)</td>
+      </tr>
+      <tr>
+        <td>UInt8</td>
+        <td>glyphIndexArray[256]</td>
+        <td class="description">An array that maps character codes to glyph index values</td>
+      </tr>
+    </table>
+    <h3><code>'cmap'</code> format 2</h3>
+    <p>The format 2 mapping subtable type is used for fonts containing Japanese, Chinese, or Korean characters. The code standards used in this table are supported on Macintosh systems in Asia. These fonts contain a mixed 8/16-bit encoding, in which certain byte values are set aside to signal the first byte of a 2-byte character. These special values are also legal as the second byte of a 2-byte character.</p>
+    <p>The following table shows the format of a format 2 encoding subtable. The <code>subHeaderKeys</code> array maps each possible high byte into a particular member of the suborders array. This allows the determination of whether or not a second byte is used. In either case, the path leads into the <code>glyphIndexArray</code> from which the mapped glyph index is obtained. The sequence of operations is as follows:</p>
+    <p>Consider a high byte, <code>i</code>, designating an integer between 0 and 255. The value <code>subHeaderKeys[i]</code>, divided by 8, is the index <code>k</code> into the <code>subHeaders</code> array. The value <code>k</code> equals 0 is special. It means that <code>i</code> is a one-byte code and no second byte will be referenced. If <code>k</code> is positive, then <code>i</code> is the high-byte of a two-byte code and its second byte <code>j</code> will be consumed.</p>
+    <table>
+     <caption><code>'cmap'</code> format 2</caption>
+     <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>UInt16</td>
+        <td>format</td>
+        <td class="description">Set to 2</td>
+      </tr>
+      <tr>
+        <td>UInt16</td>
+        <td>length</td>
+        <td class="description">Total table length in bytes</td>
+      </tr>
+      <tr>
+        <td>UInt16</td>
+        <td>language</td>
+        <td class="description">Language code (see above)</td>
+      </tr>
+      <tr>
+        <td>UInt16</td>
+        <td>subHeaderKeys[256]</td>
+        <td class="description">Array that maps high bytes to subHeaders: value is index * 8</td>
+      </tr>
+      <tr>
+        <td>UInt16 * 4</td>
+        <td>subHeaders[variable]</td>
+        <td class="description">Variable length array of subHeader structures</td>
+      </tr>
+      <tr>
+        <td>UInt16</td>
+        <td>glyphIndexArray[variable]</td>
+        <td class="description">Variable length array containing subarrays</td>
+      </tr>
+    </table>
+    <p>The subHeader data type is a 4-word structure defined by the C-language structure shown below:</p>
+    <pre>
+<code>typedef struct {</code>
+<code>    UInt16  firstCode;</code>
+<code>    UInt16  entryCount;</code>
+<code>    int16   idDelta;</code>
+<code>    UInt16  idRangeOffset;</code>
+<code>} subheader;</code>
+</pre>
+    <p>If <code>k</code> is positive, then the four values belonging to <code>subheaders[k]</code> are used as follows with <code>firstCode</code> and <code>entryCount</code> defining the allowable range for the second byte <code>j</code>:</p>
+    <p><code>firstCode &lt;= j &lt; (firstCode + entryCount)</code></p>
+    <p>If <code>j</code> is outside this range, index 0 (the missing character glyph) is returned. Otherwise, <code>idRangeOffset</code> is used to identify the associated range within the <code>glyphIndexArray</code>. The <code>glyphIndexArray</code> immediately follows the <code>subHeaders</code> array and may be loosely viewed as an extension to it. The value of the <code>idRangeOffset</code> is the number of bytes past the actual location of the <code>idRangeOffset</code> word where the <code>glyphIndexArray</code> element corresponding to <code>firstCode</code> appears. If <code>p</code> is zero, it is returned directly. If <code>p</code> is nonzero, <code>p = p + idDelta</code> is returned. The sum is reduced modulo 65536, if necessary.</p>
+    <p>For the one-byte case with <code>k</code> = 0, the structure <code>subHeaders[0]</code> will show <code>firstCode</code> = 0, <code>entryCount</code> = 256, and <code>idDelta</code> = 0. The <code>idRangeOffset</code> will point, as previously discussed, to the beginning of the <code>glyphIndexArray</code>. Indexing <code>i</code> words into this array gives the returned value <code>p = glyphIndexArray[i]</code>.</p>
+    <p>The format 2 cmap is targeted at mixed 8/16-bit encodings such as Big Five and Shift-JIS.  Such encodings are still widely used, but OS X and iOS will correctly support them even if a type 2 cmap is not present.</p>
+    <h3><code>'cmap'</code> format 4</h3>
+    <p>Format 4 is a two-byte encoding format. It should be used when the character codes for a font fall into several contiguous ranges, possibly with holes in some or all of the ranges. That is, some of the codes in a range may not be associated with glyphs in the font. Two-byte fonts that are densely mapped should use Format 6.</p>
+    <p>The table begins with the format number, the length and language. The format-dependent data follows. It is divided into three parts:</p>
+    <ul>
+      <li>A four-word header giving parameters needed for an optimized search of the segment list</li>
+      <li>Four parallel arrays describing the segments (one segment for each contiguous range of codes)</li>
+      <li>A variable-length array of glyph IDs</li>
+    </ul>
+    <table>
+    <caption><code>'cmap'</code> format 4</caption>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>UInt16</td>
+        <td>format</td>
+        <td class="description">Format number is set to 4</td>
+      </tr>
+      <tr>
+        <td>UInt16</td>
+        <td>length</td>
+        <td class="description">Length of subtable in bytes</td>
+      </tr>
+      <tr>
+        <td>UInt16</td>
+        <td>language</td>
+        <td class="description">Language code (see above)</td>
+      </tr>
+      <tr>
+        <td>UInt16</td>
+        <td>segCountX2</td>
+        <td class="description">2 * segCount</td>
+      </tr>
+      <tr>
+        <td>UInt16</td>
+        <td>searchRange</td>
+        <td class="description">2 * (2**FLOOR(log<sub>2</sub>(segCount)))</td>
+      </tr>
+      <tr>
+        <td>UInt16</td>
+        <td>entrySelector</td>
+        <td class="description">log<sub>2</sub>(searchRange/2)</td>
+      </tr>
+      <tr>
+        <td>UInt16</td>
+        <td>rangeShift</td>
+        <td class="description">(2 * segCount) - searchRange</td>
+      </tr>
+      <tr>
+        <td>UInt16</td>
+        <td>endCode[segCount]</td>
+        <td class="description">Ending character code for each segment, last = 0xFFFF.</td>
+      </tr>
+      <tr>
+        <td>UInt16</td>
+        <td>reservedPad</td>
+        <td class="description">This value should be zero</td>
+      </tr>
+      <tr>
+        <td>UInt16</td>
+        <td>startCode[segCount]</td>
+        <td class="description">Starting character code for each segment</td>
+      </tr>
+      <tr>
+        <td>UInt16</td>
+        <td>idDelta[segCount]</td>
+        <td class="description">Delta for all character codes in segment</td>
+      </tr>
+      <tr>
+        <td>UInt16</td>
+        <td>idRangeOffset[segCount]</td>
+        <td class="description">Offset in bytes to glyph indexArray, or 0</td>
+      </tr>
+      <tr>
+        <td>UInt16</td>
+        <td>glyphIndexArray[variable]</td>
+        <td class="description">Glyph index array</td>
+      </tr>
+    </table>
+    <p>The number of segments is specified by the variable <code>segCount</code>. This variable is not explicitly used in the Format 4 table, however it is the number from which all of the table parameters are derived. The <code>segCount</code> is the number of contiguous code ranges in the font. The <code>searchRange</code> value is twice the largest power of 2 that is less than or equal to <code>segCount</code>.</p>
+    <p>Example Format 4 subtable values are shown in this table:</p>
+    <table width="80%">
+      <tr>
+        <td>segCount</td>
+        <td>39</td>
+        <td class="description">Not calculated; determined from the organization of the glyph indices</td>
+      </tr>
+      <tr>
+        <td>searchRange</td>
+        <td>64</td>
+        <td class="description">(2 * (largest power of 2 &lt;= 39)) = 2 * 32</td>
+      </tr>
+      <tr>
+        <td>entrySelector</td>
+        <td>5</td>
+        <td class="description">(log<sub>2</sub>(the largest power of 2 &lt; segCount))</td>
+      </tr>
+      <tr>
+        <td>rangeShift</td>
+        <td>14</td>
+        <td class="description">(2 * segCount) - searchRange = (2 * 39) - 64</td>
+      </tr>
+    </table>
+    <p>Each segment is described by a <code>startCode</code>, an <code>endCode</code>, an <code>idDelta</code> and an <code>idRangeOffset</code>. These are used for mapping the character codes in the segment. The segments are sorted in order of increasing endCode values.</p>
+    <p>To use these arrays, it is necessary to search for the first <code>endCode</code> that is greater than or equal to the character code to be mapped. If the corresponding <code>startCode</code> is less than or equal to the character code, then use the corresponding <code>idDelta</code> and <code>idRangeOffset</code> to map the character code to the glyph index. Otherwise, the missing character glyph is returned. To ensure that the search will terminate, the final <code>endCode</code> value must be <code>0xFFFF</code>. This segment need not contain any valid mappings. It can simply map the single character code <code>0xFFFF</code> to the missing character glyph, glyph 0.</p>
+    <p>If the <code>idRangeOffset</code> value for the segment is not 0, the mapping of the character codes relies on the <code>glyphIndexArray</code>. The character code offset from <code>startCode</code> is added to the <code>idRangeOffset</code> value. This sum is used as an offset from the current location within <code>idRangeOffset</code> itself to index out the correct <code>glyphIdArray</code> value. This indexing method works because <code>glyphIdArray</code> immediately follows <code>idRangeOffset</code> in the font file. The address of the glyph index is given by the following equation:</p>
+    <p><code>glyphIndexAddress = idRangeOffset[i] + 2 * (c - startCode[i]) + (Ptr) &amp;idRangeOffset[i]</code></p>
+    <p>Multiplication by 2 in this equation is required to convert the value into bytes.</p>
+    <p>Alternatively, one may use an expression such as:</p>
+    <p><code>glyphIndex = *( &amp;idRangeOffset[i] + idRangeOffset[i] / 2 + (c - startCode[i]) )</code></p>
+    <p>This form depends on <code>idRangeOffset</code> being an array of <code>UInt16'</code>s.</p>
+    <p>Once the glyph indexing operation is complete, the glyph ID at the indicated address is checked.  If it's not 0 (that is, if it's not the missing glyph), the value is added to <code>idDelta[i]</code> to get the actual glyph ID to use.</p>
+    <p>If the <code>idRangeOffset</code> is 0, the <code>idDelta</code> value is added directly to the character code to get the corresponding glyph index:</p>
+    <p><code>glyphIndex = idDelta[i] + c</code></p>
+    <p><strong>NOTE</strong>: All <code>idDelta[i]</code> arithmetic is modulo 65536.</p>
+    <p>The following table gives an example of the parameters required to map characters 10-20, 30-90, and 100-153 to a contiguous range of glyph indices. The parameter <code>segCount</code> = 4 for this example. This table gives the mapping variant parameter values for a Format 4 subtable example. The example data demonstrates how the character-to glyph index mapping values are calculated. Assumptions for this table are that <code>segCountX2</code> is 8, <code>searchRange</code> is 8, <code>entrySelector</code> is 2, <code>rangeShift</code> is 0.</p>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Segment 1<br>
+        Chars 10-20</th>
+        <th>Segment 2<br>
+        Chars 30-90</th>
+        <th>Segment 3<br>
+        Chars 100-153</th>
+        <th>Segment 4<br>
+        Missing Glyph</th>
+      </tr>
+      <tr>
+        <td>endCode</td>
+        <td>20</td>
+        <td>90</td>
+        <td>153</td>
+        <td class="description">0xFFFF</td>
+      </tr>
+      <tr>
+        <td>startCode</td>
+        <td>10</td>
+        <td>30</td>
+        <td>100</td>
+        <td class="description">0xFFFF</td>
+      </tr>
+      <tr>
+        <td>idDelta</td>
+        <td>-9</td>
+        <td>-18</td>
+        <td>-27</td>
+        <td class="description">1</td>
+      </tr>
+      <tr>
+        <td>idRangeOffset</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td class="description">0</td>
+      </tr>
+    </table>
+    <p>This table performs the following mappings:</p>
+    <p>&nbsp;</p>
+    <pre>
+<code>        10 is mapped to 10-9 or 1</code>
+<code>        20 is mapped to 20-9 or 11</code>
+<code>        30 is mapped to 30-18 or 12</code>
+<code>        90 is mapped to 90-18 or 72</code>
+</pre>
+    <p>and so on.</p>
+    <p>Type 4 cmaps are required for backwards compatibility in Windows and are generally useful for BMP-only Unicode fonts.</p>
+    <h3><code>'cmap'</code> format 6</h3>
+    <p>Format 6 is used to map 16-bit, 2-byte, characters to glyph indexes. It is sometimes called the trimmed table mapping. It should be used when character codes for a font fall into a single contiguous range. This results in what is termed a <em><em>dense mapping</em></em> . Two-byte fonts that are not densely mapped (due to their multiple contiguous ranges) should use Format 4. Character-to-glyph index mapping subtable Format 6 is shown in the following table:</p>
+    <table>
+    <caption><code>'cmap'</code> format 6</caption>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>UInt16</td>
+        <td>format</td>
+        <td class="description">Format number is set to 6</td>
+      </tr>
+      <tr>
+        <td>UInt16</td>
+        <td>length</td>
+        <td class="description">Length in bytes</td>
+      </tr>
+      <tr>
+        <td>UInt16</td>
+        <td>language</td>
+        <td class="description">Language code (see above)</td>
+      </tr>
+      <tr>
+        <td>UInt16</td>
+        <td>firstCode</td>
+        <td class="description">First character code of subrange</td>
+      </tr>
+      <tr>
+        <td>UInt16</td>
+        <td>entryCount</td>
+        <td class="description">Number of character codes in subrange</td>
+      </tr>
+      <tr>
+        <td>UInt16</td>
+        <td>glyphIndexArray[entryCount]</td>
+        <td class="description">Array of glyph index values for character codes in the range</td>
+      </tr>
+    </table>
+    <p>The <code>firstCode</code> and <code>entryCount</code> values in the subtable specify the useful subrange within the range of possible character codes. The range begins with <code>firstCode</code> and has a length equal to <code>entryCount</code>. Codes outside of this subrange are assumed to be missing and are mapped to the glyph with index 0. For a code within the subrange, its offset from the <code>firstCode</code> in the subrange is used as an index into the <code>glyphIndexArray</code>. That array provides the glyph index associated with that character code.</p>
+    <p>Type 6 cmaps are primarily useful for BMP-only Unicode fonts.</p>
+    <h3><code>'cmap'</code> format 8.0–Mixed 16-bit and 32-bit coverage</h3>
+    <p>Format 8.0 is a bit like format 2, in that it provides for mixed-length character codes. If a font contains Unicode surrogates, it's likely that it will also include other, regular 16-bit Unicodes as well. This requires a format to map a mixture of 16-bit and 32-bit character codes, just as format 2 allows a mixture of 8-bit and 16-bit codes. A simplifying assumption is made: namely, that there are no 32-bit character codes which share the same first 16 bits as any 16-bit character code. This means that the determination as to whether a particular 16-bit value is a standalone character code or the start of a 32-bit character code can be made by looking at the 16-bit value directly, with no further information required.</p>
+    <p>Here's the format 8 subtable format:</p>
+    <table>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Fixed32</td>
+        <td>format</td>
+        <td class="description">Subtable format; set to 8.0</td>
+      </tr>
+      <tr>
+        <td>UInt32</td>
+        <td>length</td>
+        <td class="description">Byte length of this subtable (including the header)</td>
+      </tr>
+      <tr>
+        <td>UInt32</td>
+        <td>language</td>
+        <td class="description">Language code (see above)</td>
+      </tr>
+      <tr>
+        <td>UInt8</td>
+        <td>is32[65536]</td>
+        <td class="description">Tightly packed array of bits (8K bytes total) indicating whether the particular 16-bit (index) value is the start of a 32-bit character code</td>
+      </tr>
+      <tr>
+        <td>UInt32</td>
+        <td>nGroups</td>
+        <td class="description">Number of groupings which follow</td>
+      </tr>
+    </table>
+    <p>Here follow the individual groups. Each group has the following format:</p>
+    <table>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>UInt32</td>
+        <td>startCharCode</td>
+        <td class="description">First character code in this group; note that if this group is for one or more 16-bit character codes (which is determined from the is32 array), this 32-bit value will have the high 16-bits set to zero</td>
+      </tr>
+      <tr>
+        <td>UInt32</td>
+        <td>endCharCode</td>
+        <td class="description">Last character code in this group; same condition as listed above for the startCharCode</td>
+      </tr>
+      <tr>
+        <td>UInt32</td>
+        <td>startGlyphCode</td>
+        <td class="description">Glyph index corresponding to the starting character code</td>
+      </tr>
+    </table>
+    <p>A few notes here. The <code>endCharCode</code> is used, rather than a count, because comparisons for group matching are usually done on an existing character code, and having the <code>endCharCode</code> be there explicitly saves the necessity of an addition per group.</p>
+    <p>The presence of the packed array of bits indicating whether a particular 16-bit value is the start of a 32-bit character code is useful even when the font contains no glyphs for a particular 16-bit start value. This is because the system software often needs to know how many bytes ahead the next character begins, even if the current character maps to the missing glyph. By including this information explicitly in this table, no "secret" knowledge needs to be encoded into the OS.</p>
+    <p>Thus, although cmap format 8.0 is theoretically well-suited for Unicode text encoded using surrogates, it also has the flexibility to be used with other character set encodings.</p>
+    <p>To determine if a particular word (<code>cp</code>) is the first half of thirty-two bit code points, one can use an expression such as <code>( is32[ cp / 8 ] &amp; ( 1 &lt;&lt; ( cp % 8 ) ) )</code>. If this is non-zero, then the word is the first half of a thirty-two bit code point.</p>
+    <p>0 is <em>not</em> a special value for the high word of a 32-bit code point. A font may <em>not</em> have both a glyph for the code point <code>0x0000</code> and glyphs for code points with a high word of <code>0x0000</code>.</p>
+    <p>Type 8 cmaps have not seen any particular use since the format was introduced. Rendering engines generally do not deal with Unicode surrogates directly&mdash;the character codes are usually converted to UTF-32 before conversion to glyphs&mdash;and no other character encoding uses mixed 16/32-bit characters. The use of this format is discouraged.</p>
+    <h3><code>'cmap'</code> format 10.0–Trimmed array</h3>
+    <p>Format 10.0 is a bit like format 6, in that it defines a trimmed array for a tight range of 32-bit character codes:</p>
+    <table>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Fixed32</td>
+        <td>format</td>
+        <td class="description">Subtable format; set to 10.0</td>
+      </tr>
+      <tr>
+        <td>UInt32</td>
+        <td>length</td>
+        <td class="description">Byte length of this subtable (including the header)</td>
+      </tr>
+      <tr>
+        <td>UInt32</td>
+        <td>language</td>
+        <td class="description">Language code (see above)</td>
+      </tr>
+      <tr>
+        <td>UInt32</td>
+        <td>startCharCode</td>
+        <td class="description">First character code covered</td>
+      </tr>
+      <tr>
+        <td>UInt32</td>
+        <td>numChars</td>
+        <td class="description">Number of character codes covered</td>
+      </tr>
+      <tr>
+        <td>UInt16</td>
+        <td>glyphs[]</td>
+        <td class="description">Array of glyph indices for the character codes covered</td>
+      </tr>
+    </table>
+    <p>The format 10 cmap has seen little use since its introduction.  It not supported on Windows and is the best choice only for fonts whose character repertoire is almost entirely in a contiguous block outside of Unicode's BMP. Such fonts are rare.</p>
+    <h3><code>'cmap'</code> format 12.0–Segmented coverage</h3>
+    <p>Format 12.0 is a bit like format 4, in that it defines segments for sparse representation in 4-byte character space. Here's the subtable format:</p>
+    <table>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Fixed32</td>
+        <td>format</td>
+        <td class="description">Subtable format; set to 12.0</td>
+      </tr>
+      <tr>
+        <td>UInt32</td>
+        <td>length</td>
+        <td class="description">Byte length of this subtable (including the header)</td>
+      </tr>
+      <tr>
+        <td>UInt32</td>
+        <td>language</td>
+        <td class="description">Language code (see above)</td>
+      </tr>
+      <tr>
+        <td>UInt32</td>
+        <td>nGroups</td>
+        <td class="description">Number of groupings which follow</td>
+      </tr>
+    </table>
+    <p>Here follow the individual groups, each of which has the following format:</p>
+    <table>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>UInt32</td>
+        <td>startCharCode</td>
+        <td class="description">First character code in this group</td>
+      </tr>
+      <tr>
+        <td>UInt32</td>
+        <td>endCharCode</td>
+        <td class="description">Last character code in this group</td>
+      </tr>
+      <tr>
+        <td>UInt32</td>
+        <td>startGlyphCode</td>
+        <td class="description">Glyph index corresponding to the starting character code; subsequent charcters are mapped to sequential glyphs</td>
+      </tr>
+    </table>
+    <p>Again, the <code>endCharCode</code> is used, rather than a count, because comparisons for group matching are usually done on an existing character code, and having the <code>endCharCode</code> be there explicitly saves the necessity of an addition per group.</p>
+    <p>Format 12.0 is required for Unicode fonts covering characters above U+FFFF on Windows. It is the most useful of the cmap formats with 32-bit support.</p>
+    <h3><code>'cmap'</code> format 13.0–Many-to-one mappings</h3>
+    <p>Format 13.0 is a modified version of the type 12.0 <code>'cmap'</code> subtable, used internally by Apple for its LastResort font. It would, in general, not be appropriate for any font other than a last resort font.</p>
+    <p>Structurally, type 13.0 and type 12.0 are identicial. The only difference lies in the intepretation of the glyph code in each range. In a type 13.0 <code>'cmap'</code> subtable, all the glyphs in the range are mapped to the same glyph code, whereas in a type 12.0 <code>'cmap'</code> subtable they are mapped to sequential glyph codes, starting with the given one.</p>
+    <p>To illustrate, suppose we have the following group in both a type 12.0 <code>'cmap'</code> table and a type 13.0 <code>'cmap'</code> subtable:</p>
+    <table>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Value</th>
+        <th class="description">Description</th>
+      </tr>
+      <tr>
+        <td>UInt32</td>
+        <td>startCharCode</td>
+        <td>0x4E00</td>
+        <td class="description">First character code in this group</td>
+      </tr>
+      <tr>
+        <td>UInt32</td>
+        <td>endCharCode</td>
+        <td>0x9FCB</td>
+        <td class="description">Last character code in this group</td>
+      </tr>
+      <tr>
+        <td>UInt32</td>
+        <td>glyphCode</td>
+        <td>47</td>
+        <td class="description">Glyph index for this group</td>
+      </tr>
+    </table>
+    <p>In a type 12.0 <code>'cmap'</code> subtable, U+4E95 would be mapped to glyph (0x4E95 - 0x4E00) + 47 = 196. In a type 13.0 <code>'cmap'</code> subtable, it would be mapped to glyph 47.</p>
+    <p>Type 13 cmaps are only useful for fonts which use the same glyph for all the characters in a Unicode block&mdash;that is, only a Last Resort-like font will ever be likely to need one.</p>
+    <h3>Format 14: Unicode Variation Sequences</h3>
+    <p>Subtable format 14 specifies the Unicode Variation Sequences (UVSes) supported by the font. A Variation Sequence, according to the Unicode Standard, comprises a base character followed by a variation selector; e.g. &lt;U+82A6, U+E0101&gt;.</p>
+    <p>The subtable partitions the UVSes supported by the font into two categories: “default” and “non-default” UVSes. Given a UVS, if the glyph obtained by looking up the base character of that sequence in the Unicode cmap subtable (i.e. the UCS-4 or the BMP cmap subtable) is the glyph to use for that sequence, then the sequence is a “default” UVS; otherwise it is a “non-default” UVS, and the glyph to use for that sequence is specified in the format 14 subtable itself.</p>
+    <p>The example below shows how a font vendor can use format 14 for a JIS-2004–aware font.</p>
+    <p>(Note the presence of 24-bit integers in the structures used. The type 14 <code>'cmap'</code> subtable does not keep data aligned to four-byte boundaries. This is also the only <code>'cmap'</code> subtable which does not stand by itself and is not completely independent of all others; a <code>'cmap'</code> may not consist of a type 14 subtable alone.)</p>
+    <table>
+      <caption>Format 14 header</caption>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>uint16</td>
+        <td>format</td>
+        <td class="description">Subtable format. Set to 14.</td>
+      </tr>
+      <tr>
+        <td>uint32</td>
+        <td>length</td>
+        <td class="description">Byte length of this subtable (including this header)</td>
+      </tr>
+      <tr>
+        <td>uint32</td>
+        <td>numVarSelectorRecords</td>
+        <td class="description">Number of variation Selector Records</td>
+      </tr>
+    </table>
+    <p>This is immediately followed by ‘numVarSelectorRecords’ Variation Selector Records.</p>
+    <table>
+      <caption>
+        Variation Selector Record
+      </caption>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>uint24</td>
+        <td>varSelector</td>
+        <td class="description">Variation selector</td>
+      </tr>
+      <tr>
+        <td>uint32</td>
+        <td>defaultUVSOffset</td>
+        <td class="description">Offset to Default UVS Table. May be 0.</td>
+      </tr>
+      <tr>
+        <td>uint32</td>
+        <td>nonDefaultUVSOffset</td>
+        <td class="description">Offset to Non-Default UVS Table. May be 0.</td>
+      </tr>
+    </table>
+    <p>The Variation Selector Records are sorted in increasing order of ‘varSelector’. No two records may have the same ‘varSelector’. All offsets in a record are relative to the beginning of the format 14 cmap subtable.</p>
+    <p>A Variation Selector Record and the data its offsets point to specify those UVSes supported by the font for which the variation selector is the ‘varSelector’ value of the record. The base characters of the UVSes are stored in the tables pointed to by the offsets. The UVSes are partitioned by whether they are default or non-default UVSes.</p>
+    <p>Glyph IDs to be used for non-default UVSes are specified in the Non-Default UVS table.</p>
+    <h4>Default UVS Table</h4>
+    <p>A Default UVS Table is simply a range-compressed list of Unicode scalar values, representing the base characters of the default UVSes which use the ‘varSelector’ of the associated Variation Selector Record.</p>
+    <table>
+      <caption>Default UVS Table header</caption>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>uint32</td>
+        <td>numUnicodeValueRanges</td>
+        <td class="description">Number of ranges that follow</td>
+      </tr>
+    </table>
+    <p>This is immediately followed by ‘numUnicodeValueRanges’ Unicode Value Ranges, each of which represents a contiguous range of Unicode values.</p>
+    <table>
+      <caption>
+        Unicode Value Range
+      </caption>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>uint24</td>
+        <td>startUnicodeValue</td>
+        <td class="description">First value in this range</td>
+      </tr>
+      <tr>
+        <td>BYTE</td>
+        <td>additionalCount</td>
+        <td class="description">Number of additional values in this range</td>
+      </tr>
+    </table>
+    <p>For example, the range U+4E4D–U+4E4F (3 values) will set ‘startUnicodeValue’ to 0x004E4D and ‘additionalCount’ to 2. A singleton range will set ‘additionalCount’ to 0.</p>
+    <p>(‘startUnicodeValue’ + ‘additionalCount’) must not exceed 0xFFFFFF.</p>
+    <p>The Unicode Value Ranges are sorted in increasing order of ‘startUnicodeValue’. The ranges must not overlap; i.e., (‘startUnicodeValue’ + ‘additionalCount’) must be less than the ‘startUnicodeValue’ of the following range (if any).</p>
+    <h2>Non-Default UVS Table</h2>
+    <p>A Non-Default UVS Table is a list of pairs of Unicode scalar values and glyph IDs. The Unicode values represent the base characters of all non-default UVSes which use the ‘varSelector’ of the associated Variation Selector Record, and the glyph IDs specify the glyph IDs to use for the UVSes.</p>
+    <table>
+      <caption>
+        Non-Default UVS Table header
+      </caption>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>uint32</td>
+        <td>numUVSMappings</td>
+        <td class="description">Number of UVS Mappings that follow</td>
+      </tr>
+    </table>
+    <p>This is immediately followed by ‘numUVSMappings’ UVS Mappings.</p>
+    <table>
+      <caption>
+        UVS Mapping
+      </caption>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>uint24</td>
+        <td>unicodeValue</td>
+        <td class="description">Base Unicode value of the UVS</td>
+      </tr>
+      <tr>
+        <td>uint16</td>
+        <td>glyphID</td>
+        <td class="description">Glyph ID of the UVS</td>
+      </tr>
+    </table>
+    <p>The UVS Mappings are sorted in increasing order of ‘unicodeValue’. No two mappings in this table may have the same ‘unicodeValue’ values.</p>
+    <h2>Example</h2>
+    <p>Here is an example of how a format 14 cmap subtable may be used in a font that is aware of JIS-2004 variant glyphs. The CIDs (character IDs) in this example refer to those in the Adobe Character Collection “Adobe-Japan1”, and may be assumed to be identical to the glyph IDs in the font in our example.</p>
+    <p>JIS-2004 changed the default glyph variants for some of its code points. For example:</p>
+    <p>JIS-90: U+82A6 ⇒ CID 1142<br>
+    JIS-2004: U+82A6 ⇒ CID 7961</p>
+    <p>Both of these glyph variants are supported through the use of UVSes, as the following examples from Unicode’s UVS registry show:</p>
+    <p>U+82A6 U+E0100 ⇒ CID 1142<br>
+    U+82A6 U+E0101 ⇒ CID 7961</p>
+    <p>If the font wants to support the JIS-2004 variants by default, it will:</p>
+    <ul>
+      <li>encode glyph ID 7961 at U+82A6 in the Unicode cmap subtable,</li>
+      <li>specify &lt;U+82A6, U+E0101&gt; in the UVS cmap subtable’s Default UVS Table (‘varSelector’ will be 0x0E0101 and ‘defaultUVSOffset’ will point to data containing a 0x0082A6 Unicode value)</li>
+      <li>specify &lt;U+82A6, U+E0100&gt; ⇒ glyph ID 1142 in the UVS cmap subtable’s Non-Default UVS Table (‘varSelector’ will be 0x0E0100 and ‘nonDefaultBaseUVOffset’ will point to data containing a ‘unicodeValue’ 0x0082A6 and ‘glyphID’ 1142).</li>
+    </ul>
+    <p>If, however, the font wants to support the JIS-90 variants by default, it will:</p>
+    <ul>
+      <li>encode glyph ID 1142 at U+82A6 in the Unicode cmap subtable,</li>
+      <li>specify &lt;U+82A6, U+E0100&gt; in the UVS cmap subtable’s Default UVS Table</li>
+      <li>specify &lt;U+82A6, U+E0101&gt; ⇒ glyph ID 7961 in the UVS cmap subtable’s Non-Default UVS Table</li>
+    </ul>
+  </div>
+
+      </section>
+  </div><!-- /content -->
+
+  <div id="globalfooter">
+    <div id="breadory">
+      <ol id="breadcrumbs">
+        <li class="home"><a href="../../../index.html">Developer</a></li>
+        <li><a href="../../index.html">Fonts</a></li>
+        <li><a href="../index.html">TrueType™ Reference Manual</a></li>
+        <li>The TrueType Font File</li>
+      </ol>
+      <div id="directorynav" class="directorynav">
+	<div id="dn-cola" class="column">
+		<h3><a href="../../../platforms/index.html">Platforms</a></h3>
+		<ul>
+			<li><a href="../../../ios/index.html">iOS</a></li>
+			<li><a href="../../../osx/index.html">OS X</a></li>
+			<li><a href="../../../watchos/index.html">watchOS</a></li>
+			<li><a href="../../../tvos/index.html">tvOS</a></li>
+		</ul>
+		<h3><a href="../../../resources/index.html">Tools</a></h3>
+		<ul>
+			<li><a href="../../../xcode/index.html">Xcode</a></li>
+			<li><a href="../../../swift/index.html">Swift</a></li>
+		</ul>
+	</div>
+	<div id="dn-colb" class="column">
+		<h3><a href="../../../resources/index.html">Resources</a></h3>
+		<ul>
+			<li><a href="../../../library/index.html">Documentation</a></li>
+			<li><a href="../../../videos/index.html">Videos</a></li>
+			<li><a href="https://forums.developer.apple.com/">Forums</a></li>
+			<li><a href="../../../app-store/index.html">App Store</a></li>
+			<li><a href="../../../safari/index.html">Safari and Web</a></li>
+			<li><a href="../../../education/index.html">Education</a></li>
+			<li><a href="../../../enterprise/index.html">Enterprise</a></li>
+		</ul>
+	</div>
+	<div id="dn-colc" class="column">
+		<h3><a href="../../../programs/index.html">Programs</a></h3>
+		<ul>
+			<li><a href="../../../programs/index.html">Developer Program</a></li>
+			<li><a href="../../../programs/enterprise/index.html">Enterprise Program</a></li>
+			<li><a href="../../../programs/ios/university/index.html">iOS University Program</a></li>
+			<li><a href="../../../programs/mfi/index.html">MFi Program</a></li>
+		</ul>
+	</div>
+	<div id="dn-cold" class="column">
+		<h3><a href="../../../support/index.html">Support</a></h3>
+		<ul>
+			<li><a href="../../../support/development/index.html">Development</a></li>
+			<li><a href="../../../support/distribution/index.html">Distribution</a></li>
+			<li><a href="../../../support/membership/index.html">Membership</a></li>
+			<li><a href="../../../system-status/index.html">System Status</a></li>
+		</ul>
+	</div>
+	<div id="dn-cole" class="column">
+		<h3><a href="https://developer.apple.com/account/">Account</a></h3>
+		<ul>
+			<li><a href="https://developer.apple.com/account/">Developer Account</a></li>
+			<li><a href="../../../go/index-id=certificates-ids-profiles.html">Certificates, IDs &amp; Profiles</a></li>
+			<li><a href="https://itunesconnect.apple.com">iTunes Connect</a></li>			
+			<li><a href="../../../terms/index.html">License Agreements</a></li>
+		</ul>
+	</div>
+</div>
+
+    </div><!--/breadory-->
+    <ul class="gf-links piped footer-links">
+  <li><a href="../../../news/index.html" class="first">News &amp; Updates</a></li>
+  <li><a href="../../../bug-reporting/index.html">Report Bugs</a></li>
+  <li><a href="../../../contact/index.html">Contact Us</a></li>
+</ul>
+
+<div class="gf-sosumi footer-sosumi">
+  <p>Copyright © 2016 Apple Inc. All rights reserved.</p>
+    <ul class="piped">
+        <li><a href="http://www.apple.com/legal/internet-services/terms/site.html" class="first">Terms of Use</a></li>
+        <li><a href="http://www.apple.com/privacy/privacy-policy/">Privacy Policy</a></li>
+    </ul>
+</div>
+
+<!--<div id="gf-links piped footer-links">
+	<ul>
+		<li><a href="/cn/" title="Simplified Chinese">简体中文</a></li>
+		<li><a href="/jp/" title="Japanese">日本語</a></li>
+		<li><a href="/kr/" title="Korean">한국어</a></li>
+	</ul>
+</div>-->
+
+  </div><!--/globalfooter-->
+</body>
+</html>

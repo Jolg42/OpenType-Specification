@@ -1,0 +1,1528 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="Author" content="Apple Inc." />
+<meta name="viewport" content="width=1024" />
+<link rel="shortcut icon" href="../../../favicon.ico" />
+<link rel="icon" href="../../../favicon.ico" />
+<link rel="stylesheet" href="https://www.apple.com/wss/fonts?family=Myriad+Set+Pro&amp;v=2" type="text/css" />
+<link rel="stylesheet" href="../../../assets/styles/transition-global.css" type="text/css" />
+<link rel="stylesheet" href="../../../assets/styles/transition-header.css" type="text/css" />
+<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/core/styles/adc.css" type="text/css" />
+<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/styles/topbar.css" type="text/css" />
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/lib/prototype.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/lib/scriptaculous.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/browserdetect.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/apple_core.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/search_decorator.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="https://devimages.apple.com.edgekey.net/assets/core/scripts/adc_core.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/scripts/ac_retina.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/topbarDropdown.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	document.write('<link rel="stylesheet" type="text/css" href="https://devimages.apple.com.edgekey.net/assets/styles/script.css" media="screen">');
+</script>
+<!-- Augmented Search -->
+<!--<link rel="stylesheet" href="https://devimages.apple.com.edgekey.net/assets/styles/augmented_search.css" type="text/css">-->
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/lib/jquery/jquery-1.11.0.min.js"></script>
+<script>jQuery.noConflict();</script>
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/lib/jquery/jquery.retinate.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="https://devimages.apple.com.edgekey.net/assets/scripts/augmented_search.js"></script>-->
+<script src="../../../assets/scripts/augmented_search.js"></script>
+<script src="../../../assets/scripts/global-header.js"></script>
+
+  <meta name="Author" content="Apple Inc.">
+  <meta name="viewport" content="width=1024">
+  <link rel="stylesheet" href="../AAT.css" type="text/css">
+  <link rel="shortcut icon" href="https://devimages.apple.com.edgekey.net/favicon.ico">
+  <link rel="icon" href="https://devimages.apple.com.edgekey.net/favicon.ico">
+  <script src="https://devimages.apple.com.edgekey.net/assets/scripts/lib/prototype.js" type="text/javascript" charset="utf-8">
+</script>
+  <script src="https://devimages.apple.com.edgekey.net/assets/scripts/lib/scriptaculous.js" type="text/javascript" charset="utf-8">
+</script>
+  <script src="https://devimages.apple.com.edgekey.net/assets/scripts/browserdetect.js" type="text/javascript" charset="utf-8">
+</script>
+  <script src="https://devimages.apple.com.edgekey.net/assets/scripts/apple_core.js" type="text/javascript" charset="utf-8">
+</script>
+  <script src="https://devimages.apple.com.edgekey.net/assets/scripts/search_decorator.js" type="text/javascript" charset="utf-8">
+</script>
+  <script src="https://devimages.apple.com.edgekey.net/assets/scripts/adc_core.js" type="text/javascript" charset="utf-8">
+</script>
+  <title>Glyph Metamorphosis Table</title>
+</head>
+<body class="white sidenav-page">
+  <nav id="globalheader" role="navigation" aria-label="Global Navigation">
+  <div id="gh-content" class="gh-content">
+    <ul class="gh-menu">
+      <li id="gh-menu-icon-toggle" class="gh-menu-icon gh-menu-icon-toggle enhance">
+        <button id="gh-svg-icons" class="gh-svg-wrapper">
+          <span class="text-replace">Menu</span>
+          <svg x="0px" y="0px" width="100%" viewBox="0 0 96 96" class="gh-svg gh-svg-top" enable-background="new 0 0 96 96"><rect width="32" height="4" x="32" y="46" class="gh-svg-rect gh-svg-rect-top"></rect></svg>
+          <svg x="0px" y="0px" width="100%" viewBox="0 0 96 96" class="gh-svg gh-svg-bottom" enable-background="new 0 0 96 96"><rect width="32" height="4" x="32" y="46" class="gh-svg-rect gh-svg-rect-bottom"></rect></svg>
+        </button>
+      </li>
+      <li id="gh-menu-icon-home" class="gh-menu-icon gh-menu-icon-home">
+        <a href="../../../index.html">
+          <span class="text-replace">Apple Developer</span>
+        </a>
+      </li>
+    </ul>
+    <div class="gh-nav">
+      <div class="gh-nav-view">
+        <ul class="gh-nav-list">
+
+          <li class="gh-tab gh-nav-developer" data-hires="true"><a class="gh-tab-link" href="../../../index.html"><span class="text-replace">Apple Developer</span></a></li>
+          <li class="gh-tab gh-nav-technologies"><a class="gh-tab-link" href="../../../platforms/index.html">Platforms</a></li>
+          <li class="gh-tab gh-nav-resources"><a class="gh-tab-link" href="../../../resources/index.html">Resources</a></li>
+          <li class="gh-tab gh-nav-programs"><a class="gh-tab-link" href="../../../programs/index.html">Program</a></li>
+          <li class="gh-tab gh-nav-support"><a class="gh-tab-link" href="../../../support/index.html">Support</a></li>
+          <li class="gh-tab gh-nav-account">
+            <a class="gh-tab-link gh-account-profile" href="https://developer.apple.com/account/">Account</a>
+          </li>
+          <li class="gh-tab gh-nav-search">
+
+            <div id="gh-search" class="gh-search" role="search">
+              <form action="/search/index.php" method="get" class="gh-search-form" id="gh-search-form" role="search">
+
+                <div class="gh-search-input-wrapper">
+                  <label for="gh-search-input" class="text-replace">Search Apple Developer</label>
+                  <input type="text" name="q" id="gh-search-input" class="augmented gh-search-input" placeholder="Search Apple Developer" autocomplete="off" autocorrect="off" autocapitalize="off">
+                </div>
+
+                <button disabled type="submit" id="gh-search-submit" class="gh-search-submit gh-search-magnify"><span class="text-replace">Search Apple Developer</span></button>
+                <button disabled type="reset" id="gh-search-reset" class="gh-search-reset"><span class="text-replace">Reset</span></button>
+
+              </form>
+            </div>
+
+            <a class="gh-search-magnify" href="../../../search/index.html"><span class="text-replace">Search Apple Developer</span></a>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+  <div id="top">
+<!-- SiteCatalyst code version: H.8. Copyright 1997-2006 Omniture, Inc. -->
+<script type="text/javascript">
+/* RSID: */
+var s_account="appleglobal,appleusdeveloper"
+</script>
+
+<script type="text/javascript" src="https://www.apple.com/metrics/scripts/s_code_h.js"></script>
+<script type="text/javascript">
+s.pageName= AC && AC.Tracking && AC.Tracking.pageName();
+s.channel="www.us.developer"
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)</script>
+<!-- End SiteCatalyst code version: H.8. -->
+</div>
+
+  <div id="content" class="content" data-hires="false">
+    <section>
+  <div id="navBar">
+    <!-- NAVBARSTART -->
+    <p class="bold"><a href="../index.html">TrueType Reference Manual</a></p>
+    <ul class="outer">
+      <li><a href="../RM01/Chap1.html">Digitizing Letterforms</a></li>
+      <li><a href="../RM02/Chap2.html">The Font Engine</a></li>
+      <li><a href="../RM03/Chap3.html">Instructing Fonts</a></li>
+      <li><a href="../RM04/Chap4.html">The Graphics State</a></li>
+      <li><a href="../RM05/Chap5.html">The Instruction Set</a></li>
+      <li><a href="Chap6.html">Font Tables</a></li>
+      <li class="c1">
+        <ul class="inner">
+          <li><a href="Chap6.html#Intro">Introduction</a></li>
+          <li><a href="Chap6.html#Types">Data Types</a></li>
+          <li><a href="Chap6.html#Overview">Overview of TrueType</a></li>
+          <li><a href="Chap6AATIntro.html">Overview of AAT</a></li>
+          <li><a href="Chap6Tables.html">Special Tables</a></li>
+          <li><a href="Chap6.html#Directory">The Font Directory</a></li>
+          <li><a href="Chap6acnt.html">The <code>'acnt'</code> table</a></li>
+          <li><a href="Chap6ankr.html">The <code>'ankr'</code> table</a></li>
+          <li><a href="Chap6avar.html">The <code>'avar'</code> table</a></li>
+          <li><a href="Chap6bdat.html">The <code>'bdat'</code> table</a></li>
+          <li><a href="Chap6bhed.html">The <code>'bhed'</code> table</a></li>
+          <li><a href="Chap6bloc.html">The <code>'bloc'</code> table</a></li>
+          <li><a href="Chap6bsln.html">The <code>'bsln'</code> table</a></li>
+          <li><a href="Chap6cmap.html">The <code>'cmap'</code> table</a></li>
+          <li><a href="Chap6cvar.html">The <code>'cvar'</code> table</a></li>
+          <li><a href="Chap6cvt.html">The <code>'cvt '</code> table</a></li>
+          <li><a href="Chap6EBSC.html">The <code>'EBSC'</code> table</a></li>
+          <li><a href="Chap6fdsc.html">The <code>'fdsc'</code> table</a></li>
+          <li><a href="Chap6feat.html">The <code>'feat'</code> table</a></li>
+          <li><a href="Chap6fmtx.html">The <code>'fmtx'</code> table</a></li>
+          <li><a href="Chap6fond.html">The <code>'fond'</code> table</a></li>
+          <li><a href="Chap6fpgm.html">The <code>'fpgm'</code> table</a></li>
+          <li><a href="Chap6fvar.html">The <code>'fvar'</code> table</a></li>
+          <li><a href="Chap6gasp.html">The <code>'gasp'</code> table</a></li>
+          <li><a href="Chap6gcid.html">The <code>'gcid'</code> table</a></li>
+          <li><a href="Chap6glyf.html">The <code>'glyf'</code> table</a></li>
+          <li><a href="Chap6gvar.html">The <code>'gvar'</code> table</a></li>
+          <li><a href="Chap6hdmx.html">The <code>'hdmx'</code> table</a></li>
+          <li><a href="Chap6head.html">The <code>'head'</code> table</a></li>
+          <li><a href="Chap6hhea.html">The <code>'hhea'</code> table</a></li>
+          <li><a href="Chap6hmtx.html">The <code>'hmtx'</code> table</a></li>
+          <li><a href="Chap6just.html">The <code>'just'</code> table</a></li>
+          <li><a href="Chap6kern.html">The <code>'kern'</code> table</a></li>
+          <li><a href="Chap6kerx.html">The <code>'kerx'</code> table</a></li>
+          <li><a href="Chap6lcar.html">The <code>'lcar'</code> table</a></li>
+          <li><a href="Chap6loca.html">The <code>'loca'</code> table</a></li>
+          <li><a href="Chap6ltag.html">The <code>'ltag'</code> table</a></li>
+          <li><a href="Chap6maxp.html">The <code>'maxp'</code> table</a></li>
+          <li><a href="Chap6meta.html">The <code>'meta'</code> table</a></li>
+          <li>The <code>'mort'</code> table</li>
+          <li><a href="Chap6morx.html">The <code>'morx'</code> table</a></li>
+          <li><a href="Chap6name.html">The <code>'name'</code> table</a></li>
+          <li><a href="Chap6opbd.html">The <code>'opbd'</code> table</a></li>
+          <li><a href="Chap6OS2.html">The <code>'OS/2'</code> table</a></li>
+          <li><a href="Chap6post.html">The <code>'post'</code> table</a></li>
+          <li><a href="Chap6prep.html">The <code>'prep'</code> table</a></li>
+          <li><a href="Chap6prop.html">The <code>'prop'</code> table</a></li>
+          <li><a href="Chap6sbix.html">The <code>'sbix'</code> table</a></li>
+          <li><a href="Chap6trak.html">The <code>'trak'</code> table</a></li>
+          <li><a href="Chap6vhea.html">The <code>'vhea'</code> table</a></li>
+          <li><a href="Chap6vmtx.html">The <code>'vmtx'</code> table</a></li>
+          <li><a href="Chap6xref.html">The <code>'xref'</code> table</a></li>
+          <li><a href="Chap6Zapf.html">The <code>'Zapf'</code> table</a></li>
+        </ul>
+      </li>
+      <li><a href="../RM07/appendixA.html">Instruction Set Summary</a></li>
+      <li><a href="../RM07/appendixB.html">Glyph Mappings</a></li>
+      <li><a href="../RM08/appendixE.html">Converting Outlines</a></li>
+	<li><a href="../RM09/AppendixF.html">Font Feature Registry</a></li>
+    </ul><!-- NAVBAREND -->
+  </div>
+  <div id="chapterContent">
+    <div align="left">
+		<header><h1><a name="mort"></a>The <code>'mort'</code> table</h1></header>
+    </div>
+    <h2>WARNING</h2>
+    <p><em>The <code>'mort'</code> table is deprecated. It is supported on OS X but not iOS, and Apple font tools no longer will generate <code>'mort'</code>. New and udpated fonts should use <code>'morx'</code> tables.</em></p>
+    <h2>Introduction</h2>
+    <p>The <def>glyph metamorphosis table</def>(tag name: <code>'mort'</code>) allows you to specify a set of transformations that can apply to the glyphs of your font. These transformations, called<def>text features</def>, are essential for writing systems such as Arabic or Hindi that require changes to glyphs and words depending on context. Text features are also useful for writing systems, such as Roman, that can use effects such as ligatures and cursive connections to enhance the appearance of text.</p>
+    <p>Apple has defined a standard set of text features. You may include one or more of these or create your own text features. Font features that will be supported by your font must be part of the Font Feature Registry maintained by Apple Computer, Inc. Some of the feature types that have been registered follow:</p>
+    <ul>
+        <li>Ligatures
+        <li>Cursive connection
+        <li>Letter case
+        <li>Vertical substitution
+        <li>Linguistic rearrangement
+        <li>Number spacing
+        <li>Smart swashes
+        <li>Diacritics
+        <li>Vertical Position
+        <li>Fractions
+        <li>Overlapping characters
+        <li>Typographic extras
+        <li>Mathematical extras
+        <li>Ornament sets
+        <li>Character alternatives
+        <li>Design complexity
+        <li>Style options
+        <li>Character shape
+        <li>Number case
+        <li>Letter spacing
+    </ul>
+    <h2>Glyph Metamorphosis Table Format</h2>
+    <p>The glyph metamorphosis table consists of a header followed by one or more metamorphosis chains. Each<def>metamorphosis chain</def>contains a chain header, feature table array, and metamorphosis subtables. Each<def>metamorphosis subtable</def>contains a subtable header and format-specific subtables. The overall structure of a glyph metamorphosis table is shown in this figure:</p>
+    <p><img src="FF60.gif" width="243" height="159" naturalsizeflag="3" align="BOTTOM"></p>
+    <p>The glyph metamorphosis table header specifies the current version and the number of metamorphosis chains provided in the table. The format of the glyph metamorphosis table header is:</p>
+    <p>
+    <table border="1" cellspacing="2" cellpadding="0">
+        <tr align="left" valign="middle">
+            <th>
+                <div align="left">
+                    Type</div>
+            </th>
+            <th>
+                <div align="left">
+                    Name</div>
+            </th>
+            <th align="left">
+                <div align="left">
+                    Description</div>
+            </th>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>fixed32</td>
+            <td>version</td>
+            <td>Version number of the glyph metamorphosis table (0x00010000 for the current version).</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>uint32</td>
+            <td>nChains</td>
+            <td>Number of metamorphosis chains contained in this table.</td>
+        </tr>
+    </table>
+    </p>
+    <p>One or more glyph metamorphosis chains follow the table header. Each metamorphosis chain starts on a longword boundary. Padding must be added between chains to ensure that the next chain starts at a byte offset evenly divisible by 4. Each chain contains a chain header, feature table arrays, and metamorphosis subtables. The metamorphosis subtables specify a set of atomic transformations. When these transformations are applied to the glyph array in proper order, the text is processed to provide the specified text features.</p>
+    <p>The format of the chain header is:</p>
+    <p>
+    <table border="1" cellspacing="2" cellpadding="0">
+        <tr align="left" valign="middle">
+            <th>
+                <div align="left">
+                    Type</div>
+            </th>
+            <th>
+                <div align="left">
+                    Name</div>
+            </th>
+            <th align="left">
+                <div align="left">
+                    Description</div>
+            </th>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>uint32</td>
+            <td>defaultFlags</td>
+            <td>The default sub-feature flags for this chain.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>uint32</td>
+            <td>chainLength</td>
+            <td>The length of the chain in bytes, including this header.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>uint16</td>
+            <td>nFeatureEntries</td>
+            <td>The number of entries in the chain's feature subtable.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>uint16</td>
+            <td>nSubtables</td>
+            <td>The number of subtables in the chain.</td>
+        </tr>
+    </table>
+    </p>
+    <p>A single metamorphosis chain is usually sufficient, unless the font's features cannot be specified with 32 sub-features. The chain's header is followed by the feature table, which is an array of feature entries. The number of entries in the feature table is given by the value of the <code>nFeatureEntries</code> field in the chain's header.</p>
+    <h3>Feature Table</h3>
+    <p>The <def>feature table</def>is used to compute the sub-feature flags for a list of requested features and settings.</p>
+    <p>The format of the feature table is:</p>
+    <p>
+    <table border="1" cellspacing="2" cellpadding="0">
+        <tr align="left" valign="middle">
+            <th>
+                <div align="left">
+                    Type</div>
+            </th>
+            <th>
+                <div align="left">
+                    Name</div>
+            </th>
+            <th align="left">
+                <div align="left">
+                    Description</div>
+            </th>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>uint16</td>
+            <td>featureType</td>
+            <td>The type of feature.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>uint16</td>
+            <td>featureSetting</td>
+            <td>The feature's setting.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>uint32</td>
+            <td>enableFlags</td>
+            <td>Flags for the settings that this feature and setting enables.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>uint32</td>
+            <td>disableFlags</td>
+            <td>Complement of flags for the settings that this feature and setting disable.</td>
+        </tr>
+    </table>
+    </p>
+    <p>During text processing, the following sequence takes place.</p>
+    <ol>
+        <li>The result is initialized to the chain's <code>defaultFlags</code>.
+        <li>The entries in the feature table are processed in order. If the setting is in the requested list, the result is ANDed with the entry's <code>disableFlags</code> and ORed with the entry's <code>enableFlags</code>. If the setting is not in the requested list, the result will be the chain's <code>defaultFlags</code>. The <code>defaultFlags</code> specify sub-features that will happen in the absence of any user specification.
+        <li>When the request is finished, the result contains the sub-feature flags corresponding to the list of requested features.
+    </ol>
+    <p>The order of entries in the requested feature list is arbitrary. However, the order of entries in the feature table is important. Entries that are located later in the feature table take precedence over earlier entries. This is necessary because only the font designer knows the relationship between the features and the subfeatures.</p>
+    <p>Each feature table must end with an entry for the Enable Glyph Effects feature with the setting <code>enableEffectOffSelector</code>. This turns off all subfeature flags for the chain. Enable and disable flags for the last entry in the feature table are:</p>
+    <p>
+    <table border="1" cellspacing="2" cellpadding="0">
+        <tr align="left" valign="middle">
+            <th>
+                <div align="left">
+                    Enable flag</div>
+            </th>
+            <th align="left">
+                <div align="left">
+                    Disable flag</div>
+            </th>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>0x00000000</td>
+            <td>0x00000000 (complement of 0xFFFFFFFF)</td>
+        </tr>
+    </table>
+    </p>
+    <h3>Metamorphosis Subtables</h3>
+    <p>After the feature table come the metamorphosis subtables. These chain subtables describe the atomic transformations that make up the chain's sub-features. These transformations are the heart of the glyph metamorphosis table. Each metamorphosis chain subtable consists of a subtable header followed by one or more metamorphosis subtables. The subtable types are given in the following table:</p>
+    <p>
+    <table border="1" cellspacing="2" cellpadding="0">
+        <tr align="left" valign="middle">
+            <th>
+                <div align="left">
+                    Subtable type</div>
+            </th>
+            <th align="left">
+                <div align="left">
+                    Description</div>
+            </th>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>0</td>
+            <td>Indic-style rearrangement.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>1</td>
+            <td>Contextual glyph substitution.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>2</td>
+            <td>Ligature substitution.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>3</td>
+            <td>(Reserved)</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>4</td>
+            <td>Non-contextual glyph substitution.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>5</td>
+            <td>Contextual glyph insertion</td>
+        </tr>
+    </table>
+    </p>
+    <p>The common subtable header is followed by a subheader. The format of the subheader varies according to the subtable type.</p>
+    <p>A chain's subtables must have lengths that are multiples of 4 bytes. If subtable lengths are not multiples of 4 bytes, you should add padding spaces at the end.</p>
+    <p>Although each atomic transformation has its own format, each subtable begins with a <a name="MorphSubtableHeader"></a>common header, called a <code>MorphSubtableHeader</code>, which has this format:</p>
+    <p>
+    <table border="1" cellspacing="2" cellpadding="0">
+        <tr align="left" valign="middle">
+            <th>
+                <div align="left">
+                    Type</div>
+            </th>
+            <th>
+                <div align="left">
+                    Name</div>
+            </th>
+            <th align="left">
+                <div align="left">
+                    Description</div>
+            </th>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>uint16</td>
+            <td>length</td>
+            <td>Length of subtable in bytes, including this header.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>uint16</td>
+            <td>coverage</td>
+            <td>Coverage flags and atomic transformation type.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>uint32</td>
+            <td>subFeatureFlags</td>
+            <td>Flags for the settings that this subtable describes.</td>
+        </tr>
+    </table>
+    </p>
+    <p>The bits in the coverage field have the interpretation shown in the following table and figure:</p>
+    <p>
+    <table border="1" cellspacing="2" cellpadding="0">
+        <tr align="left" valign="middle">
+            <th>
+                <div align="left">
+                    Mask value</div>
+            </th>
+            <th align="left">
+                <div align="left">
+                    Interpretation</div>
+            </th>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>0x8000</td>
+            <td>If set to 1, this subtable should be applied only to vertical text. If set to 0, this subtable should be applied only to horizontal text. Note that the 0x2000 bit can change how this bit gets interpreted.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>0x4000</td>
+            <td>If set to 1, this subtable should process the glyph array in descending order. If set to 0, this subtable should process the glyph array in ascending order.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>0x2000</td>
+            <td>If set to 1, this subtable should be applied irrespective of the state of the 0x8000 bit. This allows you to make subtables that will be executed irrespective of the orientation of the text. If this bit is 0, the 0x8000 bit is interpreted as described above. Support for this bit is available starting with GX 1.1; earlier versions of the software will ignore it.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>0x1FF8</td>
+            <td>These bits are reserved and must be set to 0.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>0x0007</td>
+            <td>These bits specify the subtable type (using the constants listed above).</td>
+        </tr>
+    </table>
+    </p>
+    <p><img src="FF61.gif" width="527" height="162" naturalsizeflag="3" align="BOTTOM"></p>
+    <p>The <code>subFeatureFlags</code> field of the chain subtable header has a bit set for each sub-feature whose transformation requires the atomic transformation specified by the subtable. After a user request, feature subtables are searched to determine which tables are needed. Then, the result is compared with this field. If any bits are common and are non-zero, the table is enabled.</p>
+    <p>For example, if the result is 0x00010001 and the <code>subFeatureFlags</code> field of this subtable contains 0x00000001, this table is enabled.</p>
+    <h4>Indic Rearrangement Subtable</h4>
+    <p>An Indic-style rearrangement action specifies a rearrangement of the order of a contiguous range of glyphs in the glyph array.</p>
+    <p>The format of the Indic rearrangement subtable is shown in the following figure. Note that the whole subtable is just a <a href="Chap6Tables.html#StateTables">state table</a>.</p>
+    <p>
+    <table border="1" cellspacing="2" cellpadding="0">
+        <tr align="left" valign="middle">
+            <th>
+                <div align="left">
+                    Type</div>
+            </th>
+            <th>
+                <div align="left">
+                    Name</div>
+            </th>
+            <th align="left">
+                <div align="left">
+                    Description</div>
+            </th>
+        </tr>
+        <tr align="left" valign="middle">
+            <td><a href="Chap6Tables.html#StateHeader">StateHeader</a></td>
+            <td>stHeader</td>
+            <td>The Indic rearrangement state table header.</td>
+        </tr>
+    </table>
+    </p>
+    <p>The actions in an Indic rearrangement subtable use no per-glyph tables. The table-specific flags in the flags field of the entry subtable have the following format:</p>
+    <p>
+    <table border="1" cellspacing="2" cellpadding="0">
+        <tr align="left" valign="middle">
+            <th>
+                <div align="left">
+                    Mask value</div>
+            </th>
+            <th>
+                <div align="left">
+                    Name</div>
+            </th>
+            <th align="left">
+                <div align="left">
+                    Interpretation</div>
+            </th>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>0x8000</td>
+            <td>markFirst</td>
+            <td>If set, make the current glyph the first glyph to be rearranged.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>0x4000</td>
+            <td>dontAdvance</td>
+            <td>If set, don't advance to the next glyph before going to the new state.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>0x2000</td>
+            <td>markLast</td>
+            <td>If set, make the current glyph the last glyph to be rearranged.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>0x1FF0</td>
+            <td>reserved</td>
+            <td>These bits are reserved and should be set to 0.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>0x000F</td>
+            <td>verb</td>
+            <td>The type of rearrangement specified.</td>
+        </tr>
+    </table>
+    </p>
+    <p>The positions of the bits in the flags binary field are shown in the following figure:</p>
+    <p><img src="FF62.gif" width="512" height="167" naturalsizeflag="3" align="BOTTOM"></p>
+    <p>The following table shows the rearrangement verb atomic transformations. The uppercase letters 'A', 'B', 'C', and 'D' represent individual glyphs, and 'x' represents an arbitrary sequence of glyphs. You use the <code>markFirst</code> and <code>markLast</code> flags to remember the array of glyphs to be rearranged. The first and last glyph values are set before the rearrangement specified by the value of the verb field is applied.</p>
+    <p>
+    <table border="1" cellspacing="2" cellpadding="0">
+        <tr align="left" valign="middle">
+            <th>
+                <div align="left">
+                    Verb</div>
+            </th>
+            <th align="left">
+                <div align="left">
+                    Results</div>
+            </th>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>0</td>
+            <td>no change</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>1</td>
+            <td>Ax =&gt; xA</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>2</td>
+            <td>xD =&gt; Dx</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>3</td>
+            <td>AxD =&gt; DxA</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>4</td>
+            <td>ABx =&gt; xAB</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>5</td>
+            <td>ABx =&gt; xBA</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>6</td>
+            <td>xCD =&gt; CDx</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>7</td>
+            <td>xCD =&gt; DCx</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>8</td>
+            <td>AxCD =&gt; CDxA</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>9</td>
+            <td>AxCD =&gt; DCxA</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>10</td>
+            <td>ABxD =&gt; DxAB</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>11</td>
+            <td>ABxD =&gt; DxBA</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>12</td>
+            <td>ABxCD =&gt; CDxAB</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>13</td>
+            <td>ABxCD =&gt; CDxBA</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>14</td>
+            <td>ABxCD =&gt; DCxAB</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>15</td>
+            <td>ABxCD =&gt; DCxBA</td>
+        </tr>
+    </table>
+    </p>
+    <h4>Contextual Glyph Substitution Subtable</h4>
+    <p>Contextual glyph substitution is the substitution of other glyphs for both the glyph at the current position in the glyph array and an earlier glyph in the glyph array, called the<def>marked</def>glyph. The substitution is done using per-glyph tables called<def>substitution tables</def>. If the <code>setMark</code> flag is set, the current glyph is made the marked glyph after the substitutions are made.</p>
+    <p>You could use the contextual glyph substitution subtable to create simple ligatures, such as 'fi' and '&AElig;,' or for unusual substitutions such as: % + zero = per-mille. If you want to create ligatures that are more complex than two-character ligatures from the separate characters, you should use the ligature substitution subtable. However, if the font contains component ligatures with glyph indices, then more complex ligatures can be formed using contextual glyph substitution. For example, if the 'ff' ligature is in the font, then the 'ffi' ligature can be formed using a contextual substitution subtable.</p>
+    <p>The format of the contextual glyph substitution subtable is as follows.</p>
+    <p>
+    <table border="1" cellspacing="2" cellpadding="0">
+        <tr align="left" valign="middle">
+            <th>
+                <div align="left">
+                    Type</div>
+            </th>
+            <th>
+                <div align="left">
+                    Name</div>
+            </th>
+            <th align="left">
+                <div align="left">
+                    Description</div>
+            </th>
+        </tr>
+        <tr align="left" valign="middle">
+            <td><a href="Chap6Tables.html#StateHeader">StateHeader</a></td>
+            <td>stHeader</td>
+            <td>The contextual glyph substitution state table header</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>uint16</td>
+            <td>substitutionTable</td>
+            <td>Byte offset from the beginning of the state subtable to the beginning of the substitution tables.</td>
+        </tr>
+    </table>
+    </p>
+    <p>The actions in a contextual glyph substitution subtable have table- specific flags and two offsets to per-glyph tables (for a total of 4 16-bit words). The format of these actions is as follows:</p>
+    <p>
+    <table border="1" cellspacing="2" cellpadding="0">
+        <tr align="left" valign="middle">
+            <th>
+                <div align="left">
+                    Type</div>
+            </th>
+            <th>
+                <div align="left">
+                    Name</div>
+            </th>
+            <th align="left">
+                <div align="left">
+                    Description</div>
+            </th>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>uint16</td>
+            <td>newState</td>
+            <td>Byte offset from the beginning of the state table to the new state.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>uint16</td>
+            <td>flags</td>
+            <td>Table-specific flags.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>uint16</td>
+            <td>markOffset</td>
+            <td>Word offset from the beginning of the state subtable to the substitution table for the marked glyph.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>uint16</td>
+            <td>currentOffset</td>
+            <td>Word offset from the beginning of the state subtable to the substitution table for the current glyph.</td>
+        </tr>
+    </table>
+    </p>
+    <p>The following figure shows the positions of the bits in the flags binary field of the contextual glyph substitution subtable.</p>
+    <p><img src="FF63.gif" width="532" height="180" naturalsizeflag="3" align="BOTTOM"></p>
+    <p>The format of the table-specific <code>flags</code> field is as follows:</p>
+    <p>
+    <table border="1" cellspacing="2" cellpadding="0">
+        <tr align="left" valign="middle">
+            <th>
+                <div align="left">
+                    Mask value</div>
+            </th>
+            <th>
+                <div align="left">
+                    Name</div>
+            </th>
+            <th align="left">
+                <div align="left">
+                    Interpretation</div>
+            </th>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>0x8000</td>
+            <td>setMark</td>
+            <td>If set, make the current glyph the marked glyph.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>0x4000</td>
+            <td>dontAdvance</td>
+            <td>If set, don't advance to the next glyph before going to the new state.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>0x3FFF</td>
+            <td>reserved</td>
+            <td>These bits are reserved and should be set to 0.</td>
+        </tr>
+    </table>
+    </p>
+    <h4>Ligature Substitution Subtable</h4>
+    <p>The ligature substitution subtable specifies the substitution of a ligature glyph for a set of component glyphs. For example, you can specify that when the glyphs 'f,' 'f,' and 'i' are placed next to one another, the separate glyphs will be replaced by the ligature glyph 'ffi.' If you want to create simple two-character ligatures, you should use the contextual substitution subtable rather than the ligature substitution table, which is designed for more complex ligature formations (although you may certainly use the ligature substitution subtable for two-glyph ligatures, if you wish).</p>
+    <p>The format of the ligature substitution subtable is as follows:</p>
+    <p>
+    <table border="1" cellspacing="2" cellpadding="0">
+        <tr align="left" valign="middle">
+            <th>
+                <div align="left">
+                    Type</div>
+            </th>
+            <th>
+                <div align="left">
+                    Name</div>
+            </th>
+            <th align="left">
+                <div align="left">
+                    Description</div>
+            </th>
+        </tr>
+        <tr align="left" valign="middle">
+            <td><a href="Chap6Tables.html#StateHeader">StateHeader</a></td>
+            <td>stHeader</td>
+            <td>The ligature substitution state table header.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>uint16</td>
+            <td>ligActionTable</td>
+            <td>Byte offset from the beginning of the state table to the ligature action lists.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>uint16</td>
+            <td>componentTable</td>
+            <td>Byte offset from the beginning of the state table to the component offset tables.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>uint16</td>
+            <td>ligatureTable</td>
+            <td>Byte offset from the beginning of the state table to the beginning of the ligature tables.</td>
+        </tr>
+    </table>
+    </p>
+    <p>The format of the flag field of the ligature substitution subtable actions is shown in the following figure. There are no per-glyph substitutions.</p>
+    <p><img src="FF64.gif" width="550" height="178" naturalsizeflag="3" align="BOTTOM"></p>
+    <p>The ligature action list specifies how to use the component glyphs to construct a word offset into a table of ligature glyph indices. The table is sorted by components; that is, first by the first component, then by the second component, and so on.</p>
+    <p>The ligature component stack is 16 deep. This means that a ligature can be formed using a maximum of 16 components. If the value of the <code>offset</code> field is non-zero, it gives the offset to a list of 32-bit ligature actions. The <code>offset</code> field, which is the offset to the ligature action list, is a table-specific flag field. Its format is shown in the following table (and the above illustration):</p>
+    <p>
+    <table border="1" cellspacing="2" cellpadding="0">
+        <tr align="left" valign="middle">
+            <th>
+                <div align="left">
+                    Mask value</div>
+            </th>
+            <th>
+                <div align="left">
+                    Name</div>
+            </th>
+            <th align="left">
+                <div align="left">
+                    Interpretation</div>
+            </th>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>0x8000</td>
+            <td>setComponent</td>
+            <td>If set, AAT should make the current glyph a ligature component.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>0x4000</td>
+            <td>dontAdvance</td>
+            <td>If set, AAT should not advance to the next glyph before moving to the new state.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>0x3FFF</td>
+            <td>offset</td>
+            <td>Byte offset from beginning of subtable to the ligature action list. This value must be a multiple of 4.</td>
+        </tr>
+    </table>
+    </p>
+    <p>The ligature action list must be long aligned. One entry in this list is shown in the following figure:</p>
+    <p><img src="FF65.gif" width="522" height="179" naturalsizeflag="3" align="BOTTOM"></p>
+    <p>The mask values of the ligature action list are given in the following table:</p>
+    <p>
+    <table border="1" cellspacing="2" cellpadding="0">
+        <tr align="left" valign="middle">
+            <th>
+                <div align="left">
+                    Mask value</div>
+            </th>
+            <th>
+                <div align="left">
+                    Name</div>
+            </th>
+            <th align="left">
+                <div align="left">
+                    Interpretation</div>
+            </th>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>0x80000000</td>
+            <td>last</td>
+            <td>If set, this is the last action in the list and implies store.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>0x40000000</td>
+            <td>store</td>
+            <td>If set, substitute the ligature for the marked glyph.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>0x3FFFFFFF</td>
+            <td>offset</td>
+            <td>Word offset from beginning of state table to component offset table.</td>
+        </tr>
+    </table>
+    </p>
+    <p>Usually a ligature action list forms only one ligature, so the <code>store</code> flag is not set for any entry. Multiple ligatures may be formed by setting the <code>store</code> flag on intermediate entries in the action list. The only limit is that the component stack can hold only 16 components.</p>
+    <p>The offset into the ligature table is computed as the sum of the offsets for each component. One offset needs to include the offset to the ligature table.</p>
+    <p>Each entry in the ligature action list contains the offset to a per-glyph table that gives the offset for the corresponding component. Given an offset to the first ligature in the table starting with a particular set of components, the component offset table for the next component would contain the relative offsets to the first ligature containing the particular component.</p>
+    <p>As each entry in the action list is processed, the corresponding component is popped from the stack. If the <code>store</code> and <code>last</code> flags in the entry are clear, the component glyph is replaced by the deleted glyph index; if the <code>store</code> or <code>last</code> flag is set, the accumulated offset is used to fetch the glyph index for the ligature, which replaces the component glyph. You can form an n-component ligature by replacing the component glyphs with the ligature glyph followed by n-1 deleted glyphs. For example, if you use the ligature substitution subtable to form the 'ffi' ligature, you begin with 'f', 'f', and 'i' and end up with 'ffi' and two deleted glyphs.</p>
+    <p>When the entire ligature action list has been processed, the position of each ligature glyph in the glyph array is pushed onto the component stack again so that the ligatures can be used as components of other ligatures. For example, an 'ff' ligature can be used in an 'ffi' ligature.</p>
+    <p>For example, the next figure shows a ligature table for a fictional set of ligatures composed of 'a,' 'b,' or 'c' followed by 'd,' 'e,' or 'f' followed by 'g,' 'h,' or 'i'. Keep in mind that what you should actually store in the ligature table at the various offsets is the glyph index for the ligature, and not the data for the ligature itself.</p>
+    <p>The offset into the ligature table is computed as the sum of the offsets for each component. Each entry in the ligature action list contains the offset to a per-glyph table that gives the offset in bytes for the corresponding component.</p>
+    <p><img src="FF38.gif" width="285" height="441" naturalsizeflag="3" align="BOTTOM"></p>
+    <p>Once you know the glyphs that make up a particular ligature, you can construct a component offset table for calculating the offsets to the glyph index for that ligature. Using the ligature table in the previous figure, you can construct the table for the offsets for the components of the various ligatures.</p>
+    <p>Given an offset to the first ligature in the table starting with a particular set of components, the component offset table for the next component would contain the relative offsets to the first ligature containing the particular component. The offset into the ligature table is computed as the sum of the offsets for each component. Each entry in the ligature action list contains the offset to a per-glyph table which gives the offset for the corresponding component. The glyph offsets for this example are shown in the following table:</p>
+    <p>
+    <table border="1" cellspacing="2" cellpadding="0">
+        <tr align="left" valign="middle">
+            <th>
+                <div align="left">
+                    Glyph</div>
+            </th>
+            <th>
+                <div align="left">
+                    Offset</div>
+            </th>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>a</td>
+            <td>1000</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>b</td>
+            <td>1018</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>c</td>
+            <td>1036</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>d</td>
+            <td>0</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>e</td>
+            <td>6</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>f</td>
+            <td>12</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>g</td>
+            <td>0</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>h</td>
+            <td>2</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>i</td>
+            <td>4</td>
+        </tr>
+    </table>
+    </p>
+    <p>Using this table, you find that the relative offsets for 'bfh' is 1018 + 12 + 2 = 1032, and the relative offset for 'aei' is 1000 + 6 + 4 = 1010. This byte offset is relative to the beginning of the ligature table.</p>
+    <p>To produce an offset relative to the beginning of the state subtable, you need to add the offset of the ligature table to the values of one of the component offset tables.</p>
+    <h4>Non-contextual Glyph Substitution Subtable</h4>
+    <p>The non-contextual glyph substitution subtable is a <a href="Chap6Tables.html#LookupTables">lookup table</a> that maps a single glyph index into another glyph index. The format of the non-contextual glyph substitution subtable is given in the following table:</p>
+    <p>
+    <table border="1" cellspacing="2" cellpadding="0">
+        <tr align="left" valign="middle">
+            <th>
+                <div align="left">
+                    Type</div>
+            </th>
+            <th>
+                <div align="left">
+                    Name</div>
+            </th>
+            <th align="left">
+                <div align="left">
+                    Description</div>
+            </th>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>LookupTable</td>
+            <td>table</td>
+            <td>The noncontextual glyph substitution table</td>
+        </tr>
+    </table>
+    </p>
+    <h4>Glyph Insertion Subtable</h4>
+    <p>A new kind of metamorphosis subtable, one that implements insertion actions, is available starting with GX 1.1. This subtable permits extra glyphs (which have no corresponding characters in the backing store) to be inserted into a layout shape. There are two kinds of insertion actions available:</p>
+    <p>Kashida-like insertion actions, where one or more glyphs are appended to a particular glyph, and are selected with that glyph. An example is Pig Latin, where the &quot;ay&quot; or &quot;way&quot; are inserted after the relevant letters. During justification, the width of the &quot;baseform&quot; will be augmented by the width of the all the insertions, and the caret split will encompass the whole grouping. This is very similar to how kashidas currently work (hence the name).</p>
+    <p>Split-vowel-like insertion actions, where glyphs are appended to a given glyph (as in the kashida-like case), but where the inserted glyph(s) do not select with that glyph, but rather with some other glyph. Burmese split vowels are an example of this kind of insertion.</p>
+    <p>A single subtable can mix and match these kinds of actions as needed.</p>
+    <p>The subtable consists solely of a state table (similar to the Indic rearrangement subtable). The actions are 8 bytes long, as follows:</p>
+    <p>
+    <table border="1" cellspacing="2" cellpadding="0">
+        <tr align="left" valign="middle">
+            <th>
+                <div align="left">
+                    Type</div>
+            </th>
+            <th>
+                <div align="left">
+                    Name</div>
+            </th>
+            <th align="left">
+                <div align="left">
+                    Description</div>
+            </th>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>uint16</td>
+            <td>newState</td>
+            <td>Byte offset from the beginning of the state table to the new state.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>uint16</td>
+            <td>flags</td>
+            <td>The action flags (defined below).</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>uint16</td>
+            <td>currentInsertList</td>
+            <td>Byte offset from the beginning of the state table to the list of 16-bit glyphcodes to be inserted at the current glyph (or none if zero). The number of glyphs to be inserted is contained in the currentInsertCount field in the flags (see below).</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>uint16</td>
+            <td>markedInsertList</td>
+            <td>Byte offset from the beginning of the state table to the list of 16-bit glyphcodes to be inserted at the marked glyph (or none if zero). The number of glyphs to be inserted is contained in the markedInsertCount field in the flags (see below).</td>
+        </tr>
+    </table>
+    </p>
+    <p>The flag bits are interpreted as follows:</p>
+    <p>
+    <table border="1" cellspacing="2" cellpadding="0">
+        <tr align="left" valign="middle">
+            <th>
+                <div align="left">
+                    Mask value</div>
+            </th>
+            <th>
+                <div align="left">
+                    Name</div>
+            </th>
+            <th align="left">
+                <div align="left">
+                    Interpretation</div>
+            </th>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>0x8000</td>
+            <td>setMark</td>
+            <td>If set, mark the current glyph.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>0x4000</td>
+            <td>dontAdvance</td>
+            <td>If set, don't advance to the next glyph before going to the new state.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>0x2000</td>
+            <td>currentIsKashidaLike</td>
+            <td>If set, and the currentInsertList is nonzero, then the specified glyph list will be inserted as a kashida-like insertion, either before or after the current glyph (depending on the state of the currentInsertBefore flag). If clear, and the currentInsertList is nonzero, then the specified glyph list will be inserted as a split-vowel-like insertion, either before or after the current glyph (depending on the state of the currentInsertBefore flag).</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>0x1000</td>
+            <td>markedIsKashidaLike</td>
+            <td>If set, and the markedInsertList is nonzero, then the specified glyph list will be inserted as a kashida-like insertion, either before or after the marked glyph (depending on the state of the markedInsertBefore flag). If clear, and the markedInsertList is nonzero, then the specified glyph list will be inserted as a split-vowel-like insertion, either before or after the marked glyph (depending on the state of the markedInsertBefore flag).</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>0x0800</td>
+            <td>currentInsertBefore</td>
+            <td>If set, specifies that insertions are to be made to the left of the current glyph. If clear, they're made to the right of the current glyph.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>0x0400</td>
+            <td>markedInsertBefore</td>
+            <td>If set, specifies that insertions are to be made to the left of the marked glyph. If clear, they're made to the right of the marked glyph.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>0x03E0</td>
+            <td>currentInsertCount</td>
+            <td>This 5-bit field is treated as a count of the number of glyphs to insert at the current position. Since zero means no insertions, the largest number of insertions at any given current location is 31 glyphs.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>0x001F</td>
+            <td>markedInsertCount</td>
+            <td>This 5-bit field is treated as a count of the number of glyphs to insert at the marked position. Since zero means no insertions, the largest number of insertions at any given marked location is 31 glyphs.</td>
+        </tr>
+    </table>
+    </p>
+    <h5>Special split-vowel considerations</h5>
+    <p>The connection between the two pieces of a split vowel is established via the distance from the current to the marked glyph. For example, say a split vowel character occurs after a consonant, and once encountered, the first part of the split vowel should be inserted before that consonant. In building the insertion subtable to do this, you would set a mark at every candidate consonant. Then, if a split vowel is indeed encountered after the consonant, it would have the <code>markedIsKashidaLike</code> flag off and the <code>markedInsertBefore</code> flag on. The split vowel piece would then be inserted before the consonant, and AAT will establish the connection between the two pieces, such that a selection of one piece, say, will result in both pieces being highlighted (because they are both associated with the same character offset, namely the offset of the vowel character that came after the consonant).</p>
+    <p>Alternatively, in this example, you could set the subtable to process in reverse order (using the appropriate bit in the <code>coverage</code> field), and then the vowel would be the first thing encountered, so your subtable would be set up to mark the vowel, and then after moving to the consonant, do the insertion before the current glyph (i.e. before the consonant). Either of these methods works; the choice of which is most suited for a given font is left to the font designer.</p>
+    <h2>Glyph Metamorphosis Table Examples</h2>
+    <h3>Example: Non-contextual Glyph Substitution</h3>
+    <p>Let's create a Roman font that accommodates horizontal and vertical text. We will specifically address the problem that occurs when horizontal text with opening and closing parentheses is used vertically. When the text is horizontal, our font should use the horizontal opening and closing parentheses (glyph indices 11 and 12, respectively). When the text is vertical, our font should use the vertical opening and closing parentheses (glyph indices 135 and 136, respectively).</p>
+    <p>This figure shows a sample of text produced with this example font.</p>
+    <p><img src="FF07.gif" width="322" height="207" naturalsizeflag="3" align="BOTTOM"></p>
+    <p>To accommodate this design, our font must contain the features and settings given in the following table. This will require one glyph metamorphosis chain composed of three feature subtables and a metamorphosis subtable. The constants associated with particular feature types and selectors (such as 4 for vertical substitution) are located in the current edition of the Font Feature Registry.</p>
+    <p>
+    <table border="1" cellspacing="2" cellpadding="0">
+        <tr align="left" valign="middle">
+            <th>
+                <div align="left">
+                    Feature</div>
+            </th>
+            <th>
+                <div align="left">
+                    Setting</div>
+            </th>
+            <th>
+                <div align="left">
+                    Enable flag</div>
+            </th>
+            <th>
+                <div align="left">
+                    Disable flag</div>
+            </th>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>Vertical substitution</td>
+            <td>On</td>
+            <td>0x00000001</td>
+            <td>0xFFFFFFFF</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>Vertical substitution</td>
+            <td>Off</td>
+            <td>0x00000000</td>
+            <td>0xFFFFFFFE</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>Glyph effects</td>
+            <td>Off</td>
+            <td>0x00000000</td>
+            <td>0x00000000</td>
+        </tr>
+    </table>
+    </p>
+    <p>The glyph metamorphosis table for this example font is this:</p>
+    <p>
+    <table border="1" cellspacing="2" cellpadding="0">
+        <tr align="left" valign="middle">
+            <th>
+                <div align="left">
+                    Offset/<br>
+                    length</div>
+            </th>
+            <th>
+                <div align="left">
+                    Value</div>
+            </th>
+            <th>
+                <div align="left">
+                    Name</div>
+            </th>
+            <th align="left">
+                <div align="left">
+                    Comment</div>
+            </th>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>0/4</td>
+            <td>0x00010000</td>
+            <td>version</td>
+            <td>Version number of the glyph metamorphosis table, in fixed- point format.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>4/4</td>
+            <td>1</td>
+            <td>nChains</td>
+            <td>Number of metamorphosis chains contained in this table is 1.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td colspan="4">(The single metamorphosis chain follows)</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>8/4</td>
+            <td>1</td>
+            <td>defaultFlags</td>
+            <td>Default setting flag for this chain is 1.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>12/4</td>
+            <td>80</td>
+            <td>chainLength</td>
+            <td>Chain length is 88 - 8 = 80 bytes.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>16/2</td>
+            <td>3</td>
+            <td>nFeatureEntries</td>
+            <td>Number of entries in the chain's feature subtable is 3.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>18/2</td>
+            <td>1</td>
+            <td>nSubtables</td>
+            <td>The number of feature subtables in this chain is 1.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td colspan="4">(The first of three entries in the feature subtable array follows)</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>20/2</td>
+            <td>4</td>
+            <td>featureType</td>
+            <td>Feature type is vertical substitution.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>22/2</td>
+            <td>0</td>
+            <td>featureSetting</td>
+            <td>Feature setting is on.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>24/4</td>
+            <td>0x00000001</td>
+            <td>enableFlags</td>
+            <td>Enable flag.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>28/4</td>
+            <td>0xFFFFFFFF</td>
+            <td>disableFlags</td>
+            <td>Disable flag.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td colspan="4">(The second of three entries in the feature subtable array follows)</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>32/2</td>
+            <td>4</td>
+            <td>featureType</td>
+            <td>Feature type is vertical substitution.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>34/2</td>
+            <td>1</td>
+            <td>featureSetting</td>
+            <td>Feature setting is off.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>36/4</td>
+            <td>0x00000000</td>
+            <td>enableFlags</td>
+            <td>Enable flag.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>40/4</td>
+            <td>0xFFFFFFFE</td>
+            <td>disableFlags</td>
+            <td>Disable flag.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td colspan="4">(The third of three entries in the feature subtable array follows)</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>44/2</td>
+            <td>0</td>
+            <td>featureType</td>
+            <td>Feature type is glyph effects.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>46/2</td>
+            <td>1</td>
+            <td>featureSetting</td>
+            <td>Feature setting is off.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>48/4</td>
+            <td>0x00000000</td>
+            <td>enableFlags</td>
+            <td>Last enableFlags field of the feature subtable must contain 0x00000000.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>52/4</td>
+            <td>0x00000000</td>
+            <td>disableFlags</td>
+            <td>Last disableFlags field of the feature subtable must contain 0x00000000.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td colspan="4">(The chain subtable follows)</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>56/2</td>
+            <td>32</td>
+            <td>length</td>
+            <td>Length of the chain subtable is 88 - 56 = 32 bytes.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>58/2</td>
+            <td>0x8004</td>
+            <td>coverage</td>
+            <td>0x8000 value indicates that this subtable should be applied only to horizontal text. The 0x0004 value indicates that the chain subtable type is for non-contextual glyph substitution.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>60/4</td>
+            <td>0x00000001</td>
+            <td>subFeatureFlags</td>
+            <td>Subfeature type is contextual glyph substitution.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td colspan="4">(The non-contextual glyph substitution <a href="Chap6Tables.html#LookupTables">lookup table</a> follows)</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>64/2</td>
+            <td>6</td>
+            <td>format</td>
+            <td>Lookup table format 6 (single table format).</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>66/2</td>
+            <td>4</td>
+            <td>unitSize</td>
+            <td>Size of a LookupSingle record (2 bytes for the glyph index, and 2 bytes for the offset from the start of this ligature caret table).</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>68/2</td>
+            <td>2</td>
+            <td>nUnits</td>
+            <td>Number of units of the preceding unitSize to be searched. There are two glyphs to be included in the table.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>70/2</td>
+            <td>8</td>
+            <td>searchRange</td>
+            <td>The unitSize times the largest power of two that is less than or equal to nUnits.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>72/2</td>
+            <td>1</td>
+            <td>entrySelector</td>
+            <td>The log base 2 of the largest power of two less than or equal to nUnits.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>74/2</td>
+            <td>0</td>
+            <td>rangeShift</td>
+            <td>The unitSize times the difference of nUnits minus the largest power of two less than or equal to nUnits.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td colspan="4">(The <a href="Chap6Tables.html#LookupSingle">LookupSingle</a> record entries start here)</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>76/2</td>
+            <td>11</td>
+            <td>glyphIndex</td>
+            <td>Glyph index for the opening horizontal parenthesis '(' is 11.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>78/2</td>
+            <td>135</td>
+            <td>glyphIndex</td>
+            <td>Glyph index for the opening vertical parenthesis is 135.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>80/2</td>
+            <td>12</td>
+            <td>glyphIndex</td>
+            <td>Glyph index for the closing horizontal parenthesis ')' is 12.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>82/2</td>
+            <td>136</td>
+            <td>glyphIndex</td>
+            <td>Glyph index for the closing vertical parenthesis is 136.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td colspan="4">(This is the special guardian LookupSingle record)</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>84/2</td>
+            <td>0xFFFF</td>
+            <td>glyph</td>
+            <td>Guardian value.</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>86/2</td>
+            <td>0</td>
+            <td>value</td>
+            <td>Guardian value.</td>
+        </tr>
+    </table>
+    </p>
+    <h3>Example: Hierarchical Ligature Tables</h3>
+    <p>Suppose you want to set up a font with all four settings of the ligature formation text feature: mandatory, normal, optional, and suppress. Because this text feature shares subfeatures, you can describe these subfeatures on the same chain.</p>
+    <p>When a subtable is enabled, it activates the subtables beneath it in the hierarchy. Therefore, you can have each subtable describe a different set of ligatures. For example, in this font the Mandatory subtable describes the 'fi' and 'fl' ligatures, the normal subtable describes the '&aelig;' and '&oelig;' ligatures, and the optional subtable describes the '&AElig;' and '&OElig;' ligatures. Whenever the user selects the normal ligatures of this font, the ligatures of the mandatory and normal subtables are available. When the user selects optional ligatures, the ligatures of the mandatory, normal, and optional subtables are available. The suppress subtable cancels the use of all ligatures.</p>
+    <p>This table describes the feature subtable entries for these subtables:</p>
+    <p>
+    <table border="1" cellspacing="2" cellpadding="0">
+        <tr align="left" valign="middle">
+            <th>
+                <div align="left">
+                    Setting</div>
+            </th>
+            <th>
+                <div align="left">
+                    Enable flags</div>
+            </th>
+            <th align="left">
+                <div align="left">
+                    Disable flags</div>
+            </th>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>Mandatory</td>
+            <td>0x00000001</td>
+            <td>0xFFFFFFF9 (complement of 0x00000006)</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>Normal</td>
+            <td>0x00000003</td>
+            <td>0xFFFFFFFB (complement of 0x00000004)</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>Optional</td>
+            <td>0x00000007</td>
+            <td>0xFFFFFFFF (complement of 0x00000000)</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>Suppress</td>
+            <td>0x00000000</td>
+            <td>0xFFFFFFF8 (complement of 0x00000007)</td>
+        </tr>
+    </table>
+    </p>
+    <p>The enable flags of the mandatory setting are only for that subtable, and its disable flags deactivate the normal and optional tables. The enable flags of the normal setting activate both the normal and mandatory tables, and its disable flags disable only the optional table. The enable flags of the optional table activate all tables, and its disable flags do not disable any table. The enable flags of the suppress table do not enable any table, and its disable flags deactivate all tables.</p>
+    <p>For example, if you use the feature table in the above table, there are three subtables: one with <code>subFeatureFlags</code> set to 0x00000001 for the mandatory ligatures, one with <code>subFeatureFlags</code> set to 0x00000002 for the normal ligatures that aren't mandatory, and one with <code>subFeatureFlags</code> set to 0x00000004 for optional ligatures that are neither mandatory or normal. Thus, the mandatory subtable is applied if the ligature formation setting is mandatory, normal, or optional; the normal subtable is applied if the ligature formation setting is normal or optional, and the optional subtable is applied if the ligature formation setting is optional.</p>
+    <h3>Example: Stand-Alone Ligature Tables</h3>
+    <p>In the previous example, each setting of the ligature formation text feature builds on the contents of the previous ligature subtable. A request for optional ligatures means that three subtables are applied.</p>
+    <p>However, if you make each ligature subtable independent of the others, only one subtable is applied when the user requests a particular type of ligature. Although you have to duplicate the ligature information (putting the glyph codes to create the 'fi' ligature into every table, for instance), table access is faster because only one table is used. You can setup the feature subtable so that a request for one ligature formation subtable disables all other ligature subtables, such as in the following table:</p>
+    <p>
+    <table border="1" cellspacing="2" cellpadding="0">
+        <tr align="left" valign="middle">
+            <th>
+                <div align="left">
+                    Setting</div>
+            </th>
+            <th>
+                <div align="left">
+                    Enable flags</div>
+            </th>
+            <th align="left">
+                <div align="left">
+                    Disable flags</div>
+            </th>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>Mandatory</td>
+            <td>0x00000001</td>
+            <td>0xFFFFFFF9 (complement of 0x00000006)</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>Normal</td>
+            <td>0x00000002</td>
+            <td>0xFFFFFFFA (complement of 0x00000005)</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>Optional</td>
+            <td>0x00000004</td>
+            <td>0xFFFFFFFC (complement of 0x00000003)</td>
+        </tr>
+        <tr align="left" valign="middle">
+            <td>Suppress</td>
+            <td>0x00000000</td>
+            <td>0xFFFFFFF8 (complement of 0x00000007)</td>
+        </tr>
+    </table>
+    </p>
+    <p>Any ligature formation request results in the setting of a single subfeature flag for the requested setting with the highest precedence.</p>
+    <p>Again, there are three subtables: one with the <code>subFeatureFlags</code> field of its subtable header set to 0x00000001 for the mandatory ligatures; one with <code>subFeatureFlags</code> set to 0x00000002 for the mandatory and normal ligatures; and one with <code>subFeatureFlags</code> set to 0x00000004 for mandatory, normal, and optional ligatures.</p>
+    <p>The normal and optional subtables are more complex (because the normal subtable duplicates the ligatures in the mandatory subtable and the optional subtable duplicates the ligatures in the normal subtable), but at most one subtable is applied to the glyph array, which takes less time than applying three subtables.</p>
+    <p>You can also use this feature table with the subtables from the example by changing their <code>subFeatureFlags</code> to 0x00000007, 0x00000006, and 0x00000004, respectively.</p>
+    <h2>Platform-specific Information</h2>
+    <p>The <code>'mort'</code> table is not supported on any version of iOS. It is supported on all versions of OS X, but its use is strongly discouraged. If a font has both a <code>'mort'</code> table and a <a href="Chap6morx.html"><code>'morx'</code> (extended metamorphosis)</a> table, the <code>'mort'</code> table is ignored.</p>
+    <h2>Tools</h2>
+    <p><code>'mort'</code> tables are dumped (but not fused) by <span class="toolName">ftxdumperfuser</span>. Dumping to both MIF and ATIF is supported. <span class="toolName">ftxenhancer</span> does not generate <code>'mort'</code> tables.</p>
+  </div>
+
+      </section>
+  </div><!-- /content -->
+
+  <div id="globalfooter">
+    <div id="breadory">
+      <ol id="breadcrumbs">
+        <li class="home"><a href="../../../index.html">Developer</a></li>
+        <li><a href="../../index.html">Fonts</a></li>
+        <li><a href="../index.html">TrueType™ Reference Manual</a></li>
+        <li>The TrueType Font File</li>
+      </ol>
+      <div id="directorynav" class="directorynav">
+	<div id="dn-cola" class="column">
+		<h3><a href="../../../platforms/index.html">Platforms</a></h3>
+		<ul>
+			<li><a href="../../../ios/index.html">iOS</a></li>
+			<li><a href="../../../osx/index.html">OS X</a></li>
+			<li><a href="../../../watchos/index.html">watchOS</a></li>
+			<li><a href="../../../tvos/index.html">tvOS</a></li>
+		</ul>
+		<h3><a href="../../../resources/index.html">Tools</a></h3>
+		<ul>
+			<li><a href="../../../xcode/index.html">Xcode</a></li>
+			<li><a href="../../../swift/index.html">Swift</a></li>
+		</ul>
+	</div>
+	<div id="dn-colb" class="column">
+		<h3><a href="../../../resources/index.html">Resources</a></h3>
+		<ul>
+			<li><a href="../../../library/index.html">Documentation</a></li>
+			<li><a href="../../../videos/index.html">Videos</a></li>
+			<li><a href="https://forums.developer.apple.com/">Forums</a></li>
+			<li><a href="../../../app-store/index.html">App Store</a></li>
+			<li><a href="../../../safari/index.html">Safari and Web</a></li>
+			<li><a href="../../../education/index.html">Education</a></li>
+			<li><a href="../../../enterprise/index.html">Enterprise</a></li>
+		</ul>
+	</div>
+	<div id="dn-colc" class="column">
+		<h3><a href="../../../programs/index.html">Programs</a></h3>
+		<ul>
+			<li><a href="../../../programs/index.html">Developer Program</a></li>
+			<li><a href="../../../programs/enterprise/index.html">Enterprise Program</a></li>
+			<li><a href="../../../programs/ios/university/index.html">iOS University Program</a></li>
+			<li><a href="../../../programs/mfi/index.html">MFi Program</a></li>
+		</ul>
+	</div>
+	<div id="dn-cold" class="column">
+		<h3><a href="../../../support/index.html">Support</a></h3>
+		<ul>
+			<li><a href="../../../support/development/index.html">Development</a></li>
+			<li><a href="../../../support/distribution/index.html">Distribution</a></li>
+			<li><a href="../../../support/membership/index.html">Membership</a></li>
+			<li><a href="../../../system-status/index.html">System Status</a></li>
+		</ul>
+	</div>
+	<div id="dn-cole" class="column">
+		<h3><a href="https://developer.apple.com/account/">Account</a></h3>
+		<ul>
+			<li><a href="https://developer.apple.com/account/">Developer Account</a></li>
+			<li><a href="../../../go/index-id=certificates-ids-profiles.html">Certificates, IDs &amp; Profiles</a></li>
+			<li><a href="https://itunesconnect.apple.com">iTunes Connect</a></li>			
+			<li><a href="../../../terms/index.html">License Agreements</a></li>
+		</ul>
+	</div>
+</div>
+
+    </div><!--/breadory-->
+    <ul class="gf-links piped footer-links">
+  <li><a href="../../../news/index.html" class="first">News &amp; Updates</a></li>
+  <li><a href="../../../bug-reporting/index.html">Report Bugs</a></li>
+  <li><a href="../../../contact/index.html">Contact Us</a></li>
+</ul>
+
+<div class="gf-sosumi footer-sosumi">
+  <p>Copyright © 2016 Apple Inc. All rights reserved.</p>
+    <ul class="piped">
+        <li><a href="http://www.apple.com/legal/internet-services/terms/site.html" class="first">Terms of Use</a></li>
+        <li><a href="http://www.apple.com/privacy/privacy-policy/">Privacy Policy</a></li>
+    </ul>
+</div>
+
+<!--<div id="gf-links piped footer-links">
+	<ul>
+		<li><a href="/cn/" title="Simplified Chinese">简体中文</a></li>
+		<li><a href="/jp/" title="Japanese">日本語</a></li>
+		<li><a href="/kr/" title="Korean">한국어</a></li>
+	</ul>
+</div>-->
+
+  </div><!--/globalfooter-->
+</body>
+</html>
